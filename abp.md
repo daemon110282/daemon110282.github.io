@@ -11,3 +11,4 @@ swagger
 workflow https://community.abp.io/posts/using-elsa-workflow-with-the-abp-framework-773siqi9
 -
 vue не из коробки, т.е. пишем на React?
+не нашел CI\CD из коробки

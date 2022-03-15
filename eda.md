@@ -1,9 +1,11 @@
-# активных паттернов:
+# Паттерны:
 1. Task Queue (циклическое распределение задач по консьюмерам)  Round-robin dispatching
 2. Task Queue (распределение по загрузке QoS = 11, ack=1, autoack=0) Fair dispatching
 3. Pub-Sub (fanout - без фильтрации)
-4. Pub-Sub (headers - с фильтрацией)
-5. RPC
+  1. TODO везде PubSub уточнить название   
+5. Pub-Sub (headers - с фильтрацией)
+6. RPC
+
 
 # Exc=Direct Queue DLX
 must specify a dead letter routing key https://stackoverflow.com/questions/21742232/rabbitmq-dead-letter-exchange-never-getting-messages
@@ -15,3 +17,12 @@ must specify a dead letter routing key https://stackoverflow.com/questions/2174
 * https://habr.com/ru/company/itsumma/blog/416629/
 * https://habr.com/ru/post/422151/
 * https://habr.com/ru/post/150134/
+* pattern
+  * https://github.com/plantuml-stdlib/EIP-PlantUML?utm_source=pocket_mylist
+  * https://medium.com/@objectzen/content-enricher-pattern-in-rabbitmq-eae504a8504e?utm_source=pocket_mylist
+  * http://rubyamqp.info/articles/patterns_and_use_cases.html?utm_source=pocket_mylist
+  * https://www.enterpriseintegrationpatterns.com/patterns/messaging/MessageRoutingIntro.html?utm_source=pocket_mylist
+  * https://www.rabbitmq.com/tutorials/tutorial-two-python.html?utm_source=pocket_mylist
+  * https://blog.rnds.pro/019-poison2?utm_source=pocket_mylist
+  * https://alexandrugris.github.io/distributed/systems/2017/06/03/rabbitmq-patterns.html?utm_source=pocket_mylist
+  * https://www.cloudamqp.com/docs/delayed-messages.html?utm_source=pocket_mylist

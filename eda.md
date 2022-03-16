@@ -1,3 +1,18 @@
+# event driven architecture
+
+шины событий можно выбрать одну из нескольких технологий обмена сообщениями
+Rmq, azure, 
+
+Реализации шин событий - NServiceBus, MassTransit или Brighter
+Работает поверх транспорта
+
+
+транспорт брокера (технология) обмена сообщения - rmq, Azure service bus
+MSMQ, RabbitMQ, SQL Server, Azure Queue Storage, Azure Service Bus, and Amazon SQS.
+
+
+брокера обмена сообщения
+
 # Паттерны:
 1. Task Queue (циклическое распределение задач по консьюмерам)  Round-robin dispatching
 2. Task Queue (распределение по загрузке QoS = 11, ack=1, autoack=0) Fair dispatching

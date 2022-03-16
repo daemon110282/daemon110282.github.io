@@ -16,7 +16,7 @@ MSMQ, RabbitMQ, SQL Server, Azure Queue Storage, Azure Service Bus, and Amazon S
 # Паттерны:
 
 * rmq.md
-* naming https://solace.com/blog/designing-and-naming-topics-for-event-driven-architecture-with-pubsub/?mkt_tok=MDcyLUNCSS05MjUAAAGDJ7N-6jFCOwXRBzE_4Ku_niXJQniSVNAJ-nNBD0JvROkzqo3tQbzDTFFx5PHlhTJj16lqF8xZCHb8IIy_29iOyZFYViJCWwpsU1X393ljZGzf&ю
+
 
 # Exc=Direct Queue DLX
 must specify a dead letter routing key https://stackoverflow.com/questions/21742232/rabbitmq-dead-letter-exchange-never-getting-messages
@@ -37,3 +37,6 @@ must specify a dead letter routing key https://stackoverflow.com/questions/2174
   * https://blog.rnds.pro/019-poison2?utm_source=pocket_mylist
   * https://alexandrugris.github.io/distributed/systems/2017/06/03/rabbitmq-patterns.html?utm_source=pocket_mylist
   * https://www.cloudamqp.com/docs/delayed-messages.html?utm_source=pocket_mylist
+  * naming 
+    * https://solace.com/blog/designing-and-naming-topics-for-event-driven-architecture-with-pubsub/?mkt_tok=MDcyLUNCSS05MjUAAAGDJ7N-6jFCOwXRBzE_4Ku_niXJQniSVNAJ-nNBD0JvROkzqo3tQbzDTFFx5PHlhTJj16lqF8xZCHb8IIy_29iOyZFYViJCWwpsU1X393ljZGzf&ю
+    * https://www.youtube.com/watch?v=mEzYTuYSork&list=PLx8uyNNs1ri2MBx6BjPum5j9_MMdIfM9C&index=11&ab_channel=ChrisPatterson

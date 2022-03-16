@@ -15,7 +15,7 @@ MSMQ, RabbitMQ, SQL Server, Azure Queue Storage, Azure Service Bus, and Amazon S
 
 # Паттерны:
 
-* <rmq.md>
+* rmq.md
 
 # Exc=Direct Queue DLX
 must specify a dead letter routing key https://stackoverflow.com/questions/21742232/rabbitmq-dead-letter-exchange-never-getting-messages

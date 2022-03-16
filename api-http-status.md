@@ -18,4 +18,7 @@
 
 
 # Links
+
+* https://wp-kama.ru/handbook/rest/basic/http-status-codes
+* https://restapitutorial.ru/httpstatuscodes.html
 * https://developer.mozilla.org/ru/docs/Web/HTTP/Status

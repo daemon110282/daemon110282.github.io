@@ -14,13 +14,8 @@ MSMQ, RabbitMQ, SQL Server, Azure Queue Storage, Azure Service Bus, and Amazon S
 брокера обмена сообщения
 
 # Паттерны:
-1. Task Queue (циклическое распределение задач по консьюмерам)  Round-robin dispatching
-2. Task Queue (распределение по загрузке QoS = 11, ack=1, autoack=0) Fair dispatching
-3. Pub-Sub (fanout - без фильтрации)
-  1. TODO везде PubSub уточнить название   
-5. Pub-Sub (headers - с фильтрацией)
-6. RPC
 
+* <rmq.md>
 
 # Exc=Direct Queue DLX
 must specify a dead letter routing key https://stackoverflow.com/questions/21742232/rabbitmq-dead-letter-exchange-never-getting-messages

@@ -3,3 +3,6 @@
 * http://citforum.ru/SE/project/pattern/p_4.shtml
 * https://www.enterpriseintegrationpatterns.com/patterns/messaging/
 * https://mcs.mail.ru/blog/26-osnovnyh-patternov-mikroservisnoj-razrabotki/amp
+* https://www.bigdataschool.ru/blog/architecture-patterns-for-distributed-systems.html
+* https://medium.com/nuances-of-programming/краткий-обзор-10-популярных-архитектурных-шаблонов-приложений-81647be5c46f
+* 

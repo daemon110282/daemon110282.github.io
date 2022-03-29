@@ -3,6 +3,7 @@
 ## стратегии обработки сбоев
 * тодо
 * частичный сбой
+* временный сбой https://docs.microsoft.com/ru-ru/azure/architecture/best-practices/transient-faults
 * повторы retry policy
 * 
 

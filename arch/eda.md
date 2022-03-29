@@ -1,33 +1,51 @@
 # event driven architecture
 
-шины событий можно выбрать одну из нескольких технологий обмена сообщениями
-Rmq, azure, 
+## Зачем
 
-Реализации шин событий - NServiceBus, MassTransit или Brighter
-Работает поверх транспорта
+* Multiple subsystems must process the same events.
+* Real-time processing with minimum time lag.
+* Complex event processing, such as pattern matching or aggregation over time windows.
+* High volume and high velocity of data, such as IoT.
 
+## Плюсы и минусы
 
-транспорт брокера (технология) обмена сообщения - rmq, Azure service bus
+[Критерии](arch.criteria.md)
+
+| + | - |
+| - | - |
+| Слабая связность | Сложность |
+| Масштабируемость | Асинхронный обмен сообщениями и итоговая согласованность |
+|| Управляемость |
+|| Взаимодействие между службами |
+|| Обеспечить последовательность событий |
+
+## Выбор технологий
+
+* шины событий можно выбрать одну из нескольких технологий обмена сообщениями: Rmq, azure
+* Реализации шин событий - NServiceBus, MassTransit или Brighter. Работает поверх транспорта
+* транспорт брокера (технология) обмена сообщения - rmq, Azure service bus
 MSMQ, RabbitMQ, SQL Server, Azure Queue Storage, Azure Service Bus, and Amazon SQS.
+* брокер обмена сообщениями
+
+## Паттерны
+
+* [RMQ](rmq.md)
 
 
-брокера обмена сообщения
+## Exc=Direct Queue DLX
 
-# Паттерны:
-
-* rmq.md
-
-
-# Exc=Direct Queue DLX
 must specify a dead letter routing key https://stackoverflow.com/questions/21742232/rabbitmq-dead-letter-exchange-never-getting-messages
 
-# Продажа 
+## Продажа
+
 Производительность https://habr.com/ru/company/oleg-bunin/blog/310418/
 
-# Links
+## Links
+
 * https://habr.com/ru/company/itsumma/blog/416629/
 * https://habr.com/ru/post/422151/
 * https://habr.com/ru/post/150134/
+* https://docs.microsoft.com/ru-ru/azure/architecture/guide/architecture-styles/event-driven
 * pattern
   * https://github.com/plantuml-stdlib/EIP-PlantUML?utm_source=pocket_mylist
   * https://medium.com/@objectzen/content-enricher-pattern-in-rabbitmq-eae504a8504e?utm_source=pocket_mylist

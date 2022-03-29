@@ -1,7 +1,6 @@
-# Качества архитектуры
+# Качества (ability) архитектуры
 
-* Доступность (high availability), 
-* Отказоустойчивость Availability, Надежность Reliability
+* [Доступность, Отказоустойчивость Availability, Надежность Reliability](availability.md)
 
 ## Отказоустойчивость
 

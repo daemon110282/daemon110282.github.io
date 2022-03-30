@@ -30,6 +30,7 @@
 
 # версионирование сообщений
 * https://masstransit-project.com/architecture/versioning.html
+* https://github.com/EasyNetQ/EasyNetQ/wiki/Versioning-Messages
 
 # Links
 - [Типы Exchange](https://habr.com/ru/post/489086/)

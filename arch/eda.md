@@ -19,6 +19,12 @@
 || Взаимодействие между службами |
 || Обеспечить последовательность событий |
 
+Decoupling: We need a way to decouple communication between different services or applications.
+High Response Time: When the response time of a request is too much. For example, calculations, searching or pdf creation, etc.
+Background Jobs: Sending background messages, emails, or notifications to loads of users.
+Asynchronous Messaging: Messaging queues are the best way to implement asynchronous programming.
+
+
 ## Выбор технологий
 
 * шины событий можно выбрать одну из нескольких технологий обмена сообщениями: Rmq, azure

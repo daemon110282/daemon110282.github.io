@@ -1,4 +1,5 @@
 # Паттерны:
+
 1. Task Queue (циклическое распределение задач по консьюмерам ) Round-robin dispatching
   - сервисы между собой делят Очередь задач 
   - паттерн EIP Competing Consumers https://www.enterpriseintegrationpatterns.com/patterns/messaging/CompetingConsumers.html
@@ -13,16 +14,22 @@
   - паттерн EIP Request-Reply https://www.enterpriseintegrationpatterns.com/patterns/messaging/RequestReply.html
 
 # Режимы доставки сообщений:
+
 1.basic.get Доставка единичного сообщения по запросу polling;
 2.Basic.Consume (Push) Подписка на очередь (постоянный мониторинг очереди с доставкой всех сообщений). Паттерн Pub-Sub 
 
 # Рекомендации
+
 ## headers vs topic для событий 
+
 - более гибко т.к. key-value инвариантов может быть больше?
   - топик - фильтрация на основе строковой маски - поиска подстроки
   - headers - на основе полного равенства значения ключа
 -минусы
 - функционально разницы нет, по производительности topic в 3 раза медленнее headers
+
+# версионирование сообщений
+* https://masstransit-project.com/architecture/versioning.html
 
 # Links
 - [Типы Exchange](https://habr.com/ru/post/489086/)

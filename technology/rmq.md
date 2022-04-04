@@ -13,14 +13,14 @@
 7. RPC (команды)
   - паттерн EIP Request-Reply https://www.enterpriseintegrationpatterns.com/patterns/messaging/RequestReply.html
 
-# Режимы доставки сообщений:
+## Режимы доставки сообщений:
 
 1.basic.get Доставка единичного сообщения по запросу polling;
 2.Basic.Consume (Push) Подписка на очередь (постоянный мониторинг очереди с доставкой всех сообщений). Паттерн Pub-Sub 
 
-# Рекомендации
+## Рекомендации
 
-## headers vs topic для событий 
+### headers vs topic для событий 
 
 - более гибко т.к. key-value инвариантов может быть больше?
   - топик - фильтрация на основе строковой маски - поиска подстроки
@@ -28,11 +28,24 @@
 -минусы
 - функционально разницы нет, по производительности topic в 3 раза медленнее headers
 
-# версионирование сообщений
+## версионирование сообщений
 * https://masstransit-project.com/architecture/versioning.html
 * https://github.com/EasyNetQ/EasyNetQ/wiki/Versioning-Messages
 
-# Links
+## Links
 - [Типы Exchange](https://habr.com/ru/post/489086/)
   - [Headers exchange](https://codedestine.com/rabbitmq-headers-exchange/)
 
+## vhosts
+RabbitMQ is multi-tenant system: connections, exchanges, queues, bindings, user permissions, policies and some other things belong to virtual hosts, logical groups of entities.
+Virtual hosts provide logical grouping and separation of resources. Separation of physical resources is not a goal of virtual hosts and should be considered an implementation detail.
+Virtual Hosts are used to isolate resources. A determined resource (e.g. exchanges, queues) can be used by more than one virtual host.
+RabbitMQ vhosts are like a virtual machine for a physical server, allowing for multiple secure application operations through virtual rather than physical separation. As the separation is virtual, it is important to remember that the vhosts are not physically separated from each other and therefore they might affect each other’s performance.
+In AMQP, a Virtual Host (a.k.a. 'vhost') is a namespace for objects like Exchanges, Queues and Bindings [1].
+RabbitMQ provides 2 mechanisms to apply segregation. Virtual hosts and queues. A virtual host can be created per microservice which will hold all the logical infrastructure definitions like Queues, Exchanges, users etc. This is a good practice as this allows the teams to manage their own AMQP topologies. However, this does not stop a virtual host to demand more from the underlying physical RabbitMQ instance.
+
+Support https://masstransit-project.com/usage/containers/multibus.html#multibus
+Abp.io support in job https://docs.abp.io/en/abp/4.4/Background-Jobs-RabbitMq
+https://programmer.group/springboot-connect-multiple-rabbitmq-sources.HTML
+https://github.com/freenowtech/spring-multirabbit
+https://micronaut-projects.github.io/micronaut-rabbitmq/latest/guide

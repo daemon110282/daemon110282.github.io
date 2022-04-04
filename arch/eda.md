@@ -33,6 +33,13 @@ Asynchronous Messaging: Messaging queues are the best way to implement asynchron
 MSMQ, RabbitMQ, SQL Server, Azure Queue Storage, Azure Service Bus, and Amazon SQS.
 * брокер обмена сообщениями
 
+CQRS - command query request segregation
+Event sourcing
+Паттерн медиатор
+Событие и команда
+Event or command driven
+
+
 ## Паттерны
 
 * [RMQ](rmq.md)

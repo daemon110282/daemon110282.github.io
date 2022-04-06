@@ -49,3 +49,19 @@ Abp.io support in job https://docs.abp.io/en/abp/4.4/Background-Jobs-RabbitMq
 https://programmer.group/springboot-connect-multiple-rabbitmq-sources.HTML
 https://github.com/freenowtech/spring-multirabbit
 https://micronaut-projects.github.io/micronaut-rabbitmq/latest/guide
+
+
+## security
+
+security mechanism in RabbitMQ:
+
+* Access control https://www.rabbitmq.com/access-control.html
+. * Vhosts
+. * each user should be permissioned to only read and write to their own queue based on the queue's unique name.
+
+* SASL authentication
+. * supports multiple SASL authentication mechanisms. There are three such mechanisms built into the server: PLAIN, AMQPLAIN, and RABBIT-CR-DEMO, and one — EXTERNAL — available as a plugin.
+
+* SSL support
+
+https://stackoverflow.com/questions/7840283/how-can-queues-be-made-private-secure-in-rabbitmq-in-a-multitenancy-system

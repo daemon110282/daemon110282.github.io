@@ -10,6 +10,8 @@
 ### Development Portal
 Часть API Managment.
 - Док-я по всем АПИ компании
+- Автодок-я по OpenAPI, AsyncAPI, WSDL, GraphQL, gRPC
+- Примеры кода клиента
 - История изменений АПИ
 - GIT integration
 
@@ -25,6 +27,7 @@
 - ?
   - AxWay
   - MuleSoft
+  - Pronovix https://pronovix.com/blog/one-developer-portal-document-them-all
 
 ## Links
 - https://cloud.google.com/blog/products/api-management/top-5-trends-for-api-powered-digital-transformation-in-2021

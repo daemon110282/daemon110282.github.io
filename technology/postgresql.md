@@ -6,17 +6,18 @@ RTO - [Recovery Time Objective](https://en.wikipedia.org/wiki/Disaster_recovery#
 - PgAdmin
 - https://dbeaver.io/
 
-## Log Shipping
+
+
+## Replication
+- https://www.postgresql.org/docs/current/runtime-config-replication.html
+
+### Log Shipping
 - Master (Primary) -> Slave (standby or secondary) 
   - accept connections and serves **read-only queries** is called a **Hot Standby Server**
 - https://www.postgresql.org/docs/current/warm-standby.html
 - [log shipping methodology](https://medium.com/@PinkOwl/postgresql-and-me-log-shipping-replication-6bc945757822)
   - File based log shipping - asynchronous in nature and logs are shipped after they have been written to disk and thus may increase the RTO
   - Record base log shipping (Streaming Replication) - data loss can be minimised
-
-
-## Replication
-- https://www.postgresql.org/docs/current/runtime-config-replication.html
 
 ## Reporting Tools
 - https://www.postgresql.org/download/products/5/

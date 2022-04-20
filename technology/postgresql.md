@@ -8,6 +8,7 @@ RTO - [Recovery Time Objective](https://en.wikipedia.org/wiki/Disaster_recovery#
 
 ## Log Shipping
 - Master (Primary) -> Slave (standby or secondary) 
+  - accept connections and serves **read-only queries** is called a **Hot Standby Server**
 - https://www.postgresql.org/docs/current/warm-standby.html
 - [log shipping methodology](https://medium.com/@PinkOwl/postgresql-and-me-log-shipping-replication-6bc945757822)
   - File based log shipping - asynchronous in nature and logs are shipped after they have been written to disk and thus may increase the RTO

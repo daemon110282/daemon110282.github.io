@@ -6,4 +6,7 @@
 
 ## MS Power BI
 
+## Other
+* [online pivot tables (BI tool)](https://www.seektable.com/) - $$
+
 ## Links

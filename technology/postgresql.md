@@ -4,6 +4,12 @@
 - PgAdmin
 - https://dbeaver.io/
 
+## Log Shipping
+- https://www.postgresql.org/docs/current/warm-standby.html
+
+## Replication
+- https://www.postgresql.org/docs/current/runtime-config-replication.html
+
 ## Reporting Tools
 - https://www.postgresql.org/download/products/5/
 - BIRT https://eclipse.github.io/birt-website/

@@ -6,3 +6,4 @@
 * https://www.bigdataschool.ru/blog/architecture-patterns-for-distributed-systems.html
 * https://medium.com/nuances-of-programming/краткий-обзор-10-популярных-архитектурных-шаблонов-приложений-81647be5c46f
 * https://success.outsystems.com/Documentation/Best_Practices/Architecture/Designing_the_Architecture_of_Your_OutSystems_Applications/Integration_Patterns_for_Core_Services_Abstraction
+https://ducmanhphan.github.io/2020-08-10-Introduction-to-Enterprise-Integration-Patterns/

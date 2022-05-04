@@ -60,6 +60,7 @@ Support multi bus, virtual host:
 - https://masstransit-project.com/usage/containers/multibus.html#multibus
 - Abp.io support in job https://docs.abp.io/en/abp/4.4/Background-Jobs-RabbitMq
 - https://programmer.group/springboot-connect-multiple-rabbitmq-sources.HTML
+- https://docs.spring.io/spring-amqp/docs/current/reference/html/#multi-rabbit
 - https://github.com/freenowtech/spring-multirabbit
 - https://micronaut-projects.github.io/micronaut-rabbitmq/latest/guide
 - https://docs.abp.io/en/abp/4.4/Distributed-Event-Bus-RabbitMQ-Integration

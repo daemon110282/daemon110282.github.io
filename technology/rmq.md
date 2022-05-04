@@ -13,6 +13,15 @@
 7. RPC (команды)
   - паттерн EIP Request-Reply https://www.enterpriseintegrationpatterns.com/patterns/messaging/RequestReply.html
 
+Basic patterns:
+
+Simple one-way messaging (Exchange type: direct, message sent to unnamed (default queue))
+Worker queues (Exchange type: direct, several consumer listening to the same queue, reading the messages in a round-robin fashion if all are waiting)
+Publish-subscribe (Exchange type: fan-out, routing key is ignored, message is sent to all queues bound to the exchange)
+RPC (Exchange type: direct, message can be sent to default exchange with a specified routing key and response is received on a specified unique response queue, owned by the client)
+
+
+
 ## Режимы доставки сообщений:
 
 1.basic.get Доставка единичного сообщения по запросу polling;

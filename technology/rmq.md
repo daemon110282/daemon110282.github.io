@@ -65,6 +65,8 @@ Support multi bus, virtual host:
 - https://micronaut-projects.github.io/micronaut-rabbitmq/latest/guide
 - https://docs.abp.io/en/abp/4.4/Distributed-Event-Bus-RabbitMQ-Integration
 - easynetq https://stackoverflow.com/questions/64060243/multiple-vhost-connection-inside-same-project-subscribe-publish
+- celery worker https://stackoverflow.com/questions/12209652/multi-celery-projects-with-same-rabbitmq-broker-backend-process
+- Django back end framework https://timonweb.com/django/run-multiple-django-apps-with-celery-on-one-server-with-rabbitmq-vhosts/
 
 
 ## security

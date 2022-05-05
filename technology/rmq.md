@@ -12,6 +12,7 @@
   - даёт возможность делать фильтрацию трафика на уровне RMQ. подписчик создаёт и связывает очередь к обменнику, указывает фильтрация на основе заголовков -это решает задачу фильтрации лишнего трафика, но не решает задачу изоляции. подписчик может не указать фильтры и получит весь трафик: и свой и чужой.
 7. RPC (команды)
   - паттерн EIP Request-Reply https://www.enterpriseintegrationpatterns.com/patterns/messaging/RequestReply.html
+  - EasyNetQ https://github.com/EasyNetQ/EasyNetQ/wiki/Request-Response
 
 Basic patterns:
 

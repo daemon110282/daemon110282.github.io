@@ -1,26 +1,25 @@
 # Паттерны:
 
-1. Task Queue (циклическое распределение задач по консьюмерам ) Round-robin dispatching
-  - сервисы между собой делят Очередь задач 
-  - паттерн EIP Competing Consumers https://www.enterpriseintegrationpatterns.com/patterns/messaging/CompetingConsumers.html
-3. Task Queue (распределение задач по загрузке ) Fair dispatching
-  - QoS = 1, ack=1, autoack=0 если не подтверждена 1-е сообщение, 2-е пойдёт другому подписчику
-5. Routing (fanout - без фильтрации) - события
+1. Task (Worker) Queue 
+  1. (циклическое распределение задач по консьюмерам ) Round-robin dispatching
+    - сервисы между собой делят Очередь задач 
+    - паттерн EIP Competing Consumers https://www.enterpriseintegrationpatterns.com/patterns/messaging/CompetingConsumers.html
+    - Exchange type: direct, several consumer listening to the same queue, reading the messages in a round-robin fashion if all are waiting
+  2. Task Queue (распределение задач по загрузке ) Fair dispatching
+    - QoS = 1, ack=1, autoack=0 если не подтверждена 1-е сообщение, 2-е пойдёт другому подписчику
+2. Simple one-way messaging (Exchange type: direct, message sent to unnamed (default queue))
+3. Publish-subscribe (fanout - без фильтрации) - события
   - TODO везде PubSub уточнить название 
   - Очередь ответов - даёт широковешательную рассылку ответов по всем ИС потребителям
-6. Routing (headers - с фильтрацией) - события
+4. Publish-subscribe (headers - с фильтрацией) - события
   - даёт возможность делать фильтрацию трафика на уровне RMQ. подписчик создаёт и связывает очередь к обменнику, указывает фильтрация на основе заголовков -это решает задачу фильтрации лишнего трафика, но не решает задачу изоляции. подписчик может не указать фильтры и получит весь трафик: и свой и чужой.
+  - Exchange type: headers. Message is sent to the queues which match the headers. Routing key should not be set. Match type should indicate if all or any header must match.
+5. Routing (Exchange type: direct, message is sent to a named exchange, routing key is specified so information only reaches the queues matching the pattern)
+6. Topic (Exchange type: topic. Routing key is a string separated by dots and wildcards. E.g.: “ro.alexandrugris.*”.)
 7. RPC (команды)
   - паттерн EIP Request-Reply https://www.enterpriseintegrationpatterns.com/patterns/messaging/RequestReply.html
   - EasyNetQ https://github.com/EasyNetQ/EasyNetQ/wiki/Request-Response
-
-Basic patterns:
-
-Simple one-way messaging (Exchange type: direct, message sent to unnamed (default queue))
-Worker queues (Exchange type: direct, several consumer listening to the same queue, reading the messages in a round-robin fashion if all are waiting)
-Publish-subscribe (Exchange type: fan-out, routing key is ignored, message is sent to all queues bound to the exchange)
-RPC (Exchange type: direct, message can be sent to default exchange with a specified routing key and response is received on a specified unique response queue, owned by the client)
-
+  - Exchange type: direct, message can be sent to default exchange with a specified routing key and response is received on a specified unique response queue, owned by the client
 
 
 ## Режимы доставки сообщений:

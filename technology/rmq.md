@@ -46,7 +46,7 @@
 * https://github.com/EasyNetQ/EasyNetQ/wiki/Versioning-Messages
 
 ### vhosts
-RabbitMQ is multi-tenant system: connections, exchanges, queues, bindings, user permissions, policies and some other things belong to virtual hosts, logical groups of entities.
+[RabbitMQ is multi-tenant system](https://www.rabbitmq.com/vhosts.html): connections, exchanges, queues, bindings, user permissions, policies and some other things belong to virtual hosts, logical groups of entities.
 - Virtual hosts provide logical grouping and separation of resources. Separation of physical resources is not a goal of virtual hosts and should be considered an implementation detail.
 - Virtual Hosts are used to isolate resources. A determined resource (e.g. exchanges, queues) can be used by more than one virtual host.
 - RabbitMQ vhosts are like a virtual machine for a physical server, allowing for multiple secure application operations through virtual rather than physical separation. As the separation is virtual, it is important to remember that the vhosts are not physically separated from each other and therefore they might affect each other’s performance.

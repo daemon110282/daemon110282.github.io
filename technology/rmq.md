@@ -55,6 +55,7 @@ RabbitMQ is multi-tenant system: connections, exchanges, queues, bindings, user 
   - Virtual hosts and 
   - queues. 
 A virtual host can be created per microservice which will hold all the logical infrastructure definitions like Queues, Exchanges, users etc. This is a good practice as this allows the teams to manage their own AMQP topologies. However, this does not stop a virtual host to demand more from the underlying physical RabbitMQ instance.
+- https://www.cloudamqp.com/blog/what-is-a-rabbitmq-vhost.html#:~:text=Vhosts%20(Virtual%20Hosts)%20in%20RabbitMQ,within%20an%20instance.
 
 Support multi bus, virtual host:
 - https://masstransit-project.com/usage/containers/multibus.html#multibus
@@ -83,3 +84,7 @@ security mechanism in RabbitMQ:
 * SSL support
 
 https://stackoverflow.com/questions/7840283/how-can-queues-be-made-private-secure-in-rabbitmq-in-a-multitenancy-system
+
+## best practices
+
+- https://www.cloudamqp.com/blog/part1-rabbitmq-best-practice.html

@@ -5,10 +5,14 @@
 * [Архитектура ПО](arch/arch.md)
 * [DevOps](devops.md)
 * [API](api/api.md)
-* Методы проектирования
+* Методологии проектирования решений
   * DDD
     * Framework, Platform
       * [ABP.IO](technology/abp.md)
+* Аналитика
+  * [Use Case, User Story](ba.md)
+* Бизнес процессы
+  * [ККТ](business/kkt.md)
 
 ## Tools
 

@@ -21,6 +21,7 @@
 
 * [Принципы проектирования](https://docs.microsoft.com/ru-ru/azure/architecture/guide/design-principles/)
 * [Шаблоны](patterns.md)
+* [Критерии выбора решения](arch.criteria.md)
 
 ## Reference Architecture
 

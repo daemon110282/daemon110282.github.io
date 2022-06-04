@@ -1,40 +1,80 @@
-# Report
+# Система отчетности
 
-reporting database has a number of advantages:
+- [Система отчетности](#система-отчетности)
+  - [Зачем](#зачем)
+  - [Плюсы и минусы](#плюсы-и-минусы)
+  - [Паттерны](#паттерны)
+  - [Принципы проектирования](#принципы-проектирования)
+    - [Критерии реализация отчетов внутри ИС или в отдельной системе отчетности](#критерии-реализация-отчетов-внутри-ис-или-в-отдельной-системе-отчетности)
+  - [Технологии](#технологии)
+  - [Links](#links)
 
-The structure of the reporting database can be specifically designed to make it easier to write reports.
-You don't need to normalize a reporting database, because it's read-only. Feel free to duplicate data as much as needed to make queries and reporting easier.
-The development team can refactor the operational database without needing to change the reporting database.
-Queries run against the reporting database don't add to the load on the operational database.
-You can store derived data in the database, making it easier to write reports that use the derived data without having to introduce a separate set of derivation logic.
-You may have multiple reporting databases for different reporting needs.
+## Зачем
 
-https://martinfowler.com/bliki/ReportingDatabase.html
+[Reporting database](https://martinfowler.com/bliki/ReportingDatabase.html) has a number of advantages:
 
-# Patterns
-- требуется ли вообще транзакционность, или её можно отключить/понизить уровень изоляции на уровне БД? Уровень транзакции, мы пытаемся прийти к консенсусу в выборе между высокой согласованностью данных между транзакциями и скоростью выполнения этих самых транзакций.
-- по умолчанию
-  - MySQL - repeatable read 
-  - PostgreSQL — read committed
-- Уровни изоляции:
-  - 1 read uncommitted 
-    - самую высокую скорость выполнения и самую низкую согласованность имеет уровень 
-    - феномен грязного чтения
-    - PostgreSQL мог бы тоже использоваться, но он не поддерживает уровень изоляции read uncommitted, и использует вместо него уровень read committed.
-    - Разные СУБД по-разному воспринимают уровни изолированности.
-  - 2 Read committed
-    - Для этого уровня параллельно исполняющиеся транзакции видят только зафиксированные изменения из других транзакций. 
-  обеспечивает защиту от грязного чтения.
-    - феномен неповторяющегося чтения, когда мы видим обновленные и удаленные строки (UPDATE, DELETE), и феномен чтения фантомов, когда мы видим добавленные записи (INSERT).
-  - 3 Repeatable read
-    - Уровень, позволяющий предотвратить феномен неповторяющегося чтения. Т.е. мы не видим в исполняющейся транзакции измененные и удаленные записи другой транзакцией. Но все еще видим вставленные записи из другой транзакции. 
-    - Чтение фантомов никуда не уходит.
-  - 4 serializable
-    - Самую низкую скорость выполнения и самую высокую согласованность.
-    - Уровень, при котором транзакции ведут себя как будто ничего более не существует, никакого влияния друг на друга нет. В классическом представлении этот уровень избавляет от эффекта чтения фантомов. Блокировка изменений в транзакции1 до завершения чтения в транзакции2. 
-        
-## Technology
-[Report Systems](../technology/report.md)
+- The structure of the reporting database can be specifically **designed** to make it **easier to write** reports.
+- You **don't need to normalize*- a reporting database, because it's read-only. Feel free to duplicate data as much as needed to make queries and reporting easier.
+- The development team can **refactor the operational database** without needing to change the reporting database.
+- Влияния на производительность OLTP
+  - Queries run against the reporting database **don't add to the load on the operational database**
+  - Отчеты долго формируются (тяжелые)
+  - Рост числа пользователей, данных
+  - См качества арх-ры: доступность, масштабируемость
+- You can store derived data in the database, making it easier to write reports that use the derived data without having to introduce a separate set of derivation logic.
+- You may have multiple reporting databases for different reporting needs.
+
+## Плюсы и минусы
+
+[Критерии](arch.criteria.md)
+
+| + | - |
+| - | - |
+| Минимизация рисков производительности | Отдельная БД, отдельный сервер системы отчетности |
+| Возможность использования BI систем | Интеграция данных из ИС источников |
+
+## Паттерны
+
+- [DWH](dwh.md)
+- OLTP
+  - MS SQL
+  - PostgreSQL
+- OLAP
+  - [DWH](dwh.md)
+- CQRS
+  - В решениях 1С компромисс
+    - События при записи в базу пишутся сразу в несколько мест. В одном месте записи имеют мало индексов и оптимизированы под OLTP нагрузки. Такие таблицы называются регистрами сведений.
+    - В другом месте записи индексируются по всем полям и адаптированы для OLAP нагрузок. Такие таблицы называются регистрами накоплений.
+
+## Принципы проектирования
+
+- Требуется ли вообще транзакционность, или её можно отключить/понизить [уровень изоляции на уровне БД](store.isolation.level.md)?
+  - При выборе уровня изоляции транзакции, мы пытаемся прийти к консенсусу в выборе между высокой согласованностью данных между транзакциями и скоростью выполнения этих самых транзакций.
+
+### Критерии реализация отчетов внутри ИС или в отдельной системе отчетности
+
+- Качество текущей из коробки отчетности устраивает бизнес
+  - Да\Нет
+- Структура данных
+  - Связанные сущности, источники данных в других ИС
+  - Неструктурированный формат данных - XML json
+- Особенности использования
+  - Онлайн/Оффлайн
+  - Актуальность на сейчас/вчера(-1\2Д) (кеш)
+  - Частота запуска
+  - Ручной запуск, изменение фильтров\по расписанию
+- Глубина и объемы данных
+  - Исторические
+- Сложность вычислений (необходимость ресурсов инф-ры)
+- Периодичность
+- Набор параметров типизирован для отчета
+- Агрегация данных из разных ИС
+- Типы отчетов
+  - Оперативные (онлайн) За короткий период времени на малом количестве сущностей (источниках)
+  - Исторические - Управленческие (оффлайн) за большие периоды времени на большом объёме данных и многих сущностях
+  - 
+## Технологии
+
+- [Report Systems](../technology/report.md)
 
 ## Links
-- https://habr.com/ru/post/469415/

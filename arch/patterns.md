@@ -1,6 +1,6 @@
-# Patterns
+# Паттерны Patterns
 
-* [Шаблоны интеграций](pattern.integration.md)
+* [Шаблоны интеграций](pattern/pattern.integration.md)
 
 ## Links
 

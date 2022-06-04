@@ -1,6 +1,7 @@
-# Паттерны Patterns
+# Паттерны Шаблоны Patterns
 
-* [Шаблоны интеграций](pattern/pattern.integration.md)
+* [Интеграции](pattern/pattern.integration.md)
+* [Производительность](pattern/pattern.perf.md)
 
 ## Links
 

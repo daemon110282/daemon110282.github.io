@@ -41,10 +41,11 @@
 * CQRS - command query request segregation
 * Event sourcing
 * Медиатор
+* SAGA
 
 ## Технологии
 
-* Шины сообщений (брокер обмена сообщениями) можно выбрать одну из нескольких технологий (траспорт) обмена сообщениями:
+* Шины сообщений Event Bus (брокер обмена сообщениями Message Broker) можно выбрать одну из нескольких технологий (траспорт) обмена сообщениями:
   * [RabbitMQ](../../technology/rmq.md)
   * Azure service bus
   * MSMQ
@@ -52,7 +53,10 @@
   * Azure Queue Storage
   * Azure Service Bus
   * Amazon SQS
-* Реализации шин сообщений - NServiceBus, MassTransit или Brighter. Работает поверх транспорта
+* Реализации шин сообщений (фреймворк)
+  * NServiceBus
+  * MassTransit или Brighter
+  * EasyNetQ
 * [MS Обмен сообщениями](https://docs.microsoft.com/ru-ru/azure/architecture/guide/technology-choices/messaging)
 
 ## Links
@@ -61,6 +65,7 @@
 * https://habr.com/ru/post/422151/
 * https://habr.com/ru/post/150134/
 * https://docs.microsoft.com/ru-ru/azure/architecture/guide/architecture-styles/event-driven
+* https://docs.abp.io/en/abp/4.4/Distributed-Event-Bus
 * pattern
   * https://github.com/plantuml-stdlib/EIP-PlantUML
   * https://medium.com/@objectzen/content-enricher-pattern-in-rabbitmq-eae504a8504e

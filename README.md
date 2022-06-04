@@ -6,7 +6,7 @@
 * [DevOps](devops.md)
 * [API](api/api.md)
 * Методологии проектирования решений
-  * DDD
+  * [DDD](ddd.md)
     * Framework, Platform
       * [ABP.IO](technology/abp.md)
 * Аналитика

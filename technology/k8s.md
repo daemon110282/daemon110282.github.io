@@ -3,6 +3,9 @@
 
 ## Patterns
 
+Rate limiting
+
+https://www.nginx.com/blog/microservices-march-protect-kubernetes-apis-with-rate-limiting/?utm_source=pocket_mylist
 ## canary deployment
 
 https://www.nginx.com/blog/microservices-march-improve-kubernetes-uptime-and-resilience-with-a-canary-deployment/?utm_source=pocket_mylist

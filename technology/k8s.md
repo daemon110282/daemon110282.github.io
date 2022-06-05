@@ -1,9 +1,12 @@
 # Kubernetes (k8s)
 
 
-# Patterns
+## Patterns
 
-## scalability Performance масштабирование
+## canary deployment
+
+https://www.nginx.com/blog/microservices-march-improve-kubernetes-uptime-and-resilience-with-a-canary-deployment/?utm_source=pocket_mylist
+### scalability Performance масштабирование
 
 Avtoscaling
   Min max nodes in cluster

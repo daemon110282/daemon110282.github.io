@@ -25,6 +25,9 @@
   - [Decompose by business capability Context](https://microservices.io/patterns/decomposition/decompose-by-business-capability.html)
   - [Decompose by subdomain Context](https://microservices.io/patterns/decomposition/decompose-by-subdomain.html)
 - [Обработка сбоев](msa.failure.md)
+- Аутентификация
+. https://www.osohq.com/post/microservices-authorization-patterns?utm_source=pocket_mylist
+. Zanzibar
 
 ## Технологии
 

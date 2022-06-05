@@ -17,3 +17,4 @@
 * https://developer.mozilla.org/ru/docs/Web/HTTP/Status
 * https://docs.apigee.com/api-platform/troubleshoot/runtime/503-service-unavailable
 * https://www.inmotionhosting.com/support/website/create-503-status/
+https://habr.com/ru/post/533606/?utm_source=pocket_mylist

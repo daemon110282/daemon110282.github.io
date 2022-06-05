@@ -1,4 +1,4 @@
-# Domain Driven Development DDD
+# Domain Driven Design DDD
 
 ## Зачем
 
@@ -43,5 +43,32 @@
 ## Технологии
 
 - [ABP.IO](technology/abp.md)
+A Modeling Framework for Strategic Domain-driven Design
+Plantuml, vs code
+https://contextmapper.org/
+
+Context Mapping DSL (CML)
+
+
+Microservice DSL (MDSL)
+https://github.com/Microservice-API-Patterns/MDSL-Specification
+Generators
+In the MDSL Editor, you can invoke the following generators from the “MDSL” entry in the context menu:
+
+Generate OpenAPI Specification
+Generate Protocol Buffers Specification
+Generate GraphQL Schema
+Generate Jolie Lang(uage) Specification
+Generate Java “Modulith” Code
+Generate ALPS specification (status: technology preview)
+Generate AsyncMDSL specification (this actually is an in-model transformation, it does not generate a new output file)
+Generate Text File with Freemarker Template
+Generate AsyncAPI (from AsyncMDSL). See page AsyncAPI Specification Generator and readme in this examples folder for further information.
+
+
+
+Generate msml 
+
+From msml openapi
 
 ## Links

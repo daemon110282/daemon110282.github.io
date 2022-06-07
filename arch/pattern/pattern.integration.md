@@ -1,6 +1,7 @@
 # Паттерны интеграций
 
-- ETL
+- [ETL (extract, transform, load)](https://python.ivan-shamaev.ru/etl-best-practices-design-data-patterns/)
+- [ELT (Extract, load, transform)](https://www.striim.com/blog/data-integration/)
 - [Shared Database Шлюзовая БД (ШБД)](shareddb.md)\Table
 
 ## Links

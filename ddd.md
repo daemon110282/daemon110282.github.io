@@ -15,6 +15,8 @@
 
 ## Принципы проектирования
 
+![Схема](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/daemon110282/daemon110282.github.io/daemon110282-patch-1/ddd.puml)
+
 [Схемы](https://docs.google.com/document/d/1qgHu49LneU_iNi3YmPLc1NHSVfH-BvONdOyjg5DE8Xs/edit?usp=sharing)
 
 - ОГРАНИЧЕННЫЙ КОНТЕКСТ

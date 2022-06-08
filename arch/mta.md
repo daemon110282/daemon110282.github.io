@@ -19,6 +19,7 @@
 ## Зачем
 
 [Схемы](https://docs.google.com/document/d/1adNn0l5iUZFGiqMzqjup6f-DtkBPP4pnbDjRsP8M70E/edit?usp=sharing)
+[Схемы](../img/)
 
 ## Плюсы минусы
 
@@ -126,6 +127,11 @@ TODO
 
 #### multi-database tenancy
 
+- one database per tenant
+- one schema per tenant
+- shared table with PK tenant (рекомендуется, большая гибкость в секционировании горизонтальном при необходимости)
+  - CITUS 
+  
 #### Single-database tenancy
 
 - Single-database tenancy comes with lower devops complexity, but larger code complexity than multi-database tenancy, since you have to scope things manually, and won't be able to integrate some third-party packages.

@@ -127,9 +127,9 @@ TODO
 
 #### multi-database tenancy
 
-- one database per tenant
-- one schema per tenant
-- shared table with PK tenant (рекомендуется, большая гибкость в секционировании горизонтальном при необходимости)
+- one database per tenant - database based isolation
+- one schema per tenant - table based isolation
+- shared table with PK tenant (рекомендуется, большая гибкость в секционировании горизонтальном при необходимости) - row based isolation
   - CITUS 
   
 #### Single-database tenancy

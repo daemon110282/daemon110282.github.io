@@ -15,3 +15,20 @@
 * минусы
   * vue не из коробки, т.е. пишем на React?
   * не нашел CI-CD из коробки
+
+## Сквозная функциональность
+
+### Audit
+
+- [Function](https://docs.abp.io/en/abp/latest/Audit-Logging)
+  - Request, Change Entity, Errors, Comment
+  - By Service (Controler\Action)
+  - By Entity\Properties
+[Module](https://docs.abp.io/en/abp/latest/Modules/Audit-Logging)
+  - Aggregate
+  - EF Core
+    - Tables
+  - Mongo DB
+
+### Logging
+

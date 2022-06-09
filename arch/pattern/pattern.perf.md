@@ -4,6 +4,7 @@
 	- [Приложение back-end](#приложение-back-end)
 	- [Приложение front-end](#приложение-front-end)
 	- [БД](#бд)
+	- [Сеть](#Сеть)
 	- [Метрики](#метрики)
 	- [Links](#links)
 
@@ -36,6 +37,14 @@
 - Репликация
 - Кластеризация
 - [Уровень изоляции данных](store.../store.isolation.level.md)
+
+## Сеть
+
+- [Windows Distributed File System (DFS) и Replication](https://windowsnotes.ru/activedirectory/distributed-file-system-arxitektura-i-bazovye-ponyatiya/)
+  - A distributed file system (DFS) is a file system with data stored on a server. The data is accessed and processed as if it was stored on the local client machine.
+  - The DFS makes it convenient to share information and files among users on a network in a controlled and authorized way. The server allows the client users to share files and store data just as if they are storing the information locally. However, the servers have full control over the data, and give access control to the clients.
+- Каналы связи вертикальное масштабирование [дублирование каналов связи, защита](https://systempb.ru/company/our-articles/vysokie-skorosti-sovremennykh-tsod-kak-vozmozhnosti-stanovyatsya-ogranicheniyami-i-chto-s-etim-delat/)
+- [топология сети](http://citforum.ru/nets/optimize/locnop_02.shtml) и используемое коммуникационное оборудование
 
 ## Метрики
 

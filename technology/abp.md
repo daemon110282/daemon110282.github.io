@@ -18,6 +18,19 @@
 
 ## Сквозная функциональность
 
+### Auth, Authorization
+
+- [User Account](https://docs.abp.io/en/abp/latest/CurrentUser)
+- [External Logins](https://docs.abp.io/en/commercial/latest/modules/account#social-external-logins)
+- [Tenant Permision](https://docs.abp.io/en/commercial/latest/modules/account/impersonation#tenant-user-impersonation-permissions)
+ - [Доступ к функциям](https://docs.abp.io/en/abp/latest/Authorization#multi-tenancy)
+- [Ролевой доступ](https://docs.abp.io/en/abp/latest/Modules/Permission-Management)
+
+### Multi Tenant
+
+- Доступ к функциям по [Host, Tenant, Both](https://docs.abp.io/en/abp/latest/Authorization#multi-tenancy)
+- [Manage](https://docs.abp.io/en/abp/latest/Modules/Tenant-Management#user-interface)
+
 ### Audit
 
 - [Function](https://docs.abp.io/en/abp/latest/Audit-Logging)

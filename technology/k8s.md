@@ -3,25 +3,25 @@
 
 ## Patterns
 
-Rate limiting
+- [Rate limiting](https://www.nginx.com/blog/microservices-march-protect-kubernetes-apis-with-rate-limiting/)
 
-https://www.nginx.com/blog/microservices-march-protect-kubernetes-apis-with-rate-limiting/?utm_source=pocket_mylist
-## canary deployment
+### Canary deployment
 
-https://www.nginx.com/blog/microservices-march-improve-kubernetes-uptime-and-resilience-with-a-canary-deployment/?utm_source=pocket_mylist
-### scalability Performance масштабирование
+- [Nginx](https://www.nginx.com/blog/microservices-march-improve-kubernetes-uptime-and-resilience-with-a-canary-deployment/)
 
-Avtoscaling
-  Min max nodes in cluster
-Запросы requests и лимиты limits CPU - by namespace, node, pod, container
-memory limit and a memory request
-Quality of Service (QoS) classes to the Pod:
-  Guaranteed
-  Burstable
-  BestEffort
-Утилизация ресурсов cluster, nodes, pods, container
-  Когда вы утилизируете большую часть ресурсов кластера, контейнеры могут работать без проблем при обычной нагрузке, но в сценариях с высокой нагрузкой контейнеры могут начать использовать ЦП и память до предела. Это приведет к тому, что узел начнет выселять pods, а в критических ситуациях узел перестанет работать из-за нехватки ресурсов.
-настраивать проверки работоспособности (health probes)
+#### Scalability Performance масштабирование
+
+- Avtoscaling
+  - Min max nodes in cluster
+- Запросы requests и лимиты limits CPU - by namespace, node, pod, container
+- memory limit and a memory request
+- Quality of Service (QoS) classes to the Pod:
+  - Guaranteed
+  - Burstable
+  - BestEffort
+- Утилизация ресурсов cluster, nodes, pods, container
+  - Когда вы утилизируете большую часть ресурсов кластера, контейнеры могут работать без проблем при обычной нагрузке, но в сценариях с высокой нагрузкой контейнеры могут начать использовать ЦП и память до предела. Это приведет к тому, что узел начнет выселять pods, а в критических ситуациях узел перестанет работать из-за нехватки ресурсов.
+- настраивать проверки работоспособности (health probes)
 
 
-# Links
+## Links

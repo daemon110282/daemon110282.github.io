@@ -36,4 +36,8 @@ Centralize authorization data into one place, and move all decisionmaking to tha
 
 - Service Mesh
 
+## Reference Architecture
+
+- [eShopOnContainers](https://github.com/dotnet-architecture/eShopOnContainers)
+
 ## Links

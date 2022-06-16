@@ -28,6 +28,14 @@
   - CPU
   - MEM 
 
+### Blue Green Deployment
+
+- [Oracle](https://docs.oracle.com/en/solutions/mod-app-deploy-strategies-oci/index.html#GUID-2207DEDA-718D-4264-B851-144EBF0E57CF)
+
+### Canary Deployment
+
+- [Oracle](https://docs.oracle.com/en/solutions/mod-app-deploy-strategies-oci/index.html#GUID-2207DEDA-718D-4264-B851-144EBF0E57CF)
+
 ## Технологии
 
 - [k8s](technology/k8s.md)
@@ -50,8 +58,11 @@
   - Security
     - TLS – cert-manager
     - Key Managment
+    - Key Vault
+      - HashiCorp
   - Performance monitoring and dashboards 
     - Prometheus and Grafana
+    - PRTG
 
 ## Links
 - [Модель оценки компании](http://agilemindset.ru/%d0%bc%d0%be%d0%b4%d0%b5%d0%bb%d1%8c-%d0%be%d1%86%d0%b5%d0%bd%d0%ba%d0%b8-%d0%ba%d0%be%d0%bc%d0%bf%d0%b5%d1%82%d0%b5%d0%bd%d1%86%d0%b8%d0%b9-devops-%d0%b2-miro/)

@@ -32,5 +32,7 @@
 
 - Helm
 - Jenkins	- automation server on Kubernetes
+- Container Registry
+  - Nexus
 
 ## Links

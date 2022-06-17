@@ -16,6 +16,6 @@
 
 ## Tools
 
-* [GitHub Pages](technology/jekyll.md)
-* [MarkDown](markdown.md)
-* PlantUML
+- [GitHub Pages](technology/jekyll.md)
+- [MarkDown](markdown.md)
+- [PlantUML](plantuml.md)

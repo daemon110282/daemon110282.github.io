@@ -21,4 +21,6 @@
 
 ## Links
 
-* https://docs.microsoft.com/ru-ru/azure/architecture/guide/
+- https://docs.microsoft.com/ru-ru/azure/architecture/guide/
+- KATAs
+  - https://github.com/team7katas/sysopsquad

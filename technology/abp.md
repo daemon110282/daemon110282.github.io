@@ -55,6 +55,7 @@
 ### Logging
 
 - SerialLog 
+ - [2graylog](https://medium.com/@paulius.juozelskis/centralized-logging-in-net-core-using-graylog-and-serilog-4de7739051a)
 
 ## Links
 - [Blog](https://blog.abp.io/abp)

@@ -24,3 +24,4 @@
 - https://docs.microsoft.com/ru-ru/azure/architecture/guide/
 - KATAs
   - https://github.com/team7katas/sysopsquad
+  - https://github.com/vadagama/sever_crew

@@ -38,6 +38,12 @@ communication to multiple microservices?
 • IP whitelisting
       * https://docs.microsoft.com/ru-ru/azure/architecture/patterns/gateway-offloading
 
+## versioning
+
+Then you can decide between implementing both versions of the service 
+simultaneously within the same service instance, or deploying different instances that each handle a 
+version of the API. A good approach for this is the **Mediator pattern** (for example, **MediatR** library) to 
+decouple the different implementation versions into independent handlers
 
 ## Security
 

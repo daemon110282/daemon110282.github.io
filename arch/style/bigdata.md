@@ -27,9 +27,9 @@
 
 ## Паттерны
 
-- [DWH](../dwh.md)
 - [Система отчетности](../report.md)
 - [Хранилища данных](../store.md)
+  - [DWH](../dwh.md)
 - Massive Parallel Processing (MPP) архитектура
 
 ## Технологии

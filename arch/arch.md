@@ -11,13 +11,14 @@
 
 ## Принципы проектирования
 
-* [Принципы проектирования](https://docs.microsoft.com/ru-ru/azure/architecture/guide/design-principles/)
-* [Шаблоны](patterns.md)
-* [Критерии выбора решения](arch.criteria.md)
+- [Принципы проектирования MS](https://docs.microsoft.com/ru-ru/azure/architecture/guide/design-principles/)
+- [Шаблоны](patterns.md)
+  - [Интеграций](pattern/pattern.integration.md)
+- [Критерии выбора решения](arch.criteria.md)
 
 ## Reference Architecture
 
-* [Reference Architecture](arch.ref.md)
+- [Reference Architecture](arch.ref.md)
 
 ## Links
 

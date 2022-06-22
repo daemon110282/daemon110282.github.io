@@ -30,7 +30,11 @@
 - [Система отчетности](../report.md)
 - [Хранилища данных](../store.md)
   - [DWH](../dwh.md)
+  - Data Mart https://coderlessons.com/tutorials/bolshie-dannye-i-analitika/teoriia-khraneniia-dannykh/14-khranilishche-dannykh-protiv-data-mart
+  - todo https://coderlessons.com/tutorials/bolshie-dannye-i-analitika/teoriia-khraneniia-dannykh/teoriia-khraneniia-dannykh
+- Data Lake https://coderlessons.com/tutorials/bolshie-dannye-i-analitika/teoriia-khraneniia-dannykh/15-chto-takoe-ozero-dannykh
 - Massive Parallel Processing (MPP) архитектура
+- Data Mining https://coderlessons.com/tutorials/bolshie-dannye-i-analitika/teoriia-khraneniia-dannykh/21-data-mining-protiv-khranilishcha-dannykh
 
 ## Технологии
 

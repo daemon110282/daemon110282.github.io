@@ -9,7 +9,26 @@
   - [Shared Database Шлюзовая БД (ШБД)](shareddb.md)\Table
 - Приложения
   - Direct API (REST, SOAP, WCF)
-  - Middleware (API Gateway, RMQ, SOA)
+  - Middleware (API Gateway, RMQ, SOA, ESB)
+
+## Критерии выбора способа интеграции
+
+- Возможность использовать выбранный способ интеграции для всех приложений, участвующих в интеграции
+- Возможность внесения изменений в приложения
+- Требования к обеспечению надежности
+- Уровень связанности приложений
+- Временные задержки доставки данных
+- Требования к защите данных
+
+## Технологии
+
+- ESB
+  - Enterprise Integration Patterns
+    - Spring Integration
+    - Mule ESB
+    - Apache Camel
+    - IBM Integration Bus
+  
 
 ## Links
 

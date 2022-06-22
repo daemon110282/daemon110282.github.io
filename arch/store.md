@@ -11,6 +11,12 @@
 ## Зачем
 
 * [MS Хранилища данных](https://docs.microsoft.com/ru-ru/azure/architecture/guide/technology-choices/data-store-overview)
+* 
+Интегрирует множество источников данных и помогает снизить нагрузку на производственную систему.
+Оптимизированные данные для доступа к чтению и последовательного сканирования диска.
+Хранилище данных помогает защитить данные от обновлений исходной системы.
+Позволяет пользователям выполнять управление основными данными.
+Улучшение качества данных в исходных системах.
 
 ## Плюсы и минусы
 
@@ -28,3 +34,4 @@
 
 ## Links
 
+https://coderlessons.com/tutorials/bolshie-dannye-i-analitika/teoriia-khraneniia-dannykh/21-data-mining-protiv-khranilishcha-dannykh

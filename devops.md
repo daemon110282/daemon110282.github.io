@@ -22,6 +22,8 @@
 
 ### Сколько сервисов(BC) в одной контейнере
 
+todo
+
 ### Auto Scaling
 
 - Limit 
@@ -40,15 +42,23 @@
 
 - [k8s](technology/k8s.md)
 - Helm
-- Traefik 
+- docker-compose.yml when building a 
+multi-container Docker application
+- load balance, edge
+  - Traefik
+  - haproxy
+  - Nginx
+  - envoy l4-l7 
+    -  https://www.envoyproxy.io/docs/envoy/latest/intro/what_is_envoy
+    -  https://habr.com/ru/post/482578/
 - CD
   - Spinnaker 
 - Distribure Trace
 - API Managment
   - Kong
-- Service Mesh
+- Service Mesh, 
   - Istio
-  - Nginx
+  
 - Infrastructure-as-Code (IaC) automation 
   - Pulumi (Python, Go) 
 - Сквозная функциональность

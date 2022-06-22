@@ -7,9 +7,12 @@
   - [ELT (Extract, load, transform)](https://www.striim.com/blog/data-integration/)
     - vs etl https://coderlessons.com/tutorials/bolshie-dannye-i-analitika/teoriia-khraneniia-dannykh/5-etl-protiv-elt
   - [Shared Database Шлюзовая БД (ШБД)](shareddb.md)\Table
+  - Передача файлов
 - Приложения
-  - Direct API (REST, SOAP, WCF)
+  - Direct (API REST, SOAP, WCF, ODATA, GraphQL, gRPC)
+    - RPC
   - Middleware (API Gateway, RMQ, SOA, ESB)
+    - RPC
 
 ## Критерии выбора способа интеграции
 

@@ -1,9 +1,15 @@
 # Паттерны интеграций
 
-- [ETL (extract, transform, load)](https://python.ivan-shamaev.ru/etl-best-practices-design-data-patterns/)
-- [ELT (Extract, load, transform)](https://www.striim.com/blog/data-integration/)
-  - vs etl https://coderlessons.com/tutorials/bolshie-dannye-i-analitika/teoriia-khraneniia-dannykh/5-etl-protiv-elt
-- [Shared Database Шлюзовая БД (ШБД)](shareddb.md)\Table
+Виды интеграций
+- Пользователи
+- Данные
+  - [ETL (extract, transform, load)](https://python.ivan-shamaev.ru/etl-best-practices-design-data-patterns/)
+  - [ELT (Extract, load, transform)](https://www.striim.com/blog/data-integration/)
+    - vs etl https://coderlessons.com/tutorials/bolshie-dannye-i-analitika/teoriia-khraneniia-dannykh/5-etl-protiv-elt
+  - [Shared Database Шлюзовая БД (ШБД)](shareddb.md)\Table
+- Приложения
+  - Direct API (REST, SOAP, WCF)
+  - Middleware (API Gateway, RMQ, SOA)
 
 ## Links
 

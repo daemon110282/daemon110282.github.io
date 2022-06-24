@@ -6,6 +6,7 @@
 * [REST API](api.rest.md)
 * GRPC
 * GraphQL
+* [Вебхуки Webhook](https://systems.education/api-realtime)
 * SOAP
   * ESB
 

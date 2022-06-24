@@ -4,6 +4,7 @@ TODO
 - Ресурс
 - URL
 - HTTP метод
+  - SRP 
 - Свойства метода
 - Headers
 - [HTTP Status](api-http-status.md)

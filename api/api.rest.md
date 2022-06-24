@@ -1,8 +1,14 @@
 # REST API
 
 TODO
+- Ресурс
+- URL
+- HTTP метод
+- Свойства метода
+- Headers
 - [HTTP Status](api-http-status.md)
 - [HATEOS](https://docs.microsoft.com/ru-ru/azure/architecture/best-practices/api-design#use-hateoas-to-enable-navigation-to-related-resources)
+- Версионность
 
 Проектирование
 - https://systems.education/api-design

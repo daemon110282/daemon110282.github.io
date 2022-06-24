@@ -2,6 +2,9 @@
 
 [HTTP Status](api-http-status.md)
 
+
+https://systems.education/api-design
+
 ## Best practices
 
 - Идемпотентность

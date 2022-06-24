@@ -20,10 +20,11 @@
 
 - [Reference Architecture](arch.ref.md)
 
-#$ Документирование
+## Документирование
 
 - ADR
 https://www.cognitect.com/blog/2011/11/15/documenting-architecture-decisions
+https://music.yandex.ru/album/14948662/track/87546546
 - RFC https://brunoscheufler.com/blog/2020-07-04-documenting-design-decisions-using-rfcs-and-adrs
 - KATA
 

@@ -29,6 +29,10 @@
     - Exchange type: direct, message is sent to a named exchange, routing key is specified so information only reaches the queues matching the pattern
   - Topic
     - Exchange type: topic. Routing key is a string separated by dots and wildcards. E.g.: “ro.alexandrugris.*”.
+. - Trade off
+.   - единый контракт для подписчиков
+.   - Не безопасно, кто угодно подписывается
+.   - с ростом числа подписчиков, Брокер масштабировать необходимо
 * RPC (команды)
   - паттерн EIP [Request-Reply](https://www.enterpriseintegrationpatterns.com/patterns/messaging/RequestReply.html)
   - EasyNetQ [RPC](https://github.com/EasyNetQ/EasyNetQ/wiki/Request-Response)

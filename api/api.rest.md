@@ -19,7 +19,7 @@ TODO
 
 Проектирование
 - https://systems.education/api-design
-- [Сергей Константинов. API](https://twirl.github.io/The-API-Book/API.ru.html)
+- [Сергей Константинов. API TODO](https://twirl.github.io/The-API-Book/API.ru.html)
   - метод (интерфейс)
     - Стремитесь к тому, чтобы из **сигнатуры функции было абсолютно ясно, что она делает, что принимает на вход и что возвращает**. Вообще, при прочтении кода, работающего с вашим API, должно быть сразу понятно, что, собственно, он делает — без подглядывания в документацию.
     - Избегайте неявных частичных обновлений
@@ -37,6 +37,16 @@ TODO
 
 ## Best practices
 
+[REST](https://habr.com/ru/post/351890/)
+- Конечные точки в URL – имя существительное, не глагол
+- Множественное число
+- Документация
+- Версия вашего приложения
+- Пагинация
+- Использование SSL
+- HTTP методы
+- Эффективное использование кодов ответов HTTP
+
 - Идемпотентность
   - GET всегда
   - POST - клиент должен контролировать повторные запросы, если не получил ответа
@@ -51,4 +61,5 @@ TODO
   - https://itnan.ru/post.php?c=1&p=351890
   - [MS Guide](https://github.com/Microsoft/api-guidelines/blob/master/Guidelines.md)
   - [IBM](https://www.ibm.com/docs/ru/zos-connect/zosconnect/3.0?topic=apis-designing-restful)
-- [Док-е](https://starkovden.github.io/index.html)
+  - 
+- [Док-е TODO](https://starkovden.github.io/index.html)

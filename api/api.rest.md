@@ -38,6 +38,7 @@ TODO
 ## Best practices
 
 [REST](https://habr.com/ru/post/351890/)
+
 - Конечные точки в URL – имя существительное, не глагол
 - Множественное число
 - Документация
@@ -54,12 +55,11 @@ TODO
 - RESTful
   - [Яндекс.Касса](https://yookassa.ru/developers/using-api/interaction-format) 
 
-
 ## Links
 
 - REST
   - https://itnan.ru/post.php?c=1&p=351890
   - [MS Guide](https://github.com/Microsoft/api-guidelines/blob/master/Guidelines.md)
   - [IBM](https://www.ibm.com/docs/ru/zos-connect/zosconnect/3.0?topic=apis-designing-restful)
-  - 
+  - https://github.com/Sairyss/backend-best-practices
 - [Док-е TODO](https://starkovden.github.io/index.html)

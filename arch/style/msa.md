@@ -5,6 +5,7 @@
   - [Плюсы и минусы](#плюсы-и-минусы)
   - [Паттерны](#паттерны)
   - [Технологии](#технологии)
+  - [Reference Architecture](#reference-architecture)
   - [Links](#links)
 
 ## Зачем
@@ -39,5 +40,7 @@ Centralize authorization data into one place, and move all decisionmaking to tha
 ## Reference Architecture
 
 - [eShopOnContainers](https://github.com/dotnet-architecture/eShopOnContainers)
+- [About
+Microservices on .Net platforms which used Asp.Net Web API, Docker, RabbitMQ, MassTransit, Grpc, Ocelot API Gateway, MongoDB, Redis, PostgreSQL, SqlServer, Dapper, Entity Framework Core, CQRS and Clean Architecture implementation.](https://github.com/aspnetrun/run-aspnetcore-microservices)
 
 ## Links

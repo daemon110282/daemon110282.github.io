@@ -5,12 +5,15 @@
     * Возможность повторного использования Resuability
     * Модифицируемость/способности к взаимодействию/расширяемости/изменениям Modifiability (Эволюция)
     * Совместимость Interoperability (Эволюция)
+    * extensibility
+    * adaptability
   * Функциональность
     * [Security Безопасность](ability/security.md)
     * Гибкость Flexibility
     * Целостность Integrity
+    * configurability
   * Удобство использования Usability (Пользовательский опыт)
-    * Usability Практичность
+    * Практичность Usability
     * Доступность Accessibility (Пользовательский опыт)
     * Локализация Localization (Пользовательский опыт)
   * Удобство сопровождения
@@ -21,9 +24,19 @@
     * [Отказоустойчивость Fault tolerance](ability/faulttolerance.md)
     * Стабильность
     * Живучесть Robustness
+    * Recoverability
   * Производительность Performance (Эксплуатационные)
     * Масштабирование (Эволюция)
-  
+    * concurrency
+
+TODO:
+scalability interoperability
+responsiveness
+elasticity
+abstraction
+data integrity
+data consistency
+
 ## Коммерческие атрибуты
 
   * Сроки выхода на рынок TimeToMarket

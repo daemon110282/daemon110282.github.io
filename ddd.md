@@ -74,3 +74,10 @@ Generate msml
 From msml openapi
 
 ## Links
+
+- TODO
+  - https://github.com/Sairyss/domain-driven-hexagon
+  - IBM sample
+    - https://www.ibm.com/cloud/architecture/architecture/practices/event-storming-methodology-architecture/
+    - https://ibm-cloud-architecture.github.io/refarch-kc/implementation/domain-driven-design/
+    - https://ibm-cloud-architecture.github.io/refarch-kc/implementation/event-storming-analysis/

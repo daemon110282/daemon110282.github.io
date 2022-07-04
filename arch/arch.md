@@ -1,13 +1,21 @@
 # Архитектура
 
+- [Архитектура](#архитектура)
+  - [Стили архитектуры](#стили-архитектуры)
+  - [Качества архитектуры](#качества-архитектуры)
+  - [Принципы проектирования](#принципы-проектирования)
+  - [Reference Architecture](#reference-architecture)
+  - [Документирование](#документирование)
+  - [Links](#links)
+
 ## Стили архитектуры
 
-* [Стили архитектуры](arch.styles.md)
-* [MTA](mta.md)
+- [Стили архитектуры](arch.styles.md)
+- [MTA](mta.md)
   
 ## Качества архитектуры
 
-* [Качества архитектуры](arch.ability.md)
+- [Качества архитектуры](arch.ability.md)
 
 ## Принципы проектирования
 
@@ -23,8 +31,8 @@
 ## Документирование
 
 - ADR
-https://www.cognitect.com/blog/2011/11/15/documenting-architecture-decisions
-https://music.yandex.ru/album/14948662/track/87546546
+  - https://www.cognitect.com/blog/2011/11/15/documenting-architecture-decisions
+  - https://music.yandex.ru/album/14948662/track/87546546
 - RFC https://brunoscheufler.com/blog/2020-07-04-documenting-design-decisions-using-rfcs-and-adrs
 - KATA
 
@@ -34,3 +42,4 @@ https://music.yandex.ru/album/14948662/track/87546546
 - KATAs
   - https://github.com/team7katas/sysopsquad
   - https://github.com/vadagama/sever_crew
+- TODO https://github.com/Sairyss/distributed-systems-topics

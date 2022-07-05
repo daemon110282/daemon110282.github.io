@@ -60,9 +60,10 @@
 ### версионирование сообщений
 
 - по [message type](http://rabbitmq.github.io/rabbitmq-dotnet-client/api/RabbitMQ.Client.IBasicProperties.html#RabbitMQ_Client_IBasicProperties_Type) serialize, deserialize _с отдельными очередями?_
-  - https://masstransit-project.com/architecture/versioning.html
+  - [masstransit](https://masstransit-project.com/architecture/versioning.html)
     - https://bartwullems.blogspot.com/2021/10/masstransitmessage-versioning.html
-  - https://github.com/EasyNetQ/EasyNetQ/wiki/Versioning-Messages
+  - [EasyNetQ](https://github.com/EasyNetQ/EasyNetQ/wiki/Versioning-Messages)
+  - [NServiceBus](https://docs.particular.net/samples/versioning/)
 
 ## security
 

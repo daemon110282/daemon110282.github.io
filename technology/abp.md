@@ -38,8 +38,13 @@
 
 ## Сквозная функциональность
 
-### Auth, Authorization
+### Authentication, Authorization
 
+- [Authorization](https://docs.abp.io/en/abp/latest/Authorization)
+  - [Disable Concurent Login](https://support.abp.io/QA/Questions/3047/Disable-concurrent-user-login)
+  - Под разные UI FE 
+    - [Angular](https://docs.abp.io/en/abp/latest/UI/Angular/Authorization)
+    - React
 - [User Account](https://docs.abp.io/en/abp/latest/CurrentUser)
 - [External Logins](https://docs.abp.io/en/commercial/latest/modules/account#social-external-logins)
 - [Tenant Permision](https://docs.abp.io/en/commercial/latest/modules/account/impersonation#tenant-user-impersonation-permissions)

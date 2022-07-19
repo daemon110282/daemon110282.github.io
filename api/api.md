@@ -70,7 +70,7 @@ decouple the different implementation versions into independent handlers
 ## Документирование
 
 * [AsyncApi](asyncapi.md)
-* OpenApi
+* [OpenApi](https://github.com/daemon110282/api#openapi)
 
 
 ## technology

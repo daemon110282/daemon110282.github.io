@@ -1,5 +1,11 @@
 # Бизнес аналитика
 
+TODO Порядок артефактов\активностей
+1. Impact Mapping
+2. БП
+3. Event Storming
+4. UC\US
+
 ## Use Case (UC) Сценарии использования
 
 - может описываться взаимодействие двух или большего количества участников, имеющее конкретную цель.
@@ -22,7 +28,7 @@
   - S — Small — Компактный
   - T — Testable — Тестируемый   
 
-## UC vs US
+### UC vs US
 
 - [сценарии использования (Use case), в отличие от пользовательских историй (User Story)](https://babok-school.ru/blogs/user-story-vs-use-case-and-uml/), описывают процесс и его шаги подробно, предоставляя всю необходимую информацию о взаимодействии актора с системой, включая цель, пред- и пост-условия, триггеры, основные и альтернативные потоки, а также бизнес-правила
 
@@ -30,14 +36,31 @@
 
 - сущности, генерируемые события, бизнес контексты
 
-## Impact Mapping
+## Карта влияния Impact Mapping
 
-- зачем, кто, как, что 
+[Зачем](https://scrumtrek.ru/blog/product-management/3326/impact-mapping-guide/)
+- Для формирования бэклога
+- Для определения рисков
+- Для выявления конфликтов интересов заинтересованных лиц
+- Для генерации гипотез по развитию продукта
+
+Подход
+- [зачем, кто, как, что](https://scrumtrek.ru/blog/product-management/3326/impact-mapping-guide/)
 - какум проблему решаем: чтобы что? 
 
 ## Бизнес процесс (БП)
 
-TODO
+TO-DO
+- BPM
+- BPMN
+  - дизайнеры https://stormbpmn.com/compare
+    - visio
+    - bizagi
+    - stormbpmn
+  - автоматизация процессов BPMN https://www.g2.com/products/camunda-platform/competitors/alternatives
+    - camunda
+    - todo 
+.   - BPMS 
 
 ## Links
 

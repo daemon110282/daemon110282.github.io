@@ -6,8 +6,6 @@ RTO - [Recovery Time Objective](https://en.wikipedia.org/wiki/Disaster_recovery#
 - PgAdmin
 - https://dbeaver.io/
 
-
-
 ## Replication
 - https://www.postgresql.org/docs/current/runtime-config-replication.html
 
@@ -22,6 +20,17 @@ RTO - [Recovery Time Objective](https://en.wikipedia.org/wiki/Disaster_recovery#
 ## Reporting Tools
 - https://www.postgresql.org/download/products/5/
 - BIRT https://eclipse.github.io/birt-website/
+
+## ETL MSSQL
+
+- PSQL2MSSQL
+  - [mssql bcp on linux](https://docs.microsoft.com/ru-ru/sql/linux/sql-server-linux-migrate-bcp?view=sql-server-ver16)
+  - [mssql sqlcmd on linux](https://docs.microsoft.com/ru-ru/sql/linux/quickstart-install-connect-ubuntu?view=sql-server-ver16)
+    - support any T-SQL? exec stored procedure
+  - [sqlpipe](https://sqlpipe.com/transfer-data-from-postgresql-to-sql-server/)
+  - [Native Web Service до MSSQL 2012 поддерживает](https://www.developer.com/database/creating-native-web-services-in-sql-server/)
+- MSSQL2PSQL
+  - [foreign data wrapper](https://guriysamarin.medium.com/how-to-transfer-data-from-ms-sql-to-postgresql-or-good-design-vs-speed-1baad5665309) https://habr.com/ru/company/postgrespro/blog/309490/
 
 ## Links
 - https://assets.ctfassets.net/9n3x4rtjlya6/692exG1cv13VCVpBNqKXpD/55ff0f850c6cff66e60ba72269b1b75f/Migration_to_PostgreSql.pdf

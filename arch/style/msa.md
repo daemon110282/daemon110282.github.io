@@ -33,6 +33,12 @@ Centralize authorization data into one place, and move all decisionmaking to tha
 . https://www.osohq.com/post/microservices-authorization-patterns?utm_source=pocket_mylist
 . Zanzibar
 
+Aggregator Microservice Design Pattern
+Proxy Microservice Design Pattern
+Chained Microservice Design Pattern
+Branch Microservice Design Pattern (Aggregator + Chained в связке)
+https://apolomodov.medium.com/%D0%BE%D0%B1%D0%B7%D0%BE%D1%80-%D0%BA%D0%BD%D0%B8%D0%B3%D0%B8-microservice-patterns-and-best-practices-dce7785b9c45
+
 ## Технологии
 
 - Service Mesh

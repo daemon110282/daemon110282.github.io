@@ -44,7 +44,9 @@
 
 ## Технологии
 
-- [ABP.IO](technology/abp.md)
+- Framework, Platform
+  - [ABP.IO](technology/abp.md)
+
 A Modeling Framework for Strategic Domain-driven Design
 Plantuml, vs code
 https://contextmapper.org/

@@ -5,13 +5,12 @@
   - [Качества архитектуры](#качества-архитектуры)
   - [Принципы проектирования](#принципы-проектирования)
   - [Reference Architecture](#reference-architecture)
-  - [Документирование](#документирование)
+  - [Документирование архитектуры](#документирование-архитектуры)
   - [Links](#links)
 
 ## Стили архитектуры
 
 - [Стили архитектуры](arch.styles.md)
-- [MTA](mta.md)
   
 ## Качества архитектуры
 
@@ -19,16 +18,18 @@
 
 ## Принципы проектирования
 
-- [Принципы проектирования MS](https://docs.microsoft.com/ru-ru/azure/architecture/guide/design-principles/)
 - [Шаблоны](patterns.md)
+  - Проектирования
   - [Интеграций](pattern/pattern.integration.md)
+  - Документирования  
 - [Критерии выбора решения](arch.criteria.md)
 
 ## Reference Architecture
 
 - [Reference Architecture](arch.ref.md)
+  - [MTA](mta.md)
 
-## Документирование
+## Документирование архитектуры
 
 - ADR
   - https://www.cognitect.com/blog/2011/11/15/documenting-architecture-decisions

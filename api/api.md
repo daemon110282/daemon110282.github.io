@@ -71,6 +71,7 @@ decouple the different implementation versions into independent handlers
 
 * [AsyncApi](asyncapi.md)
 * [OpenApi](https://github.com/daemon110282/api#openapi)
+  * [Map](http://openapi-map.apihandyman.io/)
 
 
 ## technology

@@ -50,7 +50,8 @@ TODO Порядок артефактов\активностей
 
 ## Бизнес процесс (БП)
 
-TODO
+TO-DO
+- BPM
 - BPMN
   - дизайнеры https://stormbpmn.com/compare
     - visio
@@ -58,7 +59,8 @@ TODO
     - stormbpmn
   - автоматизация процессов BPMN https://www.g2.com/products/camunda-platform/competitors/alternatives
     - camunda
-    - todo  
+    - todo 
+.   - BPMS 
 
 ## Links
 

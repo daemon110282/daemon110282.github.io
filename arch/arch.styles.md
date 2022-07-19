@@ -9,12 +9,17 @@
 | [Большие данные](style/bigdata.md) | Разделение большого набора данных на мелкие блоки. Параллельная обработка для локальных наборов данных. | Пакетная обработка и анализ данных в режиме реального времени. Прогнозная аналитика с использованием машинного обучения. |
 | [Большие вычисления](https://docs.microsoft.com/ru-ru/azure/architecture/guide/architecture-styles/big-compute) | Распределение данных в тысячах ядер. | Домены с ресурсоемкими вычислениями, например моделированием. |
 
-- [Виды архитектур](https://www.developertoarchitect.com/downloads/worksheets.html)
+## Виды архитектур
+
+[Виды архитектур Worksheet](https://www.developertoarchitect.com/downloads/worksheets.html)
+
   - Клиент-Сервер
   - Многослойная
   - Модульный монолит
-  - Onion
+  - Onion Луковая
+  - Микроядерная Microkernel
   - [Vertical-slice](https://headspring.com/2019/11/05/why-vertical-slice-architecture-is-better/)
+  - [Распределенная архитектура TODO](https://github.com/Sairyss/distributed-systems-topics)
 
 ## Links
 

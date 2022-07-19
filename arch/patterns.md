@@ -2,6 +2,10 @@
 
 * [Интеграции](pattern/pattern.integration.md)
 * [Производительность](pattern/pattern.perf.md)
+* Сквозная функциональность
+  * [Аудита](pattern/pattern.audit.md)
+  * Логирования
+* [Документирования](pattern/pattern.docs.md)
 
 ## Links
 

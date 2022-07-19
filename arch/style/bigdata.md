@@ -30,11 +30,11 @@
 - [Система отчетности](../report.md)
 - [Хранилища данных](../store.md)
   - [DWH](../dwh.md)
-  - Data Mart https://coderlessons.com/tutorials/bolshie-dannye-i-analitika/teoriia-khraneniia-dannykh/14-khranilishche-dannykh-protiv-data-mart
+  - [Data Mart TODO](https://coderlessons.com/tutorials/bolshie-dannye-i-analitika/teoriia-khraneniia-dannykh/14-khranilishche-dannykh-protiv-data-mart)
   - todo https://coderlessons.com/tutorials/bolshie-dannye-i-analitika/teoriia-khraneniia-dannykh/teoriia-khraneniia-dannykh
-- Data Lake https://coderlessons.com/tutorials/bolshie-dannye-i-analitika/teoriia-khraneniia-dannykh/15-chto-takoe-ozero-dannykh
+- [Data Lake TODO](https://coderlessons.com/tutorials/bolshie-dannye-i-analitika/teoriia-khraneniia-dannykh/15-chto-takoe-ozero-dannykh)
 - Massive Parallel Processing (MPP) архитектура
-- Data Mining https://coderlessons.com/tutorials/bolshie-dannye-i-analitika/teoriia-khraneniia-dannykh/21-data-mining-protiv-khranilishcha-dannykh
+- [Data Mining TODO](https://coderlessons.com/tutorials/bolshie-dannye-i-analitika/teoriia-khraneniia-dannykh/21-data-mining-protiv-khranilishcha-dannykh)
 
 ## Технологии
 
@@ -45,7 +45,7 @@
 ## Links
 
 - [Большие данные](https://docs.microsoft.com/ru-ru/azure/architecture/guide/architecture-styles/big-data)
-- Azure https://docs.microsoft.com/en-us/azure/architecture/browse/
+- [Azure](https://docs.microsoft.com/en-us/azure/architecture/browse/)
 - https://docs.microsoft.com/ru-ru/azure/architecture/browse/
 - https://docs.microsoft.com/ru-ru/azure/architecture/patterns/
 - https://ru.wikipedia.org/wiki/%D0%A8%D0%B0%D0%B1%D0%BB%D0%BE%D0%BD_%D0%BF%D1%80%D0%BE%D0%B5%D0%BA%D1%82%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F

@@ -5,7 +5,8 @@ https://habr.com/ru/post/495766/
 Docs?
 Validation
 
-Vs openapi?
+Vs openapi? 2openapi
+https://www.google.com/amp/s/blog.stoplight.io/openapi-json-schema%3fhs_amp=true
 
 Dto from scheme
 

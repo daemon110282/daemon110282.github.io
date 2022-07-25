@@ -1,7 +1,7 @@
 # Эталонные архитектуры (Reference Architecture)
 
-* [MSA](msa.md)
-* [EDA](eda.md)
+* [MSA](style/msa.md)
+* [EDA](style/eda.md)
 * [MTA](mta.md)
 * [Хранилище данных](store.md)
   

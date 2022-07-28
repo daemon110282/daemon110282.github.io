@@ -12,9 +12,6 @@
 * SOAP
   * ESB
 
-Шаблон описания 
-https://tyk.io/blog/whats-minimum-documentation-required-api/
-
 ## Patterns
 
 https://microservice-api-patterns.org/
@@ -76,6 +73,10 @@ decouple the different implementation versions into independent handlers
 * [AsyncApi](asyncapi.md)
 * [OpenApi](https://github.com/daemon110282/api#openapi)
   * [Map](http://openapi-map.apihandyman.io/)
+
+https://starkovden.github.io/
+Шаблон описания 
+https://tyk.io/blog/whats-minimum-documentation-required-api/
 
 ## API management
 

@@ -72,6 +72,7 @@ decouple the different implementation versions into independent handlers
 
 * [AsyncApi](asyncapi.md)
 * [OpenApi](https://github.com/daemon110282/api#openapi)
+  * [Почему машино читаемый формат, а не Word](https://www.apimatic.io/blog/2017/04/why-your-api-needs-machine-readable-description-832e805f6855/)
   * [Map](http://openapi-map.apihandyman.io/)
 
 https://starkovden.github.io/
@@ -93,3 +94,4 @@ https://cloud.google.com/apigee
 * Rerty Policy
   * https://docs.microsoft.com/ru-ru/azure/architecture/best-practices/transient-faults
   * https://docs.microsoft.com/ru-ru/azure/architecture/patterns/circuit-breaker
+* [API Spec Trends](https://www.apimatic.io/blog/2022/03/top-api-specification-trends-2019-2022/)

@@ -13,13 +13,14 @@
     * [Security Безопасность](ability/security.md)
     * Гибкость Flexibility
     * Целостность Integrity
-    * configurability
+    * Конфигурируемость Configurability
   * Удобство использования Usability (Пользовательский опыт)
     * Практичность Usability
-    * Доступность Accessibility (Пользовательский опыт)
+    * Удобство Accessibility (Пользовательский опыт)
     * Локализация Localization (Пользовательский опыт)
   * Удобство сопровождения
     * Тестопригодность Testability
+    * CI-CD куда?
   * Надежность Reliability
     * [Готовность Availability (Эксплуатационные)](ability/availability.md)
     * Согласованность Consistency (Эксплуатационные)
@@ -32,12 +33,13 @@
     * concurrency
 
 TODO:
-scalability interoperability
-responsiveness
-elasticity
-abstraction
-data integrity
-data consistency
+
+- scalability interoperability
+- responsiveness
+- elasticity
+- abstraction
+- data integrity
+- data consistency
 
 ## Коммерческие атрибуты
 

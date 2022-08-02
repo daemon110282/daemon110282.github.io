@@ -21,6 +21,7 @@
   * Удобство сопровождения
     * Тестопригодность Testability
     * CI-CD куда?
+    * Автодокументирование API?
   * Надежность Reliability
     * [Готовность Availability (Эксплуатационные)](ability/availability.md)
     * Согласованность Consistency (Эксплуатационные)

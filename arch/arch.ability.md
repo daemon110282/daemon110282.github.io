@@ -4,7 +4,7 @@
 
 * Атрибуты качества (на основе ISO 9126)
   * Переносимость Portability
-    * Возможность повторного использования Resuability
+    * Возможность повторного использования Resuability (Единая кодовая база)
     * Модифицируемость/способности к взаимодействию/расширяемости/изменениям Modifiability (Эволюция)
     * Совместимость Interoperability (Эволюция)
     * extensibility
@@ -25,7 +25,7 @@
     * [Готовность Availability (Эксплуатационные)](ability/availability.md)
     * Согласованность Consistency (Эксплуатационные)
     * [Отказоустойчивость Fault tolerance](ability/faulttolerance.md)
-    * Стабильность
+    * Стабильность (Изоляция сбоев)
     * Живучесть Robustness
     * Recoverability
   * Производительность Performance (Эксплуатационные)

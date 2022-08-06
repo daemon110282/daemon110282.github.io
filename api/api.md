@@ -14,7 +14,9 @@
 
 ## Patterns
 
-https://microservice-api-patterns.org/
+TODO
+- https://microservice-api-patterns.org/
+- https://mathieu.fenniak.net/the-api-checklist/
 
 * API gateway
   * [MSA API Gateway](https://docs.microsoft.com/ru-ru/dotnet/architecture/microservices/architect-microservice-container-applications/direct-client-to-microservice-communication-versus-the-api-gateway-pattern)

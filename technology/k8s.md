@@ -1,5 +1,13 @@
 # Kubernetes (k8s)
 
+- [Kubernetes (k8s)](#kubernetes-k8s)
+  - [Reference Architecture](#reference-architecture)
+  - [Patterns](#patterns)
+    - [Canary deployment](#canary-deployment)
+      - [Scalability Performance масштабирование](#scalability-performance-масштабирование)
+  - [Технологии](#технологии)
+  - [Links](#links)
+
 ## Reference Architecture
 
 - [NGINX Modern Apps Reference Architecture (MARA)](https://github.com/nginxinc/kic-reference-architectures/)

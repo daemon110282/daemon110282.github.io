@@ -4,7 +4,7 @@
   - [Плюсы и минусы](#плюсы-и-минусы)
   - [Deployment](#deployment)
   - [Сквозная функциональность](#сквозная-функциональность)
-    - [Auth, Authorization](#auth-authorization)
+    - [Authentication, Authorization](#authentication-authorization)
     - [Multi Tenant](#multi-tenant)
     - [Audit](#audit)
     - [Logging](#logging)

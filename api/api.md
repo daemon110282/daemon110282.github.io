@@ -74,6 +74,8 @@ decouple the different implementation versions into independent handlers
 * [OpenApi](https://github.com/daemon110282/api#openapi)
   * [Почему машино читаемый формат, а не Word](https://www.apimatic.io/blog/2017/04/why-your-api-needs-machine-readable-description-832e805f6855/): трансформация форматов, Search and Discovery, Sharing, Aggregation, Code Generation (server, client), Mock, Monitoring
   * [Map](http://openapi-map.apihandyman.io/)
+  * support [Json Schema](jsonschema.md)
+* [Json Schema](jsonschema.md)
 
 https://starkovden.github.io/
 Шаблон описания 

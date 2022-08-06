@@ -81,8 +81,7 @@ https://tyk.io/blog/whats-minimum-documentation-required-api/
 
 ## API management
 
-https://tyk.io/
-https://cloud.google.com/apigee
+[API management](api-managment.md)
 
 ## technology
 

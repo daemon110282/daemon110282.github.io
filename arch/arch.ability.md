@@ -4,7 +4,7 @@
 
 * Атрибуты качества (на основе ISO 9126)
   * Переносимость Portability
-    * Возможность повторного использования Resuability
+    * Возможность повторного использования Resuability (Единая кодовая база)
     * Модифицируемость/способности к взаимодействию/расширяемости/изменениям Modifiability (Эволюция)
     * Совместимость Interoperability (Эволюция)
     * extensibility
@@ -13,18 +13,20 @@
     * [Security Безопасность](ability/security.md)
     * Гибкость Flexibility
     * Целостность Integrity
-    * configurability
+    * Конфигурируемость Configurability
   * Удобство использования Usability (Пользовательский опыт)
     * Практичность Usability
-    * Доступность Accessibility (Пользовательский опыт)
+    * Удобство Accessibility (Пользовательский опыт)
     * Локализация Localization (Пользовательский опыт)
   * Удобство сопровождения
     * Тестопригодность Testability
+    * CI-CD куда?
+    * Автодокументирование API?
   * Надежность Reliability
     * [Готовность Availability (Эксплуатационные)](ability/availability.md)
     * Согласованность Consistency (Эксплуатационные)
     * [Отказоустойчивость Fault tolerance](ability/faulttolerance.md)
-    * Стабильность
+    * Стабильность (Изоляция сбоев)
     * Живучесть Robustness
     * Recoverability
   * Производительность Performance (Эксплуатационные)
@@ -32,12 +34,13 @@
     * concurrency
 
 TODO:
-scalability interoperability
-responsiveness
-elasticity
-abstraction
-data integrity
-data consistency
+
+- scalability interoperability
+- responsiveness
+- elasticity
+- abstraction
+- data integrity
+- data consistency
 
 ## Коммерческие атрибуты
 

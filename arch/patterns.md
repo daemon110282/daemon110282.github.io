@@ -15,3 +15,4 @@
 ## Links
 
 * [MS Azure](https://docs.microsoft.com/ru-ru/azure/architecture/patterns/)
+* [RedHat Architect Portfolio](https://www.redhat.com/architect/portfolio/?intcmp=7013a0000025wJwAAI)

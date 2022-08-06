@@ -3,6 +3,8 @@
 ## Проектирование
 
 * [Дизайн API от потребностей продукта](http://agilemindset.ru/%d0%b0%d1%80%d1%85%d0%b8%d1%82%d0%b5%d0%ba%d1%82%d1%83%d1%80%d0%b0/)
+простота и удобство использования API потребителем важнее простоты и удобства реализации поставщиком
+
 * [REST API](api.rest.md)
 * GRPC
 * GraphQL
@@ -10,10 +12,11 @@
 * SOAP
   * ESB
 
-Шаблон описания 
-https://tyk.io/blog/whats-minimum-documentation-required-api/
-
 ## Patterns
+
+TODO
+- https://microservice-api-patterns.org/
+- https://mathieu.fenniak.net/the-api-checklist/
 
 * API gateway
   * [MSA API Gateway](https://docs.microsoft.com/ru-ru/dotnet/architecture/microservices/architect-microservice-container-applications/direct-client-to-microservice-communication-versus-the-api-gateway-pattern)
@@ -71,8 +74,18 @@ decouple the different implementation versions into independent handlers
 
 * [AsyncApi](asyncapi.md)
 * [OpenApi](https://github.com/daemon110282/api#openapi)
+  * [Почему машино читаемый формат, а не Word](https://www.apimatic.io/blog/2017/04/why-your-api-needs-machine-readable-description-832e805f6855/): трансформация форматов, Search and Discovery, Sharing, Aggregation, Code Generation (server, client), Mock, Monitoring
   * [Map](http://openapi-map.apihandyman.io/)
+  * support [Json Schema](jsonschema.md)
+* [Json Schema](jsonschema.md)
 
+https://starkovden.github.io/
+Шаблон описания 
+https://tyk.io/blog/whats-minimum-documentation-required-api/
+
+## API management
+
+[API management](api-managment.md)
 
 ## technology
 
@@ -84,3 +97,4 @@ decouple the different implementation versions into independent handlers
 * Rerty Policy
   * https://docs.microsoft.com/ru-ru/azure/architecture/best-practices/transient-faults
   * https://docs.microsoft.com/ru-ru/azure/architecture/patterns/circuit-breaker
+* [API Spec Trends](https://www.apimatic.io/blog/2022/03/top-api-specification-trends-2019-2022/)

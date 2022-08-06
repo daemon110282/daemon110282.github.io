@@ -48,5 +48,7 @@ https://apolomodov.medium.com/%D0%BE%D0%B1%D0%B7%D0%BE%D1%80-%D0%BA%D0%BD%D0%B8%
 - [eShopOnContainers](https://github.com/dotnet-architecture/eShopOnContainers)
 - [About
 Microservices on .Net platforms which used Asp.Net Web API, Docker, RabbitMQ, MassTransit, Grpc, Ocelot API Gateway, MongoDB, Redis, PostgreSQL, SqlServer, Dapper, Entity Framework Core, CQRS and Clean Architecture implementation.](https://github.com/aspnetrun/run-aspnetcore-microservices)
+- ДБО (СДО)
+  - [BSS](https://plusworld.ru/lr/bss-microservice/)
 
 ## Links

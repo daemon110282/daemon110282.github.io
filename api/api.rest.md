@@ -61,5 +61,6 @@ TODO
   - https://itnan.ru/post.php?c=1&p=351890
   - [MS Guide](https://github.com/Microsoft/api-guidelines/blob/master/Guidelines.md)
   - [IBM](https://www.ibm.com/docs/ru/zos-connect/zosconnect/3.0?topic=apis-designing-restful)
-  - https://github.com/Sairyss/backend-best-practices
+  Http json это rest? https://habr.com/ru/post/679788/
+- https://github.com/Sairyss/backend-best-practices
 - [Док-е TODO](https://starkovden.github.io/index.html)

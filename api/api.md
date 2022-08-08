@@ -15,7 +15,10 @@
 
 * [Дизайн API от потребностей продукта](http://agilemindset.ru/%d0%b0%d1%80%d1%85%d0%b8%d1%82%d0%b5%d0%ba%d1%82%d1%83%d1%80%d0%b0/)
 простота и удобство использования API потребителем важнее простоты и удобства реализации поставщиком
-
+* [Критерии качественного API](https://twirl.github.io/The-API-Book/API.ru.html#chapter-3)
+  * API должен решать задачи максимально удобно и понятно
+  * API должен быть читаемым
+  * Закладывание перспектив «на будущее» имеет смысл, только если это будущее у API есть, иначе это попросту оверинжиниринг.
 * [REST API](api.rest.md)
 * GRPC
 * GraphQL
@@ -29,21 +32,7 @@ TODO
 - https://microservice-api-patterns.org/
 - https://mathieu.fenniak.net/the-api-checklist/
 
-* API gateway
-  * [MSA API Gateway](https://docs.microsoft.com/ru-ru/dotnet/architecture/microservices/architect-microservice-container-applications/direct-client-to-microservice-communication-versus-the-api-gateway-pattern)
-  * [API Gateway](https://microservices.io/patterns/apigateway.HTML)
-  * when
-    * How can client apps minimize the number of requests to the back end and reduce chatty 
-communication to multiple microservices?
-    * How can you handle cross-cutting concerns such as authorization, data transformations, and dynamic request dispatching?
-    *  How can client apps communicate with services that use non-Internet-friendly protocols(amqp)? 
-    * How can you shape a facade especially made for mobile apps?
-  * what
-    * Reverse proxy or gateway routing. https://docs.microsoft.com/ru-ru/azure/architecture/patterns/gateway-routing
-    * aggregation https://docs.microsoft.com/ru-ru/azure/architecture/patterns/gateway-aggregation
-    * Cross-cutting concerns or gateway offloading.
-      * Authentication and authorization 
-      • Service discovery integration 
+* [API gateway](api.gateway.md)
 • Response caching 
 • Retry policies, circuit breaker, and QoS 
 • Rate limiting and throttling 
@@ -53,7 +42,7 @@ communication to multiple microservices?
 • IP whitelisting
       * https://docs.microsoft.com/ru-ru/azure/architecture/patterns/gateway-offloading
 
-## versioning
+## Versioning
 
 Then you can decide between implementing both versions of the service 
 simultaneously within the same service instance, or deploying different instances that each handle a 
@@ -109,3 +98,4 @@ https://tyk.io/blog/whats-minimum-documentation-required-api/
   * https://docs.microsoft.com/ru-ru/azure/architecture/best-practices/transient-faults
   * https://docs.microsoft.com/ru-ru/azure/architecture/patterns/circuit-breaker
 * [API Spec Trends](https://www.apimatic.io/blog/2022/03/top-api-specification-trends-2019-2022/)
+* [Сергей Константинов. API.](https://twirl.github.io/The-API-Book/API.ru.html)

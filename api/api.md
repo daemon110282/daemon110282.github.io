@@ -33,14 +33,6 @@ TODO
 - https://mathieu.fenniak.net/the-api-checklist/
 
 * [API gateway](api.gateway.md)
-• Response caching 
-• Retry policies, circuit breaker, and QoS 
-• Rate limiting and throttling 
-• Load balancing 
-• Logging, tracing, correlation 
-• Headers, query strings, and claims transformation 
-• IP whitelisting
-      * https://docs.microsoft.com/ru-ru/azure/architecture/patterns/gateway-offloading
 
 ## Versioning
 

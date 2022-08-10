@@ -72,6 +72,7 @@
     * [Symfony Messenger vs Laravel Queue vs Ecotone Framework](https://blog.devgenius.io/message-processing-in-php-symfony-messenger-laravel-queues-and-ecotone-8ca17102c5b2)
     * https://github.com/php-enqueue/ поддержка Laravel, Magento2
     * http://docs.simplebus.io/en/latest/index.html
+    * [Task (Worker) Queue YII2](https://github.com/yiisoft/yii2-queue/blob/master/docs/guide/README.md)
 * [MS Обмен сообщениями](https://docs.microsoft.com/ru-ru/azure/architecture/guide/technology-choices/messaging)
 
 ## Links

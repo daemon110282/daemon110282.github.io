@@ -10,15 +10,19 @@
   - [Shared Database\Table Шлюзовая БД (ШБД)](pattern.shareddb.md)
   - [Передача файлов](https://www.artofba.com/post/%D0%BE%D0%BF%D0%B8%D1%81%D0%B0%D0%BD%D0%B8%D0%B5-%D1%82%D1%80%D0%B5%D0%B1%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B9-%D0%BA-%D0%B8%D0%BD%D1%82%D0%B5%D0%B3%D1%80%D0%B0%D1%86%D0%B8%D0%B8-%D1%87%D0%B0%D1%81%D1%82%D1%8C-1-%D1%84%D0%B0%D0%B9%D0%BB%D0%BE%D0%B2%D1%8B%D0%B9-%D0%BE%D0%B1%D0%BC%D0%B5%D0%BD)
 - Приложения
-  - Direct (API REST, SOAP, WCF, ODATA, GraphQL, gRPC)
+  - Direct ([API REST](../../api/api.md), SOAP, WCF, ODATA, GraphQL, gRPC)
   - Remote Procedure Invocation (RPC)
   - Middleware
-    - API Gateway
-    - Message Bus
-      - [RMQ](../../technology/rmq.md)
-      - [SOA](../../technology/soa.md)
-      - [ESB](../../technology/esb.md)
-    - RPC
+    - [API Gateway](../../api/api.gateway.md)
+    - [SOA](../../technology/soa.md)
+    - [ESB](../../technology/esb.md)
+    - [Message Bus](../../technology/rmq.md)
+      - Транспорт  
+        - [RMQ](../../technology/rmq.md)
+        - Kafka
+      - RPC Команды\Запросы
+      - Pub\Sub События
+      - Task (Worker) Queue
 
 ## Критерии выбора способа интеграции
 
@@ -32,7 +36,6 @@
 ## Паттерны
 
 - [Messaging Patterns](https://www.enterpriseintegrationpatterns.com/patterns/messaging/)
-
 - Circuit Breaker
 - Sidecar
 - Ambassador

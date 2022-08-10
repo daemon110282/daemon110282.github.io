@@ -1,4 +1,4 @@
-# Event Driven Architecture (EDA) Сервис ориентированная архитектура
+# Event Driven Architecture (EDA) Событийно ориентированная архитектура
 
 - [Event Driven Architecture (EDA) Сервис ориентированная архитектура](#event-driven-architecture-eda-сервис-ориентированная-архитектура)
   - [Зачем](#зачем)

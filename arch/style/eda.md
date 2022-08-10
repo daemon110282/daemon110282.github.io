@@ -34,15 +34,18 @@
 
 ## Паттерны
 
-* Событие и команда Event or command driven
-  * [Task (Worker) Queue](../../technology/rmq.md)
+* Событие Event driven
   * [Publish-subscribe](../../technology/rmq.md)
+* Команда Command driven
+  * [Task (Worker) Queue](../../technology/rmq.md)
   * [RPC (команды)](../../technology/rmq.md)
 * CQRS - command query request segregation
-* Event sourcing
+* Event sourcing - источник правды событие, не состояние ИС
 * Медиатор
-* SAGA
-
+* Распределенные транзакции
+  * SAGA 
+* [Versioning Message](https://www.youtube.com/watch?v=mEzYTuYSork&list=PLx8uyNNs1ri2MBx6BjPum5j9_MMdIfM9C&index=11&ab_channel=ChrisPatterson)
+  
 ## Технологии
 
 * Шины сообщений Event Bus (брокер обмена сообщениями Message Broker) можно выбрать одну из нескольких технологий (траспорт) обмена сообщениями:
@@ -58,6 +61,7 @@
     * NServiceBus
     * MassTransit или Brighter
     * EasyNetQ
+    * [abp.io](https://docs.abp.io/en/abp/4.4/Distributed-Event-Bus)
   * Python
     * Celery
   * PHP TODO
@@ -65,7 +69,7 @@
     * [Symfony Messenger](https://symfony.com/doc/current/messenger.html)
     * [Laravel Queues](https://laravel.com/docs/9.x/queues)
     * [Ecotone Framework](https://github.com/ecotoneFramework/ecotone)
-    * [Symfony Messenger vs Laravel Queue vs [Ecotone Framework](https://blog.devgenius.io/message-processing-in-php-symfony-messenger-laravel-queues-and-ecotone-8ca17102c5b2)
+    * [Symfony Messenger vs Laravel Queue vs Ecotone Framework](https://blog.devgenius.io/message-processing-in-php-symfony-messenger-laravel-queues-and-ecotone-8ca17102c5b2)
     * https://github.com/php-enqueue/ поддержка Laravel, Magento2
     * http://docs.simplebus.io/en/latest/index.html
 * [MS Обмен сообщениями](https://docs.microsoft.com/ru-ru/azure/architecture/guide/technology-choices/messaging)
@@ -76,8 +80,7 @@
 * https://habr.com/ru/post/422151/
 * https://habr.com/ru/post/150134/
 * https://docs.microsoft.com/ru-ru/azure/architecture/guide/architecture-styles/event-driven
-* https://docs.abp.io/en/abp/4.4/Distributed-Event-Bus
-* pattern
+* pattern TODO
   * https://github.com/plantuml-stdlib/EIP-PlantUML
   * https://medium.com/@objectzen/content-enricher-pattern-in-rabbitmq-eae504a8504e
   * http://rubyamqp.info/articles/patterns_and_use_cases.html
@@ -93,5 +96,4 @@
   * https://codeopinion.com/message-naming-guidelines/
   * https://stackoverflow.com/questions/32220312/rabbitmq-amqp-best-practice-queue-topic-design-in-a-microservice-architecture
   * http://thoai-nguyen.blogspot.com/2012/05/rabbitmq-exchange-queue-name-convention.html
-* versioning
-  * https://www.youtube.com/watch?v=mEzYTuYSork&list=PLx8uyNNs1ri2MBx6BjPum5j9_MMdIfM9C&index=11&ab_channel=ChrisPatterson
+

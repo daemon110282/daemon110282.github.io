@@ -54,9 +54,20 @@
   * Azure Service Bus
   * Amazon SQS
 * Реализации шин сообщений (фреймворк)
-  * NServiceBus
-  * MassTransit или Brighter
-  * EasyNetQ
+  * .NET 
+    * NServiceBus
+    * MassTransit или Brighter
+    * EasyNetQ
+  * Python
+    * Celery
+  * PHP TODO
+    * [prooph](https://github.com/prooph/service-bus)
+    * [Symfony Messenger](https://symfony.com/doc/current/messenger.html)
+    * [Laravel Queues](https://laravel.com/docs/9.x/queues)
+    * [Ecotone Framework](https://github.com/ecotoneFramework/ecotone)
+    * [Symfony Messenger vs Laravel Queue vs [Ecotone Framework](https://blog.devgenius.io/message-processing-in-php-symfony-messenger-laravel-queues-and-ecotone-8ca17102c5b2)
+    * https://github.com/php-enqueue/ поддержка Laravel, Magento2
+    * http://docs.simplebus.io/en/latest/index.html
 * [MS Обмен сообщениями](https://docs.microsoft.com/ru-ru/azure/architecture/guide/technology-choices/messaging)
 
 ## Links

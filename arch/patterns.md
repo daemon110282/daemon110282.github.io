@@ -15,6 +15,13 @@
   * Логирования
 * [Документирования](pattern/pattern.docs.md)
 
+TODO https://docs.google.com/document/d/1_IIesGIMDJLrtvEY4cpLrYh3XPaM3IUYyaJD9AljkYM/edit?usp=sharing
+Маршрутизатор
+Транслятор трансформер адаптер
+Обертка
+Издатель подписчик
+
+
 ## Links
 
 - [MS Azure](https://docs.microsoft.com/ru-ru/azure/architecture/patterns/)

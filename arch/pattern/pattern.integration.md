@@ -38,7 +38,8 @@
 - [Messaging Patterns](https://www.enterpriseintegrationpatterns.com/patterns/messaging/)
 - Circuit Breaker
 - Sidecar
-- Ambassador
+- Ambassador Посредник
+  - nginx
 - Anti-Corruption Layer
 - Async Request-Reply
 

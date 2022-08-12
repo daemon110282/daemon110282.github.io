@@ -8,6 +8,15 @@
     * Low coupling
     * High cohesion
   * [Принципы проектирования MS](https://docs.microsoft.com/ru-ru/azure/architecture/guide/design-principles/)
+  * Придумайте второй вариант дизайна архитектуры, который тоже может сработать в вашей ситуации. Противопоставьте оба дизайна и объясните, почему один лучше другого.
+  * Групповые ревью, коллективный архитектор
+  * [SAFe](safe.md) agile+lean
+  * Порядок пирамиды архитектуры решения:
+    * Функциональная(use case, пз, бт)
+    * информационная(модель данных, предметная область, сущность, связи)
+    * прикладная(взаимодействия компонентов)
+    * интеграционная(рипв)
+    * технологическая(инфраструктура, оиб)
 * [Интеграции](pattern/pattern.integration.md)
 * [Производительность](pattern/pattern.perf.md)
 * Сквозная функциональность
@@ -15,7 +24,9 @@
   * Логирования
 * [Документирования](pattern/pattern.docs.md)
 
-TODO https://docs.google.com/document/d/1_IIesGIMDJLrtvEY4cpLrYh3XPaM3IUYyaJD9AljkYM/edit?usp=sharing
+TODO 
+https://docs.google.com/document/d/1_IIesGIMDJLrtvEY4cpLrYh3XPaM3IUYyaJD9AljkYM/edit?usp=sharing
+https://docs.google.com/document/d/1PVbYEBd2wEmJyxQ0KUD1AnOt507pk-RReGRqnPpgtJE/edit?usp=sharing
 Маршрутизатор
 Транслятор трансформер адаптер
 Обертка

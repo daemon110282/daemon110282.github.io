@@ -1,7 +1,6 @@
 # Архитектура
 
 - [Архитектура](#архитектура)
-  - [Reference Architecture](#reference-architecture)
   - [Документирование архитектуры](#документирование-архитектуры)
   - [Links](#links)
 
@@ -9,11 +8,7 @@
 - [Качества архитектуры](arch.ability.md)
 - [Шаблоны Паттерны](patterns.md)
 - [Критерии выбора решения](arch.criteria.md)
-
-## Reference Architecture
-
 - [Reference Architecture](arch.ref.md)
-  - [MTA](mta.md)
 
 ## Документирование архитектуры
 

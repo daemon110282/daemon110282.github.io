@@ -20,9 +20,6 @@
       - Транспорт  
         - [RMQ](../../technology/rmq.md)
         - Kafka
-      - RPC Команды\Запросы
-      - Pub\Sub События
-      - Task (Worker) Queue
 
 ## Критерии выбора способа интеграции
 
@@ -36,6 +33,9 @@
 ## Паттерны
 
 - [Messaging Patterns](https://www.enterpriseintegrationpatterns.com/patterns/messaging/)
+  - Pub\Sub События
+  - Task (Worker) Queue
+- [RPC Команды\Запросы](pattern.rpc.md)
 - Circuit Breaker
 - Sidecar
 - Ambassador Посредник

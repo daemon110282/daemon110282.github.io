@@ -3,6 +3,11 @@
 * Проектирования
   * [DDD](ddd.md)
   * SOLID
+    * Single concern principle, single response principle (SRP) - решать одну проблему хорошо
+    * Open-Closed - сущности открыты для расширения, но закрыты для изменения
+    * Liskov
+    * Interface Segregation
+    * Dependeny Injection
   * [DbC - Design by contract](https://habr.com/ru/company/southbridge/blog/679906/)
   * LC/HC - [Принципы GRASP](https://rmcreative.ru/blog/post/printsipy-grasp)
     * Low coupling

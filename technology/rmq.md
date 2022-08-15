@@ -2,24 +2,32 @@
 
 - [RabbitMQ](#rabbitmq)
   - [Паттерны](#паттерны)
+    - [Task (Worker) Queue](#task-worker-queue)
+    - [Simple one-way messaging (Exchange type: direct, message sent to unnamed (default queue))](#simple-one-way-messaging-exchange-type-direct-message-sent-to-unnamed-default-queue)
+    - [Publish-subscribe Издатель-Подписчик](#publish-subscribe-издатель-подписчик)
+    - [RPC (команды)](#rpc-команды)
   - [Режимы доставки сообщений](#режимы-доставки-сообщений)
   - [Best practices Рекомендации](#best-practices-рекомендации)
     - [headers vs topic для событий](#headers-vs-topic-для-событий)
-    - [версионирование сообщений](#версионирование-сообщений)
-  - [security](#security)
+    - [Версионирование сообщений](#версионирование-сообщений)
+  - [Security](#security)
   - [Links](#links)
 
 ## Паттерны
 
-* Task (Worker) Queue 
+### Task (Worker) Queue
+
   - Round-robin dispatching (циклическое распределение задач по консьюмерам) 
     - сервисы между собой делят Очередь задач
     - паттерн EIP [Competing Consumers](https://www.enterpriseintegrationpatterns.com/patterns/messaging/CompetingConsumers.html)
     - Exchange type: direct, several consumer listening to the same queue, reading the messages in a round-robin fashion if all are waiting
   - Task Queue (распределение задач по загрузке ) Fair dispatching
     - QoS = 1, ack=1, autoack=0 если не подтверждено 1-е сообщение, 2-е пойдёт другому подписчику
-* Simple one-way messaging (Exchange type: direct, message sent to unnamed (default queue))
-* Publish-subscribe Издатель-Подписчик
+
+### Simple one-way messaging (Exchange type: direct, message sent to unnamed (default queue))
+
+### Publish-subscribe Издатель-Подписчик
+
   - (fanout - без фильтрации) - события
     - Очередь ответов - даёт широковешательную рассылку ответов по всем ИС потребителям
   - (headers - с фильтрацией) - события
@@ -33,21 +41,23 @@
 .   - единый контракт для подписчиков
 .   - Не безопасно, кто угодно подписывается
 .   - с ростом числа подписчиков, Брокер масштабировать необходимо
-* RPC (команды)
-  - паттерн EIP [Request-Reply](https://www.enterpriseintegrationpatterns.com/patterns/messaging/RequestReply.html)
+
+### RPC (команды)
+
+  - [паттерн EIP](../arch/pattern/pattern.rpc.md)
   - EasyNetQ [RPC](https://github.com/EasyNetQ/EasyNetQ/wiki/Request-Response)
-  - Exchange type: direct, message can be sent to default exchange with a specified routing key and response is received on a specified unique response queue, owned by the client
+  - [Exchange type: direct](https://www.rabbitmq.com/tutorials/tutorial-six-dotnet.html), message can be sent to default exchange with a specified routing key and response is received on a specified unique response queue, owned by the client
 
 ## Режимы доставки сообщений
 
-* Basic.get (Poll) - Доставка единичного сообщения по запросу
-* Basic.Consume (Push) - Подписка на очередь (постоянный мониторинг очереди с доставкой всех сообщений)
+- Basic.get (Poll) - Доставка единичного сообщения по запросу
+- Basic.Consume (Push) - Подписка на очередь (постоянный мониторинг очереди с доставкой всех сообщений)
 
 ## Best practices Рекомендации
 
-* [From Cloudamqp](https://www.cloudamqp.com/blog/part1-rabbitmq-best-practice.html)
-* [VHosts](rmq/rmq.vhost.md)
-* [Failure](rmq/rmq.failure.md)
+- [From Cloudamqp](https://www.cloudamqp.com/blog/part1-rabbitmq-best-practice.html)
+- [VHosts](rmq/rmq.vhost.md)
+- [Failure](rmq/rmq.failure.md)
 
 ### headers vs topic для событий
 
@@ -57,7 +67,7 @@
 -минусы
 - функционально разницы нет, по производительности topic в 3 раза медленнее headers
 
-### версионирование сообщений
+### Версионирование сообщений
 
 - по [message type](http://rabbitmq.github.io/rabbitmq-dotnet-client/api/RabbitMQ.Client.IBasicProperties.html#RabbitMQ_Client_IBasicProperties_Type) serialize, deserialize _с отдельными очередями?_
   - [masstransit](https://masstransit-project.com/architecture/versioning.html)
@@ -65,7 +75,7 @@
   - [EasyNetQ](https://github.com/EasyNetQ/EasyNetQ/wiki/Versioning-Messages)
   - [NServiceBus](https://docs.particular.net/samples/versioning/)
 
-## security
+## Security
 
 [Security mechanism](https://stackoverflow.com/questions/7840283/how-can-queues-be-made-private-secure-in-rabbitmq-in-a-multitenancy-system) in RabbitMQ:
 

@@ -4,7 +4,7 @@
   - [Reference Architecture](#reference-architecture)
   - [Patterns](#patterns)
     - [Canary deployment](#canary-deployment)
-      - [Scalability Performance масштабирование](#scalability-performance-масштабирование)
+    - [Scalability Performance масштабирование](#scalability-performance-масштабирование)
   - [Технологии](#технологии)
   - [Links](#links)
 
@@ -17,12 +17,18 @@
 ## Patterns
 
 - [Rate limiting](https://www.nginx.com/blog/microservices-march-protect-kubernetes-apis-with-rate-limiting/)
+- TODO Кол-во сервисов на контейнер
+  - Ограничение кластера по подам на ноде?
+  - создание маленьких контейнеров, т.к. контейнеры автоматически запускаются на разных хостах, и их меньший размер ускорит время запуска (поскольку предварительно их нужно физически скопировать на хостовую систему).
+  - Метрики 
+    - кол-ва k8s дашборд
+    - Утилизация ресурсов?
 
 ### Canary deployment
 
 - [Nginx](https://www.nginx.com/blog/microservices-march-improve-kubernetes-uptime-and-resilience-with-a-canary-deployment/)
 
-#### Scalability Performance масштабирование
+### Scalability Performance масштабирование
 
 - Avtoscaling
   - Min max nodes in cluster

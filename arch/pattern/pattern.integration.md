@@ -1,5 +1,12 @@
 # Паттерны интеграций
 
+- [Паттерны интеграций](#паттерны-интеграций)
+  - [Критерии выбора способа интеграции](#критерии-выбора-способа-интеграции)
+  - [Паттерны](#паттерны)
+  - [Технологии](#технологии)
+  - [Links](#links)
+
+
 [Виды (стили) интеграций](https://www.enterpriseintegrationpatterns.com/patterns/messaging/IntegrationStylesIntro.html)
 
 - Пользователи
@@ -16,7 +23,10 @@
     - [API Gateway](../../api/api.gateway.md)
     - [SOA](../../technology/soa.md)
     - [ESB](../../technology/esb.md)
+    - ![Интеграционная шина](../img/pattern/integration/IMG_20220614_180434_1.jpg)
     - [Message Bus](../../technology/rmq.md)
+      ![MQ](../../img/pattern/integration/IMG_20220614_180420.jpg)
+      ![MB VS](../../img/pattern/integration/IMG_20220614_180525_1.jpg)
       - Транспорт  
         - [RMQ](../../technology/rmq.md)
         - Kafka

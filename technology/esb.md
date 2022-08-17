@@ -1,6 +1,7 @@
 # ESB
 
 Enterprise Integration Patterns
+- умная шина с бизнес логикой
 - Spring Integration
 - Mule ESB
 - Apache Camel

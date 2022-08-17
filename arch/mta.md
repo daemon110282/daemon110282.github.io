@@ -148,7 +148,7 @@ TODO
 - Namespace isolation
 - Block traffic between namespaces - Network Policy
 - Resource Quotas
-- Cluster->x nodes->x pods in node->x контейнер docker
+- Cluster->x nodes->x pods in node->x контейнер [docker](../technology/docker.md)
 - making sure that your master and worker nodes are secure at the level of the host operating system.
 
 ## Links

@@ -56,7 +56,7 @@ todo
 
 - [k8s](technology/k8s.md)
 - Helm
-- docker-compose.yml when building a multi-container Docker application
+- [docker-compose.yml when building a multi-container Docker](technology/docker.md) application
 - [load balancer](technology/loadbalancer.md)
 - edge
 - CD

@@ -14,7 +14,7 @@
 
 ## Patterns
 
-1. [Image API service dedicated](https://www.apollographql.com/blog/backend/file-uploads/file-upload-best-practices)
+1. [Image API service dedicated](https://www.apollographql.com/blog/backend/file-uploads/file-upload-best-practices) 
 2. **Signed Upload URL** dedicated storage (On premise, Cloud)
    - It can require a little more work to set up than a dedicated image service but provides for finer control.
 3. [Google Resumable upload large files > 5Mb](https://developers.google.com/drive/api/guides/manage-uploads)

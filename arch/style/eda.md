@@ -42,8 +42,9 @@
 * CQRS - command query request segregation
 * Event sourcing - источник правды событие, не состояние ИС
 * Медиатор
-* Распределенные транзакции
-  * SAGA 
+* Распределенные транзакции (лучше не делать)
+  * SAGA - компенсационные действия для отмены "транзакции"
+  * двухфазный комит - намерение, получено ок от участников, комит  
 * [Versioning Message](https://www.youtube.com/watch?v=mEzYTuYSork&list=PLx8uyNNs1ri2MBx6BjPum5j9_MMdIfM9C&index=11&ab_channel=ChrisPatterson)
   
 ## Технологии

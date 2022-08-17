@@ -37,6 +37,9 @@ https://docs.google.com/document/d/1PVbYEBd2wEmJyxQ0KUD1AnOt507pk-RReGRqnPpgtJE/
 Обертка
 Издатель подписчик
 
+Оркестрация - есть дирижер
+Хореография - нет централизованного управления (медиатора)
+
 
 ## Links
 

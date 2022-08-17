@@ -15,7 +15,7 @@
   - [ELT (Extract, Load, Transform)](https://www.striim.com/blog/data-integration/)
     - [ELT vs ETL](https://coderlessons.com/tutorials/bolshie-dannye-i-analitika/teoriia-khraneniia-dannykh/5-etl-protiv-elt)
   - [Shared Database\Table Шлюзовая БД (ШБД)](pattern.shareddb.md)
-  - [Передача файлов](https://www.artofba.com/post/%D0%BE%D0%BF%D0%B8%D1%81%D0%B0%D0%BD%D0%B8%D0%B5-%D1%82%D1%80%D0%B5%D0%B1%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B9-%D0%BA-%D0%B8%D0%BD%D1%82%D0%B5%D0%B3%D1%80%D0%B0%D1%86%D0%B8%D0%B8-%D1%87%D0%B0%D1%81%D1%82%D1%8C-1-%D1%84%D0%B0%D0%B9%D0%BB%D0%BE%D0%B2%D1%8B%D0%B9-%D0%BE%D0%B1%D0%BC%D0%B5%D0%BD)
+  - [Файловый обмен, Распределенные файловые системы](pattern.uploadfile.md)
 - Приложения
   - Direct ([API REST](../../api/api.md), SOAP, WCF, ODATA, GraphQL, gRPC)
   - Remote Procedure Invocation (RPC)
@@ -58,7 +58,8 @@
 ## Технологии
 
 - [ESB](../../technology/esb.md)
-  
+- [Распределенные файловые системы](../../technology/dfs.md)
+ 
 ## Links
 
 TODO

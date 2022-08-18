@@ -39,8 +39,9 @@
 
 ## Технологии
 
-- [Распределенные файловые системы](../../technology/filesystem/dfs.md)
-- [Распределенные параллельнае файловые системы](../../technology/filesystem/dpfs.md)
+- [Файловые системы](../../technology/filesystem/filesystem.md)
+   - [Распределенные файловые системы](../../technology/filesystem/dfs.md)
+   - [Распределенные параллельнае файловые системы](../../technology/filesystem/dpfs.md)
 - FTP SFTP - передача файлов
 
 ## Links

@@ -74,6 +74,7 @@ decouple the different implementation versions into independent handlers
 * [Курс по документированию REST API](https://starkovden.github.io/)
 * [Шаблон описания](https://tyk.io/blog/whats-minimum-documentation-required-api/)
 * TODO [API Spec Trends](https://www.apimatic.io/blog/2022/03/top-api-specification-trends-2019-2022/)
+* [WSDL](wsdl.md)
 
 ## API management
 

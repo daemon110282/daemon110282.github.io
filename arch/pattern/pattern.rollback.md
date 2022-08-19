@@ -6,3 +6,7 @@
 	- кода
 	- подхододов [deploy](pattern.deploy.md) (например blue-green deployment)
 - Версионирование API для поддержки обратной совместимости
+
+## Технологии
+
+- [argo-rollouts (k8s helm)](https://rtfm.co.ua/kubernetes-tipy-deployment-strategies-i-argo-rollouts/)

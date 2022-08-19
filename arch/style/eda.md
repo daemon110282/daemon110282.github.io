@@ -50,14 +50,7 @@
   
 ## Технологии
 
-* Шины сообщений Event Bus (брокер обмена сообщениями Message Broker) можно выбрать одну из нескольких технологий (траспорт) обмена сообщениями:
-  * [RabbitMQ](../../technology/middleware/rmq.md)
-  * Azure service bus
-  * MSMQ
-  * SQL Server
-  * Azure Queue Storage
-  * Azure Service Bus
-  * Amazon SQS
+* Шины сообщений\событий Event\Message Bus (брокер обмена сообщениями [Message Broker](../pattern/pattern.messagebroker.md)) можно выбрать одну из нескольких технологий (траспорт) обмена сообщениями
 * Реализации шин сообщений (фреймворк)
   * .NET 
     * NServiceBus

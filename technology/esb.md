@@ -1,7 +1,7 @@
 # ESB
 
 Enterprise Integration Patterns
-- умная шина с бизнес логикой
+- "умная шина (канал) глупые клиенты" с бизнес логикой
 - Spring Integration
 - Mule ESB
 - Apache Camel

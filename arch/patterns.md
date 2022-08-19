@@ -12,7 +12,7 @@
   * LC/HC - [Принципы GRASP](https://rmcreative.ru/blog/post/printsipy-grasp)
     * Low coupling
     * High cohesion
-  * [Принципы проектирования MS](https://docs.microsoft.com/ru-ru/azure/architecture/guide/design-principles/)
+  * [TODO Принципы проектирования MS](https://docs.microsoft.com/ru-ru/azure/architecture/guide/design-principles/)
   * Придумайте [второй вариант дизайна архитектуры](alternative.md), который тоже может сработать в вашей ситуации. Противопоставьте оба дизайна и объясните, почему один лучше другого.
   * Групповые ревью, коллективный архитектор
   * [SAFe](safe.md) agile+lean
@@ -28,8 +28,10 @@
   * Структурные
   * TODO
     * [Паттерн спецификация - бизнес условия для фильтрации данных](https://habr.com/ru/post/171559/)
+* [DevOps Deployment Rollback](../devops.md)
 * [Интеграции](pattern/pattern.integration.md)
 * [Производительность](pattern/pattern.perf.md)
+  * [DevOps Scale](../devops.md)
 * Сквозная функциональность
   * [Аудита](pattern/pattern.audit.md)
   * Логирования

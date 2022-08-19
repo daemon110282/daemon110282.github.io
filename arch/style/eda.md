@@ -35,10 +35,10 @@
 ## Паттерны
 
 * Событие Event driven
-  * [Publish-subscribe](../../technology/rmq.md)
+  * [Publish-subscribe](../../technology/middleware/rmq.md)
 * Команда Command driven
-  * [Task (Worker) Queue](../../technology/rmq.md)
-  * [RPC (команды)](../../technology/rmq.md)
+  * [Task (Worker) Queue](../../technology/middleware/rmq.md)
+  * [RPC (команды)](../../technology/middleware/rmq.md)
 * CQRS - command query request segregation
 * Event sourcing - источник правды событие, не состояние ИС
 * Медиатор
@@ -46,11 +46,12 @@
   * SAGA - компенсационные действия для отмены "транзакции"
   * двухфазный комит - намерение, получено ок от участников, комит  
 * [Versioning Message](https://www.youtube.com/watch?v=mEzYTuYSork&list=PLx8uyNNs1ri2MBx6BjPum5j9_MMdIfM9C&index=11&ab_channel=ChrisPatterson)
+  * [EasyNetQ by message type](https://github.com/EasyNetQ/EasyNetQ/wiki/Versioning-Messages) 
   
 ## Технологии
 
 * Шины сообщений Event Bus (брокер обмена сообщениями Message Broker) можно выбрать одну из нескольких технологий (траспорт) обмена сообщениями:
-  * [RabbitMQ](../../technology/rmq.md)
+  * [RabbitMQ](../../technology/middleware/rmq.md)
   * Azure service bus
   * MSMQ
   * SQL Server

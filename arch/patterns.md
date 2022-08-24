@@ -1,7 +1,7 @@
 # Паттерны Шаблоны Patterns
 
 * Проектирования
-  * [DDD](ddd.md)
+  * [DDD](pattern/ddd.md)
   * SOLID
     * Single concern principle, single response principle (SRP) - решать одну проблему хорошо
     * Open-Closed - сущности открыты для расширения, но закрыты для изменения
@@ -37,16 +37,16 @@
   * Логирования
 * [Документирования](pattern/pattern.docs.md)
 
-TODO 
-https://docs.google.com/document/d/1_IIesGIMDJLrtvEY4cpLrYh3XPaM3IUYyaJD9AljkYM/edit?usp=sharing
-https://docs.google.com/document/d/1PVbYEBd2wEmJyxQ0KUD1AnOt507pk-RReGRqnPpgtJE/edit?usp=sharing
-Маршрутизатор
-Транслятор трансформер адаптер
-Обертка
-Издатель подписчик
+TODO
 
-Оркестрация - есть дирижер
-Хореография - нет централизованного управления (медиатора)
+- https://docs.google.com/document/d/1_IIesGIMDJLrtvEY4cpLrYh3XPaM3IUYyaJD9AljkYM/edit?usp=sharing
+- https://docs.google.com/document/d/1PVbYEBd2wEmJyxQ0KUD1AnOt507pk-RReGRqnPpgtJE/edit?usp=sharing
+- Маршрутизатор
+- Транслятор трансформер адаптер
+- Обертка
+- Издатель подписчик
+- Оркестрация - есть дирижер
+- Хореография - нет централизованного управления (медиатора)
 
 
 ## Links

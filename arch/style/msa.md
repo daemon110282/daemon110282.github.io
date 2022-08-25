@@ -73,3 +73,7 @@ Microservices on .Net platforms which used Asp.Net Web API, Docker, RabbitMQ, Ma
   - [BSS](https://plusworld.ru/lr/bss-microservice/)
 
 ## Links
+
+TODO
+
+- https://mcs.mail.ru/blog/26-osnovnyh-patternov-mikroservisnoj-razrabotki

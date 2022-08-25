@@ -42,6 +42,8 @@
 
 ## Паттерны
 
+TODO см. EIP 
+
 - [Messaging Patterns](https://www.enterpriseintegrationpatterns.com/patterns/messaging/)
   - Pub\Sub События
   - Task (Worker) Queue

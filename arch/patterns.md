@@ -24,10 +24,12 @@
     * технологическая(инфраструктура, оиб)
 * ООП
   * Поведения
+    * [FSM Конечный автомат](pattern/pattern.state.machine.md)
   * Порождающие
   * Структурные
   * TODO
     * [Паттерн спецификация - бизнес условия для фильтрации данных](https://habr.com/ru/post/171559/)
+    
 * [DevOps Deployment Rollback](../devops.md)
 * [Интеграции](pattern/pattern.integration.md)
 * [Производительность](pattern/pattern.perf.md)
@@ -55,3 +57,4 @@ TODO
 - [RedHat Architect Portfolio](https://www.redhat.com/architect/portfolio/?intcmp=7013a0000025wJwAAI)
 - TODO [Clean Code](pattern/cleancode.md)
 - https://en.wikipedia.org/wiki/Architectural_pattern
+- [Martin F patterns](https://martinfowler.com/dslCatalog/index.html)

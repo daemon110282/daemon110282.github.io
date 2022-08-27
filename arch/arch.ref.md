@@ -4,7 +4,7 @@
 * [EDA](style/eda.md)
 * [MTA](mta.md)
 * [Хранилище данных](store.md)
-
+* [Mobile](mobile.md)
 
 ## Links
 

@@ -4,7 +4,7 @@
 
 - Выбор
   - Только вставка - одна таблица общая в шбд
-  - Вставка и обновления - раздельные таблицы источника и потребитель в шбд
+  - Вставка и обновления - раздельные таблицы источника и потребителя в шбд
   - There are frameworks out there designed to help with this, like Microsoft BizTalk or Scribe Insight. These are cumbersome and expensive, though.
 - The Business Rules are the Hard Part
 	- One-way sync? Two-way sync?
@@ -26,3 +26,8 @@
   - Update Synchronization
   - Drop Synchronization
   - Mixed Synchronization
+
+## Технологии
+
+- Microsoft BizTalk 
+- Scribe Insight

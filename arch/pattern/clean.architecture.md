@@ -26,3 +26,12 @@
 - Следить чтобы плагины не знали о друг друге, а знали о бизнесе
 - Пакеты по функционалу, а не слоям
 
+TODO Архитектура системы шаблон	
+	Presentation Layer
+		UI View
+	Application Layer
+		Controller
+		паттерн Mediator - посредник - взаимодействие классов
+		CQRS - command handler
+	Domain Layer
+	Infrastructure Layer

@@ -3,12 +3,12 @@
 - [API](#api)
   - [Проектирование](#проектирование)
   - [Patterns](#patterns)
-  - [versioning](#versioning)
-  - [Security](#security)
-  - [Стратегия повторов при сбоях Rerty Policy](#стратегия-повторов-при-сбоях-rerty-policy)
+    - [Versioning](#versioning)
+    - [Security](#security)
+    - [Стратегия повторов при сбоях Rerty Policy](#стратегия-повторов-при-сбоях-rerty-policy)
   - [Документирование](#документирование)
   - [API management](#api-management)
-  - [technology](#technology)
+  - [Technology](#technology)
   - [Links](#links)
 
 ## Проектирование
@@ -32,6 +32,10 @@
 TODO
 - https://microservice-api-patterns.org/
 - https://mathieu.fenniak.net/the-api-checklist/
+https://habr.com/ru/post/503284/
+https://habr.com/ru/post/447322/
+https://www.gov.uk/guidance/gds-api-technical-and-data-standards
+https://www.gov.uk/guidance/setting-api-service-levels
 
 * [API gateway](api.gateway.md)
 

@@ -3,7 +3,9 @@
 - [Security](#security)
   - [Крипто Защита Информации (СКЗИ)](#крипто-защита-информации-скзи)
   - [Криптоалгоритмы](#криптоалгоритмы)
-    - [Технологии](#технологии)
+  - [API](#api)
+  - [Технологии](#технологии)
+  - [Примеры требований](#примеры-требований)
   - [Links](#links)
 
 TODO
@@ -14,8 +16,7 @@ TODO
 - HTTPS SSL\TLS\MTLS
 - JWT
 - PCI DSS
-- OAuth2
-- OpenID Connect
+- Securing Microservices with IdentityServer4, [**OAuth2** and **OpenID Connect**](https://medium.com/aspnetrun/securing-microservices-with-identityserver4-with-oauth2-and-openid-connect-fronted-by-ocelot-api-49ea44a0cf9e) fronted by Ocelot API Gateway
 - k8s
   - TLS – cert-manager
   - Key Managment
@@ -38,7 +39,14 @@ TODO
   - ГОСТ 31.11
   - SHA
 
-### Технологии
+## API
+
+- [API Security Audit](https://docs.42crunch.com/latest/content/concepts/api_contract_security_audit.htm)
+- [OWASP](https://42crunch.com/owasp-api-security-top-10/)
+- [check api tools](https://platform.42crunch.com/)
+- [tools for check api sec](https://github.com/arainho/awesome-api-security)
+
+## Технологии
 
 - [КриптоПро](https://www.cryptopro.ru/products/csp/compare#supported_algorithms)
 - КриптоАРМ
@@ -55,6 +63,15 @@ TODO
     - OWASP TOP 10
     - DDOS
 
+## Примеры требований
+
+- Взаимодействие осуществляется через сеть Интернет по протоколу HTTP с использованием стандартного сетевого порта
+- Передача конфиденциальной информации в рамках взаимодействия не предполагается
+- Взаимная аутентификация клиента и сервера на базе SSL-сертификатов, шифрование передаваемой информации с использованием протокола HTTPS (TLS 1.2)
+- SSL-сертификаты должны быть выпущены доверенными удостоверяющими центрами
+- В случае, если взаимодействие осуществляется по внешним сетям передачи данных (далее – внешние сети), и участвующая во взаимодействии ИС Компании не является публичной , сетевой доступ к ИС Компании из внешних сетей, открываемый для обеспечения взаимодействия, должен быть ограничен конкретными адресами внешней ИС или сетью ее владельца  и конкретными сетевыми протоколами, используемыми ИС Компании.
+- Токен (id сессии), при его использовании, должен быть динамическим (актуальным только для одной сессии одного клиента) и не должен передаваться в URL.
+
 ## Links
 
-- [Securing Microservices with IdentityServer4, OAuth2 and OpenID Connect fronted by Ocelot API Gateway](https://medium.com/aspnetrun/securing-microservices-with-identityserver4-with-oauth2-and-openid-connect-fronted-by-ocelot-api-49ea44a0cf9e)
+

@@ -64,3 +64,5 @@ onion-архитектура («луковая»). Её отличие в том
 
 - [Службы вычислений](https://docs.microsoft.com/ru-ru/azure/architecture/guide/technology-choices/compute-decision-tree)
 - [MS Стили](https://docs.microsoft.com/ru-ru/azure/architecture/guide/architecture-styles/)
+https://towardsdatascience.com/10-common-software-architectural-patterns-in-a-nutshell-a0b47a1e9013
+https://docs.microsoft.com/ru-ru/azure/architecture/browse/?filter=reference-architecture

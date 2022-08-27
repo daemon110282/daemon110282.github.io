@@ -1,6 +1,9 @@
 # отказоустойчивость, доступность Availability (high availability). Надежность Reliability
 
+[throttling](https://docs.microsoft.com/ru-ru/azure/architecture/patterns/throttling)
+
 ## балансировка
+
 * https://photos.app.goo.gl/VaUseEzeFcvSJj6U9
 * отказоустойчивость и масштабирование MariaDB и RabbitMQ в основе лежит разделение баз и брокеров по сервисам.
 * отказоустойчивость самого балансировщика. Просто установка балансировщика тоже создаёт точку отказа: балансировщик ломается — сервис падает. 
@@ -14,9 +17,11 @@
 * Избегайте состояния (state) в вашем приложении
 
 ## Big data 
+
 * http://habrahabr.ru/post/272041/ MapReduce, gfs, hadoop, clickhouse, splunk, vertica, netapp
 
 
 # Links
+
 * http://habrahabr.ru/post/272041/
 * https://habr.com/ru/company/mailru/blog/474180/

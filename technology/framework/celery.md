@@ -3,7 +3,7 @@
 work on:
 - RMQ
   - [AMQP Basic Properties support](https://docs.celeryq.dev/en/v5.2.7/userguide/tasks.html#:~:text=to%20(queue%20name).-,correlation_id,-Usually%20the%20same)
-- Redis
+- [Redis](../redis.md)
 - Azure
 
 

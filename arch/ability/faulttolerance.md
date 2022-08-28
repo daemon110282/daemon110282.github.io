@@ -31,7 +31,12 @@
   * [Балансировка](load.balancing.md)
   * api management
   * Установка лимитов запросов rate limits, тайм-аут
-  * Dev ops ci/cd: [docker](../../technology/docker.md), [kubernetes](../../technology/k8s.md), jenkins, авто распределенный конфиг etcd, кеш redis
+  * Dev ops ci/cd: 
+    * [docker](../../technology/docker.md)
+    * [kubernetes](../../technology/k8s.md)
+    * jenkins
+    * авто распределенный конфиг etcd
+    * кеш [redis](../../technology/redis.md)
   * системы мониторинга - аптайм доступность сервиса, выраженная в процентах
   * ИБП, генератор электричества, охлаждение серверов
   * DB: Master-slave : Logshipping, репликации, кластер, Горизонтальное шардирование данных

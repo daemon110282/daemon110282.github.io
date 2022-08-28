@@ -42,9 +42,10 @@
 
 ## Паттерны
 
-TODO см. EIP 
+TODO см. EIP
 
 - [Messaging Patterns](https://www.enterpriseintegrationpatterns.com/patterns/messaging/)
+  - [MS](https://docs.microsoft.com/ru-ru/azure/architecture/patterns/category/messaging)
   - Pub\Sub События
   - Task (Worker) Queue
 - [RPC Команды\Запросы](pattern.rpc.md)
@@ -56,12 +57,13 @@ TODO см. EIP
 - Async Request-Reply
 
 [TODO](https://habr.com/ru/company/southbridge/blog/679906/)
+[UMP](https://airtable.com/embed/shr8hjWhgmcRMq8ZT/tblRsPPtXXbYI4IzT)
 
 ## Технологии
 
 - [ESB](../../technology/esb.md)
 - [Распределенные файловые системы](../../technology/dfs.md)
- 
+
 ## Links
 
 TODO
@@ -74,3 +76,4 @@ TODO
 - https://success.outsystems.com/Documentation/Best_Practices/Architecture/Designing_the_Architecture_of_Your_OutSystems_Applications/Integration_Patterns_for_Core_Services_Abstraction
 - https://ducmanhphan.github.io/2020-08-10-Introduction-to-Enterprise-Integration-Patterns/
 - https://habr.com/ru/company/southbridge/blog/679906/
+- TODO https://github.com/Sairyss/distributed-systems-topics

@@ -4,6 +4,17 @@
 
 TODO
 
+## Документирование архитектуры
+
+- ADR
+  - https://www.cognitect.com/blog/2011/11/15/documenting-architecture-decisions
+  - https://music.yandex.ru/album/14948662/track/87546546
+  - https://habr.com/ru/company/dododev/blog/578052/
+- RFC https://brunoscheufler.com/blog/2020-07-04-documenting-design-decisions-using-rfcs-and-adrs
+- KATA
+  - https://github.com/team7katas/sysopsquad
+  - https://github.com/vadagama/sever_crew
+
 ## Интеграций
 
 * [API](https://www.artofba.com/post/systems-integration-api)

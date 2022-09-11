@@ -1,0 +1,9 @@
+@startuml
+car "1" *-- "many" wheel : contains, composition, owns
+garage o-- car : include, aggregation, has
+garage o-- tools: aggregation
+car ..> fuel: uses, dependency
+car --> road: order, direct association
+car <|-- audi: Extension, inheritance
+driver - car : association, drives >
+@enduml

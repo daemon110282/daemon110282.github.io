@@ -17,18 +17,21 @@
 * [Рейтинг ОФД 2022](https://www.cnews.ru/articles/2022-03-22_cnews_analytics_rejting_operatorov_fiskalnyh)
 ![рейтинг](https://filearchive.cnews.ru/img/articles/2022/03/24/rejting_ofd_1.jpg)
 
-## Онлайн кассы
+## Облачные Онлайн кассы
 
 * Рейтинг Онлайн касс 
   * [2021](https://www.ekam.ru/blogs/pos/onlayn-kassy-dlya-internet-magazina)
   * https://online-check.business.ru/rejting-oblachnykh-kass/
 
-## ФР 
+## ФР ККТ
 
 * [Рейтинг ФР]
   * [2021](https://expertology.ru/12-luchshikh-onlayn-kass/)
   * [2022](https://online-kassa.ru/blog/rejting-onlajn-kass-v-2021/)
   * [2019](https://www.cnews.ru/articles/2019-03-25_cnews_analytics_opublikoval_rezultaty_pervogo_issledovaniya)
+
+Подключение физических ФР ККТ к ПО организации
+- [1C Предприятие + драйвер ККТ + USB](https://interface31.ru/tech_it/2018/12/podklyuchaem-kkt-atol-k-1spredpriyatie-83.html)
 
 ## Links
 

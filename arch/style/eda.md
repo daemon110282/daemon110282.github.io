@@ -39,8 +39,8 @@
 * Команда Command driven
   * [Task (Worker) Queue](../../technology/middleware/rmq.md)
   * [RPC (команды)](../../technology/middleware/rmq.md)
-* CQRS - command query request segregation
-* Event sourcing - источник правды событие, не состояние ИС
+* [CQRS](../pattern/pattern.cqrs.md) - command query request segregation
+* [Event sourcing](https://habr.com/ru/company/nix/blog/322214/) - источник правды событие, не состояние ИС
 * Медиатор
 * Распределенные транзакции (лучше не делать)
   * SAGA - компенсационные действия для отмены "транзакции"

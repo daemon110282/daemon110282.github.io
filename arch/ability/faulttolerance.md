@@ -50,7 +50,7 @@
 - Микросервисы слабая связность, изоляция сбоев  *
 - stateless
 - Health check
-- CQRS - command query request segregation
+- [CQRS](../pattern/pattern.cqrs.md) - command query request segregation
 - Асинхронная обработка - Брокер очереди, воркеры, буферы входного потока данных
 - Git, rollback, миграции бд
 - graceful shutdown: при выключении они дожидаются полного завершения текущей задачи, будь это http-запрос или какая-нибудь служебная задача.

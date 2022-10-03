@@ -4,8 +4,11 @@
 
 - Development portal
 - Мониторинг, статистика использования
-- Безопасность
+- [Безопасность (контроль доступа, защита)](https://aws.amazon.com/ru/api-gateway/api-management/?pg=wianapi&cta=apimgtprcs)
 - Монетизация
+- Производительность
+
+
 
 ### Development Portal
 

@@ -45,7 +45,7 @@
 ## Технологии
 
 - Helm
-- Jenkins	- automation server on Kubernetes
+- [Jenkins](jenkins.md)	- automation server on Kubernetes
 - Container Registry
   - Nexus
 

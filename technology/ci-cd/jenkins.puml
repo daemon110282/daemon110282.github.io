@@ -1,0 +1,11 @@
+@startuml (id=Jenkins)
+
+class jenkins
+
+jenkins --> pipeline : содержит
+jenkins --> job : выполняет
+pipeline "1" --> "*" stage : включает
+pipeline --> jenkins_file : описывает
+
+
+@enduml

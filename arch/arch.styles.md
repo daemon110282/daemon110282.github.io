@@ -28,6 +28,8 @@
   - [Vertical-slice](https://headspring.com/2019/11/05/why-vertical-slice-architecture-is-better/)
   - [Clean Architecture](pattern/clean.architecture.md)
 
+![Стили-НФТ Марк Ричардс](../img/arch/arch_style-ility.jpg)
+
 ### Onion Луковая гексагональная архитектура
 
 ![onion](../img/arch/onionarch.png)

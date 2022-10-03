@@ -43,7 +43,7 @@
 * [Event sourcing](https://habr.com/ru/company/nix/blog/322214/) - источник правды событие, не состояние ИС
 * Медиатор
 * Распределенные транзакции (лучше не делать)
-  * SAGA - компенсационные действия для отмены "транзакции"
+  * [SAGA](../pattern/pattern.saga.md) - компенсационные действия для отмены "транзакции"
   * двухфазный комит - намерение, получено ок от участников, комит  
 * [Versioning Message](https://www.youtube.com/watch?v=mEzYTuYSork&list=PLx8uyNNs1ri2MBx6BjPum5j9_MMdIfM9C&index=11&ab_channel=ChrisPatterson)
   * [EasyNetQ by message type](https://github.com/EasyNetQ/EasyNetQ/wiki/Versioning-Messages) 

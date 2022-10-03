@@ -10,12 +10,12 @@
 
 ## Зачем
 
-* [MS Хранилища данных](https://docs.microsoft.com/ru-ru/azure/architecture/guide/technology-choices/data-store-overview)
-* Интегрирует множество источников данных и помогает снизить нагрузку на производственную систему.
-* Оптимизированные данные для доступа к чтению и последовательного сканирования диска.
-* Хранилище данных помогает защитить данные от обновлений исходной системы.
-* Позволяет пользователям выполнять управление основными данными.
-* Улучшение качества данных в исходных системах.
+- [MS Хранилища данных](https://docs.microsoft.com/ru-ru/azure/architecture/guide/technology-choices/data-store-overview)
+- Интегрирует множество источников данных и помогает снизить нагрузку на производственную систему.
+- Оптимизированные данные для доступа к чтению и последовательного сканирования диска.
+- Хранилище данных помогает защитить данные от обновлений исходной системы.
+- Позволяет пользователям выполнять управление основными данными.
+- Улучшение качества данных в исходных системах.
 
 ## Плюсы и минусы
 
@@ -25,11 +25,13 @@
 | - | - |
 |  |  |
 
+![Выбор хранилища http://architecturethehardparts.com/](../img/arch/choose_store.jpg)
+
 ## Паттерны
 
 - Денормализация
 - Модель данных звезда
-- https://habr.com/ru/company/visiology/blog/678346/
+- <https://habr.com/ru/company/visiology/blog/678346/>
 - агрегированные витрины
 
 ## Принципы проектирования
@@ -38,4 +40,4 @@
 
 ## Links
 
-https://coderlessons.com/tutorials/bolshie-dannye-i-analitika/teoriia-khraneniia-dannykh/21-data-mining-protiv-khranilishcha-dannykh
+<https://coderlessons.com/tutorials/bolshie-dannye-i-analitika/teoriia-khraneniia-dannykh/21-data-mining-protiv-khranilishcha-dannykh>

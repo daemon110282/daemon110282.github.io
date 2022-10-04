@@ -23,6 +23,11 @@
   * [2021](https://www.ekam.ru/blogs/pos/onlayn-kassy-dlya-internet-magazina)
   * https://online-check.business.ru/rejting-oblachnykh-kass/
 
+### АТОЛ 
+
+- https://integration.atol.ru/
+- https://integration.atol.ru/api/#obschaya-informatsiya
+
 ## ФР ККТ
 
 * [Рейтинг ФР]

@@ -6,7 +6,7 @@
 
 1. Предоставить доступ к сервисам на Linux сервере пользователям домена.
 2. Пустить на Linux сервер администраторов под своими доменными учётными данными.
-3. Настроить вход на Linux рабочую станцию для пользователей домена, причём желательно SSO (чтобы часто не вводить длинный пароль).
+3. Настроить вход на Linux рабочую станцию для пользователей домена, причём желательно [SSO](../sso.md) (чтобы часто не вводить длинный пароль).
 4. [Postgresql доменная авторизация](https://blog.ololo.cc/kerberos) 
 
 Сокращения:
@@ -15,7 +15,7 @@
 ПКд - windows PC domain controller
 ПКв - windows pc
 
-- [SSO](https://habr.com/ru/company/nixys/blog/563244/) - single sign-on
+- [SSO](../sso.md) - single sign-on
 - AD active directory - сервер функций, таких как аутентификация, управление группами и пользователями, администрирование политик и многое другое. это база данных служб каталогов.
 - LDAP - один из протоколов, которые вы можете использовать для общения с AD. LDAP is used for holding authoritative information about the accounts, such as what they're allowed to access (authorization).
 - Kerberos другой протокол к AD. 

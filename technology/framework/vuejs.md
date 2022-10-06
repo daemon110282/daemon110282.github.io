@@ -2,7 +2,7 @@
 
 frontend-фреймворк
 использует архитектуру Model-View-ViewModel
-SPA
+[SPA](/arch/style/spa.md)
 Vue 2.0 поддерживает серверный рендеринг SRR
 	Сервер NodeJS + [Nuxt.js](https://dergunov.com/wiki/nuxt-js-intro)
 паттерн управления состоянием приложения Vuex

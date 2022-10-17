@@ -30,11 +30,13 @@
 - On premise
   - Redocfly
   - Kong
+  - [WSO2 Api Manager](https://wso2.com/api-manager/)
 - ?
   - AxWay
   - MuleSoft
   - [Pronovix](https://pronovix.com/blog/one-developer-portal-document-them-all)
   - [Tyk](https://tyk.io/)
+
 
 ## Links
 - https://cloud.google.com/blog/products/api-management/top-5-trends-for-api-powered-digital-transformation-in-2021

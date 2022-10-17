@@ -14,7 +14,6 @@ TODO
 - ЭЦП
 - Криптоалгоритмы
 - HTTPS SSL\TLS\MTLS
-- JWT
 - PCI DSS
 - Securing Microservices with IdentityServer4, [**OAuth2** and **OpenID Connect**](https://medium.com/aspnetrun/securing-microservices-with-identityserver4-with-oauth2-and-openid-connect-fronted-by-ocelot-api-49ea44a0cf9e) fronted by Ocelot API Gateway
 - k8s
@@ -57,12 +56,14 @@ TODO
 - Крипто Провайдеры
   - [КриптоПро CSP](https://www.cryptopro.ru/products/csp/compare)
   - [OpenSSL ГОСТ](https://redos.red-soft.ru/base/manual/safe-redos/gost-in-openssl/)
-- web application firewall, WAF Межсетевые экраны
+- Web application firewall (WAF) Межсетевые экраны
   - [PT Application Firewall](https://www.tadviser.ru/index.php/%D0%9F%D1%80%D0%BE%D0%B4%D1%83%D0%BA%D1%82:PT_Application_Firewall)
     - Сертификация ФСТЭК
     - OWASP TOP 10
     - DDOS
-
+- [Identity and Access Management (IAM)](../iam.md)
+  - JWT
+  
 ## Примеры требований
 
 - Взаимодействие осуществляется через сеть Интернет по протоколу HTTP с использованием стандартного сетевого порта

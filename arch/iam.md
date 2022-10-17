@@ -51,9 +51,9 @@ OAuth 2.0 [нужен, чтобы получать](https://habr.com/ru/company/
 	- Commercial
 		- ADFS
 	- Open Source
-		- [WSO2 Identity Server](iam.wso2.md)
+		- [WSO2 Identity Server](../technology/middleware/iam.wso2.md)
 		- IdentityServer4 (.NET Core)
-		- [KEYCLOAK (Red Hat Java)](iam.keycloak.md)	
+		- [KEYCLOAK (Red Hat Java)](../technology/middleware/iam.keycloak.md)	
 - online
 	- Commercial
 		- [auth0](https://auth0.com/)

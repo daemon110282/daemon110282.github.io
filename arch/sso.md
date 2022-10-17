@@ -1,6 +1,6 @@
 # Single sign-on SSO
 
-Возможность [Identity and Access Management (IAM)](middleware/iam.md) решений.
+Возможность [Identity and Access Management (IAM)](iam.md) решений.
 
 Виды [SSO](https://www.securitylab.ru/analytics/530059.php):
 - Корпоративный (Enterprise) Single Sign-on - данная технология подразумевает установку агента на рабочие станции пользователей.

@@ -2,11 +2,14 @@
 
 Возможность [Identity and Access Management (IAM)](iam.md) решений.
 
+Типы [SSO](https://habr.com/ru/company/nixys/blog/563244/)
+![scheme](https://habrastorage.org/r/w1560/webt/yg/wc/c0/ygwcc0udngt3kwnzjzlp6h4q_is.png)
+
 Виды [SSO](https://www.securitylab.ru/analytics/530059.php):
 - Корпоративный (Enterprise) Single Sign-on - данная технология подразумевает установку агента на рабочие станции пользователей.
 - Web Single Sign-on - протоколы SAML, OAuth, OpenID Connect
 
-TODO
+
 https://habr.com/ru/company/nixys/blog/563244/
 
 Плюсы:
@@ -17,3 +20,4 @@ https://habr.com/ru/company/nixys/blog/563244/
 Reduced IT Costs: SSO helps lower IT costs by saving admin time on password resets thus reducing the number of help tickets. We also allow users to reset their passwords themselves, entirely eliminating the necessity for IT involvement so that they can specialize in more important tasks.
 - __Improves security capabilities__: SSO security ensures that only authorized users get access to sensitive data. You can Implement password policies like required length, complexity, restrictions on password reuse, also as session timeout and password reset self-service policy to reinforce protection without hampering your users.
 
+Минусы:

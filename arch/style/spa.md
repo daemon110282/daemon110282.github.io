@@ -54,3 +54,6 @@ https://webcase.com.ua/blog/razrabotka-odnostranichnyh-prilozhenij-spa-webcase/#
 - [AWS](https://docs.aws.amazon.com/whitepapers/latest/serverless-multi-tier-architectures-api-gateway-lambda/single-page-application.HTML)
 - https://medium.com/hackernoon/architecting-single-page-applications-b842ea633c2e
 
+## TODO
+
+https://docs.microsoft.com/en-us/azure/active-directory/develop/scenario-spa-overview

@@ -1,5 +1,7 @@
 # IAM KeyCloak
 
+Реализация функции [Identity and Access Management (IAM)](../../arch/iam.md) решений.
+
 TODO
 [X5Tech выбрали](https://habr.com/ru/company/X5Tech/blog/654115/)
 [Фичи](https://habr.com/ru/company/X5Tech/blog/486778/)

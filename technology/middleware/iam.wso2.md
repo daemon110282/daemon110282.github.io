@@ -1,5 +1,7 @@
 # IAM WSO2 Identity Server
 
+Реализация функции [Identity and Access Management (IAM)](../../arch/iam.md) решений.
+
 https://wso2.com/identity-server/
 
 ![arch](https://is.docs.wso2.com/en/6.0.0/assets/img/guides/iam-functionality.png)

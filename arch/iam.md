@@ -2,16 +2,18 @@
 
 Identity Provider (IAM) with industry standard supported protocols:
 
-- SAML 2.0
-- OAuth
-- OpenID Connect (OIDC)
+- SAML 2.0 XML
+- [OAuth](../technology/protocols.integration/oauth.md)
+- [OpenID Connect (OIDC)](../technology/protocols.integration/oidc.md)
 - Social Authentication (FB, Google и тп)
 
-Функционал IAM:
+Функционал [IAM](https://digitalguardian.com/blog/what-identity-and-access-management-iam):
 
 - Аутентификация, в том числе многофакторная
 - Адаптивная аутентификация (применение более строгих форм проверки подлинности в зависимости от контекста пользователя — геолокации, устройства, с которого осуществляется вход, и т. д.)
 - [Управление сессиями](https://www.securitylab.ru/analytics/530059.php)
+- RBAC
+- Multi-Factor Authentication
 
 Критерии [выбора](https://www.securitylab.ru/analytics/530059.php):
 
@@ -33,15 +35,9 @@ User store:
 
 ![scheme](https://habrastorage.org/r/w1560/getpro/habr/post_images/bc9/ad8/618/bc9ad86182b31533cc26413abc67924f.png)
 
-OpenID Сonnect нужен, чтобы получить у пользователя его учетные данные и проверить их. 
-![OpenID Сonnect процесс](https://habrastorage.org/r/w1560/getpro/habr/post_images/c13/afc/ee5/c13afcee5226ddb135df9836d3321b17.png)
-- OpenID Connect Provider (OP)
-- Client
-- User
-- Scopes
-- [Flow](https://habr.com/ru/company/nixys/blog/566910/)
+[OpenID Сonnect](../technology/protocols.integration/oidc.md) нужен, чтобы получить у пользователя его учетные данные и проверить их. 
 
-OAuth 2.0 [нужен, чтобы получать](https://habr.com/ru/company/dataart/blog/311376/) токены доступа и с ними обращаться к ресурсам.
+[OAuth 2.0](../technology/protocols.integration/oidc.md) [нужен, чтобы получать](https://habr.com/ru/company/dataart/blog/311376/) токены доступа и с ними обращаться к ресурсам.
 
 ## Технологии
 
@@ -52,7 +48,7 @@ OAuth 2.0 [нужен, чтобы получать](https://habr.com/ru/company/
 		- ADFS
 	- Open Source
 		- [WSO2 Identity Server](../technology/middleware/iam.wso2.md)
-		- IdentityServer4 (.NET Core)
+		- [IdentityServer4 (.NET Core)](../technology/middleware/iam.is4.md)
 		- [KEYCLOAK (Red Hat Java)](../technology/middleware/iam.keycloak.md)	
 - online
 	- Commercial

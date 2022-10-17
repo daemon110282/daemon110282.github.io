@@ -6,7 +6,14 @@
 - Корпоративный (Enterprise) Single Sign-on - данная технология подразумевает установку агента на рабочие станции пользователей.
 - Web Single Sign-on - протоколы SAML, OAuth, OpenID Connect
 
-https://habr.com/ru/company/dataart/blog/311376/
-
 TODO
 https://habr.com/ru/company/nixys/blog/563244/
+
+Плюсы:
+
+- __[Boost Productivity](https://www.drupal.org/docs/contributed-modules/saml-sp-single-sign-on-sso-saml-service-provider/drupal-sso)__: SSO allows employees to quickly access their corporate approved apps in one click. Eliminate the inconvenience of managing, remembering, and resetting multiple passwords which benefits in an increase in loyalty and higher conversion rates
+- __Flexible IdP__: Enable Single Sign-On (SSO) for users without having to move users from their existing user store. We support a variety of user stores like Identity Provider, OAuth Provider, Active Directory (AD), Database etc
+- __Security & Compliance__: Considering Compliance factor, organizations need to prove that adequate security measures are in place to protect sensitive Data. Here Single Sign-On helps with regulatory compliance to meet requirements around data access and antivirus protection
+Reduced IT Costs: SSO helps lower IT costs by saving admin time on password resets thus reducing the number of help tickets. We also allow users to reset their passwords themselves, entirely eliminating the necessity for IT involvement so that they can specialize in more important tasks.
+- __Improves security capabilities__: SSO security ensures that only authorized users get access to sensitive data. You can Implement password policies like required length, complexity, restrictions on password reuse, also as session timeout and password reset self-service policy to reinforce protection without hampering your users.
+

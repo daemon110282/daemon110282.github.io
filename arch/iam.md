@@ -1,5 +1,10 @@
 # Identity and Access Management (IAM)
 
+- [Identity and Access Management (IAM)](#identity-and-access-management-iam)
+	- [Протоколы](#протоколы)
+		- [OAuth, OpenID Connect (OIDC)](#oauth-openid-connect-oidc)
+	- [Технологии](#технологии)
+
 Identity Provider (IAM) with industry standard supported protocols:
 
 - SAML 2.0 XML
@@ -24,10 +29,11 @@ Identity Provider (IAM) with industry standard supported protocols:
 - Открытый исходный код
 
 User store:
+
 - встроенный LDAP
 - внешний LDAP
 - Microsoft Active Directory
-- Apache Cassandra 
+- Apache Cassandra
 
 ## Протоколы
 
@@ -35,7 +41,7 @@ User store:
 
 ![scheme](https://habrastorage.org/r/w1560/getpro/habr/post_images/bc9/ad8/618/bc9ad86182b31533cc26413abc67924f.png)
 
-[OpenID Сonnect](../technology/protocols.integration/oidc.md) нужен, чтобы получить у пользователя его учетные данные и проверить их. 
+[OpenID Сonnect](../technology/protocols.integration/oidc.md) нужен, чтобы получить у пользователя его учетные данные и проверить их.
 
 [OAuth 2.0](../technology/protocols.integration/oidc.md) [нужен, чтобы получать](https://habr.com/ru/company/dataart/blog/311376/) токены доступа и с ними обращаться к ресурсам.
 
@@ -49,7 +55,7 @@ User store:
 	- Open Source
 		- [WSO2 Identity Server](../technology/middleware/iam.wso2.md)
 		- [IdentityServer4 (.NET Core)](../technology/middleware/iam.is4.md)
-		- [KEYCLOAK (Red Hat Java)](../technology/middleware/iam.keycloak.md)	
+		- [KEYCLOAK (Red Hat Java)](../technology/middleware/iam.keycloak.md)
 - online
 	- Commercial
 		- [auth0](https://auth0.com/)

@@ -20,6 +20,7 @@ TODO
   - Key Managment
   - Key Vault
     - HashiCorp
+- [Zero Trust](https://t.me/ru_arc/136)
 
 ## Крипто Защита Информации (СКЗИ)
 

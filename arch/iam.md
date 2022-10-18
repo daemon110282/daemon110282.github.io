@@ -7,7 +7,7 @@
 
 Identity Provider (IAM) with industry standard supported protocols:
 
-- SAML 2.0 XML
+- SAML 2.0 XML (Security Assertion Markup Language)
 - [OAuth](../technology/protocols.integration/oauth.md)
 - [OpenID Connect (OIDC)](../technology/protocols.integration/oidc.md)
 - Social Authentication (FB, Google и тп)
@@ -18,8 +18,8 @@ Identity Provider (IAM) with industry standard supported protocols:
 - Аутентификация, в том числе многофакторная
 - Адаптивная аутентификация (применение более строгих форм проверки подлинности в зависимости от контекста пользователя — геолокации, устройства, с которого осуществляется вход, и т. д.)
 - [Управление сессиями](https://www.securitylab.ru/analytics/530059.php)
-- RBAC
-- Multi-Factor Authentication
+- Role Based Access (RBAC)
+- Multi-Factor Authentication (MFA)
 
 Критерии [выбора](https://www.securitylab.ru/analytics/530059.php):
 
@@ -42,9 +42,9 @@ User store:
 
 ![scheme](https://habrastorage.org/r/w1560/getpro/habr/post_images/bc9/ad8/618/bc9ad86182b31533cc26413abc67924f.png)
 
-[OpenID Сonnect](../technology/protocols.integration/oidc.md) нужен, чтобы получить у пользователя его учетные данные и проверить их.
+[OpenID Сonnect](../technology/protocols.integration/oidc.md) нужен, чтобы получить у пользователя его учетные данные и проверить их. Authentication protocol.
 
-[OAuth 2.0](../technology/protocols.integration/oauth.md) [нужен, чтобы получать](https://habr.com/ru/company/dataart/blog/311376/) токены доступа и с ними обращаться к ресурсам.
+[OAuth 2.0](../technology/protocols.integration/oauth.md) [нужен, чтобы получать](https://habr.com/ru/company/dataart/blog/311376/) токены доступа и с ними обращаться к ресурсам. Authorization framework, not an authentication protocol.
 
 ## Технологии
 

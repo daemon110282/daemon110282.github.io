@@ -14,6 +14,7 @@ Identity Provider (IAM) with industry standard supported protocols:
 
 Функционал [IAM](https://digitalguardian.com/blog/what-identity-and-access-management-iam):
 
+- [Single Sign On](sso.md)
 - Аутентификация, в том числе многофакторная
 - Адаптивная аутентификация (применение более строгих форм проверки подлинности в зависимости от контекста пользователя — геолокации, устройства, с которого осуществляется вход, и т. д.)
 - [Управление сессиями](https://www.securitylab.ru/analytics/530059.php)
@@ -43,7 +44,7 @@ User store:
 
 [OpenID Сonnect](../technology/protocols.integration/oidc.md) нужен, чтобы получить у пользователя его учетные данные и проверить их.
 
-[OAuth 2.0](../technology/protocols.integration/oidc.md) [нужен, чтобы получать](https://habr.com/ru/company/dataart/blog/311376/) токены доступа и с ними обращаться к ресурсам.
+[OAuth 2.0](../technology/protocols.integration/oauth.md) [нужен, чтобы получать](https://habr.com/ru/company/dataart/blog/311376/) токены доступа и с ними обращаться к ресурсам.
 
 ## Технологии
 

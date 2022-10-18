@@ -8,7 +8,7 @@
 - User
 - Scopes
 - [Flow](https://habr.com/ru/company/nixys/blog/566910/)
-	- Implicit Flow - SPA, JS
+	- [Implicit Flow](https://learn.microsoft.com/en-us/windows-server/identity/ad-fs/overview/ad-fs-openid-connect-oauth-flows-scenarios) - SPA, JS
 	- Authentication Flow - BackEnd
 
 [Песочница](https://openidconnect.net/)

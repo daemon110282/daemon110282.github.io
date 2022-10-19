@@ -16,4 +16,6 @@
 - WS 2016 **добавили Implicit Flow OAuth2**
 	- [OAuth, OIDC](https://learn.microsoft.com/en-us/windows-server/identity/ad-fs/development/ad-fs-openid-connect-oauth-concepts)
 	- [SPA](https://learn.microsoft.com/en-us/windows-server/identity/ad-fs/development/single-page-application-with-ad-fs)
-	- [Flows](https://learn.microsoft.com/en-us/windows-server/identity/ad-fs/overview/ad-fs-openid-connect-oauth-flows-scenarios)
+	- Support [Flows](https://learn.microsoft.com/en-us/windows-server/identity/ad-fs/overview/ad-fs-openid-connect-oauth-flows-scenarios)
+- WS 2019
+	- добавили [Authorization Code Grant with PKCE](https://medium.com/the-new-control-plane/using-proof-key-for-code-exchange-pkce-in-adfs-for-windows-server-2019-a457172e28c3)

@@ -3,7 +3,11 @@
 - Вводная https://habr.com/ru/post/434798/
 - Форматы
 - OpenAPI 3.0 спецификация формата https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.0.0.md
-- MindMap http://openapi-map.apihandyman.io/?version=3.0 Описание формата common markdown https://spec.commonmark.org/0.29/
+- MindMap http://openapi-map.apihandyman.io/?version=3.0 
+- [Map](http://openapi-map.apihandyman.io/)
+- support [Json Schema](jsonschema.md)
+ 
+TODO https://github.com/daemon110282/api#openapi
 
 ## Редакторы 
 

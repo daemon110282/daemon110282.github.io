@@ -21,12 +21,14 @@ Client type — тип клиента, от которого зависит сп
 
 - Confidential
 	- Authentication Flow=[Authorization Code Flow](url) - using a browser and server BackEnd
-	- [Authorization Code Flow with PKCE](https://auth0.com/docs/get-started/authentication-and-authorization-flow/authorization-code-flow-with-proof-key-for-code-exchange-pkce) - using a browser only
-		- https://auth0.com/docs/get-started/authentication-and-authorization-flow/authorization-code-flow-with-proof-key-for-code-exchange-pkce
-	- [Client credentials](https://habr.com/ru/company/dododev/blog/520046/)
+	- [Client credentials Flow](https://habr.com/ru/company/dododev/blog/520046/)
 	![scheme](https://habrastorage.org/r/w1560/getpro/habr/post_images/110/fe3/d4a/110fe3d4a29efd1af72da67ab06515ba.png)
 - Public
-	- [Implicit Flow](https://learn.microsoft.com/en-us/windows-server/identity/ad-fs/overview/ad-fs-openid-connect-oauth-flows-scenarios) - redirection required SPA, JS **legacy**
+	- [Authorization Code Flow with PKCE](https://auth0.com/docs/get-started/authentication-and-authorization-flow/authorization-code-flow-with-proof-key-for-code-exchange-pkce) - using a browser only
+		- https://auth0.com/docs/get-started/authentication-and-authorization-flow/authorization-code-flow-with-proof-key-for-code-exchange-pkce
+		- https://github.com/auth0/auth0-spa-js		
+		- https://auth0.com/docs/get-started/authentication-and-authorization-flow/call-your-api-using-the-authorization-code-flow-with-pkce
+	- [Implicit Flow](https://learn.microsoft.com/en-us/windows-server/identity/ad-fs/overview/ad-fs-openid-connect-oauth-flows-scenarios) - redirection required SPA, JS **legacy?**
 		- [IS4 example](https://identityserver4.readthedocs.io/en/latest/quickstarts/4_javascript_client.html)
 		- [CORS между доменами](https://identityserver4.readthedocs.io/en/latest/quickstarts/4_javascript_client.html#allowing-ajax-calls-to-the-web-api-with-cors)
 		- **[TODO BFF нужен SPA CSRF attacks?](https://docs.duendesoftware.com/identityserver/v5/bff/overview/)** 

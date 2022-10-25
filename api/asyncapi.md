@@ -13,5 +13,8 @@ https://oai.github.io/Documentation/best-practices.html
 * [outputs a map of the system architecture in plantuml](https://github.com/asyncapi/cupid)
 * [Bundle](https://github.com/asyncapi/bundler) 
 * [code first](https://www.asyncapi.com/docs/community/tooling)
+  * https://github.com/neuroglia-io/AsyncApi
+    * не поддерживает вложенные объекты в сообщении
+  * https://github.com/tehmantra/saunter  
 * [Discovery](https://github.com/SolaceLabs/event-discovery-agent)
 

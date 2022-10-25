@@ -5,10 +5,9 @@
   - [Patterns](#patterns)
     - [Versioning](#versioning)
     - [Security](#security)
-    - [Стратегия повторов при сбоях Rerty Policy](#стратегия-повторов-при-сбоях-rerty-policy)
   - [Документирование](#документирование)
   - [API management](#api-management)
-  - [Technology](#technology)
+  - [Технологии](#Технологии)
   - [Links](#links)
 
 Термины
@@ -36,12 +35,12 @@
 TODO
 - https://microservice-api-patterns.org/
 - https://mathieu.fenniak.net/the-api-checklist/
-https://habr.com/ru/post/503284/
-https://habr.com/ru/post/447322/
-https://www.gov.uk/guidance/gds-api-technical-and-data-standards
-https://www.gov.uk/guidance/setting-api-service-levels
-
-* [API gateway](api.gateway.md)
+- https://habr.com/ru/post/503284/
+- https://habr.com/ru/post/447322/
+- https://www.gov.uk/guidance/gds-api-technical-and-data-standards
+- https://www.gov.uk/guidance/setting-api-service-levels
+- [API gateway](api.gateway.md)
+- [Стратегии повторов](../arch/pattern/pattern.failure.md) при сбоях Rerty Policy
 
 ### Versioning
 
@@ -54,22 +53,6 @@ decouple the different implementation versions into independent handlers
 
 * [apisecurity.io](https://apisecurity.io/)
   * [REST Best Practice](https://stackoverflow.blog/2021/10/06/best-practices-for-authentication-and-authorization-for-rest-apis/?utm_campaign=APISecurity%20newsletter&utm_medium=email&_hsmi=204867978&_hsenc=p2ANqtz-94r6UDHzZG48tgtd0Sz6OiZicy6tTBQysQKtk0WzhZXlXrXBucIld80QE3Gll1Le1lxnwNhNqu-pySFps1AsqeR8MQrg&utm_content=204868574&utm_source=hs_email)
-
-### Стратегия повторов при сбоях Rerty Policy
-
-* от [типа\кода ошибки](https://docs.microsoft.com/ru-ru/azure/architecture/best-practices/transient-faults): временная, постоянная
-* число повторных попыток и интервал между ними ограничен общим максимальным временем для операции\процесса
-  * типы интервалов:
-    * Экспоненциальная задержка
-    * Интервалы с приращениями
-    * Постоянные интервалы
-    * Немедленный повтор
-    * Случайный выбор
-* Регистрируйте и отслеживайте временные и не временные ошибки для мониторинга: 
-  * увеличения числа и частоты возникновения сбоев
-  * среднего числа повторных попыток 
-  * общего времени, затрачиваемого на успешное выполнение операций
-* [Шаблон автоматического выключения (прерывателя) circuit breaker для иск-я постоянных повторов](https://docs.microsoft.com/ru-ru/azure/architecture/patterns/circuit-breaker)
 
 ## Документирование
 
@@ -88,10 +71,12 @@ decouple the different implementation versions into independent handlers
 
 [API management](api-managment.md)
 
-## Technology
+## Технологии
 
 - [Api Gateway](api.gateway.md)
   - Ocelot
 
 ## Links
 
+https://mathieu.fenniak.net/the-api-checklist/
+https://github.com/Microsoft/api-guidelines/blob/master/Guidelines.md

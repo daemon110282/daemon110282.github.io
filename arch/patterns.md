@@ -1,23 +1,30 @@
 # Паттерны Шаблоны Patterns
 
-* [Интеграции](pattern/pattern.integration.md)
-* [Производительность](pattern/pattern.perf.md)
-  * [DevOps Scale](../devops.md)
-* Сквозная функциональность
-  * [Аудита](pattern/pattern.audit.md)
-  * Логирования
-* [Документирования](pattern/pattern.docs.md)
-* [Deployment Patterns](https://airtable.com/embed/shryjXK2rzf52sv9u/tbl2vjDV9Es36E2cW) (13 Patterns)
-  * [DevOps Deployment Rollback](../devops.md)
-* [Decomposition Patterns](https://airtable.com/embed/shrPwsn3G9IQ7JCm1/tbl7daDI4ZAAmedfD) (6 Patterns)
-* [Transaction Management Patterns](https://airtable.com/embed/shrjiJuF7kIbcnXRl/tblgszzLV27MUFP4p) (5 Patterns)
-* [Testing Patterns](https://airtable.com/embed/shr6p9u80mD9CzVU1/tblyGd1oiAcYuTSbr) (3 Patterns)
-* [Observability Patterns](https://airtable.com/embed/shrGgtSh9eNnxTu8m/tblMoXyKKAbxyuPrg) (6 Patterns)
-* [UI Patterns](https://airtable.com/embed/shrxffclVHmz95ii0/tblXbFfITMXmPjvGl) (3 Patterns)
-* [Service Discovery Patterns](https://airtable.com/embed/shrRiLR67Cu53Q83s/tbljDWNtHuaCFg2Ez) (4 Patterns)
-* [Security Patterns](https://airtable.com/embed/shrHNtgdwr7wP6TJj/tbl2ssqnen3UkXoaF) (2 Patterns)
-
-## Utility Patterns (3 Patterns)
+- [Интеграции](pattern/pattern.integration.md)
+- [Производительность](pattern/pattern.perf.md)
+  - [DevOps Avto Scale](../devops.md)
+- Сквозная функциональность
+  - [Аудита](pattern/pattern.audit.md)
+  - Логирования
+- [Документирования](pattern/pattern.docs.md)
+- [Deployment Patterns](https://airtable.com/embed/shryjXK2rzf52sv9u/tbl2vjDV9Es36E2cW) (13 Patterns)
+  - [DevOps Deployment Rollback](../devops.md)
+  - Проверка работоспособности (Health-check)
+  - Балансировка нагрузки
+- [Decomposition Patterns](https://airtable.com/embed/shrPwsn3G9IQ7JCm1/tbl7daDI4ZAAmedfD) (6 Patterns)
+- [Transaction Management Patterns](https://airtable.com/embed/shrjiJuF7kIbcnXRl/tblgszzLV27MUFP4p) (5 Patterns)
+- [Testing Patterns](https://airtable.com/embed/shr6p9u80mD9CzVU1/tblyGd1oiAcYuTSbr) (3 Patterns)
+- [Observability Patterns](https://airtable.com/embed/shrGgtSh9eNnxTu8m/tblMoXyKKAbxyuPrg) (6 Patterns)
+- [UI Patterns](https://airtable.com/embed/shrxffclVHmz95ii0/tblXbFfITMXmPjvGl) (3 Patterns)
+- [Service Discovery Patterns](https://airtable.com/embed/shrRiLR67Cu53Q83s/tbljDWNtHuaCFg2Ez) (4 Patterns)
+- [Security Patterns](https://airtable.com/embed/shrHNtgdwr7wP6TJj/tbl2ssqnen3UkXoaF) (2 Patterns)
+- Utility Patterns (3 Patterns)
+- Маршрутизатор
+- Транслятор трансформер адаптер
+- Обертка
+- Издатель подписчик
+- Оркестрация - есть дирижер
+- Хореография - нет централизованного управления (медиатора)
 
 ## Проектирования и реализации
 
@@ -63,12 +70,6 @@
 
 - https://docs.google.com/document/d/1_IIesGIMDJLrtvEY4cpLrYh3XPaM3IUYyaJD9AljkYM/edit?usp=sharing
 - https://docs.google.com/document/d/1PVbYEBd2wEmJyxQ0KUD1AnOt507pk-RReGRqnPpgtJE/edit?usp=sharing
-- Маршрутизатор
-- Транслятор трансформер адаптер
-- Обертка
-- Издатель подписчик
-- Оркестрация - есть дирижер
-- Хореография - нет централизованного управления (медиатора)
 
 https://microservices.io/patterns/microservices.html
 https://www.enterpriseintegrationpatterns.com/patterns/

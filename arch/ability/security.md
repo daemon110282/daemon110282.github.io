@@ -55,13 +55,26 @@ TODO
 - Крипто Провайдеры
   - [КриптоПро CSP](https://www.cryptopro.ru/products/csp/compare)
   - [OpenSSL ГОСТ](https://redos.red-soft.ru/base/manual/safe-redos/gost-in-openssl/)
-- Web application firewall (WAF) Межсетевые экраны
+- Web Application firewall (WAF) Межсетевые экраны
   - [PT Application Firewall](https://www.tadviser.ru/index.php/%D0%9F%D1%80%D0%BE%D0%B4%D1%83%D0%BA%D1%82:PT_Application_Firewall)
     - Сертификация ФСТЭК
     - OWASP TOP 10
     - DDOS
 - [Identity and Access Management (IAM)](../iam.md)
   - JWT
+  - Oauth 2, OpenID Connect, SAML
+  - WS-Federation (token)
+  - two-factor authentication (2FA)
+- swt
+- bearer
+- ntlm ldap,
+- http basic
+- digest
+- form
+- ws security
+- ssl client
+- api key
+- cookie
 
 ## Примеры требований
 

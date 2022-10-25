@@ -50,42 +50,19 @@ Rollback
 
 ## API
 
-НТ rps, sla
-- Кеш на стороне лк, чтобы меньше запросов к сервису и быстрее ответ.
-- Кеш фиас на сервисе данные статичны, чтобы меньше в бд ходить
-- Rps 2000 в день полей правок =
-- Кэширование - Ответы сервера должны иметь явное или неявное обозначение как кэшируемые или некэшируемые
-- Нфт, бизнес метрики
-мониторинг бд, аппов, health monitoring.
-- Json метод со статусом апи
-Сбор статистики обращений к веб сервису, кол-во запросов, фильтров топ
-решение, использующее gRPC, оказывается на 27% быстрее решения, использующего HTTP/1.1.
-Auth:
-- Oauth 2, OpenID Connect, SAML
-- WS-Federation (token)
-- swt
-- jwt
-- bearer
-- ntlm ldap,
-- http basic
-- digest
-- form,
-- ws security
-- ssl client
-- api key
-- cookie
-- two-factor authentication (2FA)
-Swagger песочница
-Http headers
-Gateway api
+- НТ rps, sla
+  - Кэширование - Ответы сервера должны иметь явное или неявное обозначение как кэшируемые или некэшируемые
+  - Нфт, бизнес метрики
+- Мониторинг бд, аппов, health monitoring.
+  - Json метод со статусом апи
+  - Сбор статистики обращений к веб сервису, кол-во запросов, фильтров топ
+  - решение, использующее gRPC, оказывается на 27% быстрее решения, использующего HTTP/1.1.
+- [Auth](../arch/ability/security.md)
+- [Swagger\AsyncApi](../api/api.md) песочница
+- Http headers
+- [Gateway API](../arch/pattern/pattern.integration.md)
 Асинхронная загрузка от сервиса, lazy load. Лк ходит сразу к веб сервису или к себе, затем вебсервис. Я за 2е, гибче переделать на свою бд, слабая связность
-Версии апи: url, param, http header
-обработка сбоев веб сервиса
-Http status
-retry policy
-
-## Links
-
-https://mathieu.fenniak.net/the-api-checklist/
-https://github.com/Microsoft/api-guidelines/blob/master/Guidelines.md
-
+- [Версии апи](../api/api.md): url, param, http header
+- [обработка сбоев](../arch/pattern/pattern.failure.md) веб сервиса
+- [Http status](../api/api-http-status.md)
+- [retry policy](../arch/pattern/pattern.failure.md)

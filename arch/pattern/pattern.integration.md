@@ -49,7 +49,7 @@ TODO см. EIP
   - Pub\Sub События
   - Task (Worker) Queue
 - [RPC Команды\Запросы](pattern.rpc.md)
-- Circuit Breaker
+- [Обработка сбоев: Retry Policy, Rate Limit, Circuit Breaker](pattern.failure.md)
 - Sidecar
 - Ambassador Посредник
   - nginx

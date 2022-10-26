@@ -49,7 +49,7 @@
 - распределенная архитектура\модульный монолит
 - Микросервисы слабая связность, изоляция сбоев  *
 - stateless
-- Health check
+- [Health check](../pattern/pattern.healthcheck.md)
 - [CQRS](../pattern/pattern.cqrs.md) - command query request segregation
 - Асинхронная обработка - Брокер очереди, воркеры, буферы входного потока данных
 - Git, rollback, миграции бд

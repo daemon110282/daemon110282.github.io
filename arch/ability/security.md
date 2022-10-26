@@ -12,7 +12,7 @@ TODO
 - АСП
 - ЭЦП
 - Криптоалгоритмы
-- HTTPS SSL\TLS\MTLS
+- HTTPS [SSL\TLS\MTLS](https://habr.com/ru/post/593507/)
 - PCI DSS
 - k8s
   - TLS – cert-manager

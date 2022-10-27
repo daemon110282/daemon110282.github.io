@@ -1,9 +1,14 @@
 # OpenID Connect (OIDC)
 
+- [OpenID Connect (OIDC)](#openid-connect-oidc)
+	- [Flow Grant](#flow-grant)
+	- [Параметры](#параметры)
+
 ![OpenID Сonnect процесс](https://habrastorage.org/r/w1560/getpro/habr/post_images/c13/afc/ee5/c13afcee5226ddb135df9836d3321b17.png)
 
 Термины:
-- OpenID Connect Provider (OP)
+
+- OpenID Connect Provider (OP) - Identity Provider
 - Client
 	- [machine to machine communication](https://docs.duendesoftware.com/identityserver/v6/overview/terminology/#machine-to-machine-communication) - __Client Credentials Flow=Authentication Flow?__
 	- [GUI с участием User](https://docs.duendesoftware.com/identityserver/v6/overview/terminology/#interactive-applications)  - Authorization Code Flow
@@ -14,6 +19,7 @@
 ## Flow Grant
 
 Client type — тип клиента, от которого зависит способ взаимодействия с ним. Тип клиента определяется его возможностью безопасно хранить свои учётные данные для авторизации — токен. Поэтому существует [всего 2 типа клиентов](https://habr.com/ru/company/dododev/blog/520046/):
+
 - Confidential — клиент, который может безопасно хранить свои учётные данные. Например, к такому типу клиентов относят web-приложения, имеющие backend.
 - Public — не может безопасно хранить свои учётные данные. Этот клиент работает на устройстве владельца ресурса, например, это браузерные или мобильные приложения.
 
@@ -28,10 +34,10 @@ Client type — тип клиента, от которого зависит сп
 		- https://auth0.com/docs/get-started/authentication-and-authorization-flow/authorization-code-flow-with-proof-key-for-code-exchange-pkce
 		- https://github.com/auth0/auth0-spa-js		
 		- https://auth0.com/docs/get-started/authentication-and-authorization-flow/call-your-api-using-the-authorization-code-flow-with-pkce
-	- [Implicit Flow](https://learn.microsoft.com/en-us/windows-server/identity/ad-fs/overview/ad-fs-openid-connect-oauth-flows-scenarios) - redirection required SPA, JS **legacy?**
+	- [Implicit Flow](https://learn.microsoft.com/en-us/windows-server/identity/ad-fs/overview/ad-fs-openid-connect-oauth-flows-scenarios) - redirection required SPA, JS __legacy?__
 		- [IS4 example](https://identityserver4.readthedocs.io/en/latest/quickstarts/4_javascript_client.html)
 		- [CORS между доменами](https://identityserver4.readthedocs.io/en/latest/quickstarts/4_javascript_client.html#allowing-ajax-calls-to-the-web-api-with-cors)
-		- **[TODO BFF нужен SPA CSRF attacks?](https://docs.duendesoftware.com/identityserver/v5/bff/overview/)** 
+		- [__TODO BFF нужен SPA CSRF attacks?__](https://docs.duendesoftware.com/identityserver/v5/bff/overview/)
 		- [JS OIDC Client](https://github.com/IdentityModel/oidc-client-js/wiki)
 		- Store AccessToken JWT [in Session Cookie](https://jcbaey.com/authentication-in-spa-reactjs-and-vuejs-the-right-way/)
 		- TODO устарело? https://jcbaey.com/oauth2-oidc-best-practices-in-spa/
@@ -44,14 +50,14 @@ https://cyberpolygon.com/ru/materials/security-of-json-web-tokens-jwt/%7Cere
 
 Основные [параметры Flow](https://identityserver4.readthedocs.io/en/latest/quickstarts/1_client_credentials.html)
 - Идентификация Client через OpenID Connect Provider
-	- IdToken - IdentityToken (used for Implicit, Hybrid Flow) - for authenticating a user. A JWT token used to represent the identity of the user. 
+	- IdToken - IdentityToken (used for Implicit, Hybrid Flow) - for authenticating a user. A JWT token used to represent the identity of the user.
 	- TokenEndpoint - получаем IdentityToken
-	- ClientId 
-	- ClientSecret 
+	- ClientId
+	- ClientSecret
 		- Хранится на BackEnd и передается в Authentication Flow
 		- в Implicit Flow не хранится в SPA, JS и не передается
-	- Scope 
-- Authorization Code (Token?) 
+	- Scope
+- Authorization Code (Token?)
 - Получение данных Resource с учетом доступа Scope
 	- AccessToken JWT (used for Implicit Flow) - for accessing a resource. A JWT token used in Oauth and OpenID connect scenarios and intended to be consumed by the resource.
 - RefreshToken

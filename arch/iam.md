@@ -15,11 +15,13 @@ Identity Provider (IAM) with industry standard supported protocols:
 Функционал [IAM](https://digitalguardian.com/blog/what-identity-and-access-management-iam):
 
 - [Single Sign On](sso.md)
-- Аутентификация, в том числе многофакторная
+- Аутентификация
+  - Multi-Factor Authentication (MFA)
 - Адаптивная аутентификация (применение более строгих форм проверки подлинности в зависимости от контекста пользователя — геолокации, устройства, с которого осуществляется вход, и т. д.)
 - [Управление сессиями](https://www.securitylab.ru/analytics/530059.php)
 - Role Based Access (RBAC)
-- Multi-Factor Authentication (MFA)
+- Custom Login Form
+- Session Managment
 
 Критерии [выбора](https://www.securitylab.ru/analytics/530059.php):
 

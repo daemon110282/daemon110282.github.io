@@ -2,6 +2,8 @@
 
 ## Зачем
 
+TODO https://docs.microsoft.com/en-us/azure/active-directory/develop/scenario-spa-overview
+
 ## Плюсы и минусы
 
 [Критерии](../arch.criteria.md)
@@ -16,9 +18,13 @@
 
 SSR (Server Side Rendering, серверный рендеринг) — способ рендеринга одностраничного приложения на стороне сервера, когда в браузер пользователя отправляется уже полностью отрисованная страница.
 
+Если вести разработку в соответствии со [стандартами прогрессивных приложений (PWA)](https://webcase.com.ua/blog/razrabotka-odnostranichnyh-prilozhenij-spa-webcase/#f5), то открываются и другие возможности. Например – добавление значка приложения на домашний экран смартфона.
+При традиционном подходе к SPA на фронтенде находится не только UI, но и логика.
+
 ## Паттерны
 
 TODO
+- Separated Presentation
 - Стратегия логирования (исключений), аудита на клиенте? 
 	- Передача через АПИ на сервер постоянно?
 	- Мерж логов на сервере+с Х клиентов-браузеров 1 юзера-сеанса
@@ -31,18 +37,10 @@ TODO
 - Масштабирование?
 - Кеширование, lazy load component UI?
 - Валидация - дублирование клиент+сервер из за уязвимости браузера? Разные языки двойная кодовая база?
-- Сквозная аутентификация: Single Sign-on SSO?, Identity Service?
+- Сквозная аутентификация: [Single Sign-on](../sso.md), [Identity Service](../iam.md)
 См ms arch
 
 https://www.purrweb.com/ru/blog/odnostranichnye-prilozheniya-polnyj-gid-po-razrabotke/
-
-если вести разработку в соответствии со стандартами прогрессивных приложений (PWA), то открываются и другие возможности. Например – добавление значка приложения на домашний экран смартфона.
-
-При традиционном подходе к SPA на фронтенде находится не только UI, но и логика
-
-https://webcase.com.ua/blog/razrabotka-odnostranichnyh-prilozhenij-spa-webcase/#f5
-
-- Separated Presentation
 
 ## Технологии
 
@@ -54,6 +52,3 @@ https://webcase.com.ua/blog/razrabotka-odnostranichnyh-prilozhenij-spa-webcase/#
 - [AWS](https://docs.aws.amazon.com/whitepapers/latest/serverless-multi-tier-architectures-api-gateway-lambda/single-page-application.HTML)
 - https://medium.com/hackernoon/architecting-single-page-applications-b842ea633c2e
 
-## TODO
-
-https://docs.microsoft.com/en-us/azure/active-directory/develop/scenario-spa-overview

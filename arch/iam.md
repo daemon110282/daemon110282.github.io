@@ -1,6 +1,8 @@
 # Identity and Access Management (IAM)
 
 - [Identity and Access Management (IAM)](#identity-and-access-management-iam)
+	- [Критерии выбора](#критерии-выбора)
+	- [User store](#user-store)
 	- [Протоколы](#протоколы)
 		- [OAuth, OpenID Connect (OIDC)](#oauth-openid-connect-oidc)
 	- [Технологии](#технологии)
@@ -23,6 +25,8 @@ Identity Provider (IAM) with industry standard supported protocols:
 - Custom Login Form
 - Session Managment
 
+## Критерии выбора
+
 Критерии [выбора](https://www.securitylab.ru/analytics/530059.php):
 
 - Функционал
@@ -31,12 +35,18 @@ Identity Provider (IAM) with industry standard supported protocols:
 - Отказоуйстойчивость
 - Открытый исходный код
 
-User store:
+## User store
 
-- встроенный LDAP
-- внешний LDAP
-- Microsoft Active Directory
+- Внутрення БД
+- User Federation
+  - встроенный LDAP
+  - внешний LDAP
+  - Microsoft Active Directory
 - Apache Cassandra
+- Identity Provider
+  - SAML
+  - OIDC
+  - Social (FB, Google..)
 
 ## Протоколы
 

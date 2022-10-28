@@ -2,7 +2,8 @@
 
 - [OpenID Connect (OIDC)](#openid-connect-oidc)
 	- [Flow Grant](#flow-grant)
-	- [Параметры](#параметры)
+	- [TODO](#todo)
+	- [Параметры Flow](#параметры-flow)
 
 ![OpenID Сonnect процесс](https://habrastorage.org/r/w1560/getpro/habr/post_images/c13/afc/ee5/c13afcee5226ddb135df9836d3321b17.png)
 
@@ -28,27 +29,23 @@ Client type — тип клиента, от которого зависит сп
 - Confidential
 	- Authentication Flow=[Authorization Code Flow](url) - using a browser and server BackEnd
 	- [Client credentials Flow](https://habr.com/ru/company/dododev/blog/520046/)
-	![scheme](https://habrastorage.org/r/w1560/getpro/habr/post_images/110/fe3/d4a/110fe3d4a29efd1af72da67ab06515ba.png)
+	<!-- ![scheme](https://habrastorage.org/r/w1560/getpro/habr/post_images/110/fe3/d4a/110fe3d4a29efd1af72da67ab06515ba.png) -->
 - Public
-	- [Authorization Code Flow with PKCE](https://auth0.com/docs/get-started/authentication-and-authorization-flow/authorization-code-flow-with-proof-key-for-code-exchange-pkce) - using a browser only
-		- https://auth0.com/docs/get-started/authentication-and-authorization-flow/authorization-code-flow-with-proof-key-for-code-exchange-pkce
-		- https://github.com/auth0/auth0-spa-js		
-		- https://auth0.com/docs/get-started/authentication-and-authorization-flow/call-your-api-using-the-authorization-code-flow-with-pkce
-	- [Implicit Flow](https://learn.microsoft.com/en-us/windows-server/identity/ad-fs/overview/ad-fs-openid-connect-oauth-flows-scenarios) - redirection required SPA, JS __legacy?__
-		- [IS4 example](https://identityserver4.readthedocs.io/en/latest/quickstarts/4_javascript_client.html)
-		- [CORS между доменами](https://identityserver4.readthedocs.io/en/latest/quickstarts/4_javascript_client.html#allowing-ajax-calls-to-the-web-api-with-cors)
-		- [__TODO BFF нужен SPA CSRF attacks?__](https://docs.duendesoftware.com/identityserver/v5/bff/overview/)
-		- [JS OIDC Client](https://github.com/IdentityModel/oidc-client-js/wiki)
-		- Store AccessToken JWT [in Session Cookie](https://jcbaey.com/authentication-in-spa-reactjs-and-vuejs-the-right-way/)
-		- TODO устарело? https://jcbaey.com/oauth2-oidc-best-practices-in-spa/
+	- [Authorization Code Flow with PKCE](https://auth0.com/docs/get-started/authentication-and-authorization-flow/authorization-code-flow-with-proof-key-for-code-exchange-pkce) - using a browser only		
+	- [Implicit Flow](https://learn.microsoft.com/en-us/windows-server/identity/ad-fs/overview/ad-fs-openid-connect-oauth-flows-scenarios) - redirection required SPA, JS __legacy__		
 	- Device authorization
 
-TODO
-https://cyberpolygon.com/ru/materials/security-of-json-web-tokens-jwt/%7Cere
+## TODO
 
-## Параметры
+- https://cyberpolygon.com/ru/materials/security-of-json-web-tokens-jwt/%7Cere
+- [__TODO BFF нужен SPA CSRF attacks?__](https://docs.duendesoftware.com/identityserver/v5/bff/overview/)
+- [JS OIDC Client](https://github.com/IdentityModel/oidc-client-js/wiki)
+- Store AccessToken JWT [in Session Cookie](https://jcbaey.com/authentication-in-spa-reactjs-and-vuejs-the-right-way/)
+  
+## Параметры Flow
 
 Основные [параметры Flow](https://identityserver4.readthedocs.io/en/latest/quickstarts/1_client_credentials.html)
+
 - Идентификация Client через OpenID Connect Provider
 	- IdToken - IdentityToken (used for Implicit, Hybrid Flow) - for authenticating a user. A JWT token used to represent the identity of the user.
 	- TokenEndpoint - получаем IdentityToken

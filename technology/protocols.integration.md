@@ -18,5 +18,5 @@
 - [AMQP](rmq.md)
 - MQTT
 - DB Link
-
-## Links
+- [OAuth]([protocols.integration/oauth.md])
+- [OpenID Conect](protocols.integration/oidc.md)

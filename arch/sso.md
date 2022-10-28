@@ -9,6 +9,7 @@
 - Корпоративный (Enterprise) Single Sign-on - данная технология подразумевает установку агента на рабочие станции пользователей.
 - Web Single Sign-on - протоколы SAML, OAuth, OpenID Connect
 
+[Варианты решений](https://www.g2.com/categories/single-sign-on-sso)
 
 https://habr.com/ru/company/nixys/blog/563244/
 

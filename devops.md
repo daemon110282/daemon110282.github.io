@@ -34,7 +34,12 @@
 
 ### Сколько сервисов(BC) в одном контейнере
 
-todo
+each container should do one thing and do it well. A few reasons:
+
+- There's a good chance you'd have to scale APIs and front-ends differently than databases.
+- Separate containers let you version and update versions in isolation.
+- While you may use a container for the database locally, you may want to use a managed service for the database in production. You don't want to ship your database engine with your app then.
+- Running multiple processes will require a process manager (the container only starts one process), which adds complexity to container startup/shutdown.
 
 ### Auto Scaling
 
@@ -48,7 +53,9 @@ todo
 
 - [k8s](technology/k8s.md)
 - Helm
-- [docker-compose.yml when building a multi-container Docker](technology/docker.md) application
+- [docker](technology/docker.md)
+  - [docker desktop](technology/docker.md)
+  - [docker-compose.yml when building a multi-container Docker](technology/docker.md) application
 - [load balancer](technology/loadbalancer.md)
 - edge
 - CD

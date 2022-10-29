@@ -51,11 +51,11 @@ each container should do one thing and do it well. A few reasons:
 
 ## Технологии
 
-- [k8s](technology/k8s.md)
+- [k8s](technology/ci-cd/k8s.md)
 - Helm
-- [docker](technology/docker.md)
-  - [docker desktop](technology/docker.md)
-  - [docker-compose.yml when building a multi-container Docker](technology/docker.md) application
+- [docker](technology/ci-cd/docker.md)
+  - [docker desktop](technology/ci-cd/docker.md)
+  - [docker-compose.yml when building a multi-container Docker](technology/ci-cd/docker.md) application
 - [load balancer](technology/loadbalancer.md)
 - edge
 - CD

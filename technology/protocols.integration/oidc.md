@@ -11,8 +11,8 @@
 
 - OpenID Connect Provider (OP) - Identity Provider
 - Client
-	- [machine to machine communication](https://docs.duendesoftware.com/identityserver/v6/overview/terminology/#machine-to-machine-communication) - __Client Credentials Flow=Authentication Flow?__
-	- [GUI с участием User](https://docs.duendesoftware.com/identityserver/v6/overview/terminology/#interactive-applications)  - Authorization Code Flow
+	- [machine to machine communication](https://docs.duendesoftware.com/identityserver/v6/overview/terminology/#machine-to-machine-communication) - __Client Credentials Flow__
+	- [GUI с участием User](https://docs.duendesoftware.com/identityserver/v6/overview/terminology/#interactive-applications) - Authorization Code Flow
 - User
 - Scope
 - Resource
@@ -28,14 +28,30 @@ Client type — тип клиента, от которого зависит сп
 
 - Confidential
 	- Authentication Flow=[Authorization Code Flow](url) - using a browser and server BackEnd
-	- [Client credentials Flow](https://habr.com/ru/company/dododev/blog/520046/)
+	- [Client Credentials Flow](https://habr.com/ru/company/dododev/blog/520046/)
 	<!-- ![scheme](https://habrastorage.org/r/w1560/getpro/habr/post_images/110/fe3/d4a/110fe3d4a29efd1af72da67ab06515ba.png) -->
 - Public
 	- [Authorization Code Flow with PKCE](https://auth0.com/docs/get-started/authentication-and-authorization-flow/authorization-code-flow-with-proof-key-for-code-exchange-pkce) - using a browser only		
 	- [Implicit Flow](https://learn.microsoft.com/en-us/windows-server/identity/ad-fs/overview/ad-fs-openid-connect-oauth-flows-scenarios) - redirection required SPA, JS __legacy__		
 	- Device authorization
 
-## TODO
+## Deployment models
+
+[Deployment models](https://developer.okta.com/docs/concepts/redirect-vs-embedded/):
+
+- redirect
+	- Client application requires centralized session management across applications.
+	- SSO is implicit (if in IAM session is created, SSO is implemented for other resources).
+	![flow](https://developer.okta.com/img/auth/OktaHosted.png)
+	[VueJS SPA example](https://developer.okta.com/docs/guides/sign-into-spa-redirect/vue/main/)
+- embedded Sign-In Widget, authentication SDK, or direct API calls
+	- Full control over application customization is a key requirement.
+	- There is a slightly increased risk in security due to IAM not being able to guarantee that the Sign-In Widget has been implemented correctly.
+	![flow](https://developer.okta.com/img/auth/CustomerHosted.png)
+	[VueJS SPA Okta Auth.js example](https://developer.okta.com/docs/guides/sign-in-to-spa-authjs/vue/main/)
+	[VueJS SPA Okta Widget example](https://developer.okta.com/docs/guides/sign-in-to-spa-embedded-widget/vue/main/)
+		[BackEnd Spring](https://developer.okta.com/blog/2021/10/04/spring-boot-spa)
+	[SPA Azure ADFS example](https://learn.microsoft.com/en-us/azure/active-directory/develop/single-page-app-quickstart?utm_source=pocket_mylist&pivots=devlang-angular)
 
 - https://cyberpolygon.com/ru/materials/security-of-json-web-tokens-jwt/%7Cere
 - [__TODO BFF нужен SPA CSRF attacks?__](https://docs.duendesoftware.com/identityserver/v5/bff/overview/)

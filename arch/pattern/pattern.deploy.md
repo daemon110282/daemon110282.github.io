@@ -10,7 +10,16 @@
 - [Blue Green Deployment](https://docs.oracle.com/en/solutions/mod-app-deploy-strategies-oci/index.html#GUID-2207DEDA-718D-4264-B851-144EBF0E57CF) - одновременно работает и старая (green), и новая (blue) версия, но весь трафик направляет на новую, а если с ней возникают проблемы – то можно переключиться обратно на первую.
 - [Canary Deployment](https://docs.oracle.com/en/solutions/mod-app-deploy-strategies-oci/index.html#GUID-2207DEDA-718D-4264-B851-144EBF0E57CF) - гибче RollingUpdate, т.к. часть запросов переключается на новую версию, а часть продолжает использовать старую версию
 
-# Технологии
+## Как обновлять кодовую базу незаметно для пользователей
 
-- Flagger 
+- возможности управления HAProxy и реализации Graceful Shutdown в наших сервисах
+- Миграции бд
+- поддерживаем на бою одновременно старую и новую версии сервиса
+- Заранее, на этапе разработки софта, закладывается, что даже если будут изменения в базе данных сервиса, они не будут ломать предыдущий код.
+
+![scheme](../../img/pattern/deploy/deploy.update.jpg)
+
+## Технологии
+
+- Flagger
 - [k8s](../../technology/ci-cd/k8s.md)

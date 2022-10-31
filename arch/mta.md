@@ -3,18 +3,10 @@
 - [Multi Tenant Architecture](#multi-tenant-architecture)
 	- [Зачем](#зачем)
 	- [Плюсы минусы](#плюсы-минусы)
+	- [Паттерны](#паттерны)
 		- [Multi Tenant Architecture (MTA) - Single Instance](#multi-tenant-architecture-mta---single-instance)
 		- [Single Tenant Architecture (STA) - Multi Instance](#single-tenant-architecture-sta---multi-instance)
 		- [Гибридный вариант](#гибридный-вариант)
-	- [Паттерны](#паттерны)
-		- [RMQ multi-tenancy](#rmq-multi-tenancy)
-			- [By Virtual host (VH)](#by-virtual-host-vh)
-			- [By topic](#by-topic)
-		- [database multi-tenancy](#database-multi-tenancy)
-			- [multi-database tenancy](#multi-database-tenancy)
-			- [Single-database tenancy](#single-database-tenancy)
-		- [Kubernetes multi-tenancy](#kubernetes-multi-tenancy)
-	- [Links](#links)
 
 ## Зачем
 
@@ -24,6 +16,8 @@
 ## Плюсы минусы
 
 [Критерии](arch.criteria.md)
+
+Плюсы:
 
 - Безопасность
 - Стоимость эксплуатации (TCO)
@@ -36,7 +30,7 @@
 - Разработка
 - TimeToMarket сократить по ЮЛ
 
-Риски:
+Минусы, Риски:
 
 - [Шумные соседи](https://docs.microsoft.com/ru-RU/azure/architecture/antipatterns/noisy-neighbor/noisy-neighbor)
   - Производительность
@@ -44,7 +38,17 @@
   - Безопасность
 - Сложность разработки
 
-Варианты:
+## Паттерны
+
+- [Модели MTA](https://docs.microsoft.com/ru-ru/azure/architecture/guide/multitenant/considerations/tenancy-models)
+  - Если вы ожидаете, что ваш **бизнес будет масштабироваться до большого количества клиентов**, очень важно развернуть *общую инфраструктуру*.
+  - Если требования к **изоляции клиентов являются высокими**, может потребоваться **инфраструктура с одним клиентом и отдельными инстансами (экземплярами решения)**.
+  - ![Уровни изоляции](https://docs.microsoft.com/ru-RU/azure/architecture/guide/multitenant/considerations/media/tenancy-models/isolated-shared.png)
+- [RMQ multi-tenancy](mta.mq.md)
+- [Database multi-tenancy](mta.db.md)
+- [k8s multi-tenancy](mta.k8s.md)
+
+[Варианты](https://docs.microsoft.com/ru-ru/azure/architecture/guide/multitenant/overview):
 
 - Multi Tenant Architecture (MTA) - Single Instance
 - Single Tenant Architecture (STA) - Multi Instance
@@ -94,63 +98,3 @@
 | Производительность | Разработка |
 | Функциональность | Стоимость |
 ||  |
-
-## Паттерны
-
-- [Модели MTA](https://docs.microsoft.com/ru-ru/azure/architecture/guide/multitenant/considerations/tenancy-models)
-  - Если вы ожидаете, что ваш **бизнес будет масштабироваться до большого количества клиентов**, очень важно развернуть *общую инфраструктуру*.
-  - Если требования к **изоляции клиентов являются высокими**, может потребоваться **инфраструктура с одним клиентом и отдельными инстансами (экземплярами решения)**.
-  - ![Уровни изоляции](https://docs.microsoft.com/ru-RU/azure/architecture/guide/multitenant/considerations/media/tenancy-models/isolated-shared.png)
-
-### RMQ multi-tenancy
-
-#### By Virtual host (VH)
-
-- auth, разграничение доступа к данным
-- масштабирование по юл,
-- Export import config VH
-- Http api создание, управление VH
-- Минусы:
-  - изменения очередей и тп как накатывать на все ЮЛ?
-  - Config alter есть? Policy, генерация из кода
-
-#### By topic
-
-- topic pattern and Routing/binding key per customer is better than vhost due to resource consumption overhead (for us rabbitmq console is internal/not exposed to customers).
-- direct, topic, headers and fanout
-
-TODO
-
-- Exchange to exchange binding
-
-### database multi-tenancy
-
-- На уровне субд экземпляр бд
-- Экземпляр instance субд, на одном ПК несколько может быть
-
-#### multi-database tenancy
-
-- one database per tenant - database based isolation
-- one schema per tenant - table based isolation
-- shared table with PK tenant (рекомендуется, большая гибкость в секционировании горизонтальном при необходимости) - row based isolation
-  - CITUS 
-  
-#### Single-database tenancy
-
-- Single-database tenancy comes with lower devops complexity, but larger code complexity than multi-database tenancy, since you have to scope things manually, and won't be able to integrate some third-party packages.
-- It is preferable when you have too many shared resources between tenants, and don't want to make too many cross-database queries.
-
-### Kubernetes multi-tenancy
-
-- Два подхода:
-	- Soft Multi-tenancy
-	- Hard multi-tenancy assumes tenants to be malicious and therefore advocates zero trust between them. Tenant resources are isolated and access to other tenant’s resources is not allowed.
-- Namespace isolation
-- Block traffic between namespaces - Network Policy
-- Resource Quotas
-- Cluster->x nodes->x pods in node->x контейнер [docker](../technology/docker.md)
-- making sure that your master and worker nodes are secure at the level of the host operating system.
-
-## Links
-
-- https://docs.microsoft.com/ru-ru/azure/architecture/guide/multitenant/overview

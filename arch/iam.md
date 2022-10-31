@@ -1,11 +1,14 @@
 # Identity and Access Management (IAM)
 
 - [Identity and Access Management (IAM)](#identity-and-access-management-iam)
+	- [Зачем](#зачем)
 	- [Критерии выбора](#критерии-выбора)
 	- [User store](#user-store)
 	- [Протоколы](#протоколы)
 		- [OAuth, OpenID Connect (OIDC)](#oauth-openid-connect-oidc)
 	- [Технологии](#технологии)
+
+## Зачем
 
 Identity Provider (IAM) with industry standard supported protocols:
 
@@ -72,5 +75,7 @@ Identity Provider (IAM) with industry standard supported protocols:
 		- [KEYCLOAK (Red Hat Java)](../technology/middleware/iam.keycloak.md)
 - online
 	- Commercial
-		- [auth0](https://auth0.com/)
+    	- AWS Cognito
+    	- GCP Identity Platform
+		- [Auth0](https://auth0.com/)
 			- [SDK Vue.JS](https://auth0.com/docs/libraries)

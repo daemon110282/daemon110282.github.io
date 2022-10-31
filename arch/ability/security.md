@@ -61,10 +61,11 @@ TODO
     - OWASP TOP 10
     - DDOS
 - [Identity and Access Management (IAM)](../iam.md)
-  - JWT
-  - Oauth 2, OpenID Connect, SAML
-  - WS-Federation (token)
-  - two-factor authentication (2FA)
+  - [JWT](../../technology/jwt.md)
+  - [SSO](../sso.md)
+    - Oauth 2, OpenID Connect, SAML
+    - WS-Federation (token)
+    - two-factor authentication (2FA)
 - swt
 - bearer
 - ntlm ldap,

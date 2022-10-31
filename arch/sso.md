@@ -1,17 +1,26 @@
 # Single sign-on SSO
 
+## Зачем
+
 Возможность [Identity and Access Management (IAM)](iam.md) решений.
+
+1. Идентификация - логин пароль
+2. Аутентификация - разрешен доступ checklogin
+3. Авторизация - роли, доступ checkaccess
 
 Типы [SSO](https://habr.com/ru/company/nixys/blog/563244/)
 ![scheme](https://habrastorage.org/r/w1560/webt/yg/wc/c0/ygwcc0udngt3kwnzjzlp6h4q_is.png)
 
 Виды [SSO](https://www.securitylab.ru/analytics/530059.php):
+
 - Корпоративный (Enterprise) Single Sign-on - данная технология подразумевает установку агента на рабочие станции пользователей.
 - Web Single Sign-on - протоколы SAML, OAuth, OpenID Connect
 
 [Варианты решений](https://www.g2.com/categories/single-sign-on-sso)
 
 https://habr.com/ru/company/nixys/blog/563244/
+
+## Плюсы-минусы
 
 Плюсы:
 
@@ -22,3 +31,7 @@ Reduced IT Costs: SSO helps lower IT costs by saving admin time on password rese
 - **Improves security capabilities**: SSO security ensures that only authorized users get access to sensitive data. You can Implement password policies like required length, complexity, restrictions on password reuse, also as session timeout and password reset self-service policy to reinforce protection without hampering your users.
 
 Минусы:
+
+## Технологии
+
+- [IAM](iam.md)

@@ -3,9 +3,10 @@
 - [Domain Driven Design DDD](#domain-driven-design-ddd)
   - [Зачем](#зачем)
   - [Плюсы и минусы](#плюсы-и-минусы)
-  - [Принципы проектирования](#принципы-проектирования)
+  - [Паттерны](#паттерны)
+    - [Принципы проектирования](#принципы-проектирования)
+    - [Слои приложения](#слои-приложения)
   - [Технологии](#технологии)
-  - [Links](#links)
 
 ## Зачем
 
@@ -19,10 +20,18 @@
 
 | + | - |
 | - | - |
+| Единый язык | DDD на 90% проектов оверхед, который не стоит потраченных усилий. Но это не повод не учиться. |
 
-## Принципы проектирования
+## Паттерны
 
-![Схема](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/daemon110282/daemon110282.github.io/daemon110282-patch-1/ddd.puml)
+- [Паттерны](https://github.com/Sairyss/domain-driven-hexagon)
+- [IBM sample event-storming](https://www.ibm.com/cloud/architecture/architecture/practices/event-storming-methodology-architecture/)
+  - [IBM sample DDD](https://ibm-cloud-architecture.github.io/refarch-kc/implementation/domain-driven-design/)
+  - [IBM sample event-storming analysis](https://ibm-cloud-architecture.github.io/refarch-kc/implementation/event-storming-analysis/)
+
+### Принципы проектирования
+
+![Схема](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/daemon110282/daemon110282.github.io/daemon110282-patch-1/arch/pattern/ddd.puml)
 
 [Схемы](https://docs.google.com/document/d/1qgHu49LneU_iNi3YmPLc1NHSVfH-BvONdOyjg5DE8Xs/edit?usp=sharing)
 
@@ -42,13 +51,45 @@
     - Консистентность данных обеспечить
     - Переход от анемичной к богатой модели
     - Изоляция от внешних зависимостей
-    - [Агрегат](https://habr.com/ru/company/nix/blog/321686/) - кластер из сущностей и объектов значений
-    - Сущность - есть ИД
-    - Объект значений value object -
-  - Служба
+    - __[Агрегат Aggregate](https://habr.com/ru/company/nix/blog/321686/)__ - кластер из сущностей и объектов значений
+      - Определяется по идентификатору
+      - Является границей транзакции при изменении данных
+      - Другие элементы домена не могут ссылаться на внутренности агрегата
+    - __Сущность Entity__
+      - Описывает индивидуально существующие Элементы домена
+      - Определяется по идентификатору, а не по значению атрибутов
+      - Непрерывно и однозначно определяется на всём протяжении существования
+    - __Объект значений Value Object__
+      - Не обладает идентификатором
+      - Описывает элементы домена, полностью определяемые свойствами
+      - Неизменяемый после создания
+      - Используется для типизации и структурирования данных
+  - Служба Domain Services Interfaces
+    - Сервисы предоставляют приложению интерфейсы для работы с доменом
+    - Содержат методы, описывающие операции Домена
+    - Не содержат состояния
+    - Могут обращаться к репозиториям и другим сервисам
+    - Уносят логику из контроллеров
   - Модули
 - DDD трилема
 - [Clean Architecture](clean.architecture.md)
+- Не допускать анемии модели
+  - Модель отображает связи
+  - В модели есть геттеры и сеттеры для свойств
+  - Модель не описывает действий и логики домена
+
+### Слои приложения
+
+- Служба Domain Services Interfaces
+  - Сервисы предоставляют приложению интерфейсы для работы с доменом
+  - Содержат методы, описывающие операции Домена
+  - Не содержат состояния
+  - Могут обращаться к репозиториям и другим сервисам
+  - Уносят логику из контроллеров
+- Инфраструктурный слой
+  - Содержит реализации репозиториев и сервисов
+  - Знает о БД
+  - Работает с [IOC контейнером](https://habr.com/ru/post/131993/)
 
 ## Технологии
 
@@ -68,11 +109,3 @@
   - Generate AsyncAPI (from AsyncMDSL). See page AsyncAPI Specification Generator and readme in this examples folder for further information.
   - Generate MSML
   - From MSML OpenAPI
-
-## Links
-
-- TODO
-  - [Паттерны](https://github.com/Sairyss/domain-driven-hexagon)
-  - [IBM sample event-storming](https://www.ibm.com/cloud/architecture/architecture/practices/event-storming-methodology-architecture/)
-    - [IBM sample DDD](https://ibm-cloud-architecture.github.io/refarch-kc/implementation/domain-driven-design/)
-    - [IBM sample event-storming analysis](https://ibm-cloud-architecture.github.io/refarch-kc/implementation/event-storming-analysis/)

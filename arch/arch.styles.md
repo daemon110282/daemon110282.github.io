@@ -27,6 +27,7 @@
   - Микроядерная Microkernel
   - [Vertical-slice](https://headspring.com/2019/11/05/why-vertical-slice-architecture-is-better/)
   - [Clean Architecture](pattern/clean.architecture.md)
+  - Pipeline
 
 ![Стили-НФТ Марк Ричардс](../img/arch/arch_style-ility.jpg)
 

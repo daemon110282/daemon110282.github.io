@@ -3,7 +3,7 @@
 [Состоит из](https://docs.microsoft.com/ru-ru/azure/architecture/guide/):
 
 - [Стили архитектуры](arch.styles.md)
-- [Качества архитектуры](arch.ability.md)
+- [Качества архитектуры, архитектурные характеристики](arch.ability.md)
 - Технологии
 - Приложения
   - [Шаблоны Паттерны](patterns.md)

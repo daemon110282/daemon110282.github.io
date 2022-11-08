@@ -16,7 +16,7 @@ communication to multiple microservices?
     - Load balancing
     - Logging, tracing, correlation
     - Headers, query strings, and claims transformation
-    - Dynamic request dispatching, routing. [Reverse proxy or gateway routing](https://docs.microsoft.com/ru-ru/azure/architecture/patterns/gateway-routing)
+    - Dynamic request dispatching, routing. __[Reverse proxy](../arch/pattern/pattern.proxy.reverse.md)__ [or gateway routing](https://docs.microsoft.com/ru-ru/azure/architecture/patterns/gateway-routing)
     - IP whitelisting
     - TLS Termination
 - How can client apps communicate with services that use __non-Internet-friendly protocols(amqp)?__
@@ -40,7 +40,9 @@ communication to multiple microservices?
 
 ## Технологии
 
-- Ocelot
-- Gravitie
-- Kong
-- 
+- Open Source
+  - Ocelot
+  - Gravitie
+  - Kong
+- Commercial
+  - https://traefik.io/solutions/api-gateway/

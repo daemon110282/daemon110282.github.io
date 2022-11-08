@@ -12,4 +12,4 @@
 
 ## Технологии
 
-[Netscaler, Nginx..](../../technology/loadbalancer.md)
+[Netscaler, HAProxy, Nginx..](../../technology/loadbalancer.md)

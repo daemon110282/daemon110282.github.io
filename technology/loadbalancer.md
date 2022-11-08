@@ -1,6 +1,6 @@
 # Load Balancer
 
-- Traefik
+- [Traefik](/technology/middleware/router.traefik.md)
 - haproxy
 - Nginx
 - [Envoy l4-l7](https://www.envoyproxy.io/docs/envoy/latest/intro/what_is_envoy)
@@ -8,5 +8,3 @@
 - Netscaler
   - https://kb.paessler.com/en/topic/22633-how-to-monitor-active-sessions-users-for-iis-7-0
   - http://pleasework.robbievance.net/howto-configure-citrix-netscaler-to-perform-website-aware-load-balancing/
-
-## Links

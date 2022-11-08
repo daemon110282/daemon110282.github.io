@@ -37,6 +37,11 @@ Identity Provider (IAM) with industry standard supported protocols:
 - Масштабируемость
 - Отказоуйстойчивость
 - Открытый исходный код
+- Технологический стек
+
+Сравнения
+- [WSO2-Keycloack-Glue](../technology/middleware/iam.wso2.md)
+- [Keycloack-Glue](../technology/middleware/iam.keycloak.md)
 
 ## User store
 
@@ -65,7 +70,7 @@ Identity Provider (IAM) with industry standard supported protocols:
 
 Варианты [решений](https://www.securitylab.ru/analytics/530059.php):
 
-- in house
+- in house (on premise)
 	- Commercial
 		- [ADFS](../technology/middleware/iam.adfs.md)
 		- Отечественное [UIDM](../technology/middleware/iam.uidm.md)
@@ -79,3 +84,4 @@ Identity Provider (IAM) with industry standard supported protocols:
     	- GCP Identity Platform
 		- [Auth0](https://auth0.com/)
 			- [SDK Vue.JS](https://auth0.com/docs/libraries)
+		- Okta

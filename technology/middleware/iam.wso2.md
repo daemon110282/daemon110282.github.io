@@ -14,10 +14,32 @@ https://wso2.com/identity-server/
 - [PHP?]()
 - [.NET](https://github.com/asgardeo/asgardeo-dotnet-oidc-sdk)
 
+## Плюсы-Минусы
+
 Плюсы
-	- API Manager https://wso2.com/api-manager/
+	-
 
 Минусы
 	- Зависимость от БД - узкое место
 		- Остался только Redis, который хранит сессии аутентификации и выданные в них JWT и refresh-токены. 
 		- [ВТБ опыт](https://habr.com/ru/company/vtb/blog/559774/)
+
+## Compare 
+
+### Vs Keycloak
+
+- [WSO2 Identity Server allows](https://htamahc.medium.com/wso2-identity-server-vs-keycloak-a-comparison-of-the-two-leading-open-source-identity-servers-a4ef11a509d9) you to configure as __many data sources__ as you wish. Also it can mix and match various data sources such as JDBC, LDAP, Active Directory or even another WSO2 Identity Server instance for persistence. So, WSO2 Identity Server allows you to configure multiple data sources and multiple user stores (domains) whereas in __Keycloak, you are limited to a single data source and a single user store__.
+- WSO2 Identity Server allows you to do that in a more flexible way. With WSO2 Identity Server, you can __configure external identity providers per-application__ whereas in __Keycloak, per-application IdP binding is not supported__.
+- Multi Tenant App: WSO2 Identity Server calls them “tenants” and Keycloak calls them “realms”.
+- WSO2 Identity Server allows you to generate OTPs and send them over on __e-mail or SMS__, which Keycloak does not support out of the box.
+- Identity Federation
+	- Identity federation is about relying on another identity provider for authenticating your users. This enables things like social log in, where users can log in to applications via Facebook or Twitter or from some other platform.
+- Identity Provisioning
+	- In simple terms, identity provisioning means creating users on-the-fly as they are authenticated. And it comes in two variations; 
+		- inbound provisioning - means you create users locally while they are authenticated externally
+		- and outbound provisioning - means you create users elsewhere while they are authenticated locally.
+	__Keycloak only supports the first variation; inbound user provisioning__. With WSO2 Identity Server, you __get both inbound and outbound user provisioning__ capabilities. Also, per-application user provisioning is another feature that is supported only by WSO2 Identity Server.
+
+### Vs Gluu
+
+- [TODO](https://www.saasworthy.com/compare/wso2-identity-server-vs-keycloak-vs-gluu)

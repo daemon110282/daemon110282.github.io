@@ -12,7 +12,7 @@ https://oai.github.io/Documentation/best-practices.html
   * test https://github.com/daemon110282/api
 * [outputs a map of the system architecture in plantuml](https://github.com/asyncapi/cupid)
 * [Bundle](https://github.com/asyncapi/bundler) 
-* [code first](https://www.asyncapi.com/docs/community/tooling)
+* [code first](https://www.asyncapi.com/docs/tools) 
   * https://github.com/neuroglia-io/AsyncApi
     * не поддерживает вложенные объекты в сообщении
   * https://github.com/tehmantra/saunter  

@@ -84,3 +84,4 @@ Identity Provider (IAM) with industry standard supported protocols:
     	- GCP Identity Platform
 		- Okta [Auth0](https://auth0.com/)
 			- [SDK Vue.JS](https://auth0.com/docs/libraries)
+			- OneLogin

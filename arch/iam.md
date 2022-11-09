@@ -82,6 +82,5 @@ Identity Provider (IAM) with industry standard supported protocols:
 	- Commercial
     	- AWS Cognito
     	- GCP Identity Platform
-		- [Auth0](https://auth0.com/)
+		- Okta [Auth0](https://auth0.com/)
 			- [SDK Vue.JS](https://auth0.com/docs/libraries)
-		- Okta

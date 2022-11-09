@@ -16,5 +16,7 @@
 
 - V4
 	- [Authorization Code flow with PKCE](https://referbruv.com/blog/implementing-authorization-code-grant-using-identityserver4-with-pkce/)
+	- [JS SDK VueJS](https://github.com/joaojosefilho/vuejsOidcClient)
+	- [IS песочница](https://github.com/joaojosefilho/IdentityServer4AndApi)
 - [V5](https://docs.duendesoftware.com/identityserver/v5)
 - [V6](https://docs.duendesoftware.com/identityserver/v6)

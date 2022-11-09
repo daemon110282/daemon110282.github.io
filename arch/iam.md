@@ -26,6 +26,9 @@ Identity Provider (IAM) with industry standard supported protocols:
 - [Управление сессиями](https://www.securitylab.ru/analytics/530059.php)
 - Role Based Access (RBAC)
 - Custom Login Form
+	- [Redirect or Embedded Widget or Embedded SDK](https://developer.okta.com/docs/guides/sign-in-overview/main/#choose-your-auth)
+		- https://auth0.com/docs/authenticate/login
+		- [ADFS](https://learn.microsoft.com/en-us/azure/active-directory/develop/scenario-spa-sign-in?tabs=javascript2)
 - Session Managment
 
 ## Критерии выбора
@@ -42,6 +45,8 @@ Identity Provider (IAM) with industry standard supported protocols:
 Сравнения
 - [WSO2-Keycloack-Glue](../technology/middleware/iam.wso2.md)
 - [Keycloack-Glue](../technology/middleware/iam.keycloak.md)
+- Top [Okta-MS-Keycloak](https://www.saasworthy.com/list/identity-and-access-management-iam-software)
+- Top [Okta-MS-WSO2](https://www.g2.com/categories/single-sign-on-sso)
 
 ## User store
 
@@ -84,4 +89,4 @@ Identity Provider (IAM) with industry standard supported protocols:
     	- GCP Identity Platform
 		- Okta [Auth0](https://auth0.com/)
 			- [SDK Vue.JS](https://auth0.com/docs/libraries)
-			- OneLogin
+		- OneLogin

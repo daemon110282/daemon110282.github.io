@@ -7,6 +7,7 @@ TODO
 [Фичи](https://habr.com/ru/company/X5Tech/blog/486778/)
 	- [MFA OTP SMS](https://github.com/dasniko/keycloak-2fa-sms-authenticator)
 	- [Custom UI forms](https://www.keycloak.org/docs/latest/server_admin/#features)
+		- [Themes](https://www.opcito.com/blogs/customizing-login-and-signup-pages-in-keycloak)
 	- Captcha
 	- [ACF with PKCE](https://www.keycloak.org/docs/latest/server_admin/#con-oidc-auth-flows_server_administration_guide)
 [Deploy HA](https://habr.com/ru/company/southbridge/blog/511380/)

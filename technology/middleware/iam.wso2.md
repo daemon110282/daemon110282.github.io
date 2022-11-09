@@ -2,27 +2,32 @@
 
 Реализация функции [Identity and Access Management (IAM)](../../arch/iam.md) решений.
 
-https://wso2.com/identity-server/
+[Фичи](https://wso2.com/identity-server/)
+- [Custom Flow](https://is.docs.wso2.com/en/latest/references/concepts/authentication/adaptive-authentication/
+- [RBAC, ABAC](https://wso2.com/identity-server/access-control/)
 
 ![arch](https://is.docs.wso2.com/en/6.0.0/assets/img/guides/iam-functionality.png)
 ![arch](../../img/wso2is-architecture.png)
 
+- [Docker](https://hub.docker.com/r/wso2/wso2is) https://github.com/wso2/docker-is
+- [k8s](https://medium.com/wso2-learning/how-to-deploy-wso2-platform-on-docker-and-kubernetes-1d5beeb88c72)
+![k8s arch](https://miro.medium.com/max/720/1*6EwhO93uz7ZVLNK2Std8QA.png)
 - Вендор РФ [Emdev](https://www.emdev.ru/wso2/wso2is)
-[SDK](https://is.docs.wso2.com/en/latest/sdks/sdk-overview/)
-- [JavaScript](https://is.docs.wso2.com/en/6.0.0/sdks/start-integrating-apps/integrate-a-js-app)
-- [SPA](https://github.com/asgardeo/asgardeo-auth-spa-sdk)
-- [PHP?]()
-- [.NET](https://github.com/asgardeo/asgardeo-dotnet-oidc-sdk)
+- [SDK](https://is.docs.wso2.com/en/latest/sdks/sdk-overview/)
+	- [JavaScript](https://is.docs.wso2.com/en/6.0.0/sdks/start-integrating-apps/integrate-a-js-app)
+	- [SPA](https://github.com/asgardeo/asgardeo-auth-spa-sdk)
+	- [PHP?]()
+	- [.NET](https://github.com/asgardeo/asgardeo-dotnet-oidc-sdk)
 
 ## Плюсы-Минусы
 
 Плюсы
-	-
+- Open Source
 
 Минусы
-	- Зависимость от БД - узкое место
-		- Остался только Redis, который хранит сессии аутентификации и выданные в них JWT и refresh-токены. 
-		- [ВТБ опыт](https://habr.com/ru/company/vtb/blog/559774/)
+- Зависимость от БД - узкое место
+	- Остался только Redis, который хранит сессии аутентификации и выданные в них JWT и refresh-токены. 
+	- [ВТБ опыт](https://habr.com/ru/company/vtb/blog/559774/)
 
 ## Compare 
 

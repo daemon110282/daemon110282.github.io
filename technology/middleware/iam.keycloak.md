@@ -12,6 +12,7 @@ TODO
 	- [ACF with PKCE](https://www.keycloak.org/docs/latest/server_admin/#con-oidc-auth-flows_server_administration_guide)
 [Deploy HA](https://habr.com/ru/company/southbridge/blog/511380/)
 [VueJS](https://www.youtube.com/watch?app=desktop&v=sE02clzN_ok&ab_channel=hi5code)
+[REST API Postman Collection](https://documenter.getpostman.com/view/7294517/SzmfZHnd)
 
 ## Compare
 

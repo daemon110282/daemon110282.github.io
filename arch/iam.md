@@ -79,6 +79,7 @@ Identity Provider (IAM) with industry standard supported protocols:
 	- Commercial
 		- [ADFS](../technology/middleware/iam.adfs.md)
 		- Отечественное [UIDM](../technology/middleware/iam.uidm.md)
+		- [Identity Blitz](https://identityblitz.ru/products/blitz-identity-provider/documentation/?ref=main)
 	- Open Source
 		- [WSO2 Identity Server](../technology/middleware/iam.wso2.md)
 		- [IdentityServer4 (.NET Core)](../technology/middleware/iam.is4.md)

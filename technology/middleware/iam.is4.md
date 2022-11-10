@@ -16,6 +16,7 @@
 
 - V4
 	- [Authorization Code flow with PKCE](https://referbruv.com/blog/implementing-authorization-code-grant-using-identityserver4-with-pkce/)
+	- [Custom logic ABP.IO+IS](https://community.abp.io/posts/how-to-customize-the-signin-manager-3e858753)
 	- [JS SDK VueJS](https://github.com/joaojosefilho/vuejsOidcClient)
 	- [IS песочница](https://github.com/joaojosefilho/IdentityServer4AndApi)
 - [V5](https://docs.duendesoftware.com/identityserver/v5)

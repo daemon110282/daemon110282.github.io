@@ -6,7 +6,7 @@
 - Реализована интеграция в [ABP.IO](../framework/abp.md)
 
 - [Silent Renew Token](https://www.youtube.com/watch?v=AqMtjAeVQHc&ab_channel=RawCoding)
-- Protect your resources
+- [Protect your resources](https://identityserver4.readthedocs.io/en/latest/)
 - Authenticate users using a local account store or via an external identity provider
 - Provide session management and single sign-on
 - Manage and authenticate clients

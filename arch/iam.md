@@ -83,7 +83,7 @@ Identity Provider (IAM) with industry standard supported protocols:
 	- Open Source
 		- [WSO2 Identity Server](../technology/middleware/iam.wso2.md)
 		- [IdentityServer4 (.NET Core)](../technology/middleware/iam.is4.md)
-		- [KEYCLOAK (Red Hat Java)](../technology/middleware/iam.keycloak.md)
+		- [Keycloak (Red Hat Java)](../technology/middleware/iam.keycloak.md)
 - online
 	- Commercial
     	- AWS Cognito

@@ -38,6 +38,7 @@
   - Redocfly
   - Kong
   - [WSO2 Api Manager](https://wso2.com/api-manager/)
+  - [Gravitee](../technology/api/gw.gravitee.md)
 - ?
   - AxWay
   - MuleSoft

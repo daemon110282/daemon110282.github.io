@@ -41,6 +41,8 @@
 - Apache Hadoop не предназначен для анализа данных в режиме реального времени – это решение для хранения неструктурированных данных с возможностью анализа этих данных в будущем, что не соответствует требованиям компаний иметь возможность оперативного анализа данных для хранилищ данных.
 - HDFS, HBase, Hive, Pig, Spark, Storm, Oozie, Sqoop 
 - Kafka
+- [Big data](http://habrahabr.ru/post/272041/)
+  - MapReduce, gfs, hadoop, clickhouse, splunk, vertica, netapp
 
 ## Links
 

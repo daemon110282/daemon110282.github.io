@@ -82,7 +82,7 @@ Identity Provider (IAM) with industry standard supported protocols:
 		- [Identity Blitz](https://identityblitz.ru/products/blitz-identity-provider/documentation/?ref=main)
 	- Open Source
 		- [WSO2 Identity Server](../technology/middleware/iam.wso2.md)
-		- [IdentityServer4 (.NET Core)](../technology/middleware/iam.is4.md)
+		- [IdentityServer (.NET Core)](../technology/middleware/iam.is.md) 4я версия бесплатная, с 6й версии нет?
 		- [Keycloak (Red Hat Java)](../technology/middleware/iam.keycloak.md)
 - online
 	- Commercial

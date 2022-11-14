@@ -47,6 +47,8 @@ Identity Provider (IAM) with industry standard supported protocols:
 - [Keycloack-Glue](../technology/middleware/iam.keycloak.md)
 - Top [Okta-MS-Keycloak](https://www.saasworthy.com/list/identity-and-access-management-iam-software)
 - Top [Okta-MS-WSO2](https://www.g2.com/categories/single-sign-on-sso)
+- [keycloak-ory hydra](https://stackshare.io/stackups/keycloak-vs-ory-hydra)
+	- https://gruchalski.com/posts/2021-04-10-ory-reference-docker-compose-and-thoughts-on-the-platform/
 
 ## User store
 
@@ -84,6 +86,7 @@ Identity Provider (IAM) with industry standard supported protocols:
 		- [WSO2 Identity Server](../technology/middleware/iam.wso2.md)
 		- [IdentityServer (.NET Core)](../technology/middleware/iam.is.md) 4я версия бесплатная, с 6й версии нет?
 		- [Keycloak (Red Hat Java)](../technology/middleware/iam.keycloak.md)
+		- [Ory Hydra](../technology/middleware/iam.hydra.md)
 - online
 	- Commercial
     	- AWS Cognito

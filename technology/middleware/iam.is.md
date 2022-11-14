@@ -19,7 +19,7 @@
 	- [Custom logic ABP.IO+IS](https://community.abp.io/posts/how-to-customize-the-signin-manager-3e858753)
 	- [JS SDK VueJS](https://github.com/joaojosefilho/vuejsOidcClient)
 	- [IS песочница IS4](https://github.com/joaojosefilho/IdentityServer4AndApi)
-	- [Demo ](https://www.youtube.com/watch?v=zOy3-_Cdhn4&t=435s&ab_channel=NDCConferences)
+	- [Demo conf NDC](https://www.youtube.com/watch?v=zOy3-_Cdhn4&t=435s&ab_channel=NDCConferences)
 	- [VueJS Nuxt Sample](https://github.com/perarnborg/vuex-oidc-example-nuxt)
 	- [VueJS Vuex Sample](https://github.com/perarnborg/vuex-oidc)
 - [V5](https://docs.duendesoftware.com/identityserver/v5)

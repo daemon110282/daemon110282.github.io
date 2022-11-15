@@ -5,9 +5,9 @@
 - frontend-фреймворк
 - использует архитектуру Model-View-ViewModel
 - [SPA](/arch/style/spa.md)
-- Vue 2.0 поддерживает серверный рендеринг SRR
+- Vue 2.0 поддерживает __серверный рендеринг SSR__
 	- Сервер NodeJS + [Nuxt.js](https://dergunov.com/wiki/nuxt-js-intro)
-- паттерн управления состоянием приложения Vuex
+- паттерн управления состоянием приложения: Vuex, Pinia
 - проект Weex — кроссплатформенный UI-фреймворк native ios, android. Alibaba но сырой ещё
 - Vue концентрируется на однонаправленном потоке данных между компонентами
 
@@ -23,7 +23,7 @@
 - Архитектура слои приложения
   - [1](https://frontenso.com/ru/blog/drugoi-podkhod-k-arkhitekture-frontenda)
   - [2](https://badtry.net/arkhitiektura-bolshogho-masshtabnogho-entierpraiz-prilozhieniia-na-vuejs/)
-- [Vue официальные паттерны для разработчиков](https://ru.vuejs.org/v2/style-guide/index.html)
+- [Vue официальные паттерны разработки для разработчиков](https://ru.vuejs.org/v2/style-guide/index.html)
 
 ## Технологии
 

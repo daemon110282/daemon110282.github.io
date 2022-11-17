@@ -49,6 +49,7 @@ Identity Provider (IAM) with industry standard supported protocols:
 - Top [Okta-MS-WSO2](https://www.g2.com/categories/single-sign-on-sso)
 - [keycloak-ory hydra](https://stackshare.io/stackups/keycloak-vs-ory-hydra)
 	- https://gruchalski.com/posts/2021-04-10-ory-reference-docker-compose-and-thoughts-on-the-platform/
+- [Keycloak лучше ADFS](https://trueengineering.ru/ru/cases/migrating-from-adfs-to-keycloak)
 
 ## User store
 

@@ -7,7 +7,8 @@ TODO
 - [Фичи](https://habr.com/ru/company/X5Tech/blog/486778/)	
 	- [Custom UI forms](https://www.keycloak.org/docs/latest/server_admin/#features) Apache Freemaker + React?
 		- [Themes](https://www.opcito.com/blogs/customizing-login-and-signup-pages-in-keycloak)
-	- Captcha
+		- [keycloakify React отзывы не очень](https://t.me/keycloak_ru/25264)
+	- ReCaptcha v3 Google
 	- Custom Fields Token
 	- [ACF with PKCE](https://www.keycloak.org/docs/latest/server_admin/#con-oidc-auth-flows_server_administration_guide)
 	- Template Email

@@ -10,12 +10,16 @@
 Термины:
 
 - OpenID Connect Provider (OP) - Identity Provider
-- Client
+- User 
+- Client - ИС
 	- [machine to machine communication](https://docs.duendesoftware.com/identityserver/v6/overview/terminology/#machine-to-machine-communication) - __Client Credentials Flow__
 	- [GUI с участием User](https://docs.duendesoftware.com/identityserver/v6/overview/terminology/#interactive-applications) - Authorization Code Flow
-- User
+- Claims
 - Scope
-- Resource
+- OAuth2
+	- Authorization Server
+	- Resource Server
+	- Resource Owner
 
 ## Flow Grant
 
@@ -39,12 +43,12 @@ Client type — тип клиента, от которого зависит сп
 
 [Deployment models](https://developer.okta.com/docs/concepts/redirect-vs-embedded/):
 
-- redirect
+- Redirect
 	- Client application requires centralized session management across applications.
 	- SSO is implicit (if in IAM session is created, SSO is implemented for other resources).
 	![flow](https://developer.okta.com/img/auth/OktaHosted.png)
 	[VueJS SPA example](https://developer.okta.com/docs/guides/sign-into-spa-redirect/vue/main/)
-- embedded [Sign-In Widget, authentication SDK, or direct API calls](https://developer.okta.com/docs/guides/sign-in-overview/main/#choose-your-auth)
+- Embedded [Sign-In Widget, authentication SDK, or direct API calls](https://developer.okta.com/docs/guides/sign-in-overview/main/#choose-your-auth)
 	- Full control over application customization is a key requirement.
 	- There is a slightly increased risk in security due to IAM not being able to guarantee that the Sign-In Widget has been implemented correctly.
 	![flow](https://developer.okta.com/img/auth/CustomerHosted.png)
@@ -63,17 +67,18 @@ TODO
 
 Основные [параметры Flow](https://identityserver4.readthedocs.io/en/latest/quickstarts/1_client_credentials.html)
 
-- Идентификация Client через OpenID Connect Provider
-	- IdToken - IdentityToken (used for Implicit, Hybrid Flow) - for authenticating a user. A JWT token used to represent the identity of the user.
+- Аутентификация Client через OpenID Connect Provider (IDP)
+	- IdToken - IdentityToken (формат JWT обязателен) (OIDC) - for authenticating a user. A JWT token used to represent the identity of the user.
 	- TokenEndpoint - получаем IdentityToken
 	- ClientId
 	- ClientSecret
 		- Хранится на BackEnd и передается в Authentication Flow
 		- в Implicit Flow не хранится в SPA, JS и не передается
 	- Scope
-- Authorization Code (Token?)
-- Получение данных Resource с учетом доступа Scope
-	- AccessToken JWT (used for Implicit Flow) - for accessing a resource. A JWT token used in Oauth and OpenID connect scenarios and intended to be consumed by the resource.
-- RefreshToken
+- Авторизация OAuth2
+	- Authorization Code - обменивается в Authorization Code Flow на AccessToken
+	- Получение данных Resource с учетом доступа Scope
+		- AccessToken (формат JWT не обязателен) - for accessing a resource. A JWT token used in Oauth and OpenID connect scenarios and intended to be consumed by the resource.
+	- RefreshToken
 
 [Песочница](https://openidconnect.net/)

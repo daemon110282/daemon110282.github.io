@@ -2,7 +2,6 @@
 
 Реализация функции [Identity and Access Management (IAM)](../../arch/iam.md) решений.
 
-TODO
 - [X5Tech выбрали](https://habr.com/ru/company/X5Tech/blog/654115/)
 - [Фичи](https://habr.com/ru/company/X5Tech/blog/486778/)	
 	- [Custom UI forms](https://www.keycloak.org/docs/latest/server_admin/#features) Apache Freemaker + React?
@@ -24,11 +23,23 @@ TODO
 	- [Extenstion](https://www.youtube.com/watch?v=Aj0GAg4EkUA&t=4493s&ab_channel=%D0%A1%D0%BB%D1%91%D1%80%D0%BC)
 - [Deploy HA](https://habr.com/ru/company/southbridge/blog/511380/)
 - [VueJS](https://www.youtube.com/watch?app=desktop&v=sE02clzN_ok&ab_channel=hi5code)
+- [Обучение СЛЁРМ](https://slurm.io/keycloak)
 - [REST API Postman Collection](https://documenter.getpostman.com/view/7294517/SzmfZHnd)
 
-# Технологи
+Термины:
 
-Java PostgreSQL
+- Realm - [необходимо ограничение по кол-ву, риски по НТ](https://highload.today/blogs/keycloak-i-oauth-2/)
+	- Users входят в Realm
+	- Clients входят в Realm
+- Groups
+- Roles
+
+# Технологии
+
+- Java 
+- PostgreSQL
+- k8s
+	- GoGatekeeper 
 
 ## Compare
 

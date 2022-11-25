@@ -6,3 +6,8 @@
 - Load balancing
 - Routing
 	- [Config или Lua](https://habr.com/ru/company/vdsina/blog/504308/)
+
+## Deployment
+
+- CPU, RAM
+	- [Becnhmark trafic](../benchmark.md)

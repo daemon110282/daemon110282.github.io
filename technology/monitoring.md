@@ -8,6 +8,7 @@
 - Distributed Tracing
 - Дашборды
 - Алерты
+- Real User Monitoring (RUM)
 
 SPA:
 - JavaScript errors
@@ -28,6 +29,7 @@ SPA:
 ## Pattern
 
 - [RED method for MSA](https://thenewstack.io/monitoring-microservices-red-method/)
+- [Автотесты UI в ПРОДе](https://nedmcclain.medium.com/frontend-monitoring-with-prometheus-38f798406125) и экспорт в Prometheus результатов
 
 ## Technology
 

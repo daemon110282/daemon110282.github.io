@@ -3,7 +3,7 @@
 - On premise
 	- GrayLog
 	- LogStash 
-	- Elastic (ELK)	
+	- [ELK stack](monitoring/elk.md)
 - Cloud SaaS
 	- Logrocket
 	- Rollbar

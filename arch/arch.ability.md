@@ -49,7 +49,7 @@ TODO Фитнес функции
   - Стабильность (Изоляция сбоев)
   - Живучесть Robustness
   - Recoverability
-- Производительность Performance (Эксплуатационные)
+- [Производительность Performance](ability/performance.md) (Эксплуатационные)
   - [Масштабирование](ability/load.balancing.md)
   - concurrency
 

@@ -13,8 +13,10 @@
 	- Template Email
 	- REST API
 		- Создание пользователя
-	- Custom Plugin (2FA SMS)
+	- Custom Extension Plugin (2FA SMS)
 		- [MFA OTP SMS](https://github.com/dasniko/keycloak-2fa-sms-authenticator)		
+		- [demo](https://github.com/dasniko/keycloak-extensions-demo)
+		- [Custom User provider](https://www.baeldung.com/java-keycloak-custom-user-providers)
 	- 2FA
 		- HMAC based OTP (HOTP)
 		- Time based OTP (TOTP)
@@ -25,6 +27,7 @@
 - [VueJS](https://www.youtube.com/watch?app=desktop&v=sE02clzN_ok&ab_channel=hi5code)
 - [Обучение СЛЁРМ](https://slurm.io/keycloak)
 - [REST API Postman Collection](https://documenter.getpostman.com/view/7294517/SzmfZHnd)
+- Starting with version 19, Keycloak supports sending logs using __GELF__ to centralized logging solutions like __ELK, EFK or Graylog out of the box__.
 
 Термины:
 
@@ -33,13 +36,30 @@
 	- Clients входят в Realm
 - Groups
 - Roles
+- Cross-Origin Resource Sharing (CORS) - [механизм, использующий дополнительные HTTP-заголовки](https://developer.mozilla.org/ru/docs/Web/HTTP/CORS), чтобы дать возможность агенту пользователя получать разрешения на доступ к выбранным ресурсам с сервера на источнике (домене), отличном от того, что сайт использует в данный момент. Говорят, что агент пользователя делает запрос с другого источника (cross-origin HTTP request), если источник текущего документа отличается от запрашиваемого ресурса доменом, протоколом или портом. Пример: http://domain-a.com, запрашивает <img> src по адресу http://domain-b.com/image.jpg
+	- Origin - Web content's origin is defined by the scheme (protocol), hostname (domain), and port of the URL used to access it. Two objects have the __same origin__ only when the __scheme, hostname, and port all match__.
 
-# Технологии
+## Технологии
 
 - Java 
 - PostgreSQL
 - k8s
 	- GoGatekeeper 
+
+## Deployment
+
+- CPU RAM
+	- [Benchmarks](https://github.com/keycloak/keycloak-benchmark)
+- [HA](https://habr.com/ru/company/southbridge/blog/658187/)
+- Метрики мониторинга производительности
+	- [k8s](https://www.keycloak.org/server/containers)
+	- [Prometheus](https://github.com/aerogear/keycloak-metrics-spi)
+- [health check](https://www.keycloak.org/server/health)
+
+### Version
+
+- [19.*](https://www.keycloak.org/archive/documentation-19.0.html)
+- [20.*](todo)
 
 ## Compare
 

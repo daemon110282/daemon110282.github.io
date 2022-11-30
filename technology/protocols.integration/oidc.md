@@ -12,10 +12,10 @@
 - OpenID Connect Provider (OP) - Identity Provider
 - User 
 - Client - ИС
-	- [machine to machine communication](https://docs.duendesoftware.com/identityserver/v6/overview/terminology/#machine-to-machine-communication) - __Client Credentials Flow__
-	- [GUI с участием User](https://docs.duendesoftware.com/identityserver/v6/overview/terminology/#interactive-applications) - Authorization Code Flow
-- Claims
-- Scope
+	- Confidential  
+	- Public  
+- Claims - 
+- Scope - права Client
 - OAuth2
 	- Authorization Server
 	- Resource Server
@@ -28,13 +28,13 @@ Client type — тип клиента, от которого зависит сп
 - Confidential — клиент, который может безопасно хранить свои учётные данные. Например, к такому типу клиентов относят web-приложения, имеющие backend.
 - Public — не может безопасно хранить свои учётные данные. Этот клиент работает на устройстве владельца ресурса, например, это браузерные или мобильные приложения.
 
-[Flow](https://habr.com/ru/company/nixys/blog/566910/) also called Grants:
+[Flow](https://habr.com/ru/company/nixys/blog/566910/) also called __Grants__:
 
-- Confidential
+- Confidential - [machine to machine communication](https://docs.duendesoftware.com/identityserver/v6/overview/terminology/#machine-to-machine-communication)
 	- Authentication Flow=[Authorization Code Flow](url) - using a browser and server BackEnd
 	- [Client Credentials Flow](https://habr.com/ru/company/dododev/blog/520046/)
 	<!-- ![scheme](https://habrastorage.org/r/w1560/getpro/habr/post_images/110/fe3/d4a/110fe3d4a29efd1af72da67ab06515ba.png) -->
-- Public
+- Public - [GUI с участием User](https://docs.duendesoftware.com/identityserver/v6/overview/terminology/#interactive-applications)
 	- [Authorization Code Flow with PKCE](https://auth0.com/docs/get-started/authentication-and-authorization-flow/authorization-code-flow-with-proof-key-for-code-exchange-pkce) - using a browser only		
 	- [Implicit Flow](https://learn.microsoft.com/en-us/windows-server/identity/ad-fs/overview/ad-fs-openid-connect-oauth-flows-scenarios) - redirection required SPA, JS __legacy__		
 	- Device authorization
@@ -47,7 +47,8 @@ Client type — тип клиента, от которого зависит сп
 	- Client application requires centralized session management across applications.
 	- SSO is implicit (if in IAM session is created, SSO is implemented for other resources).
 	![flow](https://developer.okta.com/img/auth/OktaHosted.png)
-	[VueJS SPA example](https://developer.okta.com/docs/guides/sign-into-spa-redirect/vue/main/)
+	- [VueJS SPA example](https://developer.okta.com/docs/guides/sign-into-spa-redirect/vue/main/)
+	- [PHP keycloak JS](https://github.com/des1roer/sso-keycloak-php)
 - Embedded [Sign-In Widget, authentication SDK, or direct API calls](https://developer.okta.com/docs/guides/sign-in-overview/main/#choose-your-auth)
 	- Full control over application customization is a key requirement.
 	- There is a slightly increased risk in security due to IAM not being able to guarantee that the Sign-In Widget has been implemented correctly.
@@ -68,7 +69,7 @@ TODO
 Основные [параметры Flow](https://identityserver4.readthedocs.io/en/latest/quickstarts/1_client_credentials.html)
 
 - Аутентификация Client через OpenID Connect Provider (IDP)
-	- IdToken - IdentityToken (формат JWT обязателен) (OIDC) - for authenticating a user. A JWT token used to represent the identity of the user.
+	- IdToken - IdentityToken (формат [JWT](../jwt.md) обязателен) (OIDC) - for authenticating a user. A JWT token used to represent the identity of the user.
 	- TokenEndpoint - получаем IdentityToken
 	- ClientId
 	- ClientSecret
@@ -78,7 +79,24 @@ TODO
 - Авторизация OAuth2
 	- Authorization Code - обменивается в Authorization Code Flow на AccessToken
 	- Получение данных Resource с учетом доступа Scope
-		- AccessToken (формат JWT не обязателен) - for accessing a resource. A JWT token used in Oauth and OpenID connect scenarios and intended to be consumed by the resource.
+		- AccessToken (формат [JWT](../jwt.md) не обязателен) - for accessing a resource. [A JWT token used in Oauth and OpenID connect scenarios and intended to be consumed by the resource](https://auth0.com/blog/id-token-access-token-what-is-the-difference/).
 	- RefreshToken
 
+![tokens id, acccess](https://images.ctfassets.net/23aumh6u8s0i/2y2MCTq87UqQ1uzCJsl4M/c6f127f738f0d13017ff47544958d880/id-token-vs-access-token.jpg)
+
 [Песочница](https://openidconnect.net/)
+
+### Access Token структура Payload
+
+- iss: "http://my-domain.auth0.com" - кто выпустил токен
+- sub: "auth0|123456" - 
+- aud: "1234abcdef" - получатель (audience) токена, client_id для IdToken
+- scope - роли 
+- client_id
+- exp: 1311281970	- срок действия
+- iat: 1311280970 - 
+- Key ID — айдишник ключа, которым можно проверить подпись токена
+
+### Identity Token структура Payload
+
+- Custom User Claims optional

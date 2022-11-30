@@ -13,7 +13,7 @@
 	- Template Email
 	- REST API
 		- Создание пользователя
-	- Custom Extension Plugin (2FA SMS)
+	- Custom [Extension](https://www.keycloak.org/extensions.html) Plugin (2FA SMS)
 		- [MFA OTP SMS](https://github.com/dasniko/keycloak-2fa-sms-authenticator)		
 		- [demo](https://github.com/dasniko/keycloak-extensions-demo)
 		- [Custom User provider](https://www.baeldung.com/java-keycloak-custom-user-providers)

@@ -18,7 +18,7 @@
 
 - [Nginx](../../technology/middleware/proxy.nginx.md)
 - [Traefik](../../technology/middleware/router.traefik.md)
-- [Citrix ADC (application delivery controller) Netscaler](https://docs.citrix.com/en-us/citrix-adc/current-release/content-switching.html)
+- [Netscaler](../../technology/middleware/router.netscaler.md)
 
 ## Compare
 

@@ -75,7 +75,8 @@ TODO
 - ws security
 - ssl client
 - api key
-- cookie
+- [cookie](https://blog.bytebytego.com/i/86976622/token-cookie-session)
+![scheme](https://blog.bytebytego.com/p/ep34-session-cookie-jwt-token-sso)
 
 ## Примеры требований
 

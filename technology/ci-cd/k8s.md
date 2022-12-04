@@ -20,7 +20,7 @@
 - TODO Кол-во сервисов на контейнер
   - Ограничение кластера по подам на ноде?
   - создание маленьких контейнеров, т.к. контейнеры автоматически запускаются на разных хостах, и их меньший размер ускорит время запуска (поскольку предварительно их нужно физически скопировать на хостовую систему).
-  - Метрики 
+  - Метрики
     - кол-ва k8s дашборд
     - Утилизация ресурсов?
 
@@ -34,6 +34,7 @@
   - Min max nodes in cluster
 - Запросы requests и лимиты limits CPU - by namespace, node, pod, container
 - memory limit and a memory request
+![limits](../../img/technology/ci-cd/k8s.limits.png))
 - Quality of Service (QoS) classes to the Pod:
   - Guaranteed
   - Burstable

@@ -2,7 +2,7 @@
 
 ## Зачем
 
-- Http/2
+- [Http/2](https://www.youtube.com/watch?v=a-sBfyiXysI&ab_channel=ByteByteGo)
   - используется одно TCP-соединение, переиспользования одного cокета для нескольких параллельных запросов
   - полного сжатия данных
   - контроль трафика
@@ -13,6 +13,4 @@
 - описание сообщений и самих сервисов осуществляется через некий Interface Definition Language или IDL
 - клиент и сервер генерируются при помощи proto-компилятора и gRPC-плагина на основе proto-описания
 - Bi-directional
-- High perf
-  
-## Links
+- [High perf protobuf binary format](https://www.youtube.com/watch?v=gnchfOojMk4&ab_channel=ByteByteGo)

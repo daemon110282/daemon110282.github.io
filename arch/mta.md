@@ -1,12 +1,12 @@
 # Multi Tenant Architecture
 
 - [Multi Tenant Architecture](#multi-tenant-architecture)
-	- [Зачем](#зачем)
-	- [Плюсы минусы](#плюсы-минусы)
-	- [Паттерны](#паттерны)
-		- [Multi Tenant Architecture (MTA) - Single Instance](#multi-tenant-architecture-mta---single-instance)
-		- [Single Tenant Architecture (STA) - Multi Instance](#single-tenant-architecture-sta---multi-instance)
-		- [Гибридный вариант](#гибридный-вариант)
+  - [Зачем](#зачем)
+  - [Плюсы минусы](#плюсы-минусы)
+  - [Паттерны](#паттерны)
+    - [Multi Tenant Architecture (MTA) - Single Instance](#multi-tenant-architecture-mta---single-instance)
+    - [Single Tenant Architecture (STA) - Multi Instance](#single-tenant-architecture-sta---multi-instance)
+    - [Гибридный вариант](#гибридный-вариант)
 
 ## Зачем
 
@@ -23,8 +23,8 @@
 - Стоимость эксплуатации (TCO)
 - Производительность
 - Надежность
-- Функциональность 
-  - Скорость реагирования на потребности отдельных клиентов - уникальный функционал. 
+- Функциональность
+  - Скорость реагирования на потребности отдельных клиентов - уникальный функционал.
   - Переиспользование общего (Единая кодовая база) функционала.
 - Управляемость - сопровождение
 - Разработка

@@ -17,17 +17,27 @@
 		- [MFA OTP SMS](https://github.com/dasniko/keycloak-2fa-sms-authenticator)		
 		- [demo](https://github.com/dasniko/keycloak-extensions-demo)
 		- [Custom User provider](https://www.baeldung.com/java-keycloak-custom-user-providers)
+		- [Init SSO browser session cookie by API REST](https://github.com/contabo/keycloak-spi-browser-session-api)
+		- [Extenstion](https://www.youtube.com/watch?v=Aj0GAg4EkUA&t=4493s&ab_channel=%D0%A1%D0%BB%D1%91%D1%80%D0%BC)
+		- [Custom login form by Phone+Captcha+SMS OTP](https://github.com/FX-HAO/keycloak-phone-authenticator)
+			- [Custom AuthenticationFactory by Phone](https://developers.redhat.com/blog/2020/10/23/use-mobile-numbers-for-user-authentication-in-keycloak#)
 	- 2FA
 		- HMAC based OTP (HOTP)
 		- Time based OTP (TOTP)
 		- [ЕСИА](https://platform.digital.gov.ru/docs/security/platform-v-iam/esia-setup)
-	- User Store (DB syns by User Federation?, AD, LDAP)
-	- [Extenstion](https://www.youtube.com/watch?v=Aj0GAg4EkUA&t=4493s&ab_channel=%D0%A1%D0%BB%D1%91%D1%80%D0%BC)
+	- User [Store\Provider](https://www.keycloak.org/docs/latest/server_development/#_user-storage-spi)		
+		- User Federation
+			- AD, LDAP, Kerberos			
+			- [DB sync](https://www.tune-it.ru/web/adpashnin/blog/-/blogs/3723343), [PSQL with password](https://github.com/opensingular/singular-keycloak-database-federation)
+			- [API](https://tech.smartling.com/migrate-to-keycloak-with-zero-downtime-8dcab9e7cb2c)
+		- [on demand migration](https://github.com/Smartling/keycloak-user-migration-provider)
+		- [External Identity broker OIDC](https://medium.com/keycloak/keycloak-as-an-identity-broker-an-identity-provider-af1b150ea94)
+		- REST SPI user-storage [Custom User provider](https://www.baeldung.com/java-keycloak-custom-user-providers)
 - [Deploy HA](https://habr.com/ru/company/southbridge/blog/511380/)
 - [VueJS](https://www.youtube.com/watch?app=desktop&v=sE02clzN_ok&ab_channel=hi5code)
-- [Обучение СЛЁРМ](https://slurm.io/keycloak)
 - [REST API Postman Collection](https://documenter.getpostman.com/view/7294517/SzmfZHnd)
 - Starting with version 19, Keycloak supports sending logs using __GELF__ to centralized logging solutions like __ELK, EFK or Graylog out of the box__.
+- [Обучение СЛЁРМ](https://slurm.io/keycloak)
 
 Термины:
 
@@ -55,6 +65,13 @@
 	- [k8s](https://www.keycloak.org/server/containers)
 	- [Prometheus](https://github.com/aerogear/keycloak-metrics-spi)
 - [health check](https://www.keycloak.org/server/health)
+
+## User Storage
+
+TODO
+
+REST SPI [Custom User provider](https://www.baeldung.com/java-keycloak-custom-user-providers) реализация интерфейсов org.keycloak.storage.UserStorageProviderFactory - Allows Keycloak to access custom user stores.
+	- [Интерфейсы пользовательских провайдеров](https://www.keycloak.org/docs/11.0/server_development/index.html#provider-capability-interfaces)
 
 ### Version
 

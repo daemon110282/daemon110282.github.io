@@ -78,6 +78,7 @@ Identity Provider (IAM) with industry standard supported protocols:
 
 Варианты [решений](https://www.securitylab.ru/analytics/530059.php):
 
+- [OIDC certified решения](https://openid.net/developers/certified/)
 - in house (on premise)
 	- Commercial
 		- [ADFS](../technology/middleware/iam.adfs.md)
@@ -87,7 +88,7 @@ Identity Provider (IAM) with industry standard supported protocols:
 		- [WSO2 Identity Server](../technology/middleware/iam.wso2.md)
 		- [IdentityServer (.NET Core)](../technology/middleware/iam.is.md) 4я версия бесплатная, с 6й версии нет?
 		- [Keycloak (Red Hat Java)](../technology/middleware/iam.keycloak.md)
-		- [Ory Hydra](../technology/middleware/iam.hydra.md)
+		- [Ory Hydra](../technology/middleware/iam.hydra.md)		
 - online
 	- Commercial
     	- AWS Cognito

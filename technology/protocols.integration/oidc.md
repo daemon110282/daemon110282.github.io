@@ -21,6 +21,11 @@
 	- Resource Server
 	- Resource Owner
 
+## Технологии
+
+- [OIDC certified решения](https://openid.net/developers/certified/)
+- [PHP OIDC Server](https://github.com/bshaffer/oauth2-server-php)
+
 ## Flow Grant
 
 Client type — тип клиента, от которого зависит способ взаимодействия с ним. Тип клиента определяется его возможностью безопасно хранить свои учётные данные для авторизации — токен. Поэтому существует [всего 2 типа клиентов](https://habr.com/ru/company/dododev/blog/520046/):

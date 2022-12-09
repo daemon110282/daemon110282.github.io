@@ -8,6 +8,7 @@
 		- [Themes](https://www.opcito.com/blogs/customizing-login-and-signup-pages-in-keycloak)
 		- [keycloakify React отзывы не очень](https://t.me/keycloak_ru/25264)
 	- ReCaptcha v3 Google
+		- [SPI](https://github.com/dasniko/keycloak-extensions-demo/tree/main/captcha)
 	- Custom Fields Token
 	- [ACF with PKCE](https://www.keycloak.org/docs/latest/server_admin/#con-oidc-auth-flows_server_administration_guide)
 	- Template Email
@@ -20,7 +21,7 @@
 		- [Init SSO browser session cookie by API REST](https://github.com/contabo/keycloak-spi-browser-session-api)
 		- [Extenstion](https://www.youtube.com/watch?v=Aj0GAg4EkUA&t=4493s&ab_channel=%D0%A1%D0%BB%D1%91%D1%80%D0%BC)
 		- [Custom login form by Phone+Captcha+SMS OTP](https://github.com/FX-HAO/keycloak-phone-authenticator)
-			- [Custom AuthenticationFactory by Phone](https://developers.redhat.com/blog/2020/10/23/use-mobile-numbers-for-user-authentication-in-keycloak#)
+			- [Custom AuthenticationFactory by Phone](https://developers.redhat.com/blog/2020/10/23/use-mobile-numbers-for-user-authentication-in-keycloak#)			
 	- 2FA
 		- HMAC based OTP (HOTP)
 		- Time based OTP (TOTP)
@@ -33,6 +34,9 @@
 		- [on demand migration](https://github.com/Smartling/keycloak-user-migration-provider)
 		- [External Identity broker OIDC](https://medium.com/keycloak/keycloak-as-an-identity-broker-an-identity-provider-af1b150ea94)
 		- REST SPI user-storage [Custom User provider](https://www.baeldung.com/java-keycloak-custom-user-providers)
+		- System for Cross-domain Identity Management ([SCIM](../protocols.integration/scim.md))			
+			- SCIM Client - IDP Keycloak
+				- [SCIM Provisioning SPI](https://github.com/Captain-P-Goldfish/scim-for-keycloak)			
 - [Deploy HA](https://habr.com/ru/company/southbridge/blog/511380/)
 - [VueJS](https://www.youtube.com/watch?app=desktop&v=sE02clzN_ok&ab_channel=hi5code)
 - [REST API Postman Collection](https://documenter.getpostman.com/view/7294517/SzmfZHnd)
@@ -58,13 +62,15 @@
 
 ## Deployment
 
-- CPU RAM
-	- [Benchmarks](https://github.com/keycloak/keycloak-benchmark)
+- CPU RAM	
+	- [Минимальные системные требования](https://wjw465150.gitbooks.io/keycloak-documentation/content/server_installation/topics/installation/system-requirements.html) под keycloak (под 19ю версию не нашел).
+	- Требуемые ресурсы CPU RAM уточнить по итогу [Benchmarks keycloak](https://github.com/keycloak/keycloak-benchmark) под НФТ.
 - [HA](https://habr.com/ru/company/southbridge/blog/658187/)
 - Метрики мониторинга производительности
 	- [k8s](https://www.keycloak.org/server/containers)
 	- [Prometheus](https://github.com/aerogear/keycloak-metrics-spi)
 - [health check](https://www.keycloak.org/server/health)
+- Режим разворачивания в ПРОДе в отказоустойчивом (HA) кластере на [СУБД postgresql](https://www.keycloak.org/server/db) с распределенным [кешем Infinispan](https://www.keycloak.org/server/caching), вариант [«Обычный кластер»](https://habr.com/ru/company/southbridge/blog/511380/)
 
 ## User Storage
 
@@ -75,6 +81,9 @@ REST SPI [Custom User provider](https://www.baeldung.com/java-keycloak-custom-us
 
 ### Version
 
+[Releases](https://www.keycloak.org/2022/03/releases.html)
+
+- 18.* замена сервера приложений Java WildFly на Quarkus
 - [19.*](https://www.keycloak.org/archive/documentation-19.0.html)
 - [20.*](todo)
 

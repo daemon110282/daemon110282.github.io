@@ -37,13 +37,16 @@ TODO
 
 ## Best practices
 
-[REST](https://habr.com/ru/post/351890/)
+- [MS Guide](https://github.com/Microsoft/api-guidelines/blob/master/Guidelines.md)
+- [IBM](https://www.ibm.com/docs/ru/zos-connect/zosconnect/3.0?topic=apis-designing-restful)
+
+[REST](https://habr.com/ru/post/351890/):
 
 - Конечные точки в URL – имя существительное, не глагол
 - Множественное число
 - Документация
 - Версия вашего приложения
-- Пагинация
+- [Пагинация](https://github.com/Microsoft/api-guidelines/blob/master/Guidelines.md#98-pagination)
 - Использование SSL
 - HTTP методы
 - Эффективное использование [кодов ответов HTTP](api-http-status.md)
@@ -51,13 +54,9 @@ TODO
 - RESTful
   - [Яндекс.Касса](https://yookassa.ru/developers/using-api/interaction-format) 
 - Стандартизировать дополнительные машиночитаемые данные в ответе, предпочтительно в форме заголовков HTTP (потому что чтение заголовков не требует вычитывания и разбора всего тела ответа, так что промежуточные прокси и гейтвеи смогут понять семантику ошибки без дополнительных расходов; а так же их можно логировать.
+- [Валидация входных данных](https://github.com/Sairyss/backend-best-practices)
+  
+TODO
+- Http json это rest? https://habr.com/ru/post/679788/
 
-## Links
 
-- REST
-  - https://itnan.ru/post.php?c=1&p=351890
-  - [MS Guide](https://github.com/Microsoft/api-guidelines/blob/master/Guidelines.md)
-  - [IBM](https://www.ibm.com/docs/ru/zos-connect/zosconnect/3.0?topic=apis-designing-restful)
-  Http json это rest? https://habr.com/ru/post/679788/
-- https://github.com/Sairyss/backend-best-practices
-- [Док-е TODO](https://starkovden.github.io/index.html)

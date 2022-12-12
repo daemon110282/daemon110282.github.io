@@ -1,21 +1,12 @@
-# API http status
+# API HTTP Status
 
-* Отдавать ошибки внутри 200 нельзя.
-* 400 Bad Request для ситуаций, когда часть параметров отсутствует или имеет недопустимое значение
-  * Для персистентных ошибок (если просто повторить запрос — ошибка никуда не денется)
-* По умолчанию все 4xx коды не кэшируются, за исключением: 404, 405, 410, 414
-* 403 Forbidden для ошибок аутентификации и/или авторизации
-* 404 для статуса неопределённости (повтор запроса может дать другой результат)
-* 409 Запрос нельзя обработать из-за конфликта в текущем состоянии ресурса. 
-* 500 для проблем на стороне сервера плюс заголовок Retry-After, чтобы дать понять клиенту, когда прийти снова
-
-стандартизировать дополнительные машиночитаемые данные в ответе, предпочтительно в форме заголовков HTTP (потому что чтение заголовков не требует вычитывания и разбора всего тела ответа, так что промежуточные прокси и гейтвеи смогут понять семантику ошибки без дополнительных расходов; а так же их можно логировать.
-
-## Links
-
-* https://wp-kama.ru/handbook/rest/basic/http-status-codes
-* https://restapitutorial.ru/httpstatuscodes.html
-* https://developer.mozilla.org/ru/docs/Web/HTTP/Status
-* https://docs.apigee.com/api-platform/troubleshoot/runtime/503-service-unavailable
-* https://www.inmotionhosting.com/support/website/create-503-status/
-* https://habr.com/ru/post/533606/
+- Отдавать ошибки внутри 200 нельзя.
+- 400 Bad Request для ситуаций, когда часть параметров отсутствует или имеет недопустимое значение
+ - [Для персистентных ошибок](https://habr.com/ru/post/533606/), если просто повторить запрос — ошибка никуда не денется
+- [По умолчанию все 4xx коды не кэшируются, за исключением: 404, 405, 410, 414](https://restapitutorial.ru/httpstatuscodes.html)
+- [403 Forbidden](https://wp-kama.ru/handbook/rest/basic/http-status-codes) для ошибок аутентификации и/или авторизации
+- [404 для статуса неопределённости](https://developer.mozilla.org/ru/docs/Web/HTTP/Status) (повтор запроса может дать другой результат)
+- 409 Запрос нельзя обработать из-за конфликта в текущем состоянии ресурса. 
+- 500 для проблем на стороне сервера плюс заголовок Retry-After, чтобы дать понять клиенту, когда прийти снова
+- [503 Service Unavailable](https://docs.apigee.com/api-platform/troubleshoot/runtime/503-service-unavailable)
+ - https://www.inmotionhosting.com/support/website/create-503-status/

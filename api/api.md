@@ -41,6 +41,8 @@ TODO
 - https://www.gov.uk/guidance/setting-api-service-levels
 - [API gateway](api.gateway.md)
 - [Стратегии повторов](../arch/pattern/pattern.failure.md) при сбоях Rerty Policy
+- https://mathieu.fenniak.net/the-api-checklist/
+- https://github.com/Microsoft/api-guidelines/blob/master/Guidelines.md
 
 ### Versioning
 
@@ -60,7 +62,7 @@ decouple the different implementation versions into independent handlers
 * [OpenApi](openapi.md)
 * [Почему машино читаемый формат, а не Word](https://www.apimatic.io/blog/2017/04/why-your-api-needs-machine-readable-description-832e805f6855/): трансформация форматов, Search and Discovery, Sharing, Aggregation, Code Generation (server, client), Mock, Monitoring  
 * [Json Schema](jsonschema.md)
-* [Курс по документированию REST API](https://starkovden.github.io/)
+* TODO [Курс по документированию REST API](https://starkovden.github.io/)
 * [Шаблон описания](https://tyk.io/blog/whats-minimum-documentation-required-api/)
 * TODO [API Spec Trends](https://www.apimatic.io/blog/2022/03/top-api-specification-trends-2019-2022/)
 * [WSDL](wsdl.md)
@@ -73,8 +75,5 @@ decouple the different implementation versions into independent handlers
 
 - [Api Gateway](api.gateway.md)
   - Ocelot
-
-## Links
-
-https://mathieu.fenniak.net/the-api-checklist/
-https://github.com/Microsoft/api-guidelines/blob/master/Guidelines.md
+  - Kong
+  - NGinx

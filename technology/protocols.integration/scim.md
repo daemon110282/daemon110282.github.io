@@ -3,7 +3,7 @@
 ## Зачем
 
 - [SCIM](https://learn.microsoft.com/ru-ru/azure/active-directory/app-provisioning/use-scim-to-provision-users-and-groups)
-- (https://developer.okta.com/docs/concepts/scim/#lifecycle-management-using-profile-sourcing)
+- [Концепция](https://developer.okta.com/docs/concepts/scim/#lifecycle-management-using-profile-sourcing)
 ![scheme](https://developer.okta.com/img/oin/scim_lifecycle.png)
 
 Термины:
@@ -24,6 +24,8 @@
 	- [REST API Endpoints](https://learn.microsoft.com/ru-ru/azure/active-directory/app-provisioning/use-scim-to-provision-users-and-groups)
 
 ## Технологии
+
+[Варианты](https://www.simplecloud.info/#Implementations2)
 
 - SCIM Client
 	- [SCIM 1.1 Provisioning IDP Keycloak SPI](https://github.com/Captain-P-Goldfish/scim-for-keycloak)

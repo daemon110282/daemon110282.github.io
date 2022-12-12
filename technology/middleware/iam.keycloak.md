@@ -13,7 +13,7 @@
 	- [ACF with PKCE](https://www.keycloak.org/docs/latest/server_admin/#con-oidc-auth-flows_server_administration_guide)
 	- Template Email
 	- REST API
-		- Создание пользователя
+		- Управление пользователями
 	- Custom [Extension](https://www.keycloak.org/extensions.html) Plugin (2FA SMS)
 		- [MFA OTP SMS](https://github.com/dasniko/keycloak-2fa-sms-authenticator)		
 		- [demo](https://github.com/dasniko/keycloak-extensions-demo)
@@ -27,18 +27,18 @@
 		- Time based OTP (TOTP)
 		- [ЕСИА](https://platform.digital.gov.ru/docs/security/platform-v-iam/esia-setup)
 	- User [Store\Provider](https://www.keycloak.org/docs/latest/server_development/#_user-storage-spi)		
-		- User Federation
+		- User Federation (Sync)
 			- AD, LDAP, Kerberos			
 			- [DB sync](https://www.tune-it.ru/web/adpashnin/blog/-/blogs/3723343), [PSQL with password](https://github.com/opensingular/singular-keycloak-database-federation)
 			- [API](https://tech.smartling.com/migrate-to-keycloak-with-zero-downtime-8dcab9e7cb2c)
-		- [on demand migration](https://github.com/Smartling/keycloak-user-migration-provider)
+				- REST SPI user-storage [Custom User provider](https://www.baeldung.com/java-keycloak-custom-user-providers)
+			- REST API System for Cross-domain Identity Management ([SCIM](../protocols.integration/scim.md))			
+				- SCIM Client - IDP Keycloak
+					- [SCIM Provisioning SPI](https://github.com/Captain-P-Goldfish/scim-for-keycloak)			
+					- [SCIM 2.0](https://lab.libreho.st/libre.sh/scim/keycloak-scim) GNU Affero General Public License v3.0
+		- [On demand migration](https://github.com/Smartling/keycloak-user-migration-provider)
 		- [External Identity broker OIDC](https://medium.com/keycloak/keycloak-as-an-identity-broker-an-identity-provider-af1b150ea94)
-		- REST SPI user-storage [Custom User provider](https://www.baeldung.com/java-keycloak-custom-user-providers)
-		- System for Cross-domain Identity Management ([SCIM](../protocols.integration/scim.md))			
-			- SCIM Client - IDP Keycloak
-				- [SCIM Provisioning SPI](https://github.com/Captain-P-Goldfish/scim-for-keycloak)			
-- [Deploy HA](https://habr.com/ru/company/southbridge/blog/511380/)
-- [VueJS](https://www.youtube.com/watch?app=desktop&v=sE02clzN_ok&ab_channel=hi5code)
+		
 - [REST API Postman Collection](https://documenter.getpostman.com/view/7294517/SzmfZHnd)
 - Starting with version 19, Keycloak supports sending logs using __GELF__ to centralized logging solutions like __ELK, EFK or Graylog out of the box__.
 - [Обучение СЛЁРМ](https://slurm.io/keycloak)
@@ -48,6 +48,7 @@
 - Realm - [необходимо ограничение по кол-ву, риски по НТ](https://highload.today/blogs/keycloak-i-oauth-2/)
 	- Users входят в Realm
 	- Clients входят в Realm
+	- [MTA](../../arch/mta.md) подход можно реализовать 
 - Groups
 - Roles
 - Cross-Origin Resource Sharing (CORS) - [механизм, использующий дополнительные HTTP-заголовки](https://developer.mozilla.org/ru/docs/Web/HTTP/CORS), чтобы дать возможность агенту пользователя получать разрешения на доступ к выбранным ресурсам с сервера на источнике (домене), отличном от того, что сайт использует в данный момент. Говорят, что агент пользователя делает запрос с другого источника (cross-origin HTTP request), если источник текущего документа отличается от запрашиваемого ресурса доменом, протоколом или портом. Пример: http://domain-a.com, запрашивает <img> src по адресу http://domain-b.com/image.jpg
@@ -66,6 +67,7 @@
 	- [Минимальные системные требования](https://wjw465150.gitbooks.io/keycloak-documentation/content/server_installation/topics/installation/system-requirements.html) под keycloak (под 19ю версию не нашел).
 	- Требуемые ресурсы CPU RAM уточнить по итогу [Benchmarks keycloak](https://github.com/keycloak/keycloak-benchmark) под НФТ.
 - [HA](https://habr.com/ru/company/southbridge/blog/658187/)
+	- [Deploy HA](https://habr.com/ru/company/southbridge/blog/511380/)
 - Метрики мониторинга производительности
 	- [k8s](https://www.keycloak.org/server/containers)
 	- [Prometheus](https://github.com/aerogear/keycloak-metrics-spi)

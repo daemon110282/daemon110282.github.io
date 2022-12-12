@@ -10,7 +10,7 @@
 
 ## Зачем
 
-Identity Provider (IAM) with industry standard supported protocols:
+Identity Provider (IDP) в IAM with industry standard supported protocols:
 
 - SAML 2.0 XML (Security Assertion Markup Language)
 - [OAuth](../technology/protocols.integration/oauth.md)
@@ -27,7 +27,7 @@ Identity Provider (IAM) with industry standard supported protocols:
 - Role Based Access (RBAC)
 - Custom Login Form
 	- [Redirect or Embedded Widget or Embedded SDK](https://developer.okta.com/docs/guides/sign-in-overview/main/#choose-your-auth)
-		- https://auth0.com/docs/authenticate/login
+		- [Auth0](https://auth0.com/docs/authenticate/login)
 		- [ADFS](https://learn.microsoft.com/en-us/azure/active-directory/develop/scenario-spa-sign-in?tabs=javascript2)
 - Session Managment
 
@@ -58,21 +58,20 @@ Identity Provider (IAM) with industry standard supported protocols:
   - встроенный LDAP
   - внешний LDAP
   - Microsoft Active Directory
+  - [SCIM](../technology/protocols.integration/scim.md)
 - Apache Cassandra
-- Identity Provider
+- Identity Brokering подключение к External IDP
   - SAML
-  - OIDC
+  - [OIDC](../technology/protocols.integration/oidc.md)
   - Social (FB, Google..)
 
 ## Протоколы
 
 ### OAuth, OpenID Connect (OIDC)
 
-![scheme](https://habrastorage.org/r/w1560/getpro/habr/post_images/bc9/ad8/618/bc9ad86182b31533cc26413abc67924f.png)
-
-[OpenID Сonnect](../technology/protocols.integration/oidc.md) нужен, чтобы получить у пользователя его учетные данные и проверить их. Authentication protocol.
-
-[OAuth 2.0](../technology/protocols.integration/oauth.md) [нужен, чтобы получать](https://habr.com/ru/company/dataart/blog/311376/) токены доступа и с ними обращаться к ресурсам. Authorization framework, not an authentication protocol.
+- ![scheme](https://habrastorage.org/r/w1560/getpro/habr/post_images/bc9/ad8/618/bc9ad86182b31533cc26413abc67924f.png)
+- [OpenID Сonnect](../technology/protocols.integration/oidc.md) нужен, чтобы получить у пользователя его учетные данные и проверить их. Authentication protocol.
+- [OAuth 2.0](../technology/protocols.integration/oauth.md) [нужен, чтобы получать](https://habr.com/ru/company/dataart/blog/311376/) токены доступа и с ними обращаться к ресурсам. Authorization framework, not an authentication protocol.
 
 ## Технологии
 

@@ -53,6 +53,7 @@ Client type — тип клиента, от которого зависит сп
 	- SSO is implicit (if in IAM session is created, SSO is implemented for other resources).
 	![flow](https://developer.okta.com/img/auth/OktaHosted.png)
 	- [VueJS SPA example](https://developer.okta.com/docs/guides/sign-into-spa-redirect/vue/main/)
+		- [VueJS](https://www.youtube.com/watch?app=desktop&v=sE02clzN_ok&ab_channel=hi5code)
 	- [PHP keycloak JS](https://github.com/des1roer/sso-keycloak-php)
 - Embedded [Sign-In Widget, authentication SDK, or direct API calls](https://developer.okta.com/docs/guides/sign-in-overview/main/#choose-your-auth)
 	- Full control over application customization is a key requirement.

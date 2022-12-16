@@ -47,6 +47,9 @@ TODO
 - Документация
 - Версия вашего приложения
 - [Пагинация](https://github.com/Microsoft/api-guidelines/blob/master/Guidelines.md#98-pagination)
+  - [Offset Pagination](https://www.moesif.com/blog/technical/api-design/REST-API-Design-Filtering-Sorting-and-Pagination/#offset-pagination)
+  - Seek Pagination
+- [Фильтрация](https://www.moesif.com/blog/technical/api-design/REST-API-Design-Filtering-Sorting-and-Pagination/)
 - Использование SSL
 - HTTP методы
 - Эффективное использование [кодов ответов HTTP](api-http-status.md)

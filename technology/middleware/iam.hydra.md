@@ -1,8 +1,9 @@
 # Ory Hydra
 
-Реализация функции [Identity and Access Management (IAM)](../../arch/iam.md) решений.
+Реализация функции [Identity and Access Management (IAM)](../../arch/system.class/.md) решений.
 
 Компоненты:
+
 - Ory Hydra - OAuth2 & OpenID Connect Server
 - Ory Kratos is an __API-first Identity and User Management system__
 	- Self-service Login and Registration
@@ -16,6 +17,7 @@
 ![arch](https://www.ory.sh/static/f8083850c9e5b19d51df6708d6fb696a/7464f/kong_hello.webp)
 
 Фичи:
+
 - [REST API](https://www.ory.sh/docs/hydra/reference/api)
 	- [Postman](https://www.postman.com/ory-docs)
 - CLI

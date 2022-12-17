@@ -1,6 +1,6 @@
 # IAM KeyCloak
 
-Реализация функции [Identity and Access Management (IAM)](../../arch/iam.md) решений.
+Реализация функции [Identity and Access Management (IAM)](../../arch/system.class/iam.md) решений.
 
 - [X5Tech выбрали](https://habr.com/ru/company/X5Tech/blog/654115/)
 - [Фичи](https://habr.com/ru/company/X5Tech/blog/486778/)	
@@ -28,11 +28,11 @@
 		- [ЕСИА](https://platform.digital.gov.ru/docs/security/platform-v-iam/esia-setup)
 	- User [Store\Provider](https://www.keycloak.org/docs/latest/server_development/#_user-storage-spi)		
 		- User Federation (Sync)
-			- AD, LDAP, Kerberos			
+			- AD, LDAP, Kerberos
 			- [DB sync](https://www.tune-it.ru/web/adpashnin/blog/-/blogs/3723343), [PSQL with password](https://github.com/opensingular/singular-keycloak-database-federation)
 			- [API](https://tech.smartling.com/migrate-to-keycloak-with-zero-downtime-8dcab9e7cb2c)
 				- REST SPI user-storage [Custom User provider](https://www.baeldung.com/java-keycloak-custom-user-providers)
-			- REST API System for Cross-domain Identity Management ([SCIM](../protocols.integration/scim.md))			
+			- REST API System for Cross-domain Identity Management ([SCIM](../protocols.integration/scim.md))
 				- SCIM Client - IDP Keycloak
 					- [SCIM Provisioning SPI](https://github.com/Captain-P-Goldfish/scim-for-keycloak)			
 					- [SCIM 2.0](https://lab.libreho.st/libre.sh/scim/keycloak-scim) GNU Affero General Public License v3.0

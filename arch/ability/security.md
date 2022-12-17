@@ -60,7 +60,7 @@ TODO
     - Сертификация ФСТЭК
     - OWASP TOP 10
     - DDOS
-- [Identity and Access Management (IAM)](../iam.md)
+- [Identity and Access Management (IAM)](../system.class/iam.md)
   - [JWT](../../technology/jwt.md)
   - [SSO](../sso.md)
     - Oauth 2, OpenID Connect, SAML

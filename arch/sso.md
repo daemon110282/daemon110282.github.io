@@ -2,7 +2,7 @@
 
 ## Зачем
 
-Возможность [Identity and Access Management (IAM)](iam.md) решений.
+Возможность [Identity and Access Management (IAM)](system.class/iam.md) решений.
 
 1. Идентификация - логин пароль
 2. Аутентификация - разрешен доступ checklogin
@@ -32,6 +32,3 @@ Reduced IT Costs: SSO helps lower IT costs by saving admin time on password rese
 
 Минусы:
 
-## Технологии
-
-- [IAM](iam.md)

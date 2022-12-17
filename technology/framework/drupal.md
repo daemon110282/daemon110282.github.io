@@ -6,7 +6,7 @@ Redirect?
 
 ## IAM SSO
 
-[IAM](../../arch/iam.md) [SSO](../../arch/sso.md):
+[IAM](../../arch/system.class/iam.md) [SSO](../../arch/sso.md):
 - [Compare](https://groups.drupal.org/node/182004)
 - Commercial
 	- [miniorange](https://plugins.miniorange.com/drupal-sso-oauth-openid-single-sign-on)

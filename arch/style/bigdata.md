@@ -27,9 +27,9 @@
 
 ## Паттерны
 
-- [Система отчетности](../report.md)
+- [Система отчетности](../system.class/report.md)
 - [Хранилища данных](../store.md)
-  - [DWH](../dwh.md)
+  - [DWH](../system.class/dwh.md)
   - [Data Mart TODO](https://coderlessons.com/tutorials/bolshie-dannye-i-analitika/teoriia-khraneniia-dannykh/14-khranilishche-dannykh-protiv-data-mart)
   - todo https://coderlessons.com/tutorials/bolshie-dannye-i-analitika/teoriia-khraneniia-dannykh/teoriia-khraneniia-dannykh
 - [Data Lake TODO](https://coderlessons.com/tutorials/bolshie-dannye-i-analitika/teoriia-khraneniia-dannykh/15-chto-takoe-ozero-dannykh)

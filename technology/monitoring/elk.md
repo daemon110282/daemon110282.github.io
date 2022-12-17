@@ -33,7 +33,7 @@
 
 ## Use Cases
 
-- [APM](../../arch/apm.md)
+- [APM](../../arch/system.class/apm.md)
 - [Security and compliance](https://logz.io/learn/complete-guide-elk-stack/?utm_source=pocket_saves#common-pitfalls:~:text=guide%40logz.io-,Use%20Cases,-The%20ELK%20Stack)
 	- SIEM
 - BI

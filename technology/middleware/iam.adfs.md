@@ -1,6 +1,6 @@
 # IAM Active Directory Federation Services (AD FS)
 
-Реализация функции [Identity and Access Management (IAM)](../../arch/iam.md) решений.
+Реализация функции [Identity and Access Management (IAM)](../../arch/system.class/iam.md) решений.
 
 [Web SSO](https://learn.microsoft.com/en-us/windows-server/identity/ad-fs/design/web-sso-design)
 

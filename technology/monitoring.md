@@ -1,6 +1,6 @@
 # Monitoring
 
-Класс систем [Application Perfomance Monitoring (APM)](../arch/apm.md).
+Класс систем [Application Perfomance Monitoring (APM)](../arch/system.class/apm.md).
 
 - Cloud SaaS [Commercial](https://geekflare.com/frontend-web-monitoring/)
 	- New Relic

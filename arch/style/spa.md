@@ -39,7 +39,7 @@ TODO
 - Масштабирование?
 - Кеширование, lazy load component UI?
 - Валидация - дублирование клиент+сервер из за уязвимости браузера? Разные языки двойная кодовая база?
-- Сквозная аутентификация: [Single Sign-on](../sso.md), [Identity Service](../iam.md)
+- Сквозная аутентификация: [Single Sign-on](../sso.md), [Identity Service](../system.class/iam.md)
 - Мониторинг
 	- [Sematext](https://sematext.com/blog/tracking-and-monitoring-spa-apps/)
 	- [Raygun](https://raygun.com/blog/spa-performance/)

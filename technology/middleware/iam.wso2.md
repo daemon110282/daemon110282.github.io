@@ -1,6 +1,6 @@
 # IAM WSO2 Identity Server
 
-Реализация функции [Identity and Access Management (IAM)](../../arch/iam.md) решений.
+Реализация функции [Identity and Access Management (IAM)](../../arch/system.class/iam.md) решений.
 
 [Фичи](https://wso2.com/identity-server/)
 - [Custom Flow](https://is.docs.wso2.com/en/latest/references/concepts/authentication/adaptive-authentication/

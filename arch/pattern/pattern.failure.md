@@ -6,6 +6,7 @@
   - [Fail fast](#fail-fast)
   - [Каскадные сбои](#каскадные-сбои)
   - [Автоматы замыкания (Circuit Breakers)](#автоматы-замыкания-circuit-breakers)
+  - [Технологии](#технологии)
 
 Cбои разделяют:
 
@@ -71,6 +72,6 @@ Cбои разделяют:
 
 ![scheme](../../img/pattern/circuit.breaker.jpg)
 
-Techology:
+## Технологии
 
 - [Polly](https://medium.com/aspnetrun/microservices-resilience-and-fault-tolerance-with-applying-retry-and-circuit-breaker-patterns-c32e518db990)

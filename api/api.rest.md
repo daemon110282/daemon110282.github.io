@@ -1,51 +1,54 @@
 # REST API
 
-TODO
+- [REST API](#rest-api)
+  - [Термины](#термины)
+  - [Проектирование](#проектирование)
+    - [Качества хорошего API](#качества-хорошего-api)
+  - [Patterns](#patterns)
+
+## Термины
+
 - Ресурс
 - URL
-- HTTP метод
-  - SRP 
-- Свойства метода
-- Возможные ошибки
 - Headers
 - [HTTP Status](api-http-status.md)
 - [HATEOS](https://docs.microsoft.com/ru-ru/azure/architecture/best-practices/api-design#use-hateoas-to-enable-navigation-to-related-resources)
-- Версионность
 
-Качества хорошего API
-- очевидность
-- читабельность 
-- консистентен: при разработке новой функциональности, т.е. при обращении к каким-то незнакомым сущностям в API, разработчик может действовать по аналогии с уже известными ему концепциями API, и его код будет работать.
+## Проектирование
 
-Проектирование
-- https://systems.education/api-design
-- [Сергей Константинов. API TODO](https://twirl.github.io/The-API-Book/API.ru.html)
-  - метод (интерфейс)
-    - Стремитесь к тому, чтобы из **сигнатуры функции было абсолютно ясно, что она делает, что принимает на вход и что возвращает**. Вообще, при прочтении кода, работающего с вашим API, должно быть сразу понятно, что, собственно, он делает — без подглядывания в документацию.
+![design](https://miro.medium.com/max/720/1*lFGlOSW19H184tUt9DhvUg@2x.webp)
+
+- <https://systems.education/api-design>
+- TODO [Сергей Константинов. API](https://twirl.github.io/The-API-Book/API.ru.html)
+  - метод (__интерфейс__)
+    - Стремитесь к тому, чтобы из __сигнатуры функции было абсолютно ясно, что она делает, что принимает на вход и что возвращает__. Вообще, при прочтении кода, работающего с вашим API, должно быть сразу понятно, что, собственно, он делает — без подглядывания в документацию.
     - Избегайте неявных частичных обновлений
-  - свойства  метода (контракт интерфейса)
+  - свойства  метода (__контракт интерфейса__)
     - Указывайте использованные стандарты
-    - При этом существует «золотое правило», применимое не только к API, но ко множеству других областей проектирования: человек комфортно удерживает в краткосрочной памяти **7±2 различных объекта**. Манипулировать большим числом сущностей человеку уже сложно. Это правило также известно как **«закон Миллера»**. Бороться с этим законом можно только одним способом: **декомпозицией**. На каждом уровне работы с вашим API нужно стремиться логически группировать сущности под одним именем там, где это возможно и таким образом, чтобы разработчику никогда не приходилось оперировать более чем 10 сущностями одновременно. Должны выделить в структуре **информационные домены**: какие поля логически относятся к одной предметной области.
+    - При этом существует «золотое правило», применимое не только к API, но ко множеству других областей проектирования: человек комфортно удерживает в краткосрочной памяти __7±2 различных объекта__. Манипулировать большим числом сущностей человеку уже сложно. Это правило также известно как __«закон Миллера»__. Бороться с этим законом можно только одним способом: __декомпозицией__. На каждом уровне работы с вашим API нужно стремиться логически группировать сущности под одним именем там, где это возможно и таким образом, чтобы разработчику никогда не приходилось оперировать более чем 10 сущностями одновременно. Должны выделить в структуре __информационные домены__: какие поля логически относятся к одной предметной области.
     - Сущности должны именоваться конкретно
     - Тип поля должен быть ясен из его названия
-  - ошибки
+  - __Возможные ошибки__
     - Должны быть информативными
-- https://gist.github.com/fomvasss/c1221b2464be94870f7f823c74520665
-- Наименования физические ресурсов, свойств
-  - https://proglib.io/p/21-luchshiy-metod-vyvedet-vashi-navyki-proektirovaniya-api-na-novyy-uroven-2021-04-29
-  - https://proglib.io/p/15-luchshih-praktik-razrabotki-i-proektirovaniya-rest-api-2022-04-12
+- Рекомендации по [наименованию](https://proglib.io/p/21-luchshiy-metod-vyvedet-vashi-navyki-proektirovaniya-api-na-novyy-uroven-2021-04-29) физических ресурсов, [свойств](https://proglib.io/p/15-luchshih-praktik-razrabotki-i-proektirovaniya-rest-api-2022-04-12)
+  
+### Качества хорошего API
 
-## Best practices
+- очевидность
+- читабельность
+- консистентен: при разработке новой функциональности, т.е. при обращении к каким-то незнакомым сущностям в API, разработчик может действовать по аналогии с уже известными ему концепциями API, и его код будет работать.
+
+## Patterns
 
 - [MS Guide](https://github.com/Microsoft/api-guidelines/blob/master/Guidelines.md)
 - [IBM](https://www.ibm.com/docs/ru/zos-connect/zosconnect/3.0?topic=apis-designing-restful)
-
-[REST](https://habr.com/ru/post/351890/):
-
-- Конечные точки в URL – имя существительное, не глагол
+- [REST Best Practice](https://stackoverflow.blog/2021/10/06/best-practices-for-authentication-and-authorization-for-rest-apis/?utm_campaign=APISecurity%20newsletter&utm_medium=email&_hsmi=204867978&_hsenc=p2ANqtz-94r6UDHzZG48tgtd0Sz6OiZicy6tTBQysQKtk0WzhZXlXrXBucIld80QE3Gll1Le1lxnwNhNqu-pySFps1AsqeR8MQrg&utm_content=204868574&utm_source=hs_email)
+- Конечные точки в URL – [имя существительное, не глагол](https://habr.com/ru/post/351890/)
 - Множественное число
-- Документация
+- АвтоДокументация [OpenApi](openapi.md)
+- Версионность
 - Версия вашего приложения
+- [Сортировка](https://gist.github.com/fomvasss/c1221b2464be94870f7f823c74520665)
 - [Пагинация](https://github.com/Microsoft/api-guidelines/blob/master/Guidelines.md#98-pagination)
   - [Offset Pagination](https://www.moesif.com/blog/technical/api-design/REST-API-Design-Filtering-Sorting-and-Pagination/#offset-pagination)
   - Seek Pagination
@@ -53,14 +56,10 @@ TODO
 - [Фильтрация](https://www.moesif.com/blog/technical/api-design/REST-API-Design-Filtering-Sorting-and-Pagination/)
 - Использование SSL
 - HTTP методы
+  - [SRP паттерн](../arch/patterns.md)
 - Эффективное использование [кодов ответов HTTP](api-http-status.md)
 - [Идемпотентность](../arch/pattern/idempotent.md)
 - RESTful
-  - [Яндекс.Касса](https://yookassa.ru/developers/using-api/interaction-format) 
+  - [Пример Яндекс.Касса](https://yookassa.ru/developers/using-api/interaction-format)
 - Стандартизировать дополнительные машиночитаемые данные в ответе, предпочтительно в форме заголовков HTTP (потому что чтение заголовков не требует вычитывания и разбора всего тела ответа, так что промежуточные прокси и гейтвеи смогут понять семантику ошибки без дополнительных расходов; а так же их можно логировать.
 - [Валидация входных данных](https://github.com/Sairyss/backend-best-practices)
-  
-TODO
-- Http json это rest? https://habr.com/ru/post/679788/
-
-

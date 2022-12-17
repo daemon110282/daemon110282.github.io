@@ -23,7 +23,7 @@
 - Сквозная функциональность
   - [Log management](technology/logging.md)
   - [Security](arch/ability/security.md)
-  - [Performance monitoring (APM класс систем) and dashboards](technology/monitoring.md)
+  - [Performance monitoring (APM класс систем) and dashboards](arch/apm.md)
   - [Audit](arch/pattern/pattern.audit.md)
 
 ## Паттерны

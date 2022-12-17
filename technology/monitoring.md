@@ -29,6 +29,9 @@ SPA:
 ## Pattern
 
 - [RED method for MSA](https://thenewstack.io/monitoring-microservices-red-method/)
+Rate (R): The number of requests per second.
+Errors (E): The number of failed requests.
+Duration (D): The amount of time to process a request.
 - [Автотесты UI в ПРОДе](https://nedmcclain.medium.com/frontend-monitoring-with-prometheus-38f798406125) и экспорт в Prometheus результатов
 
 ## Technology

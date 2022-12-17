@@ -10,7 +10,7 @@
 
 - RHEL7, Centos7
 - Prometheus
-- Graylog
+- [Graylog](../logging/graylog.md)
 - Java, PostgreSQL
 - CI-CD: Jenkins
 - [k8s, Docker, Nexus](https://docs.uidm.ru/webdocs/10_environment_requirements.html)

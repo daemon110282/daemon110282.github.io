@@ -4,7 +4,7 @@
   - [Атрибуты качества, архитектурные характеристики](#атрибуты-качества-архитектурные-характеристики)
   - [Коммерческие атрибуты](#коммерческие-атрибуты)
   - [Кросс-системные правила и руководства](#кросс-системные-правила-и-руководства)
-  - [TODO Фитнес функции](#todo-фитнес-функции)
+  - [Фитнес функции](#фитнес-функции)
 
 ## Атрибуты качества, архитектурные характеристики
 
@@ -19,9 +19,9 @@
   - extensibility
   - adaptability
   - Замещаемость
-    - API Gateway
+    - [API Gateway](../api/api.gateway.md)
     - Server-side service discovery
-    - Proxy\Balancing
+    - [Proxy\Balancing](../arch/pattern/pattern.proxy.reverse.md)
   - [Слабая связанность (low coupling)](https://medium.com/german-gorelkin/low-coupling-high-cohesion-d36369fb1be9) и сильная связность\целостность (high cohesion)
     - не зависеть от UI
     - не зависеть от БД, внешних фреймворков и библиотек.
@@ -39,7 +39,7 @@
   - [Тестопригодность Testability](ability/testability.md)
     - разделением на слои и следованием [Dependency Rule (правилу зависимостей)](https://habr.com/ru/company/mobileup/blog/335382/)
   - CI-CD куда?
-  - Автодокументирование API?
+  - [Автодокументирование API](../api/api.md)
   - [Наблюдаемость Observability](ability/observability.md)
 - Надежность Reliability
   - [Готовность Доступность Availability (Эксплуатационные)](ability/availability.md)
@@ -78,6 +78,19 @@ TODO:
 - Data formats Форматы данных
 - Redundant data Избыточность данных
 - BI interfaces Интерфейсы с BI
-- Logging, Monitoring Логирование и мониторинг
+- [Logging, Monitoring Логирование и мониторинг](ability/observability.md)
 
-## TODO Фитнес функции
+## Фитнес функции
+
+- Юнит тесты
+- Контрактные тесты
+- Процессные метрики
+- Мониторинг
+- Арх-е метрки
+- Интеграционные тесты
+
+Категории:
+
+- Ключевые
+- Релевантные
+- Нерелевантные

@@ -1,8 +1,8 @@
 # Логирование
 
 - On premise
-	- GrayLog
-	- LogStash 
+	- [GrayLog](logging/graylog.md)
+	- LogStash
 	- [ELK stack](monitoring/elk.md)
 - Cloud SaaS
 	- Logrocket

@@ -46,6 +46,8 @@
 
 - [Basic Elasticsearch Concepts](https://logz.io/learn/complete-guide-elk-stack/)
 - [Elasticsearch Plugins](https://logz.io/learn/complete-guide-elk-stack/)
+- Необходима [правильная схема\политика индексов данных](https://habr.com/ru/company/sbermegamarket/blog/696844/) ILM (index lifecycle management)
+- Архивирование данных логов (Hot, Cold Data)
 
 ![scheme](https://substackcdn.com/image/fetch/w_1456,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2Fac3c8a9f-2148-4a29-bc72-6898445d1b85_1357x1536.jpeg)
 
@@ -58,7 +60,7 @@
 Минусы:
 
 - в Elasticsearch [нет встроенной системы авторизации и управления правами доступа](https://gitinsky.com/elkstack), что может привести к проблемам с ИБ
-- масштабирование может оказаться затратным
+- [масштабирование может оказаться затратным](https://habr.com/ru/company/sbermegamarket/blog/696844/)
 - JVM стек потребляет много ресурсов CPU и RAM
 - Требуется много места для хранения
 - установка и запуск стека ELK — далеко не простой процесс

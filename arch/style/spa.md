@@ -43,7 +43,7 @@ TODO
 - Мониторинг
 	- [Sematext](https://sematext.com/blog/tracking-and-monitoring-spa-apps/)
 	- [Raygun](https://raygun.com/blog/spa-performance/)
-	- Sentry
+	- [Sentry](../../technology/observability/sentry.md)
 	- [Rollbar](https://rollbar.com/blog/error-tracking-with-vue-js/)
 - Логирование
 	[Errbit SaaS (Loggly, New Relic)](https://www.sitepoint.com/logging-errors-client-side-apps/)

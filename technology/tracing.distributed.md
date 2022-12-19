@@ -9,5 +9,4 @@
 - [Jaeger](trace/jaeger.md) (OpenTelemetry, в Yandex Cloud используется)
 - Zipkin
   - [.NET Core Support + Zipkin](https://docs.microsoft.com/en-us/dotnet/core/diagnostics/distributed-tracing-instrumentation-walkthroughs)
-- Sentry
-  - [Nginx + Sentry](https://blog.sentry.io/2019/01/31/using-nginx-sentry-trace-errors-logs)
+- [Sentry](observability/sentry.md)

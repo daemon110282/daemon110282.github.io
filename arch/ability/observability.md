@@ -1,6 +1,6 @@
 # Наблюдаемость Observability
 
-Концепция OpenTelemetry (OTel) объединил OpenTracing + OpenCensus:
+Концепция [OpenTelemetry (OTel)](../../technology/protocols.integration/otel.md) объединил OpenTracing + OpenCensus:
 
 - [Метрики Мониторинг](../../technology/monitoring.md), статистика
 	- При проектировании в архитектуру закладываются измерители, генерирующие информацию для системы мониторинга
@@ -25,7 +25,6 @@
 - Универсальные агенты Data Collector по протоколу OpenTelemetry
 - Трансформация команд на принципах Site Reliability Engineering (SRE) four [golden signals](https://sre.google/sre-book/monitoring-distributed-systems/)
 	- TODO
--
 
 
 Reference Arch:
@@ -50,6 +49,7 @@ Compare:
 - [ElastickSearch Kibana](../../technology/monitoring/elk.md)
 - [GrayLog, ELK](../../technology/logging.md)
 - [Jaeger+ELK, Jaeger+ClickHouse, Zipkin](../../technology/tracing.distributed.md)
+- [Sentry](../../technology/observability/sentry.md)
 - Promtail + Loki + Grafana	
 - fluentbit + Yandex Data Streams + Yandex Query (и бекап логов через Yandex Transfer в S3)
 
@@ -85,9 +85,9 @@ TODO:
 ## TODO
 
 Мы допустили все [ошибки](https://habr.com/ru/company/sbermegamarket/blog/696844/#comment_24875276) какие могли:
-Сразу не настроили отправку метрики с Promtail и Loki в prometheus, чтобы сразу увидеть, где проблема
-Не настроили сразу кеширование, лимиты и чанки
-Выбрали обычные ssd вместо не реплицируемых (нужна была макс скорость)
-Перегнули с количеством лейблов
-Не использовали драйвер Loki для контейнеров
-Сразу не угадали с количество реплик всех частей
+- Сразу не настроили отправку метрики с Promtail и Loki в prometheus, чтобы сразу увидеть, где проблема
+- Не настроили сразу кеширование, лимиты и чанки
+- Выбрали обычные ssd вместо не реплицируемых (нужна была макс скорость)
+- Перегнули с количеством лейблов
+- Не использовали драйвер Loki для контейнеров
+- Сразу не угадали с количество реплик всех частей

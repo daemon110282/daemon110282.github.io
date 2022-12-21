@@ -12,7 +12,10 @@
 - [OpenTelemetry (OTel) Protocol](../protocols.integration/otel.md)
 - gRPC support
 - OpenSource
-- Хранилища: [ClickHouse](../logging/clickhouse.md), [PostgreSQL with Promscale](../db/postgresql.md), [ELK](../monitoring/elk.md)
+- Хранилища: 
+  - [ClickHouse](../store/clickhouse.md)
+    - [plugin gRPC](https://github.com/jaegertracing/jaeger-clickhouse)
+  - [PostgreSQL with Promscale](../db/postgresql.md), [ELK](../monitoring/elk.md)
 - Topology Graph
   - System Architecture
   - Deep Dependency Graph

@@ -56,6 +56,7 @@
 Плюсы:
 
 - Полнотекстовый поиск
+- [APM support](https://www.elastic.co/guide/en/apm/guide/current/open-telemetry.html) [Open Telemetry](../protocols.integration/otel.md)
 
 Минусы:
 

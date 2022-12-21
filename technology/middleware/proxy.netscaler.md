@@ -1,12 +1,21 @@
 # Netscaler
 
+- Auth
+	- [OAuth OIDC с v.12.1](https://docs.citrix.com/en-us/citrix-adc/current-release/aaa-tm/authentication-methods/oauth-authentication.html)
+	- [API OIDC](https://docs.citrix.com/en-us/citrix-adc/current-release/aaa-tm/authentication-methods/oauth-authentication/api-authentication-with-adc.html)
 - Routing [Citrix ADC (application delivery controller) Netscaler](https://docs.citrix.com/en-us/citrix-adc/current-release/content-switching.html)
 	![scheme](https://docs.citrix.com/en-us/citrix-adc/media/csw-lbconfiguration.png)
-	- Device Type
-	- Language
-	- Cookie
-	- HTTP Method
-	- Layer 3/4 Data
+- Proxy	
+
+## Rounting
+
+На основе параметров:
+
+- Device Type
+- Language
+- Cookie
+- HTTP Method
+- Layer 3/4 Data
 
 [example](https://www.cloudedskies.co.uk/single-post/2016/11/27/Citrix-NetScaler-111-Content-Switch)
 

@@ -78,7 +78,9 @@ JS Client
 - GUI, dashboards, ![charts](https://dytvr9ot2sszz.cloudfront.net/wp-content/uploads/2021/04/fourth-elk-guide-edited.jpg)
 - Logs
 - ![Visualization](https://dytvr9ot2sszz.cloudfront.net/wp-content/uploads/2021/04/image15-edited.png)
-  
+- [Adapter ClickHouse Data Store](https://habr.com/ru/post/581586/)
+	![schema](https://habrastorage.org/r/w1560/webt/dq/p0/mu/dqp0mujy3u-arpwischsswnvbow.jpeg)
+
 ## Deployment
 
 - [CPU RAM](https://gitinsky.com/elkstack?utm_source=pocket_saves#:~:text=%D0%9F%D1%80%D0%B5%D0%B4%D0%B2%D0%B0%D1%80%D0%B8%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D1%8B%D0%B5%20%D1%82%D1%80%D0%B5%D0%B1%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F)

@@ -9,7 +9,7 @@
 
 Плюсы:
 
-- OpenTelemetry (OTel) Protocol
+- [OpenTelemetry (OTel) Protocol](../protocols.integration/otel.md)
 - gRPC support
 - OpenSource
 - Хранилища: [ClickHouse](../logging/clickhouse.md), [PostgreSQL with Promscale](../db/postgresql.md), [ELK](../monitoring/elk.md)

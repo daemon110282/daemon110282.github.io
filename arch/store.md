@@ -26,18 +26,16 @@
 |  |  |
 
 ![Выбор хранилища http://architecturethehardparts.com/](../img/arch/choose_store.jpg)
-Relational database. Almost anything could be solved by them. 
+- Relational database. Almost anything could be solved by them. 
+- In-memory store. Their speed and limited data size make them ideal for fast operations.
+- Time-series database. Store and manage time-stamped data.
+- Graph database. It is suitable for complex relationships between unstructured objects.
+- Document store. They are good for large immutable data.
+- Wide column store. They are usually used for big data, analytics, reporting, etc., which needs denormalized data.
 
-In-memory store. Their speed and limited data size make them ideal for fast operations.
+## NoSQL Document store
 
-Time-series database. Store and manage time-stamped data.
-
-Graph database. It is suitable for complex relationships between unstructured objects.
-
-Document store. They are good for large immutable data.
-
-Wide column store. They are usually used for big data, analytics, reporting, etc., which needs denormalized data.
-
+- MongoDB — документоориентированная система управления базами данных, не требующая описания схемы таблиц. Считается одним из классических примеров NoSQL-систем, использует JSON-подобные документы и схему базы данных.
 
 ## Паттерны
 

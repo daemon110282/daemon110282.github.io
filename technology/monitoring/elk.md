@@ -46,6 +46,8 @@
 
 - [Basic Elasticsearch Concepts](https://logz.io/learn/complete-guide-elk-stack/)
 - [Elasticsearch Plugins](https://logz.io/learn/complete-guide-elk-stack/)
+- Необходима [правильная схема\политика индексов данных](https://habr.com/ru/company/sbermegamarket/blog/696844/) ILM (index lifecycle management)
+- Архивирование данных логов (Hot, Cold Data)
 
 ![scheme](https://substackcdn.com/image/fetch/w_1456,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2Fac3c8a9f-2148-4a29-bc72-6898445d1b85_1357x1536.jpeg)
 
@@ -54,11 +56,12 @@
 Плюсы:
 
 - Полнотекстовый поиск
+- [APM support](https://www.elastic.co/guide/en/apm/guide/current/open-telemetry.html) [Open Telemetry](../protocols.integration/otel.md)
 
 Минусы:
 
 - в Elasticsearch [нет встроенной системы авторизации и управления правами доступа](https://gitinsky.com/elkstack), что может привести к проблемам с ИБ
-- масштабирование может оказаться затратным
+- [масштабирование может оказаться затратным](https://habr.com/ru/company/sbermegamarket/blog/696844/)
 - JVM стек потребляет много ресурсов CPU и RAM
 - Требуется много места для хранения
 - установка и запуск стека ELK — далеко не простой процесс
@@ -76,7 +79,9 @@ JS Client
 - GUI, dashboards, ![charts](https://dytvr9ot2sszz.cloudfront.net/wp-content/uploads/2021/04/fourth-elk-guide-edited.jpg)
 - Logs
 - ![Visualization](https://dytvr9ot2sszz.cloudfront.net/wp-content/uploads/2021/04/image15-edited.png)
-  
+- [Adapter ClickHouse Data Store](https://habr.com/ru/post/581586/)
+	![schema](https://habrastorage.org/r/w1560/webt/dq/p0/mu/dqp0mujy3u-arpwischsswnvbow.jpeg)
+
 ## Deployment
 
 - [CPU RAM](https://gitinsky.com/elkstack?utm_source=pocket_saves#:~:text=%D0%9F%D1%80%D0%B5%D0%B4%D0%B2%D0%B0%D1%80%D0%B8%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D1%8B%D0%B5%20%D1%82%D1%80%D0%B5%D0%B1%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F)

@@ -6,8 +6,7 @@
 
 [Compare](https://www.nginx.com/blog/integrating-opentelemetry-modern-apps-reference-architecture-progress-report?mkt_tok=NjUzLVNNQy03ODMAAAGDoZc8tBnTTPpd0LyW8jL4ptLEDNmRtqT86ruxAIy0w26Q36wbMRlF5KC3BMfg2BcRVqWCoPUW3J4gMfJLANmKejRzOQC80kmD2-ueYoqT-DoXcB1iUA)
 
-- [Jaeger](trace/jaeger.md) (OpenTelemetry, в Yandex Cloud используется)
+- [Jaeger](trace/jaeger.md) (Support Protocol [OpenTelemetry](protocols.integration/otel.md), в Yandex Cloud используется)
 - Zipkin
   - [.NET Core Support + Zipkin](https://docs.microsoft.com/en-us/dotnet/core/diagnostics/distributed-tracing-instrumentation-walkthroughs)
-- Sentry
-  - [Nginx + Sentry](https://blog.sentry.io/2019/01/31/using-nginx-sentry-trace-errors-logs)
+- [Sentry](observability/sentry.md)

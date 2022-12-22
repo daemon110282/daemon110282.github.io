@@ -34,3 +34,11 @@
 	- [PHP 1.1 and SCIM 2.0 Okta](https://toolkit.okta.com/apps/scimify/)
 	- [PHP Onelogin](https://github.com/onelogin/onelogin-scim-php)
 	- [rocketchat SCIM 2.0 Example](https://lab.libreho.st/libre.sh/scim/rocketchat-scim)
+
+## Версии 
+
+- 2.0
+	- [2.0 vs 1.1](https://gayanmadusanka-80721.medium.com/scim-2-0-vs-scim-1-1-part-01-2bcfe2534f95)
+- 1.1 legacy
+- 1.0 deprecated
+

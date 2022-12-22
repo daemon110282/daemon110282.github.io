@@ -1,11 +1,25 @@
 # GrayLog
 
-- Поисковый движок на базе Elasticsearch.
+- [GrayLog](#graylog)
+	- [Зачем](#зачем)
+	- [Архитектура](#архитектура)
+	- [Плюсы-Минусы](#плюсы-минусы)
+	- [GELF](#gelf)
+	- [Compare](#compare)
+
+## Зачем
+
+- Поисковый движок на базе Elasticsearch
 - GELF ([TCP, UDP, HTTP](https://www.programmersought.com/article/85357770876/), Kafka, AMQP)
 - [k8s sidecar](https://habr.com/ru/post/557200/)
 - Manage REST API
-	- [Node JS Server fro GrayLog2 API v1.1.4](https://github.com/kolomiichenko/graylog-api)
+  - Automate hourly/daily queries into the data set, and then send a report with the search results
+  - Display data in your central dashboard of your SOC/NOC
+  - Create workflows for support teams, allowing them quick access to the data they need
+  - Automation of archive related tasks, allowing for quick restoration of logs or deletion of old logs if no longer needed
+- [Node JS Server fro GrayLog2 API v1.1.4](https://github.com/kolomiichenko/graylog-api)
 
+## Архитектура
 
 - Graylog-сервер (пакет ElstaicSearch): Graylog получает журналы от различных внутренних приложений и предоставляет интерфейс веб-доступа
 - Graylog Collector Sidecar: отвечает за сбор журналов приложений и отправку их на Graylog-сервер
@@ -32,6 +46,16 @@ HA:
 
 - API?
 - Производительность
+
+## GELF
+
+Every log message in GELF is a dict with the following fields:
+
+- host (the creator of the message)
+- timestamp
+- version
+- long and short version of the message
+- other custom fields you can freely configure on your own
 
 ## Compare
 

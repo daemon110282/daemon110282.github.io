@@ -1,6 +1,14 @@
 # Наблюдаемость Observability
 
-Концепция [OpenTelemetry (OTel)](../../technology/protocols.integration/otel.md) объединил OpenTracing + OpenCensus:
+- [Наблюдаемость Observability](#наблюдаемость-observability)
+	- [Patterns](#patterns)
+	- [Технологии](#технологии)
+		- [Варианты решений](#варианты-решений)
+		- [Data Collector](#data-collector)
+		- [Time Series Database](#time-series-database)
+	- [TODO](#todo)
+
+Концепция [OpenTelemetry (OTel)](../../technology/protocols.integration/otel.md) объединила OpenTracing + OpenCensus:
 
 - [Метрики Мониторинг](../../technology/monitoring.md), статистика
 	- При проектировании в архитектуру закладываются измерители, генерирующие информацию для системы мониторинга
@@ -18,14 +26,13 @@
 - ИД событий
 - Время событий
 
-## Patterns 
+## Patterns
 
 - Простота расширения
 - Корреляция данных
 - Универсальные агенты Data Collector по протоколу OpenTelemetry
 - Трансформация команд на принципах Site Reliability Engineering (SRE) four [golden signals](https://sre.google/sre-book/monitoring-distributed-systems/)
 	- TODO
-
 
 Reference Arch:
 

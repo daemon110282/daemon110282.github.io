@@ -4,16 +4,25 @@
 
 - [Observability](../../arch/ability/observability.md)
   - Service Map
+  - Traditional logging provides you with a __trail of events__. Some of those events are errors, but many times they’re simply __informational__. Sentry is fundamentally different because we __focus on exceptions__.
+  - provides client libraries in every major programming language which instrument your software’s code to capture both error data and tracing telemetry
 - [APM](../../arch/system.class/apm.md)
 	- [Frontend](https://geekflare.com/frontend-web-monitoring/)
+	- performance bottlenecks in your code
 - [Security and compliance](https://logz.io/learn/complete-guide-elk-stack/?utm_source=pocket_saves#common-pitfalls:~:text=guide%40logz.io-,Use%20Cases,-The%20ELK%20Stack)
 	- SIEM
 
 ## Фичи
 
+- Stack traces
+- Query
+- Dashboard
+- Release
+- Reproduce Errors Without User Feedback - __Breadcrumbs__ show you events that lead to errors.
 - [Nginx + Sentry](https://blog.sentry.io/2019/01/31/using-nginx-sentry-trace-errors-logs)
-- Data Collector 
+- Data Collector
 	- [From stdout from FluentD Plugin](https://www.fluentd.org/plugins/all)
+	- Hardware Sentry is free to use
 	- Sentry SDK
 		- [GELF To Sentry Adapter](https://mnwa.medium.com/easy-swap-graylog-to-sentry-when-you-have-complexity-infrastructure-5d91c3062c99)
 		- [gRPC](https://github.com/m2-oss/sentry-grpc)

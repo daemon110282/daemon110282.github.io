@@ -1,4 +1,4 @@
-# OpenTelemetry (OTel) Protocol
+# OpenTelemetry (OTel) Protocol (OTLP)
 
 ## Зачем
 
@@ -8,7 +8,7 @@
 	![Data Collector](https://habrastorage.org/r/w1560/webt/te/5k/cn/te5kcnz9h8pkdd0nr_2papfrr98.png)
 		- Pipeline	
 	- ![OTEL Agent](https://habrastorage.org/r/w1560/webt/tu/my/yk/tumyykh5oqpg_-gralg_9h8cy-m.png)
-- Export 
+- Export  
 	- Metric
 		- ![Prometheus Metric](https://habrastorage.org/r/w1560/webt/2l/8k/l1/2l8kl1ck385o93-rqiehzewqudw.png)
 		- Victoria Metrics

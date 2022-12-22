@@ -37,6 +37,7 @@
 - [Observability](../../arch/ability/observability.md)
   - Service Map
 - [APM](../../arch/system.class/apm.md)
+	- RUM - Unlike Elastic APM backend agents which monitor requests and responses, the RUM JavaScript agent __monitors the real user experience and interaction within your client-side application__. The RUM JavaScript agent is also framework-agnostic, which means it can be used with any front-end JavaScript application.
 - [Security and compliance](https://logz.io/learn/complete-guide-elk-stack/?utm_source=pocket_saves#common-pitfalls:~:text=guide%40logz.io-,Use%20Cases,-The%20ELK%20Stack)
 	- SIEM
 - BI
@@ -69,6 +70,8 @@
 ## Aplication Performance Monitoring (APM)
 
 JS Client
+
+Real User Monitoring (RUM):
 
 - Под фреймворки агенты [React, Angular, Vue.js](https://www.elastic.co/guide/en/apm/agent/rum-js/master/framework-integrations.html)
 - [Vue.JS APM client](https://www.elastic.co/guide/en/apm/agent/rum-js/master/vue-integration.html)

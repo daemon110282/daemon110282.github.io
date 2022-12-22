@@ -2,7 +2,7 @@
 
 Класс систем Application Perfomance Monitoring (APM).
 
-Функции:
+Функции [Monitoring](../technology/monitoring.md):
 
 - Агенты сбора метрик
 - Distributed Tracing
@@ -28,4 +28,8 @@
 
 ## Технологии
 
-- [Monitoring](../technology/monitoring.md)
+- Sentry
+- ELK
+- open source
+  - [opentelemetry signoz](https://signoz.io/)
+  - [Uptrace](https://github.com/uptrace/uptrace)

@@ -29,6 +29,7 @@
 	- Logs correlation with Trace [api sdk](https://opentelemetry.io/docs/reference/specification/logs/) __beta__
 		- FluentBit, [can collect logs](https://github.com/open-telemetry/opentelemetry-collector-contrib/tree/master/receiver/fluentforwardreceiver), then send to OpenTelemetry Collector
 		- [Vector support logs](https://vector.dev/docs/reference/configuration/sources/opentelemetry/)
+		- [JS](https://opentelemetry.io/docs/instrumentation/js/)
 - [Roadmap Spec](https://github.com/open-telemetry/opentelemetry-specification/blob/main/spec-compliance-matrix.md)
 	- Receivers
 	- Exporters	
@@ -86,6 +87,9 @@ Based on the [Specification, the APIs and SDKs are implemented](https://scalac.i
 - New First-Party Application Logs
 ![schema](https://opentelemetry.io/docs/reference/specification/logs/img/application-api-sdk.png)
 
+
+
+
 ## OTLP 
 
 - OTLP defines the encoding of telemetry data and the protocol used to exchange data between the client and the server.
@@ -99,6 +103,12 @@ Based on the [Specification, the APIs and SDKs are implemented](https://scalac.i
 
 - [TODO](https://opentelemetry.io/docs/reference/specification/overview/)
 - [Demo Official Docker + Jaeger + OTEL Collector + Grafana + Feature Flags](https://github.com/open-telemetry/opentelemetry-demo/blob/main/docs/docker_deployment.md)
+- JS
+	- VueJS
+		- [beta VueJS](https://www.npmjs.com/package/@opentelemetry/api-logs)
+		- [Example with SigNoz](https://devpress.csdn.net/cicd/62ec8a1a89d9027116a1130d.html#devmenu5)
+	- [Node JS Server example with SigNoz](https://devpress.csdn.net/cicd/62ec8a1a89d9027116a1130d.html#devmenu5)
+
 
 Reference:
 

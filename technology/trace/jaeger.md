@@ -3,7 +3,10 @@
 ## Зачем
 
 - Networking
-- Качество архитектуры [Наблюдаемость Observability](../../arch/ability/observability.md) __Tracing__
+- Качество архитектуры [Наблюдаемость Observability](../../arch/ability/observability.md) 
+  - __Tracing__
+  - Metric
+    - Service Performance Monitoring (SPM) - [Experimental](https://www.jaegertracing.io/docs/1.40/spm/)
 
 ## Плюсы-минусы
 

@@ -11,13 +11,15 @@
 	- APIs and SDKs for all the signals are independent of the backends you use for collecting the signals. You don’t have to worry about tight coupling with the solution you choose for storing the telemetry data (eg. Prometheus). 
 	- [Цель OTel - предоставить набор стандартизированных независимых от поставщика SDK, API и инструментов для приема](https://opentelemetry.io/docs/concepts/what-is-opentelemetry/), преобразования и отправки данных в серверную часть Observability
 - [Vendor Lock исключить](https://habr.com/ru/company/ru_mts/blog/537892/)
-- Input Data Collector ![Data Collector](https://habrastorage.org/r/w1560/webt/te/5k/cn/te5kcnz9h8pkdd0nr_2papfrr98.png)
+- [Receivers](https://github.com/open-telemetry/opentelemetry-collector-contrib/tree/main/receiver) - Input Data Collector ![Data Collector](https://habrastorage.org/r/w1560/webt/te/5k/cn/te5kcnz9h8pkdd0nr_2papfrr98.png)
+	- [Metric](https://opentelemetry.io/docs/reference/specification/metrics/)
+	- Trace
 	- 2 modes of operation: 
 		- you can either use the OpenTelemetry API to __manually instrument the telemetry collection__ from your application 
 		- or you can use __automatic instrumentation techniques__ that have already been implemented for some languages.	
-	- OTEL Agent ![OTEL Agent](https://habrastorage.org/r/w1560/webt/tu/my/yk/tumyykh5oqpg_-gralg_9h8cy-m.png)
-- Pipeline ![pipe](https://habrastorage.org/r/w1560/webt/ky/9x/am/ky9xam8dsqhwdukqh5indpynfp4.png)
-- Export  
+	- OTEL Instrumentation Library, Agent ![OTEL Agent](https://habrastorage.org/r/w1560/webt/tu/my/yk/tumyykh5oqpg_-gralg_9h8cy-m.png)
+- Data OTEL Collector
+- Exporters - SDK realize  
 	- Metric
 		- Prometheus Metric ![schema](https://habrastorage.org/r/w1560/webt/2l/8k/l1/2l8kl1ck385o93-rqiehzewqudw.png)
 		- Victoria Metrics
@@ -26,6 +28,18 @@
 		- Zipkin
 	- Logs correlation with Trace [api sdk](https://opentelemetry.io/docs/reference/specification/logs/) __beta__
 - [Roadmap Spec](https://github.com/open-telemetry/opentelemetry-specification/blob/main/spec-compliance-matrix.md)
+	- Receivers
+	- Exporters	
+	- OTLP
+		- Tracing: Stable
+		- Metrics: Stable
+		- Logs: Stable
+
+## Термины
+
+- Span
+- Trace
+- [Baggage](https://opentelemetry.io/docs/concepts/signals/baggage/)
 
 ## Архитектура
 
@@ -38,7 +52,7 @@
 
 Based on the [Specification, the APIs and SDKs are implemented](https://scalac.io/blog/opentelemetry-from-a-birds-eye-view-a-few-noteworthy-parts-of-the-project/). There’s a noteworthy distinction between the two:
 - __APIs consist of all the abstractions used for instrumentation__, clearly decoupled from their actual implementations. The APIs __do not contain the working functionality__ (they are only there to define what is going to be collected).
-- An important part of the SDK is the exporters. After collecting the telemetry signals from your application, 
+- An important part of the __SDK is the exporters__. After collecting the telemetry signals from your application, 
 	- either directly (using the manual instrumentation approach)
 	- or indirectly (using the auto-instrumentation), you have to actually emit them. 
 	To do that, you have to use an __SDK exporter and configure it to send data to a particular__ destination.
@@ -46,8 +60,9 @@ Based on the [Specification, the APIs and SDKs are implemented](https://scalac.i
 		- a telemetry backend of your choice (such as Prometheus, New Relic or Jaeger)
 		- or an OpenTelemetry collector.
 	- SDKs consist of all the parts that actually __implement the APIs and provide the working functionality__ for collecting and exporting all the signal data.
+![scheme](https://opentelemetry.io/img/library-design.png)
 
-### The Collector
+### OTEL Collector
 
 - You can export the signals
 	- directly to the backend

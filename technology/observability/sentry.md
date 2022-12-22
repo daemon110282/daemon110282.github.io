@@ -45,6 +45,9 @@
 Плюсы:
 
 - [Store support Clickhouse](https://blog.sentry.io/2019/05/16/introducing-snuba-sentrys-new-search-infrastructure/)
+- OpenTelemetry support [in work](https://develop.sentry.dev/sdk/performance/opentelemetry/) 
+	- [Demo GO OTEL trace to Sentry](https://medium.com/nuances-of-programming/opentelemetry-и-sentry-недооцененные-инструменты-трассировки-распределенных-систем-на-golang-c34de3dbdff5)
+	![scheme](https://miro.medium.com/max/720/0*KLpbhHGa_JixRl-q.webp)
 
 Минусы:
 

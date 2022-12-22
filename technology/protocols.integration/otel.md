@@ -27,6 +27,8 @@
 		- Jaeger
 		- Zipkin
 	- Logs correlation with Trace [api sdk](https://opentelemetry.io/docs/reference/specification/logs/) __beta__
+		- FluentBit, [can collect logs](https://github.com/open-telemetry/opentelemetry-collector-contrib/tree/master/receiver/fluentforwardreceiver), then send to OpenTelemetry Collector
+		- [Vector support logs](https://vector.dev/docs/reference/configuration/sources/opentelemetry/)
 - [Roadmap Spec](https://github.com/open-telemetry/opentelemetry-specification/blob/main/spec-compliance-matrix.md)
 	- Receivers
 	- Exporters	
@@ -60,6 +62,7 @@ Based on the [Specification, the APIs and SDKs are implemented](https://scalac.i
 		- a telemetry backend of your choice (such as Prometheus, New Relic or Jaeger)
 		- or an OpenTelemetry collector.
 	- SDKs consist of all the parts that actually __implement the APIs and provide the working functionality__ for collecting and exporting all the signal data.
+
 ![scheme](https://opentelemetry.io/img/library-design.png)
 
 ### OTEL Collector
@@ -69,6 +72,19 @@ Based on the [Specification, the APIs and SDKs are implemented](https://scalac.i
 	- of your choice directly from the OpenTelemetry exporter in your application.
 - The goal here is to unify the process of telemetry data processing so that you don’t have to set up communication with multiple telemetry tools separately. You just configure __one collector that is able to communicate with all the tools__, and run it alongside your application (eg. in a docker container).
 - provides you with some extra functionality you normally might not have, such as __retrying, batching or encryption__.
+
+### Logs
+
+[Receive from](https://opentelemetry.io/docs/reference/specification/logs/): 
+
+- stduot, file logs 
+![schema](https://opentelemetry.io/docs/reference/specification/logs/img/app-to-file-logs-otelcol.png)
+- FluentBit
+![schema](https://opentelemetry.io/docs/reference/specification/logs/img/app-to-file-logs-fb.png)
+- Direct
+![schema](https://opentelemetry.io/docs/reference/specification/logs/img/app-to-otelcol.png)
+- New First-Party Application Logs
+![schema](https://opentelemetry.io/docs/reference/specification/logs/img/application-api-sdk.png)
 
 ## OTLP 
 

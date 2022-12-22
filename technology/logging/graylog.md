@@ -17,7 +17,7 @@
   - Display data in your central dashboard of your SOC/NOC
   - Create workflows for support teams, allowing them quick access to the data they need
   - Automation of archive related tasks, allowing for quick restoration of logs or deletion of old logs if no longer needed
-- [Node JS Server fro GrayLog2 API v1.1.4](https://github.com/kolomiichenko/graylog-api)
+- [Node JS Server for GrayLog API v1.1.4](https://github.com/kolomiichenko/graylog-api)
 
 ## Архитектура
 

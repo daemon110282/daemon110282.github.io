@@ -31,7 +31,9 @@
   - __Возможные ошибки__
     - Должны быть информативными
 - Рекомендации по [наименованию](https://proglib.io/p/21-luchshiy-metod-vyvedet-vashi-navyki-proektirovaniya-api-na-novyy-uroven-2021-04-29) физических ресурсов, [свойств](https://proglib.io/p/15-luchshih-praktik-razrabotki-i-proektirovaniya-rest-api-2022-04-12)
-  
+  - Конечные точки в URL – [имя существительное, не глагол](https://habr.com/ru/post/351890/)
+  - Множественное число
+
 ### Качества хорошего API
 
 - очевидность
@@ -42,9 +44,8 @@
 
 - [MS Guide](https://github.com/Microsoft/api-guidelines/blob/master/Guidelines.md)
 - [IBM](https://www.ibm.com/docs/ru/zos-connect/zosconnect/3.0?topic=apis-designing-restful)
-- [REST Best Practice](https://stackoverflow.blog/2021/10/06/best-practices-for-authentication-and-authorization-for-rest-apis/?utm_campaign=APISecurity%20newsletter&utm_medium=email&_hsmi=204867978&_hsenc=p2ANqtz-94r6UDHzZG48tgtd0Sz6OiZicy6tTBQysQKtk0WzhZXlXrXBucIld80QE3Gll1Le1lxnwNhNqu-pySFps1AsqeR8MQrg&utm_content=204868574&utm_source=hs_email)
-- Конечные точки в URL – [имя существительное, не глагол](https://habr.com/ru/post/351890/)
-- Множественное число
+- Security
+  - [REST Best Practice - TLS, OAuth, OIDC SSO](https://stackoverflow.blog/2021/10/06/best-practices-for-authentication-and-authorization-for-rest-apis/?utm_campaign=APISecurity%20newsletter&utm_medium=email&_hsmi=204867978&_hsenc=p2ANqtz-94r6UDHzZG48tgtd0Sz6OiZicy6tTBQysQKtk0WzhZXlXrXBucIld80QE3Gll1Le1lxnwNhNqu-pySFps1AsqeR8MQrg&utm_content=204868574&utm_source=hs_email)
 - АвтоДокументация [OpenApi](openapi.md)
 - Версионность
 - Версия вашего приложения
@@ -63,3 +64,7 @@
   - [Пример Яндекс.Касса](https://yookassa.ru/developers/using-api/interaction-format)
 - Стандартизировать дополнительные машиночитаемые данные в ответе, предпочтительно в форме заголовков HTTP (потому что чтение заголовков не требует вычитывания и разбора всего тела ответа, так что промежуточные прокси и гейтвеи смогут понять семантику ошибки без дополнительных расходов; а так же их можно логировать.
 - [Валидация входных данных](https://github.com/Sairyss/backend-best-practices)
+- Файлы
+  - массив байтов base64, не в JSON
+  - Content-Type: multipart/form-data
+  - файл нужно передавать под его "родным" Content-Type

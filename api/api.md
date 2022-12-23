@@ -78,4 +78,6 @@ decouple the different implementation versions into independent handlers
 - [Api Gateway](api.gateway.md)
   - Ocelot
   - Kong
-  - NGinx
+  - Nginx
+  - Gravitee
+  - Tyk

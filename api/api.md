@@ -33,17 +33,19 @@
 ## Patterns
 
 TODO
-
 - <https://microservice-api-patterns.org/>
+- [Методы, JSON, URI](https://habr.com/ru/post/447322/)
+
+Security
+- [Угрозы OWASP подробно](https://habr.com/ru/post/503284/)
+
+CheckList
 - <https://mathieu.fenniak.net/the-api-checklist/>
-- <https://habr.com/ru/post/503284/>
-- <https://habr.com/ru/post/447322/>
 - <https://www.gov.uk/guidance/gds-api-technical-and-data-standards>
 - <https://www.gov.uk/guidance/setting-api-service-levels>
 - [API gateway](api.gateway.md)
 - [Стратегии повторов](../arch/pattern/pattern.failure.md) при сбоях Rerty Policy
 - <https://mathieu.fenniak.net/the-api-checklist/>
-- <https://github.com/Microsoft/api-guidelines/blob/master/Guidelines.md>
 
 ### Versioning
 

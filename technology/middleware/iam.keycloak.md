@@ -76,7 +76,9 @@
 
 ## User Storage
 
-TODO
+User Provisioning
+- Inbound - Keycloak получает из ИС источника пользовательские данные
+- Outbound - ИС источник предоставляет Keycloak пользовательские данные
 
 REST SPI [Custom User provider](https://www.baeldung.com/java-keycloak-custom-user-providers) реализация интерфейсов org.keycloak.storage.UserStorageProviderFactory - Allows Keycloak to access custom user stores.
 	- [Интерфейсы пользовательских провайдеров](https://www.keycloak.org/docs/11.0/server_development/index.html#provider-capability-interfaces)

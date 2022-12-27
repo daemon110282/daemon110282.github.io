@@ -32,31 +32,25 @@
 
 ## Patterns
 
-TODO
-- <https://microservice-api-patterns.org/>
-- [Методы, JSON, URI](https://habr.com/ru/post/447322/)
-
-Security
-- [Угрозы OWASP подробно](https://habr.com/ru/post/503284/)
-
-CheckList
-- <https://mathieu.fenniak.net/the-api-checklist/>
-- <https://www.gov.uk/guidance/gds-api-technical-and-data-standards>
-- <https://www.gov.uk/guidance/setting-api-service-levels>
 - [API gateway](api.gateway.md)
 - [Стратегии повторов](../arch/pattern/pattern.failure.md) при сбоях Rerty Policy
-- <https://mathieu.fenniak.net/the-api-checklist/>
+
+SLI, SLA
+- request latency
+- system throughput
+- availability and downtime
+- When designing a [low-availability API, consider the use of HTTP 202 responses](https://www.gov.uk/guidance/setting-api-service-levels). For example, to indicate that the API has accepted a request but needs to wait to take further action. 
 
 ### Versioning
 
-Then you can decide between implementing both versions of the service
-simultaneously within the same service instance, or deploying different instances that each handle a
-version of the API. A good approach for this is the **Mediator pattern** (for example, **MediatR** library) to
-decouple the different implementation versions into independent handlers
+Then you can decide between implementing both versions of the service simultaneously within the same service instance, or deploying different instances that each handle a
+version of the API. A good approach for this is the **Mediator pattern** (for example, **MediatR** library) to decouple the different implementation versions into independent handlers.
 
 ### Security
 
 - [apisecurity.io](https://apisecurity.io/)
+- [Угрозы OWASP подробно](https://habr.com/ru/post/503284/)
+- [Control levels of user authorisation](https://www.gov.uk/guidance/gds-api-technical-and-data-standards)
 
 ### Документирование
 
@@ -69,7 +63,7 @@ decouple the different implementation versions into independent handlers
 - TODO [API Spec Trends](https://www.apimatic.io/blog/2022/03/top-api-specification-trends-2019-2022/)
 - [WSDL](wsdl.md)
 
-## API management
+### API management
 
 [API management](api-managment.md)
 

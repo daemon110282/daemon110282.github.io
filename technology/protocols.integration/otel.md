@@ -107,9 +107,8 @@ Based on the [Specification, the APIs and SDKs are implemented](https://scalac.i
 	- [Node JS Server example with SigNoz](https://devpress.csdn.net/cicd/62ec8a1a89d9027116a1130d.html#devmenu5)
 	- [Grafana + Grafana Loki (logs) + Grafana Tempo + Jaeger (trace) + Prometheus\Zabbix (metric)](https://github.com/mnadeem/nodejs-opentelemetry-tempo)
 		- __Beta__ [RUM Grafana Faro OTEL JS SDK + Grafana Phlare](https://www.infoq.com/news/2022/12/grafana-faro-phlare/)
-			- Grafana Phlare provides an open-source (GNU Affero General Public License v3.0) backend for storing and querying profiling data.
 		![scheme](https://grafana.com/static/assets/img/blog/grafana-cloud-faro-diagram.png)
-		- не которые Kibana c ClickHouse дружат
+			- Grafana Phlare provides an open-source (GNU Affero General Public License v3.0) backend for storing and querying profiling data.				
 
 Reference:
 

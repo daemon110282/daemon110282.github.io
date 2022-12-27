@@ -69,6 +69,7 @@ Client type — тип клиента, от которого зависит сп
 - aud: "1234abcdef" - получатель (audience) токена, client_id для IdToken
 - exp: 1311281970 - срок действия
 - iat: 1311280970 - 
+- scope: openid - These are the scopes that bind to user attributes(claims). You can use OIDC scopes to limit access user’s attributes.
 - Custom User Claims optional
 
 ## Deployment models

@@ -24,12 +24,51 @@ Identity Provider (IDP) в IAM with industry standard supported protocols:
   - Multi-Factor Authentication (MFA)
 - Адаптивная аутентификация (применение более строгих форм проверки подлинности в зависимости от контекста пользователя — геолокации, устройства, с которого осуществляется вход, и т. д.)
 - [Управление сессиями](https://www.securitylab.ru/analytics/530059.php)
-- Role Based Access (RBAC)
+- Access Control mechanisms (ACMs)
+	- Role Based Access (RBAC)
+	- Attribute-based access Control (ABAC)
+	- User-based access control (UBAC)
+	- Context-based access control (CBAC)
+	- Rule-based access control
+	- Time-based access control
 - Custom Login Form
 	- [Redirect or Embedded Widget or Embedded SDK](https://developer.okta.com/docs/guides/sign-in-overview/main/#choose-your-auth)
 		- [Auth0](https://auth0.com/docs/authenticate/login)
 		- [ADFS](https://learn.microsoft.com/en-us/azure/active-directory/develop/scenario-spa-sign-in?tabs=javascript2)
 - Session Managment
+
+### User store
+
+- Внутрення БД
+- User Federation
+  - встроенный LDAP
+  - внешний LDAP
+  - Microsoft Active Directory
+  - [SCIM](../../technology/protocols.integration/scim.md)
+- Apache Cassandra
+- Identity Brokering подключение к External IDP
+  - SAML
+  - [OIDC](../../technology/protocols.integration/oidc.md)
+  - Social (FB, Google..)
+- User Provisioning
+	- Inbound - IAM получает из ИС источника пользовательские данные
+	- Outbound - ИС источник предоставляет IAM пользовательские данные
+
+### Access Control
+
+![schema](https://wso2.cachefly.net/wso2/sites/all/2021/images/access-control-with-wso2-identity-server.svg)
+
+## Протоколы
+
+![scheme](https://habrastorage.org/r/w1560/getpro/habr/post_images/bc9/ad8/618/bc9ad86182b31533cc26413abc67924f.png)
+
+### OAuth
+
+- [OAuth 2.0](../../technology/protocols.integration/oauth.md) [нужен, чтобы получать](https://habr.com/ru/company/dataart/blog/311376/) токены доступа и с ними обращаться к ресурсам. Authorization framework, not an authentication protocol.
+
+### OpenID Connect (OIDC)
+
+- [OpenID Сonnect](../../technology/protocols.integration/oidc.md) нужен, чтобы получить у пользователя его учетные данные и проверить их. Authentication protocol.
 
 ## Критерии выбора
 
@@ -50,32 +89,6 @@ Identity Provider (IDP) в IAM with industry standard supported protocols:
 - [keycloak-ory hydra](https://stackshare.io/stackups/keycloak-vs-ory-hydra)
 	- https://gruchalski.com/posts/2021-04-10-ory-reference-docker-compose-and-thoughts-on-the-platform/
 - [Keycloak лучше ADFS](https://trueengineering.ru/ru/cases/migrating-from-adfs-to-keycloak)
-
-## User store
-
-- Внутрення БД
-- User Federation
-  - встроенный LDAP
-  - внешний LDAP
-  - Microsoft Active Directory
-  - [SCIM](../../technology/protocols.integration/scim.md)
-- Apache Cassandra
-- Identity Brokering подключение к External IDP
-  - SAML
-  - [OIDC](../../technology/protocols.integration/oidc.md)
-  - Social (FB, Google..)
-
-## Протоколы
-
-![scheme](https://habrastorage.org/r/w1560/getpro/habr/post_images/bc9/ad8/618/bc9ad86182b31533cc26413abc67924f.png)
-
-### OAuth
-
-- [OAuth 2.0](../../technology/protocols.integration/oauth.md) [нужен, чтобы получать](https://habr.com/ru/company/dataart/blog/311376/) токены доступа и с ними обращаться к ресурсам. Authorization framework, not an authentication protocol.
-
-### OpenID Connect (OIDC)
-
-- [OpenID Сonnect](../../technology/protocols.integration/oidc.md) нужен, чтобы получить у пользователя его учетные данные и проверить их. Authentication protocol.
 
 ## Технологии
 

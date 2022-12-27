@@ -1,10 +1,14 @@
 # OAuth
 
+## Зачем 
+
 - [Нужен, чтобы получать](https://habr.com/ru/company/dataart/blog/311376/) токены доступа и с ними обращаться к ресурсам. 
 - Authorization framework, not an authentication protocol (например [OIDC](oidc.md)).
+- RBAC\ABAC и тп
 
 https://connect2id.com/learn/oauth-2
- 
+
+
 ## Параметры Flow
 
 Основные [параметры Flow](https://identityserver4.readthedocs.io/en/latest/quickstarts/1_client_credentials.html)
@@ -25,6 +29,6 @@ https://connect2id.com/learn/oauth-2
 - aud: "1234abcdef" - получатель (audience) токена, client_id для IdToken
 - exp: 1311281970 - срок действия
 - iat: 1311280970 - 
-- scope - роли, права доступа (RBAC) 
+- scope - роли, права доступа (RBAC, ABAC) к ресурсу
 - client_id - 
 - Key ID — айдишник ключа, которым можно проверить подпись токена

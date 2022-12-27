@@ -67,11 +67,15 @@ Identity Provider (IDP) в IAM with industry standard supported protocols:
 
 ## Протоколы
 
-### OAuth, OpenID Connect (OIDC)
+![scheme](https://habrastorage.org/r/w1560/getpro/habr/post_images/bc9/ad8/618/bc9ad86182b31533cc26413abc67924f.png)
 
-- ![scheme](https://habrastorage.org/r/w1560/getpro/habr/post_images/bc9/ad8/618/bc9ad86182b31533cc26413abc67924f.png)
-- [OpenID Сonnect](../../technology/protocols.integration/oidc.md) нужен, чтобы получить у пользователя его учетные данные и проверить их. Authentication protocol.
+### OAuth
+
 - [OAuth 2.0](../../technology/protocols.integration/oauth.md) [нужен, чтобы получать](https://habr.com/ru/company/dataart/blog/311376/) токены доступа и с ними обращаться к ресурсам. Authorization framework, not an authentication protocol.
+
+### OpenID Connect (OIDC)
+
+- [OpenID Сonnect](../../technology/protocols.integration/oidc.md) нужен, чтобы получить у пользователя его учетные данные и проверить их. Authentication protocol.
 
 ## Технологии
 

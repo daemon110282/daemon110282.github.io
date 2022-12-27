@@ -1,9 +1,11 @@
 # OpenID Connect (OIDC)
 
 - [OpenID Connect (OIDC)](#openid-connect-oidc)
-	- [Flow Grant](#flow-grant)
-	- [TODO](#todo)
-	- [Параметры Flow](#параметры-flow)
+	- [Технологии](#технологии)
+	- [Flow Grant](#flow-grant)	
+		- [Параметры Flow](#параметры-flow)
+	- [Deployment models](#deployment-models)
+	
 
 ![OpenID Сonnect процесс](https://habrastorage.org/r/w1560/getpro/habr/post_images/c13/afc/ee5/c13afcee5226ddb135df9836d3321b17.png)
 
@@ -44,6 +46,31 @@ Client type — тип клиента, от которого зависит сп
 	- [Implicit Flow](https://learn.microsoft.com/en-us/windows-server/identity/ad-fs/overview/ad-fs-openid-connect-oauth-flows-scenarios) - redirection required SPA, JS __legacy__		
 	- Device authorization
 
+### Параметры Flow
+
+Основные [параметры Flow](https://identityserver4.readthedocs.io/en/latest/quickstarts/1_client_credentials.html)
+
+- Аутентификация Client через OpenID Connect Provider (IDP)
+	- IdToken - IdentityToken (формат [JWT](../jwt.md) обязателен) (OIDC) - for authenticating a user. A JWT token used to represent the identity of the user.
+	- TokenEndpoint - получаем IdentityToken
+	- ClientId
+	- ClientSecret
+		- Хранится на BackEnd и передается в Authentication Flow
+		- в Implicit Flow не хранится в SPA, JS и не передается
+	
+![tokens id, acccess](https://images.ctfassets.net/23aumh6u8s0i/2y2MCTq87UqQ1uzCJsl4M/c6f127f738f0d13017ff47544958d880/id-token-vs-access-token.jpg)
+
+[Песочница](https://openidconnect.net/)
+
+### Identity Token структура Payload
+
+- iss: "http://my-domain.auth0.com" - кто выпустил токен
+- sub: "auth0|123456" - 
+- aud: "1234abcdef" - получатель (audience) токена, client_id для IdToken
+- exp: 1311281970 - срок действия
+- iat: 1311280970 - 
+- Custom User Claims optional
+
 ## Deployment models
 
 [Deployment models](https://developer.okta.com/docs/concepts/redirect-vs-embedded/):
@@ -64,45 +91,10 @@ Client type — тип клиента, от которого зависит сп
 		[BackEnd Spring](https://developer.okta.com/blog/2021/10/04/spring-boot-spa)
 	[SPA Azure ADFS example](https://learn.microsoft.com/en-us/azure/active-directory/develop/single-page-app-quickstart)
 
-TODO
+
+## TODO
+
 - https://cyberpolygon.com/ru/materials/security-of-json-web-tokens-jwt/%7Cere
 - [__TODO BFF нужен SPA CSRF attacks?__](https://docs.duendesoftware.com/identityserver/v5/bff/overview/)
 - [JS OIDC Client](https://github.com/IdentityModel/oidc-client-js/wiki)
 - Store AccessToken JWT [in Session Cookie](https://jcbaey.com/authentication-in-spa-reactjs-and-vuejs-the-right-way/)
-  
-## Параметры Flow
-
-Основные [параметры Flow](https://identityserver4.readthedocs.io/en/latest/quickstarts/1_client_credentials.html)
-
-- Аутентификация Client через OpenID Connect Provider (IDP)
-	- IdToken - IdentityToken (формат [JWT](../jwt.md) обязателен) (OIDC) - for authenticating a user. A JWT token used to represent the identity of the user.
-	- TokenEndpoint - получаем IdentityToken
-	- ClientId
-	- ClientSecret
-		- Хранится на BackEnd и передается в Authentication Flow
-		- в Implicit Flow не хранится в SPA, JS и не передается
-	- Scope
-- Авторизация OAuth2
-	- Authorization Code - обменивается в Authorization Code Flow на AccessToken
-	- Получение данных Resource с учетом доступа Scope
-		- AccessToken (формат [JWT](../jwt.md) не обязателен) - for accessing a resource. [A JWT token used in Oauth and OpenID connect scenarios and intended to be consumed by the resource](https://auth0.com/blog/id-token-access-token-what-is-the-difference/).
-	- RefreshToken
-
-![tokens id, acccess](https://images.ctfassets.net/23aumh6u8s0i/2y2MCTq87UqQ1uzCJsl4M/c6f127f738f0d13017ff47544958d880/id-token-vs-access-token.jpg)
-
-[Песочница](https://openidconnect.net/)
-
-### Access Token структура Payload
-
-- iss: "http://my-domain.auth0.com" - кто выпустил токен
-- sub: "auth0|123456" - 
-- aud: "1234abcdef" - получатель (audience) токена, client_id для IdToken
-- scope - роли 
-- client_id
-- exp: 1311281970	- срок действия
-- iat: 1311280970 - 
-- Key ID — айдишник ключа, которым можно проверить подпись токена
-
-### Identity Token структура Payload
-
-- Custom User Claims optional

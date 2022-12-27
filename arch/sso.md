@@ -4,9 +4,11 @@
 
 Возможность [Identity and Access Management (IAM)](system.class/iam.md) решений.
 
-1. Идентификация - логин пароль
+1. [Идентификация](https://habr.com/ru/company/nixys/blog/563244/) - логин пароль
 2. Аутентификация - разрешен доступ checklogin
+	- [OIDC](../technology/protocols.integration/oidc.md)
 3. Авторизация - роли, доступ checkaccess
+	- [OAuth 2.0](../technology/protocols.integration/oauth.md)
 
 Типы [SSO](https://habr.com/ru/company/nixys/blog/563244/)
 ![scheme](https://habrastorage.org/r/w1560/webt/yg/wc/c0/ygwcc0udngt3kwnzjzlp6h4q_is.png)
@@ -17,8 +19,6 @@
 - Web Single Sign-on - протоколы SAML, OAuth, OpenID Connect
 
 [Варианты решений](https://www.g2.com/categories/single-sign-on-sso)
-
-https://habr.com/ru/company/nixys/blog/563244/
 
 ## Плюсы-минусы
 

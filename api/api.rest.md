@@ -73,6 +73,7 @@ CheckList
 ### Файлы
 
 - Не использовать [base64 кодирования](https://tyk.io/blog/api-design-guidance-file-upload/)
+- Use [Content Delivery Network (CDN)](../arch/system.class/cdn.md)
 - Download
   - Массив байтов, не в JSON. Файл нужно передавать [под его "родным"](https://code-maze.com/aspnetcore-web-api-return-file/) __Content-Type__
   - Request the file, GET /downloads/123, file not yet completed, __response 102 Processing__ (and an optional progress and/or ETA, if available)

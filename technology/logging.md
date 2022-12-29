@@ -6,4 +6,5 @@
 - Cloud SaaS
 	- Logrocket
 	- Rollbar
+	- [Errbit SaaS (Loggly, New Relic)](https://www.sitepoint.com/logging-errors-client-side-apps/)
 

@@ -86,7 +86,7 @@ TODO:
 
 - InfluxDB
 - Prometeus
-- [Victoria metrics](https://victoriametrics.com/)
+- [Victoria metrics](../../technology/monitoring/victoriametrics.md)
 
 
 ## TODO

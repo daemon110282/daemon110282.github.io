@@ -41,13 +41,10 @@ TODO
 - Кеширование, lazy load component UI?
 - Валидация - дублирование клиент+сервер из за уязвимости браузера? Разные языки двойная кодовая база?
 - Сквозная аутентификация: [Single Sign-on](../sso.md), [Identity Service](../system.class/iam.md)
-- Мониторинг
-	- [Sematext](https://sematext.com/blog/tracking-and-monitoring-spa-apps/)
-	- [Raygun](https://raygun.com/blog/spa-performance/)
+- [Мониторинг](../../technology/monitoring.md)	
 	- [Sentry](../../technology/observability/sentry.md)
-	- [Rollbar](https://rollbar.com/blog/error-tracking-with-vue-js/)
-- Логирование
-	[Errbit SaaS (Loggly, New Relic)](https://www.sitepoint.com/logging-errors-client-side-apps/)
+- [Логирование](../../technology/logging.md)
+	- [Errbit SaaS (Loggly, New Relic)](https://www.sitepoint.com/logging-errors-client-side-apps/)
 
 См ms arch
 

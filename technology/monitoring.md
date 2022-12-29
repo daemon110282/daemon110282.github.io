@@ -21,17 +21,20 @@
 		- Prometeus + Grafana
 		![arch](https://prometheus.io/assets/architecture.png)
 			- [Prometeus Client JS](https://github.com/weaveworks/promjs)
-		- [ELK stack](monitoring/elk.md)
-		- [Victoria metrics](https://victoriametrics.com/)
+		- [ELK stack](monitoring/elk.md)		
 	- BSL __license__
 		- [Sentry](observability/sentry.md)
 		- [Альтернативы DataDog Crashlytics Rollbar](https://stackshare.io/sentry#alternatives)
 			- [Gartner AppDynamics Splunk](https://www.gartner.com/reviews/market/application-performance-monitoring-and-observability/vendor/sentry/product/sentry/alternatives)		
 	- Commercial
 		- PRTG
-		- AppDynamics
-		- [Victoria metrics](https://victoriametrics.com/)
+		- AppDynamics		
 	- Splunk
+
+Используют разные хранилища метрик (Time Series Database):
+- [Prometheus](store/prometheus.md)
+- InfluxDB
+- [Victoria metrics](monitoring/victoriametrics.md)
 
 ## Compare
 

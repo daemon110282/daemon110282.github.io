@@ -85,7 +85,7 @@ TODO:
 ### Time Series Database
 
 - InfluxDB
-- Prometeus
+- [Prometeus](../../technology/store/prometheus.md)
 - [Victoria metrics](../../technology/monitoring/victoriametrics.md)
 
 

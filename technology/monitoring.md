@@ -7,11 +7,12 @@
 	- Loggly
 	- Logentries
 	- Sentry 	
-	- Rollbar
+	- [Rollbar](https://rollbar.com/blog/error-tracking-with-vue-js/)
 	- DataDog
 	- LogRocket
 	- Airbrake
-	- Raygun
+	- [Sematext](https://sematext.com/blog/tracking-and-monitoring-spa-apps/)
+	- [Raygun](https://raygun.com/blog/spa-performance/)
 - On premise
 	- Open Source
     	- [ELK](monitoring/elk.md)

@@ -14,7 +14,7 @@
 | - | - |
 | Скорость работы и отзывчивость приложения. | Более длительное время начальной загрузки |
 | Возможность переиспользовать код. | Безопасность данных. |
-| Улучшенный пользовательский опыт | Плохая SEO-оптимизация (решение SSR) |
+| Улучшенный пользовательский опыт | [Плохая SEO-оптимизация (решение SSR)](https://www.purrweb.com/ru/blog/odnostranichnye-prilozheniya-polnyj-gid-po-razrabotke/) |
 | Поддержка работы оффлайн, без подключения к Интернету и серверу | Кнопка «Назад». |
 | the presentation logic resides in the client, and server transactions can be data-only, depending on your preference for data rendering |  |
 
@@ -46,16 +46,14 @@ TODO
 - [Логирование](../../technology/logging.md)
 	- [Errbit SaaS (Loggly, New Relic)](https://www.sitepoint.com/logging-errors-client-side-apps/)
 
-См ms arch
-
-https://www.purrweb.com/ru/blog/odnostranichnye-prilozheniya-polnyj-gid-po-razrabotke/
-
 ## Технологии
 
 - [Vue.JS](../../technology/framework/vuejs.md)
 - React
 
 ## Reference Architecture
+
+См ms arch
 
 - [AWS](https://docs.aws.amazon.com/whitepapers/latest/serverless-multi-tier-architectures-api-gateway-lambda/single-page-application.HTML)
 - https://medium.com/hackernoon/architecting-single-page-applications-b842ea633c2e

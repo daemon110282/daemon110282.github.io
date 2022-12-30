@@ -3,7 +3,6 @@
 ## Зачем
 
 - [Observability](../../arch/ability/observability.md)
-  - Service Map
   - Traditional logging provides you with a __trail of events__. Some of those events are errors, but many times they’re simply __informational__. Sentry is fundamentally different because we __focus on exceptions__.
   - provides client libraries in every major programming language which instrument your software’s code to capture both error data and tracing telemetry
 - [APM](../../arch/system.class/apm.md)

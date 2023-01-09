@@ -28,8 +28,9 @@
 
 ## Технологии
 
-- Sentry
-- ELK
+[Варианты решений](https://openapm.io/landscape)
+- [Sentry](../../technology/observability/sentry.md)
+- [ELK](../../technology/monitoring/elk.md)
 - open source
   - [opentelemetry signoz](https://signoz.io/)
   - [Uptrace](https://github.com/uptrace/uptrace)

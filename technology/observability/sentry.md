@@ -1,5 +1,7 @@
 # Sentry
 
+Инструмент мониторинга исключений (exception), ошибок.
+
 ## Зачем
 
 - [Observability](../../arch/ability/observability.md)
@@ -25,7 +27,9 @@
 	- Sentry SDK
 		- [GELF To Sentry Adapter](https://mnwa.medium.com/easy-swap-graylog-to-sentry-when-you-have-complexity-infrastructure-5d91c3062c99)
 		- [gRPC](https://github.com/m2-oss/sentry-grpc)
-- APM
+	- [RSyslog и Sentry](https://adw0rd.com/2012/12/15/rsyslog-sentry-bridge/)
+	- [Drupal module Raven](https://www.drupal.org/project/raven)
+- [APM](../../arch/system.class/apm.md)
 	- [SPA Vite](https://docs.sentry.io/platforms/javascript/sourcemaps/uploading/vite/?utm_source=pocket_saves)
 - Trace
 - Alert
@@ -47,6 +51,9 @@
 - OpenTelemetry support [in work](https://develop.sentry.dev/sdk/performance/opentelemetry/) 
 	- [Demo GO OTEL trace to Sentry](https://medium.com/nuances-of-programming/opentelemetry-и-sentry-недооцененные-инструменты-трассировки-распределенных-систем-на-golang-c34de3dbdff5)
 	![scheme](https://miro.medium.com/max/720/0*KLpbhHGa_JixRl-q.webp)
+- [дает фокусировку на ошибках](https://infostart.ru/1c/articles/1178723/?utm_source=pocket_saves)
+- позволяет получить максимальный контекст в короткое сообщение
+- хорошая оптимизация хранения данных. То есть, он не хранит всю подряд информацию, если произошло повторное событие – оно группируется в одно
 
 Минусы:
 

@@ -13,11 +13,11 @@
 - [Vendor Lock исключить](https://habr.com/ru/company/ru_mts/blog/537892/)
 - [Receivers](https://github.com/open-telemetry/opentelemetry-collector-contrib/tree/main/receiver) - Input Data Collector ![Data Collector](https://habrastorage.org/r/w1560/webt/te/5k/cn/te5kcnz9h8pkdd0nr_2papfrr98.png)
 	- [Metric](https://opentelemetry.io/docs/reference/specification/metrics/)
-	- Trace
-	- 2 modes of operation: 
+	- Trace	
+	- OTEL Instrumentation Library, Agent, 2 modes of operation: 
 		- you can either use the OpenTelemetry API to __manually instrument the telemetry collection__ from your application 
 		- or you can use __automatic instrumentation techniques__ that have already been implemented for some languages.	
-	- OTEL Instrumentation Library, Agent ![OTEL Agent](https://habrastorage.org/r/w1560/webt/tu/my/yk/tumyykh5oqpg_-gralg_9h8cy-m.png)
+		![OTEL Agent](https://habrastorage.org/r/w1560/webt/tu/my/yk/tumyykh5oqpg_-gralg_9h8cy-m.png)
 - Data OTEL Collector
 - Exporters - SDK realize  
 	- Metric
@@ -26,7 +26,7 @@
 	- Trace
 		- Jaeger
 		- Zipkin
-	- Logs correlation with Trace [api sdk](https://opentelemetry.io/docs/reference/specification/logs/) __beta__
+	- [Logs](https://opentelemetry.io/docs/reference/specification/logs/) correlation with Trace API SDK __beta__
 		- FluentBit, [can collect logs](https://github.com/open-telemetry/opentelemetry-collector-contrib/tree/master/receiver/fluentforwardreceiver), then send to OpenTelemetry Collector
 		- [Vector support logs](https://vector.dev/docs/reference/configuration/sources/opentelemetry/)
 		- [JS](https://opentelemetry.io/docs/instrumentation/js/)

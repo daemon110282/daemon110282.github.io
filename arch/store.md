@@ -6,7 +6,6 @@
   - [Паттерны](#паттерны)
   - [Принципы проектирования](#принципы-проектирования)
   - [Технологии](#технологии)
-  - [Links](#links)
 
 ## Зачем
 
@@ -29,25 +28,23 @@
 - Relational database. Almost anything could be solved by them. 
 - In-memory store. Their speed and limited data size make them ideal for fast operations.
 - Time-series database. Store and manage time-stamped data.
-- Graph database. It is suitable for complex relationships between unstructured objects.
-- Document store. They are good for large immutable data.
-- Wide column store. They are usually used for big data, analytics, reporting, etc., which needs denormalized data.
+- NoSQL
+  - Key Value
+  - Graph database. It is suitable for complex relationships between unstructured objects.
+  - Document store. They are good for large immutable data.
+  - Wide column store. They are usually used for big data, analytics, reporting, etc., which needs denormalized data.
 
-## NoSQL Document store
-
-- MongoDB — документоориентированная система управления базами данных, не требующая описания схемы таблиц. Считается одним из классических примеров NoSQL-систем, использует JSON-подобные документы и схему базы данных.
 
 ## Паттерны
 
 - Денормализация
-- Модель данных звезда
-- <https://habr.com/ru/company/visiology/blog/678346/>
-- агрегированные витрины
+- Модель данных [звезда — оптимальная структура данных при переходе на российский BI](https://habr.com/ru/company/visiology/blog/678346/)
+- Агрегированные витрины
+- [Data Mining против хранилища данных](https://coderlessons.com/tutorials/bolshie-dannye-i-analitika/teoriia-khraneniia-dannykh/21-data-mining-protiv-khranilishcha-dannykh)
 
 ## Принципы проектирования
 
 ## Технологии
 
-## Links
+[Технологии](../technology/store.md)
 
-<https://coderlessons.com/tutorials/bolshie-dannye-i-analitika/teoriia-khraneniia-dannykh/21-data-mining-protiv-khranilishcha-dannykh>

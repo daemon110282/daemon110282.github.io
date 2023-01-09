@@ -23,7 +23,6 @@ Identity Provider (IDP) в IAM with industry standard supported protocols:
 - Аутентификация
   - Multi-Factor Authentication (MFA)
 - Адаптивная аутентификация (применение более строгих форм проверки подлинности в зависимости от контекста пользователя — геолокации, устройства, с которого осуществляется вход, и т. д.)
-- [Управление сессиями](https://www.securitylab.ru/analytics/530059.php)
 - Access Control mechanisms (ACMs)
 	- Role Based Access (RBAC)
 	- Attribute-based access Control (ABAC)
@@ -35,7 +34,9 @@ Identity Provider (IDP) в IAM with industry standard supported protocols:
 	- [Redirect or Embedded Widget or Embedded SDK](https://developer.okta.com/docs/guides/sign-in-overview/main/#choose-your-auth)
 		- [Auth0](https://auth0.com/docs/authenticate/login)
 		- [ADFS](https://learn.microsoft.com/en-us/azure/active-directory/develop/scenario-spa-sign-in?tabs=javascript2)
-- Session Managment
+- Session Managment [Управление сессиями](https://www.securitylab.ru/analytics/530059.php)
+	- One Logout
+	- Timeout Session (Cookie, Token)
 
 ### User store
 

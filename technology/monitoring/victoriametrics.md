@@ -9,3 +9,13 @@
 	- Prometheus remote write API.
 	- Prometheus exposition format.
 	- и тд.
+- Параметры метрики - формат [Prometheus](../store/prometheus.md).
+- Просмотр метрик
+	- GUI MetricsQL [VMUI](https://docs.victoriametrics.com/Single-server-VictoriaMetrics.html#vmui)
+	- API
+- Alert [VMAlert + Prometheus Alertmanager](https://docs.victoriametrics.com/vmalert.html#single-node-victoriametrics)
+
+## MetricsQL
+
+- [PromQL](../store/prometheus.md)-like query language with a powerful set of functions and features for working specifically with time series data.
+- [Примеры запросов](https://docs.victoriametrics.com/keyConcepts.html#metricsql)

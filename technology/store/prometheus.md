@@ -9,6 +9,9 @@
 
 - метрика
 - набор лейблов (теги) key-value
+	- instance
+	- evn
+	- job
 - значение метрики
 ![data model](https://static.tildacdn.com/tild6163-3136-4134-b933-396663633530/_5.png)
 

@@ -9,8 +9,8 @@
 - [Документирования](pattern/pattern.docs.md)
 - [Deployment Patterns](https://airtable.com/embed/shryjXK2rzf52sv9u/tbl2vjDV9Es36E2cW) (13 Patterns)
   - [DevOps Deployment Rollback](../devops.md)
-  - Проверка работоспособности (Health-check)
-  - Балансировка нагрузки
+  - Проверка работоспособности ([Health-check](pattern/pattern.healthcheck.md))
+  - [Балансировка нагрузки](ability/load.balancing.md)
 - [Decomposition Patterns](https://airtable.com/embed/shrPwsn3G9IQ7JCm1/tbl7daDI4ZAAmedfD) (6 Patterns)
 - [Transaction Management Patterns](https://airtable.com/embed/shrjiJuF7kIbcnXRl/tblgszzLV27MUFP4p) (5 Patterns)
 - [Testing Patterns](https://airtable.com/embed/shr6p9u80mD9CzVU1/tblyGd1oiAcYuTSbr) (3 Patterns)

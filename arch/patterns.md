@@ -75,3 +75,4 @@
 - <https://en.wikipedia.org/wiki/Architectural_pattern>
 - [Martin F patterns](https://martinfowler.com/dslCatalog/index.html)
 <https://vocal.media/01/unified-microservices-patterns-ump>
+- https://patterns.arcitura.com/

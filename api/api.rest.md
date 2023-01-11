@@ -5,6 +5,7 @@
   - [Проектирование](#проектирование)
     - [Качества хорошего API](#качества-хорошего-api)
   - [Patterns](#patterns)
+    - [Файлы](#файлы)
 
 ## Термины
 
@@ -20,19 +21,20 @@
 
 - <https://systems.education/api-design>
 - TODO [Сергей Константинов. API](https://twirl.github.io/The-API-Book/API.ru.html)
-  - метод (__интерфейс__)
+  - метод (__сигнатура__)
     - Стремитесь к тому, чтобы из __сигнатуры функции было абсолютно ясно, что она делает, что принимает на вход и что возвращает__. Вообще, при прочтении кода, работающего с вашим API, должно быть сразу понятно, что, собственно, он делает — без подглядывания в документацию.
     - Избегайте неявных частичных обновлений
-  - свойства  метода (__контракт интерфейса__)
+    - Рекомендации по [наименованию](https://proglib.io/p/21-luchshiy-metod-vyvedet-vashi-navyki-proektirovaniya-api-na-novyy-uroven-2021-04-29) физических ресурсов, [свойств](https://proglib.io/p/15-luchshih-praktik-razrabotki-i-proektirovaniya-rest-api-2022-04-12)
+    - Конечные точки в URL – [имя существительное, не глагол](https://habr.com/ru/post/351890/)
+    - Множественное число
+  - свойства  метода (__контракт\интерфейс__)
     - Указывайте использованные стандарты
     - При этом существует «золотое правило», применимое не только к API, но ко множеству других областей проектирования: человек комфортно удерживает в краткосрочной памяти __7±2 различных объекта__. Манипулировать большим числом сущностей человеку уже сложно. Это правило также известно как __«закон Миллера»__. Бороться с этим законом можно только одним способом: __декомпозицией__. На каждом уровне работы с вашим API нужно стремиться логически группировать сущности под одним именем там, где это возможно и таким образом, чтобы разработчику никогда не приходилось оперировать более чем 10 сущностями одновременно. Должны выделить в структуре __информационные домены__: какие поля логически относятся к одной предметной области.
     - Сущности должны именоваться конкретно
     - Тип поля должен быть ясен из его названия
   - __Возможные ошибки__
     - Должны быть информативными
-- Рекомендации по [наименованию](https://proglib.io/p/21-luchshiy-metod-vyvedet-vashi-navyki-proektirovaniya-api-na-novyy-uroven-2021-04-29) физических ресурсов, [свойств](https://proglib.io/p/15-luchshih-praktik-razrabotki-i-proektirovaniya-rest-api-2022-04-12)
-  - Конечные точки в URL – [имя существительное, не глагол](https://habr.com/ru/post/351890/)
-  - Множественное число
+  - Пример запроса\ответа
 
 ### Качества хорошего API
 
@@ -42,9 +44,10 @@
 
 ## Patterns
 
-- TODO [Patterns REST API](https://microservice-api-patterns.org/)
-- [MS Guide](https://github.com/Microsoft/api-guidelines/blob/master/Guidelines.md)
-- [IBM](https://www.ibm.com/docs/ru/zos-connect/zosconnect/3.0?topic=apis-designing-restful)
+- TODO
+  - [Patterns REST API](https://microservice-api-patterns.org/)
+  - [MS Guide](https://github.com/Microsoft/api-guidelines/blob/master/Guidelines.md)
+  - [IBM](https://www.ibm.com/docs/ru/zos-connect/zosconnect/3.0?topic=apis-designing-restful)
 - Security
   - [REST Best Practice - TLS, OAuth, OIDC SSO](https://stackoverflow.blog/2021/10/06/best-practices-for-authentication-and-authorization-for-rest-apis/?utm_campaign=APISecurity%20newsletter&utm_medium=email&_hsmi=204867978&_hsenc=p2ANqtz-94r6UDHzZG48tgtd0Sz6OiZicy6tTBQysQKtk0WzhZXlXrXBucIld80QE3Gll1Le1lxnwNhNqu-pySFps1AsqeR8MQrg&utm_content=204868574&utm_source=hs_email)
 - АвтоДокументация [OpenApi](openapi.md)
@@ -72,16 +75,16 @@ CheckList
 
 ### Файлы
 
-- Не использовать [base64 кодирования](https://tyk.io/blog/api-design-guidance-file-upload/)
-- Use [Content Delivery Network (CDN)](../arch/system.class/cdn.md)
 - Download
+  - Use [Content Delivery Network (CDN)](../arch/system.class/cdn.md)
   - Массив байтов, не в JSON. Файл нужно передавать [под его "родным"](https://code-maze.com/aspnetcore-web-api-return-file/) __Content-Type__
   - Request the file, GET /downloads/123, file not yet completed, __response 102 Processing__ (and an optional progress and/or ETA, if available)
   - Request the file, GET /downloads/123, file completed, __response 303__ See other, Location: https://cdn/full-path-to-generated.file.pdf
   - [Support partial responses for large binary resources](https://learn.microsoft.com/en-us/azure/architecture/best-practices/api-design#support-partial-responses-for-large-binary-resources)
 - [Upload](https://tyk.io/blog/api-design-guidance-file-upload/)
+  - Не использовать [base64 кодирования](https://tyk.io/blog/api-design-guidance-file-upload/)
   - [OWASP Unrestricted File Upload](https://owasp.org/www-community/vulnerabilities/Unrestricted_File_Upload)
-  - Option
+  - [Option](https://tyk.io/blog/api-design-guidance-file-upload/)
     - Direct file upload
         - Create a new file, POST /downloads (endpoint name an example), __response 202 Accepted, Location: /downloads/123__ (unique ID of the download). If we're sharing the files among users, the same POST might return the same ID (all the users are waiting for the same file to generate)
     - Multipart HTTP request

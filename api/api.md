@@ -51,6 +51,7 @@ version of the API. A good approach for this is the **Mediator pattern** (for ex
 - [apisecurity.io](https://apisecurity.io/)
 - [Угрозы OWASP подробно](https://habr.com/ru/post/503284/)
 - [Control levels of user authorisation](https://www.gov.uk/guidance/gds-api-technical-and-data-standards)
+- [API Security tools and resources](https://github.com/arainho/awesome-api-security)
 
 ### Документирование
 
@@ -62,6 +63,7 @@ version of the API. A good approach for this is the **Mediator pattern** (for ex
 - [Шаблон описания](https://tyk.io/blog/whats-minimum-documentation-required-api/)
 - TODO [API Spec Trends](https://www.apimatic.io/blog/2022/03/top-api-specification-trends-2019-2022/)
 - [WSDL](wsdl.md)
+- [Top api design tools](https://www.g2.com/categories/api-design)
 
 ### API management
 

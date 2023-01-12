@@ -15,7 +15,10 @@
   - [ELT (Extract, Load, Transform)](https://www.striim.com/blog/data-integration/)
     - [ELT vs ETL](https://coderlessons.com/tutorials/bolshie-dannye-i-analitika/teoriia-khraneniia-dannykh/5-etl-protiv-elt)
   - [Shared Database\Table Шлюзовая БД (ШБД)](pattern.shareddb.md)
-  - [Файловый обмен, Распределенные файловые системы](pattern.uploadfile.md)
+  - Файловый обмен
+    - [Распределенные файловые системы](../../technology/filesystem/filesystem.md)
+    - [Upload File](pattern.uploadfile.md)
+    - [Download File](../../api/api.rest.md)
 - Приложения
   - Direct ([API REST](../../api/api.md), SOAP, WCF, ODATA, GraphQL, gRPC)
   - Remote Procedure Invocation (RPC)

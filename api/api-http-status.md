@@ -20,3 +20,6 @@
 Upload
 - 413 Payload Too Large (if exceeding max)
 - 507 Insufficient Storage (server full).
+Download
+- 102 [processing](https://www.restapitutorial.com/httpstatuscodes.html)
+- 303 redirect на CDN\URL

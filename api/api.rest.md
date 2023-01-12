@@ -81,10 +81,12 @@ CheckList
 - Download
   - Use [Content Delivery Network (CDN)](../arch/system.class/cdn.md)
   - Массив байтов, не в JSON. Файл нужно передавать [под его "родным"](https://code-maze.com/aspnetcore-web-api-return-file/) __Content-Type__
-  - Request the file, GET /downloads/123, file not yet completed, __response 102 Processing__ (and an optional progress and/or ETA, if available)
-  - Request the file, GET /downloads/123, file completed, __response 303__ See other, Location: https://cdn/full-path-to-generated.file.pdf
+  - [Byte Array and Stream](https://code-maze.com/aspnetcore-web-api-return-file/) 
+  - Request the file, GET /downloads/123, file not yet completed, __response [HTTP Status](api-http-status.md) 102 Processing__ (and an optional progress and/or ETA, if available)
+  - Request the file, GET /downloads/123, file completed, __response HTTP Status 303__ See other, Location: https://cdn/full-path-to-generated.file.pdf
   - [Support partial responses for large binary resources](https://learn.microsoft.com/en-us/azure/architecture/best-practices/api-design#support-partial-responses-for-large-binary-resources)
 - [Upload](https://tyk.io/blog/api-design-guidance-file-upload/)
+  - TODO [Pattern](../arch/pattern/pattern.uploadfile.md)
   - Не использовать [base64 кодирования](https://tyk.io/blog/api-design-guidance-file-upload/)
   - [OWASP Unrestricted File Upload](https://owasp.org/www-community/vulnerabilities/Unrestricted_File_Upload)
   - [Option](https://tyk.io/blog/api-design-guidance-file-upload/)

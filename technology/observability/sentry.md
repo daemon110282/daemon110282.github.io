@@ -34,6 +34,9 @@
 - Trace
 - Alert
 	- [Telegram](https://github.com/butorov/sentry-telegram)
+- [SSO](https://develop.sentry.dev/self-hosted/sso/)
+	- Auth user access by [KeyCloak SAML](https://yyhh.org/blog/2020/10/how-to-setup-saml2-authentication-on-sentry-with-keycloak/)
+	- Google OIDC
 
 ## Технологии
 
@@ -48,16 +51,24 @@
 Плюсы:
 
 - [Store support Clickhouse](https://blog.sentry.io/2019/05/16/introducing-snuba-sentrys-new-search-infrastructure/)
-- OpenTelemetry support [in work](https://develop.sentry.dev/sdk/performance/opentelemetry/) 
+- [OpenTelemetry](https://docs.sentry.io/platforms/python/guides/logging/performance/instrumentation/opentelemetry/) support [in work](https://develop.sentry.dev/sdk/performance/opentelemetry/) 	
 	- [Demo GO OTEL trace to Sentry](https://medium.com/nuances-of-programming/opentelemetry-и-sentry-недооцененные-инструменты-трассировки-распределенных-систем-на-golang-c34de3dbdff5)
 	![scheme](https://miro.medium.com/max/720/0*KLpbhHGa_JixRl-q.webp)
-- [дает фокусировку на ошибках](https://infostart.ru/1c/articles/1178723/?utm_source=pocket_saves)
+- [дает фокусировку на ошибках](https://infostart.ru/1c/articles/1178723/)
 - позволяет получить максимальный контекст в короткое сообщение
 - хорошая оптимизация хранения данных. То есть, он не хранит всю подряд информацию, если произошло повторное событие – оно группируется в одно
 
 Минусы:
 
 - не очень хорошо справляется с большим потоком
+
+## Event Model
+
+- [Context](https://docs.sentry.io/platforms/android/enriching-events/context/default-context/)
+- [User](https://docs.sentry.io/platforms/android/enriching-events/identify-user/)
+- [APM metric custom](https://docs.sentry.io/platforms/python/guides/logging/performance/instrumentation/performance-metrics/)
+	- tag - [response size](https://stackoverflow.com/questions/7791860/jquery-how-to-check-the-size-of-the-response-object-in-an-ajax-call)
+	- [context](https://stackoverflow.com/questions/69542552/add-additional-details-to-a-sentry-error-using-python-sdk)
 
 ## Deployment
 
@@ -66,3 +77,5 @@
 	- [demo](https://adw0rd.com/2019/02/21/sentry-on-premise-docker/)
 	- [On premise docker](https://principal-engineering.ru/posts/getsentry-self-hosted/)
 		- BSL __license__ - Если мы [не конкурируем с ними](https://open.sentry.io/licensing/), то [бесплатно](https://forum.sentry.io/t/re-licensing-sentry-faq-discussion/8044)
+- Системные требования
+	- 

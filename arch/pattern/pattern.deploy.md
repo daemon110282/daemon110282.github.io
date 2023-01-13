@@ -12,20 +12,23 @@
 
 ## Blue Green Deployment
 
-Плюсы
-	- Downtime сокращается
-	- Простота внедрения для __stateless ИС__ (микросервисной архитектуры) 
-	- Необходимо применение автоматизированных подходов CI-CD и контейнеризации ([k8s](../../technology/ci-cd/k8s.md), ingress controler (Istio))
-Минусы
-	- Сложность поддержки на уровне statefull компонентов ИС - БД [__двух версий__ (Миграция БД) - поддержка новой, старой версии модели данных](https://habr.com/ru/post/309832/), [чтения\записи по старой\новой модели](https://learn.microsoft.com/en-us/answers/questions/159546/sql-server-zero-downtime-blue-green-deployment) данных
-		- Рекомендуется разворачивать __одну БД с поддержкой двух версий модели данных__
-		- Возможны задержки на уровне БД при __миграции модели БД__ онлайн - увеличение Downtime
-	- Необходимость поддержки на уровне компонентов ИС отката
-		- рост трудозатрат на тестирования
-		- рост трудозатрат разработки на поддержку [подходов к проектированию БД](https://habr.com/ru/company/nixys/blog/481932/)
-			- применение решений вида: __Liquibase__
-				- It automates database schema changes management
-				- allows versioning of those changes, easily roll back all the previously [performed modifications of your schema](https://piotrminkowski.com/2021/02/18/blue-green-deployment-with-a-database-on-kubernetes/)
+Плюсы:
+
+- Downtime сокращается
+- Простота внедрения для __stateless ИС__ (микросервисной архитектуры) 
+- Необходимо применение автоматизированных подходов CI-CD и контейнеризации ([k8s](../../technology/ci-cd/k8s.md), ingress controler (Istio))
+
+Минусы:
+
+- Сложность поддержки на уровне statefull компонентов ИС - БД [__двух версий__ (Миграция БД) - поддержка новой, старой версии модели данных](https://habr.com/ru/post/309832/), [чтения\записи по старой\новой модели](https://learn.microsoft.com/en-us/answers/questions/159546/sql-server-zero-downtime-blue-green-deployment) данных
+	- Рекомендуется разворачивать __одну БД с поддержкой двух версий модели данных__
+	- Возможны задержки на уровне БД при __миграции модели БД__ онлайн - увеличение Downtime
+- Необходимость поддержки на уровне компонентов ИС отката
+	- рост трудозатрат на тестирования
+	- рост трудозатрат разработки на поддержку [подходов к проектированию БД](https://habr.com/ru/company/nixys/blog/481932/)
+		- применение решений вида: __Liquibase__
+			- It automates database schema changes management
+			- allows versioning of those changes, easily roll back all the previously [performed modifications of your schema](https://piotrminkowski.com/2021/02/18/blue-green-deployment-with-a-database-on-kubernetes/)
 
 ## Как обновлять кодовую базу незаметно для пользователей
 

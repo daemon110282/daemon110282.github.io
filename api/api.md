@@ -64,6 +64,8 @@ version of the API. A good approach for this is the **Mediator pattern** (for ex
 - TODO [API Spec Trends](https://www.apimatic.io/blog/2022/03/top-api-specification-trends-2019-2022/)
 - [WSDL](wsdl.md)
 - [Top api design tools](https://www.g2.com/categories/api-design)
+  - [Postman](../technology/api/postman.md)
+  -
 
 ### API management
 
@@ -71,9 +73,11 @@ version of the API. A good approach for this is the **Mediator pattern** (for ex
 
 ## Технологии
 
-- [Api Gateway](api.gateway.md)
-  - Ocelot
-  - Kong
-  - Nginx
-  - Gravitee
-  - Tyk
+- [API Platform](https://blog.postman.com/new-postman-api-platform-redefining-api-management-for-api-first-world/)
+  - [API management](api-managment.md)
+  - [API Gateway](api.gateway.md)
+    - Ocelot
+    - Kong
+    - Nginx
+    - Gravitee
+    - Tyk

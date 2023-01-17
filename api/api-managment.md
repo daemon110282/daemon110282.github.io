@@ -21,8 +21,8 @@
 
 Часть API Managment:
 
-- Док-я по всем АПИ компании
-- Автодок-я по OpenAPI, AsyncAPI, WSDL, GraphQL, gRPC
+- [Документация по всем АПИ](api.md) компании
+- [Автодокументация](api.md) по OpenAPI, AsyncAPI, WSDL, GraphQL, gRPC
 - Примеры кода клиента
 - История изменений АПИ
 - GIT integration

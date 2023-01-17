@@ -37,6 +37,7 @@
 - [SSO](https://develop.sentry.dev/self-hosted/sso/)
 	- Auth user access by [KeyCloak SAML](https://yyhh.org/blog/2020/10/how-to-setup-saml2-authentication-on-sentry-with-keycloak/)
 	- Google OIDC
+- [Jira Task Intregration](https://forum.sentry.io/t/how-to-configure-jira-cloud-in-your-on-premise-sentry/6720)
 
 ## Технологии
 
@@ -72,10 +73,14 @@
 
 ## Deployment
 
-- [docker](https://develop.sentry.dev/self-hosted/)
+- [docker 22.12.0](https://develop.sentry.dev/self-hosted/)
 	- [demo](https://gist.github.com/denji/b801f19d95b7d7910982c22bb1478f96)
 	- [demo](https://adw0rd.com/2019/02/21/sentry-on-premise-docker/)
 	- [On premise docker](https://principal-engineering.ru/posts/getsentry-self-hosted/)
 		- BSL __license__ - Если мы [не конкурируем с ними](https://open.sentry.io/licensing/), то [бесплатно](https://forum.sentry.io/t/re-licensing-sentry-faq-discussion/8044)
-- Системные требования
-	- 
+- [Системные требования](https://github.com/getsentry/self-hosted)
+- [Observability Sentry](https://medium.com/@twunde/the-unofficial-guide-to-upgrading-sentry-on-premise-9-to-sentry-10-5e8b4e476349)
+	- [health checks](https://docs.sentry.io/product/relay/monitoring/#health-checks)
+	- [logs stdout](https://docs.sentry.io/product/relay/monitoring/#logging)
+	- [metric in StatsD](https://docs.sentry.io/product/relay/monitoring/#metrics)
+		- [model](https://docs.sentry.io/product/relay/monitoring/collected-metrics/)

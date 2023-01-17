@@ -8,7 +8,7 @@
 	- Metrics scraping from Prometheus exporters.
 	- Prometheus remote write API.
 	- Prometheus exposition format.
-	- и тд.
+	- [From StatsD](https://docs.victoriametrics.com/Single-server-VictoriaMetrics.html#how-to-send-data-from-graphite-compatible-agents-such-as-statsd)
 - Параметры метрики - формат [Prometheus](../store/prometheus.md).
 - Просмотр метрик
 	- GUI MetricsQL [VMUI](https://docs.victoriametrics.com/Single-server-VictoriaMetrics.html#vmui)

@@ -29,11 +29,15 @@ communication to multiple microservices?
 - Mock
 - Monetize
 - [API managment](api-managment.md)
+https://habr.com/ru/company/X5Tech/blog/543324/
 - How can client apps communicate with services that use __non-Internet-friendly protocols(amqp)?__
 - __Security issues__: Without a gateway, all the microservices must be exposed to the “external world"
 - The API Gateway pattern is also sometimes known as the __“backend for frontend”__ (BFF) because you build it while thinking about the needs of the client app.
   - How can you shape a __facade__ especially [made for mobile apps](https://microservices.io/patterns/apigateway)?
   
+
+https://link.medium.com/Cu6FA4CrHub
+
 ## Плюсы-минусы
 
 Минусы
@@ -49,6 +53,8 @@ communication to multiple microservices?
 ![gw multi](/img/pattern/integration/api.gw.multi.jpg)
 
 ## Технологии
+
+Compare https://www.techtarget.com/searchapparchitecture/feature/A-feature-rundown-of-6-popular-API-gateway-tools
 
 - Open Source
   - [Ocelot](https://medium.com/aspnetrun/building-ocelot-api-gateway-microservices-with-asp-net-core-and-docker-container-13f96026e86c)

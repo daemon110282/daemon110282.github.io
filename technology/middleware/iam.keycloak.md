@@ -112,10 +112,13 @@ Example
 	- Требуемые ресурсы CPU RAM уточнить по итогу [Benchmarks keycloak](https://github.com/keycloak/keycloak-benchmark) под НФТ.
 - [HA](https://habr.com/ru/company/southbridge/blog/658187/)
 	- [Deploy HA](https://habr.com/ru/company/southbridge/blog/511380/)
-- Метрики мониторинга производительности
-	- [k8s](https://www.keycloak.org/server/containers)
-	- [Prometheus](https://github.com/aerogear/keycloak-metrics-spi)
-- [health check](https://www.keycloak.org/server/health)
+- [k8s](https://www.keycloak.org/server/containers)
+- Observability
+	- Метрики мониторинга производительности		
+		- [Prometheus Keycloak Metric SPI](https://github.com/aerogear/keycloak-metrics-spi)
+		- [Prometheus HELM chart keycloak-metrics](https://dev.to/arvindsharma18/monitoring-keycloak-using-prometheus-operator-kubernetes-helm-charts-14f6)
+	- [health check](https://www.keycloak.org/server/health)
+	- [logs](https://www.keycloak.org/server/logging)
 - Режим разворачивания в ПРОДе в отказоустойчивом (HA) кластере на [СУБД postgresql](https://www.keycloak.org/server/db) с распределенным [кешем Infinispan](https://www.keycloak.org/server/caching), вариант [«Обычный кластер»](https://habr.com/ru/company/southbridge/blog/511380/)
 
 ### Version

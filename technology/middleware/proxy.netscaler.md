@@ -1,4 +1,4 @@
-# Netscaler
+# Citrix ADC (Netscaler)
 
 Реализует паттерн [Reverse Proxy](../../arch/pattern/pattern.proxy.reverse.md)
 - Auth
@@ -11,6 +11,7 @@
 - Load Balancer
 	- https://kb.paessler.com/en/topic/22633-how-to-monitor-active-sessions-users-for-iis-7-0
   	- http://pleasework.robbievance.net/howto-configure-citrix-netscaler-to-perform-website-aware-load-balancing/
+- [Citrix ADC (NetScaler) Ingress Controller for Kubernetes](https://github.com/citrix/citrix-k8s-ingress-controller)
 
 ## Rounting
 

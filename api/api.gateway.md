@@ -52,7 +52,8 @@ communication to multiple microservices?
 
 - Open Source
   - [Ocelot](https://medium.com/aspnetrun/building-ocelot-api-gateway-microservices-with-asp-net-core-and-docker-container-13f96026e86c)
-  - Gravitie
+  - [Gravitie](../technology/api/gw.gravitee.md)
   - Kong
 - Commercial
   - [traefik](https://traefik.io/solutions/api-gateway/)
+  - [Citrix ADC (Netscaler)](../technology/middleware/proxy.netscaler.md)

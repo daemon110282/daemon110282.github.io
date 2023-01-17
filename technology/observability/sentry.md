@@ -38,14 +38,19 @@
 	- Auth user access by [KeyCloak SAML](https://yyhh.org/blog/2020/10/how-to-setup-saml2-authentication-on-sentry-with-keycloak/)
 	- Google OIDC
 - [Jira Task Intregration](https://forum.sentry.io/t/how-to-configure-jira-cloud-in-your-on-premise-sentry/6720)
+- MTA 
 
 ## Технологии
 
 - Архитектура
 ![arch](https://mermaid.ink/svg/pako:eNqFU01PwzAM_StRTiDGeu8BCbQbcKFc0DwhN_XWqs2H0kQwtv13smSj1SrgFj8_v9gvzo4LXRHP-caiqdnrAhQas3zT3rJ7Y7pGoGu0WrHb2zu2LxaPe9aVu92Txoo9YIdKkD0cQHVlYgDvSTm7ndMnStPRXGiZoWkygOom6522lAHfM0sdbv8uO9IS-v5B5RJ4EQN2FaJr4CtQ_VaWOraobdQZ6KDiDRFtcd3iGLBUNX0o_2GnYuVLnKCSpEBRUzXJGN27jaWp0Fn-qDduYAAmDBGmaGvtewIV2RH90rolMmSnvZ5CbVuyY2sicHJnzPltliF5YcqQmM455MYvAApUnCM5yYDXzpk-z7JN42pfxlXYkEsqWbKbB1oR6QstvAypuG_Az1rp1f7RStt01HqJ9AstPuOSrMSmCou-A8UC0dUkCXgejhWt0XfueOchUNE7XWyV4LmznmbcmwodLRoMX0TyfI1dH9DgVpj5OX2e-IcO3z0YL2M)
-- Snuba Clickhouse Kafka Redis
+- Snuba 
+- Clickhouse - управляет Alert
 ![Clickhouse](https://images.ctfassets.net/em6l9zw4tzag/162no5P9QQXMQbvY7Hu8zz/9170098ce2d51a6c165664d659555975/snuba-diagram.png)
-- Тех стек: Python, PostgreSQL, Kafka, Redis, Memcached, Clickhouse
+- Kafka 
+- Redis
+- PostgreSQL
+- Тех стек: Python, Memcached
 
 ## Плюсы-Минусы
 
@@ -61,15 +66,20 @@
 
 Минусы:
 
-- не очень хорошо справляется с большим потоком
+- не очень хорошо справляется с большим потоком, риски задержки событий 
+	- узкие [места при 100 млн событий за 24ч](https://www.youtube.com/watch?v=9_IswUwFxlE&list=WL&index=8&t=589s)
+		- PostgreSQL шардирование по репликам (кастом замена на NOSQL store ClickHouse)
+		- Kafka размер топиков, round robin partition раскладывание событий
+		- ClickHouse шардирование по репликам
 
 ## Event Model
 
-- [Context](https://docs.sentry.io/platforms/android/enriching-events/context/default-context/)
-- [User](https://docs.sentry.io/platforms/android/enriching-events/identify-user/)
-- [APM metric custom](https://docs.sentry.io/platforms/python/guides/logging/performance/instrumentation/performance-metrics/)
-	- tag - [response size](https://stackoverflow.com/questions/7791860/jquery-how-to-check-the-size-of-the-response-object-in-an-ajax-call)
-	- [context](https://stackoverflow.com/questions/69542552/add-additional-details-to-a-sentry-error-using-python-sdk)
+- [Event Model](https://docs.sentry.io/product/sentry-basics/enrich-data/)
+	- [Context](https://docs.sentry.io/platforms/android/enriching-events/context/default-context/)
+	- [User](https://docs.sentry.io/platforms/android/enriching-events/identify-user/)
+	- [APM metric custom](https://docs.sentry.io/platforms/python/guides/logging/performance/instrumentation/performance-metrics/)
+		- tag - [response size](https://stackoverflow.com/questions/7791860/jquery-how-to-check-the-size-of-the-response-object-in-an-ajax-call)
+		- [context](https://stackoverflow.com/questions/69542552/add-additional-details-to-a-sentry-error-using-python-sdk)
 
 ## Deployment
 
@@ -84,3 +94,5 @@
 	- [logs stdout](https://docs.sentry.io/product/relay/monitoring/#logging)
 	- [metric in StatsD](https://docs.sentry.io/product/relay/monitoring/#metrics)
 		- [model](https://docs.sentry.io/product/relay/monitoring/collected-metrics/)
+- HA
+	- [СберМегаМаркет опыт PostgreSQL](https://www.youtube.com/watch?v=9_IswUwFxlE&list=WL&index=8&t=589s)

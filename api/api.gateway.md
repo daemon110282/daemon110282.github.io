@@ -35,7 +35,7 @@ https://habr.com/ru/company/X5Tech/blog/543324/
 - The API Gateway pattern is also sometimes known as the __“backend for frontend”__ (BFF) because you build it while thinking about the needs of the client app.
   - How can you shape a __facade__ especially [made for mobile apps](https://microservices.io/patterns/apigateway)?
   
-
+Тодо
 https://link.medium.com/Cu6FA4CrHub
 
 ## Плюсы-минусы

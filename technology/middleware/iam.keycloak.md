@@ -115,7 +115,7 @@ Example
 - [k8s](https://www.keycloak.org/server/containers)
 - Observability
 	- Метрики мониторинга производительности		
-		- [Prometheus Keycloak Metric SPI](https://github.com/aerogear/keycloak-metrics-spi)
+		- [Prometheus Keycloak Metric SPI](https://github.com/aerogear/keycloak-metrics-spi) https://www.youtube.com/watch?v=ppPWqj8kRa0&feature=emb_imp_woyt
 		- [Prometheus HELM chart keycloak-metrics](https://dev.to/arvindsharma18/monitoring-keycloak-using-prometheus-operator-kubernetes-helm-charts-14f6)
 	- [health check](https://www.keycloak.org/server/health)
 	- [logs](https://www.keycloak.org/server/logging)

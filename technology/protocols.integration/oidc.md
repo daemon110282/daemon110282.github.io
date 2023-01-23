@@ -65,7 +65,7 @@ Client type — тип клиента, от которого зависит сп
 ### Identity Token структура Payload
 
 - [iss](https://openid.net/specs/openid-connect-core-1_0.html#IDToken): "http://my-domain.auth0.com" - кто выпустил токен
-- sub: "auth0|123456" - Идентификатор субъекта. Локально уникальный и никогда не переназначаемый идентификатор.
+- sub: "auth0|123456" - Уникальный идентификатор пользователя
 - aud: "1234abcdef" - равно client_id - ИС запращивающая доступ
 - exp: 1311281970 - срок действия (UNIX format)
 - iat: 1311280970 - дата время выдачи токена (UNIX format)

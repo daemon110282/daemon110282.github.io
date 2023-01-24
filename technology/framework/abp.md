@@ -19,7 +19,7 @@
 | лицензия LGPL + коммерческая при необх-ти | vue не из коробки, т.е. пишем на React |
 | с 2012 года, много релизов | LDAP Auth платный модуль|
 | [feature toggle by tenant](https://docs.abp.io/en/abp/latest/Modules/Tenant-Management#managing-the-tenant-features)
-| DDD заявлен, по коду тут как ОР скажет)
+| [DDD](https://abp.io/books/implementing-domain-driven-design) 
 | RMQ
 | модульный монолит->микросервисы заявлено
 | swagger

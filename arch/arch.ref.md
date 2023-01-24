@@ -2,6 +2,7 @@
 
 * [MSA](style/msa.md)
 * [EDA](style/eda.md)
+  * [BIAN](ref/bian.md)
 * [MTA](mta.md)
 * [Хранилище данных](store.md)
 * [Mobile](mobile.md)

@@ -6,7 +6,7 @@
 - Multiple file upload
 - Validation and security
 - Upload from remote server (FTP, HTTP...)
-- Upload from private storage bucket (S3 or Google Storage)
+- Upload from private [storage bucket (S3 or Google Storage)](../../technology/filesystem/object.storage.md)
 - Individual progress bar for every file
 - Upload notifications
 - [Chunking files](https://uploadcare.com/blog/the-file-uploading-guide) over 20 MB

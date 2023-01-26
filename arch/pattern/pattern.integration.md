@@ -17,10 +17,11 @@
   - [Shared Database\Table Шлюзовая БД (ШБД)](pattern.shareddb.md)
   - Файловый обмен
     - [Распределенные файловые системы](../../technology/filesystem/filesystem.md)
+      - [Object Storage](../../technology/filesystem/object.storage.md)
     - [Upload File](pattern.uploadfile.md)
     - [Download File](../../api/api.rest.md)
     - [CDN](../system.class/cdn.md) реализует паттерн [Static content hosting](https://learn.microsoft.com/en-us/azure/architecture/patterns/static-content-hosting)      
-    - [Object Storage](../../technology/filesystem/object.storage.md)
+    - Протокол [WebDAV](https://xakep.ru/2014/09/09/webdav/) HTTP API (IIS, Apache support) для подключения сайтов как сетевых дисков
 - Приложения
   - Direct ([API REST](../../api/api.md), SOAP, WCF, ODATA, GraphQL, gRPC)
   - Remote Procedure Invocation (RPC)

@@ -24,11 +24,18 @@ https://connect2id.com/learn/oauth-2
 
 ## Access Token структура Payload
 
-- iss: "http://my-domain.auth0.com" - кто выпустил токен
-- sub: "auth0|123456" - Уникальный идентификатор пользователя
+[Структура](https://datatracker.ietf.org/doc/html/rfc9068)
+
+Required
+- iss: "http://authorization-server.example.com/" - кто выпустил токен
+- sub: "auth0|123456" - Уникальный идентификатор пользователя в IAM
 - [aud](https://developers.sber.ru/docs/ru/sberbusinessapi/authorization/auth-sbbid/tokens): "1234abcdef" - равно client_id - ИС запращивающая доступ
 - exp: 1311281970 - срок действия
 - iat: 1311280970 - 
-- scope - роли, права доступа (RBAC, ABAC) к ресурсу
+- jti: dbe39bf3a3ba4238a513f51d6e1691c4 - 
+- scope: openid profile reademail - роли, права доступа (RBAC, ABAC) к ресурсу
 - client_id - 
-- Key ID — айдишник ключа, которым можно проверить подпись токена
+
+Optional:
+- Key ID — ИД ключа, которым можно проверить подпись токена
+- typ: Bearer

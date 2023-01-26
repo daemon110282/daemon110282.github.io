@@ -24,4 +24,5 @@
 ## Технологии
 
 - [Варианты](https://www.cdnplanet.com/)
+	- [keycdn](https://code.tutsplus.com/tutorials/accelerate-your-content-delivery-with-keycdn--cms-23258)
 - [Критерии выбора](https://habr.com/ru/company/selectel/blog/463915/)

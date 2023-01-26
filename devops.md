@@ -43,6 +43,7 @@ each container should do one thing and do it well. A few reasons:
 
 ### Auto Scaling
 
+https://www.nginx.com/blog/microservices-march-reduce-kubernetes-latency-with-autoscaling?mkt_tok=NjUzLVNNQy03ODMAAAGDoZc8tPFlFaIeMTkzcjbbLlI4Pk4BFagxrtzVyB8ZNM49BVO7w6eXPd56CdEOAe8AVXs53VxDwocBuOsl44YWrJj4nu6ULQB5gGE7c8YP5juQrkPKjg&utm_source=pocket_mylist
 - Limit
   - CPU
   - MEM

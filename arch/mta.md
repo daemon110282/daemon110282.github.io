@@ -98,3 +98,7 @@
 | Производительность | Разработка |
 | Функциональность | Стоимость |
 ||  |
+
+
+To-do
+https://docs.microsoft.com/ru-ru/azure/architecture/guide/multitenant/related-resources?utm_source=pocket_mylist

@@ -43,6 +43,7 @@
    - [Распределенные файловые системы](../../technology/filesystem/dfs.md)
    - [Распределенные параллельнае файловые системы](../../technology/filesystem/dpfs.md)
 - FTP SFTP - передача файлов
+- [Object Storage](../../technology/filesystem/object.storage.md)
 
 ## Links
 

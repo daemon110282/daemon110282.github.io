@@ -19,6 +19,8 @@
     - [Распределенные файловые системы](../../technology/filesystem/filesystem.md)
     - [Upload File](pattern.uploadfile.md)
     - [Download File](../../api/api.rest.md)
+    - [CDN](../system.class/cdn.md) реализует паттерн [Static content hosting](https://learn.microsoft.com/en-us/azure/architecture/patterns/static-content-hosting)      
+    - [Object Storage](../../technology/filesystem/object.storage.md)
 - Приложения
   - Direct ([API REST](../../api/api.md), SOAP, WCF, ODATA, GraphQL, gRPC)
   - Remote Procedure Invocation (RPC)

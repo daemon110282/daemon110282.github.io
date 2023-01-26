@@ -11,7 +11,8 @@
 ## Reference Architecture
 
 - [NGINX Modern Apps Reference Architecture (MARA)](https://github.com/nginxinc/kic-reference-architectures/)
-  - Distributed storage
+  - [Distributed storage](../../technology/filesystem/filesystem.md)
+  - [Object Storage](../../technology/filesystem/object.storage.md)
 - [Oracle MuShop](https://oracle-quickstart.github.io/oci-cloudnative/)
 
 ## Patterns

@@ -1,6 +1,16 @@
 # IAM KeyCloak
 
-## Зачем 
+- [IAM KeyCloak](#iam-keycloak)
+	- [Зачем](#зачем)
+		- [User Storage](#user-storage)
+		- [Access Control](#access-control)
+	- [Технологии](#технологии)
+	- [Deployment](#deployment)
+		- [Version](#version)
+	- [Compare](#compare)
+		- [VS Glue](#vs-glue)
+
+## Зачем
 
 Реализация функции [Identity and Access Management (IAM)](../../arch/system.class/iam.md) решений.
 
@@ -26,7 +36,7 @@
 			- [Custom AuthenticationFactory by Phone](https://developers.redhat.com/blog/2020/10/23/use-mobile-numbers-for-user-authentication-in-keycloak#)			
 	- 2FA
 		- HMAC based OTP (HOTP)
-		- Time based OTP (TOTP)
+		- Time based OTP (TOTP) ![schema](https://substackcdn.com/image/fetch/w_1456,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fb885be28-b049-48fc-ad76-7416314dd4c3_3096x3603.jpeg)
 		- [ЕСИА](https://platform.digital.gov.ru/docs/security/platform-v-iam/esia-setup)
 	- User [Store\Provider](https://www.keycloak.org/docs/latest/server_development/#_user-storage-spi)		
 		- User Federation (Sync)

@@ -5,5 +5,5 @@
 ## Технологии
 
 - Istio
-
-## Links
+- Nginx?
+- Netscaler?

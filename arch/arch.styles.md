@@ -6,7 +6,7 @@
     - [Распределенная архитектура](#распределенная-архитектура)
   - [Links](#links)
 
-Архитектурный стиль определяет семейство подобных систем с точки зрения структурной организации. В частности, стиль определяет набор компонентов и коннекторов, которые можно применять в реализациях этого стиля, а также ряд правил, согласно которым они могут сочетаться.
+[Архитектурный стиль](https://docs.microsoft.com/ru-ru/azure/architecture/guide/architecture-styles/) определяет семейство подобных систем с точки зрения структурной организации. В частности, стиль определяет набор компонентов и коннекторов, которые можно применять в реализациях этого стиля, а также ряд правил, согласно которым они могут сочетаться.
 
 | Стиль архитектуры | Управление зависимостями | Тип домена |
 | -- | -- | -- |
@@ -28,7 +28,8 @@
   - [Vertical-slice](https://headspring.com/2019/11/05/why-vertical-slice-architecture-is-better/)
   - [Clean Architecture](pattern/clean.architecture.md)
   - Pipeline
-
+  - [Cloud](style/cloud.md)
+  
 ![Стили-НФТ Марк Ричардс](../img/arch/arch_style-ility.jpg)
 
 ### Onion Луковая гексагональная архитектура
@@ -66,6 +67,6 @@ onion-архитектура («луковая»). Её отличие в том
 ## Links
 
 - [Службы вычислений](https://docs.microsoft.com/ru-ru/azure/architecture/guide/technology-choices/compute-decision-tree)
-- [MS Стили](https://docs.microsoft.com/ru-ru/azure/architecture/guide/architecture-styles/)
-https://towardsdatascience.com/10-common-software-architectural-patterns-in-a-nutshell-a0b47a1e9013
-https://docs.microsoft.com/ru-ru/azure/architecture/browse/?filter=reference-architecture
+- [MS Стили]()
+- https://towardsdatascience.com/10-common-software-architectural-patterns-in-a-nutshell-a0b47a1e9013
+- https://docs.microsoft.com/ru-ru/azure/architecture/browse/?filter=reference-architecture

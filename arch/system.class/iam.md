@@ -2,10 +2,12 @@
 
 - [Identity and Access Management (IAM)](#identity-and-access-management-iam)
 	- [Зачем](#зачем)
-	- [Критерии выбора](#критерии-выбора)
-	- [User store](#user-store)
+		- [User store](#user-store)
+		- [Access Control](#access-control)
 	- [Протоколы](#протоколы)
-		- [OAuth, OpenID Connect (OIDC)](#oauth-openid-connect-oidc)
+		- [OAuth](#oauth)
+		- [OpenID Connect (OIDC)](#openid-connect-oidc)
+	- [Критерии выбора](#критерии-выбора)
 	- [Технологии](#технологии)
 
 ## Зачем
@@ -83,12 +85,13 @@ Identity Provider (IDP) в IAM with industry standard supported protocols:
 - Технологический стек
 
 Сравнения
+
 - [WSO2-Keycloack-Glue](../../technology/middleware/iam.wso2.md)
 - [Keycloack-Glue](../../technology/middleware/iam.keycloak.md)
 - Top [Okta-MS-Keycloak](https://www.saasworthy.com/list/identity-and-access-management-iam-software)
 - Top [Okta-MS-WSO2](https://www.g2.com/categories/single-sign-on-sso)
 - [keycloak-ory hydra](https://stackshare.io/stackups/keycloak-vs-ory-hydra)
-	- https://gruchalski.com/posts/2021-04-10-ory-reference-docker-compose-and-thoughts-on-the-platform/
+	- <https://gruchalski.com/posts/2021-04-10-ory-reference-docker-compose-and-thoughts-on-the-platform/>
 - [Keycloak лучше ADFS](https://trueengineering.ru/ru/cases/migrating-from-adfs-to-keycloak)
 
 ## Технологии
@@ -105,11 +108,12 @@ Identity Provider (IDP) в IAM with industry standard supported protocols:
 		- [WSO2 Identity Server](../../technology/middleware/iam.wso2.md)
 		- [IdentityServer (.NET Core)](../../technology/middleware/iam.is.md) 4я версия бесплатная, с 6й версии нет?
 		- [Keycloak (Red Hat Java)](../../technology/middleware/iam.keycloak.md)
-		- [Ory Hydra](../technology/middleware/iam.hydra.md)		
+		- [Ory Hydra](../technology/middleware/iam.hydra.md)
+		- [Blitz Identity Provider](../../technology/middleware/iam.blitz.md)
 - online
 	- Commercial
-    	- AWS Cognito
-    	- GCP Identity Platform
-		- Okta [Auth0](https://auth0.com/)
-			- [SDK Vue.JS](https://auth0.com/docs/libraries)
-		- OneLogin
+      - AWS Cognito
+      - GCP Identity Platform
+      - Okta [Auth0](https://auth0.com/)
+        - [SDK Vue.JS](https://auth0.com/docs/libraries)
+      - OneLogin

@@ -1,5 +1,9 @@
 # Single sign-on SSO
 
+- [Single sign-on SSO](#single-sign-on-sso)
+	- [Зачем](#зачем)
+	- [Плюсы-минусы](#плюсы-минусы)
+
 ## Зачем
 
 Возможность [Identity and Access Management (IAM)](system.class/iam.md) решений.
@@ -31,4 +35,3 @@ Reduced IT Costs: SSO helps lower IT costs by saving admin time on password rese
 - **Improves security capabilities**: SSO security ensures that only authorized users get access to sensitive data. You can Implement password policies like required length, complexity, restrictions on password reuse, also as session timeout and password reset self-service policy to reinforce protection without hampering your users.
 
 Минусы:
-

@@ -43,6 +43,7 @@
       - Типы: релизные, экспериментальные (ав тесты), разрешающие, операционные
       - Тогл правила, проверка результата
       - Избегать зависимостей тоглов
+- [варианты](https://blog.bytebytego.com/i/98040721/what-is-the-process-for-deploying-changes-to-production) ![schema](https://substackcdn.com/image/fetch/w_1456,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F58c6a2b8-33c2-4094-b07c-b644227b1b20_3546x4233.jpeg)
 
 ### Canary Deployment
 

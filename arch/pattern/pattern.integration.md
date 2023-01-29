@@ -6,7 +6,6 @@
   - [Технологии](#технологии)
   - [Links](#links)
 
-
 [Виды (стили) интеграций](https://www.enterpriseintegrationpatterns.com/patterns/messaging/IntegrationStylesIntro.html)
 
 - Пользователи
@@ -20,19 +19,20 @@
       - [Object Storage](../../technology/filesystem/object.storage.md)
     - [Upload File](pattern.uploadfile.md)
     - [Download File](../../api/api.rest.md)
-    - [CDN](../system.class/cdn.md) реализует паттерн [Static content hosting](https://learn.microsoft.com/en-us/azure/architecture/patterns/static-content-hosting)      
+    - [CDN](../system.class/cdn.md) реализует паттерн [Static content hosting](https://learn.microsoft.com/en-us/azure/architecture/patterns/static-content-hosting)
     - Протокол [WebDAV](https://xakep.ru/2014/09/09/webdav/) HTTP API (IIS, Apache support) для подключения сайтов как сетевых дисков
 - Приложения
   - Direct ([API REST](../../api/api.md), SOAP, WCF, ODATA, GraphQL, gRPC)
   - Remote Procedure Invocation (RPC)
+    - [Chat](https://blog.bytebytego.com/i/98040721/how-do-we-design-a-chat-application-like-whatsapp-facebook-messenger-or-discord)
   - Middleware
     - [API Gateway](../../api/api.gateway.md)
     - [SOA](../../technology/soa.md)
     - [ESB](../../technology/esb.md)
-    - ![Интеграционная шина](../img/pattern/integration/IMG_20220614_180434_1.jpg)
+    - ![Интеграционная шина](../../img/pattern/integration/esb.jpg)
     - [Message Bus](../../technology/rmq.md)
-      ![MQ](../../img/pattern/integration/IMG_20220614_180420.jpg)
-      ![MB VS](../../img/pattern/integration/IMG_20220614_180525_1.jpg)
+      ![MQ](../../img/pattern/integration/mq.jpg)
+      ![MB VS](../../img/pattern/integration/mq.compare.jpg)
       - Транспорт  
         - [RMQ](../../technology/rmq.md)
         - Kafka

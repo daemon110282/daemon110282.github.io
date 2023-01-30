@@ -20,7 +20,10 @@ TODO
 - KATA
   - https://github.com/team7katas/sysopsquad
   - https://github.com/vadagama/sever_crew
-
+- язык архитектурного моделирования ArchiMate
+  - coArchi делает возможной многопользовательскую совместную работу над моделями и их версионирование в Git-репозитории
+  - методологии TOGAF, которая считается наиболее распространенным и сбалансированным подходом для описания архитектуры предприятия
+  - Альтернатива: Business Studio или ARIS
 
 ## ИТ ландшафт, Корпоративная архитектура
 
@@ -31,12 +34,12 @@ TODO
 - [сервисно-проектная компания](https://t.me/it_aces/2428) (MS Visio)
   
 Корпоративная архитектура вида «Value chain»
+
 - для [корпораций](https://t.me/it_aces/2425)
 - для [ИТ](https://t.me/it_aces/2427)
 Архитектура как «Value chain» очень хорошо заходит т.к. Value chain своих компаний топы знают.
 
-
 ## Интеграций
 
-* [API](https://www.artofba.com/post/systems-integration-api)
-* [Файловый обмен](https://www.artofba.com/post/%D0%BE%D0%BF%D0%B8%D1%81%D0%B0%D0%BD%D0%B8%D0%B5-%D1%82%D1%80%D0%B5%D0%B1%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B9-%D0%BA-%D0%B8%D0%BD%D1%82%D0%B5%D0%B3%D1%80%D0%B0%D1%86%D0%B8%D0%B8-%D1%87%D0%B0%D1%81%D1%82%D1%8C-1-%D1%84%D0%B0%D0%B9%D0%BB%D0%BE%D0%B2%D1%8B%D0%B9-%D0%BE%D0%B1%D0%BC%D0%B5%D0%BD)
+- [API](https://www.artofba.com/post/systems-integration-api)
+- [Файловый обмен](https://www.artofba.com/post/%D0%BE%D0%BF%D0%B8%D1%81%D0%B0%D0%BD%D0%B8%D0%B5-%D1%82%D1%80%D0%B5%D0%B1%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B9-%D0%BA-%D0%B8%D0%BD%D1%82%D0%B5%D0%B3%D1%80%D0%B0%D1%86%D0%B8%D0%B8-%D1%87%D0%B0%D1%81%D1%82%D1%8C-1-%D1%84%D0%B0%D0%B9%D0%BB%D0%BE%D0%B2%D1%8B%D0%B9-%D0%BE%D0%B1%D0%BC%D0%B5%D0%BD)

@@ -1,14 +1,15 @@
 # Mobile Dev
 
 [trends technology](https://trends.google.ru/trends/explore?q=flutter,xamarin,cordova,kotlin,react%20native)
+
 - Native
-- PWA
+- [PWA](style/pwa.md)
 	- Ionic
 	- Vue
 - Cross Platform
-	- Flutter
-	- Ionic
-	- React Native
+	- [Flutter](../technology/mobile/flutter.md)
+	- [Ionic](../technology/mobile/ionic.md)
+	- [React Native](../technology/mobile/react.md)
 
 ## Links
 

@@ -74,7 +74,7 @@
 - CI/CD
   - [Jenkins](jenkins.md)	- automation server on Kubernetes, pipeline
 - IaC
-  - Helm
+  - [Helm](helm.md)
 - Container Registry
   - Nexus
 - [Service mesh](../servicemesh.md)

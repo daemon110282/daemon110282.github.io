@@ -2,11 +2,13 @@
 
 - [Производительность](#производительность)
   - [Характеристики производительности](#характеристики-производительности)
-  - [Приложение back-end](#приложение-back-end)
-  - [Приложение front-end](#приложение-front-end)
-  - [БД](#бд)
-    - [SQL](#sql)
-  - [Сеть](#сеть)
+  - [Паттерны](#паттерны)
+    - [Приложение back-end](#приложение-back-end)
+    - [Приложение front-end](#приложение-front-end)
+    - [API](#api)
+    - [БД](#бд)
+      - [SQL](#sql)
+    - [Сеть](#сеть)
   - [Метрики](#метрики)
   - [Требования пример](#требования-пример)
 
@@ -53,7 +55,9 @@ TODO
 - [UMP](https://airtable.com/embed/shrj9QkstRkVlFW0i/tblzJXJYUlj4aCHaJ)
 - http://sixrevisions.com/web-performance/improve-website-speed-02/
 
-## Приложение back-end
+## Паттерны 
+
+### Приложение back-end
 
 - [кэш](pattern.cache.md) вывода, данных (sqldependency)
 - денормализация
@@ -66,12 +70,17 @@ TODO
   - размера, который они занимают в кеше/частоты изменения данных/того
   - насколько “болезненно” будет для пользователя получение “устаревших” данных из кеша.
 
-## Приложение front-end
+### API
+
+- API [Benchmark](https://github.com/tsenart/vegeta)
+
+### Приложение front-end
 
 - JavaScript
   - существует инструмент под названием Navigation Timing API, который позволяет собирать на стороне клиента данные по скорости страницы, продолжительности DNS resolve, передачи данных по сети, работы на Backend’е, отрисовки страницы.
+  - Google [Web Vitals](https://web.dev/i18n/en/vitals/)
 
-## БД
+### БД
 
 - [CQRS](pattern.cqrs.md) - чтение и запись из разных бд
 - Master-slave, Logshipping
@@ -82,7 +91,7 @@ TODO
 - Кластеризация
 - [Уровень изоляции данных](store.../store.isolation.level.md)
 
-### MS SQL
+#### MS SQL
 
 Способ анализа производительности SQL Server:
 
@@ -109,7 +118,7 @@ TODO
 - [Оценка производительности SQL Server](http://www.interface.ru/home.asp?artId=6968)
 - [Microsoft: Мониторинг и настройка производительности](http://www.sql.ru/forum/actualthread.aspx?tid=858780)
 
-## Сеть
+### Сеть
 
 - [Windows Distributed File System (DFS) и Replication](https://windowsnotes.ru/activedirectory/distributed-file-system-arxitektura-i-bazovye-ponyatiya/)
   - A distributed file system (DFS) is a file system with data stored on a server. The data is accessed and processed as if it was stored on the local client machine.

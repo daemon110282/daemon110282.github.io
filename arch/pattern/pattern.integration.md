@@ -22,9 +22,18 @@
     - [CDN](../system.class/cdn.md) реализует паттерн [Static content hosting](https://learn.microsoft.com/en-us/azure/architecture/patterns/static-content-hosting)
     - Протокол [WebDAV](https://xakep.ru/2014/09/09/webdav/) HTTP API (IIS, Apache support) для подключения сайтов как сетевых дисков
 - Приложения
-  - Direct ([API REST](../../api/api.md), SOAP, WCF, ODATA, GraphQL, gRPC)
+  - Direct ([API REST](../../api/api.md), SOAP, WCF, ODATA, GraphQL, gRPC)    
   - Remote Procedure Invocation (RPC)
-    - [Chat](https://blog.bytebytego.com/i/98040721/how-do-we-design-a-chat-application-like-whatsapp-facebook-messenger-or-discord)
+    - Двунаправленная связь для обмена сообщениями между клиентом и сервером (WebSocket, Server-Side Events, Long Polling). Real-time web functionality enables [server-side code](https://learn.microsoft.com/en-us/aspnet/core/signalr/introduction?view=aspnetcore-7.0) to __push content to clients__ instantly.
+      - signal.ir
+      - socket.io
+      - PHP 
+        - Node.js + [Laravel Echo](https://laravel.com/docs/5.3/broadcasting#installing-laravel-echo)
+        - https://openswoole.com/
+        - https://roadrunner.dev/features
+        - https://reactphp.org/
+      - [Варианты](https://www.educba.com/signalr-alternatives/)
+      - [Chat](https://blog.bytebytego.com/i/98040721/how-do-we-design-a-chat-application-like-whatsapp-facebook-messenger-or-discord)
   - Middleware
     - [API Gateway](../../api/api.gateway.md)
     - [SOA](../../technology/soa.md)

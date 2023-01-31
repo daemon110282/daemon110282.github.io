@@ -24,16 +24,12 @@
 - Приложения
   - Direct ([API REST](../../api/api.md), SOAP, WCF, ODATA, GraphQL, gRPC)    
   - Remote Procedure Invocation (RPC)
-    - Двунаправленная связь для обмена сообщениями между клиентом и сервером (WebSocket, Server-Side Events, Long Polling). Real-time web functionality enables [server-side code](https://learn.microsoft.com/en-us/aspnet/core/signalr/introduction?view=aspnetcore-7.0) to __push content to clients__ instantly.
-      - signal.ir
-      - socket.io
-      - PHP 
-        - Node.js + [Laravel Echo](https://laravel.com/docs/5.3/broadcasting#installing-laravel-echo)
-        - https://openswoole.com/
-        - https://roadrunner.dev/features
-        - https://reactphp.org/
-      - [Варианты](https://www.educba.com/signalr-alternatives/)
-      - [Chat](https://blog.bytebytego.com/i/98040721/how-do-we-design-a-chat-application-like-whatsapp-facebook-messenger-or-discord)
+    - __Двунаправленная связь__ для обмена сообщениями между клиентом и сервером (__протокол WebSocket__).   
+    - __Однонаправленная связь__ HTML спецификация [Server Sent Events](https://learn.javascript.ru/server-sent-events) (Server-Side Events)
+      - Соединение постоянное, __протокол HTTP__, альтернатива [Polling, Long Polling](https://web.dev/eventsource-basics/) from FrontEnd
+      - Поддержка [97,5% браузеров в 2023 году](https://caniuse.com/eventsource), но IE<11 нет, Edge только
+      - [Безопасность на уровне Origin](https://web.dev/eventsource-basics/#a-word-on-security)
+        - [CORS withCredentials](https://developer.mozilla.org/en-US/docs/Web/API/Server-sent_events/Using_server-sent_events)
   - Middleware
     - [API Gateway](../../api/api.gateway.md)
     - [SOA](../../technology/soa.md)
@@ -78,6 +74,23 @@ TODO см. EIP
 
 - [ESB](../../technology/esb.md)
 - [Распределенные файловые системы](../../technology/dfs.md)
+- RPC 
+  - WebSocket
+    - signal.ir - кeal-time web functionality enables [server-side code](https://learn.microsoft.com/en-us/aspnet/core/signalr/introduction?view=aspnetcore-7.0) to __push content to clients__ instantly.
+    - Vue.js + Node.js + [socket.io](https://blog.openreplay.com/rendering-real-time-data-with-vue-node-and-socket-io)
+    - PHP 
+      - Node.js + [Laravel Echo](https://laravel.com/docs/5.3/broadcasting#installing-laravel-echo)
+      - https://openswoole.com/
+      - https://roadrunner.dev/features
+      - https://reactphp.org/
+    - [Варианты](https://www.educba.com/signalr-alternatives/)
+    - [Chat](https://blog.bytebytego.com/i/98040721/how-do-we-design-a-chat-application-like-whatsapp-facebook-messenger-or-discord)
+  - Server Sent Events
+    - signal.ir
+    - Node.js
+    - [PHP](https://web.dev/eventsource-basics/#server-examples)
+      - [MDN sample](https://github.com/mdn/dom-examples/tree/main/server-sent-events)
+    - [vue plugin](https://github.com/tserkov/vue-sse)
 
 ## Links
 

@@ -54,7 +54,7 @@
 - Security
   - [REST Best Practice - TLS, OAuth, OIDC SSO](https://stackoverflow.blog/2021/10/06/best-practices-for-authentication-and-authorization-for-rest-apis/?utm_campaign=APISecurity%20newsletter&utm_medium=email&_hsmi=204867978&_hsenc=p2ANqtz-94r6UDHzZG48tgtd0Sz6OiZicy6tTBQysQKtk0WzhZXlXrXBucIld80QE3Gll1Le1lxnwNhNqu-pySFps1AsqeR8MQrg&utm_content=204868574&utm_source=hs_email)
 - АвтоДокументация [OpenApi](openapi.md)
-- Версионность
+- [Версионность](https://learn.microsoft.com/ru-ru/azure/architecture/best-practices/api-design#versioning-a-restful-web-api)
   - Версия вашего приложения
 - [Сортировка](https://gist.github.com/fomvasss/c1221b2464be94870f7f823c74520665)
 - [Пагинация](https://github.com/Microsoft/api-guidelines/blob/master/Guidelines.md#98-pagination)
@@ -63,7 +63,7 @@
   - [HATEOS](https://developer.atlassian.com/server/confluence/pagination-in-the-rest-api/)
 - [Фильтрация](https://www.moesif.com/blog/technical/api-design/REST-API-Design-Filtering-Sorting-and-Pagination/)
 - Использование SSL
-- HTTP методы
+- [HTTP методы](https://learn.microsoft.com/ru-ru/azure/architecture/best-practices/api-design#define-api-operations-in-terms-of-http-methods)
   - [Методы, JSON, URI](https://habr.com/ru/post/447322/)
   - [SRP паттерн](../arch/patterns.md)
 - Эффективное использование [кодов ответов HTTP](api-http-status.md)

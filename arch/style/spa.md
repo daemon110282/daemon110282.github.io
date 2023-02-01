@@ -57,6 +57,18 @@
   	- Стратегия логирования (исключений), аудита на клиенте - передача через АПИ на сервер ([Sentry](../../technology/observability/sentry.md) например)
   	- Мерж логов на сервере+с Х клиентов-браузеров 1 юзера-сеанса
   	- [Errbit SaaS (Loggly, New Relic)](https://www.sitepoint.com/logging-errors-client-side-apps/)
+- Локализация - текстов сообщений (resource) с бэка
+	- vue-i18n готовое решение для локализации (понятно у нас пока RU) с шаблонами, placeholder и тд. Его планируется использовать на фронте или иное решение типовое?
+	https://cli.vuejs.org/ru/dev-guide/ui-localization.html
+	https://vue-i18n.intlify.dev/
+	https://github.com/intlify/vue-i18n-next
+	https://phrase.com/blog/posts/ultimate-guide-to-vue-localization-with-vue-i18n/
+	https://vue-i18n.intlify.dev/guide/advanced/lazy.html есть подгрузка динамически для компонентов локализаций
+	- есть HTML в шаблоне локализации, но это добавляет рисков безопасности еще
+	https://vue-i18n.intlify.dev/guide/essentials/syntax.html#html-message
+	Останется только:
+	1. на бэке по БД формировать json в нужном формате, которые примет vue-i18n 
+	2. или же вообще вынести эту функцию из КК, например, https://www.codeandweb.com/babeledit
 
 ### SSR (Server Side Rendering, серверный рендеринг)
 

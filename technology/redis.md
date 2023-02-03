@@ -1,6 +1,15 @@
 # Redis
 
+## Зачем
+
+- Key Value [хранилище](store.md)
+- [Кеширование данных](../arch/ability/performance.md)
+
+Функции:
+
 - [Аунтентификация по IP, Password](https://netpoint-dc.com/blog/redis-security/)
+
+## Deployment
 
 [HA нюансы](http://eax.me/redis/):
 

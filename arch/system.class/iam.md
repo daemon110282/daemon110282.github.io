@@ -43,8 +43,14 @@ Identity Provider (IDP) в IAM with industry standard supported protocols:
 
 ### User store
 
+User Provisioning
+- Inbound - IAM получает из ИС источника пользовательские данные
+- Outbound - ИС источник предоставляет IAM пользовательские данные
+
+Варианты:
+
 - Внутрення БД
-- User Federation
+- User Federation - User Provisioning Inbound
   - встроенный LDAP
   - внешний LDAP
   - Microsoft Active Directory
@@ -54,9 +60,6 @@ Identity Provider (IDP) в IAM with industry standard supported protocols:
   - SAML
   - [OIDC](../../technology/protocols.integration/oidc.md)
   - Social (FB, Google..)
-- User Provisioning
-	- Inbound - IAM получает из ИС источника пользовательские данные
-	- Outbound - ИС источник предоставляет IAM пользовательские данные
 
 ### Access Control
 

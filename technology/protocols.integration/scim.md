@@ -22,6 +22,8 @@
 	- Groups
 - SCIM Server
 	- [REST API Endpoints](https://learn.microsoft.com/ru-ru/azure/active-directory/app-provisioning/use-scim-to-provision-users-and-groups)
+		- [Swagger](https://is.docs.wso2.com/en/latest/apis/scim2-rest-apis/)
+		- [Postman Collection](https://github.com/AzureAD/SCIMReferenceCode/wiki/Test-Your-SCIM-Endpoint)
 
 ## Технологии
 

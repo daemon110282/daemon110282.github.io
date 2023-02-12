@@ -24,7 +24,7 @@
   - Клиент-Сервер
   - Многослойная
   - [Модульный монолит](style/monolit.md)
-  - Микроядерная Microkernel
+  - Микроядерная Microkernel - pattern allows you to add additional application features as plug-ins to the core application, providing extensibility as well as feature sep‐ aration and isolation.
   - [Vertical-slice](https://headspring.com/2019/11/05/why-vertical-slice-architecture-is-better/)
   - [Clean Architecture](pattern/clean.architecture.md)
   - Pipeline - ZeroMQ

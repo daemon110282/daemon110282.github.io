@@ -32,8 +32,19 @@
 | Объекты-получатели могут реагировать на события сразу при их поступлении. | Гарантированная доставка |
 ||  |
 
+
+agility Rating: High
+Testability Rating: Low
+Ease of development Rating: Low
+
 ## Паттерны
 
+- pattern consists of two main topologies, 
+- The mediator topology is com‐ monly used when you need to orchestrate multiple steps within an event through a central mediator, 
+. - Spring Integration, Apache Camel, Mule ESB
+  - BPEL (business process execution language)
+  - BPMS
+- broker topology is used when you want to chain events together without the use of a central mediator.
 - __Событие__ Event driven
   - [Publish-subscribe](../../technology/middleware/rmq.md)
     - event-base

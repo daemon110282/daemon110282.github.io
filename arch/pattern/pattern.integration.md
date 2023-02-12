@@ -22,29 +22,32 @@
     - [CDN](../system.class/cdn.md) реализует паттерн [Static content hosting](https://learn.microsoft.com/en-us/azure/architecture/patterns/static-content-hosting)
     - Протокол [WebDAV](https://xakep.ru/2014/09/09/webdav/) HTTP API (IIS, Apache support) для подключения сайтов как сетевых дисков
 - Приложения
-  - Direct ([API REST](../../api/api.md), SOAP, WCF, ODATA, GraphQL, gRPC)    
+  - Direct
+    - [API REST](../../api/api.md)
+    - SOAP, WCF, ODATA
+    - [GraphQL](../../technology/protocols.integration/graphql.md)
   - Remote Procedure Invocation (RPC)
-    - __Двунаправленная связь__ для обмена сообщениями между клиентом и сервером (__протокол WebSocket__).   
-    - __Однонаправленная связь__ HTML спецификация [Server Sent Events](https://learn.javascript.ru/server-sent-events) (Server-Side Events)
-      - Соединение постоянное, __протокол HTTP__, альтернатива [Polling, Long Polling](https://web.dev/eventsource-basics/) from FrontEnd
-        - скорость, равная скорости потоковой передачи в [формате JSON](https://aengel.medium.com/server-sent-events-vs-json-stream-3a9f472120a4)
-        - меньше накладных расходов на установление [соединений vs Polling](https://stackoverflow.com/questions/9397528/server-sent-events-vs-polling)
-        - Прост в реализации и использовании, как на стороне клиента, так и на стороне сервера, более производителен для сервера, меньше задержка ответа клиента [vs Long Polling](https://www.turtle-techies.com/long-polling-vs-server-sent-events/)
-          - Минус: Ограничение, связанное с __количеством соединений, которые могут быть открыты между клиентом и сервером одновременно__
-      - Поддержка [97,5% браузеров в 2023 году](https://caniuse.com/eventsource), но IE<11 нет, Edge только
-      - [Безопасность на уровне Origin от кого сообщение](https://web.dev/eventsource-basics/#a-word-on-security)
-        - [CORS with сredentials](https://developer.mozilla.org/en-US/docs/Web/API/Server-sent_events/Using_server-sent_events) in [Headers API Key (аналогично с fetch)](https://learn.javascript.ru/fetch-crossorigin#neprostye-zaprosy)
+    - __Двунаправленная связь__ для обмена сообщениями между клиентом и сервером
+      - __протокол WebSocket__
+    - __Однонаправленная связь__
+      - HTML спецификация [Server Sent Events](../../technology/protocols.integration/sse.md)
+      - [gRPC](../technology/../../technology/protocols.integration/grpc.md)
   - Middleware
+    - Message-oriented
+    - [Advanced transient messaging](https://apolomodov.medium.com/coa-distributed-systems-4th-ed-4-communication-c5ce331015e9)
+      - ZeroMQ
+    - Message-oriented persistent
+      - [Message Bus](../../technology/rmq.md)
+        ![MQ](../../img/pattern/integration/mq.jpg)
+        ![MB VS](../../img/pattern/integration/mq.compare.jpg)
+        - Транспорт
+          - [RMQ](../../technology/rmq.md)
+          - ActiveMQ
+    - log-based message queue
+        - Kafka
     - [API Gateway](../../api/api.gateway.md)
     - [SOA](../../technology/soa.md)
-    - [ESB](../../technology/esb.md)
-    - ![Интеграционная шина](../../img/pattern/integration/esb.jpg)
-    - [Message Bus](../../technology/rmq.md)
-      ![MQ](../../img/pattern/integration/mq.jpg)
-      ![MB VS](../../img/pattern/integration/mq.compare.jpg)
-      - Транспорт  
-        - [RMQ](../../technology/rmq.md)
-        - Kafka
+    - [ESB Интеграционная шина](../../technology/esb.md) ![scheme](../../img/pattern/integration/esb.jpg)
 
 ## Критерии выбора способа интеграции
 

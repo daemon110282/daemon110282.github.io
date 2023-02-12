@@ -15,8 +15,8 @@
 - Real-time processing with minimum time lag.
 - Complex event processing, such as pattern matching or aggregation over time windows.
 - High volume and high velocity of data, such as IoT.
-- Background Jobs: Sending background messages, emails, or notifications to loads of users.
-- Asynchronous Messaging: Messaging queues are the best way to implement asynchronous programming.
+- __Background Jobs__: Sending background messages, emails, or notifications to loads of users.
+- __Asynchronous Messaging__: Messaging queues are the best way to implement asynchronous programming.
 - High Response Time: When the response time of a request is too much. For example, calculations, searching or pdf creation, etc.
 
 ## Плюсы и минусы
@@ -34,19 +34,19 @@
 
 ## Паттерны
 
-
-- Событие Event driven
+- __Событие__ Event driven
   - [Publish-subscribe](../../technology/middleware/rmq.md)
+    - event-base
+    - [shared-data space](https://apolomodov.medium.com/coa-distributed-systems-4th-ed-2-architecture-af563b2332bd)
   <!-- ![](../../img/arch/eda/eda.driven.jpg) -->
   - Подходы к передаче событий
-  ![](../../img/arch/eda/eda.event.jpg)
-  ![](../../img/arch/eda/eda.state.jpg)
-  Слабая связанность(Loose Coupling) — одно из основных преимуществ обработки, управляемой событиями. Это позволяет производителям событий создавать события, не зная о том, кто будет потреблять эти события. Точно так же потребители событий не должны знать об источниках событий. Из-за слабой связанности модули, потребляющие события, и модули, создающие события, могут быть реализованы на разных языках или использовать разные технологии, подходящие для конкретных задач.
-https://habr.com/ru/post/706630/?utm_source=pocket_mylist
-- Команда Command driven
+    - событие ![event](../../img/arch/eda/eda.event.jpg)
+    - состояние ![state](../../img/arch/eda/eda.state.jpg)
+  - __Слабая связанность__ ([Loose Coupling](https://habr.com/ru/post/706630/)) — одно из основных преимуществ обработки, управляемой событиями. Это позволяет производителям событий создавать события, не зная о том, кто будет потреблять эти события. Точно так же потребители событий не должны знать об источниках событий. Из-за слабой связанности модули, потребляющие события, и модули, создающие события, могут быть реализованы на разных языках или использовать разные технологии, подходящие для конкретных задач.
+- __Команда__ Command driven
   - [Task (Worker) Queue](../../technology/middleware/rmq.md)
   - [RPC (команды)](../../technology/middleware/rmq.md)
-- [CQRS](../pattern/pattern.cqrs.md) - command query request segregation
+- __Запросы__ [CQRS](../pattern/pattern.cqrs.md) - command query request segregation
 ![cqrs](../../img/arch/eda/eda.cqrs.jpg)
 - [Event sourcing](https://habr.com/ru/company/nix/blog/322214/) - источник правды событие, не состояние ИС
 ![es](../../img/arch/eda/eda.event.sourcing.jpg)

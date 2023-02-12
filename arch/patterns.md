@@ -31,8 +31,8 @@
 
 - [DDD](pattern/ddd.md)
 - SOLID
-  - Single concern principle, single response principle (SRP) - решать одну проблему хорошо
-  - Open-Closed - сущности открыты для расширения, но закрыты для изменения
+  - Single concern principle, __single response principle (SRP)__ - решать одну проблему хорошо
+  - __Open-Closed__ - сущности открыты для расширения, но закрыты для изменения
   - Liskov
   - Interface Segregation
   - Dependeny Injection

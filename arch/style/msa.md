@@ -135,6 +135,11 @@
 
 ## Паттерны
 
+- three main topologies stand out as the most common and popular:
+
+- the API REST-based topology, 
+- application REST-based topology, and 
+- the centralized messaging topology.
 - Декомпозиции на сервисы
   - [Decompose by business capability Context](https://microservices.io/patterns/decomposition/decompose-by-business-capability.html)
   - [Decompose by subdomain Context](https://microservices.io/patterns/decomposition/decompose-by-subdomain.html)

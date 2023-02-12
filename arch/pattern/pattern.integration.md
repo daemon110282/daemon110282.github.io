@@ -44,7 +44,7 @@
           - [RMQ](../../technology/rmq.md)
           - ActiveMQ
     - log-based message queue
-        - Kafka
+        - [Kafka](../../technology/middleware/kafka.md)
     - [API Gateway](../../api/api.gateway.md)
     - [SOA](../../technology/soa.md)
     - [ESB Интеграционная шина](../../technology/esb.md) ![scheme](../../img/pattern/integration/esb.jpg)

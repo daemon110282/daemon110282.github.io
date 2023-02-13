@@ -19,6 +19,7 @@
 	- Error\Exception
 	- [Message](https://docs.sentry.io/product/sentry-basics/integrate-backend/capturing-errors/#capture-message)
 	- [Level Logging](https://docs.sentry.io/platforms/php/usage/set-level/)
+	- [PHP example](https://russianblogs.com/article/3659249339/)
 - Stack traces
 - Query
 - Dashboard
@@ -38,7 +39,7 @@
 - [Distributed Trace](https://docs.sentry.io/product/sentry-basics/tracing/distributed-tracing/)
 	![span](https://docs.sentry.io/static/1ae959bb1d05b01379cf856c5dc36a01/c1b63/diagram-transaction-trace.png)
 	- Trace -> Transaction -> Span
-	- Duration Span
+	- Duration Span	
 - Alert
 	- [Telegram](https://github.com/butorov/sentry-telegram)
 - [SSO](https://develop.sentry.dev/self-hosted/sso/)

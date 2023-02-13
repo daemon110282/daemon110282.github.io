@@ -21,7 +21,7 @@
     - сервисы между собой делят Очередь задач
     - паттерн EIP [Competing Consumers](https://www.enterpriseintegrationpatterns.com/patterns/messaging/CompetingConsumers.html)
     - Exchange type: direct, several consumer listening to the same queue, reading the messages in a round-robin fashion if all are waiting
-  - Task Queue (распределение задач по загрузке ) Fair dispatching
+  - Task Queue (распределение задач по загрузке) Fair dispatching
     - QoS = 1, ack=1, autoack=0 если не подтверждено 1-е сообщение, 2-е пойдёт другому подписчику
 
 ### Simple one-way messaging (Exchange type: direct, message sent to unnamed (default queue))

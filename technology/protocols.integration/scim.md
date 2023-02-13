@@ -13,9 +13,13 @@
 
 Фичи:
 
+- [Use Case](https://datatracker.ietf.org/doc/html/draft-ietf-scim-use-cases-07)
+	- [MIRO user add\update\delete](https://developers.miro.com/docs/scim-api-user-lifecycle-management) to SCIM Server [OKTA](https://help.miro.com/hc/en-us/articles/360036768134-Setting-up-automated-provisioning-with-OKTA)
 - SCIM Client
 	- Users
-		- [Sync Users](https://developer.okta.com/docs/reference/scim/scim-11/#retrieve-users)
+		- Импорт пользователей из SCIM Server [Sync Users](https://developer.okta.com/docs/reference/scim/scim-11/#retrieve-users)
+			- [постранично](https://datatracker.ietf.org/doc/html/rfc7644#section-3.4.2.4)
+			- по [фильтрам](https://www.rfc-editor.org/rfc/rfc7644#section-3.4.2.2) (дельта по датавремя наприме)
 		- Provision users from External User Store to Keycloak
 			- [Flow OKTA SCIM 1.1](https://developer.okta.com/docs/reference/scim/scim-11/)
 			- [Flow OKTA SCIM 2.0](https://developer.okta.com/docs/reference/scim/scim-20/)
@@ -29,10 +33,10 @@
 
 [Варианты](https://www.simplecloud.info/#Implementations2)
 
-- SCIM Client
-	- to server [SCIM 1.1 Provisioning IDP Keycloak SPI](https://github.com/Captain-P-Goldfish/scim-for-keycloak)
+- SCIM Client	
 	- [SCIM 2.0](https://lab.libreho.st/libre.sh/scim/keycloak-scim) GNU Affero General Public License v3.0
 - SCIM Server
+	- [SCIM 1.1 Provisioning IDP Keycloak SPI](https://github.com/Captain-P-Goldfish/scim-for-keycloak)
 	- [PHP 1.1 and SCIM 2.0 Okta](https://toolkit.okta.com/apps/scimify/)
 	- [PHP Onelogin](https://github.com/onelogin/onelogin-scim-php)
 	- [rocketchat SCIM 2.0 Example](https://lab.libreho.st/libre.sh/scim/rocketchat-scim)

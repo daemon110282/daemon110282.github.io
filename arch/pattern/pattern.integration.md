@@ -28,23 +28,15 @@
     - [GraphQL](../../technology/protocols.integration/graphql.md)
   - Remote Procedure Invocation (RPC)
     - __Двунаправленная связь__ для обмена сообщениями между клиентом и сервером
-      - __протокол WebSocket__
+      - протокол __WebSocket__
     - __Однонаправленная связь__
       - HTML спецификация [Server Sent Events](../../technology/protocols.integration/sse.md)
       - [gRPC](../technology/../../technology/protocols.integration/grpc.md)
   - Middleware
-    - Message-oriented
-    - [Advanced transient messaging](https://apolomodov.medium.com/coa-distributed-systems-4th-ed-4-communication-c5ce331015e9)
-      - ZeroMQ
-    - Message-oriented persistent
-      - [Message Bus](../../technology/rmq.md)
-        ![MQ](../../img/pattern/integration/mq.jpg)
-        ![MB VS](../../img/pattern/integration/mq.compare.jpg)
-        - Транспорт
-          - [RMQ](../../technology/rmq.md)
-          - ActiveMQ
-    - log-based message queue
-        - [Kafka](../../technology/middleware/kafka.md)
+    - [Message-oriented](pattern.messagebroker.md)
+      - Advanced transient messaging
+      - Message-oriented persistent
+      - log-based message queue
     - [API Gateway](../../api/api.gateway.md)
     - [SOA](../../technology/soa.md)
     - [ESB Интеграционная шина](../../technology/esb.md) ![scheme](../../img/pattern/integration/esb.jpg)
@@ -62,10 +54,7 @@
 
 TODO см. EIP
 
-- [Messaging Patterns](https://www.enterpriseintegrationpatterns.com/patterns/messaging/)
-  - [MS](https://docs.microsoft.com/ru-ru/azure/architecture/patterns/category/messaging)
-  - Pub\Sub События
-  - Task (Worker) Queue
+- [Messaging Patterns](pattern.messagebroker.md)
 - [RPC Команды\Запросы](pattern.rpc.md)
 - [Обработка сбоев: Retry Policy, Rate Limit, Circuit Breaker](pattern.failure.md)
 - Sidecar
@@ -83,7 +72,7 @@ TODO см. EIP
 - [Распределенные файловые системы](../../technology/dfs.md)
 - RPC 
   - WebSocket
-    - signal.ir - кeal-time web functionality enables [server-side code](https://learn.microsoft.com/en-us/aspnet/core/signalr/introduction?view=aspnetcore-7.0) to __push content to clients__ instantly.
+    - signal.ir - real-time web functionality enables [server-side code](https://learn.microsoft.com/en-us/aspnet/core/signalr/introduction?view=aspnetcore-7.0) to __push content to clients__ instantly.
     - Vue.js + Node.js + [socket.io](https://blog.openreplay.com/rendering-real-time-data-with-vue-node-and-socket-io)
     - PHP 
       - Node.js + [Laravel Echo](https://laravel.com/docs/5.3/broadcasting#installing-laravel-echo)
@@ -91,13 +80,8 @@ TODO см. EIP
       - https://roadrunner.dev/features
       - https://reactphp.org/
     - [Варианты](https://www.educba.com/signalr-alternatives/)
-    - [Chat](https://blog.bytebytego.com/i/98040721/how-do-we-design-a-chat-application-like-whatsapp-facebook-messenger-or-discord)
-  - Server Sent Events
-    - signal.ir
-    - Node.js
-    - [PHP](https://web.dev/eventsource-basics/#server-examples)
-      - [MDN sample](https://github.com/mdn/dom-examples/tree/main/server-sent-events)
-    - [vue plugin](https://github.com/tserkov/vue-sse)
+    - [Chat архитектура](https://blog.bytebytego.com/i/98040721/how-do-we-design-a-chat-application-like-whatsapp-facebook-messenger-or-discord)
+  - [Server Sent Events](../../technology/protocols.integration/sse.md)
 
 ## Links
 

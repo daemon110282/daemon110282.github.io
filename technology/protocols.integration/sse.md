@@ -26,3 +26,11 @@
 - retry - мс на переподключение при обрыве связи
 
 Адресация сообщений возможна по event (пример: ИДПользователя_ДоговорСтатусИзменен), где клиент подписывается на события для конкретного пользователя, сервер ИД пользователя получает при аутентификации.
+
+## Технологии
+
+- signal.ir
+- Node.js
+- [PHP](https://web.dev/eventsource-basics/#server-examples)
+	- [MDN sample](https://github.com/mdn/dom-examples/tree/main/server-sent-events)
+- [vue plugin](https://github.com/tserkov/vue-sse)

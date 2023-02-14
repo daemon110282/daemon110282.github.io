@@ -101,6 +101,7 @@ Client type — тип клиента, от которого зависит сп
 - Store AccessToken JWT [in Session Cookie](https://jcbaey.com/authentication-in-spa-reactjs-and-vuejs-the-right-way/)
 - When the SPA calls only an API that is served from a domain that can share cookies with the domain of the SPA, no tokens are needed. 
 - When the SPA calls multiple APIs that reside in a different domain, access, and optionally, refresh tokens are needed.
+
 - If you are using cookie-based authentication, they are stored in a cookie and sent to the server in every request. 
 - If you are using token-based authentication, they are sent by the client in every request, typically in the HyperText Transfer Protocol (HTTP) header.
 - CORS provides a way for JavaScript to make requests to servers on a different domain as long as the destination allows it. This opens up the possibility of using the Authorization Code flow in JavaScript on browser-side with the PKCE extension instead.

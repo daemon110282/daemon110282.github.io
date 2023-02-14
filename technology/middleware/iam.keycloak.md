@@ -53,7 +53,10 @@
 		- [External Identity broker OIDC](https://medium.com/keycloak/keycloak-as-an-identity-broker-an-identity-provider-af1b150ea94)
 	- Keycloak SPI plugin that [publishes events to a RabbitMq server](https://github.com/aznamier/keycloak-event-listener-rabbitmq)
 - Starting with version 19, Keycloak supports sending logs using __GELF__ to centralized logging solutions like __ELK, EFK or Graylog out of the box__.
-- [Обучение СЛЁРМ](https://slurm.io/keycloak)
+- Refresh token rotation
+	- [Revoke Refresh Token](https://www.keycloak.org/docs/latest/server_admin/#_timeouts)
+	- обмен cookie через [iframe механизм](https://github.com/keycloak/keycloak-documentation/blob/main/securing_apps/topics/oidc/javascript-adapter.adoc#session-status-iframe) не все [браузеры будут поддерживать в дальнейшем](https://www.keycloak.org/docs/latest/securing_apps/#_modern_browsers)
+- [JavaScript Adapter for Client App](https://www.keycloak.org/docs/latest/securing_apps/#_javascript_adapter)
 
 Термины:
 
@@ -65,6 +68,8 @@
 - Roles
 - Cross-Origin Resource Sharing (CORS) - [механизм, использующий дополнительные HTTP-заголовки](https://developer.mozilla.org/ru/docs/Web/HTTP/CORS), чтобы дать возможность агенту пользователя получать разрешения на доступ к выбранным ресурсам с сервера на источнике (домене), отличном от того, что сайт использует в данный момент. Говорят, что агент пользователя делает запрос с другого источника (cross-origin HTTP request), если источник текущего документа отличается от запрашиваемого ресурса доменом, протоколом или портом. Пример: http://domain-a.com, запрашивает <img> src по адресу http://domain-b.com/image.jpg
 	- Origin - Web content's origin is defined by the scheme (protocol), hostname (domain), and port of the URL used to access it. Two objects have the __same origin__ only when the __scheme, hostname, and port all match__.
+
+[Обучение СЛЁРМ](https://slurm.io/keycloak)
 
 ### User Storage
 

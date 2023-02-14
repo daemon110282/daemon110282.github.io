@@ -25,6 +25,7 @@
 - Dashboard
 - Release
 - Reproduce Errors Without User Feedback - __Breadcrumbs__ show you events that lead to errors.
+	- [PHP example](https://sentry.io/for/php/)
 - [Nginx + Sentry](https://blog.sentry.io/2019/01/31/using-nginx-sentry-trace-errors-logs)
 - Data Collector
 	- [From stdout from FluentD Plugin](https://www.fluentd.org/plugins/all)
@@ -40,6 +41,7 @@
 	![span](https://docs.sentry.io/static/1ae959bb1d05b01379cf856c5dc36a01/c1b63/diagram-transaction-trace.png)
 	- Trace -> Transaction -> Span
 	- Duration Span	
+	- [PHP example](https://docs.sentry.io/platforms/php/performance/) 
 - Alert
 	- [Telegram](https://github.com/butorov/sentry-telegram)
 - [SSO](https://develop.sentry.dev/self-hosted/sso/)

@@ -81,6 +81,20 @@ Optional:
 
 ## Token validate
 
+Варианты Access token:
+
+- identifier-based or opaque access token - /token/introspect return active status token
+  - плюсы
+    - быстро можно заблокировать
+  - минусы
+    - доп запросы, нагрузка на IAM
+    - риски масштабирования при нагрузке
+- self-contained (jwt format) - проверка подписи через JWKS endpoint IAM и затем параметров токена
+  - плюсы
+    - простота масштабирование под рост нагрузки
+  - минусы
+    - блокировка возможна только по истечении exp токена
+
 ![token validate](https://lh3.googleusercontent.com/pw/AL9nZEU8W4c59UO_qgfALxBDsUQUmOdeKq2qW3XSiD72WbrqQ2m2xnolziO0UgNlcqktm4XYdhJ93r4D4oqa3KPpzSBXU5O8DcB__HHZJ5Picah6BNKczaiiAGULHYMRhI9GAoFutEEhVFIDdH_Q71jxuZnfYQ=w656-h374-no)
 
 ## Token exchange

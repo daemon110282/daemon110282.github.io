@@ -20,7 +20,7 @@
 		- Импорт пользователей [из SCIM Server](https://developer.okta.com/docs/reference/scim/scim-11/#retrieve-users)
 			- [постранично](https://datatracker.ietf.org/doc/html/rfc7644#section-3.4.2.4)
 			- по [фильтрам](https://www.rfc-editor.org/rfc/rfc7644#section-3.4.2.2) (дельта по датавремя создания пользователя, например)
-		- Provision users from External User Store to Keycloak
+		- маппинг (sync) Provision users from External User Store-scim server to IAM-scim client
 			- [Flow OKTA SCIM 1.1](https://developer.okta.com/docs/reference/scim/scim-11/)
 			- [Flow OKTA SCIM 2.0](https://developer.okta.com/docs/reference/scim/scim-20/)
 	- Groups

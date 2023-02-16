@@ -14,7 +14,7 @@
 Фичи:
 
 - [Use Case](https://datatracker.ietf.org/doc/html/draft-ietf-scim-use-cases-07)
-	- MIRO user [add\update\delete (sync)](https://developers.miro.com/docs/scim-api-user-lifecycle-management) to SCIM Server [OKTA](https://help.miro.com/hc/en-us/articles/360036768134-Setting-up-automated-provisioning-with-OKTA)
+	- to scim server MIRO [add\update\delete (sync)](https://developers.miro.com/docs/scim-api-user-lifecycle-management) user from SCIM client [OKTA](https://help.miro.com/hc/en-us/articles/360036768134-Setting-up-automated-provisioning-with-OKTA)
 - SCIM Client
 	- Users
 		- Импорт пользователей [из SCIM Server](https://developer.okta.com/docs/reference/scim/scim-11/#retrieve-users)

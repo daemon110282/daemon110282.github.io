@@ -1,18 +1,19 @@
 # OpenID Connect (OIDC)
 
 - [OpenID Connect (OIDC)](#openid-connect-oidc)
-	- [Технологии](#технологии)
-	- [Flow Grant](#flow-grant)	
+	- [Flow-Grant](#flow-grant)
 		- [Параметры Flow](#параметры-flow)
-	- [Deployment models](#deployment-models)
-	
+		- [Identity Token](#identity-token)
+	- [Deployment](#deployment)
+	- [Технологии](#технологии)
+	- [TODO](#todo)
 
 ![OpenID Сonnect процесс](https://habrastorage.org/r/w1560/getpro/habr/post_images/c13/afc/ee5/c13afcee5226ddb135df9836d3321b17.png)
 
 Термины:
 
 - OpenID Connect Provider (OP) - Identity Provider
-- User 
+- User
 - Client - ИС
 	- Confidential  
 	- Public  
@@ -23,12 +24,7 @@
 	- Resource Server
 	- Resource Owner
 
-## Технологии
-
-- [OIDC certified решения](https://openid.net/developers/certified/)
-- [PHP OIDC Server](https://github.com/bshaffer/oauth2-server-php)
-
-## Flow Grant
+## Flow-Grant
 
 Client type — тип клиента, от которого зависит способ взаимодействия с ним. Тип клиента определяется его возможностью безопасно хранить свои учётные данные для авторизации — токен. Поэтому существует [всего 2 типа клиентов](https://habr.com/ru/company/dododev/blog/520046/):
 
@@ -42,8 +38,8 @@ Client type — тип клиента, от которого зависит сп
 	- [Client Credentials Flow](https://habr.com/ru/company/dododev/blog/520046/)
 	<!-- ![scheme](https://habrastorage.org/r/w1560/getpro/habr/post_images/110/fe3/d4a/110fe3d4a29efd1af72da67ab06515ba.png) -->
 - Public - [GUI с участием User](https://docs.duendesoftware.com/identityserver/v6/overview/terminology/#interactive-applications)
-	- [Authorization Code Flow with PKCE](https://auth0.com/docs/get-started/authentication-and-authorization-flow/authorization-code-flow-with-proof-key-for-code-exchange-pkce) - using a browser only		
-	- [Implicit Flow](https://learn.microsoft.com/en-us/windows-server/identity/ad-fs/overview/ad-fs-openid-connect-oauth-flows-scenarios) - redirection required SPA, JS __legacy__		
+	- [Authorization Code Flow with PKCE](oauth.flow.ACwithPKCE.md)
+	- [Implicit Flow](oauth.flow.implicit.md) __legacy__		
 	- Device authorization
 
 ### Параметры Flow
@@ -57,12 +53,14 @@ Client type — тип клиента, от которого зависит сп
 	- ClientSecret
 		- Хранится на BackEnd и передается в Authentication Flow
 		- в Implicit Flow не хранится в SPA, JS и не передается
-	
-![tokens id, acccess](https://images.ctfassets.net/23aumh6u8s0i/2y2MCTq87UqQ1uzCJsl4M/c6f127f738f0d13017ff47544958d880/id-token-vs-access-token.jpg)
 
 [Песочница](https://openidconnect.net/)
 
-### Identity Token структура Payload
+### Identity Token
+
+![tokens id, acccess](https://images.ctfassets.net/23aumh6u8s0i/2y2MCTq87UqQ1uzCJsl4M/c6f127f738f0d13017ff47544958d880/id-token-vs-access-token.jpg)
+
+Структура Payload:
 
 - [iss](https://openid.net/specs/openid-connect-core-1_0.html#IDToken): "http://my-domain.auth0.com" - кто выпустил токен
 - sub: "auth0|123456" - Уникальный идентификатор пользователя
@@ -72,7 +70,7 @@ Client type — тип клиента, от которого зависит сп
 - scope: openid - These are the scopes that bind to user attributes(claims). You can use OIDC scopes to limit access user’s attributes.
 - Custom User Claims optional
 
-## Deployment models
+## Deployment
 
 [Deployment models](https://developer.okta.com/docs/concepts/redirect-vs-embedded/):
 
@@ -92,16 +90,12 @@ Client type — тип клиента, от которого зависит сп
 		[BackEnd Spring](https://developer.okta.com/blog/2021/10/04/spring-boot-spa)
 	[SPA Azure ADFS example](https://learn.microsoft.com/en-us/azure/active-directory/develop/single-page-app-quickstart)
 
+## Технологии
+
+- [OIDC certified решения](https://openid.net/developers/certified/)
+- [PHP OIDC Server](https://github.com/bshaffer/oauth2-server-php)
 
 ## TODO
 
-- https://cyberpolygon.com/ru/materials/security-of-json-web-tokens-jwt/%7Cere
 - [__TODO BFF нужен SPA CSRF attacks?__](https://docs.duendesoftware.com/identityserver/v5/bff/overview/)
 - [JS OIDC Client](https://github.com/IdentityModel/oidc-client-js/wiki)
-- Store AccessToken JWT [in Session Cookie](https://jcbaey.com/authentication-in-spa-reactjs-and-vuejs-the-right-way/)
-- When the SPA calls only an API that is served from a domain that can share cookies with the domain of the SPA, no tokens are needed. 
-- When the SPA calls multiple APIs that reside in a different domain, access, and optionally, refresh tokens are needed.
-
-- If you are using cookie-based authentication, they are stored in a cookie and sent to the server in every request. 
-- If you are using token-based authentication, they are sent by the client in every request, typically in the HyperText Transfer Protocol (HTTP) header.
-- CORS provides a way for JavaScript to make requests to servers on a different domain as long as the destination allows it. This opens up the possibility of using the Authorization Code flow in JavaScript on browser-side with the PKCE extension instead.

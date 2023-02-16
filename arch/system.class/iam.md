@@ -43,7 +43,8 @@ Identity Provider (IDP) в IAM with industry standard supported protocols:
 
 ### User store
 
-User Provisioning
+User Provisioning:
+
 - Inbound - IAM получает из ИС источника пользовательские данные
 - Outbound - ИС источник предоставляет IAM пользовательские данные
 

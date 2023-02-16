@@ -32,7 +32,7 @@
 			- [Redirect or Embedded](https://learn.microsoft.com/en-us/azure/active-directory/develop/scenario-spa-sign-in?tabs=javascript2)
 		- [One Logout OIDC](https://learn.microsoft.com/ru-ru/windows-server/identity/ad-fs/development/ad-fs-logout-openid-connect)
 		- [Test in Swagger](https://medium.com/the-new-control-plane/using-swagger-as-a-client-for-an-adfs-protected-api-49f9b4d773c)
-		- [Validate JWT](https://medium.com/the-new-control-plane/validating-an-adfs-jwt-a47099b014b9)
+		- [Validate Access Token JWT](https://medium.com/the-new-control-plane/validating-an-adfs-jwt-a47099b014b9)
 		- [MFA](https://learn.microsoft.com/ru-ru/windows-server/identity/ad-fs/operations/configure-additional-authentication-methods-for-ad-fs)
 			- [Custom Logic](https://learn.microsoft.com/ru-ru/windows-server/identity/ad-fs/development/ad-fs-build-custom-auth-method)
 			- [Внешний провайдер - multifactor.ru](https://multifactor.ru/docs/adfs-2fa/)

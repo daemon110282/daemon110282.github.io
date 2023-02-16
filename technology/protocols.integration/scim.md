@@ -8,7 +8,7 @@
 
 Термины:
 
-- SCIM Client - [IAM IDP](../../arch/system.class/iam.md) (например Keycloak)
+- SCIM Client - [IAM IDP](../../arch/system.class/iam.md) (например IAM, но может быть и сервером)
 - SCIM Server - User Directory (Store)
 
 Фичи:

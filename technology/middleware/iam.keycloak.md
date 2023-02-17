@@ -50,7 +50,9 @@
 				- [SCIM 2.0](https://lab.libreho.st/libre.sh/scim/keycloak-scim) GNU Affero General Public License v3.0
 	- [On demand migration](https://github.com/Smartling/keycloak-user-migration-provider)
 	- [External Identity broker OIDC](https://medium.com/keycloak/keycloak-as-an-identity-broker-an-identity-provider-af1b150ea94)
-- Keycloak SPI plugin that [publishes events to a RabbitMq server](https://github.com/aznamier/keycloak-event-listener-rabbitmq)
+- Message Queue Intgegration
+	- Keycloak SPI plugin that [publishes events to a RabbitMq server](https://github.com/aznamier/keycloak-event-listener-rabbitmq)
+	- Keycloak SPI plugin [Kafka](https://github.com/SnuK87/keycloak-kafka)
 - Keycloak v19 sending logs using __GELF__ to centralized logging solutions like __ELK, EFK or Graylog out of the box__.
 - Refresh token rotation
 	- [Revoke Refresh Token](https://www.keycloak.org/docs/latest/server_admin/#_timeouts)

@@ -62,13 +62,17 @@ Client type — тип клиента, от которого зависит сп
 
 Структура Payload:
 
-- [iss](https://openid.net/specs/openid-connect-core-1_0.html#IDToken): "http://my-domain.auth0.com" - кто выпустил токен
-- sub: "auth0|123456" - Уникальный идентификатор пользователя
-- aud: "1234abcdef" - равно client_id - ИС запращивающая доступ
-- exp: 1311281970 - срок действия (UNIX format)
-- iat: 1311280970 - дата время выдачи токена (UNIX format)
-- scope: openid - These are the scopes that bind to user attributes(claims). You can use OIDC scopes to limit access user’s attributes.
-- Custom User Claims optional
+- обязательные
+	- [iss](https://openid.net/specs/openid-connect-core-1_0.html#IDToken): "http://my-domain.auth0.com" - идентификатор эмитента (сервера авторизации), источника ответа; реги-строзависимый URL-адрес, использующий схему https; содержит схему, хост и опционально компоненты номера порта и пути, но не компоненты запроса или фрагмента
+	- sub: "auth0|123456" - Уникальный идентификатор пользователя
+	- aud: "1234abcdef" - равно client_id - ИС запращивающая доступ, аудитория, для которой предназначен данный ID токен, должна содержать идентификатор client_id;
+	- exp: 1311281970 - срок действия (UNIX format)
+	- iat: 1311280970 - дата время выдачи токена (UNIX format)
+	- scope: openid - These are the scopes that bind to user attributes(claims). You can use OIDC scopes to limit access user’s attributes.
+	– nonce: - равно значению параметра nonce, в запросе аутентификации. Серверу авторизации следует включать этот параметр, если значение параметра nonce присутствует в соответствующем запросе аутентификации
+- опциональные
+	- Custom User Claims
+	– azp:  идентификатор клиента стороны, для которого был выпущен ID токен.
 
 ## Deployment
 

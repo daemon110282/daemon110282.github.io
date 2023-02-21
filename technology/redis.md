@@ -2,19 +2,40 @@
 
 ## Зачем
 
+Redis - Remote Dictionary Service
 - Key Value [хранилище](store.md)
 - [Кеширование данных](../arch/ability/performance.md)
+- Дедубликация
 
  ![Redis](https://substackcdn.com/image/fetch/w_848,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2F0205d074-5f42-402b-b150-99027cb4fc38_800x1114.jpeg)
  
 Функции:
 - [RESP](https://redis.io/docs/reference/protocol-spec/) протокол
 - [Аунтентификация по IP, Password](https://netpoint-dc.com/blog/redis-security/)
+- Pub\Sub
+- [Типы данных](https://redis.io/docs/data-types/)
+	- List - упорядоченный список 
+	- Streams - append-only log
+- Redis Sentinel — это сервис, обеспечивающий создание __распределённых систем__. 
+- Redis cluster
+- TTL
+- [Транзакции](https://habr.com/ru/post/204354/)
+- Поиск
+	- [Tag](https://redis.io/docs/stack/search/reference/tags/)
+	- Полнотекстовый
+
+## Паттерны
+
+- [Индексирования ключей](https://habr.com/ru/post/485672/)
+
 
 ## Deployment
 
-- [персистентность](https://redis.io/docs/management/persistence/) на диск
+- [персистентность](https://redis.io/docs/management/persistence/) 
+	- [RDB-файлы](https://habr.com/ru/company/wunderfund/blog/685894/)
+	- AOF на диск
 - [HA cluster](https://redis.io/docs/management/scaling/)
+	- Оценка [системных требований](https://redis.com/modules/redis-search/redisearch-sizing-calculator/)
 
 [HA нюансы](http://eax.me/redis/):
 
@@ -24,5 +45,19 @@
 - после внедрения __шардинга__ стало слежение за доступностью оперативной памяти на Redis-серверах. Свободной памяти на серверах должно быть столько, чтобы при падении 1-2 Redis-машин нам хватило бы памяти для передачи всех данных на оставшиеся в бою сервера и продолжения работы до тех пор, пока вылетевшие сервера не вернутся в строй.
 	- __Персистентность__ в программировании означает способность состояния существовать дольше, чем процесс, создавший его.
 - В первую очередь, Redis умеет __сохранять данные на диск__. Можно настроить Redis так, чтобы данные вообще не сохранялись, сохранялись периодически по принципу copy-on-write, или сохранялись периодически и писались в журнал (binlog). Таким образом, всегда можно добиться требуемого баланса между производительностью и надежностью.
-- redis-benchmark в тесте только пускать
-- [Репликация](https://cloud.github.com/downloads/kondratovich/the-little-redis-book/redis-ru.pdf)
+- [redis-benchmark](https://redis.io/docs/management/optimization/benchmarks/) в тесте только пускать
+	- [memtier](https://www.8host.com/blog/analiz-proizvoditelnosti-servera-redis-na-ubuntu-18-04/)
+- [Репликация](https://habr.com/ru/company/wunderfund/blog/685894/)
+	- [TODO](https://cloud.github.com/downloads/kondratovich/the-little-redis-book/redis-ru.pdf)
+
+## Obervability
+
+- Metrics
+	- Индекс производительности: показатели производительности
+		- [latency, instantaneous_ops_per_sec, hit rate (calculated)](https://russianblogs.com/article/7125451930/)	
+	- Метрики памяти: Метрики памяти
+	- Основные показатели деятельности: основные показатели деятельности
+	- Метрики персистентности: Метрики персистентности
+	- Метрики ошибок: Метрики ошибок
+	- TODO https://scalegrid.io/blog/6-crucial-redis-monitoring-metrics/
+- [Zabbix](https://habr.com/ru/company/first/blog/687916/)

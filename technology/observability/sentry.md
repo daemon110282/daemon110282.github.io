@@ -1,6 +1,6 @@
 # Sentry
 
-Инструмент мониторинга исключений (exception), ошибок.
+Инструмент мониторинга исключений (exception), ошибок, логов, распределенной трассировки, анализа производительности.
 
 ## Зачем
 
@@ -22,6 +22,12 @@
 	- [PHP example](https://russianblogs.com/article/3659249339/)
 - Stack traces
 - Query
+- Issue [Grouping](https://docs.sentry.io/product/data-management-settings/event-grouping/)
+	- Inbound Filters
+		- [Server](https://docs.sentry.io/product/data-management-settings/filtering/)
+		- Client: [PHP](https://docs.sentry.io/platforms/php/configuration/filtering/)
+	- [Clean](https://help.sentry.io/product-features/configuration/how-can-i-delete-resolve-all-issues-in-a-project/)
+		- [Очистка БД](https://dev.to/nixon1333/clean-sentry-database-on-premise-28b) через [Sentry CLI](https://sentry-docs-o2paie5ivq-uc.a.run.app/server/cli/cleanup/)
 - Dashboard
 - Release
 - Reproduce Errors Without User Feedback - __Breadcrumbs__ show you events that lead to errors.
@@ -49,6 +55,13 @@
 	- Google OIDC
 - [Jira Task Intregration](https://forum.sentry.io/t/how-to-configure-jira-cloud-in-your-on-premise-sentry/6720)
 - MTA 
+
+Сущности:
+
+- Project
+- Issue
+- Release
+- Alert
 
 ## Технологии
 

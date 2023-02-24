@@ -1,5 +1,13 @@
 # Sentry
 
+- [Sentry](#sentry)
+	- [Зачем](#зачем)
+	- [Функции](#функции)
+		- [Event Model](#event-model)
+	- [Плюсы-Минусы](#плюсы-минусы)
+	- [Deployment](#deployment)
+	- [Технологии](#технологии)
+
 Инструмент мониторинга исключений (exception), ошибок, логов, распределенной трассировки, анализа производительности.
 
 ## Зачем
@@ -13,16 +21,20 @@
 - [Security and compliance](https://logz.io/learn/complete-guide-elk-stack/?utm_source=pocket_saves#common-pitfalls:~:text=guide%40logz.io-,Use%20Cases,-The%20ELK%20Stack)
 	- SIEM
 
-## Фичи
+## Функции
 
 - Log
 	- Error\Exception
 	- [Message](https://docs.sentry.io/product/sentry-basics/integrate-backend/capturing-errors/#capture-message)
-	- [Level Logging](https://docs.sentry.io/platforms/php/usage/set-level/)
+	- Level Logging
+      - [PHP](https://docs.sentry.io/platforms/php/usage/set-level/)
+      - [Context Params](https://docs.sentry.io/platforms/php/enriching-events/context/)
+      - [JS](https://docs.sentry.io/platforms/javascript/usage/set-level/)
 	- [PHP example](https://russianblogs.com/article/3659249339/)
 - Stack traces
 - Query
 - Issue [Grouping](https://docs.sentry.io/product/data-management-settings/event-grouping/)
+    - Группировка ошибок по кастомным правилам
 	- Inbound Filters
 		- [Server](https://docs.sentry.io/product/data-management-settings/filtering/)
 		- Client: [PHP](https://docs.sentry.io/platforms/php/configuration/filtering/)
@@ -30,7 +42,7 @@
 		- [Очистка БД](https://dev.to/nixon1333/clean-sentry-database-on-premise-28b) через [Sentry CLI](https://sentry-docs-o2paie5ivq-uc.a.run.app/server/cli/cleanup/)
 - Dashboard
 - Release
-- Reproduce Errors Without User Feedback - __Breadcrumbs__ show you events that lead to errors.
+- Reproduce Errors Without User Feedback - __Breadcrumbs__ - логирование действий пользователя (клики, переходы по страницам и т.п.), предшествующих ошибке.
 	- [PHP example](https://sentry.io/for/php/)
 - [Nginx + Sentry](https://blog.sentry.io/2019/01/31/using-nginx-sentry-trace-errors-logs)
 - Data Collector
@@ -46,34 +58,31 @@
 - [Distributed Trace](https://docs.sentry.io/product/sentry-basics/tracing/distributed-tracing/)
 	![span](https://docs.sentry.io/static/1ae959bb1d05b01379cf856c5dc36a01/c1b63/diagram-transaction-trace.png)
 	- Trace -> Transaction -> Span
-	- Duration Span	
-	- [PHP example](https://docs.sentry.io/platforms/php/performance/) 
+	- Duration Span
+	- [PHP example](https://docs.sentry.io/platforms/php/performance/)
 - Alert
 	- [Telegram](https://github.com/butorov/sentry-telegram)
 - [SSO](https://develop.sentry.dev/self-hosted/sso/)
 	- Auth user access by [KeyCloak SAML](https://yyhh.org/blog/2020/10/how-to-setup-saml2-authentication-on-sentry-with-keycloak/)
 	- Google OIDC
 - [Jira Task Intregration](https://forum.sentry.io/t/how-to-configure-jira-cloud-in-your-on-premise-sentry/6720)
-- MTA 
+- MTA
 
 Сущности:
 
-- Project
+- [Project](https://docs.sentry.io/product/accounts/getting-started/?utm_source=pocket_saves#-whats-in-a-project)
 - Issue
 - Release
 - Alert
 
-## Технологии
+### Event Model
 
-- Архитектура
-![arch](https://mermaid.ink/svg/pako:eNqFU01PwzAM_StRTiDGeu8BCbQbcKFc0DwhN_XWqs2H0kQwtv13smSj1SrgFj8_v9gvzo4LXRHP-caiqdnrAhQas3zT3rJ7Y7pGoGu0WrHb2zu2LxaPe9aVu92Txoo9YIdKkD0cQHVlYgDvSTm7ndMnStPRXGiZoWkygOom6522lAHfM0sdbv8uO9IS-v5B5RJ4EQN2FaJr4CtQ_VaWOraobdQZ6KDiDRFtcd3iGLBUNX0o_2GnYuVLnKCSpEBRUzXJGN27jaWp0Fn-qDduYAAmDBGmaGvtewIV2RH90rolMmSnvZ5CbVuyY2sicHJnzPltliF5YcqQmM455MYvAApUnCM5yYDXzpk-z7JN42pfxlXYkEsqWbKbB1oR6QstvAypuG_Az1rp1f7RStt01HqJ9AstPuOSrMSmCou-A8UC0dUkCXgejhWt0XfueOchUNE7XWyV4LmznmbcmwodLRoMX0TyfI1dH9DgVpj5OX2e-IcO3z0YL2M)
-- Snuba
-- Clickhouse - управляет Alert
-![Clickhouse](https://images.ctfassets.net/em6l9zw4tzag/162no5P9QQXMQbvY7Hu8zz/9170098ce2d51a6c165664d659555975/snuba-diagram.png)
-- [Kafka](../middleware/kafka.md)
-- [Redis](../redis.md)
-- PostgreSQL
-- Тех стек: Python, Memcached
+- [Event Model](https://docs.sentry.io/product/sentry-basics/enrich-data/)
+	- [Context](https://docs.sentry.io/platforms/android/enriching-events/context/default-context/)
+	- [User](https://docs.sentry.io/platforms/android/enriching-events/identify-user/)
+	- [APM metric custom](https://docs.sentry.io/platforms/python/guides/logging/performance/instrumentation/performance-metrics/)
+		- tag - [response size](https://stackoverflow.com/questions/7791860/jquery-how-to-check-the-size-of-the-response-object-in-an-ajax-call)
+		- [context](https://stackoverflow.com/questions/69542552/add-additional-details-to-a-sentry-error-using-python-sdk)
 
 ## Плюсы-Минусы
 
@@ -89,20 +98,11 @@
 
 Минусы:
 
-- не очень хорошо справляется с большим потоком, риски задержки событий 
+- не очень хорошо справляется с большим потоком, риски задержки событий
 	- узкие [места при 100 млн событий за 24ч](https://www.youtube.com/watch?v=9_IswUwFxlE&list=WL&index=8&t=589s)
 		- PostgreSQL шардирование по репликам (кастом замена на NOSQL store ClickHouse)
 		- Kafka размер топиков, round robin partition раскладывание событий
 		- ClickHouse шардирование по репликам
-
-## Event Model
-
-- [Event Model](https://docs.sentry.io/product/sentry-basics/enrich-data/)
-	- [Context](https://docs.sentry.io/platforms/android/enriching-events/context/default-context/)
-	- [User](https://docs.sentry.io/platforms/android/enriching-events/identify-user/)
-	- [APM metric custom](https://docs.sentry.io/platforms/python/guides/logging/performance/instrumentation/performance-metrics/)
-		- tag - [response size](https://stackoverflow.com/questions/7791860/jquery-how-to-check-the-size-of-the-response-object-in-an-ajax-call)
-		- [context](https://stackoverflow.com/questions/69542552/add-additional-details-to-a-sentry-error-using-python-sdk)
 
 ## Deployment
 
@@ -119,3 +119,16 @@
 		- [model](https://docs.sentry.io/product/relay/monitoring/collected-metrics/)
 - HA
 	- [СберМегаМаркет опыт PostgreSQL](https://www.youtube.com/watch?v=9_IswUwFxlE&list=WL&index=8&t=589s)
+
+## Технологии
+
+- Архитектура
+![arch](https://mermaid.ink/svg/pako:eNqFU01PwzAM_StRTiDGeu8BCbQbcKFc0DwhN_XWqs2H0kQwtv13smSj1SrgFj8_v9gvzo4LXRHP-caiqdnrAhQas3zT3rJ7Y7pGoGu0WrHb2zu2LxaPe9aVu92Txoo9YIdKkD0cQHVlYgDvSTm7ndMnStPRXGiZoWkygOom6522lAHfM0sdbv8uO9IS-v5B5RJ4EQN2FaJr4CtQ_VaWOraobdQZ6KDiDRFtcd3iGLBUNX0o_2GnYuVLnKCSpEBRUzXJGN27jaWp0Fn-qDduYAAmDBGmaGvtewIV2RH90rolMmSnvZ5CbVuyY2sicHJnzPltliF5YcqQmM455MYvAApUnCM5yYDXzpk-z7JN42pfxlXYkEsqWbKbB1oR6QstvAypuG_Az1rp1f7RStt01HqJ9AstPuOSrMSmCou-A8UC0dUkCXgejhWt0XfueOchUNE7XWyV4LmznmbcmwodLRoMX0TyfI1dH9DgVpj5OX2e-IcO3z0YL2M)
+- Snuba
+- Clickhouse - управляет Alert
+![Clickhouse](https://images.ctfassets.net/em6l9zw4tzag/162no5P9QQXMQbvY7Hu8zz/9170098ce2d51a6c165664d659555975/snuba-diagram.png)
+- [Kafka](../middleware/kafka.md)
+- [Redis](../redis.md)
+- PostgreSQL
+- Python
+- Memcached

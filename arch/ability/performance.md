@@ -1,16 +1,19 @@
 # Производительность Performance
 
 - [Производительность Performance](#производительность-performance)
-	- [Метрики](#метрики)
-		- [Business Metrics](#business-metrics)
-		- [Application Metrics](#application-metrics)
-		- [System Metrics](#system-metrics)
-		- [Client Metrics: Приложение front-end](#client-metrics-приложение-front-end)
-		- [Service Metrics: API](#service-metrics-api)
-	- [Требования пример](#требования-пример)
-	- [TODO merge](#todo-merge)
+  - [Метрики](#метрики)
+    - [Business Metrics](#business-metrics)
+    - [Application Metrics](#application-metrics)
+    - [System Metrics](#system-metrics)
+    - [Client Metrics: Приложение front-end](#client-metrics-приложение-front-end)
+    - [Service Metrics: API](#service-metrics-api)
+  - [Требования пример](#требования-пример)
+  - [TODO merge](#todo-merge)
 
 [Паттерны](../pattern/pattern.perf.md)
+
+  - [Балансировка](../pattern/load.balancing.md)
+  - concurrency
 
 ## Метрики
 
@@ -111,7 +114,7 @@
 - Время отклика\задержки Latency - Миллисекунды
 - параметры [виртуалки VMWare](https://habrahabr.ru/post/259087/)
 - redis память много, операции чтения
-- [балансировщик](../ability/load.balancing.md) прокси, nginx, netscaler - как балансировка на ноды работает, время ответ нод балансировщику
+- [балансировщик](../pattern/load.balancing.md) прокси, nginx, netscaler - как балансировка на ноды работает, время ответ нод балансировщику
 - Исключительные ситуации errors, HTTP Error 503.2 — Service Unavailable - Количество, частота следования в секунду
 - Обращения к базе данных -	Количество обращений, частота следования в секунду
 - "Сколько операций может выполнить система за определенный период времени? (пропускная способность)

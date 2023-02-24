@@ -27,7 +27,7 @@
 - исключение единой точки отказа — это либо решения с «горячей заменой»
 - резервирование, [дублирование, кластеры, либо горизонтальное масштабирование](https://habr.com/ru/company/otus/blog/561630/).
 - Прокси, файервол, капча
-- [Балансировка](load.balancing.md)
+- [Балансировка](../pattern/load.balancing.md)
 - api management
 - Установка лимитов запросов rate limits, тайм-аут
 - Dev ops ci/cd:
@@ -35,7 +35,7 @@
   - [kubernetes](../../technology/ci-cd/k8s.md)
   - [jenkins](../../technology/ci-cd/jenkins.md)
   - авто распределенный конфиг etcd
-  - кеш [redis](../../technology/redis.md)
+  - кеш [redis](../../technology/store/redis.md)
 - системы мониторинга - аптайм доступность сервиса, выраженная в процентах
 - ИБП, генератор электричества, охлаждение серверов
 - DB: Master-slave : Logshipping, репликации, кластер, Горизонтальное шардирование данных

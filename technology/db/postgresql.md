@@ -1,28 +1,36 @@
 # Postgresql
 
 - [Postgresql](#postgresql)
-  - [Термины](#термины)
-  - [Managment](#managment)
-  - [Replication](#replication)
-    - [Log Shipping](#log-shipping)
-  - [Reporting Tools](#reporting-tools)
-  - [ETL MSSQL](#etl-mssql)
-  - [Links](#links)
+  - [Функции](#функции)
+    - [Термины](#термины)
+    - [Management](#management)
+    - [Replication](#replication)
+      - [Log Shipping](#log-shipping)
+    - [Reporting Tools](#reporting-tools)
+  - [Паттерны](#паттерны)
+    - [ETL MSSQL](#etl-mssql)
 
-## Термины 
+## Функции
 
-RTO - [Recovery Time Objective](https://en.wikipedia.org/wiki/Disaster_recovery#Recovery_Time_Objective)
+- Timeseries Data (pg_partman extension)
+- Авто партиционирование данных для удаления устаревших
+- [schema and data comparison tool for PostgreSQL](https://www.postgrescompare.com/)
 
-## Managment
+### Термины
+
+- RTO - [Recovery Time Objective](https://en.wikipedia.org/wiki/Disaster_recovery#Recovery_Time_Objective)
+
+### Management
 
 - PgAdmin
-- https://dbeaver.io/
+- [dbeaver](https://dbeaver.io/)
 
-## Replication
+### Replication
 
-- https://www.postgresql.org/docs/current/runtime-config-replication.html
+- https://medium.com/@PinkOwl/postgresql-and-me-log-shipping-replication-6bc945757822
+- [Config](https://www.postgresql.org/docs/current/runtime-config-replication.html)
 
-### Log Shipping
+#### Log Shipping
 
 - Master (Primary) -> Slave (standby or secondary) 
   - accept connections and serves **read-only queries** is called a **Hot Standby Server**
@@ -31,12 +39,14 @@ RTO - [Recovery Time Objective](https://en.wikipedia.org/wiki/Disaster_recovery#
   - File based log shipping - asynchronous in nature and logs are shipped after they have been written to disk and thus may increase the RTO
   - Record base log shipping (Streaming Replication) - data loss can be minimised
 
-## Reporting Tools
+### Reporting Tools
 
-- https://www.postgresql.org/download/products/5/
+- [Tools](https://www.postgresql.org/download/products/5/)
 - [BIRT](https://eclipse.github.io/birt-website/)
 
-## ETL MSSQL
+## Паттерны
+
+### ETL MSSQL
 
 - PSQL2MSSQL
   - [mssql bcp on linux](https://docs.microsoft.com/ru-ru/sql/linux/sql-server-linux-migrate-bcp?view=sql-server-ver16)
@@ -50,10 +60,3 @@ RTO - [Recovery Time Objective](https://en.wikipedia.org/wiki/Disaster_recovery#
   - [foreign data wrapper](https://guriysamarin.medium.com/how-to-transfer-data-from-ms-sql-to-postgresql-or-good-design-vs-speed-1baad5665309) 
     - https://habr.com/ru/company/postgrespro/blog/309490/
     - https://www.mssqltips.com/sqlservertip/3663/sql-server-and-postgresql-foreign-data-wrapper-configuration-part-3/
-- 
-
-## Links
-
-- https://assets.ctfassets.net/9n3x4rtjlya6/692exG1cv13VCVpBNqKXpD/55ff0f850c6cff66e60ba72269b1b75f/Migration_to_PostgreSql.pdf
-- https://medium.com/@PinkOwl/postgresql-and-me-log-shipping-replication-6bc945757822
-- https://www.postgresql.org/docs/current/runtime-config-replication.html

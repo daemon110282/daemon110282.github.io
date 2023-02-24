@@ -1,22 +1,37 @@
 # Redis
 
+- [Redis](#redis)
+	- [Зачем](#зачем)
+	- [Функции](#функции)
+	- [Паттерны](#паттерны)
+	- [Deployment](#deployment)
+	- [Obervability](#obervability)
+
 ## Зачем
 
-Redis - Remote Dictionary Service
+Redis - Remote Dictionary Service in __memory__.
+
 - Key Value [хранилище](store.md)
 - [Кеширование данных](../arch/ability/performance.md)
 - Дедубликация
+- Session store
+- Distributed lock
+- Counter
+- Rate limiter
+- [Ranking/leaderboard](https://www.youtube.com/watch?v=a4yX7RUgTxI&ab_channel=ByteByteGo)
 
  ![Redis](https://substackcdn.com/image/fetch/w_848,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2F0205d074-5f42-402b-b150-99027cb4fc38_800x1114.jpeg)
- 
-Функции:
+
+## Функции
+
 - [RESP](https://redis.io/docs/reference/protocol-spec/) протокол
 - [Аунтентификация по IP, Password](https://netpoint-dc.com/blog/redis-security/)
+  - Разграничение доступа по операциям, ключам [Access Control List (ACL)](https://redis.io/docs/management/security/acl/)
 - Pub\Sub
 - [Типы данных](https://redis.io/docs/data-types/)
-	- List - упорядоченный список 
+	- List - упорядоченный список
 	- Streams - append-only log
-- Redis Sentinel — это сервис, обеспечивающий создание __распределённых систем__. 
+- Redis Sentinel — это сервис, обеспечивающий создание __распределённых систем__.
 - Redis cluster
 - TTL
 - [Транзакции](https://habr.com/ru/post/204354/)
@@ -28,12 +43,12 @@ Redis - Remote Dictionary Service
 
 - [Индексирования ключей](https://habr.com/ru/post/485672/)
 
-
 ## Deployment
 
-- [персистентность](https://redis.io/docs/management/persistence/) 
+- [персистентность](https://redis.io/docs/management/persistence/)
 	- [RDB-файлы](https://habr.com/ru/company/wunderfund/blog/685894/)
 	- AOF на диск
+	- медленно при перезапуске, лучше использовать репликации на резервный сервер
 - [HA cluster](https://redis.io/docs/management/scaling/)
 	- Оценка [системных требований](https://redis.com/modules/redis-search/redisearch-sizing-calculator/)
 
@@ -54,10 +69,10 @@ Redis - Remote Dictionary Service
 
 - Metrics
 	- Индекс производительности: показатели производительности
-		- [latency, instantaneous_ops_per_sec, hit rate (calculated)](https://russianblogs.com/article/7125451930/)	
+		- [latency, instantaneous_ops_per_sec, hit rate (calculated)](https://russianblogs.com/article/7125451930/)
 	- Метрики памяти: Метрики памяти
 	- Основные показатели деятельности: основные показатели деятельности
 	- Метрики персистентности: Метрики персистентности
 	- Метрики ошибок: Метрики ошибок
-	- TODO https://scalegrid.io/blog/6-crucial-redis-monitoring-metrics/
+	- [TODO](https://scalegrid.io/blog/6-crucial-redis-monitoring-metrics/)
 - [Zabbix](https://habr.com/ru/company/first/blog/687916/)

@@ -1,19 +1,33 @@
 # RabbitMQ
 
 - [RabbitMQ](#rabbitmq)
+  - [Функции](#функции)
+    - [Режимы доставки сообщений](#режимы-доставки-сообщений)
   - [Паттерны](#паттерны)
     - [Task (Worker) Queue](#task-worker-queue)
     - [Simple one-way messaging (Exchange type: direct, message sent to unnamed (default queue))](#simple-one-way-messaging-exchange-type-direct-message-sent-to-unnamed-default-queue)
     - [Publish-subscribe Издатель-Подписчик](#publish-subscribe-издатель-подписчик)
     - [RPC (команды)](#rpc-команды)
-  - [Режимы доставки сообщений](#режимы-доставки-сообщений)
-  - [Best practices Рекомендации](#best-practices-рекомендации)
+    - [MTA](#mta)
     - [headers vs topic для событий](#headers-vs-topic-для-событий)
     - [Версионирование сообщений](#версионирование-сообщений)
   - [Security](#security)
-  - [Links](#links)
+
+## Функции
+
+- [Типы Exchange](https://habr.com/ru/post/489086/)
+  - [Headers exchange](https://codedestine.com/rabbitmq-headers-exchange/)
+
+### Режимы доставки сообщений
+
+- Basic.get (Poll) - Доставка единичного сообщения по запросу
+- Basic.Consume (Push) - Подписка на очередь (постоянный мониторинг очереди с доставкой всех сообщений)
 
 ## Паттерны
+
+- [From Cloudamqp](https://www.cloudamqp.com/blog/part1-rabbitmq-best-practice.html)
+- [VHosts](rmq/rmq.vhost.md)
+- [Failure](rmq/rmq.failure.md)
 
 ### Task (Worker) Queue
 
@@ -48,16 +62,18 @@
   - EasyNetQ [RPC](https://github.com/EasyNetQ/EasyNetQ/wiki/Request-Response)
   - [Exchange type: direct](https://www.rabbitmq.com/tutorials/tutorial-six-dotnet.html), message can be sent to default exchange with a specified routing key and response is received on a specified unique response queue, owned by the client
 
-## Режимы доставки сообщений
+### MTA
 
-- Basic.get (Poll) - Доставка единичного сообщения по запросу
-- Basic.Consume (Push) - Подписка на очередь (постоянный мониторинг очереди с доставкой всех сообщений)
-
-## Best practices Рекомендации
-
-- [From Cloudamqp](https://www.cloudamqp.com/blog/part1-rabbitmq-best-practice.html)
-- [VHosts](rmq/rmq.vhost.md)
-- [Failure](rmq/rmq.failure.md)
+- логическое разделение (namespace) можно сделать на уровне vhosts
+  - [VHosts](rmq/rmq.vhost.md)
+  - https://www.cloudamqp.com/blog/what-is-a-rabbitmq-vhost.html#:~:text=Vhosts%20(Virtual%20Hosts)%20in%20RabbitMQ,within%20an%20instance
+- поддержка X шин в одном приложении в фреймворках
+  - https://masstransit-project.com/usage/containers/multibus.html#multibus
+  - https://docs.abp.io/en/abp/4.4/Background-Jobs-RabbitMq
+  - https://programmer.group/springboot-connect-multiple-rabbitmq-sources.HTML
+  - https://docs.abp.io/en/abp/4.4/Distributed-Event-Bus-RabbitMQ-Integration
+  - https://stackoverflow.com/questions/64060243/multiple-vhost-connection-inside-same-project-subscribe-publish
+  - https://stackoverflow.com/questions/12209652/multi-celery-projects-with-same-rabbitmq-broker-backend-process
 
 ### headers vs topic для событий
 
@@ -86,9 +102,3 @@
   - supports multiple SASL authentication mechanisms. There are three such mechanisms built into the server: PLAIN, AMQPLAIN, and RABBIT-CR-DEMO, and one — EXTERNAL — available as a plugin.
 - SSL support
 
-## Links
-
-* [Типы Exchange](https://habr.com/ru/post/489086/)
-  * [Headers exchange](https://codedestine.com/rabbitmq-headers-exchange/)
-* security
-  * 

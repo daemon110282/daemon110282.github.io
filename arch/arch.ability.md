@@ -49,8 +49,6 @@
   - Живучесть Robustness
   - Recoverability
 - [Производительность Performance](ability/performance.md) (Эксплуатационные)
-  - [Масштабирование](ability/load.balancing.md)
-  - concurrency
 
 TODO:
 

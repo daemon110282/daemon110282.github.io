@@ -2,6 +2,8 @@
 
 - [IAM KeyCloak](#iam-keycloak)
 	- [Зачем](#зачем)
+	- [Функции](#функции)
+		- [Термины](#термины)
 		- [User Storage](#user-storage)
 		- [Access Control](#access-control)
 	- [Технологии](#технологии)
@@ -13,6 +15,8 @@
 ## Зачем
 
 Реализация функции [Identity and Access Management (IAM)](../../arch/system.class/iam.md) решений.
+
+## Функции
 
 - [Custom UI forms](https://www.keycloak.org/docs/latest/server_admin/#features) Apache Freemaker + React?
 	- [Themes](https://www.opcito.com/blogs/customizing-login-and-signup-pages-in-keycloak)
@@ -60,7 +64,7 @@
 	- обмен cookie через [iframe механизм](https://github.com/keycloak/keycloak-documentation/blob/main/securing_apps/topics/oidc/javascript-adapter.adoc#session-status-iframe) не все [браузеры будут поддерживать в дальнейшем](https://www.keycloak.org/docs/latest/securing_apps/#_modern_browsers)
 - [JavaScript Adapter for Client App](https://www.keycloak.org/docs/latest/securing_apps/#_javascript_adapter)
 
-Термины:
+### Термины
 
 - Realm - [необходимо ограничение по кол-ву, риски по НТ](https://highload.today/blogs/keycloak-i-oauth-2/)
 	- Users входят в Realm
@@ -104,7 +108,8 @@ User Federation
 
 Проверка через [Policy Evaluation Tool](https://www.keycloak.org/docs/latest/authorization_services/#_policy_evaluation_overview)
 
-Управление resource, scopes, permission, policy: 
+Управление resource, scopes, permission, policy:
+
 - [В ручную в Keycloak](https://www.keycloak.org/docs/latest/authorization_services/)
 - API [protection-api](https://www.keycloak.org/docs/latest/authorization_services/#protection-api)
 	- [resource](https://www.keycloak.org/docs/latest/authorization_services/#_service_protection_resources_api)
@@ -112,11 +117,13 @@ User Federation
 - [Open Policy Agent](https://www.openpolicyagent.org/)
 
 [User-Managed Access](https://www.keycloak.org/docs/latest/authorization_services/#_service_user_managed_access) (UMA) 2.0. UMA is a specification that enhances OAuth2 capabilities in the following ways:
+
 - Privacy - Nowadays, user privacy is becoming a huge concern, as more and more data and devices are available and connected to the cloud. With UMA and Keycloak, resource servers can enhance their capabilities in order to improve how their resources are protected in respect to user privacy where permissions are granted based on policies defined by the user.
 - Party-to-Party Authorization - Resource owners (e.g.: regular end-users) can manage access to their resources and authorize other parties (e.g: regular end-users) to access these resources. This is different than OAuth2 where consent is given to a client application acting on behalf of a user, with UMA resource owners are allowed to consent access to other users, in a completely asynchronous manner.
 - Resource Sharing - Resource owners are allowed to manage permissions to their resources and decide who can access a particular resource and how. Keycloak can then act as a sharing management service from which resource owners can manage their resources.
 
 Example
+
 - [RBAC](https://www.opcito.com/blogs/rbac-for-frontend-and-backend-using-keycloak)
 - ответственность за менеджмент ролей перекладываем из Keycloak на этот кастомный продукт. Затем при взаимодействии сервисов друг с другом они обращаются в этот permission-сервис и получают тот или иной набор разрешений. А уже на стороне сервиса валидируется, может ли пользователь в соответствии с разрешением выполнять операцию.
 

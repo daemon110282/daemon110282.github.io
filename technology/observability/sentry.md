@@ -117,13 +117,16 @@
 	- [logs stdout](https://docs.sentry.io/product/relay/monitoring/#logging)
 	- [metric in StatsD](https://docs.sentry.io/product/relay/monitoring/#metrics)
 		- [model](https://docs.sentry.io/product/relay/monitoring/collected-metrics/)
+		- rps DB PostgreSQL
 - HA
-	- [СберМегаМаркет опыт PostgreSQL](https://www.youtube.com/watch?v=9_IswUwFxlE&list=WL&index=8&t=589s)
+	- [СберМегаМаркет опыт](https://www.youtube.com/watch?v=9_IswUwFxlE&list=WL&index=8&t=589s) 
+		- PostgreSQL узкое место - Master\Replica
+		- Object Storage для "сырых" Event (Minio) вместо PostgreSQL
 
 ## Технологии
 
 - Архитектура
-![arch](https://mermaid.ink/svg/pako:eNqFU01PwzAM_StRTiDGeu8BCbQbcKFc0DwhN_XWqs2H0kQwtv13smSj1SrgFj8_v9gvzo4LXRHP-caiqdnrAhQas3zT3rJ7Y7pGoGu0WrHb2zu2LxaPe9aVu92Txoo9YIdKkD0cQHVlYgDvSTm7ndMnStPRXGiZoWkygOom6522lAHfM0sdbv8uO9IS-v5B5RJ4EQN2FaJr4CtQ_VaWOraobdQZ6KDiDRFtcd3iGLBUNX0o_2GnYuVLnKCSpEBRUzXJGN27jaWp0Fn-qDduYAAmDBGmaGvtewIV2RH90rolMmSnvZ5CbVuyY2sicHJnzPltliF5YcqQmM455MYvAApUnCM5yYDXzpk-z7JN42pfxlXYkEsqWbKbB1oR6QstvAypuG_Az1rp1f7RStt01HqJ9AstPuOSrMSmCou-A8UC0dUkCXgejhWt0XfueOchUNE7XWyV4LmznmbcmwodLRoMX0TyfI1dH9DgVpj5OX2e-IcO3z0YL2M)
+![arch](../../img/technology/sentry.png)
 - Snuba
 - Clickhouse - управляет Alert
 ![Clickhouse](https://images.ctfassets.net/em6l9zw4tzag/162no5P9QQXMQbvY7Hu8zz/9170098ce2d51a6c165664d659555975/snuba-diagram.png)

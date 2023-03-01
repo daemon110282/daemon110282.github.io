@@ -41,7 +41,12 @@
 	- [Clean](https://help.sentry.io/product-features/configuration/how-can-i-delete-resolve-all-issues-in-a-project/)
 		- [Очистка БД](https://dev.to/nixon1333/clean-sentry-database-on-premise-28b) через [Sentry CLI](https://sentry-docs-o2paie5ivq-uc.a.run.app/server/cli/cleanup/)
 - Dashboard
-- Release
+	- [Grafana](https://sentry.io/integrations/grafana/)
+- [Release](https://docs.sentry.io/product/releases/)
+	- [Tracking](https://docs.sentry.io/product/releases/release-details/)
+	- [GitLab](https://docs.sentry.io/product/integrations/source-code-mgmt/gitlab/)
+		- [PHP](https://docs.sentry.io/platforms/php/configuration/releases/)
+		- [JS](https://docs.sentry.io/platforms/javascript/configuration/releases/)
 - Reproduce Errors Without User Feedback - __Breadcrumbs__ - логирование действий пользователя (клики, переходы по страницам и т.п.), предшествующих ошибке.
 	- [PHP example](https://sentry.io/for/php/)
 - [Nginx + Sentry](https://blog.sentry.io/2019/01/31/using-nginx-sentry-trace-errors-logs)
@@ -54,7 +59,7 @@
 	- [RSyslog и Sentry](https://adw0rd.com/2012/12/15/rsyslog-sentry-bridge/)
 	- [Drupal module Raven](https://www.drupal.org/project/raven)
 - [APM](../../arch/system.class/apm.md)
-	- [SPA Vite](https://docs.sentry.io/platforms/javascript/sourcemaps/uploading/vite/?utm_source=pocket_saves)
+	- [SPA Vite](https://docs.sentry.io/platforms/javascript/sourcemaps/uploading/vite/)
 - [Distributed Trace](https://docs.sentry.io/product/sentry-basics/tracing/distributed-tracing/)
 	![span](https://docs.sentry.io/static/1ae959bb1d05b01379cf856c5dc36a01/c1b63/diagram-transaction-trace.png)
 	- Trace -> Transaction -> Span
@@ -63,17 +68,25 @@
 - Alert
 	- [Telegram](https://github.com/butorov/sentry-telegram)
 - [SSO](https://develop.sentry.dev/self-hosted/sso/)
-	- Auth user access by [KeyCloak SAML](https://yyhh.org/blog/2020/10/how-to-setup-saml2-authentication-on-sentry-with-keycloak/)
+	- Auth user access by [KeyCloak SAML](https://yyhh.org/blog/2020/10/how-to-setup-saml2-authentication-on-sentry-with-keycloak/) 
 	- Google OIDC
+- RBAC
+	- [Роли](https://docs.sentry.io/product/accounts/membership/)
+	- [маппинг групп LDAP на роль Sentry](https://habr.com/ru/post/691140/)
+	- LDAP [SAML](https://yyhh.org/blog/2020/10/how-to-setup-saml2-authentication-on-sentry-with-keycloak/) - __нет маппинга групп LDAP на роли Sentry__ 
 - [Jira Task Intregration](https://forum.sentry.io/t/how-to-configure-jira-cloud-in-your-on-premise-sentry/6720)
 - MTA
 
 Сущности:
 
-- [Project](https://docs.sentry.io/product/accounts/getting-started/?utm_source=pocket_saves#-whats-in-a-project)
-- Issue
-- Release
-- Alert
+- Organization
+	- Member
+	- Team - рекомендуется создавать команды, которые соответствуют вашей [внутренней структуре команды](https://docs.sentry.io/product/accounts/getting-started/#2-set-up-teams) (например, #Frontend, #Ops, #SDK и так далее)
+		- Member
+		- [Project](https://docs.sentry.io/product/accounts/getting-started/?#-whats-in-a-project) - маппинг на проект в GIT рекомендуется
+			- Issue
+			- Release
+			- Alert
 
 ### Event Model
 

@@ -47,7 +47,8 @@
 	- [GitLab](https://docs.sentry.io/product/integrations/source-code-mgmt/gitlab/)
 		- [PHP](https://docs.sentry.io/platforms/php/configuration/releases/)
 		- [JS](https://docs.sentry.io/platforms/javascript/configuration/releases/)
-- Reproduce Errors Without User Feedback - __Breadcrumbs__ - логирование действий пользователя (клики, переходы по страницам и т.п.), предшествующих ошибке.
+- __Breadcrumbs__ - trace of events that lead to errors
+	- Reproduce Errors Without User Feedback логирование действий пользователя (клики, переходы по страницам и т.п.), предшествующих ошибке.
 	- [PHP example](https://sentry.io/for/php/)
 - [Nginx + Sentry](https://blog.sentry.io/2019/01/31/using-nginx-sentry-trace-errors-logs)
 - Data Collector
@@ -60,6 +61,7 @@
 	- [Drupal module Raven](https://www.drupal.org/project/raven)
 - [APM](../../arch/system.class/apm.md)
 	- [SPA Vite](https://docs.sentry.io/platforms/javascript/sourcemaps/uploading/vite/)
+	- [Web Vitals](https://docs.sentry.io/product/performance/web-vitals/)
 - [Distributed Trace](https://docs.sentry.io/product/sentry-basics/tracing/distributed-tracing/)
 	![span](https://docs.sentry.io/static/1ae959bb1d05b01379cf856c5dc36a01/c1b63/diagram-transaction-trace.png)
 	- Trace -> Transaction -> Span

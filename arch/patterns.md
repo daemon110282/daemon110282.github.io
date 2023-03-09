@@ -30,6 +30,7 @@
 
 ## Проектирования и реализации
 
+- [System Design шаги](https://www.youtube.com/watch?v=i7twT3x5yv8&ab_channel=ByteByteGo)
 - [DDD](pattern/ddd.md)
 - SOLID
   - Single concern principle, __single response principle (SRP)__ - решать одну проблему хорошо

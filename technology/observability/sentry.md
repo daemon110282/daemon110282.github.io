@@ -41,8 +41,14 @@
 	- [Clean](https://help.sentry.io/product-features/configuration/how-can-i-delete-resolve-all-issues-in-a-project/)
 		- [Очистка БД](https://dev.to/nixon1333/clean-sentry-database-on-premise-28b) через [Sentry CLI](https://sentry-docs-o2paie5ivq-uc.a.run.app/server/cli/cleanup/)
 - Dashboard
-- Release
-- Reproduce Errors Without User Feedback - __Breadcrumbs__ - логирование действий пользователя (клики, переходы по страницам и т.п.), предшествующих ошибке.
+	- [Grafana](https://sentry.io/integrations/grafana/)
+- [Release](https://docs.sentry.io/product/releases/)
+	- [Tracking](https://docs.sentry.io/product/releases/release-details/)
+	- [GitLab](https://docs.sentry.io/product/integrations/source-code-mgmt/gitlab/)
+		- [PHP](https://docs.sentry.io/platforms/php/configuration/releases/)
+		- [JS](https://docs.sentry.io/platforms/javascript/configuration/releases/)
+- __Breadcrumbs__ - trace of events that lead to errors
+	- Reproduce Errors Without User Feedback логирование действий пользователя (клики, переходы по страницам и т.п.), предшествующих ошибке.
 	- [PHP example](https://sentry.io/for/php/)
 - [Nginx + Sentry](https://blog.sentry.io/2019/01/31/using-nginx-sentry-trace-errors-logs)
 - Data Collector
@@ -54,7 +60,8 @@
 	- [RSyslog и Sentry](https://adw0rd.com/2012/12/15/rsyslog-sentry-bridge/)
 	- [Drupal module Raven](https://www.drupal.org/project/raven)
 - [APM](../../arch/system.class/apm.md)
-	- [SPA Vite](https://docs.sentry.io/platforms/javascript/sourcemaps/uploading/vite/?utm_source=pocket_saves)
+	- [SPA Vite](https://docs.sentry.io/platforms/javascript/sourcemaps/uploading/vite/)
+	- [Web Vitals](https://docs.sentry.io/product/performance/web-vitals/)
 - [Distributed Trace](https://docs.sentry.io/product/sentry-basics/tracing/distributed-tracing/)
 	![span](https://docs.sentry.io/static/1ae959bb1d05b01379cf856c5dc36a01/c1b63/diagram-transaction-trace.png)
 	- Trace -> Transaction -> Span
@@ -63,17 +70,25 @@
 - Alert
 	- [Telegram](https://github.com/butorov/sentry-telegram)
 - [SSO](https://develop.sentry.dev/self-hosted/sso/)
-	- Auth user access by [KeyCloak SAML](https://yyhh.org/blog/2020/10/how-to-setup-saml2-authentication-on-sentry-with-keycloak/)
+	- Auth user access by [KeyCloak SAML](https://yyhh.org/blog/2020/10/how-to-setup-saml2-authentication-on-sentry-with-keycloak/) 
 	- Google OIDC
+- RBAC
+	- [Роли](https://docs.sentry.io/product/accounts/membership/)
+	- [маппинг групп LDAP на роль Sentry](https://habr.com/ru/post/691140/)
+	- LDAP [SAML](https://yyhh.org/blog/2020/10/how-to-setup-saml2-authentication-on-sentry-with-keycloak/) - __нет маппинга групп LDAP на роли Sentry__ 
 - [Jira Task Intregration](https://forum.sentry.io/t/how-to-configure-jira-cloud-in-your-on-premise-sentry/6720)
 - MTA
 
 Сущности:
 
-- [Project](https://docs.sentry.io/product/accounts/getting-started/?utm_source=pocket_saves#-whats-in-a-project)
-- Issue
-- Release
-- Alert
+- Organization
+	- Member
+	- Team - рекомендуется создавать команды, которые соответствуют вашей [внутренней структуре команды](https://docs.sentry.io/product/accounts/getting-started/#2-set-up-teams) (например, #Frontend, #Ops, #SDK и так далее)
+		- Member
+		- [Project](https://docs.sentry.io/product/accounts/getting-started/?#-whats-in-a-project) - маппинг на проект в GIT рекомендуется
+			- Issue
+			- Release
+			- Alert
 
 ### Event Model
 
@@ -117,13 +132,16 @@
 	- [logs stdout](https://docs.sentry.io/product/relay/monitoring/#logging)
 	- [metric in StatsD](https://docs.sentry.io/product/relay/monitoring/#metrics)
 		- [model](https://docs.sentry.io/product/relay/monitoring/collected-metrics/)
+		- rps DB PostgreSQL
 - HA
-	- [СберМегаМаркет опыт PostgreSQL](https://www.youtube.com/watch?v=9_IswUwFxlE&list=WL&index=8&t=589s)
+	- [СберМегаМаркет опыт](https://www.youtube.com/watch?v=9_IswUwFxlE&list=WL&index=8&t=589s) 
+		- PostgreSQL узкое место - Master\Replica
+		- Object Storage для "сырых" Event (Minio) вместо PostgreSQL
 
 ## Технологии
 
 - Архитектура
-![arch](https://mermaid.ink/svg/pako:eNqFU01PwzAM_StRTiDGeu8BCbQbcKFc0DwhN_XWqs2H0kQwtv13smSj1SrgFj8_v9gvzo4LXRHP-caiqdnrAhQas3zT3rJ7Y7pGoGu0WrHb2zu2LxaPe9aVu92Txoo9YIdKkD0cQHVlYgDvSTm7ndMnStPRXGiZoWkygOom6522lAHfM0sdbv8uO9IS-v5B5RJ4EQN2FaJr4CtQ_VaWOraobdQZ6KDiDRFtcd3iGLBUNX0o_2GnYuVLnKCSpEBRUzXJGN27jaWp0Fn-qDduYAAmDBGmaGvtewIV2RH90rolMmSnvZ5CbVuyY2sicHJnzPltliF5YcqQmM455MYvAApUnCM5yYDXzpk-z7JN42pfxlXYkEsqWbKbB1oR6QstvAypuG_Az1rp1f7RStt01HqJ9AstPuOSrMSmCou-A8UC0dUkCXgejhWt0XfueOchUNE7XWyV4LmznmbcmwodLRoMX0TyfI1dH9DgVpj5OX2e-IcO3z0YL2M)
+![arch](../../img/technology/sentry.png)
 - Snuba
 - Clickhouse - управляет Alert
 ![Clickhouse](https://images.ctfassets.net/em6l9zw4tzag/162no5P9QQXMQbvY7Hu8zz/9170098ce2d51a6c165664d659555975/snuba-diagram.png)

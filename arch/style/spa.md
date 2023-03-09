@@ -41,7 +41,7 @@
   - Domain
     - Domain Service
 - [Производительность](../pattern/pattern.perf.md)
-  - Web Vitals Metric
+  - [Web Vitals Metric](../ability/performance.md)
   - Кеширование, lazy load component UI?
 - Валидация данных
   - Дублирование клиент+сервер из за уязвимости браузера? Разные языки двойная кодовая база?
@@ -57,6 +57,9 @@
   	- Стратегия логирования (исключений), аудита на клиенте - передача через АПИ на сервер ([Sentry](../../technology/observability/sentry.md) например)
   	- Мерж логов на сервере+с Х клиентов-браузеров 1 юзера-сеанса
   	- [Errbit SaaS (Loggly, New Relic)](https://www.sitepoint.com/logging-errors-client-side-apps/)
+
+### Локализация
+
 - Локализация - текстов сообщений (resource) с бэка
 	- vue-i18n готовое решение для локализации (понятно у нас пока RU) с шаблонами, placeholder и тд. Его планируется использовать на фронте или иное решение типовое?
 	https://cli.vuejs.org/ru/dev-guide/ui-localization.html
@@ -78,10 +81,10 @@
 
 - [Vue.JS](../../technology/framework/vuejs.md)
 - React
+	- Next.js
 
 ## Reference Architecture
 
 См ms arch
 
 - [AWS](https://docs.aws.amazon.com/whitepapers/latest/serverless-multi-tier-architectures-api-gateway-lambda/single-page-application.HTML)
-- [Azure SPA](https://learn.microsoft.com/ru-ru/azure/architecture/reference-architectures/serverless/web-app)

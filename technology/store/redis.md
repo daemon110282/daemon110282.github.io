@@ -27,10 +27,11 @@ Redis - Remote Dictionary Service in __memory__.
 - [RESP](https://redis.io/docs/reference/protocol-spec/) протокол
 - [Аунтентификация по IP, Password](https://netpoint-dc.com/blog/redis-security/)
   - Разграничение доступа по операциям, ключам [Access Control List (ACL)](https://redis.io/docs/management/security/acl/)
-- Pub\Sub
+  	- support by database RBAC [Redis Enterprise](https://fcerbell.github.io//HowtomanageRBACsecuritywithACLandRole/)
+- [Pub\Sub](https://habr.com/ru/post/456270/)
 - [Типы данных](https://redis.io/docs/data-types/)
 	- List - упорядоченный список
-	- Streams - append-only log
+	- [Streams](https://habr.com/ru/post/456270/) - append-only log
 - Redis Sentinel — это сервис, обеспечивающий создание __распределённых систем__.
 - Redis cluster
 - TTL
@@ -42,6 +43,8 @@ Redis - Remote Dictionary Service in __memory__.
 ## Паттерны
 
 - [Индексирования ключей](https://habr.com/ru/post/485672/)
+- [Паттерны индексирования](https://habr.com/ru/post/485672/)
+	- Полнотекстовый поиск
 
 ## Deployment
 

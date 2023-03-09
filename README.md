@@ -6,14 +6,6 @@
 * [DevOps](devops.md)
 * [API](api/api.md)
 * [Методологии\Шаблоны проектирования решений](arch/patterns.md)
-* Аналитика
-  * [Use Case, User Story](ba.md)
-* Бизнес процессы  
-  * [ККТ](business/kkt.md)
-  * [СДО](business/sdo.md)
-  * [СМО](business/smo.md)
-  * [Лиды](business/leads.md)
-    * [Mindbox](business/mindbox.md)  
 * [Миграции ИС](migration.md)
 * Agile Scrum
   * Планирование задач

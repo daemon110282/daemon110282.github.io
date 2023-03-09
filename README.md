@@ -11,7 +11,6 @@
   * Планирование задач
     * [Вертикальная декомпозиция](https://habr.com/ru/company/sportmaster_lab/blog/515910/)
     * [Горизонтальная декомпозиция](https://habr.com/ru/company/sportmaster_lab/blog/677970/)
-* [Бизнес и ИТ стратегия](strategy.md)
 
 ## Tools
 

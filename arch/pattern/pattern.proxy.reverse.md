@@ -18,7 +18,7 @@
 
 - [Nginx](../../technology/middleware/proxy.nginx.md)
 - [Traefik](../../technology/middleware/router.traefik.md)
-- [Netscaler](../../technology/middleware/router.netscaler.md)
+- [Netscaler](../../technology/middleware/proxy.netscaler.md)
 
 ## Compare
 

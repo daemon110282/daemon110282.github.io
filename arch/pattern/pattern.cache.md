@@ -1,8 +1,18 @@
 # Cache Кэширование
 
-- вывода
-- данных (sqldependency)
-- инвалидация
+- вывода дисковой подсистемы
+- ответа [веб сервера](https://habr.com/ru/company/ruvds/blog/350310/)
+	- [HTTP Headers](https://learn.microsoft.com/ru-ru/azure/cdn/cdn-how-caching-works#cache-directive-headers)
+- на клиенте в браузере (HTTP-кэш)
+- на [прокси сервере\балансировщике](pattern.proxy.reverse.md)
+- [CDN](../system.class/cdn.md) статичный контент
+- данных в СУБД (sqldependency)
+- данных приложения
+	- Disrtibuted Cache - [Redis](../../technology/store/redis.md), Memcached
+
+Параметры кеширования:
+
+- условия инвалидации
 - время жизни
 
 ## Паттерны

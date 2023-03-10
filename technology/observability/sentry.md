@@ -35,9 +35,9 @@
 - Query
 - Issue [Grouping](https://docs.sentry.io/product/data-management-settings/event-grouping/)
     - Группировка ошибок по кастомным правилам
-	- Inbound Filters
-		- [Server](https://docs.sentry.io/product/data-management-settings/filtering/)
-		- Client: [PHP](https://docs.sentry.io/platforms/php/configuration/filtering/)
+	- Filters
+		- Inbound Filters on [Server](https://docs.sentry.io/product/data-management-settings/filtering/) by: environment, browser, IP, error message
+		- Client side: [PHP](https://docs.sentry.io/platforms/php/configuration/filtering/)
 	- [Clean](https://help.sentry.io/product-features/configuration/how-can-i-delete-resolve-all-issues-in-a-project/)
 		- [Очистка БД](https://dev.to/nixon1333/clean-sentry-database-on-premise-28b) через [Sentry CLI](https://sentry-docs-o2paie5ivq-uc.a.run.app/server/cli/cleanup/)
 - Dashboard
@@ -47,9 +47,15 @@
 	- [GitLab](https://docs.sentry.io/product/integrations/source-code-mgmt/gitlab/)
 		- [PHP](https://docs.sentry.io/platforms/php/configuration/releases/)
 		- [JS](https://docs.sentry.io/platforms/javascript/configuration/releases/)
-- __Breadcrumbs__ - trace of events that lead to errors
+- __Breadcrumbs__ - [trace of events](https://docs.sentry.io/product/issues/issue-details/breadcrumbs/) that lead to errors
+	- for logging messages, network requests, database queries
 	- Reproduce Errors Without User Feedback логирование действий пользователя (клики, переходы по страницам и т.п.), предшествующих ошибке.
-	- [PHP example](https://sentry.io/for/php/)
+	- [PHP](https://blog.sentry.io/2016/05/27/php-breadcrumbs/)
+		- [example](https://docs.sentry.io/platforms/php/enriching-events/breadcrumbs/)
+	- model Breadcrumb
+		- [type](https://develop.sentry.dev/sdk/event-payloads/breadcrumbs/#breadcrumb-types)
+		- category - a logger name, and helps you understand the area in which an event took place, such as auth
+		- level
 - [Nginx + Sentry](https://blog.sentry.io/2019/01/31/using-nginx-sentry-trace-errors-logs)
 - Data Collector
 	- [From stdout from FluentD Plugin](https://www.fluentd.org/plugins/all)

@@ -12,6 +12,11 @@
 	- https://kb.paessler.com/en/topic/22633-how-to-monitor-active-sessions-users-for-iis-7-0
   	- http://pleasework.robbievance.net/howto-configure-citrix-netscaler-to-perform-website-aware-load-balancing/
 - [Citrix ADC (NetScaler) Ingress Controller for Kubernetes](https://github.com/citrix/citrix-k8s-ingress-controller)
+- [Cache](https://docs.citrix.com/en-us/citrix-adc/current-release/citrix-adc-cache-redirection-gen-wrapper-10-con.html)
+	
+## Cache
+
+- [Built-in cache redirection policies](https://docs.citrix.com/en-us/citrix-adc/12-1/citrix-adc-cache-redirection-gen-wrapper-10-con/cache-redirection-policies/builtin-cache-redirection-policies.html) and custom bound to a virtual server
 
 ## Routing
 
@@ -42,3 +47,8 @@
 
 https://docs.citrix.com/en-us/citrix-adc/current-release/aaa-tm/authentication-methods/oauth-authentication.html
 https://docs.citrix.com/en-us/citrix-adc/current-release/aaa-tm/authentication-methods/oauth-authentication/api-authentication-with-adc.html
+
+## Version
+
+- 12.1 - use
+- 13.0

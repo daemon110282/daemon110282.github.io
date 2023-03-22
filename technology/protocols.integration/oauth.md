@@ -54,6 +54,7 @@ Required:
 
 Optional:
 
+– azp:  идентификатор клиента стороны, для которого был выпущен токен.
 - Key ID — ИД ключа, которым можно проверить подпись токена
 - typ: Bearer
 – nbf: - время, до которого JWT не должен приниматься к обработке
@@ -97,21 +98,27 @@ Optional:
 
 Варианты Access token:
 
-- __identifier-based or opaque access token__ - /token/introspect return active status token
+- __identifier-based or opaque access token__ - [/token/introspect](https://dzone.com/articles/oauth2-tips-token-validation) return active status token
   - плюсы
-    - быстро можно заблокировать
+    - быстро можно заблокировать доступ по времени истечения\не действительности
   - минусы
-    - доп запросы, нагрузка на IAM
+    - доп-е запросы, нагрузка на IAM
     - риски масштабирования при нагрузке
-- __self-contained__ (jwt format) - проверка подписи через JWKS endpoint IAM и затем параметров токена
+- __self-contained__ (jwt format only) - проверка подписи через JWKS endpoint IAM и затем параметров токена
   - плюсы
     - простота масштабирование под рост нагрузки
   - минусы
     - блокировка возможна только по истечении exp токена
 
+[Процесс валидации](https://www.krakend.io/docs/authorization/jwt-validation/#validation-process)
+
 ![token validate](https://lh3.googleusercontent.com/pw/AL9nZEU8W4c59UO_qgfALxBDsUQUmOdeKq2qW3XSiD72WbrqQ2m2xnolziO0UgNlcqktm4XYdhJ93r4D4oqa3KPpzSBXU5O8DcB__HHZJ5Picah6BNKczaiiAGULHYMRhI9GAoFutEEhVFIDdH_Q71jxuZnfYQ=w656-h374-no)
 
+API Gateway validate token:
+
 - [NGINX Example](https://disk.yandex.ru/i/yX5AmLxdpW4XJg)
+- [Citrix](../middleware/proxy.netscaler.md)
+- [KrakenD](https://www.krakend.io/docs/authorization/jwt-validation/)
 
 ## Token exchange
 

@@ -41,12 +41,14 @@
 
 ## Validate Token
 
-- uses a __positive security model__, so when you configure an __auth policy__ for some API resources, you’ll configure the “No Auth” policy for the remaining API resources to skip authentication. Otherwise, access will be denied with a 401 error message.
+Два [формата токена](https://docs.citrix.com/en-us/citrix-adc/current-release/aaa-tm/authentication-methods/oauth-authentication/api-authentication-with-adc.html) для валидации:
+- identifier-based or opaque access token
+- __self-contained__ [jwt format only](https://docs.citrix.com/en-us/citrix-adc/current-release/aaa-tm/authentication-methods/oauth-authentication/api-authentication-with-adc.html#oauth-configuration-for-id-tokens)
+
+[Права доступа у пользователя к API по роли](https://docs.citrix.com/en-us/citrix-adc/current-release/aaa-tm/authentication-methods/oauth-authentication.html)
+- uses a __positive security model__, so when you configure an __auth policy__ for some API resources, you’ll configure the "No Auth" policy for the remaining API resources to skip authentication. Otherwise, access will be denied with a 401 error message.
 	- if the API resources have authentication policies, you’ll need to create authorization policies also for those API resources. Otherwise, you’ll get a 403 error message. If you __do not need authorization checks__, you can create an __authorization policy with empty claims__.
 - supports __authorization policies__ to verify access privileges to a resource, you generally check the __claims__ associated with the __token__ using authorization policies. The policies can verify whether the required claims are present in the token received with an API request.
-
-https://docs.citrix.com/en-us/citrix-adc/current-release/aaa-tm/authentication-methods/oauth-authentication.html
-https://docs.citrix.com/en-us/citrix-adc/current-release/aaa-tm/authentication-methods/oauth-authentication/api-authentication-with-adc.html
 
 ## Version
 

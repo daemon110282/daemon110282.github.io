@@ -20,7 +20,7 @@ communication to multiple microservices?
     - Response caching
     - [Retry policies, circuit breaker, and QoS](../arch/pattern/pattern.failure.md)
     - [Rate limiting](../arch/pattern/pattern.failure.md) and throttling
-    - [Load balancing](../arch/ability/load.balancing.md)
+    - [Load balancing](../arch/pattern/load.balancing.md)
     - [Logging, tracing, correlation](../arch/ability/observability.md)
     - Headers, query strings, and claims transformation
     - Dynamic request dispatching, routing. __[Reverse proxy](../arch/pattern/pattern.proxy.reverse.md)__ [or gateway routing](https://docs.microsoft.com/ru-ru/azure/architecture/patterns/gateway-routing)

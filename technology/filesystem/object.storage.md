@@ -42,6 +42,7 @@
 			- security access by [IAM Keycloak](https://min.io/product/identity-and-access-management) OIDC protocol
 		- [Ceph](https://ceph.com/en/)
 			- [более надежен](https://habr.com/ru/company/ozontech/blog/586024/#comment_23647704) чем MinIO
+			- не S3 совместимо?
 	- Commercial		
 		- [Cloudian](https://cloudian.com/guides/hybrid-it/on-premises-object-storage/)
 

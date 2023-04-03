@@ -24,6 +24,12 @@
 
 - Key Value
 	- [Redis](redis.md)
+		- это однопоточная система
+		- [redis vs PgSQL](https://habr.com/ru/company/cloud_mts/blog/716548/)
+	- Memcached
+		— многопоточная
+		- Memcached может показывать отличные результаты производительности в ограниченных окружениях кеширования. А при использовании этой системы в [распределённом кластере](https://habr.com/ru/company/wunderfund/blog/685894/) нужны дополнительные настройки. Redis же поддерживает подобные сценарии работы сразу после установки.
 
 ### Column Based
+
 - [ClickHouse](store/clickhouse.md)

@@ -1,13 +1,13 @@
 # OAuth
 
 - [OAuth](#oauth)
-	- [Зачем](#зачем)
-	- [Параметры Flow](#параметры-flow)
-		- [Access Token](#access-token)
-		- [Refresh Token](#refresh-token)
-	- [Security](#security)
-	- [Token validate](#token-validate)
-	- [Token exchange](#token-exchange)
+  - [Зачем](#зачем)
+  - [Параметры Flow](#параметры-flow)
+    - [Access Token](#access-token)
+    - [Refresh Token](#refresh-token)
+  - [Security](#security)
+  - [Token validate](#token-validate)
+  - [Token exchange](#token-exchange)
 
 ## Зачем
 
@@ -39,18 +39,33 @@
 
 Required:
 
-- iss: "http://authorization-server.example.com/" - кто выпустил токен
-- sub: "auth0|123456" - Уникальный идентификатор пользователя в IAM
-- [aud](https://developers.sber.ru/docs/ru/sberbusinessapi/authorization/auth-sbbid/tokens): "1234abcdef" - равно client_id - ИС запращивающая доступ
-- exp: 1311281970 - срок действия
-- iat: 1311280970 - 
+- iss: "http://authorization-server.example.com/" - кто выпустил токен, идентификатор эмитента JWT (сервера авторизации, выдавшего его)
+- sub: "auth0|123456" - Уникальный идентификатор пользователя в IAM, идентификатор субъекта JWT
+- [aud](https://developers.sber.ru/docs/ru/sberbusinessapi/authorization/auth-sbbid/tokens): "1234abcdef" - равно client_id - ИС запращивающая доступ, перечень идентификаторов получателей, которым предназначен JWT
+- exp: 1311281970 - срок действия в секундах
+- iat: 1311280970 - время выпуска JWT
 - jti: dbe39bf3a3ba4238a513f51d6e1691c4 - ИД jwt tokena
-- scope: openid profile reademail - роли, права доступа (RBAC, ABAC) к ресурсу
+- scope: openid profile reademail 
+  - роли, права доступа (RBAC, ABAC) к ресурсу. область действия; 
+  - определяет свойства защищаемых данных конечного пользователя, к которым запрошен доступ; 
+  - в случае использования протокола OpenID Connect параметр должен содержать строку "openid"
+– client_id: lk - идентификатор клиента OAuth 2.0, полученный при регистрации на сервере авторизации
+– redirect_uri: http://lk.ru - URI переадресации, на который будет отправлен ответ, должен быть предварительно зарегистрирован на сервере авторизации
+– response_type: code - тип ответа и сценарий протокола авторизации
 
 Optional:
 
+– azp:  идентификатор клиента стороны, для которого был выпущен токен.
 - Key ID — ИД ключа, которым можно проверить подпись токена
 - typ: Bearer
+– nbf: - время, до которого JWT не должен приниматься к обработке
+– state: - значение, используемое для синхронизации состояния между за-просом и обратным вызовом; используется для защиты от атак межсайтовых запросов (CSRF);
+– nonce: - случайное строковое значение, используемое для привязки сеанса клиента к ID токену и для защиты от атак повторного воспроизведения;
+– prompt: - список строк, которые указывают, должен ли сервер авторизации запрашивать у конечного пользователя повторную аутентификацию и согласие на доступ клиента к ресурсу. Определены значения:
+  – “none” – не требуется интерфейс пользователя,  – “login” – серверу авторизации рекомендуется запросить повторную аутентификацию,  – “consent” – серверу авторизации рекомендуется запросить у пользователя согласие на до-ступ к ресурсу,  – “select_account” – серверу авторизации рекомендуется запросить у пользователя выбор учетной записи;
+– max_age: - максимальный срок аутентификации в секундах, прошедшее с момента последней активной аутентификации конечного пользователя сервером авторизации. 
+  - Если истекшее время больше этого значения, сервер авторизации должен пытаться активно повторно аутентифицировать конечного пользователя. Если в запросе аутентификации присутствует параметр <max_age>, возвращаемый ID токен должен включать значение параметра <auth_time>.
+- sid: - ?
 
 ### Refresh Token
 
@@ -84,19 +99,27 @@ Optional:
 
 Варианты Access token:
 
-- identifier-based or opaque access token - /token/introspect return active status token
+- __identifier-based or opaque access token__ - [/token/introspect](https://dzone.com/articles/oauth2-tips-token-validation) return active status token
   - плюсы
-    - быстро можно заблокировать
+    - быстро можно заблокировать доступ по времени истечения\не действительности
   - минусы
-    - доп запросы, нагрузка на IAM
+    - доп-е запросы, нагрузка на IAM
     - риски масштабирования при нагрузке
-- self-contained (jwt format) - проверка подписи через JWKS endpoint IAM и затем параметров токена
+- __self-contained__ (jwt format only) - проверка подписи через JWKS endpoint IAM и затем параметров токена
   - плюсы
     - простота масштабирование под рост нагрузки
   - минусы
     - блокировка возможна только по истечении exp токена
 
+[Процесс валидации](https://www.krakend.io/docs/authorization/jwt-validation/#validation-process)
+
 ![token validate](https://lh3.googleusercontent.com/pw/AL9nZEU8W4c59UO_qgfALxBDsUQUmOdeKq2qW3XSiD72WbrqQ2m2xnolziO0UgNlcqktm4XYdhJ93r4D4oqa3KPpzSBXU5O8DcB__HHZJ5Picah6BNKczaiiAGULHYMRhI9GAoFutEEhVFIDdH_Q71jxuZnfYQ=w656-h374-no)
+
+API Gateway validate token:
+
+- [NGINX Example](https://disk.yandex.ru/i/yX5AmLxdpW4XJg)
+- [Citrix](../middleware/proxy.netscaler.md)
+- [KrakenD](https://www.krakend.io/docs/authorization/jwt-validation/)
 
 ## Token exchange
 

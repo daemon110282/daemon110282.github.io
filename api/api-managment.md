@@ -2,7 +2,7 @@
 
 - [API Managment (APIM)](#api-managment-apim)
   - [Зачем](#зачем)
-    - [Development Portal](#development-portal)
+    - [Development Portal База знаний API](#development-portal-база-знаний-api)
   - [Технологии](#технологии)
 
 Расширяет возможности [API Gateway](api.gateway.md).
@@ -17,11 +17,12 @@
 - Policy management
 - Service discovery
 
-### Development Portal
+### Development Portal База знаний API
 
 Часть API Managment:
 
-- [Документация по всем АПИ](api.md) компании
+- [Документация по всем АПИ](api.md) компании: для поиска решений, изучения существующих возможностей (понимания AS-IS), хороших практик, опыта, т.е. обмена знаниями (База знаний)
+  - [Типы API](https://neiros.ru/blog/business/api-kak-primenyaetsya-programmnyy-interfeys-na-primerakh-6-populyarnykh-servisov/): внутренние, публичные, партнерские
 - [Автодокументация](api.md) по OpenAPI, AsyncAPI, WSDL, GraphQL, gRPC
 - Примеры кода клиента
 - История изменений АПИ

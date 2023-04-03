@@ -12,8 +12,16 @@
 	- https://kb.paessler.com/en/topic/22633-how-to-monitor-active-sessions-users-for-iis-7-0
   	- http://pleasework.robbievance.net/howto-configure-citrix-netscaler-to-perform-website-aware-load-balancing/
 - [Citrix ADC (NetScaler) Ingress Controller for Kubernetes](https://github.com/citrix/citrix-k8s-ingress-controller)
+- [Cache](../../arch/pattern/pattern.cache.md)
+	- [Redirection](https://docs.citrix.com/en-us/citrix-adc/current-release/citrix-adc-cache-redirection-gen-wrapper-10-con.html) to Cache Server - кэш __не хранится__ в Citrix
+	- [Integrated Caching](https://docs.citrix.com/en-us/citrix-adc/12-1/optimization/integrated-caching.html) - [кэш хранится](https://jgspiers.com/netscaler-integrated-caching/) в Citrix, необходима лизенция выше Enterprise
+	
+## Cache
 
-## Rounting
+- [Built-in cache redirection policies](https://docs.citrix.com/en-us/citrix-adc/12-1/citrix-adc-cache-redirection-gen-wrapper-10-con/cache-redirection-policies/builtin-cache-redirection-policies.html) and custom bound to a virtual server
+- Integrated Caching
+
+## Routing
 
 На основе параметров:
 
@@ -33,3 +41,28 @@
 		- priority
 		- target LBVS	
 - action
+
+## Validate Token
+
+Два [формата токена](https://docs.citrix.com/en-us/citrix-adc/current-release/aaa-tm/authentication-methods/oauth-authentication/api-authentication-with-adc.html) для валидации:
+- identifier-based or opaque access token
+- __self-contained__ [jwt format only](https://docs.citrix.com/en-us/citrix-adc/current-release/aaa-tm/authentication-methods/oauth-authentication/api-authentication-with-adc.html#oauth-configuration-for-id-tokens)
+
+[Права доступа у пользователя к API по роли](https://docs.citrix.com/en-us/citrix-adc/current-release/aaa-tm/authentication-methods/oauth-authentication.html) на основе Policy:
+
+- uses a __positive security model__, so when you configure an __auth policy__ for some API resources, you’ll configure the "No Auth" policy for the remaining API resources to skip authentication. Otherwise, access will be denied with a 401 error message.
+	- if the API resources have authentication policies, you’ll need to create authorization policies also for those API resources. Otherwise, you’ll get a 403 error message. If you __do not need authorization checks__, you can create an __authorization policy with empty claims__.
+- supports __authorization policies__ to verify access privileges to a resource, you generally check the __claims__ associated with the __token__ using authorization policies. The policies can verify whether the required claims are present in the token received with an API request.
+
+Citrix ADC может в [Grafana статистику по отказам, запросам отдавать](https://dzone.com/articles/oauth2-tips-token-validation).
+
+## Version
+
+[License](https://www.citrix.com/products/citrix-adc/citrix-adc-data-sheet.html):
+- Standard Edition
+- Advanced Edition
+- Enterprise?
+- Premium Edition
+
+- 12.1 Enterpise - use
+- 13.0

@@ -13,14 +13,14 @@
   - Tests: unit, codestyle, functional, endtoend, integration
 - CD - процесс доставки, развертывания
 - [Deployment](arch/pattern/pattern.deploy.md)
-  - A\B test
+  - [A\B test](arch/ref/abtesting.md)
 - [Service Mesh](technology/servicemesh.md)
-- Доступность, Отказоустойчивость, Надежность
-- Производительность
+- [Доступность](arch/ability/availability.md), Отказоустойчивость, Надежность
+- [Производительность](arch/ability/performance.md)
   - Auto Scaling
 - [Infrastructure-as-Code (IaC) automation](technology/ioc.md)
 - Сквозная функциональность
-  - [Observability](arch/ability/observability.md)
+  - Наблюдаемость [Observability](arch/ability/observability.md)
     - [Log management](technology/logging.md)
     - [Performance monitoring (APM класс систем) and dashboards](arch/system.class/apm.md)
   - [Security](arch/ability/security.md)
@@ -48,6 +48,32 @@ Each container __should do one thing and do it well__. A few reasons:
 - Limit
   - CPU
   - MEM
+
+### Naming Convention
+
+- Namespace
+  - env
+- [Label](https://www.split.io/blog/kubernetes-labels-best-practices/) - key\value 
+  - key - alphanumeric character ([a-z0-9A-Z]) with dashes (-), underscores (_), dots (.), and alphanumerics between, [max length 253](https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/#syntax-and-character-set)
+  - value - max length 63
+  - Reserved [prefixes](https://kubernetes.io/docs/reference/labels-annotations-taints/)
+    - kubernetes.io
+    - kubernetes.azure.com
+    - k8s.io
+  - примеры
+    - release : stable, release, canary
+    - [kubernetes.io/os](https://kubernetes.io/docs/concepts/overview/working-with-objects/common-labels/#labels) : debian, linux
+    - [kubernetes.azure.com/cluster](https://learn.microsoft.com/en-us/azure/aks/use-labels#reserved-system-labels) : cl1
+    - kubernetes.io/part-of : родительская ИС\сервис
+    - kubernetes.io/version : semver format
+    - [sec.<organization_domain>/tenant-id](https://www.helpnetsecurity.com/2021/05/26/kubernetes-security/) : tenant-uid
+- Tenant-Type service-Name Service-Type Component-Name Component-Technology Stack-Name module
+  - Type service: категория ИС: LK, CRM, IDM
+  - Technology Stack: PHP, .NET, Python, NodeJS, Java
+  - Type Component - Tier: api, db, cache, frontend, backend
+    - db: mssql, mysql
+    - api: 
+    - cache: redis, memcached
 
 ## Технологии
 

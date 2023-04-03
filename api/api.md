@@ -52,6 +52,7 @@ version of the API. A good approach for this is the **Mediator pattern** (for ex
 - [Угрозы OWASP подробно](https://habr.com/ru/post/503284/)
 - [Control levels of user authorisation](https://www.gov.uk/guidance/gds-api-technical-and-data-standards)
 - [API Security tools and resources](https://github.com/arainho/awesome-api-security)
+- https://openapi.security/
 
 ### Документирование
 

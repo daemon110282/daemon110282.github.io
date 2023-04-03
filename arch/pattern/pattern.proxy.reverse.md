@@ -3,6 +3,8 @@
 ## Зачем
 
 - Cache
+	- Redirection to Cache Server
+	- Integrated
 - SSL encryption
 - Load balancing
 - Routing ![arch](https://docs.citrix.com/en-us/citrix-adc/media/csw-lbconfiguration.png) - __без Redirect__, подмена ИС для обработки одного и того же URL. Пример Redirect - смена домена (app.company.ru/add + new-app.company.ru/add ), одновременно работают обе ИС на разных доменах.
@@ -13,12 +15,11 @@
 	- Cookie
 	- Payload
 
-
 ## Технологии
 
 - [Nginx](../../technology/middleware/proxy.nginx.md)
 - [Traefik](../../technology/middleware/router.traefik.md)
-- [Netscaler](../../technology/middleware/router.netscaler.md)
+- [Netscaler](../../technology/middleware/proxy.netscaler.md)
 
 ## Compare
 

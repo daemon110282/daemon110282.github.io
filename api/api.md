@@ -6,7 +6,7 @@
     - [Versioning](#versioning)
     - [Security](#security)
     - [Документирование](#документирование)
-  - [API management](#api-management)
+    - [API management](#api-management)
   - [Технологии](#технологии)
 
 [Термины](https://starkovden.github.io/Glossary-for-API-documentation.html)

@@ -13,6 +13,7 @@
   - PAAS
   - SAAS
   - [FAAS](serverless.md)
+- [Службы вычислений](https://docs.microsoft.com/ru-ru/azure/architecture/guide/technology-choices/compute-decision-tree)
 
 ## Паттерны
 

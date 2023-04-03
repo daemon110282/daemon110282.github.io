@@ -1,5 +1,14 @@
 # OpenAPI Swagger
 
+- [OpenAPI Swagger](#openapi-swagger)
+  - [Зачем](#зачем)
+  - [Редакторы](#редакторы)
+  - [Утилиты](#утилиты)
+  - [Паттерны](#паттерны)
+    - [Процесс](#процесс)
+
+## Зачем
+
 - [Зачем](https://habr.com/ru/post/434798/)
 - Форматы
   - [OpenAPI 3.0 спецификация формата](https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.0.0.md)

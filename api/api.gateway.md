@@ -1,12 +1,12 @@
 # API Gateway
 
 - [API Gateway](#api-gateway)
-  - [Зачем?](#зачем)
+  - [Зачем](#зачем)
   - [Плюсы-минусы](#плюсы-минусы)
   - [Паттерны](#паттерны)
   - [Технологии](#технологии)
 
-## Зачем?
+## Зачем
 
 - Снижение связности
 - Too many __round trips__. [Паттерн Aggregation](https://docs.microsoft.com/ru-ru/azure/architecture/patterns/gateway-aggregation)

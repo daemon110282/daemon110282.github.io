@@ -1,5 +1,13 @@
 # Паттерны Шаблоны Patterns
 
+- [Паттерны Шаблоны Patterns](#паттерны-шаблоны-patterns)
+  - [Виды](#виды)
+  - [Проектирования и реализации](#проектирования-и-реализации)
+  - [ООП](#ооп)
+  - [Управления данными](#управления-данными)
+  - [TODO](#todo)
+
+## Виды
 
 - [Интеграции](pattern/pattern.integration.md)
 - [Производительность](pattern/pattern.perf.md)
@@ -90,3 +98,4 @@
 - [Martin F patterns](https://martinfowler.com/dslCatalog/index.html)
 <https://vocal.media/01/unified-microservices-patterns-ump>
 - https://patterns.arcitura.com/
+- https://towardsdatascience.com/10-common-software-architectural-patterns-in-a-nutshell-a0b47a1e9013

@@ -10,7 +10,7 @@
 - [503 Service Unavailable](https://docs.apigee.com/api-platform/troubleshoot/runtime/503-service-unavailable)
   - [Apache PHP](https://www.inmotionhosting.com/support/website/create-503-status/)
 
-## Security 
+## Security
 
 - 401 (requires auth)
 - [403 Forbidden](https://wp-kama.ru/handbook/rest/basic/http-status-codes) для ошибок аутентификации и/или авторизации
@@ -18,6 +18,7 @@
 ## Files
 
 Upload
+
 - 413 Payload Too Large (if exceeding max)
 - 507 Insufficient Storage (server full).
 Download

@@ -18,6 +18,7 @@
 - [Flow](https://habr.com/ru/company/nixys/blog/566910/) also called __Grants__:
   - Public Client
     - [Authorization Code Flow with PKCE](oauth.flow.ACwithPKCE.md)
+      - Варианты реализаций ACF with PKCE [SPA NextJS](https://auth0.com/blog/ultimate-guide-nextjs-authentication-auth0/?utm_source=twitter&utm_medium=sc&utm_campaign=nextjs_authn_guide)
 
 ## Параметры Flow
 

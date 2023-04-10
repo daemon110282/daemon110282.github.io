@@ -13,8 +13,12 @@
 ## Функции
 
 - Timeseries Data (pg_partman extension)
-- Авто партиционирование данных для удаления устаревших
 - [schema and data comparison tool for PostgreSQL](https://www.postgrescompare.com/)
+- Шардирование (CITUS)
+  - Вертикальный - партиционирование-секционирование, одну таблицу на несколько таблиц в одной субд
+    - Авто партиционирование данных для удаления устаревших
+  - Горизонтальный - таблицы на разных субд
+
 
 ### Термины
 
@@ -27,6 +31,7 @@
 
 ### Replication
 
+- hot-standby потоковая репликация
 - https://medium.com/@PinkOwl/postgresql-and-me-log-shipping-replication-6bc945757822
 - [Config](https://www.postgresql.org/docs/current/runtime-config-replication.html)
 

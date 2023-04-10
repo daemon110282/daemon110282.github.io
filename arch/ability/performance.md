@@ -1,6 +1,12 @@
 # Производительность Performance
 
 - [Производительность Performance](#производительность-performance)
+- [web app](#web-app)
+    - [Кэш](#кэш)
+    - [Инструменты](#инструменты)
+    - [ms sql](#ms-sql)
+    - [Секционирование Шардирование](#секционирование-шардирование)
+    - [Sql query plan](#sql-query-plan)
   - [Метрики](#метрики)
     - [Business Metrics](#business-metrics)
     - [Application Metrics](#application-metrics)
@@ -42,26 +48,18 @@ http://www.markhneedham.com/blog/2009/06/24/using-fiddler-with-iis/ fiddler on i
 https://blogs.msdn.microsoft.com/docast/2016/04/28/troubleshooting-iis-request-performance-slowness-issues-using-freb-tracing/ настройка трейса FREB по длительным запросам time-taken. ЗАМЕДЛЯЕТ САЙТ!
 https://forums.iis.net/t/1169411.aspx long time-taken and win32 status code = 64. is connection is already lost? common by proxies, to not have too many socket connections?
 
-
 ### Кэш
 
-Сервис может отвечать заголовками,
-сколько можно кэшировать один или
-другой запрос. И если поставить между
-сервисом и вызывающей стороной nginx,
-то он может держать у себя кэш на основе
-этих заголовков. Для более продвинутого
-кэширования можно вместо nginx взять
-varnish
-
+- Сервис может отвечать заголовками, сколько можно кэшировать один или другой запрос. И если поставить между сервисом и вызывающей стороной nginx, то он может держать у себя кэш на основе этих заголовков.
+- Для более продвинутого кэширования можно вместо nginx взять varnish
 
 ### Инструменты
+
 Php
 Стандартное логирование запросов (nginx, apache, php-fpm)
 Логирование медленных запросов БД (опция в mysql)
 Инструменты фиксации узких мест при прохождении запроса. Для php это xhprof, pinba.
 Встроенные инструменты внутри веб-приложения, например отдельный модуль трассировки.
-
 
 ### ms sql
 
@@ -85,8 +83,7 @@ http://blogs.msmvps.com/gladchenko/2008/03/30/tips-for-dba-using-sys-dm_db_index
 SELECT * from sys.configurations ORDER BY name
 https://www.mssqltips.com/sqlservertip/6090/sql-server-configuration-settings-query/
 
-
-### секционирование 
+### Секционирование Шардирование
 
 таблиц в одной бд
 https://technet.microsoft.com/library/Cc966380
@@ -94,7 +91,7 @@ https://technet.microsoft.com/library/Cc966380
 https://docs.microsoft.com/ru-ru/sql/relational-databases/partitions/partitioned-tables-and-indexes
 http://www.sql.ru/articles/mssql/2005/073102partitionedtablesandindexes.shtml скользящее окно. 
 
-### Sql query plan 
+### Sql query plan
 
 Плохо
 Index scan
@@ -150,14 +147,19 @@ Logical reads
 
 - Google [Web Vitals](https://web.dev/i18n/en/vitals/)
   - [Core](https://timeweb.com/ru/community/articles/core-web-vitals) __75-й процентиль__
-    - LCP - насколько быстро происходит скорость загрузки страницы - <2.5-4c 
+    - LCP - насколько быстро происходит скорость загрузки страницы - <2.5-4c
     - FID - как быстро происходит взаимодействие с сайтом - <1-3c
     - CLS - корректно ли работают в совокупности все элементы - <0.1-0.25
   - [Дополнительно](https://web.dev/vitals/?utm_source=pocket_saves#drugie-pokazateli-web-vitals)
-    - Time to First Byte (TTFB) - Время до первого байта 
+    - Time to First Byte (TTFB) - Время до первого байта
     - First Contentful Paint (FCP) - Первая отрисовка контента
-    - Total Blocking Time (TBT) - Общее время блокировки 
-    - Time to Interactive (TTI) - Время до интерактивности
+    - Total Blocking Time (TBT) - Общее время блокировки
+    - Time to Interactive (TTI) - Время до интерактивност
+  - Иснтрументы
+    - [pagespeed](https://pagespeed.web.dev/)
+    - [lighthouse](https://developer.chrome.com/docs/lighthouse/overview/)
+- Yandex [ИКС](https://kokoc.com/terminy/chto-takoe-iks-sajta-v-yandekse/)
+  - Учитывает Web Vitals
 
 ### Service Metrics: API
 

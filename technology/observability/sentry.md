@@ -81,9 +81,13 @@
 - RBAC
 	- [Роли](https://docs.sentry.io/product/accounts/membership/)
 	- [маппинг групп LDAP на роль Sentry](https://habr.com/ru/post/691140/)
-	- LDAP [SAML](https://yyhh.org/blog/2020/10/how-to-setup-saml2-authentication-on-sentry-with-keycloak/) - __нет маппинга групп LDAP на роли Sentry__ 
+	- LDAP 
+		- [SAML](https://yyhh.org/blog/2020/10/how-to-setup-saml2-authentication-on-sentry-with-keycloak/) - __нет маппинга групп LDAP на роли Sentry__ 
+		- [](https://habr.com/ru/articles/691140/)
 - [Jira Task Intregration](https://forum.sentry.io/t/how-to-configure-jira-cloud-in-your-on-premise-sentry/6720)
 - MTA
+- [Relay](https://github.com/getsentry/self-hosted/blob/master/relay/config.example.yml) - Rate Limit, Filter
+	- [on premise](https://www.youtube.com/watch?v=9_IswUwFxlE)
 
 Сущности:
 
@@ -134,7 +138,10 @@
 		- BSL __license__ - Если мы [не конкурируем с ними](https://open.sentry.io/licensing/), то [бесплатно](https://forum.sentry.io/t/re-licensing-sentry-faq-discussion/8044)
 - [Системные требования](https://github.com/getsentry/self-hosted)
 - [Observability Sentry](https://medium.com/@twunde/the-unofficial-guide-to-upgrading-sentry-on-premise-9-to-sentry-10-5e8b4e476349)
-	- [health checks](https://docs.sentry.io/product/relay/monitoring/#health-checks)
+	- health checks
+		- [relay](https://docs.sentry.io/product/relay/monitoring/#health-checks)
+		- Add healthchecks for [redis, memcached and postgres](https://github.com/getsentry/self-hosted/pull/975)
+		- [kafka](https://github.com/getsentry/self-hosted/pull/948)
 	- [logs stdout](https://docs.sentry.io/product/relay/monitoring/#logging)
 	- [metric in StatsD](https://docs.sentry.io/product/relay/monitoring/#metrics)
 		- [model](https://docs.sentry.io/product/relay/monitoring/collected-metrics/)

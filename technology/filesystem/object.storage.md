@@ -13,16 +13,19 @@
 - объект – это файл и набор метаданных о нём
 - все объекты находятся в одном «каталоге» – bucket
 
-Функции:
+## Функции
+
 - [Data lakes](https://cloudian.com/guides/hybrid-it/on-premises-object-storage/)
 - CDN
-- Загрузка upload файла
-- Скачиваени download файла
+- Загрузка upload объектов
+- Версионирование объектов
+- Скачивание download файла
 	- Проксировать запрос [напрямую в S3 пример MinIO](https://habr.com/ru/company/ozontech/blog/586024/)
 - Ограничение доступа 
 	- Token реализация паттерна [valet key](https://learn.microsoft.com/en-us/azure/architecture/patterns/valet-key)
 	![scheme](https://learn.microsoft.com/en-us/azure/architecture/patterns/_images/valet-key-pattern.png)
-- Retention Policy - автоочистка старых данных
+- Expire Policy - автоочистка старых данных
+- Object Retention - блокировка от удаления
 
 ## Технологии
 
@@ -35,13 +38,7 @@
 	- Azure	
 - [On premise](https://geekflare.com/self-hosted-s3/)
 	- Open Source (класс Amazon S3-совместимых хранилищ)
-		- [MinIO](https://min.io/)
-			- GNU AGPL v3 лицензия позволяет коммерческое использование
-			- имеет низкий порог входа от Ceph
-			- k8s docker compose
-			- [PHP Laravel support](https://laravel.com/docs/9.x/filesystem#amazon-s3-compatible-filesystems)
-			- [Client SDK](https://min.io/docs/minio/linux/developers/minio-drivers.html#minio-drivers) [JS](https://github.com/minio/minio-js), PHP, .NET и тп
-			- security access by [IAM Keycloak](https://min.io/product/identity-and-access-management) OIDC protocol
+		- [MinIO](minio.md)
 		- [Ceph](https://ceph.com/en/)
 			- [более надежен](https://habr.com/ru/company/ozontech/blog/586024/#comment_23647704) чем MinIO
 			- не S3 совместимо?

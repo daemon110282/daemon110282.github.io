@@ -1,5 +1,15 @@
 # OpenTelemetry (OTel) Protocol (OTLP)
 
+- [OpenTelemetry (OTel) Protocol (OTLP)](#opentelemetry-otel-protocol-otlp)
+	- [Зачем](#зачем)
+	- [Термины](#термины)
+	- [Архитектура](#архитектура)
+		- [Reference](#reference)
+		- [OTEL Collector](#otel-collector)
+		- [Logs](#logs)
+	- [OTLP - OpenTelemetry (OTel) Protocol](#otlp---opentelemetry-otel-protocol)
+	- [Технологии](#технологии)
+
 Концепция OpenTelemetry (OTel) объединила OpenTracing + OpenCensus.
 
 ## Зачем
@@ -32,7 +42,7 @@
 		- [JS](https://opentelemetry.io/docs/instrumentation/js/)
 - [Roadmap Spec](https://github.com/open-telemetry/opentelemetry-specification/blob/main/spec-compliance-matrix.md)
 	- Receivers
-	- Exporters	
+	- Exporters
 	- OTLP
 		- Tracing: Stable
 		- Metrics: Stable
@@ -52,19 +62,24 @@
 ![schema](https://opentelemetry.io/docs/reference/specification/logs/img/unified-collection.png)
 - ![arch](https://opentelemetry.io/img/otel_diagram.png)
 
-
 Based on the [Specification, the APIs and SDKs are implemented](https://scalac.io/blog/opentelemetry-from-a-birds-eye-view-a-few-noteworthy-parts-of-the-project/). There’s a noteworthy distinction between the two:
 - __APIs consist of all the abstractions used for instrumentation__, clearly decoupled from their actual implementations. The APIs __do not contain the working functionality__ (they are only there to define what is going to be collected).
 - An important part of the __SDK is the exporters__. After collecting the telemetry signals from your application, 
 	- either directly (using the manual instrumentation approach)
-	- or indirectly (using the auto-instrumentation), you have to actually emit them. 
+	- or indirectly (using the auto-instrumentation), you have to actually emit them.
 	To do that, you have to use an __SDK exporter and configure it to send data to a particular__ destination.
-	- Such a destination can be 
+	- Such a destination can be
 		- a telemetry backend of your choice (such as Prometheus, New Relic or Jaeger)
 		- or an OpenTelemetry collector.
 	- SDKs consist of all the parts that actually __implement the APIs and provide the working functionality__ for collecting and exporting all the signal data.
 
 ![scheme](https://opentelemetry.io/img/library-design.png)
+
+### Reference
+
+- [МТС Go](https://habr.com/ru/company/ru_mts/blog/537892/)
+- [NGINX ref architecture MARA: ELK - Jaeger - Prometheus - OpenTelemetry](https://www.nginx.com/blog/integrating-opentelemetry-modern-apps-reference-architecture-progress-report?mkt_tok=NjUzLVNNQy03ODMAAAGDoZc8tBnTTPpd0LyW8jL4ptLEDNmRtqT86ruxAIy0w26Q36wbMRlF5KC3BMfg2BcRVqWCoPUW3J4gMfJLANmKejRzOQC80kmD2-ueYoqT-DoXcB1iUA)
+- [NGINX ref architecture Microsevice trace](https://www.nginx.com/blog/nginx-tutorial-opentelemetry-tracing-understand-microservices/)
 
 ### OTEL Collector
 
@@ -87,7 +102,7 @@ Based on the [Specification, the APIs and SDKs are implemented](https://scalac.i
 - New First-Party Application Logs
 ![schema](https://opentelemetry.io/docs/reference/specification/logs/img/application-api-sdk.png)
 
-## OTLP 
+## OTLP - OpenTelemetry (OTel) Protocol
 
 - OTLP defines the encoding of telemetry data and the protocol used to exchange data between the client and the server.
 - This specification defines how OTLP is implemented __over gRPC and HTTP 1.1 transports__ and specifies Protocol Buffers schema that is used for the payloads.
@@ -109,9 +124,4 @@ Based on the [Specification, the APIs and SDKs are implemented](https://scalac.i
 		- __Beta__ [RUM Grafana Faro OTEL JS SDK + Grafana Phlare](https://www.infoq.com/news/2022/12/grafana-faro-phlare/)
 			- [Возможности](https://grafana.com/docs/grafana-cloud/faro-web-sdk/?pg=blog&plcmt=body-txt)
 		![scheme](https://grafana.com/static/assets/img/blog/grafana-cloud-faro-diagram.png)
-			- Grafana Phlare provides an open-source (GNU Affero General Public License v3.0) backend for storing and querying profiling data.				
-
-Reference:
-
-- [МТС Go](https://habr.com/ru/company/ru_mts/blog/537892/)
-- [NGINX ref architecture MARA: ELK - Jaeger - Prometheus - OpenTelemetry](https://www.nginx.com/blog/integrating-opentelemetry-modern-apps-reference-architecture-progress-report?mkt_tok=NjUzLVNNQy03ODMAAAGDoZc8tBnTTPpd0LyW8jL4ptLEDNmRtqT86ruxAIy0w26Q36wbMRlF5KC3BMfg2BcRVqWCoPUW3J4gMfJLANmKejRzOQC80kmD2-ueYoqT-DoXcB1iUA)
+			- Grafana Phlare provides an open-source (GNU Affero General Public License v3.0) backend for storing and querying profiling data.

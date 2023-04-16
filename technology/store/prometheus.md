@@ -1,11 +1,18 @@
-# Prometheus 
+# Prometheus
+
+- [Prometheus](#prometheus)
+	- [Зачем](#зачем)
+	- [Модель данных](#модель-данных)
+	- [Deployment](#deployment)
+
+## Зачем
 
 - это база данных временных рядов
 - хранит метрики, агрегированные за период времени
 - [PromQL](https://prometheus.io/docs/prometheus/latest/querying/examples/)
 ![schema](https://static.tildacdn.com/tild3932-3264-4264-a430-386464666565/_4.png)
 
-## Модель данных:
+## Модель данных
 
 - метрика
 - набор лейблов (теги) key-value
@@ -23,3 +30,7 @@
 	- Гистограмма считает количество попаданий в какую-то группу, то есть __запоминает счетчики, а не сами значения__
 - Сводки
 
+## Deployment
+
+- [HA](https://habr.com/ru/companies/oleg-bunin/articles/728456/) :  Thanos, Cortex или Mimir
+![варианты](https://habrastorage.org/getpro/habr/upload_files/a04/915/5ef/a049155eff8a2d6921e86100584a7919.png)

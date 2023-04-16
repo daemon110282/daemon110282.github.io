@@ -74,6 +74,8 @@ version of the API. A good approach for this is the **Mediator pattern** (for ex
 
 ## Технологии
 
+G2 top tools
+https://www.g2.com/reports/8128c8c9-0bc9-4c9e-8daa-b1b1294d3c77/preview?tab=grid
 - [API Platform](https://blog.postman.com/new-postman-api-platform-redefining-api-management-for-api-first-world/)
   - [API management](api-managment.md)
   - [API Gateway](api.gateway.md)

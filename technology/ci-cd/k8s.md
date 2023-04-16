@@ -31,6 +31,10 @@
     - в процессе мониторинга нам необходимо постоянно сопоставлять физический мир контейнеров с реальностью Kubernetes
     - health checks. У Kubernetes есть два их типа: liveness и readiness probes.
 
+![Схема](http://www.plantuml.com/plantuml/proxy?cache=yes&src=https://raw.githubusercontent.com/daemon110282/daemon110282.github.io/daemon110282-patch-1/technology/ci-cd/k8s.puml!k8s)
+
+![Схема](http://www.plantuml.com/plantuml/proxy?cache=yes&src=https://raw.githubusercontent.com/daemon110282/daemon110282.github.io/daemon110282-patch-1/technology/ci-cd/k8s.puml!IC)
+
 ## Reference Architecture
 
 - [NGINX Modern Apps Reference Architecture (MARA)](https://github.com/nginxinc/kic-reference-architectures/)

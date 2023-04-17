@@ -49,7 +49,7 @@
 - Простота расширения
 - Корреляция данных
 - Универсальные агенты Data Collector по протоколу OpenTelemetry
-- Трансформация команд на принципах Site Reliability Engineering (SRE) four [golden signals](https://sre.google/sre-book/monitoring-distributed-systems/)
+- Трансформация команд на принципах [Site Reliability Engineering (SRE)](../../devops/sre.md) four [golden signals](https://sre.google/sre-book/monitoring-distributed-systems/)
 	- TODO
 
 Reference Arch:

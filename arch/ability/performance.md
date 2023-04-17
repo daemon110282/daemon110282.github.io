@@ -157,6 +157,7 @@ Logical reads
     - Time to Interactive (TTI) - Время до интерактивност
   - Иснтрументы
     - [pagespeed](https://pagespeed.web.dev/)
+    - gtmetrix.com
     - [lighthouse](https://developer.chrome.com/docs/lighthouse/overview/)
 - Yandex [ИКС](https://kokoc.com/terminy/chto-takoe-iks-sajta-v-yandekse/)
   - Учитывает Web Vitals

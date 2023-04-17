@@ -25,8 +25,6 @@
 			- [PHP Laravel support](https://laravel.com/docs/9.x/filesystem#amazon-s3-compatible-filesystems)
 		- [.NET](https://min.io/docs/minio/linux/developers/dotnet/minio-dotnet.html) 
 	- Bucket [Events](https://min.io/docs/minio/linux/administration/monitoring/bucket-notifications.html#)	to [RMQ, PSQL, Redis, WebHook](https://min.io/docs/minio/linux/administration/monitoring.html#bucket-notifications)
-		- Настраивается по Bucket перечень нужных [Events](https://min.io/docs/minio/linux/reference/minio-mc/mc-event-add.html#mc-event-supported-events)
-		- RMQ [example](https://min.io/docs/minio/linux/administration/monitoring/publish-events-to-amqp.html#minio-bucket-notifications-publish-amqp)
 - [Security](https://min.io/docs/minio/linux/administration/identity-access-management.html)
 	- Policy-Based Access Control (PBAC) 
 	- [Encryption](https://min.io/product/enterprise-object-storage-encryption)
@@ -37,6 +35,23 @@
 - MTA
 	- [MinIO Operator](https://blog.min.io/secure-multi-tenant-object-storage/)
 	- Варианты [Guide Deploy](https://github.com/minio/minio/blob/master/docs/multi-tenancy/README.md)
+
+### Bucket Events
+
+- Настраивается по Bucket перечень нужных [Events](https://min.io/docs/minio/linux/reference/minio-mc/mc-event-add.html#mc-event-supported-events)
+	- Console
+	- CLI
+	- [SDK's BucketNotification APIs](https://min.io/docs/minio/linux/developers/go/API.html#setbucketnotification-ctx-context-context-bucketname-string-config-notification-configuration-error)
+- RMQ [example](https://min.io/docs/minio/linux/administration/monitoring/publish-events-to-amqp.html#minio-bucket-notifications-publish-amqp)
+	- [Manual Detail](https://github.com/minio/minio/blob/master/docs/bucket/notifications/README.md)
+- [Event Structure](https://docs.aws.amazon.com/AmazonS3/latest/userguide/notification-content-structure.html)
+	- [Created, Deleted, Restored](https://docs.aws.amazon.com/AmazonS3/latest/userguide/ev-events.html)
+	- requestParameters
+		- sourceIPAddress
+	- s3
+		- object
+			- key
+			- eTag
 
 ## Плюсы-Минусы
 

@@ -72,11 +72,9 @@
 	- [MTA](../../arch/mta.md) подход можно реализовать 
 - Groups
 - Roles
-- Cross-Origin Resource Sharing (CORS) - [механизм, использующий дополнительные HTTP-заголовки](https://developer.mozilla.org/ru/docs/Web/HTTP/CORS), чтобы дать возможность агенту пользователя получать разрешения на доступ к выбранным ресурсам с сервера на источнике (домене), отличном от того, что сайт использует в данный момент. Говорят, что агент пользователя делает запрос с другого источника (cross-origin HTTP request), если источник текущего документа отличается от запрашиваемого ресурса доменом, протоколом или портом. Пример: http://domain-a.com, запрашивает <img> src по адресу http://domain-b.com/image.jpg
-  - Origin - Web content's origin is defined by the scheme (protocol), hostname (domain), and port of the URL used to access it. Two objects have the __same origin__ only when the __scheme, hostname, and port all match__.
-  - [CORS между доменами](https://identityserver4.readthedocs.io/en/latest/quickstarts/4_javascript_client.html#allowing-ajax-calls-to-the-web-api-with-cors)
+- [Cross-Origin Resource Sharing (CORS)](../protocols.integration/cors.md)
   - CORS allow using the Authorization Code flow in JavaScript on browser-side with the PKCE extension instead.
-  
+
 [Обучение СЛЁРМ](https://slurm.io/keycloak)
 
 ### User Storage

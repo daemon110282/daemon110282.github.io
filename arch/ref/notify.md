@@ -5,7 +5,7 @@
 Функции:
 
 - GET /status endpoint to know how many clients have connected
-- CORS middleware to allow connections from the frontend app
+- [CORS](../../technology/protocols.integration/cors.md) middleware to allow connections from the frontend app
 - Cancellable Notification
   - Any notification should be cancellable at any time.
   - Any notification can be canceled at any time because the user removes the user ID from the client-side application.

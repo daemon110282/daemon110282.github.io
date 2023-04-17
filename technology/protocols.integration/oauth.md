@@ -70,12 +70,13 @@ Optional:
 ### Refresh Token
 
 - SPA - public client
-	- [Refresh token rotation](https://stateful.com/blog/oauth-refresh-token-best-practices) for protect a replay attack
+	- [Refresh Token rotation](https://stateful.com/blog/oauth-refresh-token-best-practices) for protect a replay attack
+  	- Can Store Refresh Token In Local Storage or browser memory. Заданный долгий срок жизни Refresh token сокращается с помощью Refresh Token rotation. Обновление действительно только в течение времени жизни Access Token, который будет короткоживущим.
 	- иные варианты to keep a session going can be
 		- cookies
 		- silent authentication
 			- in iframe - legacy Google block
-- [Confidential Clients Should Not Rotate Refresh Tokens](https://docs.duendesoftware.com/identityserver/v6/tokens/refresh/#confidential-clients-should-not-rotate-refresh-tokens)
+- Confidential Clients [Should Not Rotate Refresh Tokens](https://docs.duendesoftware.com/identityserver/v6/tokens/refresh/#confidential-clients-should-not-rotate-refresh-tokens)
 
 ## Security
 

@@ -5,6 +5,7 @@
   - [Паттерны](#паттерны)
     - [Сколько сервисов(BC) в одном контейнере](#сколько-сервисовbc-в-одном-контейнере)
     - [Auto Scaling](#auto-scaling)
+    - [Naming Convention](#naming-convention)
   - [Технологии](#технологии)
 
 ## Зачем
@@ -25,6 +26,7 @@
     - [Performance monitoring (APM класс систем) and dashboards](arch/system.class/apm.md)
   - [Security](arch/ability/security.md)
   - [Audit](arch/pattern/pattern.audit.md)
+- [SRE](devops/sre.md)
 
 ## Паттерны
 

@@ -65,8 +65,10 @@
 		- [gRPC](https://github.com/m2-oss/sentry-grpc)
 	- [RSyslog и Sentry](https://adw0rd.com/2012/12/15/rsyslog-sentry-bridge/)
 	- [Drupal module Raven](https://www.drupal.org/project/raven)
-- [APM](../../arch/system.class/apm.md)
+	- source maps
 	- [SPA Vite](https://docs.sentry.io/platforms/javascript/sourcemaps/uploading/vite/)
+- [APM](../../arch/system.class/apm.md)
+	
 	- [Web Vitals](https://docs.sentry.io/product/performance/web-vitals/)
 - [Distributed Trace](https://docs.sentry.io/product/sentry-basics/tracing/distributed-tracing/)
 	![span](https://docs.sentry.io/static/1ae959bb1d05b01379cf856c5dc36a01/c1b63/diagram-transaction-trace.png)

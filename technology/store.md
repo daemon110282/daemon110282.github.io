@@ -23,7 +23,7 @@
 ### In-memory store
 
 - Key Value
-	- [Redis](redis.md)
+	- [Redis](store/redis.md)
 		- это однопоточная система
 		- [redis vs PgSQL](https://habr.com/ru/company/cloud_mts/blog/716548/)
 	- Memcached

@@ -1,5 +1,14 @@
 # Хранилища данных
 
+- [Хранилища данных](#хранилища-данных)
+	- [RDBMS (Relational)](#rdbms-relational)
+	- [Time Series Database](#time-series-database)
+	- [NoSQL](#nosql)
+		- [Document store](#document-store)
+		- [In-memory store](#in-memory-store)
+		- [Column Based](#column-based)
+	- [Full text search Полнотекстовый поиск](#full-text-search-полнотекстовый-поиск)
+
 Решения для [хранилищ данных](../arch/store.md).
 
 ## RDBMS (Relational)
@@ -18,7 +27,7 @@
 
 ### Document store
 
-- MongoDB — документоориентированная система управления базами данных, не требующая описания схемы таблиц. Считается одним из классических примеров NoSQL-систем, использует JSON-подобные документы и схему базы данных.
+- [MongoDB](store/mongo.md) — документоориентированная система управления базами данных, не требующая описания схемы таблиц. Считается одним из классических примеров NoSQL-систем, использует JSON-подобные документы и схему базы данных.
 
 ### In-memory store
 
@@ -33,3 +42,9 @@
 ### Column Based
 
 - [ClickHouse](store/clickhouse.md)
+
+## Full text search Полнотекстовый поиск
+
+- [Sphinx](store/sphinx.md)
+- [Elasticsearch](store/elasticsearch.md)
+- [manticore](https://github.com/manticoresoftware/manticoresearch) fork Sphinx

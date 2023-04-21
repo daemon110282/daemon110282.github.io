@@ -87,7 +87,7 @@
   - Не содержат состояния
   - Могут обращаться к репозиториям и другим сервисам
   - Уносят логику из контроллеров
-- Инфраструктурный слой
+- __Инфраструктурный слой__
   - Содержит реализации репозиториев и сервисов
   - Знает о БД
   - Работает с [IOC контейнером](https://habr.com/ru/post/131993/)
@@ -96,6 +96,7 @@
 
 - Framework, Platform
   - [ABP.IO](../../technology/framework/abp.md)
+  - [PHP](../ref/ddd/php.md)
 - Plantuml + vs code
 - Context Mapping DSL (CML) - [A Modeling Framework](https://contextmapper.org/) for Strategic Domain-driven Design
 - [Microservice DSL (MDSL)](https://github.com/Microservice-API-Patterns/MDSL-Specification) support Generators. In the MDSL Editor, you can invoke the following generators from the “MDSL” entry in the context menu:

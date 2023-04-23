@@ -21,6 +21,9 @@
 - [Стратегии кэширования](https://kislayverma.com/software-architecture/architecture-patterns-caching-part-1/)
 - [MS best practices](https://learn.microsoft.com/en-us/azure/architecture/best-practices/caching)
 - [top 5 things to consider](https://blog.bytebytego.com/i/102208958/things-to-consider-when-using-cache) ![schema](https://substackcdn.com/image/fetch/w_1456,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F1f0f7d0b-9622-4bdd-9b69-73c2a53366eb_1728x1646.png)
+- TODO
+  - https://blog.bytebytego.com/p/a-crash-course-in-caching-final-part?utm_source=substack&utm_medium=email
+  - https://www.youtube.com/watch?v=dGAgxozNWFE&embeds_euri=https%3A%2F%2Fblog.bytebytego.com%2F&feature=emb_imp_woyt&ab_channel=ByteByteGo
 
 ## Технологии
 

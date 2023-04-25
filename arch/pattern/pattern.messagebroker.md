@@ -1,4 +1,4 @@
-# Брокер сообщений Message Broker
+# Брокер сообщений Message Broker Bus
 
 - принцип "глупая шина (канал) умные клиенты"
 
@@ -9,12 +9,11 @@
 
 - [Advanced transient messaging](https://apolomodov.medium.com/coa-distributed-systems-4th-ed-4-communication-c5ce331015e9)
 	- ZeroMQ
-- Message-oriented persistent
-	- [Message Bus](../../technology/middleware/rmq.md)  
+- Message-oriented persistent - Message Bus
 	- Транспорт
-		- [RMQ](../../technology/rmq.md)
+		- [RMQ](../../technology/middleware/rmq.md)  
 		- ActiveMQ
-- log-based message queue
+- Log-based message queue
 	- [Kafka](../../technology/middleware/kafka.md)
 - [Messaging Patterns](https://www.enterpriseintegrationpatterns.com/patterns/messaging/)
   - [MS](https://docs.microsoft.com/ru-ru/azure/architecture/patterns/category/messaging)

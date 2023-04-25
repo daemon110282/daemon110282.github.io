@@ -66,8 +66,8 @@
       - Описывает элементы домена, полностью определяемые свойствами
       - Неизменяемый после создания
       - Используется для типизации и структурирования данных
-.    - Шаблон Спецификация для бизнес правил
-.    - Domain event
+    - Шаблон Спецификация для бизнес правил
+    - Domain event
   - Слои приложения
     - Служба __Aplication Services__
     - Служба __Domain Services__ Interfaces
@@ -85,7 +85,7 @@
 - Служба __Aplication Services__
   - Реализация Use Case UI
   - Используют Domain Services
-. - CQRS - command, query and handler, command bus
+  - CQRS - command, query and handler, command bus
 - Служба __Domain Services__ Interfaces
   - Сервисы предоставляют приложению интерфейсы для работы с доменом
   - Содержат методы, описывающие операции Домена

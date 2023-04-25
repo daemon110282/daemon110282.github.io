@@ -59,8 +59,7 @@ Ease of development Rating: Low
   - [RPC (команды)](../../technology/middleware/rmq.md)
 - __Запросы__ [CQRS](../pattern/pattern.cqrs.md) - command query request segregation
 ![cqrs](../../img/arch/eda/eda.cqrs.jpg)
-- [Event sourcing](https://habr.com/ru/company/nix/blog/322214/) - источник правды событие, не состояние ИС
-![es](../../img/arch/eda/eda.event.sourcing.jpg)
+- [Event sourcing](../pattern/event.sourcing.md)
 - Медиатор
 - __Распределенные транзакции__ (лучше не делать)
   - [SAGA](../pattern/pattern.saga.md) - компенсационные действия для отмены "транзакции"

@@ -5,6 +5,25 @@
 - [YII2](yii2.md)
 - Laravel
 
-## DDD
+## Patterns
 
+Реализации паттернов:
+
+- Background Task, Background Job
+	- Retry, Priorited, Logging, Graceful Shutdown, Scaling Worker, Shedule, Event Pre\Post, Rate Limit, Types (LIFO, Delayed, Prioritized, Repeatable)
+	- Free
+	  	- Task [Queue YII2](https://github.com/yiisoft/yii2-queue) persist to RMQ, Redis, DB
+			- RabbitMQ and AWS SQS drivers [don't support job statuses](https://github.com/yiisoft/yii2-queue/blob/master/docs/guide/usage.md#job-status)
+			- можно Task\Job по [разным очередям публиковать](https://github.com/yiisoft/yii2-queue/blob/master/docs/guide/usage.md#multiple-queues) (по умолчанию единая)
+			- __Redis drivers__ - Full support for [retryable jobs is implemented](https://github.com/yiisoft/yii2-queue/blob/master/docs/guide/retryable.md#restrictions)
+	  	- [Hermes 2.1.0 2019](https://github.com/tomaj/hermes) persist to Redis, RMQ, ZeroMQ
+		- Ruby
+			- [Bill](https://optimalbits.github.io/bull/) and PHP workers persist Redis
+			- [Sidekiq](https://sidekiq.org/)
+		- [Laravel](https://laravel.com/docs/10.x/queues) persist to Redis, DB
+		- [Bernard 0.13 2019](https://github.com/bernardphp/bernard) [example](https://medium.com/devcupboard/elegant-background-jobs-in-php-c61b91bf582b)
+	- Commercial
+		- [Ruby Sidekiq](https://sidekiq.org/) and PHP workers and GUI
 - [DDD](../../arch/ref/ddd/php.md)
+- Message Bus
+	- RMQ [AMQP 0.9.1](https://github.com/php-amqplib/php-amqplib)

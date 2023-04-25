@@ -20,7 +20,8 @@
 
 | + | - |
 | - | - |
-| Единый язык | DDD на 90% проектов оверхед, который не стоит потраченных усилий. Но это не повод не учиться. |
+| Единый язык | DDD на 90% проектов оверхед, который не стоит потраченных усилий. Но это не повод не учиться. [План самостоятельного обучения DDD, CQRS, EventSourcing](https://habr.com/ru/articles/653421/) |
+
 
 ## Паттерны
 
@@ -28,6 +29,7 @@
 - [IBM sample event-storming](https://www.ibm.com/cloud/architecture/architecture/practices/event-storming-methodology-architecture/)
   - [IBM sample DDD](https://ibm-cloud-architecture.github.io/refarch-kc/implementation/domain-driven-design/)
   - [IBM sample event-storming analysis](https://ibm-cloud-architecture.github.io/refarch-kc/implementation/event-storming-analysis/)
+- [CQRS](pattern.cqrs.md)
 
 ### Принципы проектирования
 
@@ -59,7 +61,7 @@
       - Описывает индивидуально существующие Элементы домена
       - Определяется по идентификатору, а не по значению атрибутов
       - Непрерывно и однозначно определяется на всём протяжении существования
-    - __Объект значений Value Object__
+    - __Объект значений [Value Object](https://learn.microsoft.com/ru-ru/azure/architecture/microservices/model/tactical-ddd)__
       - Не обладает идентификатором
       - Описывает элементы домена, полностью определяемые свойствами
       - Неизменяемый после создания
@@ -90,7 +92,7 @@
   - Не содержат состояния
   - Могут обращаться к репозиториям и другим сервисам
   - Уносят логику из контроллеров
-- __Инфраструктурный слой__
+- __[Инфраструктурный слой](https://learn.microsoft.com/ru-ru/dotnet/architecture/microservices/microservice-ddd-cqrs-patterns/ddd-oriented-microservice?source=recommendations)__
   - Содержит реализации репозиториев и сервисов
   - Знает о БД
   - Работает с [IOC контейнером](https://habr.com/ru/post/131993/)

@@ -15,10 +15,9 @@
 
 ### Обработчик комманд
 
-[Обработчик комманд](https://docs.microsoft.com/ru-ru/dotnet/architecture/microservices/microservice-ddd-cqrs-patterns/microservice-application-layer-implementation-web-api#the-command-handler-class)
+[Обработчик комманд](https://docs.microsoft.com/ru-ru/dotnet/architecture/microservices/microservice-ddd-cqrs-patterns/microservice-application-layer-implementation-web-api#the-command-handler-class):
 
 - [FAQ](https://cqrs.nu/Faq/command-handlers)
-
 - Конвейер обработки команд: активация обработчика команд - [Медиатор](https://docs.microsoft.com/ru-ru/dotnet/architecture/microservices/microservice-ddd-cqrs-patterns/microservice-application-layer-implementation-web-api#the-command-process-pipeline-how-to-trigger-a-command-handler)
 ![mediator](https://docs.microsoft.com/ru-ru/dotnet/architecture/microservices/microservice-ddd-cqrs-patterns/media/microservice-application-layer-implementation-web-api/mediator-cqrs-microservice.png)
 - Message Bus ![cqrs mq](../../img/arch/eda/cqrs.mq.jpg)
@@ -31,12 +30,18 @@
 - Представим ситуацию что мы сделали репозиторий и достаём из него пагинированные агрегаты чтобы потом представить их в плоскую модель для отображения таблички на фронте. Операция «достать агрегат» дорогостоящая (в силу того что агрегат почти всегда имеет достаточно сложную иерархическую структуру). Вместо этого мы могли бы сразу написать query которая достанет только необходимые данные и не создаст лишнего оверхеда
 - Чтение является бизнес-требованием, но вряд ли его можно назвать бизнес-правилом доменной области. Потребности чтения могут меняться в зависимости от смены фронта или дизайна приложения. Является ли это частью описания жизненного цикла бизнес сущностей в домене?
 
+## Паттерны
+
+- [materialized view](https://learn.microsoft.com/ru-ru/azure/architecture/patterns/materialized-view)
+- [Event Sourcing](event.sourcing.md) 
+
 ## Технологии
 
 - [.Net](https://github.com/heynickc/awesome-ddd#jvm-languages)
 	- https://github.com/dotnet-architecture/eShopOnContainers/search?q=page
 	- [Пример от Jimmy Bogard](https://github.com/jbogard/ContosoUniversityDotNetCore-Pages/search?q=page)
 	- Пример реализации [паджинатора](https://github.com/PacktPublishing/Hands-On-Domain-Driven-Design-with-.NET-Core/search?q=page)
+
 
 Пример от Kamil Grzybek:
 - https://github.com/kgrzybek/modular-monolith-with-ddd/search?q=page

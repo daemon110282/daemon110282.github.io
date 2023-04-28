@@ -17,10 +17,11 @@
 
 ## Files
 
-Upload
+Upload [паттерны](../arch/pattern/pattern.uploadfile.md)
 
 - 413 Payload Too Large (if exceeding max)
 - 507 Insufficient Storage (server full).
-Download
+
+Download [паттерны](../arch/pattern/pattern.downloadfile.md))
 - 102 [processing](https://www.restapitutorial.com/httpstatuscodes.html)
 - 303 redirect на CDN\URL

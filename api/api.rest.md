@@ -72,18 +72,11 @@
   - [Пример Яндекс.Касса](https://yookassa.ru/developers/using-api/interaction-format)
 - Стандартизировать дополнительные машиночитаемые данные в ответе, предпочтительно в форме заголовков HTTP (потому что чтение заголовков не требует вычитывания и разбора всего тела ответа, так что промежуточные прокси и гейтвеи смогут понять семантику ошибки без дополнительных расходов; а так же их можно логировать.
 - [Валидация входных данных](https://github.com/Sairyss/backend-best-practices)
+- Файлы
+  - [Download](../arch/pattern/pattern.downloadfile.md)
+  - [Upload](../arch/pattern/pattern.uploadfile.md)
 
 CheckList
 - [43 Things To Think About When Designing, Testing, and Releasing your API](https://mathieu.fenniak.net/the-api-checklist/)
 
-### Файлы
 
-- Download
-  - Use [Content Delivery Network (CDN)](../arch/system.class/cdn.md)
-  - Массив байтов, не в JSON. Файл нужно передавать [под его "родным"](https://code-maze.com/aspnetcore-web-api-return-file/) __Content-Type__
-  - [Byte Array and Stream](https://code-maze.com/aspnetcore-web-api-return-file/) 
-  - async file complete
-    - Request the file, GET /downloads/123, file not yet completed, __response [HTTP Status](api-http-status.md) 102 Processing__ (and an optional progress and/or ETA, if available)
-    - Request the file, GET /downloads/123, file completed, __response HTTP Status 303__ See other, Location: https://cdn/full-path-to-generated.file.pdf
-  - [Support partial responses for large binary resources](https://learn.microsoft.com/en-us/azure/architecture/best-practices/api-design#support-partial-responses-for-large-binary-resources)
-- [Upload](../arch/pattern/pattern.uploadfile.md)

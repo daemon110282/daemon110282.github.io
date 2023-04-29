@@ -5,6 +5,8 @@
   - [Плюсы и минусы](#плюсы-и-минусы)
   - [Паттерны](#паттерны)
     - [Принципы проектирования](#принципы-проектирования)
+      - [1 Стратегическое проектирование](#1-стратегическое-проектирование)
+      - [2 Тактическое проектирование](#2-тактическое-проектирование)
     - [Слои приложения](#слои-приложения)
   - [Технологии](#технологии)
 
@@ -22,7 +24,6 @@
 | - | - |
 | Единый язык | DDD на 90% проектов оверхед, который не стоит потраченных усилий. Но это не повод не учиться. [План самостоятельного обучения DDD, CQRS, EventSourcing](https://habr.com/ru/articles/653421/) |
 
-
 ## Паттерны
 
 - [Паттерны](https://github.com/Sairyss/domain-driven-hexagon)
@@ -33,11 +34,12 @@
 
 ### Принципы проектирования
 
-![Схема](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/daemon110282/daemon110282.github.io/daemon110282-patch-1/arch/pattern/ddd.puml)
-
 [Схемы](https://docs.google.com/document/d/1qgHu49LneU_iNi3YmPLc1NHSVfH-BvONdOyjg5DE8Xs/edit?usp=sharing)
 
-- 1 Стратегическое проектирование
+#### 1 Стратегическое проектирование
+
+![Схема](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/daemon110282/daemon110282.github.io/daemon110282-patch-1/arch/pattern/ddd.strategy.puml)
+
   - Смысловое ядро - успех бизнеса
   - Контекст ![context](../../img/pattern/ddd/ddd.context.jpg)
   - Предметная область(проблема) Domain
@@ -48,7 +50,13 @@
     - Не всегда равно сервису, может применяться и в модульном монолите (напр отдельные таблицы сущностей разных контекстов).
     - Теоретически каждая подобласть может иметь несколько ограниченных контекстов, хотя мы стремимся, чтобы для одной подобласти он был один.
   - [Карта ограниченных контекстов](https://nuancesprog.ru/p/9085/) - интеграции между контекстами
-- [2 Тактическое проектирование](https://habr.com/ru/company/oleg-bunin/blog/551428/)
+
+#### 2 Тактическое проектирование
+
+[Тактическое проектирование](https://habr.com/ru/company/oleg-bunin/blog/551428/)
+  
+  ![Схема](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/daemon110282/daemon110282.github.io/daemon110282-patch-1/arch/pattern/ddd.tactic.puml)
+
   - Доменная модель
     - Консистентность данных обеспечить
     - Переход от анемичной к богатой модели

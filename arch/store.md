@@ -26,8 +26,10 @@
 
 ![Выбор хранилища http://architecturethehardparts.com/](../img/arch/choose_store.jpg)
 
-- Relational database. Almost anything could be solved by them.
-- Time-series database. Store and manage time-stamped data.
+- RDBMS (Relational Database Management System)
+  - Almost anything could be solved by them.
+- Time-series database
+  - Store and manage time-stamped data.
 - NoSQL
   - Key Value
     - In-memory store. Their speed and limited data size make them ideal for fast operations.
@@ -38,10 +40,31 @@
 
 ## Паттерны
 
-- Денормализация
 - Модель данных [звезда — оптимальная структура данных при переходе на российский BI](https://habr.com/ru/company/visiology/blog/678346/)
 - Агрегированные витрины
+  - Materialized View
 - [Data Mining против хранилища данных](https://coderlessons.com/tutorials/bolshie-dannye-i-analitika/teoriia-khraneniia-dannykh/21-data-mining-protiv-khranilishcha-dannykh)
+- On-Line Analitical Processing (OLAP) - оперативная аналитическая обработка данных
+  - принципы построения систем поддержки принятия решений (Decision Support System - DSS)
+  - хранилищ данных (Data Warehouse)
+  - систем интеллектуального анализа данных (Data Mining)
+- Мутабельные (изменяемые) или иммутабельные данные
+- Принципы ACID
+  - atomaric
+  - consistently
+  - isolation
+  - durability
+- Нормальная форма отношений в РСУБД 1, 2, 3 для OLTP
+  - Денормализация отношений для OLAP
+  - В решениях 1С компромисс реализован следующим образом: События при записи в базу пишутся сразу в несколько мест
+    - В одном месте записи имеют мало индексов и оптимизированы под OLTP нагрузки
+    - в другом месте записи индексируются по всем полям и адаптированы для OLAP нагрузок
+    - Такие таблицы называются регистрами накоплений и регистрами сведений.
+- OLTP (Online Transaction Processing)
+  - CRUD обработка транзакций
+- Секционирование (Citus)
+  - секционирование данных - В одной БД несколько таблиц - шардирование вертикально
+  - Щардирование горизонтально - одна таблица по нескольким БД
 
 ## Принципы проектирования
 

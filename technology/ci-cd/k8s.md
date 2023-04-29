@@ -4,6 +4,7 @@
   - [Зачем](#зачем)
   - [Reference Architecture](#reference-architecture)
   - [Patterns](#patterns)
+    - [Naming convention](#naming-convention)
     - [Deployment](#deployment)
       - [Canary deployment](#canary-deployment)
     - [Scalability Performance масштабирование](#scalability-performance-масштабирование)
@@ -49,6 +50,29 @@
 - TODO Кол-во сервисов на контейнер
   - Ограничение кластера по подам на ноде?
   - создание маленьких контейнеров, т.к. контейнеры автоматически запускаются на разных хостах, и их меньший размер ускорит время запуска (поскольку предварительно их нужно физически скопировать на хостовую систему).
+
+### Naming convention
+
+- can only contain alphanumeric characters and hyphens. The alpha characters can only be lower-case, and names cannot start with hyphens. If you try to create objects that violate this naming convention, Kubernetes will complain.
+- namespaces can be used for grouping:
+  - Resources that are a part of the same application.
+  - Resources that belong to a particular user. For example, I can create a namespace called adri, and create a bunch of resources in there as part of my Kubernetes experimentations.
+  - Environment-specific resources. For example, rather than having a separate cluster for Dev and QA, you can simply create a dev namespace, and a qa namespace in the same cluster, and deploy resources to the appropriate namespace.
+  - Изоляция ресурсов - когда вы удаляете пространство имен, оно удаляет само пространство имен вместе со всеми связанными объектами в этом пространстве имен
+  - RBAC
+- Labels can be useful for:
+  - Determining whether a pod is part of a production or a canary deployment
+  - Differentiating between stable and alpha releases
+  - Specifying to which layer (UI, business logic, database, and so forth) an object belongs
+  - Identifying whether a pod is front-end or back-end
+  - Specifying an object’s release version (V1.0, V2.0, V2.1, and so on)
+  - Constraints on Labels
+  - The following syntax constraints are applied to labels:
+    - Key must be unique within a given object
+    - Min 0-max 63 characters for the segment (required): 253 for prefix (optional)
+    - Start and end with alphanumerics [a-z0-9A-Z] (unless length is 0)
+    - dashes "-", underscore "_" and dot "." allowed (internally)
+    - (Optional) prefix must be a series of DNS labels separated by dots and followed by a slash
 
 ### Deployment
 

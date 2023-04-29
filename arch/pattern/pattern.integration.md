@@ -1,10 +1,12 @@
 # Паттерны интеграций
 
 - [Паттерны интеграций](#паттерны-интеграций)
+  - [Виды (стили) интеграций](#виды-стили-интеграций)
   - [Критерии выбора способа интеграции](#критерии-выбора-способа-интеграции)
   - [Паттерны](#паттерны)
   - [Технологии](#технологии)
-  - [Links](#links)
+
+## Виды (стили) интеграций
 
 [Виды (стили) интеграций](https://www.enterpriseintegrationpatterns.com/patterns/messaging/IntegrationStylesIntro.html)
 
@@ -66,25 +68,6 @@ TODO см. EIP
 [TODO](https://habr.com/ru/company/southbridge/blog/679906/)
 [UMP](https://airtable.com/embed/shr8hjWhgmcRMq8ZT/tblRsPPtXXbYI4IzT)
 
-## Технологии
-
-- [ESB](../../technology/esb.md)
-- [Распределенные файловые системы](../../technology/dfs.md)
-- RPC 
-  - WebSocket
-    - signal.ir - real-time web functionality enables [server-side code](https://learn.microsoft.com/en-us/aspnet/core/signalr/introduction?view=aspnetcore-7.0) to __push content to clients__ instantly.
-    - Vue.js + Node.js + [socket.io](https://blog.openreplay.com/rendering-real-time-data-with-vue-node-and-socket-io)
-    - PHP 
-      - Node.js + [Laravel Echo](https://laravel.com/docs/5.3/broadcasting#installing-laravel-echo)
-      - https://openswoole.com/
-      - https://roadrunner.dev/features
-      - https://reactphp.org/
-    - [Варианты](https://www.educba.com/signalr-alternatives/)
-    - [Chat архитектура](https://blog.bytebytego.com/i/98040721/how-do-we-design-a-chat-application-like-whatsapp-facebook-messenger-or-discord)
-  - [Server Sent Events](../../technology/protocols.integration/sse.md)
-
-## Links
-
 TODO
 - https://mxsmirnov.com/2010/06/27/%d1%81%d1%86%d0%b5%d0%bd%d0%b0%d1%80%d0%b8%d0%b8-%d0%b8%d0%bd%d1%82%d0%b5%d0%b3%d1%80%d0%b0%d1%86%d0%b8%d0%b8-%d0%bf%d1%80%d0%b8%d0%bb%d0%be%d0%b6%d0%b5%d0%bd%d0%b8%d0%b9/#more-357
 - http://citforum.ru/SE/project/pattern/p_4.shtml
@@ -96,3 +79,20 @@ TODO
 - https://ducmanhphan.github.io/2020-08-10-Introduction-to-Enterprise-Integration-Patterns/
 - https://habr.com/ru/company/southbridge/blog/679906/
 - TODO https://github.com/Sairyss/distributed-systems-topics
+
+## Технологии
+
+- [ESB](../../technology/esb.md)
+- [Распределенные файловые системы](../../technology/dfs.md)
+- RPC
+  - WebSocket
+    - signal.ir - real-time web functionality enables [server-side code](https://learn.microsoft.com/en-us/aspnet/core/signalr/introduction?view=aspnetcore-7.0) to __push content to clients__ instantly.
+    - Vue.js + Node.js + [socket.io](https://blog.openreplay.com/rendering-real-time-data-with-vue-node-and-socket-io)
+    - PHP 
+      - Node.js + [Laravel Echo](https://laravel.com/docs/5.3/broadcasting#installing-laravel-echo)
+      - https://openswoole.com/
+      - https://roadrunner.dev/features
+      - https://reactphp.org/
+    - [Варианты](https://www.educba.com/signalr-alternatives/)
+    - [Chat архитектура](https://blog.bytebytego.com/i/98040721/how-do-we-design-a-chat-application-like-whatsapp-facebook-messenger-or-discord)
+  - [Server Sent Events](../../technology/protocols.integration/sse.md)

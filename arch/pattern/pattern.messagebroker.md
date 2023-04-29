@@ -27,10 +27,10 @@
 	- ZeroMQ
 - Message-oriented persistent - Message Bus
 	- Транспорт
-		- [RMQ](../../technology/middleware/rmq.md)  
+		- [RMQ](../../technology/middleware/messagebus/rmq.md)  
 		- ActiveMQ
 - Log-based message queue
-	- [Kafka](../../technology/middleware/kafka.md)
+	- [Kafka](../../technology/middleware/messagebus/kafka.md)
 - [Messaging Patterns](https://www.enterpriseintegrationpatterns.com/patterns/messaging/)
   - [MS](https://docs.microsoft.com/ru-ru/azure/architecture/patterns/category/messaging)
   - Pub\Sub События
@@ -44,7 +44,7 @@
 
 - Транспорт  
 	- Kafka
-	- [RabbitMQ](../../technology/middleware/rmq.md)
+	- [RabbitMQ](../../technology/middleware/messagebus/rmq.md)
 	- Azure service bus
 	- MSMQ
 	- SQL Server

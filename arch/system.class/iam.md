@@ -91,8 +91,8 @@ User Provisioning:
 
 Сравнения
 
-- [WSO2-Keycloack-Glue](../../technology/middleware/iam.wso2.md)
-- [Keycloack-Glue](../../technology/middleware/iam.keycloak.md)
+- [WSO2-Keycloack-Glue](../../technology/middleware/iam/iam.wso2.md)
+- [Keycloack-Glue](../../technology/middleware/iam/iam.keycloak.md)
 - Top [Okta-MS-Keycloak](https://www.saasworthy.com/list/identity-and-access-management-iam-software)
 - Top [Okta-MS-WSO2](https://www.g2.com/categories/single-sign-on-sso)
 - [keycloak-ory hydra](https://stackshare.io/stackups/keycloak-vs-ory-hydra)
@@ -106,15 +106,15 @@ User Provisioning:
 - [OIDC certified решения](https://openid.net/developers/certified/)
 - in house (on premise)
 	- Commercial
-		- [ADFS](../../technology/middleware/iam.adfs.md)
-		- Отечественное [UIDM](../../technology/middleware/iam.uidm.md)
+		- [ADFS](../../technology/middleware/iam/iam.adfs.md)
+		- Отечественное [UIDM](../../technology/middleware/iam/iam.uidm.md)
 		- [Identity Blitz](https://identityblitz.ru/products/blitz-identity-provider/documentation/?ref=main)
 	- Open Source
-		- [WSO2 Identity Server](../../technology/middleware/iam.wso2.md)
-		- [IdentityServer (.NET Core)](../../technology/middleware/iam.is.md) 4я версия бесплатная, с 6й версии нет?
-		- [Keycloak (Red Hat Java)](../../technology/middleware/iam.keycloak.md)
-		- [Ory Hydra](../technology/middleware/iam.hydra.md)
-		- [Blitz Identity Provider](../../technology/middleware/iam.blitz.md)
+		- [WSO2 Identity Server](../../technology/middleware/iam/iam.wso2.md)
+		- [IdentityServer (.NET Core)](../../technology/middleware/iam/iam.is.md) 4я версия бесплатная, с 6й версии нет?
+		- [Keycloak (Red Hat Java)](../../technology/middleware/iam/iam.keycloak.md)
+		- [Ory Hydra](../../technology/middleware/iam/iam.hydra.md)
+		- [Blitz Identity Provider](../../technology/middleware/iam/iam.blitz.md)
 - online
 	- Commercial
       - AWS Cognito

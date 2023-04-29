@@ -44,14 +44,14 @@
 
 ## Паттерны
 
-- pattern consists of two main topologies, 
-- The mediator topology is com‐ monly used when you need to orchestrate multiple steps within an event through a central mediator, 
+- pattern consists of two main topologies
+- The mediator topology is commonly used when you need to orchestrate multiple steps within an event through a central mediator
 . - Spring Integration, Apache Camel, Mule ESB
   - BPEL (business process execution language)
   - BPMS
 - broker topology is used when you want to chain events together without the use of a central mediator.
 - __Событие__ Event driven
-  - [Publish-subscribe](../../technology/middleware/rmq.md)
+  - [Publish-subscribe](../../technology/middleware/messagebus/rmq.md)
     - event-base
     - [shared-data space](https://apolomodov.medium.com/coa-distributed-systems-4th-ed-2-architecture-af563b2332bd)
   <!-- ![](../../img/arch/eda/eda.driven.jpg) -->
@@ -60,8 +60,8 @@
     - состояние ![state](../../img/arch/eda/eda.state.jpg)
   - __Слабая связанность__ ([Loose Coupling](https://habr.com/ru/post/706630/)) — одно из основных преимуществ обработки, управляемой событиями. Это позволяет производителям событий создавать события, не зная о том, кто будет потреблять эти события. Точно так же потребители событий не должны знать об источниках событий. Из-за слабой связанности модули, потребляющие события, и модули, создающие события, могут быть реализованы на разных языках или использовать разные технологии, подходящие для конкретных задач.
 - __Команда__ Command driven
-  - [Task (Worker) Queue](../../technology/middleware/rmq.md)
-  - [RPC (команды)](../../technology/middleware/rmq.md)
+  - [Task (Worker) Queue](../../technology/middleware/messagebus/rmq.md)
+  - [RPC (команды)](../../technology/middleware/messagebus/rmq.md)
 - __Запросы__ [CQRS](../pattern/pattern.cqrs.md) - command query request segregation
 ![cqrs](../../img/arch/eda/eda.cqrs.jpg)
 - [Event sourcing](../pattern/event.sourcing.md)

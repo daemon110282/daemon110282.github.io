@@ -34,6 +34,8 @@
 
 - [materialized view](https://learn.microsoft.com/ru-ru/azure/architecture/patterns/materialized-view)
 - [Event Sourcing](event.sourcing.md) 
+- Если хранилище чтения и записи единое
+Event sourcing не требуется.
 
 ## Технологии
 

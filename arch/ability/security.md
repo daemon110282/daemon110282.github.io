@@ -44,6 +44,37 @@ TODO
 - [check api tools](https://platform.42crunch.com/)
 - [tools for check api sec](https://github.com/arainho/awesome-api-security)
 
+## Шифрование канала связи (трафика) mTLS, VPN туннель 
+
+Технологии и протоколы:
+- [SSL VPN](https://www.pvsm.ru/vpn/32300)
+  - SSL замена на TLS, не актуально SSL сейчас
+- IPSec VPN
+
+Варианты:
+
+- Криптоалгоритмы [ГОСТ Р 34.10-2012](https://qsetup.ru/gost-vpn-chto-eto/) 256 бит, необходимо использовать сертифицированные ФСБ РФ СКЗИ 
+  - Open Source
+    - на основе OpenSSL - полноценная криптографическая библиотека с открытым исходным кодом, широко известна из-за расширения SSL/TLS, используемого в веб-протоколе HTTPS. Поддерживает почти все низкоуровневые алгоритмы хеширования, шифрования и электронной подписи, а также реализует большинство популярных криптографических стандартов, в том числе позволяет создавать ключи RSA, DH, DSA, сертификаты X.509, подписывать их, формировать CSR и CRT, шифровать данные и тестировать SSL/TLS соединения.
+      - [docker образ](https://habr.com/ru/articles/353534/)      
+        - Библиотека OpenSSL 1.1.0g 
+        - [gost-engine](https://github.com/gost-engine/engine) - reference implementation of the Russian [ГОСТ крипоалгоритмы](https://github.com/gost-engine/engine/blob/master/README.prov.md) for OpenSSL
+      - Proxy nginx 
+        - [docker образ](https://habr.com/ru/articles/353534/)
+        - Модуль шифрования stunnel:port openssl-gost-stunnel (>=v.1.0.2)    
+        - 2022 nginx 1.23.2 + openssl 3.0.5 + gost engine 3.0.1 + TLSv1.2 [docker образ](https://github.com/vheathen/docker-nginx-openssl3-gost)
+    - на основе КриптоПро
+      - Nginx вариант с библиотекой [КриптоПро](https://habr.com/ru/articles/353534/#comment_10757142)
+      - 2018 [Docker контейнер с CryptoPro 4 и nginx](https://github.com/navyzet/crypto-proxy)
+  - Commercial
+    - аппаратные устройства [КриптоПро NGate](https://www.cryptopro.ru/products/ngate)
+    - Аутсорс с арендой оборудования [Ростелеком Солар](https://rt-solar.ru/services/vpn/)
+    - аппаратные устройства [TSS Diamond](https://qsetup.ru/gost-vpn-chto-eto/)
+
+- [Проверка алгоритма подписи примененного к сертификату](https://sysos.ru/?p=589)
+  - 1.2.643.7.1.1.3.2, то сертификат сгенерирован по ГОСТ Р 34.10-2012. 
+  - Если установлен КриптоПро, то в Алгоритме подписи будет отображаться ГОСТ Р 34.11-2012/34.10-2012 256 бит.
+
 ## Технологии
 
 - [КриптоПро](https://www.cryptopro.ru/products/csp/compare#supported_algorithms)

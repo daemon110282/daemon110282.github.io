@@ -8,6 +8,8 @@
 
 ## Атрибуты качества, архитектурные характеристики
 
+![nft](../img/arch/nft.png)
+
 Атрибуты качества (на основе ISO 9126)
   
 - Переносимость Portability
@@ -16,8 +18,8 @@
   - Модифицируемость/способности к взаимодействию/расширяемости/изменениям Modifiability (Эволюция)
     - Сложность дальнейших интеграции
   - Совместимость Interoperability (Эволюция)
-  - extensibility
-  - adaptability
+  - Extensibility
+  - Adaptability
   - Замещаемость
     - [API Gateway](../api/api.gateway.md)
     - Server-side service discovery

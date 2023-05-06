@@ -1,0 +1,31 @@
+@startuml DDD
+
+title Domain Driven Development Tactic
+
+class Агрегат <<Aggregat>>
+'class Объект
+class Прикладной_сервис <<Application service>>
+class Служба <<Service>>
+Служба - Агрегат
+class Фабрика
+class Модуль <<Namespace>>
+
+class Событие <<Domain event>>
+Агрегат -- Событие : создает
+
+class Хранилище_событий <<Event Store>>
+Событие -- Хранилище_событий: хранится
+
+class Хранилище <<Repository>>
+Агрегат -- Хранилище: хранится
+
+class Объект_значение <<Value object>>
+Агрегат "1" -- "*" Объект_значение: содержит
+
+class Сущность <<Entity>>
+Агрегат "1" -- "*" Сущность: ссылка
+
+class Метод
+Сущность -- Метод
+
+@enduml

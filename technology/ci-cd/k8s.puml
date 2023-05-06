@@ -1,0 +1,31 @@
+@startmindmap (id=k8s)
+* k8s
+** Deployment CICD
+** Volume
+*** Size
+*** Access Type
+*** Storage Class
+** YAML описание
+** ReplicaSet \n масштабирование гориз-е
+** Pod
+*** один IP, одна подсеть
+*** Контейнер
+*** Label
+** Load Balancer
+
+left side
+' right side
+
+** Service
+*** Pods
+*** DNS
+** Cluster
+*** Node
+**** Worker
+**** Master
+** Job
+*** CronJob
+*** Migrations Pod
+** Namespace Tags
+
+@endmindmap

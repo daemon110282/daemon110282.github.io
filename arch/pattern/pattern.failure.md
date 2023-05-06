@@ -8,6 +8,8 @@
   - [Автоматы замыкания (Circuit Breakers)](#автоматы-замыкания-circuit-breakers)
   - [Технологии](#технологии)
 
+[TODO](https://learn.microsoft.com/ru-ru/dotnet/architecture/microservices/implement-resilient-applications/)
+
 Cбои разделяют:
 
 - [временные](https://docs.microsoft.com/ru-ru/azure/architecture/best-practices/transient-faults)

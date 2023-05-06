@@ -3,14 +3,17 @@
 - [CQRS](#cqrs)
 	- [Команда](#команда)
 		- [Обработчик комманд](#обработчик-комманд)
-	- [Запрос](#запрос)	
+	- [Запрос](#запрос)
+	- [Паттерны](#паттерны)
+	- [Технологии](#технологии)
 
 ## Команда
 
 ![command](https://docs.microsoft.com/ru-ru/dotnet/architecture/microservices/microservice-ddd-cqrs-patterns/media/microservice-application-layer-implementation-web-api/high-level-writes-side.png)
 
-- это запрос к системе на выполнение действия, [которое изменяет состояние системы](https://docs.microsoft.com/ru-ru/dotnet/architecture/microservices/microservice-ddd-cqrs-patterns/microservice-application-layer-implementation-web-api#implement-the-command-and-command-handler-patterns). Команды являются императивными и должны обрабатываться только один раз
-- Команды имеет смысл делать [идемпотентными](idempotent.md), если этого требуют бизнес-правила и инварианты предметной области.
+- это запрос к системе на выполнение действия, [которое изменяет состояние системы](https://docs.microsoft.com/ru-ru/dotnet/architecture/microservices/microservice-ddd-cqrs-patterns/microservice-application-layer-implementation-web-api#implement-the-command-and-command-handler-patterns)
+- Команды являются __императивными__ и должны обрабатываться только один раз
+- Команды имеет смысл делать [идемпотентными](idempotent.md), если этого требуют бизнес-правила и инварианты предметной области
 - Команда — это объект передачи данных (DTO) особого типа, предназначенный специально для запроса изменений или транзакций.
 
 ### Обработчик комманд
@@ -18,9 +21,11 @@
 [Обработчик комманд](https://docs.microsoft.com/ru-ru/dotnet/architecture/microservices/microservice-ddd-cqrs-patterns/microservice-application-layer-implementation-web-api#the-command-handler-class):
 
 - [FAQ](https://cqrs.nu/Faq/command-handlers)
-- Конвейер обработки команд: активация обработчика команд - [Медиатор](https://docs.microsoft.com/ru-ru/dotnet/architecture/microservices/microservice-ddd-cqrs-patterns/microservice-application-layer-implementation-web-api#the-command-process-pipeline-how-to-trigger-a-command-handler)
-![mediator](https://docs.microsoft.com/ru-ru/dotnet/architecture/microservices/microservice-ddd-cqrs-patterns/media/microservice-application-layer-implementation-web-api/mediator-cqrs-microservice.png)
-- Message Bus ![cqrs mq](../../img/arch/eda/cqrs.mq.jpg)
+- Конвейер обработки команд может активировать обработчик команд способами:
+  - в памяти паттерн [Медиатор](https://docs.microsoft.com/ru-ru/dotnet/architecture/microservices/microservice-ddd-cqrs-patterns/microservice-application-layer-implementation-web-api#the-command-process-pipeline-how-to-trigger-a-command-handler)
+	![mediator](https://docs.microsoft.com/ru-ru/dotnet/architecture/microservices/microservice-ddd-cqrs-patterns/media/microservice-application-layer-implementation-web-api/mediator-cqrs-microservice.png)
+  - вне процесса через [Command Bus](command.bus.md) on [Message Broker](pattern.messagebroker.md) transport ![cqrs mq](../../img/arch/eda/cqrs.mq.jpg)
+    - Реализация паттерна [Command](command.md) и [Command Bus](command.bus.md).
 
 ## Запрос
 
@@ -32,22 +37,19 @@
 
 ## Паттерны
 
+- [Command](command.md)
+- [Command Bus](command.bus.md)
 - [materialized view](https://learn.microsoft.com/ru-ru/azure/architecture/patterns/materialized-view)
-- [Event Sourcing](event.sourcing.md) 
+- [Event Sourcing](event.sourcing.md)
 - Если хранилище чтения и записи единое
 Event sourcing не требуется.
 
 ## Технологии
 
 - [.Net](https://github.com/heynickc/awesome-ddd#jvm-languages)
-	- https://github.com/dotnet-architecture/eShopOnContainers/search?q=page
+	- [eShopOnContainers](https://github.com/dotnet-architecture/eShopOnContainers/search?q=page)
 	- [Пример от Jimmy Bogard](https://github.com/jbogard/ContosoUniversityDotNetCore-Pages/search?q=page)
 	- Пример реализации [паджинатора](https://github.com/PacktPublishing/Hands-On-Domain-Driven-Design-with-.NET-Core/search?q=page)
-
-
-Пример от Kamil Grzybek:
-- https://github.com/kgrzybek/modular-monolith-with-ddd/search?q=page
-
-Пример от @vkhorikov (присутствует в этом чате) :
-- https://github.com/vkhorikov/SpecPattern/search?q=page
-- https://github.com/vkhorikov/SpecificationPattern/search?q=page
+- Пример от [Kamil Grzybek](https://github.com/kgrzybek/modular-monolith-with-ddd/search?q=page)
+- Пример от [vkhorikov](https://github.com/vkhorikov/SpecPattern/search?q=page)
+  - https://github.com/vkhorikov/SpecificationPattern/search?q=page

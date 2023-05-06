@@ -46,13 +46,14 @@
 
 [Design for failure](../pattern/pattern.failure.md)
 
-- распределенная архитектура\модульный монолит
-- Микросервисы слабая связность, изоляция сбоев  *
-- stateless
+- распределенная архитектура
+  - Микросервисы: слабая связность, изоляция сбоев
+  - stateless
+- модульный монолит
 - [Health check](../pattern/pattern.healthcheck.md)
 - [CQRS](../pattern/pattern.cqrs.md) - command query request segregation
-- Асинхронная обработка - Брокер очереди, воркеры, буферы входного потока данных
+- Асинхронная обработка - [Брокер очереди](../pattern/pattern.messagebroker.md), воркеры, буферы входного потока данных
 - Git, rollback, миграции бд
-- graceful shutdown: при выключении они дожидаются полного завершения текущей задачи, будь это http-запрос или какая-нибудь служебная задача.
+- [graceful shutdown](../pattern/graceful.shutdown.md)
 - [Паттерн Transactional outbox\Application events](https://microservices.io/patterns/data/transactional-outbox.html)
-  - <https://itnext.io/the-outbox-pattern-in-event-driven-asp-net-core-microservice-architectures-10b8d9923885>"
+  - [example](https://itnext.io/the-outbox-pattern-in-event-driven-asp-net-core-microservice-architectures-10b8d9923885)

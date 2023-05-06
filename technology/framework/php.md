@@ -1,4 +1,4 @@
-# PHP 
+# PHP
 
 ## Frameworks
 
@@ -9,15 +9,9 @@
 
 Реализации паттернов:
 
-### Background Task, Background Job - реализация [Command Pattern]
+### Background Job
 
-- Background Task, Background Job - реализация [Command Pattern](../../arch/pattern/command.md)
-	- Feature
-		- Retry, Priorited, 
-		- Logging, Graceful Shutdown, 
-		- Scaling Worker, 
-		- Shedule, Event Pre\Post, Rate Limit, 
-		- Types (LIFO, Delayed, Prioritized, Repeatable)
+- [Background Job](../../arch/pattern/background.job.md)
 	- Free
 		- Cron Job not scalable, limit 1 min period check jobs
 	  	- Task [Queue YII2](https://github.com/yiisoft/yii2-queue) persist to RMQ, Redis, DB
@@ -47,4 +41,5 @@
 - [DDD](../../arch/ref/ddd/php.md)
 
 ### Message Bus
+
 - RMQ [AMQP 0.9.1](https://github.com/php-amqplib/php-amqplib)

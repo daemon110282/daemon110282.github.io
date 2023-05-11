@@ -14,12 +14,15 @@
 - [Background Job](../../arch/pattern/background.job.md)
   - Free
     - Cron Job not scalable, limit 1 min period check jobs
-    - Task [Queue YII2](https://github.com/yiisoft/yii2-queue) persist to RMQ, Redis, DB
+    - Task [Queue YII2](https://github.com/yiisoft/yii2-queue) persist to RMQ, Redis, DB on [supervisord](../os/supervisord.md)
     	- RabbitMQ and AWS SQS drivers [don't support job statuses](https://github.com/yiisoft/yii2-queue/blob/master/docs/guide/usage.md#job-status)
     	- можно Task\Job по [разным очередям публиковать](https://github.com/yiisoft/yii2-queue/blob/master/docs/guide/usage.md#multiple-queues) (по умолчанию единая)
     	- __Redis drivers__ - Full support for [retryable jobs is implemented](https://github.com/yiisoft/yii2-queue/blob/master/docs/guide/retryable.md#restrictions)
 		- мониторинг
 			- [job status, workers](https://github.com/zhuravljov/yii2-queue-monitor)
+			- некоторые driver support [queue/info](https://www.programmersought.com/article/76143923971/)
+			- failed job to [DB](https://www.programmersought.com/article/88876356558/)
+			- [GUI queue manager](https://fasthub.cc/ignatenkovnikita/yii2-queuemanager)
     - [Hermes 2.1.0 2019](https://github.com/tomaj/hermes) persist to Redis, RMQ, ZeroMQ
     - [SimpleBus 3.0 2022](https://github.com/SimpleBus/SimpleBus) persist to Doctrine ORM, DBAL, __RMQ?, Redis?__
     - [Tactician 1.0 2021](https://tactician.thephpleague.com/) persist by Doctrine to DB, [Bernand](https://bernardphp-com.readthedocs.io/projects/bernard/drivers.html) to RMQ, Redis, MongoDB и тд

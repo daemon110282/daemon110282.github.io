@@ -58,8 +58,8 @@
   - Event Pre\Post\Error
   - Rate Limit
   - Types (LIFO, Delayed, Prioritized, Repeatable)
-  - Canceling
-  - Disable
+  - Canceling task
+  - Disable Job
   - Distributed Lock only [one handle allow in cluster server mode](https://docs.abp.io/en/abp/latest/Background-Jobs#clustered-deployment)
 
 ## Технологии

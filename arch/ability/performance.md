@@ -25,7 +25,10 @@ To-do
 
 # web app 
 
-Счетчики как внедрить: Client Metrics, Business Metrics https://docs.google.com/spreadsheets/d/1g-WsAqeJqpKDbFLsVx0EOAuaRMUMWPaaG2a7XHWGgWU/edit#gid=1431606873
+Счетчики как внедрить: 
+- Client Metrics
+- Business Metrics https://docs.google.com/spreadsheets/d/1g-WsAqeJqpKDbFLsVx0EOAuaRMUMWPaaG2a7XHWGgWU/edit#gid=1431606873
+
 WIN32_ERROR_DESCRIPTION(sc-win32-status) as Description, TO_LOCALTIME
 НТ метрика с длп и с Яндексом в ФК с от. Netexport записать, эталон. Без finesse. Конфигурация ПК клиента. С кешем из firebug. Или скрипт от ТС скорости ?!? Yslow, pagespeed
 [tsp_ImportAllData]\tsp_FromFrontIntoGate_Cessionary тайминг логировать
@@ -55,11 +58,11 @@ https://forums.iis.net/t/1169411.aspx long time-taken and win32 status code = 64
 
 ### Инструменты
 
-Php
-Стандартное логирование запросов (nginx, apache, php-fpm)
-Логирование медленных запросов БД (опция в mysql)
-Инструменты фиксации узких мест при прохождении запроса. Для php это xhprof, pinba.
-Встроенные инструменты внутри веб-приложения, например отдельный модуль трассировки.
+- Php
+- Стандартное логирование запросов (nginx, apache, php-fpm)
+- Логирование медленных запросов БД (опция в mysql)
+- Инструменты фиксации узких мест при прохождении запроса. Для php это xhprof, pinba.
+- Встроенные инструменты внутри веб-приложения, например отдельный модуль трассировки.
 
 ### ms sql
 
@@ -85,23 +88,21 @@ https://www.mssqltips.com/sqlservertip/6090/sql-server-configuration-settings-qu
 
 ### Секционирование Шардирование
 
-таблиц в одной бд
-https://technet.microsoft.com/library/Cc966380
-Секция - файл группы http://sqlcom.ru/partition/partition-and-high-availability/
+- таблиц в [одной бд](https://technet.microsoft.com/library/Cc966380)
+- Секция - [файл группы](http://sqlcom.ru/partition/partition-and-high-availability/)
 https://docs.microsoft.com/ru-ru/sql/relational-databases/partitions/partitioned-tables-and-indexes
-http://www.sql.ru/articles/mssql/2005/073102partitionedtablesandindexes.shtml скользящее окно. 
+- [скользящее окно](http://www.sql.ru/articles/mssql/2005/073102partitionedtablesandindexes.shtml)
 
 ### Sql query plan
 
-Плохо
-Index scan
-Rid / key lookup - чтение из кучи databaselog. https://dotnettutorials.net/lesson/how-to-use-covering-index-to-reduce-rid-lookup/
-Статистика плана запросов устаревает- см сколько записей оптимизатор предполагает вернуть, а сколько по факту
-Physical reads не из Кеша данных
-
-Хорошо
-Index seek
-Logical reads
+- Плохо
+  - Index scan
+  - Rid / key lookup - чтение из кучи databaselog. https://dotnettutorials.net/lesson/how-to-use-covering-index-to-reduce-rid-lookup/
+  - Статистика плана запросов устаревает- см сколько записей оптимизатор предполагает вернуть, а сколько по факту
+  - Physical reads не из Кеша данных
+- Хорошо
+  - Index seek
+  - Logical reads
 
 ## Метрики
 
@@ -136,7 +137,7 @@ Logical reads
 - HDD bytes readed
 - HDD bytes written
 - Network Number of reads
-- Network number of writes
+- Network Number of writes
 - Network bytes readed
 - Network bytes written
 - RAM Private space used by application

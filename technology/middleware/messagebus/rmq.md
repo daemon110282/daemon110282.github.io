@@ -102,3 +102,8 @@
   - supports multiple SASL authentication mechanisms. There are three such mechanisms built into the server: PLAIN, AMQPLAIN, and RABBIT-CR-DEMO, and one — EXTERNAL — available as a plugin.
 - SSL support
 
+## Observability
+
+- Мониторинг [кол-ва сообщений в очереди](https://wtfm.info/zabbix-rabbutmq-автообнаружение-очередей/) через API и CLI в Zabbix
+  - [Расширенный](https://github.com/jasonmcintosh/rabbitmq-zabbix)
+- Общий мониторинг [кластера, нод](https://www.rabbitmq.com/prometheus.html) через Prometheus + Grafana

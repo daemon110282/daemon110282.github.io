@@ -55,5 +55,8 @@
 - Асинхронная обработка - [Брокер очереди](../pattern/pattern.messagebroker.md), воркеры, буферы входного потока данных
 - Git, rollback, миграции бд
 - [graceful shutdown](../pattern/graceful.shutdown.md)
-- [Паттерн Transactional outbox\Application events](https://microservices.io/patterns/data/transactional-outbox.html)
-  - [example](https://itnext.io/the-outbox-pattern-in-event-driven-asp-net-core-microservice-architectures-10b8d9923885)
+- Message Bus
+  - [Паттерн Transactional outbox\Application events](https://microservices.io/patterns/data/transactional-outbox.html)
+    - [example](https://itnext.io/the-outbox-pattern-in-event-driven-asp-net-core-microservice-architectures-10b8d9923885)
+  - Паттерн [Transactional Inbox](https://softwaremill.com/microservices-101/)
+    - [abp.io](https://docs.abp.io/en/abp/latest/Distributed-Event-Bus)

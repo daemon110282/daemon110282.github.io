@@ -47,6 +47,7 @@
 				- необходима поддержка статуса задач на уровне driver
 				- обрабатывает события [yii2-queue](https://github.com/yiisoft/yii2-queue/blob/master/docs/guide/usage.md#handling-events): startExec, afterExec, afterError
 				- в БД хранит статистику
+				- repeat, create, delete, find, worker status, duration task
 		- [статус задач и workers](https://github.com/zhuravljov/yii2-queue-monitor)
 			- обрабатывает события [yii2-queue](https://github.com/yiisoft/yii2-queue/blob/master/docs/guide/usage.md#handling-events): afterPush, beforeExec, afterExec, afterError, workerStart, workerStop, workerLoop
 			- в БД хранит статистику отдельные таблицы: push, exec, worker

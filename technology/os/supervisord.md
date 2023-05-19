@@ -7,7 +7,7 @@
 
 - Старт
 - [Сигналы процессам](http://supervisord.org/running.html#signals): SIGTERM, SIGINT, SIGQUIT, SIGHUP, SIGUSR2
-- Перезапуск фоновых процессов 
+- Перезапуск фоновых процессов (кол-во попыток перезапуска startretries)
 	- по команде перезапуска службы - SIGHUP 
 	- по ошибке
 		- [Exit Status (Code)](https://blog.programster.org/supervisor-stop-subprocesses-entering-fatal-state)

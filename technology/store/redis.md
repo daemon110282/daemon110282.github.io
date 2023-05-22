@@ -77,7 +77,8 @@ Redis - Remote Dictionary Service in __memory__.
 		- [latency, instantaneous_ops_per_sec, hit rate (calculated)](https://russianblogs.com/article/7125451930/)
 	- Метрики памяти: Метрики памяти
 	- Основные показатели деятельности: основные показатели деятельности
+		- Cache Hit Ratio
+		- [TODO](https://scalegrid.io/blog/6-crucial-redis-monitoring-metrics/)
 	- Метрики персистентности: Метрики персистентности
-	- Метрики ошибок: Метрики ошибок
-	- [TODO](https://scalegrid.io/blog/6-crucial-redis-monitoring-metrics/)
-- [Zabbix](https://habr.com/ru/company/first/blog/687916/)
+	- Метрики ошибок: Метрики ошибок	
+- Use Agent [Zabbix](https://habr.com/ru/company/first/blog/687916/)

@@ -72,3 +72,8 @@ server can implement several different strategies:
 - [vue plugin](https://github.com/tserkov/vue-sse)
 - [Node JS example](https://web.dev/eventsource-basics/#server-examples)
 - [.NET](https://www.tpeczek.com/2017/02/server-sent-events-sse-support-for.html)
+- [Fetch API](https://github.com/Azure/fetch-event-source)
+	- support SSE format message
+	- более [гибкий вариант](https://blog.logrocket.com/using-fetch-event-source-server-sent-events-react/) (Body & Headers parameters, HTTP Method не только GET, больше вариантов обработки сбоя соединения)
+	- [fetch() function](https://developer.mozilla.org/en-US/docs/Web/API/fetch)
+	- support disable events on browser minimize [Page Visibility API](https://developer.mozilla.org/en-US/docs/Web/API/Page_Visibility_API)

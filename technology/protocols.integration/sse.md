@@ -61,6 +61,7 @@ server can implement several different strategies:
   - If lost messages are acceptable, then no event IDs or special logic is required: simply let the client reconnect and resume the stream.
   - If message recovery is required, then the server needs to specify IDs for relevant events, such that the client can report the last seen ID when reconnecting.
   - Also, the server needs to implement some form of a __local cache to recover and retransmit missed messages__ to the client.
+. - варианты реализации на сервере получить сообщения после last-event-id: redis stream
 
 ## Технологии
 

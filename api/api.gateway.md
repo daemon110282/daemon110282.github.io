@@ -14,8 +14,8 @@
 communication to multiple microservices?
 - [Сквозная функциональность](https://docs.microsoft.com/ru-ru/azure/architecture/patterns/gateway-offloading) or gateway offloading
   - How can you handle __cross-cutting concerns__
-    - Authentication and authorization 
-      - [OIDC](../arch/../technology/protocols.integration/oidc.md) access token, refresh token
+    - [Authentication](https://konghq.com/learning-center/api-gateway/api-gateway-authentication) and authorization 
+      - [OAuth](../arch/../technology/protocols.integration/oauth.md) access token
     - Service discovery integration
     - Response caching
     - [Retry policies, circuit breaker, and QoS](../arch/pattern/pattern.failure.md)

@@ -93,3 +93,7 @@
 - [collector registry](https://github.com/promphp/prometheus_client_php)
 - [storage Redis](https://itnan.ru/post.php?c=1&p=544582), InMemory, APC
 - exporter in format Prometheus for Prometheus\VM
+
+### Configuration
+
+- Variables (Env) not in Code [phpdotenv](https://github.com/vlucas/phpdotenv)

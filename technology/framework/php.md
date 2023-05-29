@@ -38,6 +38,7 @@
 
 - RabbitMQ and AWS SQS drivers [don't support статус задач](https://github.com/yiisoft/yii2-queue/blob/master/docs/guide/usage.md#job-status)
 - можно Job по [разным очередям публиковать](https://github.com/yiisoft/yii2-queue/blob/master/docs/guide/usage.md#multiple-queues) (по умолчанию единая)
+	- отдельно [запускаются через supervisord фоновые процессы](https://github.com/yiisoft/yii2-queue/issues/32)
 - __Redis, AMQP Interop drivers__ - Full support for [retryable jobs is implemented](https://github.com/yiisoft/yii2-queue/blob/master/docs/guide/retryable.md#restrictions)
 - мониторинг 
 	- выполнения задач
@@ -48,14 +49,21 @@
 				- обрабатывает события [yii2-queue](https://github.com/yiisoft/yii2-queue/blob/master/docs/guide/usage.md#handling-events): startExec, afterExec, afterError
 				- в БД хранит статистику
 				- repeat, create, delete, find, worker status, duration task
-		- [статус задач и workers](https://github.com/zhuravljov/yii2-queue-monitor)
+		- [статус задач и workers](https://github.com/zhuravljov/yii2-queue-monitor), длительность ожидания в очереди, выполнения задач, кол-во попыток выполнения
+			- __worker не поддерживаются AMQP driver__ (Redis поддерживает __при запуске в режиме run через cron__ и периодическом получении задач)
 			- обрабатывает события [yii2-queue](https://github.com/yiisoft/yii2-queue/blob/master/docs/guide/usage.md#handling-events): afterPush, beforeExec, afterExec, afterError, workerStart, workerStop, workerLoop
 			- в БД хранит статистику отдельные таблицы: push, exec, worker
 			- очистка таблиц статистики
-		- failed task to [DB, file log](https://github.com/shmilyzxt/yii2-queue) for driver Redis, DB, Beanstalkd
+		- failed task handle 
+			- to [DB, file log](https://github.com/shmilyzxt/yii2-queue) for driver Redis, DB, Beanstalkd
+			- to [DB](https://github.com/silverslice/yii2-queue-failed) 
+				- for Any driver? 
+				- no GUI
+				- CLI list, run all\byID, delete
 	- процессов обработчиков очереди задач на уровне [supervisord](../os/supervisord.md)
 		- обработка сигналов от supervisord перезапуска, остановки через [pcntl](https://www.php.net/manual/en/function.pcntl-signal.php)
 		- [exit code в приложении](https://github.com/sergej-kurakin/supervisord-demo) для supervisord
+- логирование по событиям [add task, exec before start\after stop\after error, worker start\stop](https://github.com/yiisoft/yii2-queue/blob/master/src/LogBehavior.php)
 
 #### Laravel 
 
@@ -78,3 +86,15 @@
 ### Message Bus
 
 - RMQ [AMQP 0.9.1](https://github.com/php-amqplib/php-amqplib)
+
+### Observability
+
+[Prometheus](../store/prometheus.md) format metric:
+- registry metric and type: counter, gauge set
+- [collector registry](https://github.com/promphp/prometheus_client_php)
+- [storage Redis](https://itnan.ru/post.php?c=1&p=544582), InMemory, APC
+- exporter in format Prometheus for Prometheus\VM
+
+### Configuration
+
+- Variables (Env) not in Code [phpdotenv](https://github.com/vlucas/phpdotenv)

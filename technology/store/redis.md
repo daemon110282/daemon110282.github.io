@@ -30,13 +30,18 @@ Redis - Remote Dictionary Service in __memory__.
   	- support by database RBAC [Redis Enterprise](https://fcerbell.github.io//HowtomanageRBACsecuritywithACLandRole/)
 - [Pub\Sub](https://habr.com/ru/post/456270/)
 - [Типы данных](https://redis.io/docs/data-types/)
-	- List - упорядоченный список
+	- List - упорядоченный список, отбор элементов по порядковому номеру или с конца\начала
 	- [Streams](https://habr.com/ru/post/456270/) - append-only log
       - Каждая запись имеет уникальный идентификатор. По умолчанию идентификатор генерируется автоматически и включает в себя временную метку.
       - Поэтому вы можете запрашивать диапазоны записей по времени или получать новые данные по мере их поступления в поток, как Unix команда «tail -f» читает лог-файл и замирает в ожидании новых данных.
+	- Sets
+	- Sorted sets
+	- Hashes
 - Redis Sentinel — это сервис, обеспечивающий создание __распределённых систем__.
 - Redis cluster
-- TTL
+- TTL 
+	- type key-value
+	- type Sorted sets ZSet [by timestamp](https://stackoverflow.com/questions/74583970/can-redis-cache-store-the-time-to-live-ttl-for-each-items-in-a-list) clear
 - [Транзакции](https://habr.com/ru/post/204354/)
 - Поиск
 	- [Tag](https://redis.io/docs/stack/search/reference/tags/)

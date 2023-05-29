@@ -1,6 +1,6 @@
 # Citrix ADC (Netscaler)
 
-Реализует паттерн [Reverse Proxy](../../arch/pattern/pattern.proxy.reverse.md)
+Реализует паттерн [Reverse Proxy](../../../arch/pattern/pattern.proxy.reverse.md)
 - Auth
 	- [OAuth OIDC с v.12.1](https://docs.citrix.com/en-us/citrix-adc/current-release/aaa-tm/authentication-methods/oauth-authentication.html)
 	- [API OIDC](https://docs.citrix.com/en-us/citrix-adc/current-release/aaa-tm/authentication-methods/oauth-authentication/api-authentication-with-adc.html)

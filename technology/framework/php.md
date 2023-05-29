@@ -48,6 +48,7 @@
 				- необходима поддержка статуса задач на уровне driver
 				- обрабатывает события [yii2-queue](https://github.com/yiisoft/yii2-queue/blob/master/docs/guide/usage.md#handling-events): startExec, afterExec, afterError
 				- в БД хранит статистику
+				- repeat, create, delete, find, worker status, duration task
 		- [статус задач и workers](https://github.com/zhuravljov/yii2-queue-monitor), длительность ожидания в очереди, выполнения задач, кол-во попыток выполнения
 			- __worker не поддерживаются AMQP driver__ (Redis поддерживает __при запуске в режиме run через cron__ и периодическом получении задач)
 			- обрабатывает события [yii2-queue](https://github.com/yiisoft/yii2-queue/blob/master/docs/guide/usage.md#handling-events): afterPush, beforeExec, afterExec, afterError, workerStart, workerStop, workerLoop
@@ -93,3 +94,7 @@
 - [collector registry](https://github.com/promphp/prometheus_client_php)
 - [storage Redis](https://itnan.ru/post.php?c=1&p=544582), InMemory, APC
 - exporter in format Prometheus for Prometheus\VM
+
+### Configuration
+
+- Variables (Env) not in Code [phpdotenv](https://github.com/vlucas/phpdotenv)

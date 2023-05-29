@@ -14,6 +14,8 @@
 [Server Sent Events](https://learn.javascript.ru/server-sent-events) (Server-Side Events):
 
 - Соединение постоянное, __протокол HTTP__, альтернатива [Polling, Long Polling](https://web.dev/eventsource-basics/) from FrontEnd
+	- [Long-Polling with XHR](https://www.oreilly.com/library/view/high-performance-browser/9781449344757/ch15.html)
+	- [vs websocket](https://github.com/GoogleChrome/web.dev/blob/main/src/site/content/en/blog/eventsource-basics/index.md?#server-sent-events-vs-websockets)
 - скорость, равная скорости потоковой передачи в [формате JSON](https://aengel.medium.com/server-sent-events-vs-json-stream-3a9f472120a4)
 - меньше накладных расходов на установление [соединений vs Polling](https://stackoverflow.com/questions/9397528/server-sent-events-vs-polling)
 - Прост в реализации и использовании, как на стороне клиента, так и на стороне сервера, более производителен для сервера, меньше задержка ответа клиента [vs Long Polling](https://www.turtle-techies.com/long-polling-vs-server-sent-events/)
@@ -22,6 +24,7 @@
   - на уровне сервера [CORS](cors.md) [with сredentials](https://developer.mozilla.org/en-US/docs/Web/API/Server-sent_events/Using_server-sent_events) in [Headers API Key (аналогично с fetch)](https://learn.javascript.ru/fetch-crossorigin#neprostye-zaprosy)
 - built-in support for __reestablishing dropped connections__, as well as recovery of messages the client may have missed while disconnected.
   - By default, if the connection is dropped, then the browser will automatically reestablish the connection. The SSE specification recommends a 2–3 second delay, which is a common default for most browsers, but the server can also set a custom interval at any point by sending a retry command to the client.
+- [Sending Comment](https://bigboxcode.com/server-sent-events-sse)
 
 ## Плюсы-минусы
 
@@ -37,6 +40,9 @@
 - Поддержка [97,5% браузеров в 2023 году](https://caniuse.com/eventsource), но IE<11 нет, Edge только
 - It only allows data reception from the server (unidirectional)
 - Events are limited to UTF-8 (no binary data)
+- Limitations on connecting from one browser at a time:
+	- HTTP/1.1: Max 6-8 connections at a time.
+	- HTTP/2: Max 100 connections by default (can be changed from server configuration).
 
 ## Модель
 
@@ -61,6 +67,7 @@ server can implement several different strategies:
   - If lost messages are acceptable, then no event IDs or special logic is required: simply let the client reconnect and resume the stream.
   - If message recovery is required, then the server needs to specify IDs for relevant events, such that the client can report the last seen ID when reconnecting.
   - Also, the server needs to implement some form of a __local cache to recover and retransmit missed messages__ to the client.
+  - вариант реализации Last-Event-ID [Redis Streams](https://redis.io/docs/data-types/streams/)
 
 ## Технологии
 
@@ -69,8 +76,10 @@ server can implement several different strategies:
 - [PHP](https://web.dev/eventsource-basics/#server-examples)
 	- [MDN sample](https://github.com/mdn/dom-examples/tree/main/server-sent-events)
     - [PHP](https://bigboxcode.com/php-server-sent-events-sse)
+	- [YII2](https://github.com/odannyc/yii2-sse)
 - [vue plugin](https://github.com/tserkov/vue-sse)
 - [Node JS example](https://web.dev/eventsource-basics/#server-examples)
+	- [server docker example](https://bigboxcode.com/nodejs-server-sent-events-sse)
 - [.NET](https://www.tpeczek.com/2017/02/server-sent-events-sse-support-for.html)
 - [Fetch API](https://github.com/Azure/fetch-event-source)
 	- support SSE format message

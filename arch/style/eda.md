@@ -5,9 +5,7 @@
   - [Плюсы и минусы](#плюсы-и-минусы)
   - [Паттерны](#паттерны)
   - [Технологии](#технологии)
-  - [Links](#links)
-
-[Схемы](https://docs.google.com/document/d/1WBshnSO-F0S4zbQOjANvhFNKPepSMlhoU38OdIPV0i8/edit?usp=sharing)
+  - [TODO](#todo)
 
 ## Зачем
 
@@ -44,12 +42,12 @@
 
 ## Паттерны
 
-- pattern consists of two main topologies
-- The mediator topology is commonly used when you need to orchestrate multiple steps within an event through a central mediator
-. - Spring Integration, Apache Camel, Mule ESB
-  - BPEL (business process execution language)
-  - BPMS
-- broker topology is used when you want to chain events together without the use of a central mediator.
+- two main topologies
+  - The __mediator topology__ is commonly used when you need to orchestrate multiple steps within an event through a central mediator
+    - Spring Integration, Apache Camel, Mule ESB
+    - BPEL (business process execution language)
+    - BPMS
+  - __broker topology__ is used when you want to chain events together without the use of a central mediator.
 - __Событие__ Event driven
   - [Publish-subscribe](../../technology/middleware/messagebus/rmq.md)
     - event-base
@@ -63,9 +61,7 @@
   - [Task (Worker) Queue](../../technology/middleware/messagebus/rmq.md)
   - [RPC (команды)](../../technology/middleware/messagebus/rmq.md)
 - __Запросы__ [CQRS](../pattern/pattern.cqrs.md) - command query request segregation
-![cqrs](../../img/arch/eda/eda.cqrs.jpg)
 - [Event sourcing](../pattern/event.sourcing.md)
-- Медиатор
 - __Распределенные транзакции__ (лучше не делать)
   - [SAGA](../pattern/pattern.saga.md) - компенсационные действия для отмены "транзакции"
   - двухфазный комит - намерение, получено ок от участников, комит  
@@ -83,18 +79,10 @@
     - [abp.io](https://docs.abp.io/en/abp/4.4/Distributed-Event-Bus)
   - Python
     - Celery
-  - PHP TODO
-    - [prooph](https://github.com/prooph/service-bus)
-    - [Symfony Messenger](https://symfony.com/doc/current/messenger.html)
-    - [Laravel Queues](https://laravel.com/docs/9.x/queues)
-    - [Ecotone Framework](https://github.com/ecotoneFramework/ecotone)
-    - [Symfony Messenger vs Laravel Queue vs Ecotone Framework](https://blog.devgenius.io/message-processing-in-php-symfony-messenger-laravel-queues-and-ecotone-8ca17102c5b2)
-    - <https://github.com/php-enqueue/> поддержка Laravel, Magento2
-    - <http://docs.simplebus.io/en/latest/index.html>
-    - [Task (Worker) Queue YII2](https://github.com/yiisoft/yii2-queue/blob/master/docs/guide/README.md)
+  - [PHP](../../technology/framework/php.md)
 - [MS Обмен сообщениями](https://docs.microsoft.com/ru-ru/azure/architecture/guide/technology-choices/messaging)
 
-## Links
+## TODO
 
 - <https://habr.com/ru/company/itsumma/blog/416629/>
 - <https://habr.com/ru/post/422151/>

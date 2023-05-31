@@ -1,5 +1,16 @@
 # PHP
 
+- [PHP](#php)
+	- [Frameworks](#frameworks)
+	- [Patterns](#patterns)
+		- [Background Job](#background-job)
+			- [YII2 queue](#yii2-queue)
+			- [Laravel](#laravel)
+		- [DDD](#ddd)
+		- [Message Bus](#message-bus)
+		- [Observability](#observability)
+		- [Configuration](#configuration)
+
 ## Frameworks
 
 - [YII2](yii2.md)
@@ -85,7 +96,16 @@
 
 ### Message Bus
 
+Паттерн арх-го стиля [EDA](../../arch/style/eda.md)
+
 - RMQ [AMQP 0.9.1](https://github.com/php-amqplib/php-amqplib)
+- [prooph](https://github.com/prooph/service-bus)
+- [Symfony Messenger](https://symfony.com/doc/current/messenger.html)
+- [Laravel Queues](https://laravel.com/docs/9.x/queues)
+- [Ecotone Framework](https://github.com/ecotoneFramework/ecotone)
+- [Symfony Messenger vs Laravel Queue vs Ecotone Framework](https://blog.devgenius.io/message-processing-in-php-symfony-messenger-laravel-queues-and-ecotone-8ca17102c5b2)
+- [php-enqueue](https://github.com/php-enqueue/) поддержка Laravel, Magento2
+- [simplebus](http://docs.simplebus.io/en/latest/index.html)
 
 ### Observability
 

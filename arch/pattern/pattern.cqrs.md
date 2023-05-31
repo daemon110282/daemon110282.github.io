@@ -10,6 +10,7 @@
 ## Команда
 
 ![command](https://docs.microsoft.com/ru-ru/dotnet/architecture/microservices/microservice-ddd-cqrs-patterns/media/microservice-application-layer-implementation-web-api/high-level-writes-side.png)
+![cqrs](../../img/arch/eda/eda.cqrs.jpg)
 
 - это запрос к системе на выполнение действия, [которое изменяет состояние системы](https://docs.microsoft.com/ru-ru/dotnet/architecture/microservices/microservice-ddd-cqrs-patterns/microservice-application-layer-implementation-web-api#implement-the-command-and-command-handler-patterns)
 - Команды являются __императивными__ и должны обрабатываться только один раз

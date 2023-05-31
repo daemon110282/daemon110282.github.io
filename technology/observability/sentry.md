@@ -45,6 +45,8 @@
 - [Release](https://docs.sentry.io/product/releases/)
 	- [Tracking](https://docs.sentry.io/product/releases/release-details/)
 	- [GitLab](https://docs.sentry.io/product/integrations/source-code-mgmt/gitlab/)
+		- in Details Project [Commit Tracking](https://docs.sentry.io/product/integrations/source-code-mgmt/gitlab/#commit-tracking)
+		- [Resolve via Commit or Pull Request](https://docs.sentry.io/product/integrations/source-code-mgmt/gitlab/#resolve-via-commit-or-pull-request)
 		- [PHP](https://docs.sentry.io/platforms/php/configuration/releases/)
 		- [JS](https://docs.sentry.io/platforms/javascript/configuration/releases/)
 - __Breadcrumbs__ - [trace of events](https://docs.sentry.io/product/issues/issue-details/breadcrumbs/) that lead to errors

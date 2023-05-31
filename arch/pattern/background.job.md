@@ -3,7 +3,7 @@
 - [Background Jobs](#background-jobs)
   - [Зачем](#зачем)
   - [Паттерны](#паттерны)
-  - [Технологи](#технологи)
+  - [Технологии](#технологии)
 
 ## Зачем
 
@@ -58,10 +58,12 @@
   - Event Pre\Post\Error
   - Rate Limit
   - Types (LIFO, Delayed, Prioritized, Repeatable)
+  - Canceling task
+  - Disable Job
+  - Distributed Lock only [one handle allow in cluster server mode](https://docs.abp.io/en/abp/latest/Background-Jobs#clustered-deployment)
 
-- Abp.io support in [job](https://docs.abp.io/en/abp/4.4/Background-Jobs-RabbitMq)
-
-## Технологи
+## Технологии
 
 - [.NET ABP](https://docs.abp.io/en/abp/4.4/Background-Jobs)
+  - Abp.io support RMQ in [job](https://docs.abp.io/en/abp/4.4/Background-Jobs-RabbitMq)
 - [PHP](../../technology/framework/php.md)

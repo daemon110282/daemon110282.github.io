@@ -49,6 +49,9 @@ TODO
 Технологии и протоколы:
 - [SSL\TLS VPN](https://www.pvsm.ru/vpn/32300)  
 - IPSec VPN
+  - [host to net](https://habr.com/ru/articles/504484/)
+  - net to net
+  - transport mode
 - DTLS
 
 Варианты:
@@ -66,6 +69,7 @@ TODO
     - на основе КриптоПро
       - Nginx вариант с библиотекой [КриптоПро](https://habr.com/ru/articles/353534/#comment_10757142)
       - 2018 [Docker контейнер с CryptoPro 4 и nginx](https://github.com/navyzet/crypto-proxy)
+      - Win Server [IPSec VPN](https://itnan.ru/post.php?c=1&p=328770) с КриптоПро CSP и [КриптоПро IPSec](https://www.cryptopro.ru/products/ipsec/vpngost)
   - Commercial
     - аппаратные устройства [КриптоПро NGate](https://www.cryptopro.ru/products/ngate)
     - Аутсорс с арендой оборудования [Ростелеком Солар](https://rt-solar.ru/services/vpn/)

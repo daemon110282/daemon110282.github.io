@@ -76,6 +76,7 @@
 	- [PHP example](https://docs.sentry.io/platforms/php/performance/)
 - Alert
 	- [Telegram](https://github.com/butorov/sentry-telegram)
+	- Rules [Custom](https://sentry-docs-o2paie5ivq-uc.a.run.app/guides/alert-notifications/creating-custom-rules/)
 - [SSO](https://develop.sentry.dev/self-hosted/sso/)
 	- Auth user access by [KeyCloak SAML](https://yyhh.org/blog/2020/10/how-to-setup-saml2-authentication-on-sentry-with-keycloak/) 
 	- Google OIDC
@@ -137,6 +138,7 @@
 	- [demo](https://adw0rd.com/2019/02/21/sentry-on-premise-docker/)
 	- [On premise docker](https://principal-engineering.ru/posts/getsentry-self-hosted/)
 		- BSL __license__ - Если мы [не конкурируем с ними](https://open.sentry.io/licensing/), то [бесплатно](https://forum.sentry.io/t/re-licensing-sentry-faq-discussion/8044)
+	- [HELM charts](https://github.com/sentry-kubernetes/charts)
 - [Системные требования](https://github.com/getsentry/self-hosted)
 - [Observability Sentry](https://medium.com/@twunde/the-unofficial-guide-to-upgrading-sentry-on-premise-9-to-sentry-10-5e8b4e476349)
 	- health checks

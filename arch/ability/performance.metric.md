@@ -13,6 +13,10 @@
 
 To-do
 - https://www.datadoghq.com/blog/monitoring-101-collecting-data/
+- Методики выбора метрик:
+  - USE
+  - RED
+  - Google [SRE](https://habr.com/ru/companies/southbridge/articles/525176/) 4 Golden signals
 
 Счетчики как внедрить:
 

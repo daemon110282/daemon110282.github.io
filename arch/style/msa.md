@@ -140,7 +140,9 @@
   - Proxy
   - Chained
   - Branch (Aggregator + Chained в связке)
-- [Паттерны управления данными](https://mcs.mail.ru/blog/26-osnovnyh-patternov-mikroservisnoj-razrabotki)
+- TODO
+  - [Паттерны управления данными](https://mcs.mail.ru/blog/26-osnovnyh-patternov-mikroservisnoj-razrabotki)
+  - [26 основных паттернов микросервисной разработки](https://mcs.mail.ru/blog/26-osnovnyh-patternov-mikroservisnoj-razrabotki)
 
 ## Технологии
 

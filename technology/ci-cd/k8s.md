@@ -12,6 +12,7 @@
 
 ## Зачем
 
+- Платформа для оркестрации контейнеров
 - обнаружение сервисов ![schema](../../img/technology/ci-cd/k8s.discovery.jpg)
 - Окружения
   - организованы используя kubernetes namespaces в рамках одного кластера. Такой подход является максимально простым и быстрым на старте, но так же имеет свои недостатки: namespaces не полностью изолированы друг от друга в kubernetes
@@ -31,6 +32,7 @@
       - Утилизация ресурсов?
     - в процессе мониторинга нам необходимо постоянно сопоставлять физический мир контейнеров с реальностью Kubernetes
     - health checks. У Kubernetes есть два их типа: liveness и readiness probes.
+- [Отличие от Docker](https://mcs.mail.ru/blog/chto-umeet-kubernetes-chego-ne-umeet-docker) - инструмент для создания и запуска контейнеров
 
 ![k8s](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/daemon110282/daemon110282.github.io/daemon110282-patch-1/technology/ci-cd/k8s.puml)
 
@@ -46,10 +48,31 @@
 
 ## Patterns
 
+- Storage Solutions for Kubernetes
+  - [Container Attached Storage](https://openebs.io/docs/concepts/cas) - это программное обеспечение, включающее контроллеры хранения на основе микросервисов, управляемые Kubernetes. 
+    - Эти контроллеры хранилища могут работать в любом месте, которое доступно Kubernetes, то есть на любом облачном сервере или даже на обычном сервере с общим хранилищем или поверх традиционной системы общего хранения. 
+    - Критически важно, что доступ к самим данным также осуществляется через контейнеры, в отличие от хранения в системе общего масштабирования вне платформы.
+  - three categories of volumes
+    - Persistent volumes: storage in the Kubernetes cluster that is preprovisioned or created via dynamic provisioning using storage classes
+    - Projected volumes: a type of storage that can map several existing volumes in the same directory
+    - Ephemeral volumes: storage that does not persist across restarts like emptyDir (useful for logs), configMap, or secret
+  - Container Attached Storage - Distributed Persistent Volumes easily deploy Kubernetes __Stateful Workloads__  
+    - [OpenEBS](https://openebs.io/docs/)
+    - Rook
+    - GlusterFS
+    - [Compare OpenEBS-Rook-GlusterFS](https://kubevious.io/blog/post/comparing-top-storage-solutions-for-kubernetes)
+  - [Distributed storage](../../technology/filesystem/filesystem.md) - NFS
+    - [Container Attached Storage (CAS) vs. Shared Storage](https://blog.mayadata.io/container-attached-storage-cas-vs.-shared-storage-which-one-to-choose)
+  - [Object Storage](../../technology/filesystem/object.storage.md) - Minio
 - [Rate limiting](https://www.nginx.com/blog/microservices-march-protect-kubernetes-apis-with-rate-limiting/)
 - TODO Кол-во сервисов на контейнер
   - Ограничение кластера по подам на ноде?
   - создание маленьких контейнеров, т.к. контейнеры автоматически запускаются на разных хостах, и их меньший размер ускорит время запуска (поскольку предварительно их нужно физически скопировать на хостовую систему).
+- __Stateful Workloads__ on __multi-container pods__ [and container communication](https://www.mirantis.com/blog/multi-container-pods-and-container-communication-in-kubernetes/)
+- TODO
+  - https://developers.redhat.com/blog/2020/05/11/top-10-must-know-kubernetes-design-patterns
+  - [10 антипаттернов деплоя](https://mcs.mail.ru/blog/antipatterny-deploya-v-kubernetes)
+  - [11 факапов PRO-уровня при внедрении Kubernetes](https://mcs.mail.ru/blog/11-fakapov-pro-urovnja-pri-vnedrenii-kubernetes)
 
 ### Naming convention
 

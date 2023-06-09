@@ -29,7 +29,7 @@
 ## Стратегии
 
 - Надежность
-	- [Rollback pattern](pattern.rollback.md) - Blue Green Deployment
+	- [Rollback pattern](pattern.rollback.md) - [Blue Green Deployment](https://codefresh.io/learn/software-deployment/what-is-blue-green-deployment/)
 	- k8s
 		- [Recreate](https://rtfm.co.ua/kubernetes-tipy-deployment-strategies-i-argo-rollouts/) - с простоем
 		- [Rolling Update](https://rtfm.co.ua/kubernetes-tipy-deployment-strategies-i-argo-rollouts/) - запускает новые поды параллельно с запущенными старыми, а затем убивает старые, и оставляет только новые.

@@ -16,9 +16,9 @@ TODO
 - PCI DSS
 - k8s
   - TLS – cert-manager
-  - Key Managment
-  - Key Vault
-    - HashiCorp
+  - Key Managment, Key Vault
+    - HashiCorp Vault 
+    - альтернативы [CyberArk, AWS](https://datafloq.com/read/5-compelling-alternatives-hashicorp-vault/)
 - [Zero Trust](https://t.me/ru_arc/136)
 
 ## Крипто Защита Информации (СКЗИ)

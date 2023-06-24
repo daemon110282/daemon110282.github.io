@@ -35,7 +35,7 @@
 
 ### Task (Worker) Queue
 
-  - Round-robin dispatching (циклическое распределение задач по консьюмерам) 
+  - Round-robin dispatching (циклическое распределение задач по консьюмерам)
     - сервисы между собой делят Очередь задач
     - паттерн EIP [Competing Consumers](https://www.enterpriseintegrationpatterns.com/patterns/messaging/CompetingConsumers.html)
     - Exchange type: direct, several consumer listening to the same queue, reading the messages in a round-robin fashion if all are waiting
@@ -61,7 +61,7 @@
 
 ### RPC (команды)
 
-  - [паттерн EIP](../arch/pattern/pattern.rpc.md)
+  - [паттерн EIP](../../../arch/pattern/pattern.rpc.md)
   - EasyNetQ [RPC](https://github.com/EasyNetQ/EasyNetQ/wiki/Request-Response)
   - [Exchange type: direct](https://www.rabbitmq.com/tutorials/tutorial-six-dotnet.html), message can be sent to default exchange with a specified routing key and response is received on a specified unique response queue, owned by the client
 
@@ -90,7 +90,7 @@
 
 [Security mechanism](https://stackoverflow.com/questions/7840283/how-can-queues-be-made-private-secure-in-rabbitmq-in-a-multitenancy-system) in RabbitMQ:
 
-- Access control https://www.rabbitmq.com/access-control.html
+- [Access control](https://www.rabbitmq.com/access-control.html)
   - Vhosts
   - each user should be permissioned to only read and write to their own queue based on the queue's unique name.
 - SASL authentication

@@ -7,15 +7,16 @@
     - [Multi Tenant Architecture (MTA) - Single Instance](#multi-tenant-architecture-mta---single-instance)
     - [Single Tenant Architecture (STA) - Multi Instance](#single-tenant-architecture-sta---multi-instance)
     - [Гибридный вариант](#гибридный-вариант)
+  - [To-do](#to-do)
 
 ## Зачем
 
 [Схемы](https://docs.google.com/document/d/1adNn0l5iUZFGiqMzqjup6f-DtkBPP4pnbDjRsP8M70E/edit?usp=sharing)
-[Схемы](../img/)
+[Схемы](../../../img)
 
 ## Плюсы минусы
 
-[Критерии](arch.criteria.md)
+[Критерии](../../arch.criteria.md)
 
 Плюсы:
 
@@ -99,6 +100,6 @@
 | Функциональность | Стоимость |
 ||  |
 
+## To-do
 
-To-do
-https://docs.microsoft.com/ru-ru/azure/architecture/guide/multitenant/related-resources?utm_source=pocket_mylist
+- https://docs.microsoft.com/ru-ru/azure/architecture/guide/multitenant/related-resources

@@ -74,6 +74,7 @@ TODO
     - аппаратные устройства [КриптоПро NGate](https://www.cryptopro.ru/products/ngate)
     - Аутсорс с арендой оборудования [Ростелеком Солар](https://rt-solar.ru/services/vpn/)
     - аппаратные устройства [TSS Diamond](https://qsetup.ru/gost-vpn-chto-eto/)
+    - программно-аппаратный комлекс [S-terra](../../technology/s-terra.md)
 - Криптоалгоритмы международные RSA
 
 - [Проверка алгоритма подписи примененного к сертификату](https://sysos.ru/?p=589)

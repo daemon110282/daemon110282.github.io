@@ -16,6 +16,7 @@
 - custom [Admin REST API](https://github.com/dominicklee/MinIO-Admin-for-PHP) by CLI command
 - Bucket
 	- [Expire Policy](https://min.io/docs/minio/linux/administration/object-management.html#object-lifecycle-management) - автоочистка старых данных
+		- [on days](https://min.io/docs/minio/linux/administration/object-management/object-lifecycle-management.html#object-expiration)
 	- Legal Hold [Object Retention](https://min.io/docs/minio/linux/administration/object-management.html#object-retention) - блокировка от удаления
 		- enforces Write-Once Read-Many (WORM) immutability to protect versioned objects from deletion. 
 		- MinIO supports both duration 

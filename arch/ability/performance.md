@@ -22,24 +22,22 @@
 - НТ метрика от. Netexport записать, эталон. Конфигурация ПК клиента. С кешем из firebug. Yslow, pagespeed
 - тайминг логировать
 - Yslow, page speed chrome
-- HTTP Error 503.2 — Service Unavailable в логах IIS есть? очередь запросов
-- The Time-Taken field shows the length of time that it takes for a request to be processed and its response to be sent.  This value gets calculated by a timer that gets initialized when the IIS server receives the first byte of an HTTP request, and stopped when the last IIS response send operation completes.  It is important to note that the Time-Taken field usually includes the time that the request and response packets are travelling over the network.  время когда был рост времени ответа совпадает с current connection пиками?
-- [log-parser](https://www.symantec.com/connect/articles/forensic-log-parsing-microsofts-logparser)
-  - [example](https://mlichtenberg.wordpress.com/2011/02/03/-log-parser-rocks-more-than-50-examples/)
-    - Hourly Bandwidth (chart) Requests by URI
-    - Search the Event Log for W3SVC (IIS)
-    - For example, Bytes Sent and Bytes Received are not selected, but they are very useful when troubleshooting a performance problem.  
-      - в IIS логах есть?? sc-bytes, cs-bytes	НЕТУ
-  - https://docs.microsoft.com/en-us/iis/troubleshoot/performance-issues/troubleshooting-iis-performance-issues-or-application-errors-using-logparser
-  - !!! https://docs.microsoft.com/en-us/iis/troubleshoot/performance-issues/troubleshooting-high-cpu-in-an-iis-7x-application-pool
-  - http://software-testing.ru/library/testing/performance-testing/468-weblog 
+- HTTP Error 503.2 — Service Unavailable в логах IIS есть - __очередь запросов__
+- The Time-Taken - field shows the length of time that it takes for a request to be processed and its response to be sent.  
+  - This value gets calculated by a timer that gets initialized when the __IIS server receives the first byte of an HTTP request__, and stopped when the __last IIS response send operation completes__.  
+  - It is important to note that the Time-Taken field __usually includes the time that the request and response packets are travelling over the network__. 
+  - Время когда был рост времени ответа совпадает с current connection пиками?
 - [http-status-code](https://support.microsoft.com/ru-ru/help/943891/the-http-status-code-in-iis-7.0,-iis-7.5,-and-iis-8.0)
 - [network speed??](https://serverfault.com/questions/412419/iis-how-to-tell-if-a-slow-time-taken-is-due-to-a-slow-network-connection)
 - [DOS attack](https://serverfault.com/questions/288262/dos-attack-slow-post-how-to-prevent-in-iis?rq=1) "slow post"
-- результатах анализа следует посмотреть TOP 20 запросов методом POST, TOP 20 запросов методом GET/HEAD, TOP 20 IP адресов по числу хитов, TOP 20 ссылающихся страниц по числу хитов. Все это позволит выявить источник и тип трафика, а также точки входа на сайт или скрипты, которые вызываются чаще всего. Скорее всего они и будут причиной высокой нагрузки.
+- выявить источник и тип трафика, а также точки входа на сайт или скрипты, которые вызываются чаще всего. Причины высокой нагрузки в результатах анализа следует посмотреть:  
+  - TOP 20 запросов методом POST
+  - TOP 20 запросов методом GET/HEAD
+  - TOP 20 IP адресов по числу хитов
+  - TOP 20 ссылающихся страниц по числу хитов. 
 - [iis perf counters](https://msdn.microsoft.com/en-us/library!/ms972959.aspx?f=255&MSPPError=-2147217396)
-- https://msdn.microsoft.com/en-us/library/fxk122b4.aspx  
-- [fiddler on iis app](http://www.markhneedham.com/blog/2009/06/24/using-fiddler-with-iis/)
+  - [Performance Counters for ASP.NET]https://msdn.microsoft.com/en-us/library/fxk122b4.aspx  
+  - [fiddler on iis app](http://www.markhneedham.com/blog/2009/06/24/using-fiddler-with-iis/)
 - настройка трейса FREB по длительным [запросам time-taken](https://blogs.msdn.microsoft.com/docast/2016/04/28/troubleshooting-iis-request-performance-slowness-issues-using-freb-tracing/) ЗАМЕДЛЯЕТ САЙТ!  
 - [long time-taken and win32 status code = 64](https://forums.iis.net/t/1169411.aspx)
   - is connection is already lost? common by proxies, to not have too many socket connections?

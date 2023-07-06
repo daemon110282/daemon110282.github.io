@@ -35,9 +35,6 @@
   - TOP 20 запросов методом GET/HEAD
   - TOP 20 IP адресов по числу хитов
   - TOP 20 ссылающихся страниц по числу хитов
-- [iis perf counters](https://msdn.microsoft.com/en-us/library!/ms972959.aspx?f=255&MSPPError=-2147217396)
-  - [Performance Counters for ASP.NET](https://msdn.microsoft.com/en-us/library/fxk122b4.aspx)
-  - [fiddler on iis app](http://www.markhneedham.com/blog/2009/06/24/using-fiddler-with-iis/)
 - настройка трейса FREB по длительным [запросам time-taken](https://blogs.msdn.microsoft.com/docast/2016/04/28/troubleshooting-iis-request-performance-slowness-issues-using-freb-tracing/) ЗАМЕДЛЯЕТ САЙТ!  
 - [long time-taken and win32 status code = 64](https://forums.iis.net/t/1169411.aspx)
   - is connection is already lost? common by proxies, to not have too many socket connections?

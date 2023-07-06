@@ -16,13 +16,13 @@
 - https://blogs.msdn.microsoft.com/docast/2016/04/28/troubleshooting-iis-request-performance-slowness-issues-using-freb-tracing/
 - https://www.iis.net/learn/troubleshoot/performance-issues
 
-## log-parser 
+## log-parser
 
 [log-parser](https://www.symantec.com/connect/articles/forensic-log-parsing-microsofts-logparser)
 
 - [example](https://mlichtenberg.wordpress.com/2011/02/03/-log-parser-rocks-more-than-50-examples/)
-- Hourly Bandwidth (chart) Requests by URI
-- Search the Event Log for W3SVC (IIS)
+- Hourly Bandwidth (__chart__) Requests by URI
+- __Search__ the Event Log for W3SVC (IIS)
 - For example, Bytes Sent and Bytes Received are not selected, but they are very useful when troubleshooting a performance problem.  
 	- в IIS логах есть?? sc-bytes, cs-bytes	НЕТУ
 - https://docs.microsoft.com/en-us/iis/troubleshoot/performance-issues/troubleshooting-iis-performance-issues-or-application-errors-using-logparser

@@ -10,6 +10,7 @@
 		- [IIS->Worker process->View Current Request](https://habrahabr.ru/post/250881/)
 	- ASP.NET Application\Requests Executing - показывает количество одновременно выполняющихся запросов
 	- ASP.NET Application\Requests/sec - текущую пропускную способность приложения
+	- [WCF service](protocols.integration/wcf.md)
 - Duration Latency
 	- ASP.NET Application\Request Execution Time - время выполнения (в мс) последнего запроса
 	- Queue

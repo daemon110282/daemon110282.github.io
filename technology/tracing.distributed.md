@@ -16,6 +16,10 @@
 - [apache drupal php](https://docs.acquia.com/cloud-platform/develop/drupal/requestid/)
 - [envoy](https://www.envoyproxy.io/docs/envoy/latest/configuration/http/http_conn_man/headers#x-request-id)
 
+## Response Time
+
+[.NET in log](https://www.codeproject.com/Tips/5337523/Response-Time-Header-in-ASP-NET-Core)
+
 ## Технологии
 
 [Compare](https://www.nginx.com/blog/integrating-opentelemetry-modern-apps-reference-architecture-progress-report?mkt_tok=NjUzLVNNQy03ODMAAAGDoZc8tBnTTPpd0LyW8jL4ptLEDNmRtqT86ruxAIy0w26Q36wbMRlF5KC3BMfg2BcRVqWCoPUW3J4gMfJLANmKejRzOQC80kmD2-ueYoqT-DoXcB1iUA)

@@ -1,6 +1,49 @@
 # IIS
 
-Метрики производительности:
+- [IIS](#iis)
+	- [Метрики производительности](#метрики-производительности)
+		- [worker process](#worker-process)
+		- [Application Pool](#application-pool)
+		- [APP](#app)
+	- [log-parser](#log-parser)
+	- [Трассировка](#трассировка)
+	- [Мониторинг](#мониторинг)
+
+Структура:
+
+- IIS Worker Processes
+	- IIS App pool1
+		- ASP.NET App1
+		- ASP.NET App2
+	- IIS App pool2
+
+## Метрики производительности
+
+### worker process
+
+- [W3SVC_W3WP](https://blogs.iis.net/mailant/new-worker-process-performance-counters-in-iis7) - exposes HTTP request processing related counters for the __worker process__
+	- [Maximum Threads Count](https://www.dotnetfunda.com/articles/show/3485/11-tips-to-improve-wcf-restful-services-performance)
+	- Active Threads Count - Number of threads actively processing requests in the worker process
+	- Requests / Sec - HTTP requests/sec being processed by the worker process
+	- Active Requests - Current number of requests being processed by the worker process
+	- Threads Per Processor Limit in IIS
+	- HTTP Service Request Queues (CurrentQueueSize): [The request count in the IIS queue](https://techcommunity.microsoft.com/t5/iis-support-blog/performance-counters-for-monitoring-iis/ba-p/683389)
+	- .NET CLR Exceptions
+
+### Application Pool
+
+[concurrent](https://www.dotnetfunda.com/articles/show/3485/11-tips-to-improve-wcf-restful-services-performance)
+
+  - maxConcurrentRequestsPerCPU
+  - maxConcurrentThreadsPerCPU
+  - requestQueueLimit
+  - Maximum Worker [Processes in IIS application pool](https://www.dotnetfunda.com/articles/show/3485/11-tips-to-improve-wcf-restful-services-performance)
+  - два основных параметра, влияющих на [доступность приложения и его производительность](https://habr.com/ru/articles/250881/).
+	- appConcurrentRequestLimit — __максимальное количество одновременных запросов__ в приложении. Увеличение числа одновременных запросов IIS расширит доступные ресурсы веб-сервера для обслуживания запросов.
+    	- Значение по умолчанию — 5000. UsersCount * 1.5, где usersCount — количество одновременно работающих пользователей
+	- QueueLength — максимальное количество запросов, которые драйвер Http.sys размещает в очереди пула приложений
+
+### APP
 
 - [iis perf counters](https://msdn.microsoft.com/en-us/library!/ms972959.aspx?f=255&MSPPError=-2147217396)
   - [Performance Counters for ASP.NET](https://msdn.microsoft.com/en-us/library/fxk122b4.aspx)
@@ -24,25 +67,6 @@
 - ASP.NET Sessions
 	- ASP.NET\Sessions Timed Out - Количество сеансов, время ожидания которых истекло.
 	- ASP.NET\Sessions Total
-- [W3SVC_W3WP](https://blogs.iis.net/mailant/new-worker-process-performance-counters-in-iis7) - exposes HTTP request processing related counters for the __worker process__
-	- Maximum Threads Count
-	- Active Threads Count - Number of threads actively processing requests in the worker process
-	- Requests / Sec - HTTP requests/sec being processed by the worker process
-	- Active Requests - Current number of requests being processed by the worker process
-- https://blogs.msdn.microsoft.com/docast/2016/04/28/troubleshooting-iis-request-performance-slowness-issues-using-freb-tracing/
-- https://www.iis.net/learn/troubleshoot/performance-issues
-
-- IIS Worker Processes
-	- IIS App pool1
-		- ASP.NET App1
-		- ASP.NET App2
-	- IIS App pool2
-
-Параметры App pool\App:
-- два основных параметра, влияющих на [доступность приложения и его производительность](https://habr.com/ru/articles/250881/).
-	- appConcurrentRequestLimit — __максимальное количество одновременных запросов__ в приложении. Увеличение числа одновременных запросов IIS расширит доступные ресурсы веб-сервера для обслуживания запросов. Значение по умолчанию — 5000.
-		- usersCount * 1.5, где usersCount — количество одновременно работающих пользователей
-	- QueueLength — максимальное количество запросов, которые драйвер Http.sys размещает в очереди пула приложений
 
 ## log-parser
 
@@ -56,3 +80,13 @@
 - https://docs.microsoft.com/en-us/iis/troubleshoot/performance-issues/troubleshooting-iis-performance-issues-or-application-errors-using-logparser
 - !!! https://docs.microsoft.com/en-us/iis/troubleshoot/performance-issues/troubleshooting-high-cpu-in-an-iis-7x-application-pool
 - http://software-testing.ru/library/testing/performance-testing/468-weblog 
+
+## Трассировка
+
+- [FREB](https://blogs.msdn.microsoft.com/docast/2016/04/28/troubleshooting-iis-request-performance-slowness-issues-using-freb-tracing/)
+- [CPU, ERROR, RAM leak](https://www.iis.net/learn/troubleshoot/performance-issues)
+
+## Мониторинг
+
+- [Zabbix Agent Metric](https://www.zabbix.com/integrations/iis)
+- [Grafana](https://grafana.com/docs/grafana-cloud/data-configuration/integrations/integration-reference/integration-microsoft-iis/)

@@ -1,6 +1,14 @@
 # WCF
 
+- [WCF](#wcf)
+  - [Зачем](#зачем)
+  - [Производительность](#производительность)
+  - [Трассировка](#трассировка)
+
+## Зачем
+
 Windows Communication Foundation (WCF) — это платформа для создания приложений, ориентированных на службы.
+Возможности:
 
 - [Transaction](https://www.c-sharpcorner.com/uploadfile/shivprasadk/wcf-faq-part-5-transactions/)
 
@@ -11,11 +19,15 @@ Windows Communication Foundation (WCF) — это платформа для со
   - Создание экземпляров означает управление временем жизни определенных пользователем
     - __объектов службы__
     - и связанных с ними __объектов InstanceContext__.
-      - __параллелизм__ означает управление __количеством потоков__, одновременно выполняющихся в некотором контексте InstanceContext .
+      - __параллелизм__ означает управление __количеством потоков__, одновременно выполняющихся в некотором контексте InstanceContext.
       - ограничивается
-        - [MaxConcurrentSessions](https://learn.microsoft.com/ru-ru/dotnet/framework/wcf/wcf-troubleshooting-quickstart#my-service-starts-to-reject-new-clients-after-about-10-clients-are-interacting-with-it-what-is-happening) - максимальное __количество сеансов__, которые может принимать объект ServiceHost одновременно, default=10. Служба отклоняет подключения новых клиентов, пока не будет закрыт один из текущих сеансов.
-        - MaxConcurrentCalls - максимальное __количество обрабатываемых сообщений__ в ServiceHost, default=16 х число процессоров.
+        - [MaxConcurrentSessions](https://learn.microsoft.com/ru-ru/dotnet/framework/wcf/wcf-troubleshooting-quickstart#my-service-starts-to-reject-new-clients-after-about-10-clients-are-interacting-with-it-what-is-happening) - максимальное __количество сеансов__, которые может принимать объект ServiceHost одновременно. Служба отклоняет подключения новых клиентов, пока не будет закрыт один из текущих сеансов.
+          - default=10 100 * Processor Count
+        - MaxConcurrentCalls - максимальное __количество обрабатываемых сообщений__ в ServiceHost
+          - default=16 х число процессоров.
         - [MaxConcurrentInstances](https://learn.microsoft.com/ru-ru/dotnet/api/system.servicemodel.description.servicethrottlingbehavior.maxconcurrentinstances?view=netframework-4.8.1) - максимальное количество __одновременно выполняющихся объектов InstanceContext__ в службе
+          - default=int.MaxValue if not specified, otherwise 116 * Processor Count
+          - [Sum of maxConcurrentCalls and maxConcurrentSession](https://codewala.net/2014/10/14/simple-steps-scale-up-wcf-drastically/)
 - [ConcurrencyMode](https://learn.microsoft.com/ru-ru/dotnet/api/system.servicemodel.servicebehaviorattribute.concurrencymode?view=netframework-4.8.1&source=recommendations)
   - Single приводит к тому, что система не дает __экземплярам службы одновременно выполнять более одного потока__, что позволяет избежать решения вопросов многопоточности.
   - Multiple означает, что __объекты службы__ могут выполняться __несколькими потоками одновременно__. В этом случае необходимо обеспечить безопасность потоков.
@@ -30,7 +42,7 @@ Windows Communication Foundation (WCF) — это платформа для со
 - [метрики производительности](https://learn.microsoft.com/ru-ru/dotnet/framework/wcf/diagnostics/performance-counters/)
   - [пример настройки](https://www.codeproject.com/Articles/431917/WCF-Service-Performance-Monitoring-using-Perfmon)
     - __нужно включить__ в конфигурации сервиса
-  - [варианты](https://codecoma.wordpress.com/2013/08/08/wcf-performance-counters-for-servicemodelservice-4-0-0-0/)
+  - [варианты метрик](https://codecoma.wordpress.com/2013/08/08/wcf-performance-counters-for-servicemodelservice-4-0-0-0/)
   - категории  
     - объект производительности ServiceModelService 4.0.0.0
     - объект производительности ServiceModelEndpoint 4.0.0.0
@@ -38,7 +50,8 @@ Windows Communication Foundation (WCF) — это платформа для со
 
 ## Трассировка
 
-[Виды](https://learn.microsoft.com/ru-ru/dotnet/framework/wcf/diagnostics/tracing/significant-traces)
-
-- Трассировка журнала сообщений
-  - Существует четыре настраиваемые точки ведения журнала для сообщения: ServiceLevelSendRequest, TransportSend, TransportReceive, ServiceLevelReceiveRequest.
+- [Настройка сбора данных](https://learn.microsoft.com/ru-ru/dotnet/framework/wcf/diagnostics/tracing/configuring-tracing)
+- Просмотр [трассировки](https://learn.microsoft.com/ru-ru/dotnet/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe)
+- [Виды](https://learn.microsoft.com/ru-ru/dotnet/framework/wcf/diagnostics/tracing/significant-traces)
+  - Трассировка журнала сообщений
+    - Существует четыре настраиваемые точки ведения журнала для сообщения: ServiceLevelSendRequest, TransportSend, TransportReceive, ServiceLevelReceiveRequest.

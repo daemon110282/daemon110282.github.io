@@ -26,7 +26,7 @@
 - Приложения
   - Direct
     - [API REST](../../api/api.md)
-    - SOAP, WCF, ODATA
+    - SOAP, [WCF](../../technology/protocols.integration/wcf.md), ODATA
     - [GraphQL](../../technology/protocols.integration/graphql.md)
   - Remote Procedure Invocation (RPC)
     - __Двунаправленная связь__ для обмена сообщениями между клиентом и сервером

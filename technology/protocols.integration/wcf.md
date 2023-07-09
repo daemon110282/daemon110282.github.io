@@ -5,6 +5,12 @@
   - [Производительность](#производительность)
   - [Трассировка](#трассировка)
 
+TODO
+
+- [web garden?](https://iis-blogs.azurewebsites.net/chrisad/1342059) defaultapppool/maxprocesses 4
+- [config edit tool](https://learn.microsoft.com/ru-ru/dotnet/framework/wcf/configuration-editor-tool-svcconfigeditor-exe)
+- [WCF on IIS7 process flow](https://krishnansrinivasan.wordpress.com/2014/08/18/throttling-wcf-services-on-iis7/)
+
 ## Зачем
 
 Windows Communication Foundation (WCF) — это платформа для создания приложений, ориентированных на службы.
@@ -32,13 +38,13 @@ Windows Communication Foundation (WCF) — это платформа для со
   - Single приводит к тому, что система не дает __экземплярам службы одновременно выполнять более одного потока__, что позволяет избежать решения вопросов многопоточности.
   - Multiple означает, что __объекты службы__ могут выполняться __несколькими потоками одновременно__. В этом случае необходимо обеспечить безопасность потоков.
 - [InstanceContextMode](https://learn.microsoft.com/ru-ru/dotnet/api/system.servicemodel.servicebehaviorattribute.instancecontextmode?view=netframework-4.8.1) - когда создаются новые объекты службы
-  - PerCall - не поддерживает __параллелизм__
+  - PerCall - не поддерживает __параллелизм__??
   - PerSession - default
   - [Single](https://www.tutorialspoint.com/wcf/wcf_quick_guide.htm)
 - [Session Mode](https://learn.microsoft.com/ru-ru/dotnet/framework/wcf/using-sessions?source=recommendations)
   - Required
   - Allowed
-  - NotAllowed
+  - NotAllowed - [Откажитесь от сессий](https://wcfnet.wordpress.com/2012/01/20/wcf-design-best-practice/)
 - [метрики производительности](https://learn.microsoft.com/ru-ru/dotnet/framework/wcf/diagnostics/performance-counters/)
   - [пример настройки](https://www.codeproject.com/Articles/431917/WCF-Service-Performance-Monitoring-using-Perfmon)
     - __нужно включить__ в конфигурации сервиса
@@ -55,3 +61,6 @@ Windows Communication Foundation (WCF) — это платформа для со
 - [Виды](https://learn.microsoft.com/ru-ru/dotnet/framework/wcf/diagnostics/tracing/significant-traces)
   - Трассировка журнала сообщений
     - Существует четыре настраиваемые точки ведения журнала для сообщения: ServiceLevelSendRequest, TransportSend, TransportReceive, ServiceLevelReceiveRequest.
+      - Service Level : At this level the message is logged when it is about to leave or enter the code. Secure messages are logged decrypted at this level.
+      - Transport Level : At this level messages are logged just before getting encoded or after getting decoded for transmission over wire. Even reliable messaging messages are logged.
+      - Malformed Level : All the messages which WCF fails to process due to improper format gets logged.

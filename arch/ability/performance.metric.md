@@ -90,8 +90,8 @@ To-do
 - [Response Time Время отлика](https://blog.hubspot.com/website/api-response-time) - __[1-2 сек](https://sematext.com/glossary/response-time/)__:
   - DNS Lookup Time  
   - Authentication and connection time
-  - Redirect Time 
+  - Redirect Time
   - Time to First Byte
   - Time to Last byte
-  - Benchmark 
+  - Benchmark
     - [JMeter](https://www.guru99.com/response-time-testing.html)

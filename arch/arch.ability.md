@@ -55,7 +55,8 @@
   - [Готовность Доступность Availability (Эксплуатационные)](ability/availability.md)
   - Согласованность Consistency (Эксплуатационные)
   - [Отказоустойчивость Fault tolerance](ability/faulttolerance.md)
-  - Стабильность (Изоляция сбоев)
+  - Стабильность (Изоляция сбоев) Resilience
+    - [Chaos Engineering](pattern/chaos.eng.md)
   - Живучесть Robustness
   - Recoverability
 - [Производительность Performance](ability/performance.md) (Эксплуатационные)

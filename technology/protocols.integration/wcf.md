@@ -29,10 +29,11 @@ Windows Communication Foundation (WCF) — это платформа для со
     - и связанных с ними __объектов InstanceContext__.
       - __параллелизм__ означает управление __количеством потоков__, одновременно выполняющихся в некотором контексте InstanceContext.
       - ограничивается
-        - [MaxConcurrentSessions](https://learn.microsoft.com/ru-ru/dotnet/framework/wcf/wcf-troubleshooting-quickstart#my-service-starts-to-reject-new-clients-after-about-10-clients-are-interacting-with-it-what-is-happening) - максимальное __количество сеансов__, которые может принимать объект ServiceHost одновременно. Служба отклоняет подключения новых клиентов, пока не будет закрыт один из текущих сеансов.
+        - [MaxConcurrentSessions](https://learn.microsoft.com/ru-ru/dotnet/framework/wcf/wcf-troubleshooting-quickstart#my-service-starts-to-reject-new-clients-after-about-10-clients-are-interacting-with-it-what-is-happening) - максимальное __количество сеансов__, которые может принимать объект ServiceHost одновременно          
           - default=10 100 * Processor Count
+          - Служба отклоняет подключения новых клиентов, пока не будет закрыт один из текущих сеансов.
         - MaxConcurrentCalls - максимальное __количество обрабатываемых сообщений__ в ServiceHost
-          - default=16 х число процессоров.
+          - default=16 х число процессоров               
         - [MaxConcurrentInstances](https://learn.microsoft.com/ru-ru/dotnet/api/system.servicemodel.description.servicethrottlingbehavior.maxconcurrentinstances?view=netframework-4.8.1) - максимальное количество __одновременно выполняющихся объектов InstanceContext__ в службе
           - default=int.MaxValue if not specified, otherwise 116 * Processor Count
           - [Sum of maxConcurrentCalls and maxConcurrentSession](https://codewala.net/2014/10/14/simple-steps-scale-up-wcf-drastically/)
@@ -43,18 +44,63 @@ Windows Communication Foundation (WCF) — это платформа для со
   - PerCall - не поддерживает __параллелизм__??
   - PerSession - default
   - [Single](https://www.tutorialspoint.com/wcf/wcf_quick_guide.htm)
-- [Session Mode](https://learn.microsoft.com/ru-ru/dotnet/framework/wcf/using-sessions?source=recommendations)
+- Сеансы [Session Mode](https://learn.microsoft.com/ru-ru/dotnet/framework/wcf/using-sessions?source=recommendations)
   - Required
   - Allowed
   - NotAllowed - [откажитесь от сессий?](https://wcfnet.wordpress.com/2012/01/20/wcf-design-best-practice/)
 - [метрики производительности](https://learn.microsoft.com/ru-ru/dotnet/framework/wcf/diagnostics/performance-counters/)
   - [пример настройки](https://www.codeproject.com/Articles/431917/WCF-Service-Performance-Monitoring-using-Perfmon)
-    - __нужно включить__ в конфигурации сервиса
-  - [варианты метрик](https://codecoma.wordpress.com/2013/08/08/wcf-performance-counters-for-servicemodelservice-4-0-0-0/)
+    - __нужно включить__ в конфигурации сервиса  
+  - [варианты метрик](https://codecoma.wordpress.com/2013/08/08/wcf-performance-counters-for-servicemodelservice-4-0-0-0/) подробнее раздел Performance Metric
   - категории  
     - объект производительности ServiceModelService 4.0.0.0
     - объект производительности ServiceModelEndpoint 4.0.0.0
     - объект производительности ServiceModelOperation 4.0.0.0
+
+## Performance Metric
+
+- [варианты](https://codecoma.wordpress.com/2013/08/08/wcf-performance-counters-for-servicemodelservice-4-0-0-0/)
+- Calls by Operation\Service\Endpoint
+  Calls
+  [Calls Duration](https://learn.microsoft.com/en-us/dotnet/framework/wcf/diagnostics/performance-counters/calls-duration) - единица измерения?
+  Calls Failed
+  Calls Failed Per Second
+  Calls Faulted
+  Calls Faulted Per Second
+  Calls Outstanding
+  Calls Per Second
+- Instances by Service
+  Instances Created Per Second
+- Parallelism by Service
+  [Percent Of Max Concurrent Calls](https://learn.microsoft.com/en-us/dotnet/framework/wcf/diagnostics/performance-counters/percent-of-max-concurrent-calls)
+  Percent Of Max Concurrent Instances
+  Percent Of Max Concurrent Sessions
+- Queue by Service
+  Queued Messages Dropped
+  Queued Messages Dropped Per Second
+  Queued Messages Rejected
+  Queued Messages Rejected Per Second
+  Queued Poison Messages
+  Queued Poison Messages Per Second
+- Reliable Messaging by Service\Endpoint
+  Reliable Messaging Messages Dropped
+  Reliable Messaging Messages Dropped Per Second
+  Reliable Messaging Sessions Faulted
+  Reliable Messaging Sessions Faulted Per Second
+- Security
+  Security Calls Not Authorized
+  Security Calls Not Authorized Per Second
+  Security Validation and Authentication Failures
+  Security Validation and Authentication Failures Per Second
+- Transaction
+  Transacted Operations Aborted
+  Transacted Operations Aborted Per Second
+  Transacted Operations Committed
+  Transacted Operations Committed Per Second
+  Transacted Operations In Doubt
+  Transacted Operations In Doubt Per Second
+  Transactions Flowed
+  Transactions Flowed Per Second
 
 ## Трассировка
 

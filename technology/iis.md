@@ -65,13 +65,13 @@
 
 - [iis perf counters](https://msdn.microsoft.com/en-us/library!/ms972959.aspx?f=255&MSPPError=-2147217396)
   - [Performance Counters for ASP.NET](https://msdn.microsoft.com/en-us/library/fxk122b4.aspx)
+  - Performance Counters for [WCF service](protocols.integration/wcf.md) дополнительно
 - RPS
 	- ASP.NET\Requests Current - суммарное количество выполняющихся в настоящее время запросов. Значение этого счетчика включает в себя число обрабатывающися запросов, находящихся в очереди и ожидающих отправки клиенту. Если это значение превышает параметр requestQueueLimit, который расположен в секции processModelsection файла конфигурации веб-сервера, то последующие запросы будут отбрасываться
 		- [View Currently Executing Requests in a Worker Process (IIS 7)](https://technet.microsoft.com/en-us/library/cc732518(v=ws.10).aspx)
 		- [IIS->Worker process->View Current Request](https://habrahabr.ru/post/250881/)
 	- ASP.NET Application\Requests Executing - показывает количество одновременно выполняющихся запросов
 	- ASP.NET Application\Requests/sec - текущую пропускную способность приложения
-	- [WCF service](protocols.integration/wcf.md)
 - Duration Latency
 	- ASP.NET Application\Request Execution Time - время выполнения (в мс) последнего запроса
 	- Queue

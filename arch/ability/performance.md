@@ -14,16 +14,16 @@
 [Паттерны](../pattern/pattern.perf.md)
 
   - [Балансировка](../pattern/load.balancing.md)
-  - concurrency
+  - concurrency - параллелизм
 
 ## web app
 
 - WIN32_ERROR_DESCRIPTION(sc-win32-status) as Description, TO_LOCALTIME
-- НТ метрика от. Netexport записать, эталон. Конфигурация ПК клиента. С кешем из firebug. Yslow, pagespeed
+- НТ метрика от. Netexport записать, эталон. Конфигурация ПК клиента. С кешем из firebug.
 - тайминг логировать
 - Yslow, page speed chrome
-- HTTP Error 503.2 — Service Unavailable в логах IIS есть - __очередь запросов__
-- The Time-Taken - field shows the length of time that it takes for a request to be processed and its response to be sent.  
+- HTTP Error 503.2 — Service Unavailable в логах [IIS](../../technology/iis.md) есть - __очередь запросов__
+- The __Time-Taken__ - field shows the length of time that it takes for a request to be processed and its response to be sent.  
   - This value gets calculated by a timer that gets initialized when the __IIS server receives the first byte of an HTTP request__, and stopped when the __last IIS response send operation completes__.  
   - It is important to note that the Time-Taken field __usually includes the time that the request and response packets are travelling over the network__.
   - Время когда был рост времени ответа совпадает с current connection пиками?

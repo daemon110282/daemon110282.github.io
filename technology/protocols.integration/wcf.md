@@ -8,8 +8,6 @@
 TODO
 
 - [web garden?](https://iis-blogs.azurewebsites.net/chrisad/1342059) defaultapppool/maxprocesses 4
-- [config edit tool](https://learn.microsoft.com/ru-ru/dotnet/framework/wcf/configuration-editor-tool-svcconfigeditor-exe)
-- [WCF on IIS7 process flow](https://krishnansrinivasan.wordpress.com/2014/08/18/throttling-wcf-services-on-iis7/)
 
 ## Зачем
 
@@ -17,9 +15,13 @@ Windows Communication Foundation (WCF) — это платформа для со
 Возможности:
 
 - [Transaction](https://www.c-sharpcorner.com/uploadfile/shivprasadk/wcf-faq-part-5-transactions/)
+- [config edit tool](https://learn.microsoft.com/ru-ru/dotnet/framework/wcf/configuration-editor-tool-svcconfigeditor-exe)
 
 ## Производительность
 
+[ability](../../arch/ability/performance.md)
+
+- [WCF on IIS7 process flow](https://krishnansrinivasan.wordpress.com/2014/08/18/throttling-wcf-services-on-iis7/)
 - [параллелизм](https://learn.microsoft.com/ru-ru/dotnet/framework/wcf/feature-details/sessions-instancing-and-concurrency)
   - Под __сеансом__ понимается скоррелированный набор всех сообщений, переданных между двумя конечными точками.
   - Создание экземпляров означает управление временем жизни определенных пользователем
@@ -44,7 +46,7 @@ Windows Communication Foundation (WCF) — это платформа для со
 - [Session Mode](https://learn.microsoft.com/ru-ru/dotnet/framework/wcf/using-sessions?source=recommendations)
   - Required
   - Allowed
-  - NotAllowed - [Откажитесь от сессий](https://wcfnet.wordpress.com/2012/01/20/wcf-design-best-practice/)
+  - NotAllowed - [откажитесь от сессий?](https://wcfnet.wordpress.com/2012/01/20/wcf-design-best-practice/)
 - [метрики производительности](https://learn.microsoft.com/ru-ru/dotnet/framework/wcf/diagnostics/performance-counters/)
   - [пример настройки](https://www.codeproject.com/Articles/431917/WCF-Service-Performance-Monitoring-using-Perfmon)
     - __нужно включить__ в конфигурации сервиса

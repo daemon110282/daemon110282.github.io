@@ -2,6 +2,8 @@
 
 - [IIS](#iis)
 	- [Метрики производительности](#метрики-производительности)
+		- [HTTP.SYS](#httpsys)
+		- [ASP.NET: CLR Thread](#aspnet-clr-thread)
 		- [worker process](#worker-process)
 		- [Application Pool](#application-pool)
 		- [APP](#app)
@@ -9,15 +11,31 @@
 	- [Трассировка](#трассировка)
 	- [Мониторинг](#мониторинг)
 
-Структура:
+Процесс обработки запроса и основные компоненты:
 
-- IIS Worker Processes
-	- IIS App pool1
-		- ASP.NET App1
-		- ASP.NET App2
-	- IIS App pool2
+- [IIS7](https://krishnansrinivasan.wordpress.com/2014/08/18/throttling-wcf-services-on-iis7/), на разных версиях IIS может отличаться
+  - [HTTP.SYS](#httpsys)
+  - ASP.NET: [CLR Thread](#aspnet-clr-thread)
+  - [IIS Worker Processes](#worker-process)
+  	- IIS [App pool1](#application-pool)
+    	- [WCF Service](protocols.integration/wcf.md)
+    		- ASP.NET [App1](#app)
+    		- ASP.NET App2
+  	- IIS App pool2
 
 ## Метрики производительности
+
+[ability](../arch/ability/performance.md)
+
+### HTTP.SYS
+
+- Queue
+  - Http Service Request Queues\CurrentQueueSize
+
+### ASP.NET: CLR Thread
+
+- Queue
+  - ASP.NET v4.0.30319\Requests Queued - limit Process Model’s [RequestQueueLimit](https://krishnansrinivasan.wordpress.com/2014/08/18/throttling-wcf-services-on-iis7/)
 
 ### worker process
 

@@ -80,8 +80,6 @@
 		- Проверьте логи на наличие ошибки "HTTP Error 503.2 — Service Unavailable". Постарайтесь определить, не блокируется ли часть запросов в очереди
 - Error
 	- Requests Rejected Отклонено запросов – Общее количество невыполненных запросов ввиду __нехватки ресурсов сервера__ на их обработку.
-	- IIS Failed Request Tracing
-	- [fiddler on iis app](http://www.markhneedham.com/blog/2009/06/24/using-fiddler-with-iis/)
 - ASP.NET Sessions
 	- ASP.NET\Sessions Timed Out - Количество сеансов, время ожидания которых истекло.
 	- ASP.NET\Sessions Total
@@ -101,6 +99,9 @@
 
 ## Трассировка
 
+IIS Failed Request Tracing
+
+- [fiddler on iis app](http://www.markhneedham.com/blog/2009/06/24/using-fiddler-with-iis/)
 - [FREB](https://blogs.msdn.microsoft.com/docast/2016/04/28/troubleshooting-iis-request-performance-slowness-issues-using-freb-tracing/)
 - [CPU, ERROR, RAM leak](https://www.iis.net/learn/troubleshoot/performance-issues)
 

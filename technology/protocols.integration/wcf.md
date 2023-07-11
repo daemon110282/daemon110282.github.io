@@ -80,7 +80,7 @@ Windows Communication Foundation (WCF) — это платформа для со
   Queued Messages Dropped Per Second
   Queued Messages Rejected
   Queued Messages Rejected Per Second
-  Queued Poison Messages
+  Queued Poison Messages - Количество сообщений, помеченных как отравленные поставленным в очередь транспортом в службу.
   Queued Poison Messages Per Second
 - Reliable Messaging by Service\Endpoint
   Reliable Messaging Messages Dropped

@@ -84,6 +84,10 @@ TODO
       - [пример, мониторинг тунеля](https://habr.com/ru/companies/solarsecurity/articles/471470/)
     - программно-аппаратный комплекс [Infotecs VipNet](https://infotecs.ru/products/)
       - [пример](https://habr.com/ru/companies/solarsecurity/articles/514896/)
+  - выбор
+    - https://ib-bank.ru/bisjournal/post/1210 		
+    - https://cisoclub.ru/sravnenie-korporativnyh-sredstv-zashhity-udalennogo-dostupa/		
+    - [хорошее сравнение](https://www.anti-malware.ru/compare/certified-russian-TLS-gateways)
 - Криптоалгоритмы международные RSA
 
 - [Проверка алгоритма подписи примененного к сертификату](https://sysos.ru/?p=589)

@@ -52,6 +52,7 @@ TODO
 ## Шифрование канала связи (трафика) mTLS, VPN туннель 
 
 Технологии и протоколы шифрования и имитозащиты передаваемого трафика:
+
 - [SSL\TLS VPN](https://www.pvsm.ru/vpn/32300)  
 - IPSec VPN (RFC2401-2412)
   - [host to net](https://habr.com/ru/articles/504484/)
@@ -64,15 +65,17 @@ TODO
 - Криптоалгоритмы [ГОСТ Р 34.10-2012, ГОСТ 34.10-18](https://qsetup.ru/gost-vpn-chto-eto/) 256 бит
   - необходимо использовать __сертифицированные ФСБ РФ СКЗИ__
   - Open Source
-    - на основе OpenSSL - полноценная криптографическая библиотека с открытым исходным кодом, широко известна из-за расширения SSL/TLS, используемого в веб-протоколе HTTPS. Поддерживает почти все низкоуровневые алгоритмы хеширования, шифрования и электронной подписи, а также реализует большинство популярных криптографических стандартов, в том числе позволяет создавать ключи RSA, DH, DSA, сертификаты X.509, подписывать их, формировать CSR и CRT, шифровать данные и тестировать SSL/TLS соединения.        
+    - на основе __криптобиблиотеки OpenSSL__ - __полноценная криптографическая библиотека с открытым исходным кодом__, широко известна из-за расширения SSL/TLS, используемого в веб-протоколе HTTPS. Поддерживает почти все низкоуровневые алгоритмы хеширования, шифрования и электронной подписи, а также реализует большинство популярных криптографических стандартов, в том числе позволяет создавать ключи RSA, DH, DSA, сертификаты X.509, подписывать их, формировать CSR и CRT, шифровать данные и тестировать SSL/TLS соединения.        
       - Proxy nginx 
         - 2022 nginx 1.23.2 + openssl 3.0.5 + gost engine 3.0.1 + TLSv1.2 [docker образ](https://github.com/vheathen/docker-nginx-openssl3-gost)
         - 2018 [docker образ](https://habr.com/ru/articles/353534/) [GIT](https://github.com/rnixik/docker-openssl-gost)
           - Библиотека OpenSSL 1.1.0g 
           - [gost-engine](https://github.com/gost-engine/engine) - reference implementation of the Russian [ГОСТ крипоалгоритмы](https://github.com/gost-engine/engine/blob/master/README.prov.md) for OpenSSL
-      - [stunnel](https://habr.com/ru/companies/aktiv-company/articles/477650/) - программа, на которую можно переложить всю логику шифрования трафика между сервером и клиентом
+      - [stunnel](https://habr.com/ru/companies/aktiv-company/articles/477650/) - программа, на которую можно переложить всю логику [шифрования трафика](https://www.stunnel.org/docs.html) между сервером и клиентом
         - stunnel:port openssl-gost-stunnel (>=v.1.0.2)
-    - на основе КриптоПро
+        - шифрование через openssl и [gost-engine](https://github.com/gost-engine/engine)
+        - [docker-openssl-gost](https://github.com/rnixik/docker-openssl-gost)
+    - на основе __криптобиблиотек КриптоПро__
       - Nginx вариант с библиотекой [КриптоПро](https://habr.com/ru/articles/353534/#comment_10757142)
       - 2018 [Docker контейнер с CryptoPro 4 и nginx](https://github.com/navyzet/crypto-proxy)
       - Win Server [IPSec VPN](https://itnan.ru/post.php?c=1&p=328770) с КриптоПро CSP и [КриптоПро IPSec](https://www.cryptopro.ru/products/ipsec/vpngost)

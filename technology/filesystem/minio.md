@@ -47,6 +47,7 @@
 		- Internal IDP	
 		- security access by [IAM Keycloak](https://min.io/product/identity-and-access-management) OIDC protocol
 		- LDAP
+	- [Audit requests](https://min.io/docs/minio/linux/operations/monitoring/minio-logging.html#minio-logging-publish-audit-logs)
 - MTA
 	- [MinIO Operator](https://blog.min.io/secure-multi-tenant-object-storage/)
 	- Варианты [Guide Deploy](https://github.com/minio/minio/blob/master/docs/multi-tenancy/README.md)

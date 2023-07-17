@@ -24,30 +24,30 @@ Windows Communication Foundation (WCF) — это платформа для со
 - [WCF on IIS7 process flow](https://krishnansrinivasan.wordpress.com/2014/08/18/throttling-wcf-services-on-iis7/)
 - [параллелизм](https://learn.microsoft.com/ru-ru/dotnet/framework/wcf/feature-details/sessions-instancing-and-concurrency)
   - Под __сеансом__ понимается скоррелированный набор всех сообщений, переданных между двумя конечными точками.
-  - Создание экземпляров означает управление временем жизни определенных пользователем
-    - __объектов службы__
+  - Создание __экземпляров сервиса__ означает управление временем жизни определенных пользователем
+    - __объектов сервиса
     - и связанных с ними __объектов InstanceContext__.
       - __параллелизм__ означает управление __количеством потоков__, одновременно выполняющихся в некотором контексте InstanceContext.
       - ограничивается
-        - [MaxConcurrentSessions](https://learn.microsoft.com/ru-ru/dotnet/framework/wcf/wcf-troubleshooting-quickstart#my-service-starts-to-reject-new-clients-after-about-10-clients-are-interacting-with-it-what-is-happening) - максимальное __количество сеансов__, которые может принимать объект ServiceHost одновременно          
-          - default=10 100 * Processor Count
-          - Служба отклоняет подключения новых клиентов, пока не будет закрыт один из текущих сеансов.
-        - MaxConcurrentCalls - максимальное __количество обрабатываемых сообщений__ в ServiceHost
-          - default=16 х число процессоров               
+        - [MaxConcurrentSessions](https://learn.microsoft.com/ru-ru/dotnet/framework/wcf/wcf-troubleshooting-quickstart#my-service-starts-to-reject-new-clients-after-about-10-clients-are-interacting-with-it-what-is-happening) - максимальное __количество сеансов__, которые может принимать объект сервиса ServiceHost одновременно          
+          - default=10 100*Processor Count
+          - Сервис отклоняет подключения новых клиентов, пока не будет закрыт один из текущих сеансов.
+        - MaxConcurrentCalls - максимальное __количество обрабатываемых запросов__ в одном экземляре сервиса ServiceHost
+          - default=16*число процессоров               
         - [MaxConcurrentInstances](https://learn.microsoft.com/ru-ru/dotnet/api/system.servicemodel.description.servicethrottlingbehavior.maxconcurrentinstances?view=netframework-4.8.1) - максимальное количество __одновременно выполняющихся объектов InstanceContext__ в службе
-          - default=int.MaxValue if not specified, otherwise 116 * Processor Count
+          - default=int.MaxValue if not specified, otherwise 116*Processor Count
           - [Sum of maxConcurrentCalls and maxConcurrentSession](https://codewala.net/2014/10/14/simple-steps-scale-up-wcf-drastically/)
 - [ConcurrencyMode](https://learn.microsoft.com/ru-ru/dotnet/api/system.servicemodel.servicebehaviorattribute.concurrencymode?view=netframework-4.8.1&source=recommendations)
   - Single приводит к тому, что система не дает __экземплярам службы одновременно выполнять более одного потока__, что позволяет избежать решения вопросов многопоточности.
   - Multiple означает, что __объекты службы__ могут выполняться __несколькими потоками одновременно__. В этом случае необходимо обеспечить безопасность потоков.
 - [InstanceContextMode](https://learn.microsoft.com/ru-ru/dotnet/api/system.servicemodel.servicebehaviorattribute.instancecontextmode?view=netframework-4.8.1) - когда создаются новые объекты службы
-  - PerCall - не поддерживает __параллелизм__??
-  - PerSession - default
-  - [Single](https://www.tutorialspoint.com/wcf/wcf_quick_guide.htm)
+  - PerCall - на запрос - параллелизм не имеет значения, так как каждое сообщение обрабатывается новым InstanceContext и, следовательно, никогда не активируется более одного потока в InstanceContext.
+  - PerSession - на сеанс - default
+  - [Single](https://www.tutorialspoint.com/wcf/wcf_quick_guide.htm) - все запросы клиентов за время существования приложения обрабатываются одним контекстом InstanceContext
 - Сеансы [Session Mode](https://learn.microsoft.com/ru-ru/dotnet/framework/wcf/using-sessions?source=recommendations)
   - Required
   - Allowed
-  - NotAllowed - [откажитесь от сессий?](https://wcfnet.wordpress.com/2012/01/20/wcf-design-best-practice/)
+  - NotAllowed - [откажитесь от сессий для масштабирования - Stateless](https://wcfnet.wordpress.com/2012/01/20/wcf-design-best-practice/)
 - [метрики производительности](https://learn.microsoft.com/ru-ru/dotnet/framework/wcf/diagnostics/performance-counters/)
   - [пример настройки](https://www.codeproject.com/Articles/431917/WCF-Service-Performance-Monitoring-using-Perfmon)
     - __нужно включить__ в конфигурации сервиса  
@@ -61,46 +61,46 @@ Windows Communication Foundation (WCF) — это платформа для со
 
 - [варианты](https://codecoma.wordpress.com/2013/08/08/wcf-performance-counters-for-servicemodelservice-4-0-0-0/)
 - Calls by Operation\Service\Endpoint
-  Calls
-  [Calls Duration](https://learn.microsoft.com/en-us/dotnet/framework/wcf/diagnostics/performance-counters/calls-duration) - единица измерения?
-  Calls Failed
-  Calls Failed Per Second
-  Calls Faulted
-  Calls Faulted Per Second
-  Calls Outstanding
-  Calls Per Second
+  - Calls
+  - [Calls Duration](https://learn.microsoft.com/en-us/dotnet/framework/wcf/diagnostics/performance-counters/calls-duration) - единица измерения?
+  - Calls Failed
+  - Calls Failed Per Second
+  - Calls Faulted
+  - Calls Faulted Per Second
+  - Calls Outstanding
+  - Calls Per Second
 - Instances by Service
-  Instances Created Per Second
+  - Instances Created Per Second
 - Parallelism by Service
-  [Percent Of Max Concurrent Calls](https://learn.microsoft.com/en-us/dotnet/framework/wcf/diagnostics/performance-counters/percent-of-max-concurrent-calls)
-  Percent Of Max Concurrent Instances
-  Percent Of Max Concurrent Sessions
+  - [Percent Of Max Concurrent Calls](https://learn.microsoft.com/en-us/dotnet/framework/wcf/diagnostics/performance-counters/percent-of-max-concurrent-calls)
+  - Percent Of Max Concurrent Instances
+  - Percent Of Max Concurrent Sessions
 - Queue by Service
-  Queued Messages Dropped
-  Queued Messages Dropped Per Second
-  Queued Messages Rejected
-  Queued Messages Rejected Per Second
-  Queued Poison Messages - Количество сообщений, помеченных как отравленные поставленным в очередь транспортом в службу.
-  Queued Poison Messages Per Second
+  - Queued Messages Dropped
+  - Queued Messages Dropped Per Second
+  - Queued Messages Rejected
+  - Queued Messages Rejected Per Second
+  - Queued Poison Messages - Количество сообщений, помеченных как отравленные поставленным в очередь транспортом в службу.
+  - Queued Poison Messages Per Second
 - Reliable Messaging by Service\Endpoint
-  Reliable Messaging Messages Dropped
-  Reliable Messaging Messages Dropped Per Second
-  Reliable Messaging Sessions Faulted
-  Reliable Messaging Sessions Faulted Per Second
+  - Reliable Messaging Messages Dropped
+  - Reliable Messaging Messages Dropped Per Second
+  - Reliable Messaging Sessions Faulted
+  - Reliable Messaging Sessions Faulted Per Second
 - Security
-  Security Calls Not Authorized
-  Security Calls Not Authorized Per Second
-  Security Validation and Authentication Failures
-  Security Validation and Authentication Failures Per Second
+  - Security Calls Not Authorized
+  - Security Calls Not Authorized Per Second
+  - Security Validation and Authentication Failures
+  - Security Validation and Authentication Failures Per Second
 - Transaction
-  Transacted Operations Aborted
-  Transacted Operations Aborted Per Second
-  Transacted Operations Committed
-  Transacted Operations Committed Per Second
-  Transacted Operations In Doubt
-  Transacted Operations In Doubt Per Second
-  Transactions Flowed
-  Transactions Flowed Per Second
+  - Transacted Operations Aborted
+  - Transacted Operations Aborted Per Second
+  - Transacted Operations Committed
+  - Transacted Operations Committed Per Second
+  - Transacted Operations In Doubt
+  - Transacted Operations In Doubt Per Second
+  - Transactions Flowed
+  - Transactions Flowed Per Second
 
 ## Трассировка
 

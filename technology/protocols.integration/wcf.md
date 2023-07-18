@@ -70,6 +70,7 @@ Windows Communication Foundation (WCF) — это платформа для со
   - Calls Outstanding
   - Calls Per Second
 - Instances by Service
+  - Instances 
   - Instances Created Per Second
 - Parallelism by Service
   - [Percent Of Max Concurrent Calls](https://learn.microsoft.com/en-us/dotnet/framework/wcf/diagnostics/performance-counters/percent-of-max-concurrent-calls)
@@ -104,11 +105,13 @@ Windows Communication Foundation (WCF) — это платформа для со
 
 ## Трассировка
 
-- [Настройка сбора данных](https://learn.microsoft.com/ru-ru/dotnet/framework/wcf/diagnostics/tracing/configuring-tracing)
-- Просмотр [трассировки](https://learn.microsoft.com/ru-ru/dotnet/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe)
-- [Виды](https://learn.microsoft.com/ru-ru/dotnet/framework/wcf/diagnostics/tracing/significant-traces)
-  - Трассировка журнала сообщений
-    - Существует четыре настраиваемые точки ведения журнала для сообщения: ServiceLevelSendRequest, TransportSend, TransportReceive, ServiceLevelReceiveRequest.
-      - Service Level : At this level the message is logged when it is about to leave or enter the code. Secure messages are logged decrypted at this level.
-      - Transport Level : At this level messages are logged just before getting encoded or after getting decoded for transmission over wire. Even reliable messaging messages are logged.
-      - Malformed Level : All the messages which WCF fails to process due to improper format gets logged.
+- Средствами WCF 
+  - [Настройка сбора данных](https://learn.microsoft.com/ru-ru/dotnet/framework/wcf/diagnostics/tracing/configuring-tracing)
+  - Просмотр [трассировки](https://learn.microsoft.com/ru-ru/dotnet/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe)
+  - [Виды](https://learn.microsoft.com/ru-ru/dotnet/framework/wcf/diagnostics/tracing/significant-traces)
+    - Трассировка журнала сообщений
+      - Существует четыре настраиваемые точки ведения журнала для сообщения: ServiceLevelSendRequest, TransportSend, TransportReceive, ServiceLevelReceiveRequest.
+        - Service Level : At this level the message is logged when it is about to leave or enter the code. Secure messages are logged decrypted at this level.
+        - Transport Level : At this level messages are logged just before getting encoded or after getting decoded for transmission over wire. Even reliable messaging messages are logged.
+        - Malformed Level : All the messages which WCF fails to process due to improper format gets logged.
+- или через [FREB](https://www.thebestcsharpprogrammerintheworld.com/2016/06/07/lab-4-install-and-configure-failed-request-tracing/) on [WCF](https://www.thebestcsharpprogrammerintheworld.com/2017/01/16/can-you-trace-wcf-using-failed-request-tracing/)

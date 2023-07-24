@@ -81,7 +81,7 @@
     - Неизменяемый после создания
     - Используется для типизации и структурирования данных
   - Шаблон Спецификация для бизнес правил
-  - Domain event
+  - Domain event [Доменные события](https://habr.com/ru/companies/ispring/articles/569648/)
 - Слои приложения
   - Служба __Aplication Services__
   - Служба __Domain Services__ Interfaces

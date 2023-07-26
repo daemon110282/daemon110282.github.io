@@ -5,11 +5,10 @@
 	- [Поставка](#поставка)
 	- [Сервис](#сервис)
 	- [API](#api)
-	- [Links](#links)
 
 ## Аналитика
 
-TODO https://docs.google.com/document/d/1Z6-Mzzca5ASOoVVyQ1HmlzMt29Qfv146ZUZQFA4kDGQ/edit?usp=sharing
+- [TODO](https://docs.google.com/document/d/1Z6-Mzzca5ASOoVVyQ1HmlzMt29Qfv146ZUZQFA4kDGQ/edit?usp=sharing)
 
 Инварианты агрегата
 Требования пользователей, use-case, клик-событие, акторы
@@ -17,7 +16,7 @@ TODO https://docs.google.com/document/d/1Z6-Mzzca5ASOoVVyQ1HmlzMt29Qfv146ZUZQFA4
 Термины
 Бизнес-правила
 Impact mapping: зачем, кто, как, что в ис. Какую проблему решаем? Чтобы/что?
-Книги вигерс https://iiba.ru/top-20-books-on-business-analysis-for-business-analysts/
+[Книги вигерс](https://iiba.ru/top-20-books-on-business-analysis-for-business-analysts/)
 Бизнес-требования
 Бизнес процессы
 Функциональные требования

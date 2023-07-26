@@ -1,21 +1,29 @@
 # Паттерны отката изменения rollback
 
-- Возможность автоматизации процесса отката на предыдущую версию на уровне 
+- [Паттерны отката изменения rollback](#паттерны-отката-изменения-rollback)
+	- [Зачем](#зачем)
+	- [Подходы Deploy](#подходы-deploy)
+		- [Blue Green Deployment](#blue-green-deployment)
+	- [Технологии](#технологии)
+
+## Зачем
+
+- Возможность автоматизации процесса отката на предыдущую версию на уровне
 	- контейнеров
 	- бэкапов
 	- кода
-	- подходов [deploy](pattern.deploy.md)
+	- паттернов [Deploy](pattern.deploy.md)
 
-## Подходы deploy
+## Подходы Deploy
 
 - [Blue Green Deployment](https://docs.oracle.com/en/solutions/mod-app-deploy-strategies-oci/index.html#GUID-2207DEDA-718D-4264-B851-144EBF0E57CF) - одновременно работает и старая (green), и новая (blue) версия, но весь трафик направляет на новую, а если с ней возникают проблемы – то можно переключиться обратно на первую.
 
-## Blue Green Deployment
+### Blue Green Deployment
 
 Плюсы:
 
 - Downtime сокращается
-- Простота внедрения для __stateless ИС__ (микросервисной архитектуры) 
+- Простота внедрения для __stateless ИС__ (микросервисной архитектуры)
 - Необходимо применение автоматизированных подходов CI-CD и контейнеризации ([k8s](../../technology/ci-cd/k8s.md), ingress controler (Istio))
 
 Минусы:

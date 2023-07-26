@@ -54,11 +54,11 @@
 
 ## ms sql
 
-Monitoring + alerts
-System view dmv sql минус показывают общую статистику а не за период. При перезагрузке СУБД очищается
+- Monitoring + alerts
+- System view dmv sql минус показывают общую статистику а не за период. При перезагрузке СУБД очищается
 http://www.sqlskills.com/blogs/paul/wait-statistics-or-please-tell-me-where-it-hurts/
 https://www.google.ru/amp/s/blog.sqlauthority.com/2011/02/01/sql-server-wait-stats-wait-types-wait-queues-day-0-of-28-2/
-Описание ожиданий в BOL: https://msdn.microsoft.com/ru-ru/library/ms179984.aspx
+- Описание ожиданий в BOL: https://msdn.microsoft.com/ru-ru/library/ms179984.aspx
 Wait statistics
 https://blog.sqlauthority.com/2021/03/08/sql-server-wait-stats-collection-scripts-updated-march-2021/?amp
 PAGEIOLATCH_SH и PAGEIOLATCH_EX : см нагружающие запросы по вводу/выводу  https://msdn.microsoft.com/ru-ru/magazine/cc135978.aspx
@@ -66,11 +66,11 @@ https://blog.sqlauthority.com/2011/02/07/sql-server-cxpacket-parallelism-advance
 Cxpacket
 Maxdop см и cost Threshold
 De-fragmentation of Index can help as more data can be obtained per page. (Assuming close to 100 fill-factor)
-Data collection сбор авто метрик в период времени в отдел бд с sqlplan. Только в 2016? Нет с 2008. У нас 2012. Dwh 2016
-Индексы - избыток может увеличить io wait
+Data collection сбор авто метрик в период времени в отдельной бд с sqlplan. Только в 2016? Нет с 2008. У нас 2012. Dwh 2016
+- Индексы - избыток может увеличить io wait
 http://blogs.msmvps.com/gladchenko/2008/03/30/tips-for-dba-using-sys-dm_db_index_physical stats-in-a-script-to-rebuild-or-reorganize-indexes-no-partitions-sql-server-2005/
-Блокировки
-Настройки СУБД get
+- Блокировки
+- Настройки СУБД get
 SELECT * from sys.configurations ORDER BY name
 https://www.mssqltips.com/sqlservertip/6090/sql-server-configuration-settings-query/
 

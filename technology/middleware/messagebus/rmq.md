@@ -107,3 +107,4 @@
 
 - [Top metric](https://www.datadoghq.com/blog/rabbitmq-monitoring/)
 - Docker [perf test](https://rabbitmq.github.io/rabbitmq-perf-test/stable/htmlsingle/)
+- [Журнал трассировки сообщений](https://russianblogs.com/article/59013453419/)

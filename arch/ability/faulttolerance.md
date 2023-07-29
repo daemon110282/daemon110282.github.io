@@ -31,8 +31,8 @@
 - резервирование, [дублирование, кластеры, либо горизонтальное масштабирование](https://habr.com/ru/company/otus/blog/561630/).
 - Прокси, файервол, капча
 - [Балансировка](../pattern/load.balancing.md)
-- api management
-- Установка лимитов запросов rate limits, тайм-аут
+- [api management](../../api/api-managment.md)
+- Установка лимитов запросов [rate limits](../pattern/rate.limit.md), тайм-аут
 - Dev ops ci/cd:
   - [docker](../../technology/ci-cd/docker.md)
   - [kubernetes](../../technology/ci-cd/k8s.md)

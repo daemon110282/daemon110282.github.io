@@ -19,7 +19,7 @@ communication to multiple microservices?
     - Service discovery integration
     - Response caching
     - [Retry policies, circuit breaker, and QoS](../arch/pattern/pattern.failure.md)
-    - [Rate limiting](../arch/pattern/pattern.failure.md) and throttling
+    - [Rate limiting](../arch/pattern/rate.limit.md) and throttling
     - [Load balancing](../arch/pattern/load.balancing.md)
     - [Logging, tracing, correlation](../arch/ability/observability.md)
     - Headers, query strings, and claims transformation

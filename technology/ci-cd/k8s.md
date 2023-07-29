@@ -64,7 +64,7 @@
   - [Distributed storage](../../technology/filesystem/filesystem.md) - NFS
     - [Container Attached Storage (CAS) vs. Shared Storage](https://blog.mayadata.io/container-attached-storage-cas-vs.-shared-storage-which-one-to-choose)
   - [Object Storage](../../technology/filesystem/object.storage.md) - Minio
-- [Rate limiting](https://www.nginx.com/blog/microservices-march-protect-kubernetes-apis-with-rate-limiting/)
+- [Rate limiting](../../arch/pattern/rate.limit.md)
 - TODO Кол-во сервисов на контейнер
   - Ограничение кластера по подам на ноде?
   - создание маленьких контейнеров, т.к. контейнеры автоматически запускаются на разных хостах, и их меньший размер ускорит время запуска (поскольку предварительно их нужно физически скопировать на хостовую систему).

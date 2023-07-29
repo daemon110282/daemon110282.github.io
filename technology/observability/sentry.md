@@ -17,7 +17,7 @@
   - provides client libraries in every major programming language which instrument your software’s code to capture both error data and tracing telemetry
 - [APM](../../arch/system.class/apm.md)
 	- [Frontend](https://geekflare.com/frontend-web-monitoring/)
-	- performance bottlenecks in your code
+	- performance [bottlenecks in your code](https://docs.sentry.io/product/performance/performance-video/)
 - [Security and compliance](https://logz.io/learn/complete-guide-elk-stack/?utm_source=pocket_saves#common-pitfalls:~:text=guide%40logz.io-,Use%20Cases,-The%20ELK%20Stack)
 	- SIEM
 
@@ -75,6 +75,7 @@
 	![span](https://docs.sentry.io/static/1ae959bb1d05b01379cf856c5dc36a01/c1b63/diagram-transaction-trace.png)
 	- Trace -> Transaction -> Span
 	- Duration Span
+	- [FrontEnd to BackEnd trace demo](https://www.youtube.com/watch?v=GSW7zJ9qFXM)
 	- [PHP example](https://docs.sentry.io/platforms/php/performance/)
 - Alert
 	- [Telegram](https://github.com/butorov/sentry-telegram)

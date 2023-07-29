@@ -37,8 +37,4 @@
 
 - [stateless .net core](https://www.hanselman.com/blog/stateless-30-a-state-machine-library-for-net-core)
 - [spring State Machine](https://spring.io/projects/spring-statemachine)
-- bpms
-	- [zeebe-io?](https://blog.bernd-ruecker.com/how-we-built-a-highly-scalable-distributed-state-machine-f2595e3c0422) 
-	- camunda?
-	- apache activiti?
-	- Apache Airflow
+- [BPMS](../system.class/bpms.md)

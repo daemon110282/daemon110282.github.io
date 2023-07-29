@@ -129,6 +129,7 @@ __Не подходит__ для:
   - the API REST-based topology
   - application REST-based topology
   - the centralized messaging topology
+- нет [прямого взаимодействия микросервисов](https://habr.com/ru/articles/496934/) [API Gateway](../../api/api.gateway.md) или [Message Bus](eda.md)
 - Декомпозиции на сервисы
   - [Decompose by business capability Context](https://microservices.io/patterns/decomposition/decompose-by-business-capability.html)
   - [Decompose by subdomain Context](https://microservices.io/patterns/decomposition/decompose-by-subdomain.html)
@@ -140,21 +141,23 @@ __Не подходит__ для:
   - Proxy
   - Chained
   - Branch (Aggregator + Chained в связке)
+- Опишите микросервисы в виде блоков, решающих бизнес-задачу, и сделайте из них конструктор - __оркестрация бизнес-сервисов__ [BPMS](../system.class/bpms.md)
 - TODO
   - [Паттерны управления данными](https://mcs.mail.ru/blog/26-osnovnyh-patternov-mikroservisnoj-razrabotki)
   - [26 основных паттернов микросервисной разработки](https://mcs.mail.ru/blog/26-osnovnyh-patternov-mikroservisnoj-razrabotki)
 
-
 ### Принципы к проектированию сервисов
 
 - У сервиса должна быть [конкретная ответственность](https://habr.com/ru/companies/vk/articles/519354/). Если для его полноценного функционирования нужен ещё сервис, то это ошибка проектирования, их нужно либо объединять, либо пересматривать архитектуру.
-- Критично смотрим на любые синхронные обращения. Для сервисов в одном направлении это допустимо, но для общения между сервисами разных направлений — нет
-- Share nothing. Мы не ходим в БД сервисов в обход них самих. Все запросы только через API.
-- Specification First. Сначала описываем и утверждаем протоколы.
+- Критично смотрим __на любые синхронные обращения__. Для сервисов в одном направлении это допустимо, но для общения между сервисами разных направлений — нет
+- __Share nothing__ - Мы не ходим в БД сервисов в обход них самих. Все запросы только через API.
+- __Specification First__ - Сначала описываем и утверждаем протоколы.
 
 ## Технологии
 
 - Service Mesh
+- [API Gateway](../../api/api.gateway.md)
+- Service Discovery
 
 ## Reference Architecture
 

@@ -54,13 +54,23 @@ TODO
 Технологии и протоколы шифрования и имитозащиты передаваемого трафика:
 
 - [SSL\TLS VPN](https://www.pvsm.ru/vpn/32300)  
-- IPSec VPN (RFC2401-2412)
+- [Site-to-Site](https://docs.selectel.ru/servers-and-infrastructure/firewalls/fortigate/vpn-site-to-site/#:~:text=VPN%20типа%20Site-to-site%20—%20VPN-соединение%2C,сетями%20удалённых%20филиалов%20или%20отделов) (point-to-point) VPN на основе 
+  - GRE 
+  - IPSec
+- Стандарт IPSec VPN (RFC2401-2412)
+  - может работать [в двух режимах](https://habr.com/ru/articles/170895/): туннельном и транспортном
+  - включает протоколы
+    - ESP (Encapsulating Security Payload – безопасная инкапсуляция полезной нагрузки)
+    - AH (Authentication Header – заголовок аутентификации)
+    - IKE (Internet Key Exchange protocol – протокол обмена ключами) 
   - [host to net](https://habr.com/ru/articles/504484/)
   - net to net
   - transport mode
+- OpenVPN
+- PPTP (Point-to-Point Tunneling Protocol)
 - DTLS
 
-Варианты:
+### Криптоалгоритмы
 
 - Криптоалгоритмы [ГОСТ Р 34.10-2012, ГОСТ 34.10-18](https://qsetup.ru/gost-vpn-chto-eto/) 256 бит
   - необходимо использовать __сертифицированные ФСБ РФ СКЗИ__
@@ -91,7 +101,9 @@ TODO
     - https://ib-bank.ru/bisjournal/post/1210 		
     - https://cisoclub.ru/sravnenie-korporativnyh-sredstv-zashhity-udalennogo-dostupa/		
     - [хорошее сравнение](https://www.anti-malware.ru/compare/certified-russian-TLS-gateways)
-- Криптоалгоритмы международные RSA
+- Криптоалгоритмы международные RSA\AES
+  - IPSec VPN Site-to-Site - [CISCO](https://wiki.merionet.ru/articles/nastrojka-site-to-site-ipsec-vpn-na-cisco)
+
 
 - [Проверка алгоритма подписи примененного к сертификату](https://sysos.ru/?p=589)
   - 1.2.643.7.1.1.3.2, то сертификат сгенерирован по ГОСТ Р 34.10-2012. 

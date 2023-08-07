@@ -9,6 +9,11 @@
 	- Используется в паттерне [CQRS](pattern.cqrs.md)
 - Testable
 - Extendable
+- Сущности
+  - Client
+  - Invoker
+  - Command
+  - Receiver
 
 ## Patterns
 

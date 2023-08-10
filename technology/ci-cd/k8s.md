@@ -31,7 +31,7 @@
       - кол-ва k8s дашборд
       - Утилизация ресурсов?
     - в процессе мониторинга нам необходимо постоянно сопоставлять физический мир контейнеров с реальностью Kubernetes
-    - health checks. У Kubernetes есть два их типа: liveness и readiness probes.
+    - [health checks](../../arch/pattern/pattern.healthcheck.md). У Kubernetes есть два их типа: liveness и readiness probes.
 - [Отличие от Docker](https://mcs.mail.ru/blog/chto-umeet-kubernetes-chego-ne-umeet-docker) - инструмент для создания и запуска контейнеров
 
 ![k8s](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/daemon110282/daemon110282.github.io/daemon110282-patch-1/technology/ci-cd/k8s.puml)

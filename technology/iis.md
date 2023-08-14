@@ -116,3 +116,10 @@ IIS Failed Request Tracing
 
 - [Zabbix Agent Metric](https://www.zabbix.com/integrations/iis)
 - [Grafana](https://grafana.com/docs/grafana-cloud/data-configuration/integrations/integration-reference/integration-microsoft-iis/)
+
+## Version
+
+- 8.5
+- [10](https://www.thebestcsharpprogrammerintheworld.com/2017/12/02/whats-new-in-iis-10-microsoft-internet-information-services-10-new-features/)
+	- Failed request tracing – traceAllAfterTimeout
+	- HTTP/2

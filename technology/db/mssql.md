@@ -52,12 +52,16 @@ HA:
 ### Виды ожиданий Wait statistics
 
 - Виды [ожиданий](https://msdn.microsoft.com/ru-ru/library/ms179984.aspx)
-  - https://www.google.ru/amp/s/blog.sqlauthority.com/2011/02/01/sql-server-wait-stats-wait-types-wait-queues-day-0-of-28-2/
-  - https://blog.sqlauthority.com/2021/03/08/sql-server-wait-stats-collection-scripts-updated-march-2021/?amp
-  - PAGEIOLATCH_SH и PAGEIOLATCH_EX : см [нагружающие запросы по вводу/выводу](https://msdn.microsoft.com/ru-ru/magazine/cc135978.aspx)
-  - https://blog.sqlauthority.com/2011/02/07/sql-server-cxpacket-parallelism-advanced-solution-wait-type-day-7-of-28/?amp
-  - Cxpacket
+  - [SQL Wait Statistics скрипт](https://blog.sqlauthority.com/2021/03/08/sql-server-wait-stats-collection-scripts-updated-march-2021/?amp)
+  - [PAGEIOLATCH_SH и PAGEIOLATCH_EX](https://blog.sqlauthority.com/2011/02/09/sql-server-pageiolatch_dt-pageiolatch_ex-pageiolatch_kp-pageiolatch_sh-pageiolatch_up-wait-type-day-9-of-28/)
+    - см [нагружающие запросы по вводу/выводу](https://msdn.microsoft.com/ru-ru/magazine/cc135978.aspx)
+  - [CXPACKET](https://blog.sqlauthority.com/2011/02/06/sql-server-cxpacket-parallelism-usual-solution-wait-type-day-6-of-28/)
+    - [Advanced](https://blog.sqlauthority.com/2011/02/07/sql-server-cxpacket-parallelism-advanced-solution-wait-type-day-7-of-28/?amp)
   - Maxdop см и cost Threshold
+  - LATCH_EX
+  - LCK_M_IS - блокировка
+  - [LCK_M_IX](https://www.sqlskills.com/help/waits/LCK_M_IX/) - блокировка
+- [Локализация причин](https://www.google.ru/amp/s/blog.sqlauthority.com/2011/02/01/sql-server-wait-stats-wait-types-wait-queues-day-0-of-28-2/)
 
 ## Мониторинг
 
@@ -91,6 +95,8 @@ HA:
   - AvgElapsedSec — время ожидания или ожидания + AvgWorkerSec
   - В результатах представлений важным показателем является следующее __равенство: AvgWorkerSec=AvgElapsedSec__
     - Если это не так, то __проблема не в самом запросе и не в плане запроса__
+- [sp_WhoIsActive](https://habr.com/ru/articles/136481/) более подробная инф-я, кто что запустил
+- [Dynamic Management Views](https://learn.microsoft.com/ru-ru/previous-versions/sql/sql-server-2005/ms188068(v=sql.90)?redirectedfrom=MSDN)
 
 ## TODO
 

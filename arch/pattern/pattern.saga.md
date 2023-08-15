@@ -29,6 +29,10 @@ TODO
 - машины состояний state machine
 - наблюдателя (Observer) для логирования
 
+## Паттерны
+
+- [Debezium + Kafka](https://habr.com/ru/companies/redhatrussia/articles/575844/)
+
 ## Технологии
 
 - serverless saga pattern by using AWS Step Functions

@@ -150,8 +150,7 @@ __методики рефакторинга__ схемы базы данных:
   - Commercial
     - Консольная [gsqlcmd](https://www.savetodb.ru/gsqlcmd/synchronizing-data.htm)
   - Free
-    - AWS [Babelfish](https://docs.yandex.ru/docs/view?keyno=0&l10n=ru&lang=en&lr=144376&mime=pdf&name=San_Jose_Babelfish_Final_Presentation.pdf&nosw=1&serpParams=tm%3D1691925809%26tld%3Dru%26lang%3Den%26name%3DSan_Jose_Babelfish_Final_Presentation.pdf%26text%3Dbabelfish%26url%3Dhttps%253A%2F%2Fpostgresconf.org%2Fsystem%2Fevents%2Fdocument%2F000%2F001%2F931%2FSan_Jose_Babelfish_Final_Presentation.pdf%26lr%3D144376%26mime%3Dpdf%26l10n%3Dru%26type%3Dtouch%26sign%3D30f3ee03ba7e27203a40f41ab0e29b39%26keyno%3D0%26nosw%3D1&sign=30f3ee03ba7e27203a40f41ab0e29b39&text=babelfish&tld=ru&tm=1691925809&type=touch&url=https%3A%2F%2Fpostgresconf.org%2Fsystem%2Fevents%2Fdocument%2F000%2F001%2F931%2FSan_Jose_Babelfish_Final_Presentation.pdf) - плагин PostgreSQL - поддержка T-SQL синтаксиса (приложение можно не переписывать сразу при смене СУБД) по протоколу TDS при миграции на СУБД PostgreSQL
-
+    - [Debezium](../../technology/cdc/debezium.md)
 
 #### Миграция данных
 
@@ -159,9 +158,14 @@ __методики рефакторинга__ схемы базы данных:
 
 - __Импорт заранее__ в НС
   - Полная - большой взрыв, ИС источник выключается
-  - Частичная - параллельно обе ИС работают
+  - Частичная - итеративная - параллельно обе ИС работают
 - __Импорт по запросу__ Агрегата - в НС нет данных Агрегата, идет проверка в монолит на наличие и импорт из монолита сначала, затем изменения Агрегата в НС
+- Импорт в НС __после переключения всех ИС потребителей__
+  - Синхронизация Команд в Монолит отключено
+  - Чтение из Монолита отключено
+  - Команды в Монолит DBLink отключены
 - Утилиты 
+  - [MSSQL 2 PGSQL](../../technology/db/postgresql.md) 
   - Commercial
   - Free
     - Миграция данных AWS Database Migration Service (DMS)

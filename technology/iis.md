@@ -90,6 +90,7 @@
 - ASP.NET Sessions
 	- ASP.NET\Sessions Timed Out - Количество сеансов, время ожидания которых истекло.
 	- ASP.NET\Sessions Total
+- [ASP.NET Core metrics](https://github.com/dotnet/aspnetcore/issues/47536)
 
 ## log-parser
 

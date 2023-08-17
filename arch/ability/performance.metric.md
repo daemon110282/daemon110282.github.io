@@ -18,7 +18,7 @@ To-do
 
 - USE - 
 - RED - Request Error Duration
-- Google [SRE](https://habr.com/ru/companies/southbridge/articles/525176/) 4 Golden signals - 
+- Google [SRE](../../devops/sre.md) 4 Golden signals
 
 Счетчики как внедрить:
 

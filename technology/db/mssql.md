@@ -1,13 +1,13 @@
 # MS SQL Server
 
 - [MS SQL Server](#ms-sql-server)
-	- [Масштабируемость](#масштабируемость)
-	- [Паттерны](#паттерны)
-	- [Производительность](#производительность)
-		- [Виды ожиданий Wait statistics](#виды-ожиданий-wait-statistics)
-	- [Мониторинг](#мониторинг)
-	- [TODO](#todo)
-	- [Version](#version)
+  - [Масштабируемость](#масштабируемость)
+  - [Паттерны](#паттерны)
+  - [Производительность](#производительность)
+    - [Виды ожиданий Wait statistics](#виды-ожиданий-wait-statistics)
+  - [Мониторинг](#мониторинг)
+  - [TODO](#todo)
+  - [Version](#version)
 
 ## Масштабируемость
 
@@ -97,11 +97,10 @@ HA:
     - Если это не так, то __проблема не в самом запросе и не в плане запроса__
 - [sp_WhoIsActive](https://habr.com/ru/articles/136481/) более подробная инф-я, кто что запустил
 - [Dynamic Management Views](https://learn.microsoft.com/ru-ru/previous-versions/sql/sql-server-2005/ms188068(v=sql.90)?redirectedfrom=MSDN)
+  - System view [dmv sql](http://www.sqlskills.com/blogs/paul/wait-statistics-or-please-tell-me-where-it-hurts/) 
+  - минусы: показывают общую статистику, а не за период. При перезагрузке СУБД очищается
 
 ## TODO
-
-- System view [dmv sql](http://www.sqlskills.com/blogs/paul/wait-statistics-or-please-tell-me-where-it-hurts/) 
-  - минус показывают общую статистику, а не за период. При перезагрузке СУБД очищается
 
 - http://f1incode.blogspot.com/2011/07/i_28.html	
 - http://f1incode.blogspot.com/2011/08/performance-testing-part-2.html

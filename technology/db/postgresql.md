@@ -11,6 +11,7 @@
   - [Паттерны](#паттерны)
     - [ETL PSQL2MSSQL](#etl-psql2mssql)
     - [ETL MSSQL2PSQL](#etl-mssql2psql)
+    - [Миграция с MS SQL](#миграция-с-ms-sql)
 
 ## Термины
 
@@ -33,7 +34,7 @@
 
 ### Replication
 
-- hot-standby потоковая репликация
+- hot-standby потоковая [репликация](../../arch/pattern/sync.data.md)
 - https://medium.com/@PinkOwl/postgresql-and-me-log-shipping-replication-6bc945757822
 - [Config](https://www.postgresql.org/docs/current/runtime-config-replication.html)
 

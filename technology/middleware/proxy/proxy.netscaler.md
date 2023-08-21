@@ -32,6 +32,9 @@
 - Шифрование траффика.
 - Работа в качестве DNS сервера.
 - По умолчанию NS уже имеет сетевую защиту, например от ICMP флуда и др.
+- Администрирование
+	- [Аудит изменений конфигурации Audit Logging](https://docs.netscaler.com/en-us/citrix-adc/12-1/system/audit-logging)
+	- [Логическое разделение балансировщиков Admin Partitioning](https://docs.netscaler.com/en-us/citrix-adc/12-1/admin-partition)
 
 ## Cache
 

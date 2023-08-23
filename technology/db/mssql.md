@@ -4,7 +4,12 @@
   - [Масштабируемость](#масштабируемость)
   - [Паттерны](#паттерны)
   - [Производительность](#производительность)
+    - [Способы анализа производительности](#способы-анализа-производительности)
+    - [Индексы](#индексы)
+      - [Рекомендации по выбору таблиц и столбцов для создания индексов](#рекомендации-по-выбору-таблиц-и-столбцов-для-создания-индексов)
+      - [Рекомендации по использованию кластерных или некластерных индексов](#рекомендации-по-использованию-кластерных-или-некластерных-индексов)
     - [Виды ожиданий Wait statistics](#виды-ожиданий-wait-statistics)
+    - [Параллелизм MAXDOP](#параллелизм-maxdop)
   - [Мониторинг](#мониторинг)
   - [TODO](#todo)
   - [Version](#version)
@@ -14,7 +19,15 @@
 HA:
 
 - Read Only Replica
-  - [log-shipping or always on](https://dba.stackexchange.com/questions/199064/log-shipping-or-always-on-as-dr-for-sql-failover-cluster)
+  - log-shipping
+  - Always On Group из за использования возможности чтения со вторичной реплики (read-intent access)
+    - Увеличение в скорости формирования в два и более раза, возможность использования maxdop
+    - Не потребляются ресурсы первичной реплики
+      - tempdb
+      - Сеть
+      - I/O
+      - CPU
+  - [log-shipping VS always on](https://dba.stackexchange.com/questions/199064/log-shipping-or-always-on-as-dr-for-sql-failover-cluster)
   	- AlwaysOn high availability group, HAG, is easier to maintain than log shipping
   	- Возможно больше трудностей с AlwaysOn, экспертиза DBA более высокая трубется
 
@@ -27,27 +40,82 @@ HA:
 
 ## Производительность
 
+Зависит от:
+
+- Настройка OS, SQL Server
+- Блокировки
+- Индексирование
+- Оптимизация запросов
+- Дизайн приложения
+
 - [Оценка производительности SQL Server](http://www.interface.ru/home.asp?artId=6968)
 - [Benchmark](../benchmark.md)
 
 Стратегии оптимизации запросов:
 
 - можно использовать индексы
-  - Не все индексы одинаково полезны. При разработке индексов необходимо учитывать их селективность
-  - [Избыток может увеличить io wait](http://blogs.msmvps.com/gladchenko/2008/03/30/tips-for-dba-using-sys-dm_db_index_physicalstats-in-a-script-to-rebuild-or-reorganize-indexes-no-partitions-sql-server-2005/)
-  - De-fragmentation of Index can help as more data can be obtained per page. (Assuming close to 100 fill-factor)
 - другие варианты запроса
+  - To write __sargable queries__:
+    - Avoid using functions or calculations on indexed columns in the WHERE clause
+    - Use direct comparisons when possible, instead of wrapping the column in a function
+    - If we need to use a function on a column, consider creating a computed column or a function-based index, if the database system supports it
 - сохранение промежуточных результатов
 - Для проверки быстродействия запроса:	SET STATISTICS TIME ON
 - Для проверки статистики ввода/вывода:	SET STATISTICS IO ON
 - Для вывода плана запроса:	SET STATISTICS XML ON
 
-Способ анализа производительности SQL Server:
+### Способы анализа производительности
+
+![plan](../../img/technology/db/mssql/sql.query.life.jpg)
 
 1. Записать с помощью SQL Server Profiler (или AnjLab.SqlProfiler) запросы, исполняемые при запуске функции (например редактирование анкеты)
 2. Добавить метки времени в начало и в конец запроса CONVERT(nvarchar(30), GETDATE(), 126)
 3. Запустить скрипт на локальном сервере и на сервере разработчика
 4. Вычислить времени выполнения на локальном сервере и на сервере разработчика (ручным способом)/ Результаты позволяют уверенно говорить о причинах медленной загрузки страниц (например редактирование анкеты) в браузере.
+
+### Индексы
+
+- Не все индексы одинаково полезны. При разработке индексов необходимо учитывать их селективность
+- Using [sys.dm_db_index_physical_stats](http://blogs.msmvps.com/gladchenko/2008/03/30/tips-for-dba-using-sys-dm_db_index_physicalstats-in-a-script-to-rebuild-or-reorganize-indexes-no-partitions-sql-server-2005/) in a script to rebuild or reorganize indexes (no partitions / SQL Server 2005)
+- [Избыток может увеличить io wait](http://blogs.msmvps.com/gladchenko/2008/03/30/tips-for-dba-using-sys-dm_db_index_physicalstats-in-a-script-to-rebuild-or-reorganize-indexes-no-partitions-sql-server-2005/)
+- De-fragmentation of Index can help as more data can be obtained per page. (Assuming close to 100 fill-factor)
+- Измените подходящие для Вашего сервера опции ONLINE , SORT_IN_TEMPDB,
+MAXDOP=10
+  - Помним про 3-х повышение производительности при использовании в 2012 и в 2014 SORT_IN_TEMPDB=ON SQL Server 2014. [TEMPDB Hidden Performance Gem](https://techcommunity.microsoft.com/t5/sql-server-support-blog/sql-server-2014-tempdb-hidden-performance-gem/ba-p/318255)
+
+#### Рекомендации по выбору таблиц и столбцов для создания индексов
+
+- __Не индексировать__
+  - Таблицы с небольшим количеством строк
+  - Столбцы, редко используемые в запросах
+  - Столбцы, хранящие широкий диапазон значений и имеющие малую вероятность быть выбранными в типичном запросе
+  - Столбцы, имеющие большой размер в байтах
+  - Таблицы, где данные часто изменяются, но относительно редко считываются
+- __Индексировать__
+  - Таблицы с большим количеством строк
+  - Столбцы, часто используемые в запросах
+  - Столбцы, хранящие широкий диапазон значений и имеющие большую вероятность быть выбранными в типичном запросе
+  - Столбцы, используемые в агрегатных функциях
+  - Столбцы, применяемые в предложении GROUP BY
+  - Столбцы, применяемые в предложении ORDER BY
+  - Столбцы, используемые в соединениях таблиц
+
+#### Рекомендации по использованию кластерных или некластерных индексов
+
+![logic](../../img/technology/db/mssql/sql.clustered.index.png)
+
+- Использовать __кластерный индекс__ для
+  - Первичных ключей, часто используемых при поиске, например номеров счетов
+  - Запросов, возвращающих обширные результирующие наборы
+  - Столбцов, используемых во многих запросах 
+  - Столбцов с высокой селективностью
+  - Столбцов, применяемых в предложениях ORDER BY или GROUP BY
+  - Столбцов, используемых в соединениях таблиц
+- Использовать __некластерный индекс__ для
+  - Первичных ключей, хранящих последовательные значения идентификаторов, например идентификационных столбцов
+  - Запросов, возвращающих небольшие результирующие наборы
+  - Столбцов, используемых в агрегатных функциях
+  - Внешних ключей
 
 ### Виды ожиданий Wait statistics
 
@@ -57,11 +125,30 @@ HA:
     - см [нагружающие запросы по вводу/выводу](https://msdn.microsoft.com/ru-ru/magazine/cc135978.aspx)
   - [CXPACKET](https://blog.sqlauthority.com/2011/02/06/sql-server-cxpacket-parallelism-usual-solution-wait-type-day-6-of-28/)
     - [Advanced](https://blog.sqlauthority.com/2011/02/07/sql-server-cxpacket-parallelism-advanced-solution-wait-type-day-7-of-28/?amp)
+    - Если у нас транзакционная система: имеет смысл установить Max Degree Parallelism = 1
+    - Хранилища и витрины данных: установить Max Degree Parallelism = 0 или явное количество CPU
+    - Смешанные: установить Max Degree Parallelism = 1 , a y запросов требующих параллелизма установить hint MAXDOP=0
   - Maxdop см и cost Threshold
   - LATCH_EX
   - LCK_M_IS - блокировка
   - [LCK_M_IX](https://www.sqlskills.com/help/waits/LCK_M_IX/) - блокировка
 - [Локализация причин](https://www.google.ru/amp/s/blog.sqlauthority.com/2011/02/01/sql-server-wait-stats-wait-types-wait-queues-day-0-of-28-2/)
+
+### Параллелизм MAXDOP
+
+- SQL OLTP Max degree of parall [maxdop](https://habr.com/ru/post/448044/)
+- Для выявления нехватки процессорного времени достаточно воспользоваться системным представлением sys.dm_os_schedulers.
+  - показатель runnable_tasks_count постоянно больше 1, то существует большая вероятность того, что количество ядер не хватает экземпляру MS SQL Server.
+  - select max([runnable_tasks_count]) as [runnable_tasks_count] from sys.dm_os_schedulers where scheduler_id<255;
+- алгоритм действий для OLTP-систем для настройки свойств параллелизма:
+  - сначала запретить параллелизм, выставив на уровне всего экземпляра Max Degree of Parallelism в 1
+  - проанализировать самые тяжелые запросы и подобрать для них оптимальное количество потоков
+  - выставить Max Degree of Parallelism в подобранное оптимальное количество потоков, полученное из п.2, а также для конкретных баз данных выставить Max DOP значение, полученное из п.2 для каждой базы данных
+  - проанализировать самые тяжелые запросы и выявить негативный эффект от многопоточности. Если он есть, то повышать Cost Threshold for Parallelism.
+  - Для таких систем как 1С, Microsoft CRM и Microsoft NAV в большинстве случаев [подойдет запрет многопоточности](https://its.1c.ru/db/metod8dev#content:5945:hdoc)
+- [Как определить maxdop](https://www.sentryone.com/blog/is-maxdop-configured-correctly)
+  - I set the “Maximum Degree of Parallelism” to 2, which means the query still uses parallelism but only on 2 CPUs.
+  - However, I keep the “Cost Threshold for Parallelism” very high. This way, not all the queries will qualify for parallelism but only the query with higher cost will go for parallelism. I have found this to work best for a system that has OLTP queries and also where the reporting server is set up.
 
 ## Мониторинг
 
@@ -74,6 +161,10 @@ HA:
   - Database I/O
   - Database Latency
   - Availability Replica
+- Стандартные отчеты
+  - Data Collection
+    - Query Statistics History: by CPU, duration, IO, Physical Reads, Logical Writes
+    - Server Activity History: CPU, RAM, IO, Network, Waits
 - Use Grafana to monitor your [SQL Server + InfluxDB and Telegraf](https://tsql.tech/how-to-use-grafana-on-docker-to-monitor-your-sql-server-eventually-on-docker-too-feat-influxdb-and-telegraf/)
   - [Grafana Dashboard](https://grafana.com/grafana/dashboards/9386-sql-servers/)
   - [telegraf metric](https://github.com/influxdata/telegraf/tree/master/plugins/inputs/sqlserver)

@@ -9,7 +9,7 @@
       - [Рекомендации по выбору таблиц и столбцов для создания индексов](#рекомендации-по-выбору-таблиц-и-столбцов-для-создания-индексов)
       - [Рекомендации по использованию кластерных или некластерных индексов](#рекомендации-по-использованию-кластерных-или-некластерных-индексов)
     - [Виды ожиданий Wait statistics](#виды-ожиданий-wait-statistics)
-    - [Параллелизм MAXDOP](#параллелизм-maxdop)
+      - [Параллелизм MAXDOP](#параллелизм-maxdop)
   - [Мониторинг](#мониторинг)
   - [TODO](#todo)
   - [Version](#version)
@@ -134,7 +134,7 @@ MAXDOP=10
   - [LCK_M_IX](https://www.sqlskills.com/help/waits/LCK_M_IX/) - блокировка
 - [Локализация причин](https://www.google.ru/amp/s/blog.sqlauthority.com/2011/02/01/sql-server-wait-stats-wait-types-wait-queues-day-0-of-28-2/)
 
-### Параллелизм MAXDOP
+#### Параллелизм MAXDOP
 
 - SQL OLTP Max degree of parall [maxdop](https://habr.com/ru/post/448044/)
 - Для выявления нехватки процессорного времени достаточно воспользоваться системным представлением sys.dm_os_schedulers.

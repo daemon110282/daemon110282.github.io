@@ -50,6 +50,7 @@ HA:
 
 - [Оценка производительности SQL Server](http://www.interface.ru/home.asp?artId=6968)
 - [Benchmark](../benchmark.md)
+  - [Тестирование производительности баз данных при помощи tSQLt и SQLQueryStress](https://habr.com/ru/articles/310328/)
 
 Стратегии оптимизации запросов:
 
@@ -72,6 +73,10 @@ HA:
 2. Добавить метки времени в начало и в конец запроса CONVERT(nvarchar(30), GETDATE(), 126)
 3. Запустить скрипт на локальном сервере и на сервере разработчика
 4. Вычислить времени выполнения на локальном сервере и на сервере разработчика (ручным способом)/ Результаты позволяют уверенно говорить о причинах медленной загрузки страниц (например редактирование анкеты) в браузере.
+
+- How to [view xml query plans graphically](https://docs.microsoft.com/ru-ru/sql/relational-databases/performance/save-an-execution-plan-in-xml-format?view=sql-server-ver15)
+	- Rename the file from .xml to .sqlplan and use Open File to launch it.
+- Аналитический отчёт по [трейсу Microsoft SQL Server tutorial](http://habrahabr.ru/post/243587/)
 
 ### Индексы
 
@@ -129,10 +134,11 @@ MAXDOP=10
     - Хранилища и витрины данных: установить Max Degree Parallelism = 0 или явное количество CPU
     - Смешанные: установить Max Degree Parallelism = 1 , a y запросов требующих параллелизма установить hint MAXDOP=0
   - Maxdop см и cost Threshold
-  - LATCH_EX
-  - LCK_M_IS - блокировка
+  - [LATCH_XX](http://www.sqlskills.com/blogs/paul/wait-statistics-or-please-tell-me-where-it-hurts/)
+  - LCK_M_XX - блокировка
   - [LCK_M_IX](https://www.sqlskills.com/help/waits/LCK_M_IX/) - блокировка
 - [Локализация причин](https://www.google.ru/amp/s/blog.sqlauthority.com/2011/02/01/sql-server-wait-stats-wait-types-wait-queues-day-0-of-28-2/)
+  - System view [DMV sql](http://www.sqlskills.com/blogs/paul/wait-statistics-or-please-tell-me-where-it-hurts/) 
 
 #### Параллелизм MAXDOP
 
@@ -161,35 +167,40 @@ MAXDOP=10
   - Database I/O
   - Database Latency
   - Availability Replica
-- Стандартные отчеты
-  - Data Collection
-    - Query Statistics History: by CPU, duration, IO, Physical Reads, Logical Writes
-    - Server Activity History: CPU, RAM, IO, Network, Waits
-- Use Grafana to monitor your [SQL Server + InfluxDB and Telegraf](https://tsql.tech/how-to-use-grafana-on-docker-to-monitor-your-sql-server-eventually-on-docker-too-feat-influxdb-and-telegraf/)
+- [MS инструменты](https://learn.microsoft.com/en-us/sql/relational-databases/performance/performance-monitoring-and-tuning-tools?view=sql-server-ver15): Data Collection, Extended Events, DMV, Query Store, SQL Trace, QTA
+- Настройки [СУБД get](https://www.mssqltips.com/sqlservertip/6090/sql-server-configuration-settings-query/)
+  - SELECT * from sys.configurations ORDER BY name
+- [MS: Мониторинг и настройка производительности](http://www.sql.ru/forum/actualthread.aspx?tid=858780)
+
+### Онлайн
+
+- [sp_Blitz](https://github.com/BrentOzarULTD/SQL-Server-First-Responder-Kit/tree/main)
+  - To find out why the server is slow right now, run sp_BlitzFirst.
+- [sp_WhoIsActive](https://habr.com/ru/articles/136481/) более подробная инф-я, кто что запустил
+- Общая статистика без детализации до запросов, планов выполнения [SQL Server + InfluxDB and Telegraf](https://tsql.tech/how-to-use-grafana-on-docker-to-monitor-your-sql-server-eventually-on-docker-too-feat-influxdb-and-telegraf/)
   - [Grafana Dashboard](https://grafana.com/grafana/dashboards/9386-sql-servers/)
   - [telegraf metric](https://github.com/influxdata/telegraf/tree/master/plugins/inputs/sqlserver)
+- [Dynamic Management Views](TODO)
+  - минусы: показывают общую статистику, а не за период. При перезагрузке СУБД очищается
+
+### Исторически
+
+- Стандартные отчеты
+  - Data Collection  - сбор авто метрик за период времени в отдельной БД с sql plan.
+    - Query Statistics History: by CPU, duration, IO, Physical Reads, Logical Writes
+    - Server Activity History: CPU, RAM, IO, Network, Waits
+    - Версия MS SQL с 2008: используем 2012, DWH 2016
+    - Блокировки            
 - [sp_Blitz](https://github.com/BrentOzarULTD/SQL-Server-First-Responder-Kit/tree/main)
   - overall health check, run sp_Blitz.
   - To learn which queries have been using the most resources, run sp_BlitzCache.
   - To analyze which indexes are missing or slowing you down, run sp_BlitzIndex.
-  - To find out why the server is slow right now, run sp_BlitzFirst.
-- [MS: Мониторинг и настройка производительности](http://www.sql.ru/forum/actualthread.aspx?tid=858780)
-  - [MS инструменты](https://learn.microsoft.com/en-us/sql/relational-databases/performance/performance-monitoring-and-tuning-tools?view=sql-server-ver15)
-- Data collection - сбор авто метрик за период времени в отдельной БД с sqlplan.
-  - Версия с 2008: используем 2012, DWH 2016
-  - Блокировки
-  - Настройки [СУБД get](https://www.mssqltips.com/sqlservertip/6090/sql-server-configuration-settings-query/)
-    - SELECT * from sys.configurations ORDER BY name
-  - Альтернатива [sp_Blitz](https://garrybargsley.com/2020/07/14/sp_blitz-for-all-servers/)
+  - [Мониторинг нескольких серверов]](https://garrybargsley.com/2020/07/14/sp_blitz-for-all-servers/)
 - [Мониторинг запросов, хранимых процедур и триггеров](https://habr.com/ru/articles/314494/)
   - AvgWorkerSec — само время выполнения запроса в секундах
   - AvgElapsedSec — время ожидания или ожидания + AvgWorkerSec
   - В результатах представлений важным показателем является следующее __равенство: AvgWorkerSec=AvgElapsedSec__
     - Если это не так, то __проблема не в самом запросе и не в плане запроса__
-- [sp_WhoIsActive](https://habr.com/ru/articles/136481/) более подробная инф-я, кто что запустил
-- [Dynamic Management Views](https://learn.microsoft.com/ru-ru/previous-versions/sql/sql-server-2005/ms188068(v=sql.90)?redirectedfrom=MSDN)
-  - System view [dmv sql](http://www.sqlskills.com/blogs/paul/wait-statistics-or-please-tell-me-where-it-hurts/) 
-  - минусы: показывают общую статистику, а не за период. При перезагрузке СУБД очищается
 
 ## TODO
 
@@ -201,6 +212,8 @@ MAXDOP=10
 
 ## Version
 
-- 2012
+- [2012](https://sqlserverbuilds.blogspot.com/2012/01/sql-server-2012-versions.html) 11.0.x.x
+  - use 11.0.6579.0
+- [2014](https://sqlserverbuilds.blogspot.com/2014/01/sql-server-2014-versions.html) 12.0.x.x
 - 2016
 - 2019

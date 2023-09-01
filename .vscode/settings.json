@@ -6,5 +6,8 @@
         "strings": "off",
         "other": "off"
     },
-    "pandoc.htmlOptString": "-s -f gfm -t html5 --css=css/style.css"
+    "pandoc.htmlOptString": "-s -f gfm -t html5 --css=css/style.css",
+    "githubPullRequests.ignoredPullRequestBranches": [
+        "master"
+    ]
 }

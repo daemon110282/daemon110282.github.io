@@ -62,6 +62,11 @@
 
 ## Технологии
 
+## Наблюдаемость
+
+- [Grafana Dashboard](https://min.io/docs/minio/linux/operations/monitoring/grafana.html#minio-grafana)
+- [VM](https://min.io/docs/minio/linux/operations/monitoring/collect-minio-metrics-using-prometheus.html)
+
 ## Deployment
 
 - docker compose

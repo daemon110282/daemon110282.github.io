@@ -65,6 +65,7 @@ REST API — это архитектурный подход, который ус
 - Файлы
   - [Download](../arch/pattern/pattern.downloadfile.md)
   - [Upload](../arch/pattern/pattern.uploadfile.md)
+- Исключать создание [методов массовых изменений](https://habr.com/ru/articles/736892/)
 
 ![best](../img/api/best.practice.jpg)
 

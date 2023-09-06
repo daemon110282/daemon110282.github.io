@@ -3,6 +3,7 @@
 ## Зачем
 
 - [вид ограничителя скорости называется ограничитель одновременных запросов](https://learn.microsoft.com/ru-ru/dotnet/architecture/microservices/implement-resilient-applications/partial-failure-strategies) (concurrent request limiter). Он может быть полезен, когда у вас есть «дорогие» конечные точки, которые не рекомендуется вызывать больше определённого количества раз, если вы хотите обслуживать трафик.
+- [rate-limiting](https://docs.microsoft.com/ru-ru/azure/architecture/patterns/rate-limiting-pattern)
 
 ## Паттерны
 
@@ -19,7 +20,7 @@
 ## Технологии
 
 - API Gateway
-  - CISCO
+  - [CISCO Netscaler](../../technology/middleware/proxy/proxy.netscaler.md)
   - [NGinx](https://www.nginx.com/blog/microservices-march-protect-kubernetes-apis-with-rate-limiting/)
 - Program Level
   - [YII2](../../technology/framework/yii2.md)

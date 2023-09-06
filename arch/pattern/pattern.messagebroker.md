@@ -35,6 +35,7 @@
   - [MS](https://docs.microsoft.com/ru-ru/azure/architecture/patterns/category/messaging)
   - Pub\Sub События
   - Task (Worker) Queue
+  - [Очереди с приоритетом](https://habr.com/ru/companies/arcadia/articles/571442/)
 - Тип способа получения сообщений
   - Pull
   - Push

@@ -48,7 +48,7 @@
   - Dependeny Injection
 - [DbC - Design by contract](https://habr.com/ru/company/southbridge/blog/679906/)
 - LC/HC - [Принципы GRASP](https://rmcreative.ru/blog/post/printsipy-grasp)
-  - Low coupling
+  - [Low coupling](ability/low.coupling.md)
   - High cohesion
 - TODO
   - [Принципы проектирования MS](https://docs.microsoft.com/ru-ru/azure/architecture/guide/design-principles/)

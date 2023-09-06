@@ -10,6 +10,7 @@
 ## Команда
 
 ![command](https://docs.microsoft.com/ru-ru/dotnet/architecture/microservices/microservice-ddd-cqrs-patterns/media/microservice-application-layer-implementation-web-api/high-level-writes-side.png)
+![cqrs](../../img/arch/eda/eda.cqrs.jpg)
 
 - это запрос к системе на выполнение действия, [которое изменяет состояние системы](https://docs.microsoft.com/ru-ru/dotnet/architecture/microservices/microservice-ddd-cqrs-patterns/microservice-application-layer-implementation-web-api#implement-the-command-and-command-handler-patterns)
 - Команды являются __императивными__ и должны обрабатываться только один раз
@@ -22,8 +23,7 @@
 
 - [FAQ](https://cqrs.nu/Faq/command-handlers)
 - Конвейер обработки команд может активировать обработчик команд способами:
-  - в памяти паттерн [Медиатор](https://docs.microsoft.com/ru-ru/dotnet/architecture/microservices/microservice-ddd-cqrs-patterns/microservice-application-layer-implementation-web-api#the-command-process-pipeline-how-to-trigger-a-command-handler)
-	![mediator](https://docs.microsoft.com/ru-ru/dotnet/architecture/microservices/microservice-ddd-cqrs-patterns/media/microservice-application-layer-implementation-web-api/mediator-cqrs-microservice.png)
+  - в памяти паттерн [Медиатор](mediator.md)
   - вне процесса через [Command Bus](command.bus.md) on [Message Broker](pattern.messagebroker.md) transport ![cqrs mq](../../img/arch/eda/cqrs.mq.jpg)
     - Реализация паттерна [Command](command.md) и [Command Bus](command.bus.md).
 

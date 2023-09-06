@@ -3,7 +3,7 @@
 - [MSA](style/msa.md)
 - [EDA](style/eda.md)
   - [BIAN](ref/bian.md)
-- [MTA](mta.md)
+- [MTA](pattern/mta/mta.md)
 - [Хранилище данных](store.md)
 - [Mobile](mobile.md)
 - [A\B testing](/arch/ref/abtesting.md)

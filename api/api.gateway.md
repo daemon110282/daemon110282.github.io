@@ -19,7 +19,7 @@ communication to multiple microservices?
     - Service discovery integration
     - Response caching
     - [Retry policies, circuit breaker, and QoS](../arch/pattern/pattern.failure.md)
-    - [Rate limiting](../arch/pattern/pattern.failure.md) and throttling
+    - [Rate limiting](../arch/pattern/rate.limit.md) and throttling
     - [Load balancing](../arch/pattern/load.balancing.md)
     - [Logging, tracing, correlation](../arch/ability/observability.md)
     - Headers, query strings, and claims transformation
@@ -59,7 +59,7 @@ Compare https://www.techtarget.com/searchapparchitecture/feature/A-feature-rundo
 - Open Source
   - [Ocelot](https://medium.com/aspnetrun/building-ocelot-api-gateway-microservices-with-asp-net-core-and-docker-container-13f96026e86c)
   - [Gravitie](../technology/api/gw.gravitee.md)
-  - Kong
+  - [Kong](https://habr.com/ru/companies/otus/articles/669342/)
 - Commercial
   - [traefik](https://traefik.io/solutions/api-gateway/)
   - [Citrix ADC (Netscaler)](../technology/middleware/proxy.netscaler.md)

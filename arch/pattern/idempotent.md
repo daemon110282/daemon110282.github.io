@@ -56,4 +56,11 @@
 
 
 
+## Технологии
 
+
+
+
+
+- .NET MediatR (паттерн [медиатор](mediator.md)) и PipelineBehavior (паттерн [chain of responsibility](chainofresp.md) + decorator/proxy)
+(https://temofeev.ru/info/articles/borba-s-dublikatami-delaem-post-idempotentnym/)

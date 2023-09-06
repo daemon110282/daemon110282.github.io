@@ -7,15 +7,16 @@
     - [Multi Tenant Architecture (MTA) - Single Instance](#multi-tenant-architecture-mta---single-instance)
     - [Single Tenant Architecture (STA) - Multi Instance](#single-tenant-architecture-sta---multi-instance)
     - [Гибридный вариант](#гибридный-вариант)
+  - [To-do](#to-do)
 
 ## Зачем
 
 [Схемы](https://docs.google.com/document/d/1adNn0l5iUZFGiqMzqjup6f-DtkBPP4pnbDjRsP8M70E/edit?usp=sharing)
-[Схемы](../img/)
+[Схемы](../../../img)
 
 ## Плюсы минусы
 
-[Критерии](arch.criteria.md)
+[Критерии](../../arch.criteria.md)
 
 Плюсы:
 
@@ -41,8 +42,8 @@
 ## Паттерны
 
 - [Модели MTA](https://docs.microsoft.com/ru-ru/azure/architecture/guide/multitenant/considerations/tenancy-models)
-  - Если вы ожидаете, что ваш **бизнес будет масштабироваться до большого количества клиентов**, очень важно развернуть *общую инфраструктуру*.
-  - Если требования к **изоляции клиентов являются высокими**, может потребоваться **инфраструктура с одним клиентом и отдельными инстансами (экземплярами решения)**.
+  - Если вы ожидаете, что ваш __бизнес будет масштабироваться до большого количества клиентов__, очень важно развернуть __общую инфраструктуру__.
+  - Если требования к __изоляции клиентов являются высокими__, может потребоваться __инфраструктура с одним клиентом и отдельными инстансами (экземплярами решения)__.
   - ![Уровни изоляции](https://docs.microsoft.com/ru-RU/azure/architecture/guide/multitenant/considerations/media/tenancy-models/isolated-shared.png)
 - [RMQ multi-tenancy](mta.mq.md)
 - [Database multi-tenancy](mta.db.md)
@@ -99,6 +100,6 @@
 | Функциональность | Стоимость |
 ||  |
 
+## To-do
 
-To-do
-https://docs.microsoft.com/ru-ru/azure/architecture/guide/multitenant/related-resources?utm_source=pocket_mylist
+- https://docs.microsoft.com/ru-ru/azure/architecture/guide/multitenant/related-resources

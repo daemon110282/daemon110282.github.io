@@ -6,7 +6,7 @@
 - [DevOps](devops.md)
 - [API](api/api.md)
 - [Методологии\Шаблоны проектирования решений](arch/patterns.md)
-- [Миграции ИС](migration.md)
+- [Миграции ИС](arch/pattern/migration.md)
 - Agile Scrum
   - Планирование задач
     - [Вертикальная декомпозиция](https://habr.com/ru/company/sportmaster_lab/blog/515910/)

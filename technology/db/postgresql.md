@@ -11,6 +11,7 @@
   - [Паттерны](#паттерны)
     - [ETL PSQL2MSSQL](#etl-psql2mssql)
     - [ETL MSSQL2PSQL](#etl-mssql2psql)
+    - [Миграция с MS SQL](#миграция-с-ms-sql)
 
 ## Термины
 
@@ -33,7 +34,7 @@
 
 ### Replication
 
-- hot-standby потоковая репликация
+- hot-standby потоковая [репликация](../../arch/pattern/sync.data.md)
 - https://medium.com/@PinkOwl/postgresql-and-me-log-shipping-replication-6bc945757822
 - [Config](https://www.postgresql.org/docs/current/runtime-config-replication.html)
 
@@ -81,3 +82,18 @@
 - [foreign data wrapper](https://guriysamarin.medium.com/how-to-transfer-data-from-ms-sql-to-postgresql-or-good-design-vs-speed-1baad5665309) 
   - https://habr.com/ru/company/postgrespro/blog/309490/
   - https://www.mssqltips.com/sqlservertip/3663/sql-server-and-postgresql-foreign-data-wrapper-configuration-part-3/
+
+### Миграция с MS SQL
+
+- Утилиты
+  - Free
+    - Миграция "большим взрывом" с простоем
+      - Pgloader 
+      - [sqlserver2pgsql](https://nuvalence.io/insights/microsoft-sql-server-to-postgresql-migration-using-sqlserver2pgsql/) - great for one off database migrations, but it’s not suitable for use cases that require continuous data synchronization between the source and target databases for an extended period of time.
+    - AWS Database Migration Service (DMS)
+    - Постепенная, итеративная миграция - Zero-Downtime
+      - AWS [Babelfish](https://docs.yandex.ru/docs/view?keyno=0&l10n=ru&lang=en&lr=144376&mime=pdf&name=San_Jose_Babelfish_Final_Presentation.pdf&nosw=1&serpParams=tm%3D1691925809%26tld%3Dru%26lang%3Den%26name%3DSan_Jose_Babelfish_Final_Presentation.pdf%26text%3Dbabelfish%26url%3Dhttps%253A%2F%2Fpostgresconf.org%2Fsystem%2Fevents%2Fdocument%2F000%2F001%2F931%2FSan_Jose_Babelfish_Final_Presentation.pdf%26lr%3D144376%26mime%3Dpdf%26l10n%3Dru%26type%3Dtouch%26sign%3D30f3ee03ba7e27203a40f41ab0e29b39%26keyno%3D0%26nosw%3D1&sign=30f3ee03ba7e27203a40f41ab0e29b39&text=babelfish&tld=ru&tm=1691925809&type=touch&url=https%3A%2F%2Fpostgresconf.org%2Fsystem%2Fevents%2Fdocument%2F000%2F001%2F931%2FSan_Jose_Babelfish_Final_Presentation.pdf) 
+        - плагин PostgreSQL - поддержка T-SQL синтаксиса (приложение можно не переписывать сразу при смене СУБД) по протоколу TDS при миграции на СУБД PostgreSQL
+      - [Debezium](../../technology/cdc/debezium.md) используя Снимки (snapshots)
+  - Commercial
+    - Без изменений исходного приложения миграция [Albatros](https://www.sqlpipe.com/blog/migrate-sql-server-to-postgresql)

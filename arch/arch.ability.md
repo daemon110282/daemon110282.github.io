@@ -24,18 +24,7 @@
     - [API Gateway](../api/api.gateway.md)
     - Server-side service discovery
     - [Proxy\Balancing](../arch/pattern/pattern.proxy.reverse.md)
-  - [Слабая связанность (low coupling)](https://medium.com/german-gorelkin/low-coupling-high-cohesion-d36369fb1be9) и сильная связность\целостность (high cohesion)
-    - не зависеть от UI
-    - не зависеть от БД, внешних фреймворков и библиотек.
-    - принцип единственной ответственности (single responsibility principle), который гласит: «У класса должна быть только одна причина для изменения»
-    - Плюсы
-      - Сложность ИС декомпозируется на модули, проще изучать код, скорость изменений выше
-      - Модуль реализует ограниченный бизнес контекст, тестирование изолировать проще
-      - Качество разработки изолировано, проще модуль заменить переписать
-      - Уменьшение зависимостей между модулями, меньше регрессионных рисков       
-      - Проще вынести в отдельный сервис и масштабировать под рост нагрузки или переиспользовать
-    - Минусы
-      - Трудоемкость реализации, экспертиза разработчиков
+  - [Слабая связанность (low coupling)](ability/low.coupling.md)
 - Функциональность
   - [Security Безопасность](ability/security.md)
   - Гибкость Flexibility
@@ -55,7 +44,8 @@
   - [Готовность Доступность Availability (Эксплуатационные)](ability/availability.md)
   - Согласованность Consistency (Эксплуатационные)
   - [Отказоустойчивость Fault tolerance](ability/faulttolerance.md)
-  - Стабильность (Изоляция сбоев)
+  - Стабильность (Изоляция сбоев) [Resilience](ability/resilience.md)
+    - [Chaos Engineering](pattern/chaos.eng.md)
   - Живучесть Robustness
   - Recoverability
 - [Производительность Performance](ability/performance.md) (Эксплуатационные)

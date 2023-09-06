@@ -16,8 +16,23 @@
 - custom [Admin REST API](https://github.com/dominicklee/MinIO-Admin-for-PHP) by CLI command
 - Bucket
 	- [Expire Policy](https://min.io/docs/minio/linux/administration/object-management.html#object-lifecycle-management) - автоочистка старых данных
-	- [Object Retention](https://min.io/docs/minio/linux/administration/object-management.html#object-retention) - блокировка от удаления
+		- [on days](https://min.io/docs/minio/linux/administration/object-management/object-lifecycle-management.html#object-expiration)
+	- Legal Hold [Object Retention](https://min.io/docs/minio/linux/administration/object-management.html#object-retention) - блокировка от удаления
+		- enforces Write-Once Read-Many (WORM) immutability to protect versioned objects from deletion. 
+		- MinIO supports both duration 
+			- based object retention 
+			- indefinite Legal Hold retention.
 	- Quota
+- Object
+	- object name
+	- file name
+	- object data stream, object size, content type, 
+	- object metadata (метод [StatObject](https://min.io/docs/minio/linux/developers/dotnet/API.html#statobjectasync-statobjectargs-args))
+	- Data Encryption [SSE](https://min.io/docs/minio/linux/operations/server-side-encryption.html)
+	- Tags
+	- [Legal Hold status](https://min.io/docs/minio/linux/administration/object-management.html#object-retention)
+	- Retention Policy
+	- [Expire Policy](https://min.io/docs/minio/linux/developers/dotnet/API.html#presigned-operations)
 - Интеграции
 	- [Client SDK](https://min.io/docs/minio/linux/developers/minio-drivers.html#minio-drivers) 
 		- [JS](https://github.com/minio/minio-js), 
@@ -27,11 +42,12 @@
 	- Bucket [Events](https://min.io/docs/minio/linux/administration/monitoring/bucket-notifications.html#)	to [RMQ, PSQL, Redis, WebHook](https://min.io/docs/minio/linux/administration/monitoring.html#bucket-notifications)
 - [Security](https://min.io/docs/minio/linux/administration/identity-access-management.html)
 	- Policy-Based Access Control (PBAC) 
-	- [Encryption](https://min.io/product/enterprise-object-storage-encryption)
+	- [Encryption SSE](https://min.io/product/enterprise-object-storage-encryption)
 	- Manage
 		- Internal IDP	
 		- security access by [IAM Keycloak](https://min.io/product/identity-and-access-management) OIDC protocol
 		- LDAP
+	- [Audit requests](https://min.io/docs/minio/linux/operations/monitoring/minio-logging.html#minio-logging-publish-audit-logs)
 - MTA
 	- [MinIO Operator](https://blog.min.io/secure-multi-tenant-object-storage/)
 	- Варианты [Guide Deploy](https://github.com/minio/minio/blob/master/docs/multi-tenancy/README.md)

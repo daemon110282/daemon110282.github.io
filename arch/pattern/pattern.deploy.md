@@ -29,7 +29,7 @@
 ## Стратегии
 
 - Надежность
-	- [Rollback pattern](pattern.rollback.md) - Blue Green Deployment
+	- [Rollback pattern](pattern.rollback.md) - [Blue Green Deployment](https://codefresh.io/learn/software-deployment/what-is-blue-green-deployment/)
 	- k8s
 		- [Recreate](https://rtfm.co.ua/kubernetes-tipy-deployment-strategies-i-argo-rollouts/) - с простоем
 		- [Rolling Update](https://rtfm.co.ua/kubernetes-tipy-deployment-strategies-i-argo-rollouts/) - запускает новые поды параллельно с запущенными старыми, а затем убивает старые, и оставляет только новые.
@@ -53,7 +53,7 @@
 ## Как обновлять кодовую базу незаметно для пользователей
 
 - возможности управления HAProxy и реализации [Graceful Shutdown](graceful.shutdown.md) в наших сервисах
-- Миграции бд
+- [Миграции бд](migration.db.md)
 - поддерживаем на бою одновременно старую и новую версии сервиса
 - Заранее, на этапе разработки софта, закладывается, что даже если будут изменения в базе данных сервиса, они не будут ломать предыдущий код.
 
@@ -61,6 +61,5 @@
 
 ## Технологии
 
-- Feature toggle
-  - Flagger
+- [Feature toggle](feature.toggle.md)
 - [k8s](../../technology/ci-cd/k8s.md)

@@ -1,9 +1,12 @@
 # Отказоустойчивость Fault tolerance
 
 - [Отказоустойчивость Fault tolerance](#отказоустойчивость-fault-tolerance)
+  - [Зачем](#зачем)
   - [Факторы риска](#факторы-риска)
   - [Методы инфраструктуры, физической архитектуры](#методы-инфраструктуры-физической-архитектуры)
   - [Методы разработки](#методы-разработки)
+
+## Зачем
 
 Отказоустойчивость — это способность системы продолжать полноценно работать при выходе из строя отдельных компонентов — серверов или каналов связи, сбоев на уровне отдельных модулей системы и т.д.
 
@@ -28,8 +31,8 @@
 - резервирование, [дублирование, кластеры, либо горизонтальное масштабирование](https://habr.com/ru/company/otus/blog/561630/).
 - Прокси, файервол, капча
 - [Балансировка](../pattern/load.balancing.md)
-- api management
-- Установка лимитов запросов rate limits, тайм-аут
+- [api management](../../api/api-managment.md)
+- Установка лимитов запросов [rate limits](../pattern/rate.limit.md), тайм-аут
 - Dev ops ci/cd:
   - [docker](../../technology/ci-cd/docker.md)
   - [kubernetes](../../technology/ci-cd/k8s.md)
@@ -39,7 +42,7 @@
 - системы мониторинга - аптайм доступность сервиса, выраженная в процентах
 - ИБП, генератор электричества, охлаждение серверов
 - DB: Master-slave : Logshipping, репликации, кластер, Горизонтальное шардирование данных
-- [Распределенные файловые системы](../../technology/dfs.md)
+- [Распределенные файловые системы](../../technology/filesystem/dfs.md)
 - Бэкапы, логи
 
 ## Методы разработки
@@ -49,11 +52,12 @@
 - распределенная архитектура
   - Микросервисы: слабая связность, изоляция сбоев
   - stateless
-- модульный монолит
+- [модульный монолит](../style/monolit.modul.md)
 - [Health check](../pattern/pattern.healthcheck.md)
 - [CQRS](../pattern/pattern.cqrs.md) - command query request segregation
 - Асинхронная обработка - [Брокер очереди](../pattern/pattern.messagebroker.md), воркеры, буферы входного потока данных
-- Git, rollback, миграции бд
+- Git, rollback
+- [миграции бд](../pattern/migration.db.md)
 - [graceful shutdown](../pattern/graceful.shutdown.md)
 - Message Bus
   - [Паттерн Transactional outbox\Application events](https://microservices.io/patterns/data/transactional-outbox.html)

@@ -20,9 +20,9 @@ API - Application Programming Interface, что значит программн�
 ## Виды API
 
 - [REST API](api.rest.md)
-- GRPC
+- [GRPC](grpc.md)
 - GraphQL
-- [Вебхуки Webhook](https://systems.education/api-realtime)
+- [Вебхуки Webhook](webhook.md)
 - SOAP
   - ESB
 

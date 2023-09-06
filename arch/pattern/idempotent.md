@@ -22,8 +22,7 @@
   - Прокси-серверы могут не повторять POST и PATCH запросы при ошибках, тогда как GET и PUT могут повторить.
 - Чтобы гарантировать [идемпотентность MQ](https://www.russianblogs.com/article/3133962710/), необходимо гарантировать, что потребители не будут повторно использовать одно и то же сообщение.
 
+## Технологии
 
-
-
-
-
+- .NET MediatR (паттерн [медиатор](mediator.md)) и PipelineBehavior (паттерн [chain of responsibility](chainofresp.md) + decorator/proxy)
+(https://temofeev.ru/info/articles/borba-s-dublikatami-delaem-post-idempotentnym/)

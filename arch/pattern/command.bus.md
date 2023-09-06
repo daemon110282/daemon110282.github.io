@@ -12,7 +12,7 @@
 - The standard interface also makes it possible for additional functionality to be added by wrapping with __decorators__, or by adding __middleware__.
 ![middleware](https://uploads.sitepoint.com/wp-content/uploads/2016/01/1453218734middleware-pipeline.png)
 - TODO:
-	- protecting the original order of commands - pattern __Chain Of Responsibility__?
+	- protecting the original order of commands - pattern __[Chain Of Responsibility](chainofresp.md)__?
 
 ### Differences Event Bus
 

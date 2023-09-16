@@ -21,10 +21,7 @@
 
 - Timeseries Data (pg_partman extension)
 - [schema and data comparison tool for PostgreSQL](https://www.postgrescompare.com/)
-- Шардирование (CITUS)
-  - Вертикальный - партиционирование-секционирование, одну таблицу на несколько таблиц в одной субд
-    - Авто партиционирование данных для удаления устаревших
-  - Горизонтальный - таблицы на разных субд
+- [Шардирование](../../arch/pattern/shard.db.md) CITUS
 - Json/jsonb тип колонки
 
 ### Management

@@ -9,7 +9,7 @@
     - [Sql query plan](#sql-query-plan)
   - [Метрики](#метрики)
   - [Требования пример](#требования-пример)
-  - [TODO merge](#todo-merge)
+  - [TODO](#todo)
 
 [Паттерны](../pattern/pattern.perf.md)
 
@@ -58,10 +58,7 @@
 
 ### Секционирование Шардирование
 
-- таблиц в [одной бд](https://technet.microsoft.com/library/Cc966380)
-- Секция - [файл группы](http://sqlcom.ru/partition/partition-and-high-availability/)
-https://docs.microsoft.com/ru-ru/sql/relational-databases/partitions/partitioned-tables-and-indexes
-- [скользящее окно](http://www.sql.ru/articles/mssql/2005/073102partitionedtablesandindexes.shtml)
+[Секционирование Шардирование](../pattern/shard.db.md)
 
 ### Sql query plan
 

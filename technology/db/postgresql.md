@@ -12,6 +12,8 @@
     - [ETL PSQL2MSSQL](#etl-psql2mssql)
     - [ETL MSSQL2PSQL](#etl-mssql2psql)
     - [Миграция с MS SQL](#миграция-с-ms-sql)
+      - [Миграция с простоем](#миграция-с-простоем)
+      - [Миграция без простоя Zero Downtime](#миграция-без-простоя-zero-downtime)
 
 ## Термины
 
@@ -82,19 +84,40 @@
 
 ### Миграция с MS SQL
 
-- Утилиты
-  - Free
-    - [Миграция](../../arch/pattern/migration.md) "большим взрывом" с простоем
-      - Pgloader 
-      - [sqlserver2pgsql](https://nuvalence.io/insights/microsoft-sql-server-to-postgresql-migration-using-sqlserver2pgsql/) - great for one off database migrations, but it’s not suitable for use cases that require continuous data synchronization between the source and target databases for an extended period of time.
-      - Bulk Loader
-        - Высокая скорость вставки (2-10 раз)
-        - 120к строк\сек
-        - 1Mb менее чем за 10сек
-    - AWS Database Migration Service (DMS)
-    - Постепенная, итеративная миграция - Zero-Downtime
-      - AWS [Babelfish](https://docs.yandex.ru/docs/view?keyno=0&l10n=ru&lang=en&lr=144376&mime=pdf&name=San_Jose_Babelfish_Final_Presentation.pdf&nosw=1&serpParams=tm%3D1691925809%26tld%3Dru%26lang%3Den%26name%3DSan_Jose_Babelfish_Final_Presentation.pdf%26text%3Dbabelfish%26url%3Dhttps%253A%2F%2Fpostgresconf.org%2Fsystem%2Fevents%2Fdocument%2F000%2F001%2F931%2FSan_Jose_Babelfish_Final_Presentation.pdf%26lr%3D144376%26mime%3Dpdf%26l10n%3Dru%26type%3Dtouch%26sign%3D30f3ee03ba7e27203a40f41ab0e29b39%26keyno%3D0%26nosw%3D1&sign=30f3ee03ba7e27203a40f41ab0e29b39&text=babelfish&tld=ru&tm=1691925809&type=touch&url=https%3A%2F%2Fpostgresconf.org%2Fsystem%2Fevents%2Fdocument%2F000%2F001%2F931%2FSan_Jose_Babelfish_Final_Presentation.pdf) 
-        - плагин PostgreSQL - поддержка T-SQL синтаксиса (приложение можно не переписывать сразу при смене СУБД) по протоколу TDS при миграции на СУБД PostgreSQL
-      - [CDC](../../arch/system.class/cdc.md) [Debezium](../../technology/cdc/debezium.md) используя Снимки (snapshots)
-  - Commercial
-    - Без изменений исходного приложения миграция [Albatros](https://www.sqlpipe.com/blog/migrate-sql-server-to-postgresql)
+- Compare [SSIS, SQLPipe, Airbyte, AWS Data pipeline](https://www.sqlpipe.com/blog/ssis-alternatives) в [таблице](https://docs.google.com/spreadsheets/d/16DrvIIczpy4V-4BzNvtI-IyNQfkU21GFX-JcWEjkf4A/edit#gid=0)
+
+#### Миграция с простоем
+
+[Миграция](../../arch/pattern/migration.md) "большим взрывом" с простоем
+
+- Free
+    - [Pgloader](https://pgloader.io/)
+    - [sqlserver2pgsql](https://github.com/dalibo/sqlserver2pgsql) Perl
+      - great for one off database migrations, but it’s [not suitable for use cases that require continuous data synchronization](https://nuvalence.io/insights/microsoft-sql-server-to-postgresql-migration-using-sqlserver2pgsql/) between the source and target databases for an extended period of time.
+      - [Пример docker + Pentaho Kettle](https://nuvalence.io/insights/microsoft-sql-server-to-postgresql-migration-using-sqlserver2pgsql/)
+    - Bulk Loader
+      - Высокая скорость вставки (2-10 раз)
+      - 120к строк\сек
+      - 1Mb менее чем за 10сек
+    - SQLPipe + [Airflow, Flower Docker пример](https://habr.com/ru/articles/512386/)
+    - AWS Database Migration Service (DMS)  
+      - TODO
+
+#### Миграция без простоя Zero Downtime
+
+Постепенная, __итеративная__ миграция - Zero Downtime
+
+- Free
+  - AWS [Babelfish](https://babelfishpg.org)
+    - плагин PostgreSQL - поддержка T-SQL синтаксиса (приложение можно не переписывать сразу при смене СУБД) по протоколу TDS при миграции на СУБД PostgreSQL
+    - план:
+      - генерируется схема БД из MS SQL Managment
+      - Compass проверяет схему на возможность миграции на PostgreSQL Babelfish
+      - генерируется схема БД в PostgreSQL - __минус повторяет схему MSSQL без рефакторинга схем БД__
+      - __миграция данных__ через AWS DMS
+      - приложение направляет запросы в Babelfish в формате MSSQL T-SQL, BabelFish [конвертирует их в формате PostgreSQL](https://disk.yandex.ru/i/ovwejkZmzQ7_SA)
+  - [CDC](../../arch/system.class/cdc.md) [Debezium](../../technology/cdc/debezium.md) используя Снимки (snapshots)
+- Commercial
+  - Без изменений исходного приложения [Albatros + AWS Babelfish + SQL Pipe](https://www.sqlpipe.com/blog/migrate-sql-server-to-postgresql) сравнение с AWS DMS и sqlserver2pgsql
+  - [SQL Server to PostgreSQL converter](https://www.convert-in.com/mss2pgs.htm) need __equal structures__ DB
+  - [MSSQL-PostgreSQL Sync](https://www.convert-in.com/m2psync.htm) need __equal structures__ DB

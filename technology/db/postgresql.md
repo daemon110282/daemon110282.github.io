@@ -91,17 +91,22 @@
 [Миграция](../../arch/pattern/migration.md) "большим взрывом" с простоем
 
 - Free
+    - Через CSV
+      - Эскпорт CSV MS SQL [bcp export](https://learn.microsoft.com/ru-ru/sql/tools/bcp-utility?view=sql-server-ver16)
+      - Импорт CSV [Copy PostgresSQL](https://www.postgresql.org/docs/current/sql-copy.html)
+    - [PostgresSQL TDS Foreign data wrapper for MS SQL](https://github.com/tds-fdw/tds_fdw)
     - [Pgloader](https://pgloader.io/)
     - [sqlserver2pgsql](https://github.com/dalibo/sqlserver2pgsql) Perl
       - great for one off database migrations, but it’s [not suitable for use cases that require continuous data synchronization](https://nuvalence.io/insights/microsoft-sql-server-to-postgresql-migration-using-sqlserver2pgsql/) between the source and target databases for an extended period of time.
       - [Пример docker + Pentaho Kettle](https://nuvalence.io/insights/microsoft-sql-server-to-postgresql-migration-using-sqlserver2pgsql/)
-    - Bulk Loader
+    - Bulk Loader?
       - Высокая скорость вставки (2-10 раз)
       - 120к строк\сек
       - 1Mb менее чем за 10сек
     - SQLPipe + [Airflow, Flower Docker пример](https://habr.com/ru/articles/512386/)
     - AWS Database Migration Service (DMS)  
-      - TODO
+      - TODO DMS
+    - [SQL скрипты на схему и данные через CSV](https://github.com/yogimehla/SQLtoPostgresMigrationScript)
 
 #### Миграция без простоя Zero Downtime
 
@@ -117,6 +122,11 @@
       - __миграция данных__ через AWS DMS
       - приложение направляет запросы в Babelfish в формате MSSQL T-SQL, BabelFish [конвертирует их в формате PostgreSQL](https://disk.yandex.ru/i/ovwejkZmzQ7_SA)
   - [CDC](../../arch/system.class/cdc.md) [Debezium](../../technology/cdc/debezium.md) используя Снимки (snapshots)
+  - AWS SCT + Database Migration Service (DMS)  
+    - TODO DMS
+    - [Пример MSSQL2PGSQL](https://transactts.com/complex-aws-migrations-sct/)
+    - [Пример](https://www.youtube.com/watch?v=3oG_xewMpOM&ab_channel=CodeSpace)
+    - [Пример](https://www.youtube.com/watch?v=3DcCX89Mz78&ab_channel=DotNext)
 - Commercial
   - Без изменений исходного приложения [Albatros + AWS Babelfish + SQL Pipe](https://www.sqlpipe.com/blog/migrate-sql-server-to-postgresql) сравнение с AWS DMS и sqlserver2pgsql
   - [SQL Server to PostgreSQL converter](https://www.convert-in.com/mss2pgs.htm) need __equal structures__ DB

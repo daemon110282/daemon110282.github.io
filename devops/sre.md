@@ -12,8 +12,6 @@
     - документирует целевые показатели качества услуги
     - указывает зоны ответственности сторон
     - заключается между Бизнес-владельцем и поставщиком ИТ-услуги
-- four [golden signals](https://sre.google/sre-book/monitoring-distributed-systems/)
-  - [TODO](https://habr.com/ru/companies/southbridge/articles/525176/)
   
 ## ИТ услуга
 

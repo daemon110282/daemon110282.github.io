@@ -19,7 +19,7 @@
 	![scheme](https://docs.citrix.com/en-us/citrix-adc/media/csw-lbconfiguration.png)
 - Proxy
   - Проксирование статического контента.
-- Load Balancer
+- [Load Balancer](https://docs.netscaler.com/en-us/citrix-adc.html)
 	- [iis](https://kb.paessler.com/en/topic/22633-how-to-monitor-active-sessions-users-for-iis-7-0)
 	- [configure](http://pleasework.robbievance.net/howto-configure-citrix-netscaler-to-perform-website-aware-load-balancing/)
 - [Citrix ADC (NetScaler) Ingress Controller for Kubernetes](https://github.com/citrix/citrix-k8s-ingress-controller)
@@ -35,6 +35,30 @@
 - Администрирование
 	- [Аудит изменений конфигурации Audit Logging](https://docs.netscaler.com/en-us/citrix-adc/12-1/system/audit-logging)
 	- [Логическое разделение балансировщиков Admin Partitioning](https://docs.netscaler.com/en-us/citrix-adc/12-1/admin-partition)
+- Observability
+	- [Logs - ELK\GrayLog, Metric - Prometheus, Trace - Jaeger](https://www.netscaler.com/blog/observability/improve-the-observability-of-your-applications-with-netscaler/)
+	- [Export metrics from Citrix ADC (NetScaler) 12.1 to Prometheus](https://github.com/netscaler/citrix-adc-metrics-exporter) в более поздних версиях из коробки есть
+- Контроль трафика до приложений [AppFlow](https://docs.netscaler.com/en-us/citrix-adc/12-1/ns-ag-appflow-intro-wrapper-con.html)
+	- collects flow and user-session level information valuable for __application performance monitoring__ (APM), analytics, and business intelligence applications. 
+	- collects __webpage performance data and database information__ 
+	- transmits the information by using the Internet Protocol Flow Information eXport (IPFIX) format
+	- собранные данные можно просмотреть в Citrix ADM
+
+## Citrix Application Delivery Management (ADM) 
+
+- [Сбор и анализ данных](https://docs.netscaler.com/en-us/citrix-application-delivery-management-software/12-1/overview.html)
+	- user-session-level information
+	- web page performance data
+	- database information
+- [Лицензирование](https://docs.netscaler.com/en-us/citrix-application-delivery-management-software/12-1/licensing.html)
+- [Application performance analytics](https://docs.netscaler.com/en-us/citrix-application-delivery-management-software/12-1/application-analytics-and-management/application-performance-analytics.html)		
+- analytics работает на базе собранных данных __Citrix ADC AppFlow__
+	- [Web Insight](https://docs.netscaler.com/en-us/citrix-application-delivery-management-software/12-1/analytics/web-insight.html)
+		- real-time monitoring of the applications: network latency and server response time
+
+## NetScaler Gateway
+
+- [NetScaler Gateway](https://docs.netscaler.com/en-us/citrix-gateway/current-release/about-citrix-gateway.html)
 
 ## Cache
 
@@ -84,8 +108,10 @@ Citrix ADC может в [Grafana статистику по отказам, за
 
 - Standard Edition
 - Advanced Edition
-- Enterprise?
+- Enterprise
 - Premium Edition
+
+Version:
 
 - 12.1 Enterpise - use
 - 13.0

@@ -113,7 +113,7 @@
 Постепенная, __итеративная__ миграция - Zero Downtime
 
 - Free
-  - AWS [Babelfish](https://babelfishpg.org)
+  - AWS [Babelfish](https://babelfishpg.org) - минус: __схемы БД не изменяются__
     - плагин PostgreSQL - поддержка T-SQL синтаксиса (приложение можно не переписывать сразу при смене СУБД) по протоколу TDS при миграции на СУБД PostgreSQL
     - план:
       - генерируется схема БД из MS SQL Managment
@@ -122,7 +122,7 @@
       - __миграция данных__ через AWS DMS
       - приложение направляет запросы в Babelfish в формате MSSQL T-SQL, BabelFish [конвертирует их в формате PostgreSQL](https://disk.yandex.ru/i/ovwejkZmzQ7_SA)
   - [CDC](../../arch/system.class/cdc.md) [Debezium](../../technology/cdc/debezium.md) используя Снимки (snapshots)
-  - AWS SCT + Database Migration Service (DMS)  
+  - AWS SCT + Database Migration Service (DMS) - минус: __схемы БД не изменяются__
     - TODO DMS
     - [Пример MSSQL2PGSQL](https://transactts.com/complex-aws-migrations-sct/)
     - [Пример](https://www.youtube.com/watch?v=3oG_xewMpOM&ab_channel=CodeSpace)

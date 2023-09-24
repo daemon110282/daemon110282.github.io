@@ -2,14 +2,22 @@
 
 - [performance metric](#performance-metric)
   - [Зачем](#зачем)
+  - [Методики выбора метрик](#методики-выбора-метрик)
   - [Виды метрик](#виды-метрик)
     - [Business Metrics](#business-metrics)
     - [Application Metrics](#application-metrics)
     - [System Metrics](#system-metrics)
     - [Client Metrics: Приложение front-end](#client-metrics-приложение-front-end)
-    - [Service Metrics: API](#service-metrics-api)
+    - [Service Metrics](#service-metrics)
+      - [API](#api)
+      - [Virtual Machine](#virtual-machine)
+      - [Кеш](#кеш)
+      - [Балансирощик](#балансирощик)
+      - [СУБД](#субд)
 
 ## Зачем
+
+Измеряем атрибут качества ИС [производительность](performance.md).
 
 To-do
 - https://www.datadoghq.com/blog/monitoring-101-collecting-data/

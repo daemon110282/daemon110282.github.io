@@ -63,7 +63,6 @@
 
 #### RMQ vs Kafka
 
-
 ##### RabbitMQ
 
 Плюсы:
@@ -95,5 +94,4 @@
 Минусы:
 
 - Наиболее полно API Kafka поддерживается только в языках Java и Scala. В других языках поддержка не всегда полная, поэтому фреймворки Kafka Connect и Kafka Streams созданы.
-- [Нет приоритета сообщений](https://blog.bytebytego.com/p/how-to-choose-a-message-queue-kafka
-)
+- [Нет приоритета сообщений](https://blog.bytebytego.com/p/how-to-choose-a-message-queue-kafka)

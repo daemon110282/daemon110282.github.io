@@ -8,6 +8,7 @@
     - [Simple one-way messaging](#simple-one-way-messaging)
     - [Publish-subscribe Издатель-Подписчик](#publish-subscribe-издатель-подписчик)
     - [RPC (команды)](#rpc-команды)
+    - [Direct Reply-TO](#direct-reply-to)
     - [MTA](#mta)
     - [headers vs topic для событий](#headers-vs-topic-для-событий)
     - [Версионирование сообщений](#версионирование-сообщений)
@@ -64,6 +65,13 @@
   - [паттерн EIP](../../../arch/pattern/pattern.rpc.md)
   - EasyNetQ [RPC](https://github.com/EasyNetQ/EasyNetQ/wiki/Request-Response)
   - [Exchange type: direct](https://www.rabbitmq.com/tutorials/tutorial-six-dotnet.html), message can be sent to default exchange with a specified routing key and response is received on a specified unique response queue, owned by the client
+
+### Direct Reply-TO
+
+- мы подписываемся на специальную псевдоочередь amqp.rabbitmq.reply-to
+- отправляем сообщение с указанием этой очереди в качестве reply-to заголовка
+- RMQ генерирует для нас уникальный routing_key, по которому будет должно быть опубликовано ответное сообщение в default exchange
+- сервер получает наше сообщение и [отправляет ответ по этому routing_key](https://habr.com/ru/articles/747644/)
 
 ### MTA
 

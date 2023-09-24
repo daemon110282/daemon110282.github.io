@@ -7,7 +7,7 @@
 - использует архитектуру Model-View-ViewModel
 - [SPA](/arch/style/spa.md)
 - Vue 2.0 поддерживает __серверный рендеринг SSR__
-	- Сервер NodeJS + [Nuxt.js](https://dergunov.com/wiki/nuxt-js-intro)
+	- Сервер [NodeJS](nodejs.md) + [Nuxt.js](https://dergunov.com/wiki/nuxt-js-intro)
 - Паттерн управления состоянием приложения: Vuex, Pinia
 - Vue концентрируется на однонаправленном потоке данных между компонентами
 - Динамическая форма

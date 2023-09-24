@@ -28,4 +28,5 @@
 
 ### Выбор
 
+- [Nginx Plus vs Netscaler performance](https://www.nginx.com/blog/nginx-plus-vs-citrix-netscaler-price-performance-comparison/)
 - [Traefik лучше Nginx для роутинга?](https://s3rius.blog/traefik)

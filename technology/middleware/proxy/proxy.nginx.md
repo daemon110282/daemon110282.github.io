@@ -1,12 +1,13 @@
 # NGINX
 
-Реализует паттерн [Reverse Proxy](../../arch/pattern/pattern.proxy.reverse.md)
+Реализует паттерн [Reverse Proxy](../../arch/pattern/pattern.proxy.reverse.md) и [API Gateway](../../../api/api.gateway.md)
 
 - Cache
 - SSL encryption
 - Load balancing
 - Routing
 	- [Config или Lua](https://habr.com/ru/company/vdsina/blog/504308/)
+- [Demo Nginx Plus](https://demo.nginx.com/)
 
 ## Version
 

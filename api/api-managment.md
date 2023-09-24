@@ -10,7 +10,7 @@
 ## Зачем
 
 - [Development portal](https://cloud.google.com/blog/products/api-management/top-5-trends-for-api-powered-digital-transformation-in-2021)
-- Мониторинг, статистика использования
+- API observability platform: Мониторинг, статистика использования
 - [Безопасность (контроль доступа, защита)](https://aws.amazon.com/ru/api-gateway/api-management/?pg=wianapi&cta=apimgtprcs)
 - Монетизация
 - Производительность
@@ -37,11 +37,12 @@
   - Postman
 - On premise
   - Redocfly
-  - Kong
+  - [Kong](../technology/middleware/api.gateway/gw.kong.md)
   - [WSO2 Api Manager](https://wso2.com/api-manager/)
-  - [Gravitee](../technology/api/gw.gravitee.md)
+  - [Gravitee](../technology/middleware/api.gateway/gw.gravitee.md)
 - ?
   - AxWay
   - MuleSoft
   - [Pronovix](https://pronovix.com/blog/one-developer-portal-document-them-all)
   - [Tyk](https://tyk.io/)
+  - [moesif](https://www.moesif.com/)

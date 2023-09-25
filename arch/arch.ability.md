@@ -40,8 +40,8 @@
   - CI-CD куда?
   - [Автодокументирование API](../api/api.md)
   - [Наблюдаемость Observability](ability/observability.md)
-- Надежность Reliability
-  - [Готовность Доступность Availability (Эксплуатационные)](ability/availability.md)
+- [Надежность Reliability](../devops/sre.md)
+  - [Доступность Availability (Эксплуатационные)](ability/availability.md)
   - Согласованность Consistency (Эксплуатационные)
   - [Отказоустойчивость Fault tolerance](ability/faulttolerance.md)
   - Стабильность (Изоляция сбоев) [Resilience](ability/resilience.md)

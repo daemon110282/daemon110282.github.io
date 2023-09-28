@@ -25,12 +25,21 @@ To-do
 ## Методики выбора метрик
 
 - USE - [Utilization, Saturation, Errors](https://habr.com/ru/companies/okmeter/articles/420429/)
-  - Мониторинг ресурсов
+  - Мониторинг ресурсов (System Metrics)
 - RED - Request (Rate) Error Duration (Latency)
-  - Мониторинг нагрузки на сервисы
+  - Мониторинг нагрузки на сервисы (Service Metrics)
 - Google [SRE](../../devops/sre.md) [4 Golden signals](https://sre.google/sre-book/monitoring-distributed-systems/)
   - [TODO](https://habr.com/ru/companies/southbridge/articles/525176/)
+  - Latency 
+    - is the amount of time between when a user sends a request and when the service responds. Lower latencies are better, since this indicates that users are being served faster.
+  - Traffic 
+    - is the amount of demand the service is handling. This is often measured in HTTP requests per second, connections per second, or bandwidth usage. We can also use metrics specific to our service, such as transactions processed per minute.
+  - Errors 
+    - is the rate of requests that failed. The criteria for a failure depends on the service, but the most common is when a service responds to a request with an HTTP 5XX error code.
+  - Saturation 
+    - is the amount of resources your service is consuming out of all the resources available to it. Remember that your containers may only have a limited amount of resources allocated to them. High saturation indicates that you might need to scale up your service by increasing your container resource limits, adding additional container replicas, or increasing the capacity of your servers.
 - [Web Vitals](https://web.dev/i18n/en/vitals/)
+  - Мониторинг производительности клиентских веб приложений (Client Metrics)
 
 Счетчики как внедрить:
 

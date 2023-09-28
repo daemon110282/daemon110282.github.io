@@ -155,7 +155,7 @@ __Не подходит__ для:
 
 ## Технологии
 
-- Service Mesh
+- [Service Mesh](../../technology/middleware/servicemesh.md)
 - [API Gateway](../../api/api.gateway.md)
 - Service Discovery
 

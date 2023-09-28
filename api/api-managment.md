@@ -3,6 +3,7 @@
 - [API Managment (APIM)](#api-managment-apim)
   - [Зачем](#зачем)
     - [Development Portal База знаний API](#development-portal-база-знаний-api)
+  - [Плюсы-минусы](#плюсы-минусы)
   - [Технологии](#технологии)
 
 Расширяет возможности [API Gateway](api.gateway.md).
@@ -10,10 +11,11 @@
 ## Зачем
 
 - [Development portal](https://cloud.google.com/blog/products/api-management/top-5-trends-for-api-powered-digital-transformation-in-2021)
-- API observability platform: Мониторинг, статистика использования
+- API observability platform
+  - Мониторинг производительности, быстродействия
+  - статистика использования
 - [Безопасность (контроль доступа, защита)](https://aws.amazon.com/ru/api-gateway/api-management/?pg=wianapi&cta=apimgtprcs)
 - Монетизация
-- Производительность
 - Policy management
 - Service discovery
 
@@ -27,6 +29,20 @@
 - Примеры кода клиента
 - История изменений АПИ
 - GIT integration
+  
+## Плюсы-минусы
+
+Плюсы
+
+- Мониторинг API
+- позволяет [преобразовать запросы/ответы API](https://habr.com/ru/companies/X5Tech/articles/543324/)
+
+Минусы
+
+- Единая точка отказа
+- Latency увеличивается
+- Сопровождение, стоимость ТСО
+- Усложнение интеграции
 
 ## Технологии
 

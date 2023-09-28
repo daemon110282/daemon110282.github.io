@@ -2,7 +2,7 @@
 
 ## Зачем
 
-Реализует паттерн [Reverse Proxy](../../../arch/pattern/pattern.proxy.reverse.md) и [API Gateway](../../../api/api.gateway.md)
+Реализует паттерн [Reverse Proxy](../../../arch/pattern/pattern.proxy.reverse.md) и [API Gateway](../../../api/api.gateway.md) относится к классу ИС [API Managment](../../../api/api-managment.md)
 
 - [EDA](../../../arch/style/eda.md) API support
 	- AsyncAPI Docs, import support

@@ -146,4 +146,4 @@
   - [Helm](helm.md)
 - Container Registry
   - Nexus
-- [Service mesh](../servicemesh.md)
+- [Service mesh](../middleware/servicemesh.md)

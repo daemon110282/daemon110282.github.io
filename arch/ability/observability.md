@@ -20,7 +20,7 @@
 	- Real-user monitoring (RUM)
 	- [Application Perfomance Monitoring (APM)](../system.class/apm.md).
 - [Logging](../../technology/logging.md)
-- [Trace](../../technology/tracing.distributed.md)
+- [Distributed Trace](../../technology/tracing.distributed.md)
 
 Характеристики:
 

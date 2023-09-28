@@ -9,8 +9,8 @@
 
 ## Зачем
 
-- Снижение связности
-- Too many __round trips__. [Паттерн Aggregation](https://docs.microsoft.com/ru-ru/azure/architecture/patterns/gateway-aggregation)
+- Снижение связности ИС
+- Too many __round trips__. [Паттерн Aggregation запросов](https://docs.microsoft.com/ru-ru/azure/architecture/patterns/gateway-aggregation)
   - minimize the [number of requests to the back end](https://docs.microsoft.com/ru-ru/dotnet/architecture/microservices/architect-microservice-container-applications/direct-client-to-microservice-communication-versus-the-api-gateway-pattern) and reduce chatty
 communication to multiple microservices
 - [Сквозная функциональность](https://docs.microsoft.com/ru-ru/azure/architecture/patterns/gateway-offloading) __cross-cutting concerns__ or gateway offloading  
@@ -27,25 +27,35 @@ communication to multiple microservices
   - IP whitelisting
   - TLS Termination
 - Mock
-- Monetize
-- [API managment](api-managment.md)
-- client apps communicate with services that use __non-Internet-friendly protocols(amqp)__
-- __Security issues__
+- __Security issues__ Сокрытие внутренних API ИС от внешних ИС потребителей
   - Without a gateway, all the microservices must be exposed to the “external world"
-- __“backend for frontend”__ (BFF) because you build it while thinking about the needs of the client app.
+- __“backend for frontend”__ (BFF) разные типы клиентов (интернет веб приложение, мобильное приложение, интранет веб приложение и тп) могут иметь разные требования по интеграции для
+  - сокращения трафика
+  - снижения числа запросов, т.к. влияет на заряд мобильного приложения
   - __facade__ especially [made for mobile apps](https://microservices.io/patterns/apigateway)
-  
+
+Расширяет функции API Gateway ИС класса [API managment](api-managment.md) (APIM)
+
+- Monetize
+- Трансформация запросов REST2RMQ, REST2gRPC и тп.
+  - client apps communicate with services that use __non-Internet-friendly protocols(amqp)__
+
 Тодо
 - https://link.medium.com/Cu6FA4CrHub
-- https://habr.com/ru/company/X5Tech/blog/543324/
 
 ## Плюсы-минусы
+
+Плюсы
+
+- Фасад до внутренних ИС
+- Абстракция
 
 Минусы
 
 - Единая точка отказа
-- Latency
-- Сопровождение
+- Latency увеличивается
+- Сопровождение усложняется 
+- стоимость ТСО увеличивается
 - Усложнение интеграции
 
 ## Паттерны

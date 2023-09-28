@@ -15,7 +15,7 @@
 - CD - процесс доставки, развертывания
 - [Deployment](arch/pattern/pattern.deploy.md)
   - [A\B test](arch/ref/abtesting.md)
-- [Service Mesh](technology/servicemesh.md)
+- [Service Mesh](technology/middleware/servicemesh.md)
 - [Доступность](arch/ability/availability.md), Отказоустойчивость, Надежность
 - [Производительность](arch/ability/performance.md)
   - Auto Scaling

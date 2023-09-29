@@ -30,7 +30,7 @@ To-do
   - Мониторинг нагрузки на сервисы (Service Metrics)
 - Google [SRE](../../devops/sre.md) [4 Golden signals](https://sre.google/sre-book/monitoring-distributed-systems/)
   - [TODO](https://habr.com/ru/companies/southbridge/articles/525176/)
-  - Latency 
+  - [Latency](https://habr.com/ru/companies/flant/articles/462503/)
     - is the amount of time between when a user sends a request and when the service responds. Lower latencies are better, since this indicates that users are being served faster.
   - Traffic 
     - is the amount of demand the service is handling. This is often measured in HTTP requests per second, connections per second, or bandwidth usage. We can also use metrics specific to our service, such as transactions processed per minute.

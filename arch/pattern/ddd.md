@@ -1,5 +1,7 @@
 # Domain Driven Design DDD
 
+Код должен в себе отражать предментую область, т.е. __классы__ должны __соответствовать__ объектам __реальной предметной области__ как __по структуре__, так и __по поведению__.
+
 - [Domain Driven Design DDD](#domain-driven-design-ddd)
   - [Зачем](#зачем)
   - [Плюсы и минусы](#плюсы-и-минусы)
@@ -32,15 +34,13 @@
 
 ## Паттерны
 
-- [Паттерны](https://github.com/Sairyss/domain-driven-hexagon)
-- [IBM sample event-storming](https://www.ibm.com/cloud/architecture/architecture/practices/event-storming-methodology-architecture/)
-  - [IBM sample DDD](https://ibm-cloud-architecture.github.io/refarch-kc/implementation/domain-driven-design/)
-  - [IBM sample event-storming analysis](https://ibm-cloud-architecture.github.io/refarch-kc/implementation/event-storming-analysis/)
+- [TODO Паттерны](https://github.com/Sairyss/domain-driven-hexagon)
+- [Event-storming](event.storming.md)
 - [CQRS](pattern.cqrs.md)
 
 ### Принципы проектирования
 
-[Схемы](https://docs.google.com/document/d/1qgHu49LneU_iNi3YmPLc1NHSVfH-BvONdOyjg5DE8Xs/edit?usp=sharing)
+- [IBM sample DDD](https://ibm-cloud-architecture.github.io/refarch-kc/implementation/domain-driven-design/)
 
 #### 1 Стратегическое проектирование
 
@@ -95,6 +95,9 @@
   - Модель не описывает действий и логики домена
 
 ### Слои приложения
+
+![Alt text](../../img/pattern/ddd/ddd.flow.jpg)
+![Alt text](../../img/pattern/ddd/ddd.doman.app.logic.jpg)
 
 - Служба __Aplication Services__
   - Реализация Use Case UI

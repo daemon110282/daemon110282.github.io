@@ -4,14 +4,23 @@
 
 ## Зачем
 
-- Общее понимание бизнеса
-- Ошибки декомпозиции на сервисы снижает и риск распределенного монолита. В  монолите проще провести рефакторинг, микросервисы как распределенный монолит - боль.  
+- помогает быстро получить __стратегический дизайн__, определив границы, в рамках которых технические решения можно принимать автономно
+- Общее __понимание бизнеса__
+- __снижает риски__ декомпозиции на сервисы  и __реализации распределенного монолита__. В  монолите проще провести рефакторинг, микросервисы как распределенный монолит - дорого рефакторить из за интеграций.  
+- Если преднамеренно не нарушать границы на уровне реализации, то зависимости не появятся
+- Появляется возможность __эволюционного развития__ к целевому видению
+
+Примеры
 
 - [IBM sample event-storming analysis](https://ibm-cloud-architecture.github.io/refarch-kc/implementation/event-storming-analysis/)
 - [IBM sample Event-storming](https://www.ibm.com/cloud/architecture/architecture/practices/event-storming-methodology-architecture/)
 
+## План проведения
+
 ![Alt text](../../img/pattern/ddd/event.storming.plan.jpg)
 
 ![Alt text](../../img/pattern/ddd/event.storming.elements.jpg)
+
+- Hot Spots - вопросы на подумать
 
 ![Alt text](../../img/pattern/ddd/event.storming.step.jpg)

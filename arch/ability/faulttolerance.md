@@ -61,7 +61,7 @@
   - stateless
 - [модульный монолит](../style/monolit.modul.md)
 - [Health check](../pattern/pattern.healthcheck.md)
-- [CQRS](../pattern/pattern.cqrs.md) - command query request segregation
+- [CQRS](../pattern/pattern.cqrs.md)
 - Асинхронная обработка - [Брокер очереди](../pattern/pattern.messagebroker.md), воркеры, буферы входного потока данных
 - Git, rollback
 - [миграции бд](../pattern/migration.db.md)

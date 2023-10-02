@@ -13,8 +13,8 @@
 
 - это __разделение ответственности за команды и запросы__, шаблон, который разделяет операции чтения и обновления для хранилища данных. 
 - Внедрив в приложение CQRS, можно __максимально увеличить его производительность, масштабируемость и защиту__.
-- __Гибкость__, достигнутая при переходе на CQRS, позволяет системе лучше развиваться с течением времени и не мешает командам обновления вызывать конфликты слияния [на уровне домена](https://learn.microsoft.com/ru-ru/azure/architecture/patterns/cqrs).
-- В основном используется с [Event Sourcing](event.sourcing.md).
+- __Гибкость__, достигнутая при переходе на CQRS, позволяет системе лучше развиваться с течением времени и не мешает командам обновления вызывать конфликты слияния [на уровне домена](https://learn.microsoft.com/ru-ru/azure/architecture/patterns/cqrs)
+- В основном используется с [Event Sourcing](event.sourcing.md)
 
 ## Плюсы и минусы
 
@@ -29,7 +29,8 @@
 Минусы
 
 - в любой системе с разделением хранилищ для записи и чтения, здесь возможна только __итоговая согласованность__. Между созданием события и обновлением данных в хранилище __всегда будет некоторая задержка__.
-- __повышает сложность системы__, так как в нем нужно создать код для запуска и обработки событий, а также постоянно собирать или обновлять все представления и объекты, необходимые для обработки запросов в модели чтения.
+- __повышает сложность системы__, так как в нем [нужно создать код для запуска и обработки событий](https://habr.com/ru/articles/347908/), а также постоянно собирать или __обновлять все представления__ и объекты, необходимые для обработки запросов в __модели чтения__.
+  - Применять когда read — подсистема не справляется с нагрузками
 
 ## Команда
 
@@ -63,21 +64,24 @@
 
 - [Command](command.md)
 - [Command Bus](command.bus.md)
-- [materialized view](https://learn.microsoft.com/ru-ru/azure/architecture/patterns/materialized-view)
+- [Materialized view](https://learn.microsoft.com/ru-ru/azure/architecture/patterns/materialized-view)
 - [Event Sourcing](event.sourcing.md)
-  - Если хранилище чтения и записи единое
-Event sourcing не требуется.
+  - Если хранилище чтения и записи единое Event sourcing не требуется.
+- Event Store
 
 ## Технологии
 
 - [.Net](https://github.com/heynickc/awesome-ddd#jvm-languages)
-  -  NCQRS
-  -  Lokad CQRS
-  -  SimpleCQRS
+  - [NCQRS](https://habr.com/ru/articles/146429/)
+  - Lokad CQRS
+  - SimpleCQRS
+  - [Akka](https://getakka.net/)
   - [eShopOnContainers](https://github.com/dotnet-architecture/eShopOnContainers/search?q=page)
   - [Пример от Jimmy Bogard](https://github.com/jbogard/ContosoUniversityDotNetCore-Pages/search?q=page)
   - Пример реализации [паджинатора](https://github.com/PacktPublishing/Hands-On-Domain-Driven-Design-with-.NET-Core/search?q=page)
+  - NEventStore - [Event Store](https://github.com/NEventStore/NEventStore)
+- [PHP DDS + CQRS + Event Store](../ref/ddd/php.md)
 - Пример от [Kamil Grzybek](https://github.com/kgrzybek/modular-monolith-with-ddd/search?q=page)
-- Спецификая
+- Спецификация
   - Пример от [vkhorikov](https://github.com/vkhorikov/SpecPattern/search?q=page)
   - [Пример](https://github.com/vkhorikov/SpecificationPattern/search?q=page)

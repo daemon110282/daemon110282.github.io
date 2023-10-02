@@ -73,6 +73,6 @@ communication to multiple microservices
   - [Kong](../technology/middleware/api.gateway/gw.kong.md)
   - Tyk
 - Commercial
-  - [traefik](https://traefik.io/solutions/api-gateway/)
+  - [traefik](../technology/middleware/api.gateway/gw.traefik.md)  
   - [Citrix ADC (Netscaler)](../technology/middleware/proxy/proxy.netscaler.md)
   - [Nginx](../technology/middleware/proxy/proxy.nginx.md)

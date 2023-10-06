@@ -19,6 +19,8 @@
 
 ![Alt text](../../img/pattern/ddd/event.storming.plan.jpg)
 
+- можете ли вы разделить __область знаний__ на более мелкие __бизнес-процессы__, которые вы моделируете один за другим в __нескольких циклах__ Event Storming.
+
 ![Alt text](../../img/pattern/ddd/event.storming.elements.jpg)
 
 - Hot Spots - вопросы на подумать

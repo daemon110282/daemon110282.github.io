@@ -15,8 +15,8 @@
 communication to multiple microservices
 - [Сквозная функциональность](https://docs.microsoft.com/ru-ru/azure/architecture/patterns/gateway-offloading) __cross-cutting concerns__ or gateway offloading  
   - [Authentication](https://konghq.com/learning-center/api-gateway/api-gateway-authentication) and authorization
-    - [OAuth](../arch/../technology/protocols.integration/oauth.md) access token
-  - Service discovery integration
+    - [OAuth](../technology/protocols.integration/oauth.md) access token
+  - [Service discovery](../arch/pattern/service.discovery.md) integration
   - Response caching
   - [Retry policies, circuit breaker, and QoS](../arch/pattern/pattern.failure.md)
   - [Rate limiting](../arch/pattern/rate.limit.md) and throttling
@@ -74,5 +74,6 @@ communication to multiple microservices
   - Tyk
 - Commercial
   - [traefik](../technology/middleware/api.gateway/gw.traefik.md)  
+    - [vs NGINX](https://www.kubecost.com/kubernetes-devops-tools/traefik-vs-nginx/)
   - [Citrix ADC (Netscaler)](../technology/middleware/proxy/proxy.netscaler.md)
   - [Nginx](../technology/middleware/proxy/proxy.nginx.md)

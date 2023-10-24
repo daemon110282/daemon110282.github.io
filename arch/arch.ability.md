@@ -22,7 +22,7 @@
   - Adaptability
   - Замещаемость
     - [API Gateway](../api/api.gateway.md)
-    - Server-side service discovery
+    - Server-side [service discovery](../arch/pattern/service.discovery.md)
     - [Proxy\Balancing](../arch/pattern/pattern.proxy.reverse.md)
   - [Слабая связанность (low coupling)](ability/low.coupling.md)
 - Функциональность

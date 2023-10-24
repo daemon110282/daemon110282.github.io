@@ -8,4 +8,8 @@
 - [api-gateway](https://traefik.io/solutions/api-gateway/)
 	- ![arch](https://doc.traefik.io/traefik/assets/img/middleware/overview.png)
 	- [HTTP middleware](https://doc.traefik.io/traefik/middlewares/http/overview/): Rate limit, Chain, CircuitBreaker, Retry и тп
-	- [Metrics by EntryPoint, Router, Service](https://doc.traefik.io/traefik/observability/metrics/overview/)
+	- Observability
+		- [Metrics by EntryPoint, Router, Service](https://doc.traefik.io/traefik/observability/metrics/overview/)
+		- [SRE metrics on k8s + Prometheus + Grafana + Whoami](https://traefik.io/blog/capture-traefik-metrics-for-apps-on-kubernetes-with-prometheus/)
+		- [Distributed trace Jaeger on k8s + DAG](https://traefik.io/blog/distributed-tracing-with-traefik-and-jaeger-on-kubernetes/)
+

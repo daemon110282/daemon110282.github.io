@@ -25,7 +25,6 @@
 - [Transaction Management Patterns](https://airtable.com/embed/shrjiJuF7kIbcnXRl/tblgszzLV27MUFP4p) (5 Patterns)
 - [Testing Patterns](https://airtable.com/embed/shr6p9u80mD9CzVU1/tblyGd1oiAcYuTSbr) (3 Patterns)
 - [UI Patterns](https://airtable.com/embed/shrxffclVHmz95ii0/tblXbFfITMXmPjvGl) (3 Patterns)
-- [Service Discovery Patterns](https://airtable.com/embed/shrRiLR67Cu53Q83s/tbljDWNtHuaCFg2Ez) (4 Patterns)
 - [Security Patterns](https://airtable.com/embed/shrHNtgdwr7wP6TJj/tbl2ssqnen3UkXoaF) (2 Patterns)
 - Utility Patterns (3 Patterns)
 - TODO

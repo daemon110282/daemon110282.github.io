@@ -1,6 +1,6 @@
 # Clean Architecture
 
-![clean](../../img/arch/cleanarch.png)
+![clean](../../../img/arch/cleanarch.png)
 
 ## Плюсы и минусы
 

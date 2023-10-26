@@ -17,7 +17,7 @@
 - [Безопасность (контроль доступа, защита)](https://aws.amazon.com/ru/api-gateway/api-management/?pg=wianapi&cta=apimgtprcs)
 - Монетизация
 - Policy management
-- [Service discovery](../arch/pattern/service.discovery.md)
+- [Service discovery](../arch/pattern/deployment/service.discovery.md)
 
 ### Development Portal База знаний API
 

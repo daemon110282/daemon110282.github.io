@@ -38,8 +38,8 @@
 ## Паттерны
 
 - [TODO Паттерны](https://github.com/Sairyss/domain-driven-hexagon)
-- [Event-storming](event.storming.md)
-- [CQRS](pattern.cqrs.md)
+- [Event-storming](../event.storming.md)
+- [CQRS](../pattern.cqrs.md)
 
 ### Принципы проектирования
 
@@ -49,13 +49,13 @@
 
 ![Схема](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/daemon110282/daemon110282.github.io/daemon110282-patch-1/arch/pattern/ddd.strategy.puml)
 
-  - Контекст ![context](../../img/pattern/ddd/ddd.context.jpg)
+  - Контекст ![context](../../../img/pattern/ddd/ddd.context.jpg)
   - __Предметная область(проблема) Domain__
   - Подобласть, [делится по преимуществам для бизнеса](https://habr.com/ru/articles/316438/)
     - 1 __core__ ядро бизнеса - смысловое ядро - успех бизнеса
     - 2 __support__ поддерживающие ядро, жизненно необходимы
     - 3 __generic__ не критичная функциональность
-  - Пространство задач - бизнес целей, бизнес проблем. __Подобласть Subdomain__=Задачи бизнеса ![subdomain](../../img/pattern/ddd/ddd.subdomain.jpg)
+  - Пространство задач - бизнес целей, бизнес проблем. __Подобласть Subdomain__=Задачи бизнеса ![subdomain](../../../img/pattern/ddd/ddd.subdomain.jpg)
   - Пространство технических решений - __ограниченных контекстов Bounded context__=решение по Подобласти subdomain.
     - это явная граница, внутри которой существует модель предметной области, которая отображает __ЕДИНЫЙ ЯЗЫК__ в модель программного обеспечения.
     - Не всегда равно сервису, может применяться и в модульном монолите (например отдельные таблицы сущностей разных контекстов).
@@ -99,17 +99,17 @@
   - Служба __Domain Services__ Interfaces
   - Инфраструктура
   - __Модули__
-- DDD трилема ![trilema](../../img/pattern/ddd/ddd.trilema.jpg)
+- DDD трилема ![trilema](../../../img/pattern/ddd/ddd.trilema.jpg)
 - [Clean Architecture](clean.architecture.md)
-- Не допускать анемии модели ![model rich](../../img/pattern/ddd/ddd.model.rich.jpg)
+- Не допускать анемии модели ![model rich](../../../img/pattern/ddd/ddd.model.rich.jpg)
   - Модель отображает связи
   - В модели есть геттеры и сеттеры для свойств
   - Модель не описывает действий и логики домена
 
 ### Слои приложения
 
-![Alt text](../../img/pattern/ddd/ddd.flow.jpg)
-![Alt text](../../img/pattern/ddd/ddd.doman.app.logic.jpg)
+![Alt text](../../../img/pattern/ddd/ddd.flow.jpg)
+![Alt text](../../../img/pattern/ddd/ddd.doman.app.logic.jpg)
 
 - Служба __Aplication Services__
   - Реализация Use Case UI
@@ -130,8 +130,8 @@
 ## Технологии
 
 - Framework, Platform
-  - [ABP.IO](../../technology/framework/abp.md)
-  - [PHP](../ref/ddd/php.md)
+  - [ABP.IO](../../../technology/framework/abp.md)
+  - [PHP](../../ref/ddd/php.md)
 - Plantuml + vs code
 - Context Mapping DSL (CML) - [A Modeling Framework](https://contextmapper.org/) for Strategic Domain-driven Design
 - [Microservice DSL (MDSL)](https://github.com/Microservice-API-Patterns/MDSL-Specification) support Generators. In the MDSL Editor, you can invoke the following generators from the “MDSL” entry in the context menu:

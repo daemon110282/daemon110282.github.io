@@ -1,6 +1,6 @@
 # Load Balancer
 
-Реализация [паттерна балансировка нагрузки](../arch/pattern/load.balancing.md).
+Реализация [паттерна балансировка нагрузки](../arch/pattern/deployment/load.balancing.md).
 
 - [Traefik](middleware/router.traefik.md)
 - haproxy

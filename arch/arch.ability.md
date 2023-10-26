@@ -15,15 +15,15 @@
 - Переносимость Portability
   - Возможность повторного использования Resuability (Единая кодовая база)
     - Mdm - master data manager
-  - Модифицируемость/способности к взаимодействию/расширяемости/изменениям Modifiability (Эволюция)
+  - Модифицируемость/способности к взаимодействию//изменениям Modifiability (Эволюция)
     - Сложность дальнейших интеграции
   - Совместимость Interoperability (Эволюция)
-  - Extensibility
+  - Расширяемость Extensibility
   - Adaptability
   - Замещаемость
     - [API Gateway](../api/api.gateway.md)
-    - Server-side [service discovery](../arch/pattern/service.discovery.md)
-    - [Proxy\Balancing](../arch/pattern/pattern.proxy.reverse.md)
+    - Server-side [service discovery](./pattern/deployment/service.discovery.md)
+    - [Proxy\Balancing](./pattern/deployment/pattern.proxy.reverse.md)
   - [Слабая связанность (low coupling)](ability/low.coupling.md)
 - Функциональность
   - [Security Безопасность](ability/security.md)

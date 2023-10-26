@@ -61,7 +61,7 @@
   - [Task (Worker) Queue](../../technology/middleware/messagebus/rmq.md)
   - [RPC (команды)](../../technology/middleware/messagebus/rmq.md)
 - __Запросы__ [CQRS](../pattern/pattern.cqrs.md) - command query request segregation
-- [Event sourcing](../pattern/event.sourcing.md)
+- [Event sourcing](../pattern/integration/event.sourcing.md)
 - __Распределенные транзакции__ (лучше не делать)
   - [SAGA](../pattern/pattern.saga.md) - компенсационные действия для отмены "транзакции"
   - двухфазный комит - намерение, получено ок от участников, комит  
@@ -70,7 +70,7 @@
 
 ## Технологии
 
-- Шины сообщений\событий Event\Message Bus (брокер обмена сообщениями [Message Broker](../pattern/pattern.messagebroker.md)) можно выбрать одну из нескольких технологий (траспорт) обмена сообщениями
+- Шины сообщений\событий Event\Message Bus (брокер обмена сообщениями [Message Broker](../pattern/integration/pattern.messagebroker.md)) можно выбрать одну из нескольких технологий (траспорт) обмена сообщениями
 - Реализации шин сообщений (фреймворк)
   - .NET
     - NServiceBus

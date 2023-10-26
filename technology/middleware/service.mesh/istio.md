@@ -4,4 +4,4 @@
 
 Реализует функции [Service Mesh](../servicemesh.md).
 
-Реализован на базе [прокси](../../../arch/pattern/pattern.proxy.reverse.md) Envoy.
+Реализован на базе [прокси](../../../arch/pattern/deployment/pattern.proxy.reverse.md) Envoy.

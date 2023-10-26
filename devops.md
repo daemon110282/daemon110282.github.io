@@ -25,7 +25,7 @@
     - [Log management](technology/logging.md)
     - [Performance monitoring (APM класс систем) and dashboards](arch/system.class/apm.md)
   - [Security](arch/ability/security.md)
-  - [Audit](arch/pattern/pattern.audit.md)
+  - [Audit](arch/pattern/observability/pattern.audit.md)
 - [SRE](devops/sre.md)
 
 ## Паттерны

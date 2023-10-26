@@ -4,14 +4,14 @@
 
 ## Зачем
 
-- [Маршрутизация трафика](../../arch/pattern/pattern.proxy.reverse.md) на основе правил
+- [Маршрутизация трафика](../../arch/pattern/deployment/pattern.proxy.reverse.md) на основе правил
   - процент
   - параметры запроса (в header, url параметр)
   - стратегии [deployment](../../arch/pattern/pattern.deploy.md) (сине-зеленое, канареечное и тп)
-- [Балансировка трафика](../../arch/pattern/load.balancing.md)
+- [Балансировка трафика](../../arch/pattern/deployment/load.balancing.md)
 - [Observability](../../arch/ability/observability.md)
   - [Распределенная трассировка](../../technology/tracing.distributed.md)
-- [Service Discovery](../../arch/pattern/service.discovery.md)
+- [Service Discovery](../../arch/pattern/deployment/service.discovery.md)
 - [Circuit Breaker](../../arch/pattern/pattern.failure.md)
 - Безопасность
   - TLS обеспечение

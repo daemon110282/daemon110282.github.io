@@ -157,7 +157,7 @@ __Не подходит__ для:
 
 - [Service Mesh](../../technology/middleware/servicemesh.md)
 - [API Gateway](../../api/api.gateway.md)
-- [Service Discovery](../../arch/pattern/service.discovery.md)
+- [Service Discovery](../pattern/deployment/service.discovery.md)
 
 ## Reference Architecture
 

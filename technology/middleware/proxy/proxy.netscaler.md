@@ -11,7 +11,7 @@
 
 ## Зачем
 
-Реализует паттерн [Reverse Proxy](../../../arch/pattern/pattern.proxy.reverse.md) и [API Gateway](../../../api/api.gateway.md)
+Реализует паттерн [Reverse Proxy](../../../arch/pattern/deployment/pattern.proxy.reverse.md) и [API Gateway](../../../api/api.gateway.md)
 
 - Proxy
   - Проксирование статического контента.

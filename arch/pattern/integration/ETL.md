@@ -1,6 +1,6 @@
 # ETL
 
-![arch](../../img/pattern/etl.jpg)
+![arch](../../../img/pattern/etl.jpg)
 
 ## Плюсы и минусы
 

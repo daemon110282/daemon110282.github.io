@@ -1,6 +1,6 @@
 # DDD in PHP
 
-Паттерн проектирования [DDD](../../pattern/ddd.md).
+Паттерн проектирования [DDD](../../pattern/system.design/ddd.md).
 
 Примеры:
 
@@ -15,7 +15,7 @@
 
 - Event
 	- https://event.thephpleague.com/3.0/usage/
-	- [Event Sourcing](../../pattern/event.sourcing.md)
+	- [Event Sourcing](../../pattern/integration/event.sourcing.md)
 		- [Broadway](https://broadway.github.io/broadway/)
 	- Event Bus 
 		- is an important element in communication between Write and Read models. Event Bus is a mechanism which enables communication between different components, which not necessarily know about each other. 		

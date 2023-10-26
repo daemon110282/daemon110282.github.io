@@ -1,6 +1,6 @@
 # ELT
 
-![arch](../../img/pattern/elt.jpg)
+![arch](../../../img/pattern/elt.jpg)
 
 Особенности
 

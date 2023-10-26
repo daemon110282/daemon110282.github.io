@@ -16,14 +16,14 @@ communication to multiple microservices
 - [Сквозная функциональность](https://docs.microsoft.com/ru-ru/azure/architecture/patterns/gateway-offloading) __cross-cutting concerns__ or gateway offloading  
   - [Authentication](https://konghq.com/learning-center/api-gateway/api-gateway-authentication) and authorization
     - [OAuth](../technology/protocols.integration/oauth.md) access token
-  - [Service discovery](../arch/pattern/service.discovery.md) integration
+  - [Service discovery](../arch/pattern/deployment/service.discovery.md) integration
   - Response caching
   - [Retry policies, circuit breaker, and QoS](../arch/pattern/pattern.failure.md)
   - [Rate limiting](../arch/pattern/rate.limit.md) and throttling
-  - [Load balancing](../arch/pattern/load.balancing.md)
+  - [Load balancing](../arch/pattern/deployment/load.balancing.md)
   - [Logging, tracing, correlation](../arch/ability/observability.md)
   - Headers, query strings, and claims transformation
-  - Dynamic request dispatching, routing. __[Reverse proxy](../arch/pattern/pattern.proxy.reverse.md)__ [or gateway routing](https://docs.microsoft.com/ru-ru/azure/architecture/patterns/gateway-routing)
+  - Dynamic request dispatching, routing. __[Reverse proxy](../arch/pattern/deployment/pattern.proxy.reverse.md)__ [or gateway routing](https://docs.microsoft.com/ru-ru/azure/architecture/patterns/gateway-routing)
   - IP whitelisting
   - TLS Termination
 - Mock

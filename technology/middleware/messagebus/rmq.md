@@ -62,7 +62,7 @@
 
 ### RPC (команды)
 
-  - [паттерн EIP](../../../arch/pattern/pattern.rpc.md)
+  - [паттерн EIP](../../../arch/pattern/integration/pattern.rpc.md)
   - EasyNetQ [RPC](https://github.com/EasyNetQ/EasyNetQ/wiki/Request-Response)
   - [Exchange type: direct](https://www.rabbitmq.com/tutorials/tutorial-six-dotnet.html), message can be sent to default exchange with a specified routing key and response is received on a specified unique response queue, owned by the client
 

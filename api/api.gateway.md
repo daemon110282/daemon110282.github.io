@@ -26,7 +26,7 @@ communication to multiple microservices
   - Dynamic request dispatching, routing. __[Reverse proxy](../arch/pattern/deployment/pattern.proxy.reverse.md)__ [or gateway routing](https://docs.microsoft.com/ru-ru/azure/architecture/patterns/gateway-routing)
   - IP whitelisting
   - TLS Termination
-- Mock
+- [Mock](../arch/pattern/mock.md)
 - __Security issues__ Сокрытие внутренних API ИС от внешних ИС потребителей
   - Without a gateway, all the microservices must be exposed to the “external world"
 - __“backend for frontend”__ (BFF) разные типы клиентов (интернет веб приложение, мобильное приложение, интранет веб приложение и тп) могут иметь разные требования по интеграции для

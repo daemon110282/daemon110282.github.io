@@ -11,6 +11,8 @@
     - [Виды ожиданий Wait statistics](#виды-ожиданий-wait-statistics)
       - [Параллелизм MAXDOP](#параллелизм-maxdop)
   - [Мониторинг](#мониторинг)
+    - [Онлайн](#онлайн)
+    - [Исторически](#исторически)
   - [TODO](#todo)
   - [Version](#version)
 
@@ -171,6 +173,8 @@ MAXDOP=10
 - Настройки [СУБД get](https://www.mssqltips.com/sqlservertip/6090/sql-server-configuration-settings-query/)
   - SELECT * from sys.configurations ORDER BY name
 - [MS: Мониторинг и настройка производительности](http://www.sql.ru/forum/actualthread.aspx?tid=858780)
+- [performance dashboard](https://learn.microsoft.com/en-us/sql/relational-databases/performance/performance-dashboard)
+- [query store](https://learn.microsoft.com/en-us/sql/relational-databases/performance/monitoring-performance-by-using-the-query-store)
 
 ### Онлайн
 
@@ -190,12 +194,12 @@ MAXDOP=10
     - Query Statistics History: by CPU, duration, IO, Physical Reads, Logical Writes
     - Server Activity History: CPU, RAM, IO, Network, Waits
     - Версия MS SQL с 2008: используем 2012, DWH 2016
-    - Блокировки            
+    - Блокировки
 - [sp_Blitz](https://github.com/BrentOzarULTD/SQL-Server-First-Responder-Kit/tree/main)
   - overall health check, run sp_Blitz.
   - To learn which queries have been using the most resources, run sp_BlitzCache.
   - To analyze which indexes are missing or slowing you down, run sp_BlitzIndex.
-  - [Мониторинг нескольких серверов]](https://garrybargsley.com/2020/07/14/sp_blitz-for-all-servers/)
+  - [Мониторинг нескольких серверов](https://garrybargsley.com/2020/07/14/sp_blitz-for-all-servers/)
 - [Мониторинг запросов, хранимых процедур и триггеров](https://habr.com/ru/articles/314494/)
   - AvgWorkerSec — само время выполнения запроса в секундах
   - AvgElapsedSec — время ожидания или ожидания + AvgWorkerSec

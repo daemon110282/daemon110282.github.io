@@ -19,7 +19,10 @@ Redis - Remote Dictionary Service in __memory__.
 - Counter
 - Rate limiter
 - [Ranking/leaderboard](https://www.youtube.com/watch?v=a4yX7RUgTxI&ab_channel=ByteByteGo)
-
+- TODO
+  - [The 6 Most Impactful Ways Redis is Used in Production Systems](https://blog.bytebytego.com/p/the-6-most-impactful-ways-redis-is)
+  - [todo](https://blog.bytebytego.com/p/redis-can-do-more-than-caching)
+  
  ![Redis](https://substackcdn.com/image/fetch/w_848,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2F0205d074-5f42-402b-b150-99027cb4fc38_800x1114.jpeg)
 
 ## Функции
@@ -35,7 +38,8 @@ Redis - Remote Dictionary Service in __memory__.
       - Каждая запись имеет уникальный идентификатор. По умолчанию идентификатор генерируется автоматически и включает в себя временную метку.
       - Поэтому вы можете запрашивать диапазоны записей по времени или получать новые данные по мере их поступления в поток, как Unix команда «tail -f» читает лог-файл и замирает в ожидании новых данных.
 	- Sets
-	- Sorted sets
+    	- [lists VS sets](https://hashnode.com/post/differences-between-lists-and-sets-in-redis-ciojr30i401g3lh5364dkoqwv)
+	- [Sorted sets](https://redis.io/docs/data-types/sorted-sets/)
 	- Hashes
 - Redis Sentinel — это сервис, обеспечивающий создание __распределённых систем__.
 - Redis cluster
@@ -85,5 +89,5 @@ Redis - Remote Dictionary Service in __memory__.
 		- Cache Hit Ratio
 		- [TODO](https://scalegrid.io/blog/6-crucial-redis-monitoring-metrics/)
 	- Метрики персистентности: Метрики персистентности
-	- Метрики ошибок: Метрики ошибок	
+	- Метрики ошибок: Метрики ошибок
 - Use Agent [Zabbix](https://habr.com/ru/company/first/blog/687916/)

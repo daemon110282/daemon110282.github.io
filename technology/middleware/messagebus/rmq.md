@@ -14,7 +14,7 @@
     - [Версионирование сообщений](#версионирование-сообщений)
   - [Security](#security)
   - [Observability](#observability)
-  - [Performance](#performance)
+    - [Performance](#performance)
 
 ## Функции
 
@@ -33,6 +33,7 @@
 - [From Cloudamqp](https://www.cloudamqp.com/blog/part1-rabbitmq-best-practice.html)
 - [VHosts](rmq/rmq.vhost.md)
 - [Failure](rmq/rmq.failure.md)
+- Dead Letter eXchange https://habr.com/ru/companies/slurm/articles/714358/
 
 ### Task (Worker) Queue
 
@@ -90,7 +91,7 @@
 
 - по [message type](http://rabbitmq.github.io/rabbitmq-dotnet-client/api/RabbitMQ.Client.IBasicProperties.html#RabbitMQ_Client_IBasicProperties_Type) serialize, deserialize _с отдельными очередями?_
   - [masstransit](https://masstransit-project.com/architecture/versioning.html)
-    - https://bartwullems.blogspot.com/2021/10/masstransitmessage-versioning.html
+    - [message versioning](https://bartwullems.blogspot.com/2021/10/masstransitmessage-versioning.html)
   - [EasyNetQ](https://github.com/EasyNetQ/EasyNetQ/wiki/Versioning-Messages)
   - [NServiceBus](https://docs.particular.net/samples/versioning/)
 
@@ -109,10 +110,12 @@
 
 - Мониторинг [кол-ва сообщений в очереди](https://wtfm.info/zabbix-rabbutmq-автообнаружение-очередей/) через API и CLI в Zabbix
   - [Расширенный](https://github.com/jasonmcintosh/rabbitmq-zabbix)
-- Общий мониторинг [кластера, нод](https://www.rabbitmq.com/prometheus.html) через Prometheus + Grafana
+  - [](https://signoz.io/blog/rabbitmq-monitoring/)
+- мониторинг [кластера, нод, обменников, очередей](https://www.rabbitmq.com/prometheus.html) через Prometheus + Grafana
 
-## Performance
+### Performance
 
 - [Top metric](https://www.datadoghq.com/blog/rabbitmq-monitoring/)
 - Docker [perf test](https://rabbitmq.github.io/rabbitmq-perf-test/stable/htmlsingle/)
 - [Журнал трассировки сообщений](https://russianblogs.com/article/59013453419/)
+- [Perf Test](https://rabbitmq.github.io/rabbitmq-perf-test/stable/htmlsingle/)

@@ -71,7 +71,7 @@ TODO
 - [check api tools](https://platform.42crunch.com/)
 - [tools for check api sec](https://github.com/arainho/awesome-api-security)
 
-## Шифрование канала связи (трафика) mTLS, VPN туннель
+## Шифрование канала связи (трафика) TLS, mTLS, VPN туннель
 
 ![type](../../img/technology/vpn.type.jpg)
 

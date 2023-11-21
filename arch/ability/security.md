@@ -12,7 +12,9 @@
 TODO
 
 - АСП
-- Аутентификация HTTPS [SSL\TLS\MTLS](../../technology/protocols.integration/tls.md)
+- Аутентификация HTTPS 
+  - [SSL\TLS](../../technology/protocols.integration/tls.md)
+  - [MTLS](../../technology/protocols.integration/tls.md)
 - PCI DSS
 - k8s
   - TLS – cert-manager
@@ -28,73 +30,21 @@ TODO
 
 ## Криптоалгоритмы
 
-- подписание - состоит из операции хэширования и шифрования
+- __подписание__ - состоит из операции __хэширования__ и __шифрования__
   - ГОСТ Р 34.10 2012, 2001
-- шифрование
+- __шифрование__
   - ГОСТ 2015, 2012, 2001
   - RSA
   - трафика
     - ГОСТ 28147-89
     - ГОСТ Р 34.10-2012
     - алгоритм «Кузнечик» в соответствии с ГОСТ Р 34.12-2015
-- хэширования
+- __хэширование__
   - ГОСТ Р 31.11
   - SHA
 - имитозащита - защита целостности сообщения
 
-## Подписание ЭЦП
-
-- __Электронная подпись (ЭЦП)__ содержит номер, сгенерированный и зашифрованный при помощи криптографического программного обеспечения.
-- Три [вида электронной подписи](https://astral.ru/articles/elektronnaya-podpis/6106/):
-  - Простая электронная подпись
-  - Усиленная неквалифицированная электронная подпись (УНЭП)
-  - Усиленная квалифицированная электронная подпись (УКЭП)
-- [Форматы ЭЦП](https://astral.ru/articles/elektronnaya-podpis/6106/)
-  - Присоединённая 
-    - содержится в самом документе
-    - чтобы прочитать документ потребуется ПО
-  - Отсоединённая
-    - содержится в отдельном файле .sig
-    - чтобы прочитать документ НЕ потребуется ПО, не изменяет подписываемый документ
-    - [Как создать программно в КриптоПро](https://www.cryptopro.ru/forum2/default.aspx?g=posts&t=18608)
-    - в формате 
-      - [pkcs 7](https://astral.ru/articles/elektronnaya-podpis/6106/) через Приложение __cryptcp__ для КриптоПро CSP
-        - в кодировке __DER__ или __BASE64__
-      - [Base64String]()
-  - Интегрированная
-
-
-## API
-
-- [API Security Audit](https://docs.42crunch.com/latest/content/concepts/api_contract_security_audit.htm)
-- [OWASP](https://42crunch.com/owasp-api-security-top-10/)
-- [check api tools](https://platform.42crunch.com/)
-- [tools for check api sec](https://github.com/arainho/awesome-api-security)
-
-## Шифрование канала связи (трафика) TLS, mTLS, VPN туннель
-
-![type](../../img/technology/vpn.type.jpg)
-
-Технологии и протоколы шифрования и имитозащиты передаваемого трафика:
-
-- [SSL\TLS VPN](https://www.pvsm.ru/vpn/32300)  
-- [Site-to-Site](https://docs.selectel.ru/servers-and-infrastructure/firewalls/fortigate/vpn-site-to-site/#:~:text=VPN%20типа%20Site-to-site%20—%20VPN-соединение%2C,сетями%20удалённых%20филиалов%20или%20отделов) (point-to-point) VPN на основе 
-  - GRE 
-  - IPSec
-- Стандарт IPSec VPN (RFC2401-2412)
-  - может работать [в двух режимах](https://habr.com/ru/articles/170895/): туннельном и транспортном
-  - включает протоколы
-    - ESP (Encapsulating Security Payload – безопасная инкапсуляция полезной нагрузки)
-    - AH (Authentication Header – заголовок аутентификации)
-    - IKE (Internet Key Exchange protocol – протокол обмена ключами) 
-  - [host to net](https://habr.com/ru/articles/504484/)
-  - net to net
-  - transport mode
-- OpenVPN
-- PPTP (Point-to-Point Tunneling Protocol)
-- DTLS
-
-### Криптоалгоритмы
+### ГОСТ 
 
 - Криптоалгоритмы [ГОСТ Р 34.10-2012, ГОСТ 34.10-18](https://qsetup.ru/gost-vpn-chto-eto/) 256 бит
   - необходимо использовать __сертифицированные ФСБ РФ СКЗИ__
@@ -126,10 +76,74 @@ TODO
     - https://ib-bank.ru/bisjournal/post/1210 		
     - https://cisoclub.ru/sravnenie-korporativnyh-sredstv-zashhity-udalennogo-dostupa/		
     - [хорошее сравнение](https://www.anti-malware.ru/compare/certified-russian-TLS-gateways)
+
+### Международные
+
 - Криптоалгоритмы международные RSA\AES
   - IPSec VPN Site-to-Site - [CISCO](https://wiki.merionet.ru/articles/nastrojka-site-to-site-ipsec-vpn-na-cisco)
 
+## Подписание ЭЦП
 
+- __Электронная подпись (ЭЦП)__ содержит номер, сгенерированный и зашифрованный при помощи криптографического программного обеспечения.
+- Три [вида электронной подписи](https://astral.ru/articles/elektronnaya-podpis/6106/):
+  - Простая электронная подпись
+  - Усиленная неквалифицированная электронная подпись (УНЭП)
+  - Усиленная квалифицированная электронная подпись (УКЭП)
+- [Форматы ЭЦП](https://astral.ru/articles/elektronnaya-podpis/6106/)
+  - Присоединённая 
+    - содержится в самом документе
+    - чтобы прочитать документ потребуется ПО
+  - Отсоединённая
+    - содержится в отдельном файле .SIG
+    - чтобы прочитать документ НЕ потребуется ПО, не изменяет подписываемый документ
+    - [Как создать программно в КриптоПро](https://www.cryptopro.ru/forum2/default.aspx?g=posts&t=18608)
+    - в формате 
+      - [pkcs 7](https://astral.ru/articles/elektronnaya-podpis/6106/) через Приложение __cryptcp__ для КриптоПро CSP
+        - в кодировке __DER__ или __BASE64__
+      - [Base64String]()
+  - Интегрированная
+
+## API
+
+- [API Security Audit](https://docs.42crunch.com/latest/content/concepts/api_contract_security_audit.htm)
+- [OWASP](https://42crunch.com/owasp-api-security-top-10/)
+- [check api tools](https://platform.42crunch.com/)
+- [tools for check api sec](https://github.com/arainho/awesome-api-security)
+
+## Шифрование канала связи (трафика) TLS, mTLS, VPN туннель
+
+![type](../../img/technology/vpn.type.jpg)
+
+Технологии и протоколы шифрования и имитозащиты передаваемого трафика:
+
+- [SSL\TLS VPN](https://www.pvsm.ru/vpn/32300)  
+- [Site-to-Site](https://docs.selectel.ru/servers-and-infrastructure/firewalls/fortigate/vpn-site-to-site/#:~:text=VPN%20типа%20Site-to-site%20—%20VPN-соединение%2C,сетями%20удалённых%20филиалов%20или%20отделов) (point-to-point) VPN на основе 
+  - GRE 
+  - IPSec
+- Стандарт IPSec VPN (RFC2401-2412)
+  - может работать [в двух режимах](https://habr.com/ru/articles/170895/): туннельном и транспортном
+  - включает протоколы
+    - ESP (Encapsulating Security Payload – безопасная инкапсуляция полезной нагрузки)
+    - AH (Authentication Header – заголовок аутентификации)
+    - IKE (Internet Key Exchange protocol – протокол обмена ключами) 
+  - [host to net](https://habr.com/ru/articles/504484/)
+  - net to net
+  - transport mode
+- OpenVPN
+- PPTP (Point-to-Point Tunneling Protocol)
+- DTLS
+
+## Сертификаты
+
+- Виды сертификатов
+  - client certificate для аунтентификации Mutual TLS (mTLS) 
+  - self signed certificate
+- Типы форматов сертификатов
+  - сертификат удостоверяющего центра CA __.PEM__
+  - client certificate
+    - __.CRT__ file and the __.KEY__ file  
+    - __.PFX__ file for your certificate
+  - [Пример запроса с сертификатом в Postman](https://learning.postman.com/docs/sending-requests/certificates/)
 - [Проверка алгоритма подписи примененного к сертификату](https://sysos.ru/?p=589)
   - 1.2.643.7.1.1.3.2, то сертификат сгенерирован по ГОСТ Р 34.10-2012. 
   - Если установлен КриптоПро, то в Алгоритме подписи будет отображаться ГОСТ Р 34.11-2012/34.10-2012 256 бит.

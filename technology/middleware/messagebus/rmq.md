@@ -18,15 +18,22 @@
 
 ## Функции
 
-- [Типы Exchange](https://habr.com/ru/post/489086/)
-  - headers - Message is sent to the queues which match the headers. Routing key should not be set. Match type should indicate if all or [any header must match](https://codedestine.com/rabbitmq-headers-exchange/)
-  - direct - message is sent to a named exchange, routing key is specified so information only reaches the queues matching the pattern
+### Exchange Обменник
+
+- Типы
+  - headers 
+    - Message is sent to the queues which match the headers. 
+    - Routing key should not be set. Но если установлены, то можно биндить очередь и по RK.
+    - Match type should indicate if [ALL](https://thewebland.net/development/devops/rabbitmq/exchanges-routing-kyes-and-bindingi/) (логичекое И) or [ANY (логичекое ИЛИ) header must match](https://codedestine.com/rabbitmq-headers-exchange/)
+  - [direct](https://habr.com/ru/post/489086/) - message is sent to a named exchange, __routing key__ is specified so information only reaches the queues matching the pattern
   - topic - Routing key is a string separated by dots and wildcards. E.g.: "ro.alexandrugris.*"
+  - [fanout](https://thewebland.net/development/devops/rabbitmq/exchanges-routing-kyes-and-bindingi/)
+- Exchange-to-Exchange
 
 ### Режимы доставки сообщений
 
-- Basic.get (Poll) - Доставка единичного сообщения по запросу
-- Basic.Consume (Push) - Подписка на очередь (постоянный мониторинг очереди с доставкой всех сообщений)
+- Basic.get (__Poll__) - Доставка единичного сообщения по запросу
+- Basic.Consume (__Push__) - Подписка на очередь (постоянный мониторинг очереди с доставкой всех сообщений)
 
 ## Паттерны
 
@@ -34,6 +41,7 @@
 - [VHosts](rmq/rmq.vhost.md)
 - [Failure](rmq/rmq.failure.md)
 - Dead Letter eXchange https://habr.com/ru/companies/slurm/articles/714358/
+  - [Алгоритм](https://blog.rnds.pro/019-poison2) обработки "битого" сообщения [Poison Message](https://blog.rnds.pro/018-posion1) 
 
 ### Task (Worker) Queue
 
@@ -55,7 +63,7 @@
   - Очередь ответов - даёт широковешательную рассылку ответов по всем ИС потребителям
 - headers - с фильтрацией - события
   - даёт возможность делать фильтрацию трафика на уровне RMQ.
-  - подписчик создаёт и связывает очередь к обменнику, указывает фильтрация на основе заголовков -это решает задачу __фильтрации__ лишнего трафика, но __не решает задачу изоляции__. подписчик может не указать фильтры и получит весь трафик: и свой и чужой.
+  - подписчик создаёт и связывает очередь к обменнику, указывает фильтрация на основе заголовков - это решает задачу __фильтрации__ лишнего трафика, но __не решает задачу изоляции__. Подписчик может не указать фильтры и получит весь трафик: и свой и чужой.
 - Trade off
   - единый контракт для подписчиков
   - Не безопасно, кто угодно подписывается
@@ -83,11 +91,11 @@
 
 - более гибко т.к. key-value инвариантов может быть больше?
   - топик - фильтрация на основе строковой маски - поиска подстроки
-  - headers - на основе полного равенства значения ключа
+  - headers - на основе полного равенства значения ключа (логическое И) или один из ключей (логическое ИЛИ)
 -минусы
 - функционально разницы нет, по производительности topic в 3 раза медленнее headers
 
-### Версионирование сообщений
+### Версионирование типов сообщений
 
 - по [message type](http://rabbitmq.github.io/rabbitmq-dotnet-client/api/RabbitMQ.Client.IBasicProperties.html#RabbitMQ_Client_IBasicProperties_Type) serialize, deserialize _с отдельными очередями?_
   - [masstransit](https://masstransit-project.com/architecture/versioning.html)

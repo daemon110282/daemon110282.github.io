@@ -52,15 +52,19 @@ TODO
 - Криптоалгоритмы [ГОСТ Р 34.10-2012, ГОСТ 34.10-18](https://qsetup.ru/gost-vpn-chto-eto/) 256 бит
   - необходимо использовать __сертифицированные ФСБ РФ СКЗИ__
   - Open Source
-    - на основе __криптобиблиотеки OpenSSL__ - __полноценная криптографическая библиотека с открытым исходным кодом__, широко известна из-за расширения SSL/TLS, используемого в веб-протоколе HTTPS. Поддерживает почти все низкоуровневые алгоритмы хеширования, шифрования и электронной подписи, а также реализует большинство популярных криптографических стандартов, в том числе позволяет создавать ключи RSA, DH, DSA, сертификаты X.509, подписывать их, формировать CSR и CRT, шифровать данные и тестировать SSL/TLS соединения
+    - на основе __криптобиблиотеки OpenSSL__ - __полноценная криптографическая библиотека с открытым исходным кодом__, широко известна из-за расширения SSL/TLS, используемого в веб-протоколе HTTPS. 
+      - Поддерживает почти все низкоуровневые алгоритмы хеширования, шифрования и электронной подписи
+      - криптографических стандартов: 
+        - RSA, DH, DSA, сертификаты X.509, подписывать их, формировать CSR и CRT, шифровать данные и тестировать SSL/TLS соединения
+        - ГОСТ через расширение библиотеки OpenSSL [ГОСТ алгоритмами](https://github.com/gost-engine/engine/blob/master/README.prov.md) [gost-engine](https://github.com/gost-engine/engine)
       - Proxy nginx
         - 2022 nginx 1.23.2 + openssl 3.0.5 + gost engine 3.0.1 + TLSv1.2 [docker образ](https://github.com/vheathen/docker-nginx-openssl3-gost)
         - 2018 [docker образ](https://habr.com/ru/articles/353534/) [GIT](https://github.com/rnixik/docker-openssl-gost)
           - Библиотека OpenSSL 1.1.0g 
-          - [gost-engine](https://github.com/gost-engine/engine) - reference implementation of the Russian [ГОСТ крипоалгоритмы](https://github.com/gost-engine/engine/blob/master/README.prov.md) for OpenSSL
+          - gost-engine
       - [stunnel](https://habr.com/ru/companies/aktiv-company/articles/477650/) - программа, на которую можно переложить всю логику [шифрования трафика](https://www.stunnel.org/docs.html) между сервером и клиентом
         - stunnel:port openssl-gost-stunnel (>=v.1.0.2)
-        - шифрование через openssl и [gost-engine](https://github.com/gost-engine/engine)
+        - шифрование через криптобиблиотеку openssl и расширешение библиотеки ГОСТ алгоритмами gost-engine
         - [docker-openssl-gost](https://github.com/rnixik/docker-openssl-gost)
         - криптотуннель с валидным ключом, подписанным самим «КриптоПро», и с алгоритмом шифрования [GOST_2012, 512 бит](https://www.anti-malware.ru/practice/methods/save-company-budget-or-how-build-crypto-tunnel-in-accordance-with-GOST)
     - на основе __криптобиблиотек КриптоПро__
@@ -125,10 +129,10 @@ TODO
 
 Технологии и протоколы шифрования и имитозащиты передаваемого трафика:
 
-- [SSL\TLS VPN](https://www.pvsm.ru/vpn/32300) 
-  - устанавливает безопасный удаленный доступ между личным устройством и офисной сетью __через веб-портал и тоннель__, защищенный SSL
+- [SSL VPN\TLS VPN\mTLS VPN](https://www.pvsm.ru/vpn/32300) 
+  - устанавливает безопасный удаленный доступ между личным устройством и офисной сетью __через веб-портал и тоннель__, защищенный SSL\TLS
   - can __only support browser-based__ applications 
-    - роль клиента в SSL/TLS может исполнять любой современный __браузер__
+    - роль клиента в SSL\TLS\mTLS может исполнять любой современный __браузер__
   - web servers always __аутентификация по цифровым сертификатам__  
 - [Site-to-Site VPN](https://docs.selectel.ru/servers-and-infrastructure/firewalls/fortigate/vpn-site-to-site/#:~:text=VPN%20типа%20Site-to-site%20—%20VPN-соединение%2C,сетями%20удалённых%20филиалов%20или%20отделов) выступает в качестве внутренней __частной сети__ для компаний со множеством подразделений в __отдельных географических регионах__ на основе:
   - GRE 

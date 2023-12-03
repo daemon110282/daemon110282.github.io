@@ -1,0 +1,414 @@
+@startuml CleanArchYuriGeronimus
+
+''' Configuration
+!$showExternalApi=true
+!$showData=false
+
+!$showOOBRelations=true
+!$showControlFlow=false
+
+!$showInLayers=false
+
+!$showNotes=false
+!$showLegend=true
+
+''' Implementation
+!$PREF_INTERFACE="<<Interface>>\n"
+!$PREF_CLASS="<<Class>>\n"
+!$PREF_DATA="<<Data>>\n"
+!$PREF_API="<<API>>\n"
+
+!$NAME_ENT_LOGIC='Enterprise Business logic'
+!$NAME_APP_LOGIC='Application Business logic'
+!$NAME_INT_ADAPTERS='Interface Adapters'
+!$NAME_FRMWK_DRIVERS='Frameworks and drivers'
+
+!$NAME_RESPONSE_MODEL="ResponseModel"
+!$NAME_REQUEST_MODEL="RequestModel"
+!$NAME_API_MODEL="ResponseServiceModel"
+
+!$LAYER_ENT_LOGIC='"'+$NAME_ENT_LOGIC +' (Entities)"'
+!$LAYER_APP_LOGIC='"'+$NAME_APP_LOGIC +' (Use Cases)"'
+!$LAYER_INT_ADAPTERS='"'+$NAME_INT_ADAPTERS +' (Controllers, Presenters, Gateways)"'
+!$LAYER_FRMWK_DRIVERS='"'+$NAME_FRMWK_DRIVERS +' (Devices, Web, UI, External Interfaces)"'
+
+!$ENTITY='"'+$PREF_CLASS + "Entity"+'"'
+!$ENTITY_GATEWAY = '"'+$PREF_INTERFACE + "Entity Gateway"+'"'
+!$ENTITY_GATEWAY_IMPL = '"'+$PREF_CLASS + "Entity Gateway Implementation"+'"'
+!$OUTPUT_PORT = '"'+$PREF_INTERFACE + "Use Case Output Port"+'"'
+!$INPUT_PORT = '"'+$PREF_INTERFACE + "Use Case Input Port"+'"'
+!$EXT_API = '"'+$PREF_INTERFACE + "Use case / Service for external API"+'"'
+
+!$INTERACTOR = '"'+$PREF_CLASS + "Use Case Interactor"+'"'
+!$PRESENTER='"'+$PREF_CLASS + "Presenter\n(Boundary)"+'"'
+!$EXT_API_IMPL='"'+$PREF_CLASS + "Use case / Service for external API implementation\n(Boundary)"+'"'
+!$CONTROLLER='"'+$PREF_CLASS + "Controller\n(Boundary)"+'"'
+!$API_INPUT='"'+$PREF_API + "Devices, Web, External interfaces, etc"+'"'
+!$API_OUTPUT='"'+$PREF_API + "UI, External interfaces, etc"+'"'
+!$API_DATABASE='"'+$PREF_API + "DB, External interfaces, etc"+'"'
+
+!$DATA_REQUEST_MODEL='"'+$PREF_DATA + $NAME_REQUEST_MODEL+'"'
+!$DATA_RESPONSE_MODEL='"'+$PREF_DATA + $NAME_RESPONSE_MODEL+'"'
+!$DATA_API_MODEL='"'+$PREF_DATA + $NAME_API_MODEL+'"'
+!$DATA_ENTITY = '"'+$PREF_DATA+"Data in Entity"+'"'
+
+!$DATA_REQUEST = '"'+$PREF_DATA+"Request"+'"'
+!$DATA_VIEW_MODEL = '"'+$PREF_DATA+"ViewModel"+'"'
+!$DATA_EXT_API_MODEL = '"'+$PREF_DATA+"ApiModel"+'"'
+!$DATA_FOR_ENTITY = '"'+$PREF_DATA+"Data for ''Data in Entity'' construction"+'"'
+
+!$TYPE_DATA="<<(D,lightgrey)>>"
+
+!$COLOR_ENT="#FCFDB9"
+!$COLOR_APP="#FFA09C"
+!$COLOR_INTERF="#A2FDBA"
+!$COLOR_FRMWK="#A7D7FD"
+
+!$MSG_FLOW_CNTRL="Flow of control.\nStep #"
+!$STYLE_FLOW_CTRL="#magenta;text:magenta"
+
+!$STYLE_DATA_ARROW="#grey;text:grey"
+
+!procedure $setStyles()
+  hide stereotype
+  hide empty members 
+  skinparam classAttributeIconSize 0
+
+  skinparam class {
+    BackgroundColor White
+    BackgroundColor<<$NAME_ENT_LOGIC>> $COLOR_ENT
+    BackgroundColor<<$NAME_APP_LOGIC>> $COLOR_APP
+    BackgroundColor<<$NAME_INT_ADAPTERS>> $COLOR_INTERF
+    BackgroundColor<<$NAME_FRMWK_DRIVERS>> $COLOR_FRMWK
+  }
+
+  skinparam note {
+    BackgroundColor White
+  }
+
+  skinparam legend {
+    BackgroundColor White
+  }
+!endprocedure
+
+!procedure $printLegend()
+  package "Legend" <<Frame>> as Legend1{
+    class "<<Type of element>>\nDescription of element"
+    {
+      -privateMethodName(parameterType parameterName) : returnType
+      +publicMethodName(parameterType parameterName) : returnType
+      {abstract} +publicAbstractMethodName(parameterType parameterName) : returnType //abstract
+    }
+    
+    legend
+      |  **Color**  |  **Clear Architecture layer**  |
+      |<$COLOR_ENT>| $NAME_ENT_LOGIC |
+      |<$COLOR_APP>| $NAME_APP_LOGIC |
+      |<$COLOR_INTERF>| $NAME_INT_ADAPTERS |
+      |<$COLOR_FRMWK>| $NAME_FRMWK_DRIVERS |
+    endlegend
+  }
+ 
+!endprocedure
+
+!procedure $printEnterpriseLayer($isDataShow, $isLayerGroupsShow)
+  !if ($isLayerGroupsShow == true)
+    package $LAYER_ENT_LOGIC{
+  !endif
+
+  class $ENTITY<<$NAME_ENT_LOGIC>>
+  {
+    +handleApplicationIndependentBusinessRules(data based on $NAME_REQUEST_MODEL) : data for "$NAME_RESPONSE_MODEL" creation
+  }
+
+  interface $ENTITY_GATEWAY<<$NAME_ENT_LOGIC>>
+  {
+    {abstract} +storeEntity(Entity) //abstract
+    +getEntity(data based on $NAME_REQUEST_MODEL) : Entity
+  }
+
+  !if ($isDataShow == true)
+    rectangle Optional as rectOptional1 #line.dashed{
+      class $DATA_ENTITY $TYPE_DATA<<$NAME_ENT_LOGIC>>
+    }
+  !endif
+
+  !if ($isLayerGroupsShow == true)
+    }
+  !endif
+!endprocedure
+
+!procedure $printApplicationLayer($isExtApiShow, $isDataShow, $isLayerGroupsShow)
+  !if ($isLayerGroupsShow == true)
+      package $LAYER_APP_LOGIC{
+  !endif
+
+  interface $INPUT_PORT<<$NAME_APP_LOGIC>>
+  {
+      {abstract} +execute($NAME_REQUEST_MODEL data) : $NAME_RESPONSE_MODEL //abstract
+  }
+
+  class $INTERACTOR<<$NAME_APP_LOGIC>>
+  {
+      -callExternalApiIfNeeded($NAME_REQUEST_MODEL data) : $NAME_API_MODEL
+      -handleApplicationDependentBusinessRules(data based on $NAME_REQUEST_MODEL)
+      +execute($NAME_REQUEST_MODEL data) : $NAME_RESPONSE_MODEL 
+  }
+
+  interface $OUTPUT_PORT<<$NAME_APP_LOGIC>>
+  {
+      {abstract} +handleResponse($NAME_RESPONSE_MODEL data) //abstract
+  }
+ 
+  !if ($isExtApiShow == true)
+    interface $EXT_API<<$NAME_APP_LOGIC>>
+    {
+      {abstract} +handleBusinessLogic($NAME_REQUEST_MODEL data) : $NAME_API_MODEL //abstract
+    }
+  !endif
+
+  !if ($isDataShow == true)
+      class $DATA_REQUEST_MODEL $TYPE_DATA <<$NAME_APP_LOGIC>>
+      class $DATA_RESPONSE_MODEL $TYPE_DATA <<$NAME_APP_LOGIC>>
+  !endif
+
+  !if ($isExtApiShow == true && $isDataShow == true)
+      class $DATA_API_MODEL $TYPE_DATA <<$NAME_APP_LOGIC>>
+  !endif
+
+
+  !if ($isLayerGroupsShow == true)
+      }
+  !endif
+!endprocedure
+
+!procedure $printInterfaceLayer($isExtApiShow, $isLayerGroupsShow)
+  !if ($isLayerGroupsShow == true)
+    package $LAYER_INT_ADAPTERS{
+  !endif
+   
+  class $PRESENTER<<$NAME_INT_ADAPTERS>>
+  {
+    +handleResponse($NAME_RESPONSE_MODEL data)
+  }
+  
+  !if ($isExtApiShow == true)
+    class $EXT_API_IMPL<<$NAME_INT_ADAPTERS>>
+    {
+      +handleBusinessLogic($NAME_REQUEST_MODEL data) : $NAME_API_MODEL
+    }
+  !endif
+
+  class $CONTROLLER<<$NAME_INT_ADAPTERS>>
+
+  class $ENTITY_GATEWAY_IMPL<<$NAME_INT_ADAPTERS>>
+  {
+    -getDataForEnityCreationIfNeeded() : Data in Entity
+    +storeEntity(Entity)
+    +getEntity(data based on $NAME_REQUEST_MODEL) : Entity
+  }
+  
+  !if ($isLayerGroupsShow == true)
+    }
+  !endif
+!endprocedure
+
+!procedure $printFrameworkLayer($isExtApiShow, $isDataShow, $isLayerGroupsShow)
+  !if ($isLayerGroupsShow == true)
+    package $LAYER_FRMWK_DRIVERS{
+  !endif
+
+  rectangle Optional as rectOptional2 #line.dashed{
+      class $API_DATABASE<<$NAME_FRMWK_DRIVERS>>
+      
+      !if ($isDataShow == true)
+          class $DATA_FOR_ENTITY $TYPE_DATA <<$NAME_FRMWK_DRIVERS>>
+      !endif
+  }
+
+  class $API_INPUT<<$NAME_FRMWK_DRIVERS>>
+  class $API_OUTPUT<<$NAME_FRMWK_DRIVERS>>
+  {
+      +callViewApi(ViewModel data)
+  }
+
+  !if ($showData == true)
+    class $DATA_VIEW_MODEL $TYPE_DATA <<$NAME_FRMWK_DRIVERS>>
+    class $DATA_REQUEST $TYPE_DATA <<$NAME_FRMWK_DRIVERS>>
+
+    !if ($isExtApiShow == true)
+      class $DATA_EXT_API_MODEL $TYPE_DATA <<$NAME_FRMWK_DRIVERS>>
+    !endif
+  !endif
+
+  !if ($isLayerGroupsShow == true)
+    }
+  !endif
+!endprocedure
+
+!procedure $printNotes($isDataShow, $isLayerGroupsShow)
+  note "Application **in**dependent\nbusiness rules" as N5
+  $ENTITY-[dotted]right-N5
+
+  note "Application dependent\nbusiness rules" as N6
+  $INTERACTOR-[dotted]left-N6
+
+  !if ($isLayerGroupsShow == true)
+    $LAYER_ENT_LOGIC-[dotted]right-N5
+    $LAYER_APP_LOGIC-[dotted]left-N6
+    
+    note as N4
+      $LAYER_ENT_LOGIC layer
+      can be shared library because
+      it is application independent
+    end note
+
+    $LAYER_ENT_LOGIC-[dotted]-N4
+
+  !endif
+
+  note as N1
+    $NAME_ENT_LOGIC layer **should contain**
+    business logic: classes with **methods or functions**.
+    But **Data is optional**!
+  end note
+
+  $ENTITY-[dotted]up-N1
+  !if ($isDataShow == true)
+      rectOptional1-[dotted]up-N1
+  !endif
+
+  note as N2
+    ViewModel data - is the
+    **just data structure** for
+    Dumb View API
+  endnote
+  $API_OUTPUT-[dotted]-N2
+  !if ($showData == true)
+    $DATA_VIEW_MODEL-[dotted]-N2
+  !endif
+
+!endprocedure
+
+!procedure $printControlFlow($showExternalApi)
+
+  $API_INPUT --> $CONTROLLER $STYLE_FLOW_CTRL : $MSG_FLOW_CNTRL 1
+  $CONTROLLER-->$INPUT_PORT $STYLE_FLOW_CTRL : $MSG_FLOW_CNTRL 2
+  $INPUT_PORT-->$INTERACTOR $STYLE_FLOW_CTRL : $MSG_FLOW_CNTRL 3
+  $INTERACTOR -up-> $ENTITY_GATEWAY $STYLE_FLOW_CTRL : $MSG_FLOW_CNTRL 4
+  $ENTITY_GATEWAY -up-> $ENTITY_GATEWAY_IMPL $STYLE_FLOW_CTRL : $MSG_FLOW_CNTRL 5
+  $ENTITY_GATEWAY_IMPL -up-> $API_DATABASE $STYLE_FLOW_CTRL : $MSG_FLOW_CNTRL 6
+  $API_DATABASE --> $ENTITY_GATEWAY_IMPL $STYLE_FLOW_CTRL : $MSG_FLOW_CNTRL 7
+  $ENTITY_GATEWAY_IMPL --> $ENTITY_GATEWAY $STYLE_FLOW_CTRL : $MSG_FLOW_CNTRL 8
+  $ENTITY_GATEWAY --> $INTERACTOR $STYLE_FLOW_CTRL : $MSG_FLOW_CNTRL 9
+  $INTERACTOR -right-> $ENTITY $STYLE_FLOW_CTRL : $MSG_FLOW_CNTRL 10
+  $ENTITY -left-> $INTERACTOR $STYLE_FLOW_CTRL : $MSG_FLOW_CNTRL 11
+  $INTERACTOR-->$OUTPUT_PORT $STYLE_FLOW_CTRL : $MSG_FLOW_CNTRL 12
+  $OUTPUT_PORT-->$PRESENTER $STYLE_FLOW_CTRL : $MSG_FLOW_CNTRL 13
+  $PRESENTER --> $API_OUTPUT $STYLE_FLOW_CTRL : $MSG_FLOW_CNTRL 14
+
+  $INPUT_PORT-[hidden]right-> $ENTITY_GATEWAY
+
+  !if ($showExternalApi == true)
+    $INTERACTOR-up->$EXT_API $STYLE_FLOW_CTRL : $MSG_FLOW_CNTRL 3.1
+    $EXT_API-up->$EXT_API_IMPL $STYLE_FLOW_CTRL : $MSG_FLOW_CNTRL 3.2
+    $EXT_API_IMPL-up->$API_INPUT $STYLE_FLOW_CTRL : $MSG_FLOW_CNTRL 3.3
+    $API_INPUT-->$EXT_API_IMPL $STYLE_FLOW_CTRL : $MSG_FLOW_CNTRL 3.4
+    $EXT_API_IMPL-->$EXT_API $STYLE_FLOW_CTRL : $MSG_FLOW_CNTRL 3.5
+    $EXT_API-->$INTERACTOR $STYLE_FLOW_CTRL : $MSG_FLOW_CNTRL 3.6
+  !endif
+!endprocedure
+
+!procedure $printObjectOrientedRelations($isExtApiShow)
+
+  $API_INPUT ..> $CONTROLLER: call
+  $CONTROLLER..>$INPUT_PORT : call "execute()" method\nwith transfer data in $NAME_REQUEST_MODEL\n(call application dependent\nbusiness rules)
+  $INPUT_PORT <|..$INTERACTOR : realize
+  $INTERACTOR ..> $OUTPUT_PORT : call method for\nresponse event with\ntransfer data\nin ResponseModel
+  $OUTPUT_PORT <|..$PRESENTER: realize
+  
+  $PRESENTER ..>$API_OUTPUT : call
+  $INTERACTOR .right.> $ENTITY : call (application independent\nbusiness rules)
+  $INTERACTOR .up.> $ENTITY_GATEWAY : call
+
+  $ENTITY_GATEWAY_IMPL ..|> $ENTITY_GATEWAY : realize
+  $API_DATABASE <.. $ENTITY_GATEWAY_IMPL : call
+
+  $ENTITY_GATEWAY ..> $ENTITY : return
+
+  !if ($isExtApiShow == true)
+    $API_INPUT <.. $EXT_API_IMPL: call
+    $EXT_API_IMPL..|>$EXT_API : realize
+    $EXT_API <..$INTERACTOR : call
+
+    $EXT_API-[hidden]left->$INPUT_PORT
+  !endif
+  
+!endprocedure
+
+!procedure $printDataRelations($isExtApiShow)
+
+  $CONTROLLER..>$DATA_REQUEST_MODEL $STYLE_DATA_ARROW : send
+  $INPUT_PORT.up.>$DATA_REQUEST_MODEL $STYLE_DATA_ARROW : get
+  $INTERACTOR.up.>$DATA_REQUEST_MODEL $STYLE_DATA_ARROW : get
+
+  $PRESENTER..>$DATA_RESPONSE_MODEL $STYLE_DATA_ARROW : get
+  $OUTPUT_PORT.up.>$DATA_RESPONSE_MODEL $STYLE_DATA_ARROW : get
+  $INTERACTOR.down.>$DATA_RESPONSE_MODEL $STYLE_DATA_ARROW : send
+
+  $ENTITY_GATEWAY_IMPL .down.> $DATA_ENTITY $STYLE_DATA_ARROW : may send
+  $ENTITY "1" *.up. "0..*" $DATA_ENTITY $STYLE_DATA_ARROW : may contain in
+
+  $PRESENTER .down.> $DATA_VIEW_MODEL $STYLE_DATA_ARROW : send
+  $API_OUTPUT .up.> $DATA_VIEW_MODEL $STYLE_DATA_ARROW : get
+
+  $CONTROLLER .up.>$DATA_REQUEST $STYLE_DATA_ARROW : get
+  $API_INPUT .down.> $DATA_REQUEST $STYLE_DATA_ARROW : send
+
+  $ENTITY_GATEWAY_IMPL .up.> $DATA_FOR_ENTITY $STYLE_DATA_ARROW : get
+  $API_DATABASE ..> $DATA_FOR_ENTITY $STYLE_DATA_ARROW : send
+
+  $ENTITY_GATEWAY .up.> $DATA_ENTITY $STYLE_DATA_ARROW : may get
+
+  !if ($isExtApiShow == true)
+    $EXT_API.up.>$DATA_API_MODEL $STYLE_DATA_ARROW : get
+    $INTERACTOR.up.>$DATA_API_MODEL $STYLE_DATA_ARROW : get
+    $EXT_API_IMPL..>$DATA_API_MODEL $STYLE_DATA_ARROW : send
+    $EXT_API_IMPL .up.>$DATA_EXT_API_MODEL $STYLE_DATA_ARROW : get
+    $API_INPUT .down.> $DATA_EXT_API_MODEL $STYLE_DATA_ARROW : send
+  !endif
+!endprocedure
+
+$setStyles()
+
+title "Clean Architecture explained by Yuri Geronimus"
+
+$printEnterpriseLayer($showData, $showInLayers)
+$printApplicationLayer($showExternalApi, $showData, $showInLayers)
+$printInterfaceLayer($showExternalApi, $showInLayers)
+$printFrameworkLayer($showExternalApi, $showData, $showInLayers)
+
+!if ($showNotes == true)
+  $printNotes($showData, $showInLayers)
+!endif
+
+!if ($showControlFlow == true)
+  $printControlFlow($showExternalApi)
+!endif
+
+!if ($showOOBRelations == true)
+  $printObjectOrientedRelations($showExternalApi)
+
+  !if ($showData == true)
+    $printDataRelations($showExternalApi)
+  !endif
+!endif
+
+!if ($showLegend == true)
+  $printLegend()
+  !if ($showInLayers == false)
+    $CONTROLLER-[hidden]left->Legend1
+  !endif
+!endif
+
+@enduml

@@ -76,8 +76,3 @@ SLI, SLA
 - [API Platform](https://blog.postman.com/new-postman-api-platform-redefining-api-management-for-api-first-world/)
   - [API management](api-managment.md)
   - [API Gateway](api.gateway.md)
-    - Ocelot
-    - Kong
-    - Nginx
-    - Gravitee
-    - Tyk

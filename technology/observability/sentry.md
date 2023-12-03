@@ -8,7 +8,11 @@
 	- [Deployment](#deployment)
 	- [Технологии](#технологии)
 
-Инструмент мониторинга исключений (exception), ошибок, логов, распределенной трассировки, анализа производительности.
+Инструмент реализующий:
+
+- паттерн [мониторинга исключений](../../arch/pattern/exception.handle.md) (exception), ошибок
+- распределенной трассировки
+- [анализа производительности](../../arch/system.class/apm.md)
 
 ## Зачем
 
@@ -69,7 +73,7 @@
 	- [Drupal module Raven](https://www.drupal.org/project/raven)
 	- source maps
 	- [SPA Vite](https://docs.sentry.io/platforms/javascript/sourcemaps/uploading/vite/)
-- [APM](../../arch/system.class/apm.md)	
+- [APM](../../arch/system.class/apm.md)
 	- [Web Vitals](https://docs.sentry.io/product/performance/web-vitals/)
 - [Distributed Trace](https://docs.sentry.io/product/sentry-basics/tracing/distributed-tracing/)
 	![span](https://docs.sentry.io/static/1ae959bb1d05b01379cf856c5dc36a01/c1b63/diagram-transaction-trace.png)

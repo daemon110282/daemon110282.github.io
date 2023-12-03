@@ -18,12 +18,12 @@
 	- Стандартизированный формат данных для отправки на сервер сбора данных Observability
 	- OpenTelemetry, the promise is that the same naming, concepts, abilities, conventions, etc. will be there in every language you use in your project. It brings universality to the telemetry world.
 	- Простота замена сервера сбора данных Observability
-	- APIs and SDKs for all the signals are independent of the backends you use for collecting the signals. You don’t have to worry about tight coupling with the solution you choose for storing the telemetry data (eg. Prometheus). 
+	- APIs and SDKs for all the signals are independent of the backends you use for collecting the signals. You don’t have to worry about tight coupling with the solution you choose for storing the telemetry data (eg. Prometheus).
 	- [Цель OTel - предоставить набор стандартизированных независимых от поставщика SDK, API и инструментов для приема](https://opentelemetry.io/docs/concepts/what-is-opentelemetry/), преобразования и отправки данных в серверную часть Observability
 - [Vendor Lock исключить](https://habr.com/ru/company/ru_mts/blog/537892/)
 - [Receivers](https://github.com/open-telemetry/opentelemetry-collector-contrib/tree/main/receiver) - Input Data Collector ![Data Collector](https://habrastorage.org/r/w1560/webt/te/5k/cn/te5kcnz9h8pkdd0nr_2papfrr98.png)
 	- [Metric](https://opentelemetry.io/docs/reference/specification/metrics/)
-	- Trace	
+	- Trace
 	- OTEL Instrumentation Library, Agent, 2 modes of operation: 
 		- you can either use the OpenTelemetry API to __manually instrument the telemetry collection__ from your application 
 		- or you can use __automatic instrumentation techniques__ that have already been implemented for some languages.	
@@ -56,13 +56,14 @@
 
 ## Архитектура
 
-- typical non-OpenTelemetry observability collection pipeline
+- typical non-OpenTelemetry [observability collection pipeline](https://opentelemetry.io/docs/specs/otel/logs/)
 ![schema](https://opentelemetry.io/docs/reference/specification/logs/img/separate-collection.png)
 - typical OpenTelemetry observability collection pipeline
 ![schema](https://opentelemetry.io/docs/reference/specification/logs/img/unified-collection.png)
 - ![arch](https://opentelemetry.io/img/otel_diagram.png)
 
 Based on the [Specification, the APIs and SDKs are implemented](https://scalac.io/blog/opentelemetry-from-a-birds-eye-view-a-few-noteworthy-parts-of-the-project/). There’s a noteworthy distinction between the two:
+
 - __APIs consist of all the abstractions used for instrumentation__, clearly decoupled from their actual implementations. The APIs __do not contain the working functionality__ (they are only there to define what is going to be collected).
 - An important part of the __SDK is the exporters__. After collecting the telemetry signals from your application, 
 	- either directly (using the manual instrumentation approach)
@@ -91,9 +92,9 @@ Based on the [Specification, the APIs and SDKs are implemented](https://scalac.i
 
 ### Logs
 
-[Receive from](https://opentelemetry.io/docs/reference/specification/logs/): 
+[Receive from](https://opentelemetry.io/docs/reference/specification/logs/):
 
-- stduot, file logs 
+- stduot, file logs
 ![schema](https://opentelemetry.io/docs/reference/specification/logs/img/app-to-file-logs-otelcol.png)
 - FluentBit
 ![schema](https://opentelemetry.io/docs/reference/specification/logs/img/app-to-file-logs-fb.png)

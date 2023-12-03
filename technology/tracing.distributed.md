@@ -42,3 +42,4 @@
     - Сбор телеметрии (логи, метрики, трейсы)
   - минусы
     - dependency graph service
+- [Service Mesh](middleware/servicemesh.md) [Istio](middleware/service.mesh/istio.md)

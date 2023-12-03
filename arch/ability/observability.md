@@ -12,15 +12,14 @@
 
 ## Зачем
 
-Концепция [OpenTelemetry (OTel)](../../technology/protocols.integration/otel.md) объединила OpenTracing + OpenCensus:
-
 - [Метрики Мониторинг](../../technology/monitoring.md), статистика
-	- При проектировании в архитектуру закладываются измерители, генерирующие информацию для системы мониторинга
-	- Key Quality Indicators продукта. Необходимы для возможности мониторинга качества предоставления продукта дежурной сменой Service Desk и ДКК. Данный раздел описывает непосредственно счетчики, используемые в качестве KPI, источники получения соответствующих счетчиков, периодичность съёма данных формат и интерфейсы предоставления информации, пороговые значения для алармов и их получателей. Время и место хранения статистики.
-	- Real-user monitoring (RUM)
-	- [Application Perfomance Monitoring (APM)](../system.class/apm.md).
-- [Logging](../../technology/logging.md)
-- [Trace](../../technology/tracing.distributed.md)
+- Агрегация логов [Logging](../../technology/logging.md)
+- Распределенная трассировка [Distributed Trace](../../technology/tracing.distributed.md)
+- [Обработка исключений](../pattern/observability/exception.handle.md)
+- [Аудит](../pattern/observability/pattern.audit.md)
+- [Health Check API](../pattern/observability/pattern.healthcheck.md)
+
+Реализуется в концепции [OpenTelemetry (OTel)](../../technology/protocols.integration/otel.md), которая объединила OpenTracing + OpenCensus.
 
 Характеристики:
 
@@ -34,11 +33,12 @@
 
 Плюсы:
 
-- [Ускорение разрешения инцидентов](https://habr.com/ru/amp/publications/727072/)- Повышение быстродействия системы
+- [Ускорение разрешения инцидентов](https://habr.com/ru/amp/publications/727072/)
+- Повышение __быстродействия__ системы
 - Эффективное планирование ресурсопотребления
 - Повышение эффективности разработки
 - Более эффективное сотрудничество
-- Повышение надёжности системы
+- Повышение __надёжности__ системы
 
 Минусы:
 
@@ -61,11 +61,6 @@ Reference Arch:
 
 ## Технологии
 
-Compare:
-
-- [ELK - Jaeger - OpenTelemetry](https://www.nginx.com/blog/integrating-opentelemetry-modern-apps-reference-architecture-progress-report?mkt_tok=NjUzLVNNQy03ODMAAAGDoZc8tBnTTPpd0LyW8jL4ptLEDNmRtqT86ruxAIy0w26Q36wbMRlF5KC3BMfg2BcRVqWCoPUW3J4gMfJLANmKejRzOQC80kmD2-ueYoqT-DoXcB1iUA)
-- [GrayLog - ELK - Grfana Loki - Monq](https://habr.com/ru/post/594805/)
-
 ### Варианты решений
 
 - Appdynamics
@@ -75,8 +70,13 @@ Compare:
 - [GrayLog, ELK](../../technology/logging.md)
 - [Jaeger+ELK, Jaeger+ClickHouse, Zipkin](../../technology/tracing.distributed.md)
 - [Sentry](../../technology/observability/sentry.md)
-- Promtail + Loki + Grafana	
+- Promtail + Loki + Grafana
 - fluentbit + Yandex Data Streams + Yandex Query (и бекап логов через Yandex Transfer в S3)
+
+Compare:
+
+- [ELK - Jaeger - OpenTelemetry](https://www.nginx.com/blog/integrating-opentelemetry-modern-apps-reference-architecture-progress-report?mkt_tok=NjUzLVNNQy03ODMAAAGDoZc8tBnTTPpd0LyW8jL4ptLEDNmRtqT86ruxAIy0w26Q36wbMRlF5KC3BMfg2BcRVqWCoPUW3J4gMfJLANmKejRzOQC80kmD2-ueYoqT-DoXcB1iUA)
+- [GrayLog - ELK - Grfana Loki - Monq](https://habr.com/ru/post/594805/)
 
 ### Data Collector
 
@@ -106,10 +106,10 @@ TODO:
 - [Prometeus](../../technology/store/prometheus.md)
 - [Victoria metrics](../../technology/monitoring/victoriametrics.md)
 
-
 ## TODO
 
 Мы допустили все [ошибки](https://habr.com/ru/company/sbermegamarket/blog/696844/#comment_24875276) какие могли:
+
 - Сразу не настроили отправку метрики с Promtail и Loki в prometheus, чтобы сразу увидеть, где проблема
 - Не настроили сразу кеширование, лимиты и чанки
 - Выбрали обычные ssd вместо не реплицируемых (нужна была макс скорость)

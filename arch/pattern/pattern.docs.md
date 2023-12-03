@@ -25,6 +25,12 @@ TODO
   - coArchi делает возможной многопользовательскую совместную работу над моделями и их версионирование в Git-репозитории
   - методологии TOGAF, которая считается наиболее распространенным и сбалансированным подходом для описания архитектуры предприятия
   - Альтернатива: Business Studio или ARIS
+- Architecture as Code - C4 model, Plant Uml, Markdown
+  - [Генерация архитектурных схем и метаданных](https://www.youtube.com/watch?v=RFLG44oB7N4)
+  - [Архитектурный репозиторий на базе GitLab и C4 Model для большой компании](https://www.youtube.com/watch?v=cTM6M6BbuMs)
+  - [Пример использования C4 Model, Plant Uml](https://dzone.com/articles/architecture-as-code-with-c4-and-plantuml)
+  - [Пример](https://github.com/team7katas/sysopsquad) The Sysops Squad Architectural Kata
+by O'Reilly
 
 ## ИТ ландшафт, Корпоративная архитектура
 

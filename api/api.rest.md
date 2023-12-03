@@ -57,14 +57,14 @@ REST API — это архитектурный подход, который ус
   - [Методы, JSON, URI](https://habr.com/ru/post/447322/)
   - [SRP паттерн](../arch/patterns.md)
 - Эффективное использование [кодов ответов HTTP](api-http-status.md)
-- [Идемпотентность](../arch/pattern/idempotent.md)
+- [Идемпотентность](../arch/pattern/integration/idempotent.md)
 - RESTful
   - [Пример Яндекс.Касса](https://yookassa.ru/developers/using-api/interaction-format)
 - Стандартизировать дополнительные машиночитаемые данные в ответе, предпочтительно в форме заголовков HTTP (потому что чтение заголовков не требует вычитывания и разбора всего тела ответа, так что промежуточные прокси и гейтвеи смогут понять семантику ошибки без дополнительных расходов; а так же их можно логировать.
 - [Валидация входных данных](https://github.com/Sairyss/backend-best-practices)
 - Файлы
-  - [Download](../arch/pattern/pattern.downloadfile.md)
-  - [Upload](../arch/pattern/pattern.uploadfile.md)
+  - [Download](../arch/pattern/integration/pattern.downloadfile.md)
+  - [Upload](../arch/pattern/integration/pattern.uploadfile.md)
 - Исключать создание [методов массовых изменений](https://habr.com/ru/articles/736892/)
 
 ![best](../img/api/best.practice.jpg)

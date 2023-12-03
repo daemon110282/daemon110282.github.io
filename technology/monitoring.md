@@ -1,10 +1,28 @@
 # Monitoring
 
 - [Monitoring](#monitoring)
+	- [Зачем](#зачем)
 	- [Мониторинг сайтов](#мониторинг-сайтов)
 		- [Compare](#compare)
 	- [Application Perfomance Monitoring (APM)](#application-perfomance-monitoring-apm)
 		- [Compare](#compare-1)
+
+## Зачем
+
+- При проектировании в архитектуру закладываются измерители, генерирующие информацию для системы мониторинга
+  - [Производительности](../arch/ability/performance.metric.md)
+  - [Стабильности Надежности](../arch//ability/resilience.metric.md)
+- Key Quality Indicators продукта
+  - Необходимы для возможности мониторинга качества предоставления продукта дежурной сменой Service Desk
+  - Описывает непосредственно счетчики, используемые в качестве KPI
+    - источники получения соответствующих счетчиков
+    - периодичность съёма данных
+    - формат
+    - интерфейсы предоставления информации
+    - пороговые значения для алармов и их получателей
+    - время и место хранения статистики
+- Real-user monitoring (RUM)
+- [Application Perfomance Monitoring (APM)](../arch//system.class/apm.md)
 
 ## Мониторинг сайтов
 

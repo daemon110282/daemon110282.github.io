@@ -15,7 +15,7 @@
 - CD - процесс доставки, развертывания
 - [Deployment](arch/pattern/pattern.deploy.md)
   - [A\B test](arch/ref/abtesting.md)
-- [Service Mesh](technology/servicemesh.md)
+- [Service Mesh](technology/middleware/servicemesh.md)
 - [Доступность](arch/ability/availability.md), Отказоустойчивость, Надежность
 - [Производительность](arch/ability/performance.md)
   - Auto Scaling
@@ -25,7 +25,7 @@
     - [Log management](technology/logging.md)
     - [Performance monitoring (APM класс систем) and dashboards](arch/system.class/apm.md)
   - [Security](arch/ability/security.md)
-  - [Audit](arch/pattern/pattern.audit.md)
+  - [Audit](arch/pattern/observability/pattern.audit.md)
 - [SRE](devops/sre.md)
 
 ## Паттерны

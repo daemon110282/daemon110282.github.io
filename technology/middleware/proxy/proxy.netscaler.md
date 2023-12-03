@@ -2,6 +2,8 @@
 
 - [Citrix ADC (Netscaler)](#citrix-adc-netscaler)
 	- [Зачем](#зачем)
+	- [Citrix Application Delivery Management (ADM)](#citrix-application-delivery-management-adm)
+	- [NetScaler Gateway](#netscaler-gateway)
 	- [Cache](#cache)
 	- [Routing](#routing)
 	- [Validate Token](#validate-token)
@@ -9,19 +11,15 @@
 
 ## Зачем
 
-Реализует паттерн [Reverse Proxy](../../../arch/pattern/pattern.proxy.reverse.md)
+Реализует паттерн [Reverse Proxy](../../../arch/pattern/deployment/pattern.proxy.reverse.md) и [API Gateway](../../../api/api.gateway.md)
 
-- Auth
-	- [OAuth OIDC с v.12.1](https://docs.citrix.com/en-us/citrix-adc/current-release/aaa-tm/authentication-methods/oauth-authentication.html)
-	- [API OIDC](https://docs.citrix.com/en-us/citrix-adc/current-release/aaa-tm/authentication-methods/oauth-authentication/api-authentication-with-adc.html)
-- Routing [Citrix ADC (application delivery controller) Netscaler](https://docs.citrix.com/en-us/citrix-adc/current-release/content-switching.html)
-	- [example](https://www.cloudedskies.co.uk/single-post/2016/11/27/Citrix-NetScaler-111-Content-Switch)
-	![scheme](https://docs.citrix.com/en-us/citrix-adc/media/csw-lbconfiguration.png)
 - Proxy
   - Проксирование статического контента.
 - [Load Balancer](https://docs.netscaler.com/en-us/citrix-adc.html)
 	- [iis](https://kb.paessler.com/en/topic/22633-how-to-monitor-active-sessions-users-for-iis-7-0)
 	- [configure](http://pleasework.robbievance.net/howto-configure-citrix-netscaler-to-perform-website-aware-load-balancing/)
+	- методы балансировки
+      - [Least response time method using monitors (LRTM)](https://docs.netscaler.com/en-us/citrix-adc/current-release/load-balancing/load-balancing-customizing-algorithms/lrtm-method.html)
 - [Citrix ADC (NetScaler) Ingress Controller for Kubernetes](https://github.com/citrix/citrix-k8s-ingress-controller)
 - [Cache](../../../arch/pattern/pattern.cache.md) - Кэширование динамического контента и сброс кэша по определенным условиями или времени
 	- [Redirection](https://docs.citrix.com/en-us/citrix-adc/current-release/citrix-adc-cache-redirection-gen-wrapper-10-con.html) to Cache Server - кэш __не хранится__ в Citrix
@@ -37,14 +35,23 @@
 	- [Логическое разделение балансировщиков Admin Partitioning](https://docs.netscaler.com/en-us/citrix-adc/12-1/admin-partition)
 - Observability
 	- [Logs - ELK\GrayLog, Metric - Prometheus, Trace - Jaeger](https://www.netscaler.com/blog/observability/improve-the-observability-of-your-applications-with-netscaler/)
-	- [Export metrics from Citrix ADC (NetScaler) 12.1 to Prometheus](https://github.com/netscaler/citrix-adc-metrics-exporter) в более поздних версиях из коробки есть
+	- [Export metrics from Citrix ADC (NetScaler) 12.1 to Prometheus](https://github.com/netscaler/citrix-adc-metrics-exporter) в версиях [после 12.1](https://docs.netscaler.com/en-us/citrix-adc/current-release/observability/prometheus-integration.html) из [коробки есть](https://docs.netscaler.com/en-us/citrix-adc/current-release/observability.html)
+- API GW
+  - Auth
+  	- [OAuth OIDC с v.12.1](https://docs.citrix.com/en-us/citrix-adc/current-release/aaa-tm/authentication-methods/oauth-authentication.html)
+  	- [API OIDC](https://docs.citrix.com/en-us/citrix-adc/current-release/aaa-tm/authentication-methods/oauth-authentication/api-authentication-with-adc.html)
+  - Routing [Citrix ADC (application delivery controller) Netscaler](https://docs.citrix.com/en-us/citrix-adc/current-release/content-switching.html)
+  	- [example](https://www.cloudedskies.co.uk/single-post/2016/11/27/Citrix-NetScaler-111-Content-Switch)
+  	![scheme](https://docs.citrix.com/en-us/citrix-adc/media/csw-lbconfiguration.png)
+  - [Retry Policy](https://docs.netscaler.com/en-us/citrix-k8s-ingress-controller/crds/appqoe.html) AppQoE for NetScaler Ingress Controller
+  - [Rate Limit](https://docs.netscaler.com/en-us/citrix-k8s-ingress-controller/crds/rate-limit.html)
 - Контроль трафика до приложений [AppFlow](https://docs.netscaler.com/en-us/citrix-adc/12-1/ns-ag-appflow-intro-wrapper-con.html)
-	- collects flow and user-session level information valuable for __application performance monitoring__ (APM), analytics, and business intelligence applications. 
-	- collects __webpage performance data and database information__ 
+	- collects flow and user-session level information valuable for __application performance monitoring__ (APM), analytics, and business intelligence applications.
+	- collects __webpage performance data and database information__
 	- transmits the information by using the Internet Protocol Flow Information eXport (IPFIX) format
 	- собранные данные можно просмотреть в Citrix ADM
 
-## Citrix Application Delivery Management (ADM) 
+## Citrix Application Delivery Management (ADM)
 
 - [Сбор и анализ данных](https://docs.netscaler.com/en-us/citrix-application-delivery-management-software/12-1/overview.html)
 	- user-session-level information
@@ -52,6 +59,10 @@
 	- database information
 - [Лицензирование](https://docs.netscaler.com/en-us/citrix-application-delivery-management-software/12-1/licensing.html)
 - [Application performance analytics](https://docs.netscaler.com/en-us/citrix-application-delivery-management-software/12-1/application-analytics-and-management/application-performance-analytics.html)		
+	- [Application dashboard](https://docs.netscaler.com/en-us/citrix-application-delivery-management-software/current-release/application-analytics-and-management/dashboard/application-management.html)
+    	- Application [usage and anomalies](https://docs.netscaler.com/en-us/citrix-application-delivery-management-service/application-analytics-and-management/dashboard/app-usage-anomalies.html)
+    	- [Service graph](https://docs.netscaler.com/en-us/citrix-application-delivery-management-service/application-analytics-and-management/service-graph/service-graph-global-application.html) with [details](https://docs.netscaler.com/en-us/citrix-application-delivery-management-service/application-analytics-and-management/service-graph/service-graph-begin-details.html)
+	- Configure [SLA management](https://docs.netscaler.com/en-us/citrix-application-delivery-management-software/12-1/analytics/analytics-how-to-articles/how-to-configure-sla-management.html)
 - analytics работает на базе собранных данных __Citrix ADC AppFlow__
 	- [Web Insight](https://docs.netscaler.com/en-us/citrix-application-delivery-management-software/12-1/analytics/web-insight.html)
 		- real-time monitoring of the applications: network latency and server response time

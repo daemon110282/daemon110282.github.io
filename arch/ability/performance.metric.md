@@ -2,14 +2,22 @@
 
 - [performance metric](#performance-metric)
   - [Зачем](#зачем)
+  - [Методики выбора метрик](#методики-выбора-метрик)
   - [Виды метрик](#виды-метрик)
     - [Business Metrics](#business-metrics)
     - [Application Metrics](#application-metrics)
     - [System Metrics](#system-metrics)
     - [Client Metrics: Приложение front-end](#client-metrics-приложение-front-end)
-    - [Service Metrics: API](#service-metrics-api)
+    - [Service Metrics](#service-metrics)
+      - [API](#api)
+      - [Virtual Machine](#virtual-machine)
+      - [Кеш](#кеш)
+      - [Балансирощик](#балансирощик)
+      - [СУБД](#субд)
 
 ## Зачем
+
+Измеряем атрибут качества ИС [производительность](performance.md).
 
 To-do
 - https://www.datadoghq.com/blog/monitoring-101-collecting-data/
@@ -17,12 +25,21 @@ To-do
 ## Методики выбора метрик
 
 - USE - [Utilization, Saturation, Errors](https://habr.com/ru/companies/okmeter/articles/420429/)
-  - Мониторинг ресурсов
+  - Мониторинг ресурсов (System Metrics)
 - RED - Request (Rate) Error Duration (Latency)
-  - Мониторинг нагрузки на сервисы
+  - Мониторинг нагрузки на сервисы (Service Metrics)
 - Google [SRE](../../devops/sre.md) [4 Golden signals](https://sre.google/sre-book/monitoring-distributed-systems/)
   - [TODO](https://habr.com/ru/companies/southbridge/articles/525176/)
+  - [Latency](https://habr.com/ru/companies/flant/articles/462503/)
+    - is the amount of time between when a user sends a request and when the service responds. Lower latencies are better, since this indicates that users are being served faster.
+  - Traffic 
+    - is the amount of demand the service is handling. This is often measured in HTTP requests per second, connections per second, or bandwidth usage. We can also use metrics specific to our service, such as transactions processed per minute.
+  - Errors 
+    - is the rate of requests that failed. The criteria for a failure depends on the service, but the most common is when a service responds to a request with an HTTP 5XX error code.
+  - Saturation 
+    - is the amount of resources your service is consuming out of all the resources available to it. Remember that your containers may only have a limited amount of resources allocated to them. High saturation indicates that you might need to scale up your service by increasing your container resource limits, adding additional container replicas, or increasing the capacity of your servers.
 - [Web Vitals](https://web.dev/i18n/en/vitals/)
+  - Мониторинг производительности клиентских веб приложений (Client Metrics)
 
 Счетчики как внедрить:
 
@@ -113,14 +130,14 @@ To-do
 
 - Google [Web Vitals](https://web.dev/i18n/en/vitals/)
   - [Core](https://timeweb.com/ru/community/articles/core-web-vitals) __75-й процентиль__
-    - LCP - насколько быстро происходит скорость загрузки страницы - <2.5-4c
+    - [LCP](https://habr.com/ru/companies/vk/articles/577792/) - насколько быстро происходит скорость загрузки страницы - <2.5-4c
     - FID - как быстро происходит взаимодействие с сайтом - <1-3c
     - CLS - корректно ли работают в совокупности все элементы - <0.1-0.25
   - [Дополнительно](https://web.dev/vitals/?utm_source=pocket_saves#drugie-pokazateli-web-vitals)
     - Time to First Byte (TTFB) - Время до первого байта
     - First Contentful Paint (FCP) - Первая отрисовка контента
     - Total Blocking Time (TBT) - Общее время блокировки
-    - Time to Interactive (TTI) - Время до интерактивност
+    - Time to Interactive (TTI) - Время до интерактивности
   - Иснтрументы
     - [pagespeed](https://pagespeed.web.dev/)
     - gtmetrix.com
@@ -159,7 +176,7 @@ To-do
 
 #### Балансирощик
 
-- [балансировщик](../pattern/load.balancing.md) прокси, nginx, netscaler - как балансировка на ноды работает, время ответ нод балансировщику
+- [балансировщик](../pattern/deployment/load.balancing.md) прокси, nginx, netscaler - как балансировка на ноды работает, время ответ нод балансировщику
 
 #### СУБД
 
@@ -167,3 +184,4 @@ To-do
   - долгих запросов
   - блокировки 
   - часто вызываемых
+- [mssql](../../technology/db/mssql.md)

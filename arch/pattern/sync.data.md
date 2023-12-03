@@ -32,8 +32,8 @@ __Репликация__ представляет собой набор техн
 - __Master-slave__ replica
   - Log shipping
   - Always On
-- [ETL](ETL.md)
-- [ELT](ELT.md)
+- [ETL](integration/ETL.md)
+- [ELT](integration/ELT.md)
 - [CDC](../system.class/cdc.md)
 
 С ростом данных наблюдается изменение парадигмы:

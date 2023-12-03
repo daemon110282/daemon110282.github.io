@@ -6,7 +6,7 @@
 - Multiple file upload
 - Validation and security
 - Upload from remote server (FTP, HTTP...)
-- Upload from private [storage bucket (S3 or Google Storage)](../../technology/filesystem/object.storage.md)
+- Upload from private [storage bucket (S3 or Google Storage)](../../../technology/filesystem/object.storage.md)
 - Individual progress bar for every file
 - Upload notifications
 - Разделение на части файла - [Chunking files](https://uploadcare.com/blog/the-file-uploading-guide) over 20 MB
@@ -34,7 +34,7 @@
       - Create a new file, POST /downloads (endpoint name an example), __response 202 Accepted, Location: /downloads/123__ (unique ID of the download). If we're sharing the files among users, the same POST might return the same ID (all the users are waiting for the same file to generate)
    - Multipart HTTP request
    - Two-step metadata + upload
-- [HTTP Status](api-http-status.md)
+- [HTTP Status](../api-http-status.md)
    - 413 Payload Too Large (if exceeding max)
    - 507 Insufficient Storage (server full).
 - API Uploading example [Cloudinary](https://cloudinary.com/documentation/upload_images)
@@ -48,8 +48,8 @@
 
 ## Технологии
 
-- [Файловые системы](../../technology/filesystem/filesystem.md)
-   - [Распределенные файловые системы](../../technology/filesystem/dfs.md)
-   - [Распределенные параллельнае файловые системы](../../technology/filesystem/dpfs.md)
+- [Файловые системы](../../../technology/filesystem/filesystem.md)
+   - [Распределенные файловые системы](../../../technology/filesystem/dfs.md)
+   - [Распределенные параллельнае файловые системы](../../../technology/filesystem/dpfs.md)
 - FTP SFTP - передача файлов
-- [Object Storage](../../technology/filesystem/object.storage.md)
+- [Object Storage](../../../technology/filesystem/object.storage.md)

@@ -31,7 +31,7 @@
       - кол-ва k8s дашборд
       - Утилизация ресурсов?
     - в процессе мониторинга нам необходимо постоянно сопоставлять физический мир контейнеров с реальностью Kubernetes
-    - [health checks](../../arch/pattern/pattern.healthcheck.md). У Kubernetes есть два их типа: liveness и readiness probes.
+    - [health checks](../../arch/pattern/observability/pattern.healthcheck.md). У Kubernetes есть два их типа: liveness и readiness probes.
 - [Отличие от Docker](https://mcs.mail.ru/blog/chto-umeet-kubernetes-chego-ne-umeet-docker) - инструмент для создания и запуска контейнеров
 
 ![k8s](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/daemon110282/daemon110282.github.io/daemon110282-patch-1/technology/ci-cd/k8s.puml)
@@ -73,24 +73,40 @@
   - https://developers.redhat.com/blog/2020/05/11/top-10-must-know-kubernetes-design-patterns
   - [10 антипаттернов деплоя](https://mcs.mail.ru/blog/antipatterny-deploya-v-kubernetes)
   - [11 факапов PRO-уровня при внедрении Kubernetes](https://mcs.mail.ru/blog/11-fakapov-pro-urovnja-pri-vnedrenii-kubernetes)
-- [Cron Job](../../arch/pattern/cron.job.md)
-  - [Cron Job](https://kubernetes.io/docs/concepts/workloads/controllers/cron-jobs/)
-    - запускается на выполнение, и после завершения возвращает соответствующий __код завершения__ (exit status), который сообщает, [является ли результат успешным или неудачным](https://digitrain.ru/articles/279243/).
-    - гарантируют, что __один или несколько подов выполнят свои команды__ и успешно завершатся. После завершения всех подов без ошибок, Job завершается.
-      - job’ы должны быть __идемпотентными__, есть __риск создания 2х job__ 
-        - как решать?
-      - Ограничение выполнения Job’а Kubernetes по времени - параметр activeDeadlineSeconds 
-      - Возможность одновременного выполнения - параметр concurrencyPolicy: Forbid, Allow, Replace
-      - при сбоях 
-        - повторы backoffLimit
-        - RestartPolicy: Never (никогда) и OnFailure
-    - Зачем
-      - Пакетная обработка данных
-      - Команды/специфические задачи
-    - Паттерны
-      - [Несколько одиночных Job’ов](https://habr.com/ru/companies/otus/articles/546376/) - параметр completions
-      - Несколько параллельно запущенных Job’ов (Work Queue) - параметр parallelism
+
+### Jobs, CronJob
+
+Зачем:
+
+- Пакетная обработка данных
+- Команды/специфические задачи
+
+- [Jobs](https://kubernetes.io/docs/concepts/workloads/controllers/job/) запуск не по расписанию: вручную
+- [Cron Job](https://kubernetes.io/docs/concepts/workloads/controllers/cron-jobs/) реализует паттерн [Cron Job](../../arch/pattern/cron.job.md): запуск по расписанию
+
+Параметры:
+
+  - запускается на выполнение, и после завершения возвращает соответствующий __код завершения__ (exit status), который сообщает, [является ли результат успешным или неудачным](https://digitrain.ru/articles/279243/).
+  - гарантируют, что __один или несколько подов выполнят свои команды__ и успешно завершатся. После завершения всех подов без ошибок, Job завершается.
+    - job’ы должны быть __идемпотентными__, есть __риск создания 2х job__ 
+      - как решать?
+        - не использовать CronJob k8s: поднять ПОД, [внутри crontb](https://habr.com/ru/companies/slurm/articles/526130/)
+    - __Ограничение__ выполнения __по времени__ - параметр __activeDeadlineSeconds__ 
+    - Возможность одновременного выполнения - параметр __concurrencyPolicy__: Forbid, Allow, Replace
+    - удаление Job
+      - __ttlSecondsAfterFinished__ - количество секунд, по истечении которых Job может быть __автоматически удален__ после его завершения (либо Completed, либо Failed). Это также __удаляет зависимые объекты__, такие как Pod
+      - __failedJobHistorLimit__ - кол-во Job в кластере сбойных для удаления
+      - __successfulJobHistoryLimit__ - кол-во Job в кластере завершенных успешно для удаления
+    - [при сбоях](https://habr.com/ru/companies/slurm/articles/526130/)
+      - __количество повторов__ backoffLimit
+      - __restartPolicy__: Never (никогда) и OnFailure    
+    - startingDeadlineSeconds
     
+  Паттерны
+
+    - [Несколько одиночных Job’ов](https://habr.com/ru/companies/otus/articles/546376/) - параметр __completions__
+    - Несколько параллельно запущенных Job’ов (Work Queue) - параметр __parallelism__
+   
 
 ### Naming convention
 
@@ -146,4 +162,4 @@
   - [Helm](helm.md)
 - Container Registry
   - Nexus
-- [Service mesh](../servicemesh.md)
+- [Service mesh](../middleware/servicemesh.md)

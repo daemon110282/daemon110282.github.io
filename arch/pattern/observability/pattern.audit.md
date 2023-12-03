@@ -1,6 +1,6 @@
 # Audit
 
-- [CDC](../../technology/cdc.md)
+- [CDC](../../../technology/cdc.md)
 - Audit logging
 
 ## Links

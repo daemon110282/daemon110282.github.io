@@ -4,6 +4,7 @@
   - [Зачем](#зачем)
   - [Reference Architecture](#reference-architecture)
   - [Patterns](#patterns)
+    - [Jobs, CronJob](#jobs-cronjob)
     - [Naming convention](#naming-convention)
     - [Deployment](#deployment)
       - [Canary deployment](#canary-deployment)
@@ -25,8 +26,8 @@
   - Consul, Vault и Consul Template для управления конфигурациями.
     - Consul Template запускается как init-контейнер, а в будущем планируется запускать его как sidecar к pod'ам, чтобы он следил за изменениями конфигурации в Consul и обновлял секреты с истекающим сроком действия в Vault и мягко (gracefully) перезапускал процессы приложений.
 - [Observability](../../arch/ability/observability.md)
-  - [Logs](../logging.md)
-  - [Metrics monitoring](../monitoring.md)
+  - [Logs](../observability/logging.md)
+  - [Metrics monitoring](../observability/monitoring.md)
     - Метрики
       - кол-ва k8s дашборд
       - Утилизация ресурсов?

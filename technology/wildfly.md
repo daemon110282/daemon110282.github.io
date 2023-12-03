@@ -12,7 +12,7 @@
 - RBAC
 - Localization
 - Debug
-- Source Control 
+- Source Control
 
 По Application:
 

@@ -7,10 +7,10 @@
 - [filesystem](filesystem/filesystem.md)
 - [framework](framework/)
 - [middleware](middleware/)
+  - [RMQ](middleware/messagebus/rmq/)
 - [mobile](mobile/)
-- [monitoring](monitoring.md)
+- [monitoring](observability/monitoring.md)
 - [OS](os/)
-- [RMQ](rmq/)
 - [Protocol integration](protocols.integration.md)
 
 Templating languages and HTML preprocessors: Pug, Nunjucks, Markdown.

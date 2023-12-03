@@ -16,7 +16,7 @@
 
 - Необходимо на уровне ИС поддерживать
   - stateless ИС - Избегайте состояния (state) в вашем приложении
-  - [Идемпотентность](../idempotent.md)
+  - [Идемпотентность](../integration/idempotent.md)
 - [отказоустойчивость самого балансировщика](https://habr.com/ru/company/mailru/blog/474180/). Просто установка балансировщика тоже создаёт точку отказа: балансировщик ломается — сервис падает. Чтобы так не получалось, мы использовали HAProxy совместно с ExaBGP.
   - Балансировка HAProxy на базе DNS + BGP
   - Доступность haproxy: heartbeat между ExaBGP и HAProxy
@@ -30,4 +30,4 @@
 
 ## Технологии
 
-[Netscaler, HAProxy, Nginx..](../../../technology/loadbalancer.md)
+- [Netscaler, HAProxy, Nginx..](../../../technology/middleware/loadbalancer.md)

@@ -5,7 +5,7 @@
 [Plan](https://serverfault.com/a/350463):
 
 - Put your scenario in place
-- Add [monitoring (APM)](monitoring.md)
+- Add [monitoring (APM)](observability/monitoring.md)
 - Add traffic
 - Evaluate results
 - Remediate based on results

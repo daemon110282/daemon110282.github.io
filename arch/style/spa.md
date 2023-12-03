@@ -14,7 +14,6 @@
 - В приложении [требуется полнофункциональный пользовательский интерфейс](https://learn.microsoft.com/ru-ru/dotnet/architecture/modern-web-apps-azure/choose-between-traditional-web-and-single-page-apps).
 ![arch](https://learn.microsoft.com/ru-ru/azure/architecture/reference-architectures/serverless/_images/serverless-web-app.png)
 
-
 ## Плюсы и минусы
 
 [Критерии](../arch.criteria.md)
@@ -69,9 +68,9 @@
 	- Критичная логика на сервере, риски взлома на клиенте.
 	- [Auth](https://docs.microsoft.com/en-us/azure/active-directory/develop/scenario-spa-overview) with [Single Sign-on](../sso.md) and [Identity Service (IAM)](../system.class/iam.md)
   - observability
-    - [Мониторинг](../../technology/monitoring.md)
+    - [Мониторинг](../../technology/observability/monitoring.md)
     	- [Sentry](../../technology/observability/sentry.md)
-    - [Логирование](../../technology/logging.md)
+    - [Логирование](../../technology/observability/logging.md)
     	- Стратегия логирования (исключений), аудита на клиенте - передача через АПИ на сервер ([Sentry](../../technology/observability/sentry.md) например)
     	- Мерж логов на сервере+с Х клиентов-браузеров 1 юзера-сеанса
     	- [Errbit SaaS (Loggly, New Relic)](https://www.sitepoint.com/logging-errors-client-side-apps/)

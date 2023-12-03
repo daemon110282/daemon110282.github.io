@@ -7,6 +7,6 @@
 
 ## Технологии
 
-- [Elasticsearch](../../technology/monitoring/elk.md)
+- [Elasticsearch](../../technology/observability/monitoring/elk.md)
 - Apache Solr
 - Splunk Indexer

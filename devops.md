@@ -22,7 +22,7 @@
 - [Infrastructure-as-Code (IaC) automation](technology/ioc.md)
 - Сквозная функциональность
   - Наблюдаемость [Observability](arch/ability/observability.md)
-    - [Log management](technology/logging.md)
+    - [Log management](technology/observability/logging.md)
     - [Performance monitoring (APM класс систем) and dashboards](arch/system.class/apm.md)
   - [Security](arch/ability/security.md)
   - [Audit](arch/pattern/observability/pattern.audit.md)
@@ -88,9 +88,9 @@ Each container __should do one thing and do it well__. A few reasons:
   - [docker](technology/ci-cd/docker.md)
     - [docker desktop](technology/ci-cd/docker.md)
     - [docker-compose.yml when building a multi-container Docker](technology/ci-cd/docker.md) application
-- [Load balancer](technology/loadbalancer.md)
+- [Load balancer](technology/middleware/loadbalancer.md)
 - Edge
 - CD
   - Spinnaker
-- [Distributed Tracing](technology/tracing.distributed.md)
+- [Distributed Tracing](technology/observability/tracing.distributed.md)
 - [API Managment](api/api-managment.md)

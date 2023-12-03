@@ -21,7 +21,7 @@
 
 - InfluxDB
 - [Prometeus](store/prometheus.md)
-- [Victoria metrics](monitoring/victoriametrics.md)
+- [Victoria metrics](observability/monitoring/victoriametrics.md)
 - TimescaleDB PostgreSQL
 
 ## NoSQL

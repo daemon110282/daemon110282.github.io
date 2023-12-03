@@ -1,8 +1,15 @@
 # Application Performance monitoring (APM)
 
+- [Application Performance monitoring (APM)](#application-performance-monitoring-apm)
+  - [Зачем](#зачем)
+  - [Pattern](#pattern)
+  - [Технологии](#технологии)
+
 Класс систем Application Perfomance Monitoring (APM).
 
-Функции [Monitoring](../technology/monitoring.md):
+## Зачем
+
+Функции [Monitoring](../../technology/observability/monitoring.md):
 
 - Агенты сбора метрик
 - Distributed Tracing
@@ -10,7 +17,7 @@
 - Алерты
 - Real User Monitoring (RUM)
 
-[SPA](style/spa.md):
+[SPA](../style/spa.md):
 
 - JavaScript errors
 - Framework-specific issues
@@ -28,9 +35,10 @@
 
 ## Технологии
 
-[Варианты решений](https://openapm.io/landscape)
+[Варианты решений](https://openapm.io/landscape):
+
 - [Sentry](../../technology/observability/sentry.md)
-- [ELK](../../technology/monitoring/elk.md)
+- [ELK](../../technology/observability/monitoring/elk.md)
 - open source
   - [opentelemetry signoz](https://signoz.io/)
   - [Uptrace](https://github.com/uptrace/uptrace)

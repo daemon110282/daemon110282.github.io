@@ -12,9 +12,9 @@
 
 ## Зачем
 
-- [Метрики Мониторинг](../../technology/monitoring.md), статистика
-- Агрегация логов [Logging](../../technology/logging.md)
-- Распределенная трассировка [Distributed Trace](../../technology/tracing.distributed.md)
+- [Метрики Мониторинг](../../technology/observability/monitoring.md), статистика
+- Агрегация логов [Logging](../../technology/observability/logging.md)
+- Распределенная трассировка [Distributed Trace](../../technology/observability/tracing.distributed.md)
 - [Обработка исключений](../pattern/observability/exception.handle.md)
 - [Аудит](../pattern/observability/pattern.audit.md)
 - [Health Check API](../pattern/observability/pattern.healthcheck.md)
@@ -66,9 +66,9 @@ Reference Arch:
 - Appdynamics
 - Dynatrace
 - Splunk
-- [ElastickSearch Kibana](../../technology/monitoring/elk.md)
-- [GrayLog, ELK](../../technology/logging.md)
-- [Jaeger+ELK, Jaeger+ClickHouse, Zipkin](../../technology/tracing.distributed.md)
+- [ElastickSearch Kibana](../../technology/observability/monitoring/elk.md)
+- [GrayLog, ELK](../../technology/observability/logging.md)
+- [Jaeger+ELK, Jaeger+ClickHouse, Zipkin](../../technology/observability/tracing.distributed.md)
 - [Sentry](../../technology/observability/sentry.md)
 - Promtail + Loki + Grafana
 - fluentbit + Yandex Data Streams + Yandex Query (и бекап логов через Yandex Transfer в S3)
@@ -104,7 +104,7 @@ TODO:
 
 - InfluxDB
 - [Prometeus](../../technology/store/prometheus.md)
-- [Victoria metrics](../../technology/monitoring/victoriametrics.md)
+- [Victoria metrics](../../technology/observability/monitoring/victoriametrics.md)
 
 ## TODO
 

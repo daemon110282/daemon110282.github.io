@@ -10,8 +10,8 @@
 ## Зачем
 
 - При проектировании в архитектуру закладываются измерители, генерирующие информацию для системы мониторинга
-  - [Производительности](../arch/ability/performance.metric.md)
-  - [Стабильности Надежности](../arch//ability/resilience.metric.md)
+  - [Производительности](../../arch/ability/performance.metric.md)
+  - [Стабильности Надежности](../../arch/ability/resilience.metric.md)
 - Key Quality Indicators продукта
   - Необходимы для возможности мониторинга качества предоставления продукта дежурной сменой Service Desk
   - Описывает непосредственно счетчики, используемые в качестве KPI
@@ -22,7 +22,7 @@
     - пороговые значения для алармов и их получателей
     - время и место хранения статистики
 - Real-user monitoring (RUM)
-- [Application Perfomance Monitoring (APM)](../arch//system.class/apm.md)
+- [Application Perfomance Monitoring (APM)](../../arch/system.class/apm.md)
 
 ## Мониторинг сайтов
 
@@ -39,7 +39,7 @@
 
 ## Application Perfomance Monitoring (APM)
 
-Класс систем [Application Perfomance Monitoring (APM)](../arch/system.class/apm.md) обеспечивают контроль [производительности](../arch/pattern/pattern.perf.md).
+Класс систем [Application Perfomance Monitoring (APM)](../../arch/system.class/apm.md) обеспечивают контроль [производительности](../../arch/pattern/pattern.perf.md).
 
 - Cloud SaaS [Commercial](https://geekflare.com/frontend-web-monitoring/)
 	- New Relic
@@ -62,7 +62,7 @@
 			- [Prometeus Client JS](https://github.com/weaveworks/promjs)
 		- [ELK stack](monitoring/elk.md)		
 	- BSL __license__
-		- [Sentry](observability/sentry.md)
+		- [Sentry](sentry.md)
 		- [Альтернативы DataDog Crashlytics Rollbar](https://stackshare.io/sentry#alternatives)
 			- [Gartner AppDynamics Splunk](https://www.gartner.com/reviews/market/application-performance-monitoring-and-observability/vendor/sentry/product/sentry/alternatives)		
 	- Commercial
@@ -71,7 +71,7 @@
 	- Splunk
 
 Используют разные хранилища метрик (Time Series Database):
-- [Prometheus](store/prometheus.md)
+- [Prometheus](../store/prometheus.md)
 - InfluxDB
 - [Victoria metrics](monitoring/victoriametrics.md)
 

@@ -5,15 +5,16 @@
   - [Паттерны](#паттерны)
   - [Производительность](#производительность)
     - [Способы анализа производительности](#способы-анализа-производительности)
-    - [Индексы](#индексы)
-      - [Рекомендации по выбору таблиц и столбцов для создания индексов](#рекомендации-по-выбору-таблиц-и-столбцов-для-создания-индексов)
-      - [Рекомендации по использованию кластерных или некластерных индексов](#рекомендации-по-использованию-кластерных-или-некластерных-индексов)
-    - [Виды ожиданий Wait statistics](#виды-ожиданий-wait-statistics)
+      - [SQL Trace Profiler (Deprecated)](#sql-trace-profiler-deprecated)
+      - [Query plan](#query-plan)
+    - [Настройки](#настройки)
       - [Параллелизм MAXDOP](#параллелизм-maxdop)
+    - [Стратегии оптимизации запросов](#стратегии-оптимизации-запросов)
   - [Мониторинг](#мониторинг)
     - [Онлайн](#онлайн)
     - [Исторически](#исторически)
   - [TODO](#todo)
+  - [Benchmark Load Test](#benchmark-load-test)
   - [Version](#version)
 
 ## Масштабируемость
@@ -29,8 +30,8 @@ HA:
       - Сеть
       - I/O
       - CPU
-  - [log-shipping VS always on](https://dba.stackexchange.com/questions/199064/log-shipping-or-always-on-as-dr-for-sql-failover-cluster)
-  	- AlwaysOn high availability group, HAG, is easier to maintain than log shipping
+  - [Log-shipping VS Always on](https://dba.stackexchange.com/questions/199064/log-shipping-or-always-on-as-dr-for-sql-failover-cluster)
+  	- AlwaysOn High Availability Group (HAG), is easier to maintain than log shipping
   	- Возможно больше трудностей с AlwaysOn, экспертиза DBA более высокая трубется
 
 ## Паттерны
@@ -44,19 +45,64 @@ HA:
 
 Зависит от:
 
-- Настройка OS, SQL Server
-- Блокировки
-- Индексирование
-- Оптимизация запросов
-- Дизайн приложения
+- [Настроек OS, SQL Server](#настройки)
+- [Блокировки](mssql.locks.md)
+- [Индексирование](mssql.index.md)
+- [Оптимизация запросов](#стратегии-оптимизации-запросов)
+- Дизайна (архитектуры) приложения
+
+### Способы анализа производительности
 
 - [Оценка производительности SQL Server](http://www.interface.ru/home.asp?artId=6968)
-- [Benchmark](../benchmark.md)
-  - [Тестирование производительности баз данных при помощи tSQLt и SQLQueryStress](https://habr.com/ru/articles/310328/)
+- [MS инструменты](https://learn.microsoft.com/en-us/sql/relational-databases/performance/performance-monitoring-and-tuning-tools?view=sql-server-ver15)
+  - Data Collection
+  - [Extended Events](mssql.extended.events.md)
+  - [DMV](mssql.dmv.md)
+  - [Query Store](https://learn.microsoft.com/en-us/sql/relational-databases/performance/monitoring-performance-by-using-the-query-store)
+  - SQL Trace Profiler (deprecated)
+  - QTA
+- [Мониторинг](#мониторинг)
 
-Стратегии оптимизации запросов:
+#### SQL Trace Profiler (Deprecated)
 
-- можно использовать индексы
+1. Записать с помощью SQL Server Profiler (или AnjLab.SqlProfiler) запросы, исполняемые при запуске функции (например редактирование анкеты)
+2. Добавить метки времени в начало и в конец запроса CONVERT(nvarchar(30), GETDATE(), 126)
+3. Запустить скрипт на локальном сервере и на сервере разработчика
+4. Вычислить времени выполнения на локальном сервере и на сервере разработчика (ручным способом)/ Результаты позволяют уверенно говорить о причинах медленной загрузки страниц (например редактирование анкеты) в браузере.
+
+- Аналитический отчёт по [трейсу Microsoft SQL Server tutorial](http://habrahabr.ru/post/243587/)
+
+#### Query plan
+
+![plan](../../img/technology/db/mssql/sql.query.life.jpg)
+
+- How to [view xml query plans graphically](https://docs.microsoft.com/ru-ru/sql/relational-databases/performance/save-an-execution-plan-in-xml-format?view=sql-server-ver15)
+	- Rename the file from .xml to .sqlplan and use Open File to launch it.
+
+### Настройки
+
+- Настройки [СУБД get](https://www.mssqltips.com/sqlservertip/6090/sql-server-configuration-settings-query/)
+  - SELECT * from sys.configurations ORDER BY name
+
+#### Параллелизм MAXDOP
+
+- SQL OLTP Max degree of parall [maxdop](https://habr.com/ru/post/448044/)
+- Для выявления __нехватки процессорного времени__ достаточно воспользоваться системным представлением __sys.dm_os_schedulers__.
+  - показатель runnable_tasks_count постоянно больше 1, то существует большая вероятность того, что количество ядер не хватает экземпляру MS SQL Server.
+  - select max([runnable_tasks_count]) as [runnable_tasks_count] from sys.dm_os_schedulers where scheduler_id<255;
+- алгоритм действий для __OLTP__-систем для настройки свойств параллелизма:
+  - сначала запретить параллелизм, выставив на уровне всего экземпляра Max Degree of Parallelism в 1
+  - проанализировать самые тяжелые запросы и подобрать для них оптимальное количество потоков
+  - выставить Max Degree of Parallelism в подобранное оптимальное количество потоков, полученное из п.2, а также для конкретных баз данных выставить Max DOP значение, полученное из п.2 для каждой базы данных
+  - проанализировать самые тяжелые запросы и выявить негативный эффект от многопоточности. Если он есть, то повышать __Cost Threshold for Parallelism__.
+  - Для таких систем как 1С, Microsoft CRM и Microsoft NAV в большинстве случаев [подойдет запрет многопоточности](https://its.1c.ru/db/metod8dev#content:5945:hdoc)
+- [Как определить maxdop](https://www.sentryone.com/blog/is-maxdop-configured-correctly)
+  - I set the “Maximum Degree of Parallelism” to 2, which means the query still uses parallelism but only on 2 CPUs.
+  - However, I keep the “Cost Threshold for Parallelism” very high. This way, not all the queries will qualify for parallelism but only the query with higher cost will go for parallelism. I have found this to work best for a system that has OLTP queries and also where the reporting server is set up.
+
+### Стратегии оптимизации запросов
+
+- можно использовать [индексы](mssql.index.md)
 - другие варианты запроса
   - To write __sargable queries__:
     - Avoid using functions or calculations on indexed columns in the WHERE clause
@@ -66,97 +112,6 @@ HA:
 - Для проверки быстродействия запроса:	SET STATISTICS TIME ON
 - Для проверки статистики ввода/вывода:	SET STATISTICS IO ON
 - Для вывода плана запроса:	SET STATISTICS XML ON
-
-### Способы анализа производительности
-
-![plan](../../img/technology/db/mssql/sql.query.life.jpg)
-
-1. Записать с помощью SQL Server Profiler (или AnjLab.SqlProfiler) запросы, исполняемые при запуске функции (например редактирование анкеты)
-2. Добавить метки времени в начало и в конец запроса CONVERT(nvarchar(30), GETDATE(), 126)
-3. Запустить скрипт на локальном сервере и на сервере разработчика
-4. Вычислить времени выполнения на локальном сервере и на сервере разработчика (ручным способом)/ Результаты позволяют уверенно говорить о причинах медленной загрузки страниц (например редактирование анкеты) в браузере.
-
-- How to [view xml query plans graphically](https://docs.microsoft.com/ru-ru/sql/relational-databases/performance/save-an-execution-plan-in-xml-format?view=sql-server-ver15)
-	- Rename the file from .xml to .sqlplan and use Open File to launch it.
-- Аналитический отчёт по [трейсу Microsoft SQL Server tutorial](http://habrahabr.ru/post/243587/)
-
-### Индексы
-
-- Не все индексы одинаково полезны. При разработке индексов необходимо учитывать их селективность
-- Using [sys.dm_db_index_physical_stats](http://blogs.msmvps.com/gladchenko/2008/03/30/tips-for-dba-using-sys-dm_db_index_physicalstats-in-a-script-to-rebuild-or-reorganize-indexes-no-partitions-sql-server-2005/) in a script to rebuild or reorganize indexes (no partitions / SQL Server 2005)
-- [Избыток может увеличить io wait](http://blogs.msmvps.com/gladchenko/2008/03/30/tips-for-dba-using-sys-dm_db_index_physicalstats-in-a-script-to-rebuild-or-reorganize-indexes-no-partitions-sql-server-2005/)
-- De-fragmentation of Index can help as more data can be obtained per page. (Assuming close to 100 fill-factor)
-- Измените подходящие для Вашего сервера опции ONLINE , SORT_IN_TEMPDB,
-MAXDOP=10
-  - Помним про 3-х повышение производительности при использовании в 2012 и в 2014 SORT_IN_TEMPDB=ON SQL Server 2014. [TEMPDB Hidden Performance Gem](https://techcommunity.microsoft.com/t5/sql-server-support-blog/sql-server-2014-tempdb-hidden-performance-gem/ba-p/318255)
-
-#### Рекомендации по выбору таблиц и столбцов для создания индексов
-
-- __Не индексировать__
-  - Таблицы с небольшим количеством строк
-  - Столбцы, редко используемые в запросах
-  - Столбцы, хранящие широкий диапазон значений и имеющие малую вероятность быть выбранными в типичном запросе
-  - Столбцы, имеющие большой размер в байтах
-  - Таблицы, где данные часто изменяются, но относительно редко считываются
-- __Индексировать__
-  - Таблицы с большим количеством строк
-  - Столбцы, часто используемые в запросах
-  - Столбцы, хранящие широкий диапазон значений и имеющие большую вероятность быть выбранными в типичном запросе
-  - Столбцы, используемые в агрегатных функциях
-  - Столбцы, применяемые в предложении GROUP BY
-  - Столбцы, применяемые в предложении ORDER BY
-  - Столбцы, используемые в соединениях таблиц
-
-#### Рекомендации по использованию кластерных или некластерных индексов
-
-![logic](../../img/technology/db/mssql/sql.clustered.index.png)
-
-- Использовать __кластерный индекс__ для
-  - Первичных ключей, часто используемых при поиске, например номеров счетов
-  - Запросов, возвращающих обширные результирующие наборы
-  - Столбцов, используемых во многих запросах 
-  - Столбцов с высокой селективностью
-  - Столбцов, применяемых в предложениях ORDER BY или GROUP BY
-  - Столбцов, используемых в соединениях таблиц
-- Использовать __некластерный индекс__ для
-  - Первичных ключей, хранящих последовательные значения идентификаторов, например идентификационных столбцов
-  - Запросов, возвращающих небольшие результирующие наборы
-  - Столбцов, используемых в агрегатных функциях
-  - Внешних ключей
-
-### Виды ожиданий Wait statistics
-
-- Виды [ожиданий](https://msdn.microsoft.com/ru-ru/library/ms179984.aspx)
-  - [SQL Wait Statistics скрипт](https://blog.sqlauthority.com/2021/03/08/sql-server-wait-stats-collection-scripts-updated-march-2021/?amp)
-  - [PAGEIOLATCH_SH и PAGEIOLATCH_EX](https://blog.sqlauthority.com/2011/02/09/sql-server-pageiolatch_dt-pageiolatch_ex-pageiolatch_kp-pageiolatch_sh-pageiolatch_up-wait-type-day-9-of-28/)
-    - см [нагружающие запросы по вводу/выводу](https://msdn.microsoft.com/ru-ru/magazine/cc135978.aspx)
-  - [CXPACKET](https://blog.sqlauthority.com/2011/02/06/sql-server-cxpacket-parallelism-usual-solution-wait-type-day-6-of-28/)
-    - [Advanced](https://blog.sqlauthority.com/2011/02/07/sql-server-cxpacket-parallelism-advanced-solution-wait-type-day-7-of-28/?amp)
-    - Если у нас транзакционная система: имеет смысл установить Max Degree Parallelism = 1
-    - Хранилища и витрины данных: установить Max Degree Parallelism = 0 или явное количество CPU
-    - Смешанные: установить Max Degree Parallelism = 1 , a y запросов требующих параллелизма установить hint MAXDOP=0
-  - Maxdop см и cost Threshold
-  - [LATCH_XX](http://www.sqlskills.com/blogs/paul/wait-statistics-or-please-tell-me-where-it-hurts/)
-  - LCK_M_XX - блокировка
-  - [LCK_M_IX](https://www.sqlskills.com/help/waits/LCK_M_IX/) - блокировка
-- [Локализация причин](https://www.google.ru/amp/s/blog.sqlauthority.com/2011/02/01/sql-server-wait-stats-wait-types-wait-queues-day-0-of-28-2/)
-  - System view [DMV sql](http://www.sqlskills.com/blogs/paul/wait-statistics-or-please-tell-me-where-it-hurts/) 
-
-#### Параллелизм MAXDOP
-
-- SQL OLTP Max degree of parall [maxdop](https://habr.com/ru/post/448044/)
-- Для выявления нехватки процессорного времени достаточно воспользоваться системным представлением sys.dm_os_schedulers.
-  - показатель runnable_tasks_count постоянно больше 1, то существует большая вероятность того, что количество ядер не хватает экземпляру MS SQL Server.
-  - select max([runnable_tasks_count]) as [runnable_tasks_count] from sys.dm_os_schedulers where scheduler_id<255;
-- алгоритм действий для OLTP-систем для настройки свойств параллелизма:
-  - сначала запретить параллелизм, выставив на уровне всего экземпляра Max Degree of Parallelism в 1
-  - проанализировать самые тяжелые запросы и подобрать для них оптимальное количество потоков
-  - выставить Max Degree of Parallelism в подобранное оптимальное количество потоков, полученное из п.2, а также для конкретных баз данных выставить Max DOP значение, полученное из п.2 для каждой базы данных
-  - проанализировать самые тяжелые запросы и выявить негативный эффект от многопоточности. Если он есть, то повышать Cost Threshold for Parallelism.
-  - Для таких систем как 1С, Microsoft CRM и Microsoft NAV в большинстве случаев [подойдет запрет многопоточности](https://its.1c.ru/db/metod8dev#content:5945:hdoc)
-- [Как определить maxdop](https://www.sentryone.com/blog/is-maxdop-configured-correctly)
-  - I set the “Maximum Degree of Parallelism” to 2, which means the query still uses parallelism but only on 2 CPUs.
-  - However, I keep the “Cost Threshold for Parallelism” very high. This way, not all the queries will qualify for parallelism but only the query with higher cost will go for parallelism. I have found this to work best for a system that has OLTP queries and also where the reporting server is set up.
 
 ## Мониторинг
 
@@ -169,29 +124,25 @@ MAXDOP=10
   - Database I/O
   - Database Latency
   - Availability Replica
-- [MS инструменты](https://learn.microsoft.com/en-us/sql/relational-databases/performance/performance-monitoring-and-tuning-tools?view=sql-server-ver15): Data Collection, Extended Events, DMV, Query Store, SQL Trace, QTA
-- Настройки [СУБД get](https://www.mssqltips.com/sqlservertip/6090/sql-server-configuration-settings-query/)
-  - SELECT * from sys.configurations ORDER BY name
 - [MS: Мониторинг и настройка производительности](http://www.sql.ru/forum/actualthread.aspx?tid=858780)
 - [performance dashboard](https://learn.microsoft.com/en-us/sql/relational-databases/performance/performance-dashboard)
-- [query store](https://learn.microsoft.com/en-us/sql/relational-databases/performance/monitoring-performance-by-using-the-query-store)
 
 ### Онлайн
 
 - [sp_Blitz](https://github.com/BrentOzarULTD/SQL-Server-First-Responder-Kit/tree/main)
   - To find out why the server is slow right now, run sp_BlitzFirst.
+- Sp_Who2
 - [sp_WhoIsActive](https://habr.com/ru/articles/136481/) более подробная инф-я, кто что запустил
 - Общая статистика без детализации до запросов, планов выполнения [SQL Server + InfluxDB and Telegraf](https://tsql.tech/how-to-use-grafana-on-docker-to-monitor-your-sql-server-eventually-on-docker-too-feat-influxdb-and-telegraf/)
   - [Grafana Dashboard](https://grafana.com/grafana/dashboards/9386-sql-servers/)
   - [telegraf metric](https://github.com/influxdata/telegraf/tree/master/plugins/inputs/sqlserver)
-- [Dynamic Management Views](TODO)
-  - минусы: показывают общую статистику, а не за период. При перезагрузке СУБД очищается
+- [Dynamic Management Views](mssql.dmv.md)
 
 ### Исторически
 
 - Стандартные отчеты
-  - Data Collection  - сбор авто метрик за период времени в отдельной БД с sql plan.
-    - Query Statistics History: by CPU, duration, IO, Physical Reads, Logical Writes
+  - __Data Collection__  - сбор авто метрик за период времени в отдельной БД с sql plan.
+    - Query Statistics History: by CPU, duration, IO, Physical Reads, Logical Reads
     - Server Activity History: CPU, RAM, IO, Network, Waits
     - Версия MS SQL с 2008: используем 2012, DWH 2016
     - Блокировки
@@ -206,10 +157,6 @@ MAXDOP=10
   - В результатах представлений важным показателем является следующее __равенство: AvgWorkerSec=AvgElapsedSec__
     - Если это не так, то __проблема не в самом запросе и не в плане запроса__
 
-#### Extended Events
-
-Содержат информацию о запросах с параметрами за определенный период с затратами на запрос по CPU, IOPS, длительности, кол-ву записей, пользователе, logical\physical reads в БД.
-
 ## TODO
 
 - http://f1incode.blogspot.com/2011/07/i_28.html	
@@ -218,10 +165,16 @@ MAXDOP=10
 - http://msmvps.com/blogs/irinanaumova/archive/2011/05/06/1792775.aspx	
 - http://www.mssqltips.com/tip.asp?tip=1039	
 
+## Benchmark Load Test
+
+- [Benchmark](../benchmark.md)
+  - [Тестирование производительности баз данных при помощи tSQLt и SQLQueryStress](https://habr.com/ru/articles/310328/)
+
 ## Version
 
 - [2012](https://sqlserverbuilds.blogspot.com/2012/01/sql-server-2012-versions.html) 11.0.x.x
   - use 11.0.6579.0
 - [2014](https://sqlserverbuilds.blogspot.com/2014/01/sql-server-2014-versions.html) 12.0.x.x
 - 2016
+  - use
 - 2019

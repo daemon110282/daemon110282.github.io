@@ -11,7 +11,15 @@
 ![nft](../img/arch/nft.png)
 
 Атрибуты качества (на основе ISO 9126)
-  
+
+- [Надежность Reliability](../devops/sre.md)
+  - [Доступность Availability (Эксплуатационные)](ability/availability.md)
+  - [Отказоустойчивость Fault tolerance](ability/faulttolerance.md)
+  - Стабильность (Изоляция сбоев) [Resilience](ability/resilience.md)
+  - Согласованность Consistency (Эксплуатационные)  
+  - Живучесть Robustness
+  - Recoverability
+- [Производительность Performance](ability/performance.md) (Эксплуатационные)  
 - Переносимость Portability
   - Возможность повторного использования Resuability (Единая кодовая база)
     - Mdm - master data manager
@@ -37,28 +45,17 @@
 - Удобство сопровождения
   - [Тестопригодность Testability](ability/testability.md)
     - разделением на слои и следованием [Dependency Rule (правилу зависимостей)](https://habr.com/ru/company/mobileup/blog/335382/)
-  - CI-CD куда?
   - [Автодокументирование API](../api/api.md)
   - [Наблюдаемость Observability](ability/observability.md)
-- [Надежность Reliability](../devops/sre.md)
-  - [Доступность Availability (Эксплуатационные)](ability/availability.md)
-  - Согласованность Consistency (Эксплуатационные)
-  - [Отказоустойчивость Fault tolerance](ability/faulttolerance.md)
-  - Стабильность (Изоляция сбоев) [Resilience](ability/resilience.md)
-    - [Chaos Engineering](pattern/chaos.eng.md)
-  - Живучесть Robustness
-  - Recoverability
-- [Производительность Performance](ability/performance.md) (Эксплуатационные)
-
-TODO:
-
-- scalability interoperability
-- responsiveness
-- elasticity
-- abstraction
-- data integrity
-- data consistency
-- [ГОСТ Р ИСО/МЭК 9126-93](https://m-i-kuznetsov.livejournal.com/157150.html)
+- CI-CD куда?
+- TODO:
+  - scalability interoperability
+  - responsiveness
+  - elasticity
+  - abstraction
+  - data integrity
+  - data consistency
+  - [ГОСТ Р ИСО/МЭК 9126-93](https://m-i-kuznetsov.livejournal.com/157150.html)
 
 ## Коммерческие атрибуты
 

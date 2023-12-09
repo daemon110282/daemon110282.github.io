@@ -2,11 +2,11 @@
 
 ## Зачем
 
-[Слабая связанность](https://medium.com/german-gorelkin/low-coupling-high-cohesion-d36369fb1be9) и сильная связность\целостность (high cohesion)
+[Слабая связанность](https://medium.com/german-gorelkin/low-coupling-high-cohesion-d36369fb1be9) и [сильная связность\целостность](strong.cohesion.md) (high cohesion\strong cohesion)
 
 - не зависеть от UI
 - не зависеть от БД, внешних фреймворков и библиотек
-
+- мера взаимозависимости различных классов и модулей друг с другом
 
 ## Плюсы и минусы
 

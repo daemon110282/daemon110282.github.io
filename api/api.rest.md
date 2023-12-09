@@ -25,6 +25,8 @@ REST API — это архитектурный подход, который ус
 - Layered system
 - Code on demand
 
+![level](../img/api/rest.level.png)
+
 ## Термины
 
 - Ресурс

@@ -29,6 +29,9 @@
   - декларативное программирование — __что сделать__. Пример: Сделайте борщ.
     - декларативное программирование по-прежнему использует императивное программирование под капотом, поэтому невозможно писать только декларативный код
 
+![process](../img/arch/arch.process.png)
+![view](../img/arch/arch.view.png)
+
 ## Задачи архитектуры
 
 ![Схема](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/daemon110282/daemon110282.github.io/master/arch/arch.puml)

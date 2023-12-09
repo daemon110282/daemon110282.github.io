@@ -4,7 +4,7 @@
 
 ## Зачем
 
-- [ORM](../../arch/pattern/orm.md)
+- [ORM](../middleware/orm.md)
   - [Active Record](https://www.yiiframework.com/doc/guide/2.0/en/db-active-record)
 - [Cache](https://www.yiiframework.com/doc/guide/2.0/en/caching-overview)
   - Data (Redis, Memcached)

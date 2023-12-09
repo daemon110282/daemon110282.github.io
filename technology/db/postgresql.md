@@ -23,7 +23,7 @@
 
 - Timeseries Data (pg_partman extension)
 - [schema and data comparison tool for PostgreSQL](https://www.postgrescompare.com/)
-- [Шардирование](../../arch/pattern/shard.db.md) CITUS
+- [Шардирование](../../arch/pattern/performance/shard.db.md) CITUS
 - Json/jsonb тип колонки
 
 ### Management
@@ -88,7 +88,7 @@
 
 #### Миграция с простоем
 
-[Миграция](../../arch/pattern/migration.md) "большим взрывом" с простоем
+[Миграция](../../arch/pattern/refactoring/migration.md) "большим взрывом" с простоем
 
 - Free
     - Через CSV

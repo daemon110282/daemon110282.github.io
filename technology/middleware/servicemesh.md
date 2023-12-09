@@ -12,12 +12,12 @@
 - [Маршрутизация трафика](../../arch/pattern/deployment/pattern.proxy.reverse.md) на основе правил
   - процент
   - параметры запроса (в header, url параметр)
-  - стратегии [deployment](../../arch/pattern/pattern.deploy.md) (сине-зеленое, канареечное и тп)
+  - стратегии [deployment](../../arch/pattern/deployment/pattern.deploy.md) (сине-зеленое, канареечное и тп)
 - [Балансировка трафика](../../arch/pattern/deployment/load.balancing.md)
 - [Observability](../../arch/ability/observability.md)
   - [Распределенная трассировка](../observability/tracing.distributed.md)
 - [Service Discovery](../../arch/pattern/deployment/service.discovery.md)
-- [Circuit Breaker](../../arch/pattern/pattern.failure.md)
+- [Circuit Breaker](../../arch/pattern/fault.tolerance/pattern.failure.md)
 - Безопасность
   - TLS обеспечение
 - Rate Limit, Quota на запросы

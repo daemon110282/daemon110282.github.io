@@ -1,14 +1,14 @@
 # supervisord
 
 Служба запуска [фоновых процессов](http://supervisord.org/introduction.html).
-Реализация паттера [Background Job](../../arch/pattern/background.job.md).
+Реализация паттера [Background Job](../../arch/pattern/development/background.job.md).
 
 ## Функции
 
 - Старт
 - [Сигналы процессам](http://supervisord.org/running.html#signals): SIGTERM, SIGINT, SIGQUIT, SIGHUP, SIGUSR2
 - Перезапуск фоновых процессов (кол-во попыток перезапуска startretries)
-	- по команде перезапуска службы - SIGHUP 
+	- по команде перезапуска службы - SIGHUP
 	- по ошибке
 		- [Exit Status (Code)](https://blog.programster.org/supervisor-stop-subprocesses-entering-fatal-state)
 			- 0 - success
@@ -16,11 +16,11 @@
 	- graceful shutdown, макс время на остановку stopwaitsecs
 		- SIGTERM -> приложение отвечает SIGCHLD за не более stopwaitsecs
 		- иначе [SIGTERM -> SIGKILL](https://medium.com/naukri-engineering/using-supervisor-to-manage-processes-in-linux-98ae4894e9c7)
-- Остановка	
+- Остановка
 	- CRTL-C - SIGINT
 	- по команде остановки - SIGTERM
 	- по команде принудительного завершения SIGKILL
-- Возможность ограничения времени выполнения процесса?? 
+- Возможность ограничения времени выполнения процесса?
 - [Subprocess State Transition Graph](http://supervisord.org/subprocess.html#id4)
 - [Event для мониторинга](http://supervisord.org/events.html#event-types)
 - Приоритизация фоновых процессов - [параметр priority](http://supervisord.org/configuration.html#program-x-section-settings)

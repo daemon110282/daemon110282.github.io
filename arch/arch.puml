@@ -1,0 +1,24 @@
+@startmindmap (id=arch)
+
+* Архитектура 
+	* Функционал Бизнес цели
+	* Масштабирование
+	* Атрибуты качества
+	* Тех долг Roadmap
+	* Безопасность
+		
+@endmindmap
+
+@startmindmap (id=arch.ability)
+
+* Атрибуты качества
+	* Доступность Availability
+		* Наблюдаемость Observability
+		* Изоляция сбоев
+	* Поддерживаемость
+	* Надежность
+		* Отказоустойчивость Fault Tolerance
+		* Стабильность Resilience
+	* Производительность Permormance \n Быстродействие
+
+@endmindmap

@@ -15,33 +15,33 @@
   - [ETL (Extract, Transform, Load)](https://python.ivan-shamaev.ru/etl-best-practices-design-data-patterns/)
   - [ELT (Extract, Load, Transform)](https://www.striim.com/blog/data-integration/)
     - [ELT vs ETL](https://coderlessons.com/tutorials/bolshie-dannye-i-analitika/teoriia-khraneniia-dannykh/5-etl-protiv-elt)
-  - [Shared Database\Table Шлюзовая БД (ШБД)](integration/pattern.shareddb.md)
+  - [Shared Database\Table Шлюзовая БД (ШБД)](pattern.shareddb.md)
   - Файловый обмен
-    - [Распределенные файловые системы](../../technology/filesystem/filesystem.md)
-      - [Object Storage](../../technology/filesystem/object.storage.md)
-    - [Upload File](integration/pattern.uploadfile.md)
-    - [Download File](../../api/api.rest.md)
-    - [CDN](../system.class/cdn.md) реализует паттерн [Static content hosting](https://learn.microsoft.com/en-us/azure/architecture/patterns/static-content-hosting)
+    - [Распределенные файловые системы](../../../technology/filesystem/filesystem.md)
+      - [Object Storage](../../../technology/filesystem/object.storage.md)
+    - [Upload File](pattern.uploadfile.md)
+    - [Download File](../../../api/api.rest.md)
+    - [CDN](../../system.class/cdn.md) реализует паттерн [Static content hosting](https://learn.microsoft.com/en-us/azure/architecture/patterns/static-content-hosting)
     - Протокол [WebDAV](https://xakep.ru/2014/09/09/webdav/) HTTP API (IIS, Apache support) для подключения сайтов как сетевых дисков
 - Приложения
   - Direct
-    - [API REST](../../api/api.md)
-    - SOAP, [WCF](../../technology/protocols.integration/wcf.md), ODATA
-    - [GraphQL](../../technology/protocols.integration/graphql.md)
+    - [API REST](../../../api/api.md)
+    - SOAP, [WCF](../../../technology/protocols.integration/wcf.md), ODATA
+    - [GraphQL](../../../technology/protocols.integration/graphql.md)
   - Remote Procedure Invocation (RPC)
     - __Двунаправленная связь__ для обмена сообщениями между клиентом и сервером
       - протокол __WebSocket__
     - __Однонаправленная связь__
-      - HTML спецификация [Server Sent Events](../../technology/protocols.integration/sse.md)
-      - [gRPC](../technology/../../technology/protocols.integration/grpc.md)
+      - HTML спецификация [Server Sent Events](../../../technology/protocols.integration/sse.md)
+      - [gRPC](../../../technology/protocols.integration/grpc.md)
   - Middleware
-    - [Message-oriented](integration/pattern.messagebroker.md)
+    - [Message-oriented](pattern.messagebroker.md)
       - Advanced transient messaging
       - Message-oriented persistent
       - log-based message queue
-    - [API Gateway](../../api/api.gateway.md)
-    - [SOA](../../technology/middleware/soa.md)
-    - [ESB Интеграционная шина](../../technology/middleware/esb.md) ![scheme](../../img/pattern/integration/esb.jpg)
+    - [API Gateway](../../../api/api.gateway.md)
+    - [SOA](../../style/soa.md)
+    - [ESB Интеграционная шина](../../../technology/middleware/esb.md) ![scheme](../../../img/pattern/integration/esb.jpg)
 
 ## Критерии выбора способа интеграции
 
@@ -56,9 +56,9 @@
 
 TODO см. EIP
 
-- [Messaging Patterns](integration/pattern.messagebroker.md)
-- [RPC Команды\Запросы](integration/pattern.rpc.md)
-- [Обработка сбоев: Retry Policy, Rate Limit, Circuit Breaker](pattern.failure.md)
+- [Messaging Patterns](pattern.messagebroker.md)
+- [RPC Команды\Запросы](pattern.rpc.md)
+- [Обработка сбоев: Retry Policy, Rate Limit, Circuit Breaker](../fault.tolerance/pattern.failure.md)
 - Sidecar
 - Ambassador Посредник
   - nginx
@@ -82,8 +82,8 @@ TODO
 
 ## Технологии
 
-- [ESB](../../technology/middleware/esb.md)
-- [Распределенные файловые системы](../../technology/filesystem/dfs.md)
+- [ESB](../../../technology/middleware/esb.md)
+- [Распределенные файловые системы](../../../technology/filesystem/dfs.md)
 - RPC
-  - [WebSocket](../../technology/protocols.integration/websocket.md)
-  - [Server Sent Events](../../technology/protocols.integration/sse.md)
+  - [WebSocket](../../../technology/protocols.integration/websocket.md)
+  - [Server Sent Events](../../../technology/protocols.integration/sse.md)

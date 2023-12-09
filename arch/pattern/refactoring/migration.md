@@ -20,7 +20,7 @@
 ## Подходы к миграции
 
 - __Импорт заранее__ в НС
-- __Импорт по запросу__ Агрегата 
+- __Импорт по запросу__ Агрегата
   - в НС нет данных Агрегата, идет проверка в монолит на наличие и импорт из монолита сначала, затем изменения Агрегата в НС
 - Импорт в НС __после переключения всех ИС потребителей__
   - Синхронизация Команд в Монолит отключена
@@ -45,7 +45,7 @@
 
 - Источники данных (ИС)
 - Проектирование ШБД
-- [ETL](integration/ETL.md) \ [ELT](integration/ELT.md)
+- [ETL](../integration/ETL.md) \ [ELT](../integration/ELT.md)
   - Extract из источников как есть
   - Трансформация под целевую ИС
     - маппинг данных по целевым шаблонам данных
@@ -72,8 +72,8 @@
 
 ## Технологии
 
-- [MSSQL 2 PGSQL](../../technology/db/postgresql.md)
+- [MSSQL 2 PGSQL](../../../technology/db/postgresql.md)
 - Commercial
 - Free
   - Миграция данных AWS Database Migration Service (DMS)
-  - CDC [Debezium](../../technology/cdc/debezium.md) используя Снимки (snapshots)
+  - CDC [Debezium](../../../technology/cdc/debezium.md) используя Снимки (snapshots)

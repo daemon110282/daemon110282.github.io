@@ -36,7 +36,7 @@
 - Прокси, файервол, капча
 - [Балансировка](../pattern/deployment/load.balancing.md)
 - [api management](../../api/api-managment.md)
-- Установка лимитов запросов [rate limits](../pattern/rate.limit.md), тайм-аут
+- Установка лимитов запросов [rate limits](../pattern/performance/rate.limit.md), тайм-аут
 - Dev ops ci/cd:
   - [docker](../../technology/ci-cd/docker.md)
   - [kubernetes](../../technology/ci-cd/k8s.md)
@@ -48,23 +48,23 @@
 - DB: 
   - [репликации](../pattern/sync.data.md)
   - кластер
-  - Горизонтальное [шардирование данных](../pattern/shard.db.md)
+  - Горизонтальное [шардирование данных](../pattern/performance/shard.db.md)
 - [Распределенные файловые системы](../../technology/filesystem/dfs.md)
 - Бэкапы, логи
 
 ### Методы разработки
 
-[Design for failure](../pattern/pattern.failure.md)
+[Design for failure](../pattern/fault.tolerance/pattern.failure.md)
 
 - распределенная архитектура
   - Микросервисы: слабая связность, изоляция сбоев
   - stateless
 - [модульный монолит](../style/monolit.modul.md)
 - [Health check](../pattern/observability/pattern.healthcheck.md)
-- [CQRS](../pattern/pattern.cqrs.md)
+- [CQRS](../pattern/performance/pattern.cqrs.md)
 - Асинхронная обработка - [Брокер очереди](../pattern/integration/pattern.messagebroker.md), воркеры, буферы входного потока данных
 - Git, rollback
-- [миграции бд](../pattern/migration.db.md)
+- [миграции бд](../pattern/refactoring/migration.db.md)
 - [graceful shutdown](../pattern/deployment/graceful.shutdown.md)
 - Message Bus
   - [Паттерн Transactional outbox\Application events](https://microservices.io/patterns/data/transactional-outbox.html)

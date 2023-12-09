@@ -46,13 +46,13 @@
 
 ## Паттерны
 
-Реализация pattern [Command](../../arch/pattern/command.md) и [Command Bus](command.bus.md)
+Реализация pattern [Command](./command.md) и [Command Bus](../command.bus.md)
 
 - Feature
   - Retry
   - Priorited
   - Logging
-  - [Graceful Shutdown](deployment/graceful.shutdown.md)
+  - [Graceful Shutdown](../deployment/graceful.shutdown.md)
   - Scalling Worker
   - Shedule
   - Event Pre\Post\Error
@@ -66,4 +66,4 @@
 
 - [.NET ABP](https://docs.abp.io/en/abp/4.4/Background-Jobs)
   - Abp.io support RMQ in [job](https://docs.abp.io/en/abp/4.4/Background-Jobs-RabbitMq)
-- [PHP](../../technology/framework/php.md)
+- [PHP](../../../technology/framework/php.md)

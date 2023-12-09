@@ -39,7 +39,7 @@
 
 ## Application Perfomance Monitoring (APM)
 
-Класс систем [Application Perfomance Monitoring (APM)](../../arch/system.class/apm.md) обеспечивают контроль [производительности](../../arch/pattern/pattern.perf.md).
+Класс систем [Application Perfomance Monitoring (APM)](../../arch/system.class/apm.md) обеспечивают контроль [производительности](../../arch/pattern/performance/pattern.perf.md).
 
 - Cloud SaaS [Commercial](https://geekflare.com/frontend-web-monitoring/)
 	- New Relic

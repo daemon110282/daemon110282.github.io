@@ -21,7 +21,7 @@
 		- is an important element in communication between Write and Read models. Event Bus is a mechanism which enables communication between different components, which not necessarily know about each other. 		
 	- Event Store (MongoDB, [Doctrine DBAL](https://www.doctrine-project.org/projects/doctrine-dbal/en/latest/reference/introduction.html#introduction) - Doctrine Database Abstraction Layer - MySQL, PgSQL..)
 		- [Broadway](https://broadway.github.io/broadway/)
-- [CQRS](../../pattern/pattern.cqrs.md)
+- [CQRS](../../pattern/performance/pattern.cqrs.md)
 	- https://tsh.io/blog/cqrs-event-sourcing-php/
 	- [prooph 2019](https://getprooph.org/)
 	- [Broadway](https://github.com/broadway/broadway)

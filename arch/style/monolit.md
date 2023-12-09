@@ -52,12 +52,12 @@
 
 ## Паттерны
 
-- [Распила монолита](../pattern/monolit2msa.md)
+- [Распила монолита](../pattern/refactoring/monolit2msa.md)
 
 ### Ускорение монолита
 
 - CQRS
-- [Отдельный сервис](../pattern/monolit2msa.md)
+- [Отдельный сервис](../pattern/refactoring/monolit2msa.md)
 
 ## Антипаттерны
 

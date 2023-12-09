@@ -20,8 +20,8 @@
 ## Технологии
 
 - API Gateway
-  - [CISCO Netscaler](../../technology/middleware/proxy/proxy.netscaler.md)
+  - [CISCO Netscaler](../../../technology/middleware/proxy/proxy.netscaler.md)
   - [NGinx](https://www.nginx.com/blog/microservices-march-protect-kubernetes-apis-with-rate-limiting/)
 - Program Level
-  - [YII2](../../technology/framework/yii2.md)
+  - [YII2](../../../technology/framework/yii2.md)
   - TODO

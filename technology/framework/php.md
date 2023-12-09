@@ -23,7 +23,7 @@
 
 ### Background Job
 
-- [Background Job](../../arch/pattern/background.job.md): выполнить (handle) X Task of Job by X Worker process
+- [Background Job](../../arch/pattern/development/background.job.md): выполнить (handle) X Task of Job by X Worker process
   - Free
     - Cron Job __not scalable, limit 1 min period check jobs__
     - daemon supervisord
@@ -74,8 +74,8 @@
       - to [DB, file log](https://github.com/shmilyzxt/yii2-queue) for driver Redis, DB, Beanstalkd
       - to [DB](https://github.com/silverslice/yii2-queue-failed)
       	- for Any driver?
-    	- no GUI
-    	- CLI list, run all\byID, delete
+        - no GUI
+        - CLI list, run all\byID, delete
 
 процессов обработчиков очереди задач на уровне [supervisord](../os/supervisord.md)
 

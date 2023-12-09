@@ -20,8 +20,13 @@
 
 Плюсы
 
-- Дополнительный архитектурный слой. Затраты на мониторинг, настройку,
-- управление и повлияет на общую надежность и безопасность системы.
+- Слабая связность ИС [Low Coupling](../../ability/low.coupling.md)
+  
+Минусы
+
+- Дополнительный архитектурный слой
+- Затраты на мониторинг, настройку, управление
+- влияет на общую надежность и безопасность системы
 
 ## Patterns
 
@@ -38,6 +43,14 @@
   - Pub\Sub События
   - Task (Worker) Queue
   - [Очереди с приоритетом](https://habr.com/ru/companies/arcadia/articles/571442/)
+  - Content-Based Routing
+  - Filter message
+  - Dynamic Router
+  - Splitter
+  - Dead Leater Channel
+  - Message Translator
+  - Wire Tap - наблюдение за сообщениями
+- Event Sourcing
 - Тип способа получения сообщений
   - Pull
   - Push

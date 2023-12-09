@@ -30,7 +30,7 @@ API - Application Programming Interface, что значит программн�
 
 - [Подходы к проектированию](api.design.md)
 - [API gateway](api.gateway.md)
-- [Стратегии повторов](../arch/pattern/pattern.failure.md) при сбоях Rerty Policy
+- [Стратегии повторов](../arch/pattern/fault.tolerance/pattern.failure.md) при сбоях Rerty Policy
 
 SLI, SLA
 

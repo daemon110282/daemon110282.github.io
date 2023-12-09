@@ -42,7 +42,7 @@
 
 - [TODO Паттерны](https://github.com/Sairyss/domain-driven-hexagon)
 - [Event-storming](../event.storming.md)
-- [CQRS](../pattern.cqrs.md)
+- [CQRS](../performance/pattern.cqrs.md)
 
 ### Принципы проектирования
 

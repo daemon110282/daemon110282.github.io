@@ -1,20 +1,18 @@
-# Доступность Availability (high availability) Upstream Uptime
+# Доступность High Availability 
 
 Для обеспечения [Надежности ИС](../../devops/sre.md).
 
 - [Таблица ](https://sre.google/sre-book/availability-table/) __сколько времени__ простоя разрешено для достижения __заданного уровня доступности__.
-- Доступность ИС зависит от частоты и продолжительности __простоев__. [Она измеряется](https://habr.com/ru/companies/itsumma/articles/435662/) через:
+- Доступность Uptime ИС зависит от частоты и продолжительности __простоев__. [Она измеряется](https://habr.com/ru/companies/itsumma/articles/435662/) через:
   - Частоту простоя, или обратную от нее: __MTTF (mean time to failure, среднее время безотказной работы)__
   - Продолжительность простоя, __MTTR (mean time to repair, среднее время восстановления)__. Продолжительность простоя определяется временем пользователя: от начала неисправности до возобновления [нормальной работы сервиса](https://habr.com/ru/companies/slurm/articles/525176/).
     - Observability напрямую связана с MTTR. __Чем выше Observability сервиса, тем проще определить ошибку__, исправить и автоматизировать, и тем ниже MTTR.
   - Доступность определяется как MTTF/(MTTF+MTTR)
-
-Доступность можно определять по-разному:
-
-- Сервер AWS считается недоступным только в случае, если за __пять минут не дает никаких ответов на запросы, кроме 500 или 503__. Эти коды ответов обозначают две ошибки: Internal Server Error и Service Unavailable. Все остальные ответы сервера не учитываются при расчёте надёжности.
-  - в Amazon успешен только [один запрос в 5 минут](https://habr.com/ru/companies/avito/articles/742960/), по их мнению, это 100%-я доступность!
-  - иначе: у вас могут быть до 21 минуты полной деградации, и неограниченное число частичных деградаций.
-  - Амазон не нарушит свои условия о 99,95% доступности. Или в крайнем случае - 8640 успешных запросов (по 1му раз в 5 минут) и неограниченное число неуспешных.
+- Доступность можно определять по-разному:
+  - Сервер AWS считается недоступным только в случае, если за __пять минут не дает никаких ответов на запросы, кроме 500 или 503__. Эти коды ответов обозначают две ошибки: Internal Server Error и Service Unavailable. Все остальные ответы сервера не учитываются при расчёте надёжности.
+    - в Amazon успешен только [один запрос в 5 минут](https://habr.com/ru/companies/avito/articles/742960/), по их мнению, это 100%-я доступность
+    - иначе: у вас могут быть до 21 минуты полной деградации, и неограниченное число частичных деградаций.
+    - Амазон не нарушит свои условия о 99,95% доступности. Или в крайнем случае - 8640 успешных запросов (по 1му раз в 5 минут) и неограниченное число неуспешных.
 
 ## Метрики
 
@@ -27,7 +25,7 @@
       - This indicates the number of upstream servers available to serve the requests in case NGINX is working as a reverse proxy.
       - Impact and remediation: This tells you whether your upstream servers are working or not. If these go down, your request serving capacity will likely decrease due to the loss of an upstream server.
       - Thresholds: Any decrease in the number of upstreams indicates that your upstream server is down.
-    - __Active Upstream Connections__ 
+    - __Active Upstream Connections__
       - Active upstream connections are the total active connections with the upstream servers in case of a reverse proxy. 
       - Impact and remediation: A change here indicates that there is a high number of connections with an upstream server. This could mean that your connections are not getting served properly. You may also see an increase in response time due to the added latency. An increase in RPS also means that throughput has increased and your NGINX servers need to be scaled. 
       - Thresholds: This will depend on your machines and the number of upstream servers. Look out for any sudden spikes.

@@ -58,9 +58,9 @@
 - [Auth](../arch/ability/security.md)
 - [Swagger\AsyncApi](../api/api.md) песочница
 - Http headers
-- [Gateway API](../arch/pattern/pattern.integration.md)
+- [Gateway API](../arch/pattern/integration/pattern.integration.md)
 Асинхронная загрузка от сервиса, lazy load. Лк ходит сразу к веб сервису или к себе, затем вебсервис. Я за 2е, гибче переделать на свою бд, слабая связность
 - [Версии апи](../api/api.md): url, param, http header
-- [обработка сбоев](../arch/pattern/pattern.failure.md) веб сервиса
+- [обработка сбоев](../arch/pattern/fault.tolerance/pattern.failure.md) веб сервиса
 - [Http status](../api/api-http-status.md)
-- [retry policy](../arch/pattern/pattern.failure.md)
+- [retry policy](../arch/pattern/fault.tolerance/pattern.failure.md)

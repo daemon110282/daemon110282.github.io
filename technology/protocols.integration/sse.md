@@ -9,7 +9,7 @@
 
 ## Зачем
 
-Реализует однонаправленную связь в [паттернах интеграции](../../arch/pattern/pattern.integration.md).
+Реализует однонаправленную связь в [паттернах интеграции](../../arch/pattern/integration/pattern.integration.md).
 
 [Server Sent Events](https://learn.javascript.ru/server-sent-events) (Server-Side Events):
 

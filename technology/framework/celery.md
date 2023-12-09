@@ -4,7 +4,7 @@
 
 - [Celery is a task queue implementation for Python](https://www.caktusgroup.com/blog/2014/09/29/celery-production/) web applications used to asynchronously execute work outside the HTTP request-response cycle.
   - помогает запускать отложенный или выделенный код в отдельном процессе или даже на отдельном компьютере или сервере
-- task [chains цепочка задач](../../arch/pattern/chainofresp.md)
+- task [chains цепочка задач](../../arch/pattern/development/chainofresp.md)
 - [task routing](http://celery.readthedocs.org/en/latest/userguide/routing.html)
   - auto-scaling
   - Пример Task queue - фоновые задачи, отправка email

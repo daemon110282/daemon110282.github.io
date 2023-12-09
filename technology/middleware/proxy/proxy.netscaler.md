@@ -21,7 +21,7 @@
 	- методы балансировки
       - [Least response time method using monitors (LRTM)](https://docs.netscaler.com/en-us/citrix-adc/current-release/load-balancing/load-balancing-customizing-algorithms/lrtm-method.html)
 - [Citrix ADC (NetScaler) Ingress Controller for Kubernetes](https://github.com/citrix/citrix-k8s-ingress-controller)
-- [Cache](../../../arch/pattern/pattern.cache.md) - Кэширование динамического контента и сброс кэша по определенным условиями или времени
+- [Cache](../../../arch/pattern/performance/pattern.cache.md) - Кэширование динамического контента и сброс кэша по определенным условиями или времени
 	- [Redirection](https://docs.citrix.com/en-us/citrix-adc/current-release/citrix-adc-cache-redirection-gen-wrapper-10-con.html) to Cache Server - кэш __не хранится__ в Citrix
 	- [Integrated Caching](https://docs.citrix.com/en-us/citrix-adc/12-1/optimization/integrated-caching.html) - [кэш хранится](https://jgspiers.com/netscaler-integrated-caching/) в Citrix, необходима лизенция выше __Enterprise__
 - [Разделение статического и динамического контента](https://habr.com/ru/articles/239411/) для снятия нагрузки.

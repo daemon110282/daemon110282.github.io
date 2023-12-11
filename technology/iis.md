@@ -64,25 +64,28 @@
 
 ![flow](../img/technology/iis.request.flow.png)
 
-## Метрики производительности
+## Метрики 
 
-[ability](../arch/ability/performance.md)
+- [Быстродействие](../arch/ability/performance.md)
+- Надежность
 
-### HTTP.SYS
+### Производительность Быстродействие
+
+#### HTTP.SYS
 
 - [Queue](https://blog.leansentry.com/all-about-iis-asp-net-request-queues/)
   - Http Service Request Queues\CurrentQueueSize
 
-### IIS
+#### IIS
 
 - Web Service\ [Current Connections](http://www.microsoft.com/technet/prodtechnol/WindowsServer2003/Library/IIS/af36e903-75c3-4a4c-ae47-8663f8543b0c.mspx?mfr=true) – [общее число активных подключений на сервере IIS](https://winitpro.ru/index.php/2015/02/13/monitoring-kolichestva-polzovatelej-na-sajte-iis/).
-	- Можно мерить в разрезе конкретного сайта IIS.
+	- Можно мерить в разрезе конкретного сайта IIS
 	- Любые запросы к сайту, не только к Веб-сервисам.
 	- [Просмотр списка соединений IIS8](https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj635856(v=ws.11))
 
-### Application Pool
+#### Application Pool
 
-[concurrent](https://www.dotnetfunda.com/articles/show/3485/11-tips-to-improve-wcf-restful-services-performance)
+Параллельность обработки запросов [concurrent](https://www.dotnetfunda.com/articles/show/3485/11-tips-to-improve-wcf-restful-services-performance)
 
   - maxConcurrentRequestsPerCPU
   - maxConcurrentThreadsPerCPU
@@ -93,7 +96,7 @@
     	- Значение по умолчанию — 5000. UsersCount * 1.5, где usersCount — количество одновременно работающих пользователей
 	- QueueLength — максимальное количество запросов, которые драйвер Http.sys размещает в очереди пула приложений
 
-### Worker process (w3wp.exe)
+#### Worker process (w3wp.exe)
 
 - [W3SVC_W3WP](https://blogs.iis.net/mailant/new-worker-process-performance-counters-in-iis7) - exposes HTTP request processing related counters for the __worker process__
 	- [Maximum Threads Count](https://www.dotnetfunda.com/articles/show/3485/11-tips-to-improve-wcf-restful-services-performance)
@@ -104,12 +107,12 @@
 	- HTTP Service Request Queues (CurrentQueueSize): [The request count in the IIS queue](https://techcommunity.microsoft.com/t5/iis-support-blog/performance-counters-for-monitoring-iis/ba-p/683389)
 	- .NET CLR Exceptions
 
-### ASP.NET: CLR Thread
+#### ASP.NET: CLR Thread
 
 - Queue
   - ASP.NET v4.0.30319\Requests Queued - limit Process Model’s [RequestQueueLimit](https://krishnansrinivasan.wordpress.com/2014/08/18/throttling-wcf-services-on-iis7/)
 
-### APP
+#### APP
 
 - [iis perf counters](https://msdn.microsoft.com/en-us/library!/ms972959.aspx?f=255&MSPPError=-2147217396)
   - [Performance Counters for ASP.NET](https://msdn.microsoft.com/en-us/library/fxk122b4.aspx)

@@ -32,19 +32,14 @@ To-do
   - [TODO](https://habr.com/ru/companies/southbridge/articles/525176/)
   - [Latency](https://habr.com/ru/companies/flant/articles/462503/)
     - is the amount of time between when a user sends a request and when the service responds. Lower latencies are better, since this indicates that users are being served faster.
-  - Traffic 
+  - __Traffic__
     - is the amount of demand the service is handling. This is often measured in HTTP requests per second, connections per second, or bandwidth usage. We can also use metrics specific to our service, such as transactions processed per minute.
-  - Errors 
+  - __Errors__ 
     - is the rate of requests that failed. The criteria for a failure depends on the service, but the most common is when a service responds to a request with an HTTP 5XX error code.
-  - Saturation 
+  - __Saturation__
     - is the amount of resources your service is consuming out of all the resources available to it. Remember that your containers may only have a limited amount of resources allocated to them. High saturation indicates that you might need to scale up your service by increasing your container resource limits, adding additional container replicas, or increasing the capacity of your servers.
 - [Web Vitals](https://web.dev/i18n/en/vitals/)
   - Мониторинг производительности клиентских веб приложений (Client Metrics)
-
-Счетчики как внедрить:
-
-- Client Metrics
-- [Business Metrics](https://docs.google.com/spreadsheets/d/1g-WsAqeJqpKDbFLsVx0EOAuaRMUMWPaaG2a7XHWGgWU/edit#gid=1431606873)
 
 ## Виды метрик
 
@@ -52,15 +47,15 @@ To-do
   - Например, как долго клиентское приложение выполняет действия локально и обрабатывает ответ от серверной части. 
   - Эти метрики покрывают такие данные, как объем используемой памяти и загрузку CPU. На мобильном устройстве высокая загрузка CPU и частое использование сети может привести к уменьшению срока службы батареи, а использование слишком большого объема памяти вообще может помешать приложению запуститься.
 - __[Business Metrics](#business-metrics)__ - Сюда включаются данные, определяющие бизнес-процессы. Они касаются деятельности конечных пользователей. Эти показатели должны включать ключевые бизнес-операции, которые выполняет система
-- __[Application Metrics](#application-metrics)__ - Данные метрики сосредоточены на измерении активности и производительности прикладного уровня (исходный код приложения, фреймворк, среда исполнения, например .NET Framework, ASP.NET, CLR, и т.п.). 
+- __[Application Metrics](#application-metrics)__ - Данные метрики сосредоточены на измерении активности и производительности __прикладного уровня__ (исходный код приложения, фреймворк, среда исполнения, например .NET Framework, ASP.NET, CLR, и т.п.). 
   - Цель этих метрик – помочь вам исследователь поток выполнения вашего приложения при большом количестве параллельных запросов, проанализировать потребляемые ресурсы и оценить вероятность проблем с производительностью
-- __[System Metrics](#system-metrics)__ - Это данные о производительности низкого уровня (уровень базовой инфраструктуры). Они обычно нацелены на ключевые показатели эффективности, связанные с __памятью, сетевой утилизацией, активностью диска, использованием процессора__
-- __[Service Metrics](#service-metrics-api)__ - Сюда относятся данные, связанные с производительностью внешних сервисов. Эти данные не отражают чистую производительность внешних сервисов, а всего лишь содержат информацию об исполнении запросов, которые ваша система им отправляет.
+- __[Service Metrics](#service-metrics-api)__ - Сюда относятся данные, связанные с производительностью внешних сервисов. Эти данные не отражают чистую производительность внешних сервисов, а всего лишь __содержат информацию об исполнении запросов__, которые ваша система им отправляет.
   - таких как Azure Storage
   - инфраструктурой обмена сообщений
   - внешним кэшем
   - БД 
   - и другими внешними сервисами, которые ваше приложение может использовать. 
+- __[System Metrics](#system-metrics)__ - Это данные о производительности низкого уровня (уровень базовой инфраструктуры). Они обычно нацелены на ключевые показатели эффективности, связанные с __памятью, сетевой утилизацией, активностью диска, использованием процессора__
 
 ### Business Metrics
 
@@ -69,6 +64,8 @@ To-do
 - Макс пользователей
 - Как долго система выполняет операцию? (время отклика/задержка)
 - Максимальное время загрузки страницы (300мс отлично)
+- TODO [Business Metrics](https://docs.google.com/spreadsheets/d/1g-WsAqeJqpKDbFLsVx0EOAuaRMUMWPaaG2a7XHWGgWU/edit#gid=1431606873)
+
 
 ### Application Metrics
 
@@ -81,7 +78,7 @@ To-do
 
 Характеристика - Единицы измерения, по методике RED:
 
-- Request
+- Traffic Request
   - Сколько операций может выполнить система за определенный период времени? (пропускная способность)
   - Сколько операций могут быть выполнены одновременно? (параллелизм)
   - Макс пользователей
@@ -99,7 +96,7 @@ To-do
 
 ### System Metrics
 
-Это данные о производительности низкого уровня (уровень базовой инфраструктуры). Они обычно нацелены на ключевые показатели эффективности, связанные с памятью, сетевой утилизацией, активностью диска, использованием процессора:
+Это данные о производительности низкого уровня (уровень базовой инфраструктуры). Они обычно нацелены на ключевые показатели эффективности, связанные с памятью, сетевой утилизацией, активностью диска, использованием процессора в разрезе компонентов ИС:
 
 - CPU
   - Нагрузка на CPU - Процент
@@ -125,6 +122,46 @@ To-do
   - RAM Number of page faults (насколько локализованы данные приложения в памяти?)
   - Использование физической/виртуальной памяти	- Байты, килобайты, мегабайты, гигабайты
   - Выделение блоков памяти - Количество байтов, количество объектов, частота следования в секунду
+
+#### Virtual Machine
+
+- параметры [виртуалки VMWare](https://habrahabr.ru/post/259087/)
+
+#### Кеш
+  
+- redis 
+  - Утилизация памяти
+  - операции чтения\записи с диска
+- Hit Rate Количество, частота попаданий в кеш	в секунду
+
+#### Балансирощик
+
+- [балансировщик](../pattern/deployment/load.balancing.md) прокси, nginx, netscaler - как балансировка на ноды работает, время ответ нод балансировщику
+
+#### СУБД
+
+- ТОП 5
+  - долгих запросов
+  - блокировки
+  - часто вызываемых
+  - с ошибками
+- [mssql](../../technology/db/mssql.md)
+
+#### Backend
+
+- [IIS](../../technology/iis.md)
+
+#### Контейнеризация
+
+- [k8s](../../technology/ci-cd/k8s.md)
+
+#### File Storage
+
+- [minio](../../technology/filesystem/minio.md)
+
+#### MessageBus
+
+- [rmq](../../technology/middleware/messagebus/rmq.md)
 
 ### Client Metrics: Приложение front-end
 
@@ -162,27 +199,3 @@ To-do
   - Time to Last byte
   - Benchmark
     - [JMeter](https://www.guru99.com/response-time-testing.html)
-
-#### Virtual Machine
-
-- параметры [виртуалки VMWare](https://habrahabr.ru/post/259087/)
-
-#### Кеш
-  
-- redis 
-  - Утилизация памяти
-  - операции чтения\записи с диска
-- Попадания в кеш	Количество, частота попаданий в секунду
-
-#### Балансирощик
-
-- [балансировщик](../pattern/deployment/load.balancing.md) прокси, nginx, netscaler - как балансировка на ноды работает, время ответ нод балансировщику
-
-#### СУБД
-
-- ТОП 5
-  - долгих запросов
-  - блокировки
-  - часто вызываемых
-  - с ошибками
-- [mssql](../../technology/db/mssql.md)

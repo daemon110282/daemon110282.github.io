@@ -33,40 +33,55 @@ Microsoft SQL Server:
 
 ## Паттерны
 
-### CPU
+### Long Query поиск тяжелых запросов
+
+#### CPU
 
 - событий по CPU достаточно использовать два события
   - __RPC:Completed__ - вызов процедур через обращение к sp_executesql
   - __SQL:BatchCompleted__ - выполнение пакета запросов
-  - фильтр по полю времени выполнения события (поле “duration”) в микросекундах, которые выполняются более 5 секунд (5 000 000 микросекунд)
+- сортировка по cpu_time
+- на сервере может быть включен параллелизм, тогда затраченное процессорное время не будет равно времени выполнения запроса даже приблизительно
+- фильтр по полю времени выполнения события (поле “duration”) в микросекундах, которые выполняются более 5 секунд (5 000 000 микросекунд)
 
-### Long Query поиск тяжелых запросов
+#### RAM
 
 - используется __объем логических чтений__, т.е. тех, которые были выполнены из __оперативной памяти__. Это важно, т.к. SQL Server кэширует страницы, полученные с диска в буферный кэш, то есть в оперативную память. Именно поэтому SQL Server такой прожорливый в части использования RAM
 - фильтр на поле с размером прочитанных данных, те __logical reads__
   - зависит от конкретной системы и размера базы. Обычно использую значение фильтра от 10000 до 50000 прочитанных страниц (то есть от ~80 МБ до ~400 МБ, т.к. 1 страница = 8 КБ)
+- Сбор тяжелых запросов по логическим чтениям позволит определить те [запросы](https://www.sqlshack.com/using-sql-server-extended-events-to-monitor-query-performance/), которые чаще всего используют буферный кэш, тем самым “вымывая” из него данные для других запросов
 
 ### Locks
 
 - собирать информацию об __ожиданиях на блокировках__ с помощью механизма __отчетов по заблокированным процессам__. Он включается в свойствах сервера и выполняет сбор статистики с заданной периодичностью (обычно 5 секунд достаточно)
-- Deadlock
+- [Deadlock](https://www.sqlshack.com/monitoring-sql-server-deadlocks-easy-way/)
+	- [в разрезе БД, таблиц, запросов](https://www.sqlshack.com/use-sql-server-extended-events-parse-deadlock-xml-generate-statistical-reports/)
+- Blocked Process Report 
+- Deadlock XML Report 
 
 #### Lock Escalation
 
-CREATE EVENT SESSION [TMP_LockEscalation] ON SERVER ADD EVENT sqlserver.lock_escalation(
-ACTION(sqlserver.context_info, sqlserver.database_name, sqlserver.is_system, sqlserver.query_hash, sqlserver.session_id, sqlserver.sql_text, sqlserver.username))
-ADD TARGET package.event_file(SET filename=N'TMP_LockEscalation') WITH (MAX_MEMORY=4096 KB,
+CREATE EVENT SESSION [TMP_LockEscalation] ON SERVER 
+ADD EVENT sqlserver.lock_escalation(
+	ACTION(sqlserver.context_info, sqlserver.database_name, sqlserver.is_system, sqlserver.query_hash, sqlserver.session_id, sqlserver.sql_text, sqlserver.username)
+)
+ADD TARGET package.event_file(SET filename=N'TMP_LockEscalation') 
+WITH (MAX_MEMORY=4096 KB,
 EVENT_RETENTION_MODE=ALLOW_SINGLE_EVENT_LOSS, MAX_DISPATCH_LATENCY=30 SECONDS, MAX_EVENT_SIZE=0 KB, MEMORY_PARTITION_MODE=NONE, TRACK_CAUSALITY=OFF, STARTUP_STATE=ON)
 
 ### Errors
 
-- отслеживать любые ошибки, происходящие на уровне СУБД. Для этого воспользуемся скриптом для сбора всех ошибок с помощью события __SQL:ErrorReported__
+- отслеживать [любые ошибки](https://www.sqlservercentral.com/blogs/capture-sql-server-reported-errors-using-extended-events), происходящие на уровне СУБД. Для этого воспользуемся скриптом для сбора всех ошибок с помощью события __SQL:ErrorReported__
 
 ### TempDB
 
 - TempDB spiils - не хватка памяти при оценке плана выполнения запросов и использование tempdb для кэширования запросов - снижение Latency
 
-### Разбор логов
+## Causality tracking Отслеживание причинно-следственной связи
+
+Параметр отслеживания причинно-следственной связи в сеансе расширенных событий SQL Server помогает устранить проблемы с производительностью. Важно понимать порядок событий для транзакции в SQL Server. Кроме того, вы можете использовать его для отслеживания выполнения отдельных хранимых процедур или инструкций (продолжительности) из [вложенной хранимой процедуры](https://www.sqlshack.com/sql-server-extended-events-causality-tracking/)
+
+## Разбор логов
 
 - копируем файлы XEL с собранными данными на сервер логов или локальный компьютер, т.к. выполнять анализ данных на рабочем сервере дело рисковое, ведь он может “съесть” значительную часть ресурсов.
 - запустим SQL Server Managment Studio и перейдем в “Файл -> Открыть -> Объединить файлы расширенных событий….”.

@@ -8,12 +8,15 @@
 ## Паттерны
 
 - Не все индексы одинаково полезны. При разработке индексов необходимо учитывать их селективность
-- Using [sys.dm_db_index_physical_stats](http://blogs.msmvps.com/gladchenko/2008/03/30/tips-for-dba-using-sys-dm_db_index_physicalstats-in-a-script-to-rebuild-or-reorganize-indexes-no-partitions-sql-server-2005/) in a script to rebuild or reorganize indexes (no partitions / SQL Server 2005)
+- Using [sys.dm_db_index_physical_stats](http://blogs.msmvps.com/gladchenko/2008/03/30/tips-for-dba-using-sys-dm_db_index_physicalstats-in-a-script-to-rebuild-or-reorganize-indexes-no-partitions-sql-server-2005/) in a script to 
+  - rebuild 
+  - or reorganize indexes (no partitions / SQL Server 2005)
 - [Избыток может увеличить io wait](http://blogs.msmvps.com/gladchenko/2008/03/30/tips-for-dba-using-sys-dm_db_index_physicalstats-in-a-script-to-rebuild-or-reorganize-indexes-no-partitions-sql-server-2005/)
 - De-fragmentation of Index can help as more data can be obtained per page. (Assuming close to 100 fill-factor)
 - Измените подходящие для Вашего сервера опции ONLINE , SORT_IN_TEMPDB,
 MAXDOP=10
-  - Помним про 3-х повышение производительности при использовании в 2012 и в 2014 SORT_IN_TEMPDB=ON SQL Server 2014. [TEMPDB Hidden Performance Gem](https://techcommunity.microsoft.com/t5/sql-server-support-blog/sql-server-2014-tempdb-hidden-performance-gem/ba-p/318255)
+  - Помним про 3-х повышение производительности при использовании в 2012 и в 2014 SORT_IN_TEMPDB=ON SQL Server 2014. [TEMPDB Hidden Performance Gem](https://techcommunity.microsoft.com/t5/sql-server-support-blog/sql-server-2014-tempdb-hidden-performance-gem/ba-p/318255)  
+- [Анализ __плана выполнения__](mssql.md#query-plan) после применения индексов: Scan, Seek, Lookup
 
 ## Рекомендации по выбору таблиц и столбцов для создания индексов
 

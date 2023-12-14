@@ -11,7 +11,7 @@
 ## Зачем
 
 - CI - обеспечения процесса непрерывной интеграции
-  - Tests: unit, codestyle, functional, endtoend, integration
+  - [Tests](arch/pattern/test.md): unit, codestyle, functional, endtoend, integration
 - CD - процесс доставки, развертывания
 - [Deployment](arch/pattern/deployment/pattern.deploy.md)
   - [A\B test](arch/ref/abtesting.md)

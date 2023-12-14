@@ -12,7 +12,7 @@ TODO
   - Можно писать нативные части, но нужны нативные разработчики
   - Beta web, desktop
   - Производительность, анимации плюс
-  - Unit, widget tests
+  - Unit, widget [tests](../../arch/pattern/test.md)
   - Проблемы: камера, шифрование aes gsm, документация мало/китайский, мало разработчиков 2019
   - Debug hot reload
   - Ui, Unit tests

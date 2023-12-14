@@ -24,7 +24,7 @@
   - Номер версии: В данных, api - url, header
   - Правила версионирования [SemVer](https://semver.org/lang/ru/)
   - Язык запрсов к API: Graphql
-- Unit tests api version
+- [Unit tests](../test.md) api version
   
 ## Стратегии
 

@@ -7,5 +7,7 @@
 - functional
 - endtoend
 - integration
-Functional - verifies scenarios from a user's perspective via browser emulation;
-  - Acceptance - verifies scenarios from a user's perspective in a browser.
+- Functional - verifies scenarios from a user's perspective via browser emulation;
+- Acceptance - verifies scenarios from a user's perspective in a browser.
+
+Автотесты

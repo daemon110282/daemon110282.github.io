@@ -139,6 +139,13 @@ HA:
   - Availability Replica
 - [MS: Мониторинг и настройка производительности](http://www.sql.ru/forum/actualthread.aspx?tid=858780)
 - [performance dashboard](https://learn.microsoft.com/en-us/sql/relational-databases/performance/performance-dashboard)
+- Метрики
+  - Latency
+    - [Total latch wait Time](https://documentation.red-gate.com/sm/metrics-alerts-and-notifications/metrics-and-alerts-reference/list-of-metrics#Listofmetrics-Latchwaittime)
+    - [Total average wait time]
+    - Buffer cache hit ratio
+  - Traffic
+    - Active transactions
 
 ### Онлайн
 

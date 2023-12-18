@@ -100,6 +100,9 @@ HA:
 #### Параллелизм MAXDOP
 
 - SQL OLTP Max degree of parall [maxdop](https://habr.com/ru/post/448044/)
+  - __Max Degree of Parallelism__ - задает максимальное количество потоков, которые могут быть выделены каждому запросу (по умолчанию стоит 0-ограничение только самой операционной системой и редакцией MS SQL Server)
+  - __Cost Threshold for Parallelism__ - оценочная стоимость параллелизма (по умолчанию стоит 5)
+  - __Max DOP__ - задает максимальное количество потоков, которые могут быть выделены каждому запросу на уровне базы данных (но не более, чем значение свойства «Max Degree of Parallelism») (по умолчанию стоит 0-ограничение только самой операционной системой и редакцией MS SQL Server, а также ограничение по свойству «Max Degree of Parallelism» всего экземпляра MS SQL Server)
 - Для выявления __нехватки процессорного времени__ достаточно воспользоваться системным представлением __sys.dm_os_schedulers__.
   - показатель runnable_tasks_count постоянно больше 1, то существует большая вероятность того, что количество ядер не хватает экземпляру MS SQL Server.
   - select max([runnable_tasks_count]) as [runnable_tasks_count] from sys.dm_os_schedulers where scheduler_id<255;
@@ -110,8 +113,8 @@ HA:
   - проанализировать самые тяжелые запросы и выявить негативный эффект от многопоточности. Если он есть, то повышать __Cost Threshold for Parallelism__.
   - Для таких систем как 1С, Microsoft CRM и Microsoft NAV в большинстве случаев [подойдет запрет многопоточности](https://its.1c.ru/db/metod8dev#content:5945:hdoc)
 - [Как определить maxdop](https://www.sentryone.com/blog/is-maxdop-configured-correctly)
-  - I set the “Maximum Degree of Parallelism” to 2, which means the query still uses parallelism but only on 2 CPUs.
-  - However, I keep the “Cost Threshold for Parallelism” very high. This way, not all the queries will qualify for parallelism but only the query with higher cost will go for parallelism. I have found this to work best for a system that has OLTP queries and also where the reporting server is set up.
+  - I set the __Maximum Degree of Parallelism__ to 2, which means the query still uses __parallelism but only on 2 CPUs__.
+  - However, I keep the __Cost Threshold for Parallelism__ very high. This way, not all the queries will qualify for parallelism but __only the query with higher cost will go for parallelism__. I have found this to work best for a system that has OLTP queries and also where the reporting server is set up.
 
 ### Стратегии оптимизации запросов
 

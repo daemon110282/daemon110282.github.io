@@ -72,6 +72,8 @@ EVENT_RETENTION_MODE=ALLOW_SINGLE_EVENT_LOSS, MAX_DISPATCH_LATENCY=30 SECONDS, M
 ### Errors
 
 - отслеживать [любые ошибки](https://www.sqlservercentral.com/blogs/capture-sql-server-reported-errors-using-extended-events), происходящие на уровне СУБД. Для этого воспользуемся скриптом для сбора всех ошибок с помощью события __SQL:ErrorReported__
+- [парсинг ошибок в таблицу](https://www.davemason.me/2016/09/19/-part-2%3A-enhanced-t-sql-error-handling-with-extended-events)
+- [анализ ошибок](https://infostart.ru/1c/articles/1056294/)
 
 ### TempDB
 

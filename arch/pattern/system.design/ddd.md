@@ -1,7 +1,5 @@
 # Domain Driven Design DDD
 
-Код должен в себе отражать предментую область, т.е. __классы__ должны __соответствовать__ объектам __реальной предметной области__ как __по структуре__, так и __по поведению__.
-
 - [Domain Driven Design DDD](#domain-driven-design-ddd)
   - [Зачем](#зачем)
   - [Плюсы и минусы](#плюсы-и-минусы)
@@ -10,6 +8,8 @@
     - [Тактическое проектирование](#тактическое-проектирование)
       - [Слои приложения](#слои-приложения)
   - [Технологии](#технологии)
+
+Код должен в себе отражать предментую область, т.е. __классы__ должны __соответствовать__ объектам __реальной предметной области__ как __по структуре__, так и __по поведению__.
 
 ## Зачем
 
@@ -41,13 +41,13 @@
 ## Паттерны
 
 - [TODO Паттерны](https://github.com/Sairyss/domain-driven-hexagon)
-- [Event-storming](../event.storming.md)
+- [Event-storming](event.storming.md)
 - [CQRS](../performance/pattern.cqrs.md)
 - [IBM sample DDD](https://ibm-cloud-architecture.github.io/refarch-kc/implementation/domain-driven-design/)
 
 ### Стратегическое проектирование
 
-![Схема](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/daemon110282/daemon110282.github.io/master/arch/pattern/system.design/ddd.strategy.puml)
+![Схема](../../../out/arch/pattern/system.design/ddd.strategy/DDD.png)
 
   - __Контекст__ ![context](../../../img/pattern/ddd/ddd.context.jpg)
   - __Предметная область(проблема) Domain__
@@ -75,7 +75,7 @@
 
 [Тактическое проектирование](https://habr.com/ru/company/oleg-bunin/blog/551428/)
 
-![Схема](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/daemon110282/daemon110282.github.io/master/arch/pattern/system.design/ddd.tactic.puml)
+![схема](../../../out/arch/pattern/system.design/ddd.tactic/DDD.png)
 
 - Доменная модель
   - __Консистентность__ данных обеспечить

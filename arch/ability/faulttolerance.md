@@ -64,7 +64,7 @@
 - [CQRS](../pattern/performance/pattern.cqrs.md)
 - Асинхронная обработка - [Брокер очереди](../pattern/integration/pattern.messagebroker.md), воркеры, буферы входного потока данных
 - Git, rollback
-- [миграции бд](../pattern/refactoring/migration.db.md)
+- [миграции бд](../pattern/migration.db.md)
 - [graceful shutdown](../pattern/deployment/graceful.shutdown.md)
 - Message Bus
   - [Паттерн Transactional outbox\Application events](https://microservices.io/patterns/data/transactional-outbox.html)

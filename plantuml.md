@@ -19,7 +19,9 @@ PlantUML - это инструмент для создания диаграмм,
 - Поддержка командной строки: PlantUML может быть использован с помощью командной строки, что делает его удобным для автоматизации и интеграции в рабочий процесс разработки.
 - Расширяемость: PlantUML может быть расширен с помощью пользовательских плагинов и библиотек, что позволяет создавать новые типы диаграмм и добавлять новые функции в существующие диаграммы
 
-PlantUML может быть использован для создания диаграмм, которые помогают бизнес-аналитикам визуализировать и описать бизнес-процессы. Вот несколько примеров диаграмм, которые могут быть созданы с помощью PlantUML для бизнес-аналитика:
+PlantUML может быть использован для создания диаграмм, которые помогают бизнес-аналитикам визуализировать и описать бизнес-процессы. 
+
+Альтернативы [D2, MermaidJS](https://icepanel.io/blog/2023-08-15-top-6-tools-for-text-based-uml-sequence-diagrams)
 
 ### Диаграмма потока данных (Data Flow Diagram, DFD)
 
@@ -79,9 +81,9 @@ deactivate Система проверки баланса
   - [k8s deployment](https://crashedmind.github.io/PlantUMLHitchhikersGuide/kubernetes/kubernetes.html)
 - UML
   - SQD
-- layout life hacks
-  - https://www.augmentedmind.de/2021/01/17/plantuml-layout-tutorial-styles/
-  - https://sarafian.github.io/tips/2021/03/11/plantuml-tips-tricks-1.html
-- puml2confluence
-  - https://github.com/kicksolutions/puml2confluence
+  - class diagramm
+- layout
+  - [life hacks](https://www.augmentedmind.de/2021/01/17/plantuml-layout-tutorial-styles/)
+  - [tricks](https://sarafian.github.io/tips/2021/03/11/plantuml-tips-tricks-1.html)
+- [puml2confluence](https://github.com/kicksolutions/puml2confluence)
 - [gitlab support](https://docs.gitlab.com/ee/administration/integration/plantuml.html)

@@ -20,12 +20,6 @@
 
 [Критерии](arch.criteria.md)
 
-| + | - |
-| - | - |
-|  |  |
-
-![Выбор хранилища http://architecturethehardparts.com/](../img/arch/choose_store.jpg)
-
 - RDBMS (Relational Database Management System)
   - Almost anything could be solved by them.
 - Time-series database
@@ -44,27 +38,29 @@
 - Агрегированные витрины
   - Materialized View
 - [Data Mining против хранилища данных](https://coderlessons.com/tutorials/bolshie-dannye-i-analitika/teoriia-khraneniia-dannykh/21-data-mining-protiv-khranilishcha-dannykh)
-- On-Line Analitical Processing (OLAP) - оперативная аналитическая обработка данных
+- On-Line Analitical Processing (__OLAP__) - оперативная аналитическая обработка данных
   - принципы построения систем поддержки принятия решений (Decision Support System - DSS)
   - хранилищ данных (Data Warehouse)
   - систем интеллектуального анализа данных (Data Mining)
-- Мутабельные (изменяемые) или иммутабельные данные
-- Принципы ACID
+- __Мутабельные__ (изменяемые) или иммутабельные данные
+- Принципы __ACID__
   - atomaric
   - consistently
   - isolation
   - durability
-- Нормальная форма отношений в РСУБД 1, 2, 3 для OLTP
+- OLTP (Online Transaction Processing)
+  - CRUD обработка транзакций
+- Нормальная форма отношений в РСУБД 1, 2, 3 для __OLTP__
   - Денормализация отношений для OLAP
   - В решениях 1С компромисс реализован следующим образом: События при записи в базу пишутся сразу в несколько мест
     - В одном месте записи имеют мало индексов и оптимизированы под OLTP нагрузки
     - в другом месте записи индексируются по всем полям и адаптированы для OLAP нагрузок
     - Такие таблицы называются регистрами накоплений и регистрами сведений.
-- OLTP (Online Transaction Processing)
-  - CRUD обработка транзакций
 - [Секционирование шардирование](./pattern/performance/shard.db.md)
   
 ## Принципы проектирования
+
+![Выбор хранилища http://architecturethehardparts.com/](../img/arch/choose_store.jpg)
 
 - [SQL vs NoSQL](https://towardsdatascience.com/datastore-choices-sql-vs-nosql-database-ebec24d56106)
   - ![choose](https://substackcdn.com/image/fetch/w_1456,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Ff5b7dcbd-a2b0-4677-8ffa-669acf91242b_1143x1600.jpeg)

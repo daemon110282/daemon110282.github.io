@@ -19,12 +19,21 @@ API - Application Programming Interface, что значит программн�
 
 ## Виды API
 
+[API protocols](https://blog.postman.com/api-protocols-in-2023/)
+
 - [REST API](api.rest.md)
-- [GRPC](grpc.md)
+- [gRPC](grpc.md)
 - GraphQL
 - [Вебхуки Webhook](webhook.md)
-- SOAP
+- [SOAP](wsdl.md)
   - ESB
+- EDI
+- SSE
+- AMQP
+- MQTT
+- WebSocket
+
+![Alt text](../img/api/api.protocols.jpg)
 
 ## Patterns
 
@@ -54,15 +63,19 @@ SLI, SLA
 
 ### Документирование
 
-- [AsyncApi](asyncapi.md)
-- [OpenApi](openapi.md)
+- EDA
+  - [AsyncApi](asyncapi.md)
+  - [EventCatalog](https://www.eventcatalog.dev/docs/events/introduction)
+- REST
+  - [OpenApi](openapi.md)
 - [Почему машино читаемый формат, а не Word](https://www.apimatic.io/blog/2017/04/why-your-api-needs-machine-readable-description-832e805f6855/): трансформация форматов, Search and Discovery, Sharing, Aggregation, Code Generation (server, client), Mock, Monitoring  
 - [Json Schema](jsonschema.md)
 - TODO [Курс по документированию REST API](https://starkovden.github.io/)
 - [Шаблон описания](https://tyk.io/blog/whats-minimum-documentation-required-api/)
 - TODO [API Spec Trends](https://www.apimatic.io/blog/2022/03/top-api-specification-trends-2019-2022/)
-- [WSDL](wsdl.md)
-- [Top api design tools](https://www.g2.com/categories/api-design)
+- SOAP
+  - [WSDL](wsdl.md)
+- [Top API design tools](https://www.g2.com/categories/api-design)
   - [Postman](../technology/api/postman.md)
 
 ### API management

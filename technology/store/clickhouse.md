@@ -1,6 +1,8 @@
 # ClickHouse
 
-Колоночная аналитическая СУБД с открытым кодом, позволяющая выполнять аналитические запросы в режиме реального времени на структурированных больших данных.
+Колоночная аналитическая NOSQL СУБД с __открытым кодом__, позволяющая выполнять аналитические запросы (__OLAP__) в режиме __реального времени__ на структурированных больших данных.
+
+Технология для [хранилищ данных](../../arch/store.md).
 
 ## Зачем
 
@@ -31,4 +33,4 @@
 
 ## Compare
 
-- [ELK vs Google Big Query и Amazon RedShift vs TimescaleDB](https://habr.com/ru/company/ua-hosting/blog/483112/)
+- [Clickhouse vs ELK vs Google Big Query и Amazon RedShift vs TimescaleDB](https://habr.com/ru/company/ua-hosting/blog/483112/)

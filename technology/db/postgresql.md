@@ -19,12 +19,17 @@
 
 - RTO - [Recovery Time Objective](https://en.wikipedia.org/wiki/Disaster_recovery#Recovery_Time_Objective)
 
+## Типы данны
+
+- [Enum](https://www.postgresql.org/docs/current/datatype-enum.html)
+- [JSONB](https://medium.com/geekculture/postgres-jsonb-usage-and-performance-analysis-cdbd1242a018)
+- Json/jsonb тип колонки
+
 ## Функции
 
 - Timeseries Data (pg_partman extension)
 - [schema and data comparison tool for PostgreSQL](https://www.postgrescompare.com/)
 - [Шардирование](../../arch/pattern/performance/shard.db.md) CITUS
-- Json/jsonb тип колонки
 
 ### Management
 

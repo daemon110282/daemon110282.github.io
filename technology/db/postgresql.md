@@ -2,6 +2,7 @@
 
 - [Postgresql](#postgresql)
   - [Термины](#термины)
+  - [Типы данны](#типы-данны)
   - [Функции](#функции)
     - [Management](#management)
     - [Replication](#replication)
@@ -23,7 +24,8 @@
 
 - [Enum](https://www.postgresql.org/docs/current/datatype-enum.html)
 - [JSONB](https://medium.com/geekculture/postgres-jsonb-usage-and-performance-analysis-cdbd1242a018)
-- Json/jsonb тип колонки
+  - работает очень быстро, особенно в контексте бизнес автоматизации
+- JSON 
 
 ## Функции
 

@@ -2,7 +2,7 @@
 
 - [Postgresql](#postgresql)
   - [Термины](#термины)
-  - [Типы данны](#типы-данны)
+  - [Типы данных](#типы-данных)
   - [Функции](#функции)
     - [Management](#management)
     - [Replication](#replication)
@@ -20,12 +20,41 @@
 
 - RTO - [Recovery Time Objective](https://en.wikipedia.org/wiki/Disaster_recovery#Recovery_Time_Objective)
 
-## Типы данны
+## Типы данных
 
 - [Enum](https://www.postgresql.org/docs/current/datatype-enum.html)
+  - Работает быстро на больших объемах, синтаксический сахар, [реализовано как отдельная таблица с join по сути](https://habr.com/ru/companies/domclick/articles/525530/)
+
+### JSONB
+
 - [JSONB](https://medium.com/geekculture/postgres-jsonb-usage-and-performance-analysis-cdbd1242a018)
   - работает очень быстро, особенно в контексте бизнес автоматизации
-- JSON 
+  - но требует [индексов](https://habr.com/ru/companies/domclick/articles/701012/) правильных (GIN, Hash, btree)   
+  - Его удобно использовать для тех случаев, когда его данные __не используются для работы БД__, его можно легко и просто сразу передать веб-страницам
+  - Если же по данным осуществляются операции БД, например, __фильтрация, сортировка, группировка и объединения__, то такие данные лучше хранить вне jsonb, в структуре самой БД
+  - Это связано с тем, что Postgres __не умеет собирать статистику по внутренностям jsonb__, он рассматривает его только целиком, что обычно совершенно бессмысленно (можно отключать, так как статистика по __jsonb сильно раздувает таблицу статистики__)
+  - [проблемы (2020) с OLTP нагрузкой](https://habr.com/ru/amp/publications/646987/)
+  - примеры запросов (json_each, jsonb_to_record, jsonb_to_recordset) по [JSONB](https://habr.com/ru/companies/tensor/articles/771406/)
+- [JSON](https://medium.com/geekculture/postgres-jsonb-usage-and-performance-analysis-cdbd1242a018)
+- Сравнение с [MongoDB](https://habr.com/ru/companies/amvera/articles/757534/)
+  - MongoDB
+    - возможность легкого горизонтального масштабирования уже заложена в ее архитектуру
+    - нет полного ACID
+    - Встроенный валидатором схемы
+    - обычно работает быстрее в том случае, если в операции задействованы различные объекты
+
+Плюсы:
+
+- Просто хранить не строго типизированную структуру
+- Поддерживает индексы
+
+Минусы:
+
+- Сохранение медленее (конвертация в бинарный формат)
+- Нет валидации на уровне БД 
+- Продолжается оптимизации производительности на уровне PGSQL
+- Нужно применять правильные индексы на больших объемах данных
+- Нужно тестировать с CITUS поддержку JSONB
 
 ## Функции
 
@@ -58,6 +87,14 @@
 - [Tools](https://www.postgresql.org/download/products/5/)
 - [BIRT](https://eclipse.github.io/birt-website/)
 
+### Hith Availability
+
+- кластер PostgreSQL на [WAL репликации](https://habr.com/ru/companies/avito/articles/775922/)
+  - на repmgr в [Docker и Testcontainers](https://habr.com/ru/articles/754168/)
+  - Patroni
+  - Stolon 
+- необходимо Distributed Key-Value хранилище (DCS_: etcd, Consul, ZooKeeper и Kubernetes API
+
 ## Плюсы-минусы
 
 - опытный специалист, обладающий достаточными компетенциями в настройке и оптимизации CentOS, файловой системы и самого PostgreSQL.
@@ -88,6 +125,12 @@
 - [foreign data wrapper](https://guriysamarin.medium.com/how-to-transfer-data-from-ms-sql-to-postgresql-or-good-design-vs-speed-1baad5665309) 
   - https://habr.com/ru/company/postgrespro/blog/309490/
   - https://www.mssqltips.com/sqlservertip/3663/sql-server-and-postgresql-foreign-data-wrapper-configuration-part-3/
+
+### Benchmark
+
+- Open Source Tool
+  - [HammerDB TPM](https://www.enterprisedb.com/blog/how-to-benchmark-postgresql-using-hammerdb-open-source-tool)
+  - [Pgbench TPS vs Connection](https://www.enterprisedb.com/blog/pgbench-performance-benchmark-postgresql-12-and-edb-advanced-server-12)
 
 ### Миграция с MS SQL
 

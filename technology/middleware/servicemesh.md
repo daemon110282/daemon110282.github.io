@@ -53,6 +53,6 @@
 - Linkerd 2.x
 - Conduit
 - AWS App Mesh
-- Consul Hashicorp
+- [Consul Hashicorp](consul.md)
 - Kuma от Kong
 - [Maesh от Traefik](https://traefik.io/traefik-mesh/)

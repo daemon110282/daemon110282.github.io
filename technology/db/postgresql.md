@@ -181,3 +181,8 @@
   - Без изменений исходного приложения [Albatros + AWS Babelfish + SQL Pipe](https://www.sqlpipe.com/blog/migrate-sql-server-to-postgresql) сравнение с AWS DMS и sqlserver2pgsql
   - [SQL Server to PostgreSQL converter](https://www.convert-in.com/mss2pgs.htm) need __equal structures__ DB
   - [MSSQL-PostgreSQL Sync](https://www.convert-in.com/m2psync.htm) need __equal structures__ DB
+
+  ## Версии
+
+  - 13
+  - 14

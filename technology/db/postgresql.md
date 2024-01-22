@@ -60,7 +60,9 @@
 
 - Timeseries Data (pg_partman extension)
 - [schema and data comparison tool for PostgreSQL](https://www.postgrescompare.com/)
-- [Шардирование](../../arch/pattern/performance/shard.db.md) CITUS
+- Партиционирование (Сеционирование) вертикальное - built in PGSQL
+- Партиционирование горизонтальное - [Шардирование](../../arch/pattern/performance/shard.db.md) CITUS
+  - [When to use Citus to shard Postgres?](https://www.citusdata.com/blog/2023/08/04/understanding-partitioning-and-sharding-in-postgres-and-citus/)
 
 ### Management
 

@@ -138,8 +138,8 @@
 
 ## log-parser
 
-[log-parser](https://www.symantec.com/connect/articles/forensic-log-parsing-microsofts-logparser)
-
+- [log-parser](https://www.symantec.com/connect/articles/forensic-log-parsing-microsofts-logparser)
+- [log parser studio](https://techcommunity.microsoft.com/t5/exchange-team-blog/introducing-log-parser-studio/ba-p/601131)
 - [example](https://mlichtenberg.wordpress.com/2011/02/03/-log-parser-rocks-more-than-50-examples/)
 - Hourly Bandwidth (__chart__) Requests by URI
 - __Search__ the Event Log for W3SVC (IIS)

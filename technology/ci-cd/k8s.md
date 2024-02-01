@@ -32,12 +32,33 @@
       - кол-ва k8s дашборд
       - Утилизация ресурсов?
     - в процессе мониторинга нам необходимо постоянно сопоставлять физический мир контейнеров с реальностью Kubernetes
-    - [health checks](../../arch/pattern/observability/pattern.healthcheck.md). У Kubernetes есть два их типа: liveness и readiness probes.
+    - [health checks](../../arch/pattern/observability/pattern.healthcheck.md). У Kubernetes есть два их типа probes: 
+      - liveness 
+      - readiness
 - [Отличие от Docker](https://mcs.mail.ru/blog/chto-umeet-kubernetes-chego-ne-umeet-docker) - инструмент для создания и запуска контейнеров
 
 ![k8s](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/daemon110282/daemon110282.github.io/daemon110282-patch-1/technology/ci-cd/k8s.puml)
 
+### Ingress Controller
+
+[состоит из 2х компонентов](https://habr.com/ru/articles/434524/):
+
+- [Reverse Proxy](../../arch/pattern/deployment/pattern.proxy.reverse.md)
+- контроллера который общается с API сервером k8s
+
+Функции:
+
+- сервисные метрики по запросам (две стратегии сбора на уровне - балансировщика\ingress controller)
+  - [NGinx](https://habr.com/ru/companies/vk/articles/729796/)
+  - [Traefik](https://traefik.io/blog/observing-kubernetes-ingress-traffic-using-metrics/)
+
 ![Ingress Controller](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/daemon110282/daemon110282.github.io/daemon110282-patch-1/technology/ci-cd/k8s.IC.puml)
+
+Технологии:
+
+- NGinx
+- Netscaler
+- Traefik
 
 ## Reference Architecture
 
@@ -49,14 +70,14 @@
 
 ## Patterns
 
-- Storage Solutions for Kubernetes
+- __Storage Solutions__ for Kubernetes
   - [Container Attached Storage](https://openebs.io/docs/concepts/cas) - это программное обеспечение, включающее контроллеры хранения на основе микросервисов, управляемые Kubernetes. 
     - Эти контроллеры хранилища могут работать в любом месте, которое доступно Kubernetes, то есть на любом облачном сервере или даже на обычном сервере с общим хранилищем или поверх традиционной системы общего хранения. 
     - Критически важно, что доступ к самим данным также осуществляется через контейнеры, в отличие от хранения в системе общего масштабирования вне платформы.
   - three categories of volumes
-    - Persistent volumes: storage in the Kubernetes cluster that is preprovisioned or created via dynamic provisioning using storage classes
-    - Projected volumes: a type of storage that can map several existing volumes in the same directory
-    - Ephemeral volumes: storage that does not persist across restarts like emptyDir (useful for logs), configMap, or secret
+    - __Persistent volumes__: storage in the Kubernetes cluster that is preprovisioned or created via dynamic provisioning using storage classes
+    - __Projected volumes__: a type of storage that can map several existing volumes in the same directory
+    - __Ephemeral volumes__: storage that does not persist across restarts like emptyDir (useful for logs), configMap, or secret
   - Container Attached Storage - Distributed Persistent Volumes easily deploy Kubernetes __Stateful Workloads__  
     - [OpenEBS](https://openebs.io/docs/)
     - Rook

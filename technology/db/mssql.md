@@ -61,8 +61,8 @@ HA:
   - Data Collection
   - [Extended Events](mssql.extended.events.md)
   - [DMV](mssql.dmv.md)
-  - [Query Store](https://learn.microsoft.com/en-us/sql/relational-databases/performance/monitoring-performance-by-using-the-query-store)
-  - SQL Trace Profiler (deprecated)
+  - [Query Store](mssql.QS.md)
+  - [SQL Trace Profiler (deprecated)](#sql-trace-profiler-deprecated)
   - QTA
 - [Мониторинг](#мониторинг)
 
@@ -142,13 +142,15 @@ HA:
   - Availability Replica
 - [MS: Мониторинг и настройка производительности](http://www.sql.ru/forum/actualthread.aspx?tid=858780)
 - [performance dashboard](https://learn.microsoft.com/en-us/sql/relational-databases/performance/performance-dashboard)
-- Метрики
-  - Latency
-    - [Total latch wait Time](https://documentation.red-gate.com/sm/metrics-alerts-and-notifications/metrics-and-alerts-reference/list-of-metrics#Listofmetrics-Latchwaittime)
-    - [Total average wait time]
-    - Buffer cache hit ratio
-  - Traffic
-    - Active transactions
+
+### Метрики
+
+- Latency
+  - [Total latch wait Time](https://documentation.red-gate.com/sm/metrics-alerts-and-notifications/metrics-and-alerts-reference/list-of-metrics#Listofmetrics-Latchwaittime)
+  - [Total average wait time]
+  - Buffer cache hit ratio
+- Traffic
+  - Active transactions
 
 ### Онлайн
 

@@ -45,7 +45,7 @@
 	- New Relic
 	- Loggly
 	- Logentries
-	- Sentry 	
+	- [Sentry](sentry.md)
 	- [Rollbar](https://rollbar.com/blog/error-tracking-with-vue-js/)
 	- DataDog
 	- LogRocket

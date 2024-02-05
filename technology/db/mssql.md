@@ -84,9 +84,9 @@ HA:
 - Анализ плана выполнения
   - __Плохо__
     - Index scan
-    - Rid / key lookup - чтение из [кучи databaselog](https://dotnettutorials.net/lesson/how-to-use-covering-index-to-reduce-rid-lookup/)
+    - Rid / key lookup - чтение из [кучи databaselog](https://dotnettutorials.net/lesson/how-to-use-covering-index-to-reduce-rid-lookup/) - индексы надо настраивать
     - Статистика плана запросов устаревает- см сколько записей оптимизатор предполагает вернуть, а сколько по факту
-    - Physical reads не из Кеша данных
+    - Physical reads не из Buffer Cache Кеша данных (logical reads)
   - __Хорошо__
     - Index seek
     - Logical reads

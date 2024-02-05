@@ -7,6 +7,16 @@
 - [ASP.NET: CLR Thread](#aspnet-clr-thread)
 - [APP](#app)
 
+TODO
+
+- https://habr.com/ru/articles/250881/
+- https://technet.microsoft.com/en-us/library/cc732518(v=ws.10).aspx	
+- https://habrahabr.ru/post/250881/	good
+- https://mlichtenberg.wordpress.com/2011/02/03/log-parser-rocks-more-than-50-examples/	
+- https://www.symantec.com/connect/articles/forensic-log-parsing-microsofts-logparser	
+- https://blogs.msdn.microsoft.com/docast/2016/04/28/troubleshooting-iis-request-performance-slowness-issues-using-freb-tracing/	
+- https://www.iis.net/learn/troubleshoot/performance-issues	
+
 ## HTTP.SYS
 
 - [Queue](https://blog.leansentry.com/all-about-iis-asp-net-request-queues/)

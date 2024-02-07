@@ -30,4 +30,4 @@
 
 ## Технологии
 
-- [Netscaler, HAProxy, Nginx..](../../../technology/middleware/loadbalancer.md)
+- [Netscaler, HAProxy, Nginx, Envoy..](../../../technology/middleware/loadbalancer.md)

@@ -12,6 +12,7 @@
 
 Плюсы:
 - Бесплатно с ограничениями в облаке
+- [API тесты интеграция CI\CD через Jenkins](https://learning.postman.com/docs/collections/using-newman-cli/integration-with-jenkins/)
 Минусы:
 - Commercial 
 - Enterprise Deploy only [Cloud](https://www.postman.com/postman-enterprise/)

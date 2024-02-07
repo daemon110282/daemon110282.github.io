@@ -33,6 +33,7 @@
     - Server-side [service discovery](./pattern/deployment/service.discovery.md)
     - [Proxy\Balancing](./pattern/deployment/pattern.proxy.reverse.md)
   - [Слабая связанность (low coupling)](ability/low.coupling.md)
+- Durability
 - Функциональность
   - [Security Безопасность](ability/security.md)
   - Гибкость Flexibility

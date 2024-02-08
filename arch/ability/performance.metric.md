@@ -140,16 +140,11 @@ To-do
 
 #### СУБД
 
-- ТОП 5
-  - долгих запросов
-  - блокировки
-  - часто вызываемых
-  - с ошибками
-- [mssql](../../technology/db/mssql.md)
+- [mssql](../../technology/db/mssql.performance.metric.md)
 
 #### Backend
 
-- [IIS](../../technology/iis.md)
+- [IIS](../../technology/iis.performance.metric.md)
 
 #### Контейнеризация
 

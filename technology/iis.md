@@ -90,6 +90,8 @@ IIS Failed Request Tracing
 
 - [fiddler on iis app](http://www.markhneedham.com/blog/2009/06/24/using-fiddler-with-iis/)
 - [FREB](https://blogs.msdn.microsoft.com/docast/2016/04/28/troubleshooting-iis-request-performance-slowness-issues-using-freb-tracing/)
+	- For slow __ASP.NET Webforms applications__ there are a lot of benefits for using FREB. 
+	- for troubleshooting slow ASP.NET MVC web sites using __PerfView__
 - [CPU, ERROR, RAM leak](https://www.iis.net/learn/troubleshoot/performance-issues)
 - [WCF](protocols.integration/wcf.md#трассировка)
 

@@ -40,8 +40,7 @@
 - [From Cloudamqp](https://www.cloudamqp.com/blog/part1-rabbitmq-best-practice.html)
 - [VHosts](rmq/rmq.vhost.md)
 - [Failure](rmq/rmq.failure.md)
-- Dead Letter eXchange https://habr.com/ru/companies/slurm/articles/714358/
-  - [Алгоритм](https://blog.rnds.pro/019-poison2) обработки "битого" сообщения [Poison Message](https://blog.rnds.pro/018-posion1) 
+- [Очереди с приоритетом](https://habr.com/ru/companies/arcadia/articles/571442/)
 
 ### Task (Worker) Queue
 

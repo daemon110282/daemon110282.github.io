@@ -114,15 +114,21 @@
 
 - Avtoscaling
   - Min max nodes in cluster
-- Запросы requests и лимиты limits CPU - by namespace, node, pod, container
-- memory limit and a memory request
-![limits](../../img/technology/ci-cd/k8s.limits.png))
+- RAM, CPU
+  - Запросы requests 
+  - Лимиты [limits](https://habr.com/ru/companies/flant/articles/489668/)
+    - by namespace, node, pod, container
+    - Утилизация ресурсов cluster, nodes, pods, container
+    - Когда вы утилизируете большую часть ресурсов кластера, контейнеры могут работать без проблем при обычной нагрузке, но в сценариях с высокой нагрузкой контейнеры могут начать использовать ЦП и память до предела. 
+      - Это приведет к тому, что узел начнет __выселять pods__
+        - превышен limit RAM - статус перезапуска pod=__OOMKilled__
+        - превышен limit CPU - включается __троттлинг__ (т.е. оно получает меньше тактов CPU)
+      - в критических ситуациях узел __перестанет работать__ из-за нехватки ресурсов.
+  ![limits](../../img/technology/ci-cd/k8s.limits.png))
 - Quality of Service (QoS) classes to the Pod:
   - Guaranteed
   - Burstable
   - BestEffort
-- Утилизация ресурсов cluster, nodes, pods, container
-  - Когда вы утилизируете большую часть ресурсов кластера, контейнеры могут работать без проблем при обычной нагрузке, но в сценариях с высокой нагрузкой контейнеры могут начать использовать ЦП и память до предела. Это приведет к тому, что узел начнет выселять pods, а в критических ситуациях узел перестанет работать из-за нехватки ресурсов.
 - настраивать проверки работоспособности (health probes)
 
 ## Технологии

@@ -1,6 +1,19 @@
-# RMQ Failure 
+# RMQ Failure
 
-Реализация [паттернов обработки сбоев](../../../../arch/pattern/fault.tolerance/pattern.failure.md):
+- [RMQ Failure](#rmq-failure)
+	- [Зачем](#зачем)
+	- [Dead Letter eXchange (DLX)](#dead-letter-exchange-dlx)
+	- [Exc=Direct Queue DLX](#excdirect-queue-dlx)
+	- [Retry Policy](#retry-policy)
+	- [Circuit Breakers](#circuit-breakers)
+	- [Redilivery](#redilivery)
+	- [Rate limit](#rate-limit)
+	- [Transactional outbox](#transactional-outbox)
+	- [Transactional Inbox](#transactional-inbox)
+
+## Зачем
+
+Реализация [паттернов обработки сбоев](../../../../arch/pattern/fault.tolerance/pattern.failure.md) для обеспечения атрибута качества ИС [Отказоустойчивость Fault tolerance](../../../../arch/ability/faulttolerance.md):
 
 - Basic.Reject with __reueue = true__ - отклоненение сообщения и возврат __в начало очереди__
 	- минусы: лишняя нагрузка на внешний сервис, т.к. сообщения без задержки будут возвращаться в очередь. Решение: Basic.Reject with reueue = false + DLX.
@@ -23,3 +36,30 @@
 
 - must specify a [dead letter routing key](https://stackoverflow.com/questions/21742232/rabbitmq-dead-letter-exchange-never-getting-messages)
 - https://javascopes.com/spring-amqp-error-handling-8dbc1045/
+
+## Retry Policy
+
+- [MassTransit](https://masstransit.io/documentation/concepts/exceptions)
+
+## Circuit Breakers
+
+- [MassTransit](https://masstransit.io/documentation/concepts/exceptions)
+
+## Redilivery
+
+- [MassTransit](https://masstransit.io/documentation/concepts/exceptions#redelivery)
+
+## Rate limit
+
+- [masstransit](https://www.gokhan-gokalp.com/en/messaging-yapilarinda-masstransit-ile-error-ve-redeliver-handling/)
+
+## Transactional outbox
+
+- [Паттерн Transactional outbox\Application events](https://microservices.io/patterns/data/transactional-outbox.html)
+  - [example](https://itnext.io/the-outbox-pattern-in-event-driven-asp-net-core-microservice-architectures-10b8d9923885)
+  - [masstransit](https://masstransit.io/documentation/concepts/exceptions#outbox)
+
+## Transactional Inbox
+
+- Паттерн [Transactional Inbox](https://softwaremill.com/microservices-101/)
+  - [abp.io](https://docs.abp.io/en/abp/latest/Distributed-Event-Bus)

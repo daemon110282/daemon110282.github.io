@@ -74,5 +74,9 @@ Cбои разделяют:
 
 ## Технологии
 
-- Circuit Breakers, Retry Policy
+- [RMQ](../../../technology/middleware/messagebus/rmq/rmq.failure.md)
+- Retry Policy
   - [Polly](https://medium.com/aspnetrun/microservices-resilience-and-fault-tolerance-with-applying-retry-and-circuit-breaker-patterns-c32e518db990)
+- Circuit Breakers
+  - [Polly](https://medium.com/aspnetrun/microservices-resilience-and-fault-tolerance-with-applying-retry-and-circuit-breaker-patterns-c32e518db990)
+- Redilivery

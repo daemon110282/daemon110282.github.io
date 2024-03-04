@@ -25,3 +25,5 @@
 - Program Level
   - [YII2](../../../technology/framework/yii2.md)
   - TODO
+- [RMQ](../../../technology/middleware/messagebus/rmq/rmq.failure.md)
+  

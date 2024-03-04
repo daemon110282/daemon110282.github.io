@@ -67,7 +67,4 @@
 - [миграции бд](../pattern/migration.db.md)
 - [graceful shutdown](../pattern/deployment/graceful.shutdown.md)
 - Message Bus
-  - [Паттерн Transactional outbox\Application events](https://microservices.io/patterns/data/transactional-outbox.html)
-    - [example](https://itnext.io/the-outbox-pattern-in-event-driven-asp-net-core-microservice-architectures-10b8d9923885)
-  - Паттерн [Transactional Inbox](https://softwaremill.com/microservices-101/)
-    - [abp.io](https://docs.abp.io/en/abp/latest/Distributed-Event-Bus)
+  - [RMQ](../../technology/middleware/messagebus/rmq/rmq.failure.md)

@@ -1,20 +1,27 @@
 # RabbitMQ
 
 - [RabbitMQ](#rabbitmq)
+  - [Плюсы и минусы](#плюсы-и-минусы)
   - [Функции](#функции)
+    - [Exchange Обменник](#exchange-обменник)
     - [Режимы доставки сообщений](#режимы-доставки-сообщений)
   - [Паттерны](#паттерны)
-    - [Task (Worker) Queue](#task-worker-queue)
-    - [Simple one-way messaging](#simple-one-way-messaging)
-    - [Publish-subscribe Издатель-Подписчик](#publish-subscribe-издатель-подписчик)
-    - [RPC (команды)](#rpc-команды)
-    - [Direct Reply-TO](#direct-reply-to)
+    - [Queue](#queue)
+    - [connection](#connection)
+    - [persistence](#persistence)
+    - [Интеграции](#интеграции)
+      - [Task (Worker) Queue](#task-worker-queue)
+      - [Simple one-way messaging](#simple-one-way-messaging)
+      - [Publish-subscribe Издатель-Подписчик](#publish-subscribe-издатель-подписчик)
+        - [headers vs topic для событий](#headers-vs-topic-для-событий)
+      - [RPC (команды)](#rpc-команды)
+      - [Direct Reply-TO](#direct-reply-to)
     - [MTA](#mta)
-    - [headers vs topic для событий](#headers-vs-topic-для-событий)
-    - [Версионирование сообщений](#версионирование-сообщений)
+    - [Версионирование типов сообщений](#версионирование-типов-сообщений)
   - [Security](#security)
   - [Observability](#observability)
-    - [Performance](#performance)
+  - [Performance](#performance)
+  - [Технологии](#технологии)
 
 ## Плюсы и минусы
 
@@ -23,7 +30,7 @@
 - [«Продажа» Производительность](https://habr.com/ru/company/oleg-bunin/blog/310418/)
 - RabbitMQ дает гарантии __одноразовой доставки__ и __хотя бы одной доставки__, но не __ровно одной доставки__
 
-Минусы: 
+Минусы:
 
 - Агрегация в пачки нет в RabbitMQ (Kafka Есть)
 - [vs Kafka](https://habr.com/ru/company/itsumma/blog/416629/)
@@ -54,8 +61,10 @@
 - [VHosts](rmq/rmq.vhost.md)
 - [Failure](rmq/rmq.failure.md)
 - [Очереди с приоритетом](https://habr.com/ru/companies/arcadia/articles/571442/)
+- [RabbitMQ Delayed Message Plugin](https://www.gokhan-gokalp.com/en/messaging-yapilarinda-masstransit-ile-error-ve-redeliver-handling/)
+- Scheduling messages using Quartz.Net
 
-### queue
+### Queue
 
 - [Keep your queue short (if possible)](https://www.cloudamqp.com/blog/part1-rabbitmq-best-practice.html)
 - Limit queue size with TTL or max-length

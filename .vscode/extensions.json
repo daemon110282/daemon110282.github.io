@@ -1,0 +1,12 @@
+{
+	"recommendations": [
+		"asyncapi.asyncapi-preview",
+		"genieai.chatgpt-vscode",
+		"hediet.vscode-drawio",
+		"yzhang.markdown-all-in-one",
+		"yzane.markdown-pdf",
+		"davidanson.vscode-markdownlint",
+		"42crunch.vscode-openapi",
+		"jebbs.plantuml"
+	]
+}

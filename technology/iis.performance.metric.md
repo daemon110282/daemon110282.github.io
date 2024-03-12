@@ -1,21 +1,22 @@
 # Метрики Производительность Быстродействие
 
-- [HTTP.SYS](#httpsys)
-- [IIS](#iis)
-- [Application Pool](#application-pool)
-- [Worker process (w3wp.exe)](#worker-process-w3wpexe)
-- [ASP.NET: CLR Thread](#aspnet-clr-thread)
-- [APP](#app)
+- [Метрики Производительность Быстродействие](#метрики-производительность-быстродействие)
+	- [HTTP.SYS](#httpsys)
+	- [IIS](#iis)
+	- [Application Pool](#application-pool)
+	- [Worker process (w3wp.exe)](#worker-process-w3wpexe)
+	- [ASP.NET: CLR Thread](#aspnet-clr-thread)
+	- [APP](#app)
 
 TODO
 
-- https://habr.com/ru/articles/250881/
-- https://technet.microsoft.com/en-us/library/cc732518(v=ws.10).aspx	
-- https://habrahabr.ru/post/250881/	good
-- https://mlichtenberg.wordpress.com/2011/02/03/log-parser-rocks-more-than-50-examples/	
-- https://www.symantec.com/connect/articles/forensic-log-parsing-microsofts-logparser	
-- https://blogs.msdn.microsoft.com/docast/2016/04/28/troubleshooting-iis-request-performance-slowness-issues-using-freb-tracing/	
-- https://www.iis.net/learn/troubleshoot/performance-issues	
+- <https://habr.com/ru/articles/250881/>
+- <https://technet.microsoft.com/en-us/library/cc732518(v=ws.10).aspx>
+- <https://habrahabr.ru/post/250881/>	good
+- <https://mlichtenberg.wordpress.com/2011/02/03/log-parser-rocks-more-than-50-examples/>
+- <https://www.symantec.com/connect/articles/forensic-log-parsing-microsofts-logparser>
+- <https://blogs.msdn.microsoft.com/docast/2016/04/28/troubleshooting-iis-request-performance-slowness-issues-using-freb-tracing/>
+- <https://www.iis.net/learn/troubleshoot/performance-issues>
 
 ## HTTP.SYS
 
@@ -33,14 +34,14 @@ TODO
 
 Параллельность обработки запросов [concurrent](https://www.dotnetfunda.com/articles/show/3485/11-tips-to-improve-wcf-restful-services-performance)
 
-  - maxConcurrentRequestsPerCPU
-  - maxConcurrentThreadsPerCPU
-  - requestQueueLimit
-  - Maximum Worker [Processes in IIS application pool](https://www.dotnetfunda.com/articles/show/3485/11-tips-to-improve-wcf-restful-services-performance)
-  - два основных параметра, влияющих на [доступность приложения и его производительность](https://habr.com/ru/articles/250881/).
-	- appConcurrentRequestLimit — __максимальное количество одновременных запросов__ в приложении. Увеличение числа одновременных запросов IIS расширит доступные ресурсы веб-сервера для обслуживания запросов.
-    	- Значение по умолчанию — 5000. UsersCount * 1.5, где usersCount — количество одновременно работающих пользователей
-	- QueueLength — максимальное количество запросов, которые драйвер Http.sys размещает в очереди пула приложений
+- maxConcurrentRequestsPerCPU
+- maxConcurrentThreadsPerCPU
+- requestQueueLimit
+- Maximum Worker [Processes in IIS application pool](https://www.dotnetfunda.com/articles/show/3485/11-tips-to-improve-wcf-restful-services-performance)
+- два основных параметра, влияющих на [доступность приложения и его производительность](https://habr.com/ru/articles/250881/).
+- appConcurrentRequestLimit — __максимальное количество одновременных запросов__ в приложении. Увеличение числа одновременных запросов IIS расширит доступные ресурсы веб-сервера для обслуживания запросов.
+  	- Значение по умолчанию — 5000. UsersCount * 1.5, где usersCount — количество одновременно работающих пользователей
+- QueueLength — максимальное количество запросов, которые драйвер Http.sys размещает в очереди пула приложений
 
 ## Worker process (w3wp.exe)
 
@@ -49,7 +50,7 @@ TODO
 - Saturation
 	- [Maximum Threads Count](https://www.dotnetfunda.com/articles/show/3485/11-tips-to-improve-wcf-restful-services-performance)
 	- Active Threads Count - Number of threads actively processing requests in the worker process
-	- Threads Per Processor Limit in IIS	
+	- Threads Per Processor Limit in IIS
 - Traffic
 	- Requests / Sec - HTTP requests/sec being processed by the worker process
 	- Active Requests - Current number of requests being processed by the worker process
@@ -67,9 +68,10 @@ TODO
 ## APP
 
 [iis perf counters](https://msdn.microsoft.com/en-us/library!/ms972959.aspx?f=255&MSPPError=-2147217396)
-  - [Performance Counters for ASP.NET](https://msdn.microsoft.com/en-us/library/fxk122b4.aspx)
-  - Performance Counters for [WCF service](protocols.integration/wcf.md) дополнительно
-- Traffic 
+
+- [Performance Counters for ASP.NET](https://msdn.microsoft.com/en-us/library/fxk122b4.aspx)
+- Performance Counters for [WCF service](protocols.integration/wcf.md) дополнительно
+- Traffic
 	- ASP.NET\Requests Current - суммарное количество выполняющихся в настоящее время запросов. Значение этого счетчика включает в себя число обрабатывающися запросов, находящихся в очереди и ожидающих отправки клиенту. Если это значение превышает параметр requestQueueLimit, который расположен в секции processModelsection файла конфигурации веб-сервера, то последующие запросы будут отбрасываться
 		- [View Currently Executing Requests in a Worker Process (IIS 7)](https://technet.microsoft.com/en-us/library/cc732518(v=ws.10).aspx)
 		- [IIS->Worker process->View Current Request](https://habrahabr.ru/post/250881/)

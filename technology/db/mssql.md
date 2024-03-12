@@ -47,12 +47,19 @@ HA:
 
 - [Настроек OS, SQL Server](#настройки)
 - [Блокировки](mssql.locks.md)
+  - Blocking can be reduced with __index design__ and __short transactions__.
 - [Индексирование](mssql.index.md)
+  - Sorts can be limited with index usage. That is, a certain sort order is supported by an index that is sorted the same way, either ascending or descending.
 - [Оптимизация запросов](#стратегии-оптимизации-запросов)
 - Дизайна (архитектуры) приложения
 - Обслуживания БД
   - __SHRINK__ [не всегда хорошо на больших БД](https://habr.com/ru/articles/741212/)
   - REBUILD индексов (INDEX REORGANIZE не рекомендуется на больших объемах БД)
+- __SQL Plan__
+  - CPU can be reduced with __plan reuse__ and __join reduction__.
+- __IO__ performance 
+  - can be reduced with good __indexing__, __join reduction__, and __high page life expectancy__.
+- Memory is optimal when there are no sudden drops in Page Life Expectancy.
 
 ### Способы анализа производительности
 
@@ -61,8 +68,8 @@ HA:
   - Data Collection
   - [Extended Events](mssql.extended.events.md)
   - [DMV](mssql.dmv.md)
-  - [Query Store](https://learn.microsoft.com/en-us/sql/relational-databases/performance/monitoring-performance-by-using-the-query-store)
-  - SQL Trace Profiler (deprecated)
+  - [Query Store](mssql.QS.md)
+  - [SQL Trace Profiler (deprecated)](#sql-trace-profiler-deprecated)
   - QTA
 - [Мониторинг](#мониторинг)
 
@@ -84,9 +91,9 @@ HA:
 - Анализ плана выполнения
   - __Плохо__
     - Index scan
-    - Rid / key lookup - чтение из [кучи databaselog](https://dotnettutorials.net/lesson/how-to-use-covering-index-to-reduce-rid-lookup/)
+    - Rid / key lookup - чтение из [кучи databaselog](https://dotnettutorials.net/lesson/how-to-use-covering-index-to-reduce-rid-lookup/) - индексы надо настраивать
     - Статистика плана запросов устаревает- см сколько записей оптимизатор предполагает вернуть, а сколько по факту
-    - Physical reads не из Кеша данных
+    - Physical reads не из Buffer Cache Кеша данных (logical reads)
   - __Хорошо__
     - Index seek
     - Logical reads
@@ -131,24 +138,9 @@ HA:
 
 ## Мониторинг
 
-- Метрики
-  - Database properties
-  - Quick Stats
-  - Database size
-  - Performance counters
-  - Memory break down
-  - Database I/O
-  - Database Latency
-  - Availability Replica
 - [MS: Мониторинг и настройка производительности](http://www.sql.ru/forum/actualthread.aspx?tid=858780)
-- [performance dashboard](https://learn.microsoft.com/en-us/sql/relational-databases/performance/performance-dashboard)
-- Метрики
-  - Latency
-    - [Total latch wait Time](https://documentation.red-gate.com/sm/metrics-alerts-and-notifications/metrics-and-alerts-reference/list-of-metrics#Listofmetrics-Latchwaittime)
-    - [Total average wait time]
-    - Buffer cache hit ratio
-  - Traffic
-    - Active transactions
+- [Performance dashboard](https://learn.microsoft.com/en-us/sql/relational-databases/performance/performance-dashboard)
+- [Метрики](mssql.performance.metric.md)
 
 ### Онлайн
 

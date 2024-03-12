@@ -41,8 +41,7 @@ Cбои разделяют:
 - [В общем случае используйте стратегию](https://docs.microsoft.com/ru-ru/azure/architecture/best-practices/transient-faults)
 	- **экспоненциальной задержки** для фоновых операций
 	- стратегии **немедленного повтора или постоянных интервалов** для интерактивных операций
-- [Отложенные повторы RMQ Dead Letter Queue](https://russianblogs.com/article/4093102387/)
-- [Очереди с приоритетом](https://habr.com/ru/companies/arcadia/articles/571442/)
+- паттерны [RMQ failure](../../../technology/middleware/messagebus/rmq/rmq.failure.md)
 
 ## Fail fast
 
@@ -75,5 +74,9 @@ Cбои разделяют:
 
 ## Технологии
 
-- Circuit Breakers, Retry Policy
+- [RMQ](../../../technology/middleware/messagebus/rmq/rmq.failure.md)
+- Retry Policy
   - [Polly](https://medium.com/aspnetrun/microservices-resilience-and-fault-tolerance-with-applying-retry-and-circuit-breaker-patterns-c32e518db990)
+- Circuit Breakers
+  - [Polly](https://medium.com/aspnetrun/microservices-resilience-and-fault-tolerance-with-applying-retry-and-circuit-breaker-patterns-c32e518db990)
+- Redilivery

@@ -10,7 +10,7 @@
 
 Инструмент реализующий:
 
-- паттерн [мониторинга исключений](../../arch/pattern/exception.handle.md) (exception), ошибок
+- паттерн [мониторинга исключений](../../arch/pattern/observability/exception.handle.md) (exception), ошибок
 - распределенной трассировки
 - [анализа производительности](../../arch/system.class/apm.md)
 

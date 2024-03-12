@@ -9,6 +9,8 @@
 
 ## Зачем
 
+Реализует и расширяет функции [Reverse Proxy](../arch/pattern/deployment/pattern.proxy.reverse.md) и [Load Balancer](../arch/pattern/deployment/load.balancing.md)
+
 - Снижение связности ИС
 - Too many __round trips__. [Паттерн Aggregation запросов](https://docs.microsoft.com/ru-ru/azure/architecture/patterns/gateway-aggregation)
   - minimize the [number of requests to the back end](https://docs.microsoft.com/ru-ru/dotnet/architecture/microservices/architect-microservice-container-applications/direct-client-to-microservice-communication-versus-the-api-gateway-pattern) and reduce chatty
@@ -20,12 +22,8 @@ communication to multiple microservices
   - Response caching
   - [Retry policies, circuit breaker, and QoS](../arch/pattern/fault.tolerance/pattern.failure.md)
   - [Rate limiting](../arch/pattern/performance/rate.limit.md) and throttling
-  - [Load balancing](../arch/pattern/deployment/load.balancing.md)
   - [Logging, tracing, correlation](../arch/ability/observability.md)
   - Headers, query strings, and claims transformation
-  - Dynamic request dispatching, routing. __[Reverse proxy](../arch/pattern/deployment/pattern.proxy.reverse.md)__ [or gateway routing](https://docs.microsoft.com/ru-ru/azure/architecture/patterns/gateway-routing)
-  - IP whitelisting
-  - TLS Termination
 - [Mock](../arch/pattern/mock.md)
 - __Security issues__ Сокрытие внутренних API ИС от внешних ИС потребителей
   - Without a gateway, all the microservices must be exposed to the “external world"
@@ -34,7 +32,17 @@ communication to multiple microservices
   - снижения числа запросов, т.к. влияет на заряд мобильного приложения
   - __facade__ especially [made for mobile apps](https://microservices.io/patterns/apigateway)
 
-Расширяет функции API Gateway ИС класса [API managment](api-managment.md) (APIM)
+Функции [Load Balancer](../arch/pattern/deployment/load.balancing.md)
+
+  - [Load balancing](../arch/pattern/deployment/load.balancing.md)
+
+Функции [Reverse proxy](../arch/pattern/deployment/pattern.proxy.reverse.md)
+
+  - Dynamic request dispatching, __routing__ [or gateway routing](https://docs.microsoft.com/ru-ru/azure/architecture/patterns/gateway-routing)
+  - IP whitelisting
+  - TLS Termination
+
+Расширяют функции API Gateway ИС класса [__API managment__](api-managment.md) (APIM)
 
 - Monetize
 - Трансформация запросов REST2RMQ, REST2gRPC и тп.
@@ -72,6 +80,7 @@ communication to multiple microservices
   - [Gravitie](../technology/middleware/api.gateway/gw.gravitee.md)
   - [Kong](../technology/middleware/api.gateway/gw.kong.md)
   - Tyk
+  - Envoy
 - Commercial
   - [traefik](../technology/middleware/api.gateway/gw.traefik.md)  
     - [vs NGINX](https://www.kubecost.com/kubernetes-devops-tools/traefik-vs-nginx/)

@@ -10,10 +10,10 @@
   - Liskov
   - Interface Segregation
   - Dependeny Injection
-- [DbC - Design by contract](https://habr.com/ru/company/southbridge/blog/679906/)
 - LC/HC - [Принципы GRASP](https://rmcreative.ru/blog/post/printsipy-grasp)
   - [Low coupling (LC)](../../ability/low.coupling.md)
   - High cohesion (HC)
+- __DRY - Dont Repeat Yourself__: не должны повторяться именно в __поведении__, а не в __данных__ (например [микросервисы](../../style/msa.md))
 - TODO
   - [Принципы проектирования MS](https://docs.microsoft.com/ru-ru/azure/architecture/guide/design-principles/)
   - [MS](https://docs.microsoft.com/ru-ru/azure/architecture/patterns/category/design-implementation)

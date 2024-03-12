@@ -1,5 +1,15 @@
 # Kafka
 
+## Зачем
+
+- Log processing and analysis
+- Data streaming in recommendations
+- System monitoring and alerting
+- CDC (Change data capture)
+- System migration
+
+## VS MessageBus
+
 Фундаментальное [отличие Kafka от брокеров очередей](https://slurm.io/tpost/pnyjznpvr1-apache-kafka-osnovi-tehnologii) состоит в том, как сообщения хранятся на брокере и как потребляются консьюмерами:
 
 - Сообщения в Kafka __не удаляются брокерами по мере их обработки консьюмерами__ — данные в Kafka могут храниться днями, неделями, годами.

@@ -64,6 +64,7 @@ TODO см. EIP
   - nginx
 - Anti-Corruption Layer
 - Async Request-Reply
+- [DbC - Design by contract](https://habr.com/ru/company/southbridge/blog/679906/)
 
 [TODO](https://habr.com/ru/company/southbridge/blog/679906/)
 [UMP](https://airtable.com/embed/shr8hjWhgmcRMq8ZT/tblRsPPtXXbYI4IzT)

@@ -29,11 +29,19 @@
 - [Decomposition Patterns](https://airtable.com/embed/shrPwsn3G9IQ7JCm1/tbl7daDI4ZAAmedfD) (6 Patterns)
   - [CQRS](pattern/performance/pattern.cqrs.md)
   - [Strangler Fig](pattern/refactoring/monolit2msa.md)
+  - Decompose by [subdomain](pattern/system.design/ddd.md)
+  - Service per Team
 - [Transaction Management Patterns](https://airtable.com/embed/shrjiJuF7kIbcnXRl/tblgszzLV27MUFP4p) (5 Patterns)
-  - Transactional Outbox
+  - [Transactional Outbox](https://microservices.io/patterns/data/transactional-outbox.html)
+  - [Transactional Inbox](https://softwaremill.com/microservices-101/)
+  - Saga
+  - Polling publisher
+  - Transaction log tailing
 - [Testing Patterns](https://airtable.com/embed/shr6p9u80mD9CzVU1/tblyGd1oiAcYuTSbr) (3 Patterns)
 - [UI Patterns](https://airtable.com/embed/shrxffclVHmz95ii0/tblXbFfITMXmPjvGl) (3 Patterns)
 - [Security Patterns](https://airtable.com/embed/shrHNtgdwr7wP6TJj/tbl2ssqnen3UkXoaF) (2 Patterns)
+  - Access Token ([JWT](../../technology/jwt.md))
+  - Federated Identity
 - Utility Patterns (3 Patterns)
 - TODO
   - Маршрутизатор

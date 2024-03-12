@@ -26,10 +26,10 @@
   - Store and manage time-stamped data.
 - NoSQL
   - Key Value
-    - In-memory store. Their speed and limited data size make them ideal for fast operations.
-  - Graph database. It is suitable for complex relationships between unstructured objects.
-  - Document store. They are good for large immutable data.
-  - Wide column store. They are usually used for big data, analytics, reporting, etc., which needs denormalized data.
+    - In-memory store - Their speed and limited data size make them ideal for fast operations.
+  - Graph database - It is suitable for complex __relationships between unstructured objects__.
+  - Document store - They are good for __large immutable data__.
+  - Wide column store - They are usually used for __big data, analytics, reporting__, etc., which needs __denormalized data__.
 - Full text search Полнотекстовый поиск
 
 ## Паттерны
@@ -42,7 +42,7 @@
   - принципы построения систем поддержки принятия решений (Decision Support System - DSS)
   - хранилищ данных (Data Warehouse)
   - систем интеллектуального анализа данных (Data Mining)
-- __Мутабельные__ (изменяемые) или иммутабельные данные
+- __Мутабельные__ (изменяемые mutable) или иммутабельные (не изменяемые immutable) данные
 - Принципы __ACID__
   - atomaric
   - consistently

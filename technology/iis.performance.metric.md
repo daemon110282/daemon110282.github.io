@@ -64,6 +64,11 @@ TODO
 - Latency
 	- Queue
 		- ASP.NET v4.0.30319\Requests Queued - limit Process Model’s [RequestQueueLimit](https://krishnansrinivasan.wordpress.com/2014/08/18/throttling-wcf-services-on-iis7/)
+- TODO к CLR Thread относятся?
+	- ASP.NET\Worker Process Running - Количество рабочих процессов, запущенных на серверном компьютере.
+	- ASP.NET\Requests Failed - Общее количество неудачных запросов. Любые коды состояния, превышающие или равные 400, увеличат этот счетчик.
+	- ASP.NET Applications\Errors Total - Общее количество ошибок, возникающих во время выполнения HTTP-запросов, включая любые ошибки синтаксического анализа, компиляции или времени выполнения.
+	- ASP.NET Application\Errors Total/Sec - Количество ошибок в секунду, возникающих во время выполнения HTTP-запросов, включая любые ошибки синтаксического анализа, компиляции или времени выполнения.
 
 ## APP
 

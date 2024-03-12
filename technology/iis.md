@@ -15,14 +15,19 @@
  which includes:
 
 - Protocol listener
-	- IIS provides Hypertext Transfer Protocol Stack __HTTP.sys__ as the protocol listener that listens for HTTP and HTTPS requests.
+	- IIS provides Hypertext Transfer Protocol Stack __HTTP.sys__ as the __protocol listener__ that listens for HTTP and HTTPS requests.
 	- Windows Communication Foundation (__WCF__) - protocols other than HTTP and HTTPS
-- __WWW Service__
+	- Logs written into: C:\Windows\System32\LogFiles\HTTPERR
+- __World Wide Web (WWW) Publishing Service (W3SVC)__
+	- User-mode [listener adapter for HTTP.sys](https://techcommunity.microsoft.com/t5/iis-support-blog/iis-services-http-sys-w3svc-was-w3wp-oh-my/ba-p/287856)
+	- Logs written into: System Event Viewer
 - __Windows Process Activation Service (WAS)__, which enables sites to use protocols other than HTTP and HTTPS.
 	- конфигурация храниться в ApplicationHost.config
-	- manages for both HTTP and non-HTTP requests
-		- __application pools__
-		- and __worker processes__ (w3wp.exe)
+	- manages for both HTTP and non-HTTP requests		
+		- to __IIS Worker Process__ (w3wp.exe) aka __Application Pool__
+			- Logs written into: System Event Viewer 
+			- IIS Logs in C:\intepub\logs\LogFiles\W3SVC*
+	- Logs written into: System Event Viewer
 - Web server engine that can be customized by adding or removing __modules__.
 - Integrated request-processing __pipelines from IIS and ASP.NET__.
 
@@ -31,12 +36,12 @@
 [Modules](https://learn.microsoft.com/en-us/iis/get-started/introduction-to-iis/introduction-to-iis-architecture?#modules-in-iis):
 
 - [Native Modules](https://learn.microsoft.com/en-us/iis/get-started/introduction-to-iis/iis-modules-overview)
-  	- HTTP Modules
-  	- Security Modules
-  	- Content Modules
-  	- Compression Modules
-  	- Caching Modules
-  	- Logging and Diagnostics Modules
+	- HTTP Modules
+	- Security Modules
+	- Content Modules
+	- Compression Modules
+	- Caching Modules
+	- Logging and Diagnostics Modules
 - Managed Modules
 
 ### Процесс обработки запроса (Pipeline) и основные компоненты

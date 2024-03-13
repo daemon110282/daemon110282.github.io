@@ -2,10 +2,11 @@
 
 - [IIS](#iis)
 	- [Архитектура](#архитектура)
-		- [Процесс обработки запроса и основные компоненты](#процесс-обработки-запроса-и-основные-компоненты)
+		- [Modules](#modules)
+		- [Процесс обработки запроса (Pipeline) и основные компоненты](#процесс-обработки-запроса-pipeline-и-основные-компоненты)
+	- [Мониторинг](#мониторинг)
 	- [log-parser](#log-parser)
 	- [Трассировка](#трассировка)
-	- [Мониторинг](#мониторинг)
 	- [Version](#version)
 
 ## Архитектура
@@ -14,49 +15,59 @@
  which includes:
 
 - Protocol listener
-	- IIS provides Hypertext Transfer Protocol Stack __HTTP.sys__ as the protocol listener that listens for HTTP and HTTPS requests.
+	- IIS provides Hypertext Transfer Protocol Stack __HTTP.sys__ as the protocol listener that listens for HTTP and HTTPS requests on website binding endpoints.
+    	- Затем это позволяет рабочим процессам IIS (IIS worker processes) выводить эти запросы из очереди на обработку.
 	- Windows Communication Foundation (__WCF__) - protocols other than HTTP and HTTPS
-- __WWW Service__
-- __Windows Process Activation Service (WAS)__, which enables sites to use protocols other than HTTP and HTTPS.
-	- конфигурация храниться в ApplicationHost.config
-	- manages for both HTTP and non-HTTP requests
-		- __application pools__ 
-		- and __worker processes__ (w3wp.exe) 
-- Web server engine that can be customized by adding or removing __modules__.
-- Integrated request-processing __pipelines from IIS and ASP.NET__.
+- __WWW Service__ (W3SVC)
+  - The IIS web service that __configures Http.sys to listen for requests__ based on your __IIS WebSite__ configuration.
+- __Windows Process Activation Service (WAS/WPAS)__
+  - enables sites to use protocols other than HTTP and HTTPS. manages for both HTTP and non-HTTP requests
+  - конфигурация храниться в ApplicationHost.config
+  - The IIS service that __coordinates__
+    - the __creation of IIS worker processes (w3wp.exe)__
+    - based on your __application pool configuration__
+- Application pool - This is a __logical container__, not a physical process
+  - The application pool __routes request__ processing for a __set of applications in your website__ to a specific __IIS worker process__  
+- IIS worker processes (w3wp.exe) - this is the actual __runtime host__ for the __application__, where request processing takes place
+  - When we talk about __restarting or recycling the application pool__, we are actually talking about __starting a new fresh worker process__
+- Application
+  - An IIS application maps a url in your website to a __physical ASP.NET application__ domain that’s hosting your application code
+  - When you are having performance issues, it’s the application code and its memory state that is usually causing the trouble. It could be a hang, high CPU, or a memory leak ... the application is the piece we really need to restart.
+- Web server engine that can be customized by adding or removing __modules__
+- Integrated request-processing __pipelines from IIS and ASP.NET__
 
 ### Modules
 
 [Modules](https://learn.microsoft.com/en-us/iis/get-started/introduction-to-iis/introduction-to-iis-architecture?#modules-in-iis):
 
-	- [Native Modules](https://learn.microsoft.com/en-us/iis/get-started/introduction-to-iis/iis-modules-overview)
-    	- HTTP Modules
-    	- Security Modules
-    	- Content Modules
-    	- Compression Modules
-    	- Caching Modules
-    	- Logging and Diagnostics Modules
-	- Managed Modules
+- [Native Modules](https://learn.microsoft.com/en-us/iis/get-started/introduction-to-iis/iis-modules-overview)
+  	- HTTP Modules
+  	- Security Modules
+  	- Content Modules
+  	- Compression Modules
+  	- Caching Modules
+  	- Logging and Diagnostics Modules
+- Managed Modules
 
 ### Процесс обработки запроса (Pipeline) и основные компоненты
 
-- [IIS 7](https://krishnansrinivasan.wordpress.com/2014/08/18/throttling-wcf-services-on-iis7/) - на разных версиях IIS может отличаться. IIS listens for HTTP __requests__ (as well as requests for other protocols) before creating __worker processes__ to [handle the request](https://learn.microsoft.com/en-us/iis/get-started/introduction-to-iis/introduction-to-iis-architecture?#http-request-processing-in-iis)
+- [IIS 7](https://krishnansrinivasan.wordpress.com/2014/08/18/throttling-wcf-services-on-iis7/) - на разных версиях IIS может отличаться.
+- IIS listens for HTTP __requests__ (as well as requests for other protocols) before creating __worker processes__ to [handle the request](https://learn.microsoft.com/en-us/iis/get-started/introduction-to-iis/introduction-to-iis-architecture?#http-request-processing-in-iis)
   - listener Hypertext Transfer Protocol Stack HTTP.SYS ([метрики](iis.performance.metric.md#httpsys))
-    - Waits for an HTTP request and then sends the __request__ to an IIS service for processing.
-      - HTTP.sys contacts WAS to obtain information from the __configuration__ store
+    - Waits for an HTTP request and then sends the __request__ to an IIS service for processing
+      - __HTTP.sys__ contacts WAS to obtain information from the __configuration__ store
         - WAS requests configuration information from the configuration store, __applicationHost.config__
-    		- The WWW Service receives configuration information, such as application pool and site configuration.
-            	- The WWW Service uses the configuration information to configure HTTP.sys.
-		- WAS starts a __worker process__ for the __application pool__ to which the request was made.
-	  - IIS __Application pool__ 1 ([метрики](iis.performance.metric.md#application-pool)) - container for __worker processes__, isolate site
-        - __IIS Worker Processes__ 1 ([метрики](iis.performance.metric.md#worker-process))
+        - __HTTP.sys__ receives from __WWW Service (W3SVC)__ configuration information, such as __IIS Application pool__ and __IIS WebSite__ configuration. 
+      - WAS starts\creater a __worker process__ for the __application pool__ to which the request was made.
+      - IIS __Application pool__ 1 ([метрики](iis.performance.metric.md#application-pool)) - logical container for __worker process (w3wp.exe)__, isolate site
+        - __IIS Worker Process__ 1 ([метрики](iis.performance.metric.md#worker-process))
 	      - ASP.NET: __CLR__ Thread ([метрики](iis.performance.metric.md#aspnet-clr-thread))
-            - ASP.NET __App__ 1 ([метрики](iis.performance.metric.md#app))
-            - ASP.NET App X
-        - IIS Worker Processes X
-      - IIS App pool X
-        - IIS Worker Processes 1
-        - IIS Worker Processes X
+            - Application 1 ([метрики](iis.performance.metric.md#app))
+            - Application X
+        - IIS Worker Process X
+      - IIS Application pool X
+        - IIS Worker Process 1
+        - IIS Worker Process X
     - When processing is complete, HTTP.sys sends the __response__ back to the browser.
     - HTTP.sys also has a __cache__ and if it has the requested file in cache it can return it directly to the client browser without having to contact any IIS services for processing.
   - listener [WCF Service](protocols.integration/wcf.md)

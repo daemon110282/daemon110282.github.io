@@ -48,7 +48,7 @@
 	- [Sentry](sentry.md)
 	- [Rollbar](https://rollbar.com/blog/error-tracking-with-vue-js/)
 	- DataDog
-	- LogRocket
+	- [LogRocket](logrocket.md)
 	- Airbrake
 	- [Sematext](https://sematext.com/blog/tracking-and-monitoring-spa-apps/)
 	- [Raygun](https://raygun.com/blog/spa-performance/)

@@ -32,7 +32,7 @@
   - плюсы
     - Support Protocol [OpenTelemetry](../protocols.integration/otel.md)
     - в Yandex Cloud используется (но переписан сильно)
-- Zipkin 0.7.0
+- [Zipkin](trace/zipkin.md) 0.7.0
   - минусы
     - [No active development](https://uptrace.dev/blog/distributed-tracing-tools.html)
     - java

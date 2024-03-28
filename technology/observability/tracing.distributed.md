@@ -5,7 +5,9 @@
   - [Response Time](#response-time)
   - [Технологии](#технологии)
 
-## X-Request-ID
+## Паттерны 
+
+### X-Request-ID
 
 - [When receives a web request](https://http.dev/x-request-id), it assigns each request a __unique request ID__, in the __HTTP header X-Request-ID__, and preserves that request ID across multiple log files. The HTTP request ID can help you diagnose problems by __correlating log entries__ for a given web request across many log files, which otherwise would not contain a common piece of information.
 - подходы к генерации
@@ -20,11 +22,17 @@
 - [apache drupal php](https://docs.acquia.com/cloud-platform/develop/drupal/requestid/)
 - [envoy](https://www.envoyproxy.io/docs/envoy/latest/configuration/http/http_conn_man/headers#x-request-id)
 
-## Response Time
+### Response Time
 
 [.NET in log](https://www.codeproject.com/Tips/5337523/Response-Time-Header-in-ASP-NET-Core)
 
 ## Технологии
+
+### Фреймворки
+
+- [Serilog](../serilog.md)
+
+### Data OTEL Collector
 
 [Compare](https://www.nginx.com/blog/integrating-opentelemetry-modern-apps-reference-architecture-progress-report?mkt_tok=NjUzLVNNQy03ODMAAAGDoZc8tBnTTPpd0LyW8jL4ptLEDNmRtqT86ruxAIy0w26Q36wbMRlF5KC3BMfg2BcRVqWCoPUW3J4gMfJLANmKejRzOQC80kmD2-ueYoqT-DoXcB1iUA)
 
@@ -47,3 +55,4 @@
   - минусы
     - dependency graph service
 - [Service Mesh](../middleware/servicemesh.md) [Istio](../middleware/service.mesh/istio.md)
+- [Seq](https://datalust.co/seq)

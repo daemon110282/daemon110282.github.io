@@ -68,7 +68,15 @@ SLI, SLA
   - [EventCatalog](https://www.eventcatalog.dev/docs/events/introduction)
 - REST
   - [OpenApi](openapi.md)
-- [Почему машино читаемый формат, а не Word](https://www.apimatic.io/blog/2017/04/why-your-api-needs-machine-readable-description-832e805f6855/): трансформация форматов, Search and Discovery, Sharing, Aggregation, Code Generation (server, client), Mock, Monitoring  
+- [Почему машино читаемый формат, а не Word](https://www.apimatic.io/blog/2017/04/why-your-api-needs-machine-readable-description-832e805f6855/):
+  - трансформация форматов
+  - Search and Discovery
+  - Sharing
+  - Aggregation
+  - Code Generation (server, client)
+  - Mock
+  - Monitoring  
+  - проверка качества\безопасности описания АПИ
 - [Json Schema](jsonschema.md)
 - TODO [Курс по документированию REST API](https://starkovden.github.io/)
 - [Шаблон описания](https://tyk.io/blog/whats-minimum-documentation-required-api/)
@@ -77,7 +85,8 @@ SLI, SLA
   - [WSDL](wsdl.md)
 - [Top API design tools](https://www.g2.com/categories/api-design)
   - [Postman](../technology/api/postman.md)
-
+  - [Insomnia](https://insomnia.rest/products/insomnia) (SOAP, gRPC, OpenApi, GraphQL)
+  - Editor Swagger (OpenApi, AsyncApi)
 ### API management
 
 [API management](api-managment.md)

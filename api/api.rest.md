@@ -56,6 +56,8 @@ REST API — это архитектурный подход, который ус
 - [Фильтрация](https://www.moesif.com/blog/technical/api-design/REST-API-Design-Filtering-Sorting-and-Pagination/)
 - Использование SSL
 - [HTTP методы](https://learn.microsoft.com/ru-ru/azure/architecture/best-practices/api-design#define-api-operations-in-terms-of-http-methods)
+  - POST, PUT, GET, DELETE
+  - PATCH - не входит в стандарт HTTP (не рекомендуется использовать)
   - [Методы, JSON, URI](https://habr.com/ru/post/447322/)
   - [SRP паттерн](../arch/patterns.md)
 - Эффективное использование [кодов ответов HTTP](api-http-status.md)

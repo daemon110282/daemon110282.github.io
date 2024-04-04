@@ -24,4 +24,4 @@
     - [Total latch wait Time](https://documentation.red-gate.com/sm/metrics-alerts-and-notifications/metrics-and-alerts-reference/list-of-metrics#Listofmetrics-Latchwaittime)  
   - Buffer cache hit ratio
 - Traffic
-  - Active transactions
+  - [Active transactions](https://habr.com/ru/articles/338498/)

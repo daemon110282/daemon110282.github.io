@@ -55,7 +55,10 @@ HA:
 - Обслуживания БД
   - __SHRINK__ [не всегда хорошо на больших БД](https://habr.com/ru/articles/741212/)
   - REBUILD индексов (INDEX REORGANIZE не рекомендуется на больших объемах БД)
-- __[SQL Plan](mssql.queryplan.md)__
+  - Rebuild table   
+  - Clear statistics 
+  - Index by table uses in night
+- __[SQL Plan](mssql.queryplan.md)__  
   - CPU can be reduced with __plan reuse__ and __join reduction__.
 - __IO__ performance 
   - can be reduced with good __indexing__, __join reduction__, and __high page life expectancy__.

@@ -55,11 +55,12 @@ HA:
 - Обслуживания БД
   - __SHRINK__ [не всегда хорошо на больших БД](https://habr.com/ru/articles/741212/)
   - REBUILD индексов (INDEX REORGANIZE не рекомендуется на больших объемах БД)
-- __SQL Plan__
+- __[SQL Plan](mssql.queryplan.md)__
   - CPU can be reduced with __plan reuse__ and __join reduction__.
 - __IO__ performance 
   - can be reduced with good __indexing__, __join reduction__, and __high page life expectancy__.
-- Memory is optimal when there are no sudden drops in Page Life Expectancy.
+- Memory 
+  - is optimal when there are no sudden drops in __Page Life Expectancy__
 
 ### Способы анализа производительности
 
@@ -81,23 +82,6 @@ HA:
 4. Вычислить времени выполнения на локальном сервере и на сервере разработчика (ручным способом)/ Результаты позволяют уверенно говорить о причинах медленной загрузки страниц (например редактирование анкеты) в браузере.
 
 - Аналитический отчёт по [трейсу Microsoft SQL Server tutorial](http://habrahabr.ru/post/243587/)
-
-#### Query plan
-
-![plan](../../img/technology/db/mssql/sql.query.life.jpg)
-
-- How to [view xml query plans graphically](https://docs.microsoft.com/ru-ru/sql/relational-databases/performance/save-an-execution-plan-in-xml-format?view=sql-server-ver15)
-	- Rename the file from .xml to .sqlplan and use Open File to launch it.
-- Анализ плана выполнения
-  - __Плохо__
-    - Index scan
-    - Rid / key lookup - чтение из [кучи databaselog](https://dotnettutorials.net/lesson/how-to-use-covering-index-to-reduce-rid-lookup/) - индексы надо настраивать
-    - Статистика плана запросов устаревает- см сколько записей оптимизатор предполагает вернуть, а сколько по факту
-    - Physical reads не из Buffer Cache Кеша данных (logical reads)
-  - __Хорошо__
-    - Index seek
-    - Logical reads
-      - но если их очень много, то ресурсы RAM сильно потребляются?
 
 ### Настройки
 

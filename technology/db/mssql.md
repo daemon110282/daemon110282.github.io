@@ -46,6 +46,7 @@ HA:
 Зависит от:
 
 - [Настроек OS, SQL Server](#настройки)
+  - Сервер [Uptime](https://www.sqlshack.com/different-ways-to-check-sql-server-uptime/)
 - [Блокировки](mssql.locks.md)
   - Blocking can be reduced with __index design__ and __short transactions__.
 - [Индексирование](mssql.index.md)

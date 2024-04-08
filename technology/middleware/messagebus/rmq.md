@@ -23,6 +23,10 @@
   - [Performance](#performance)
   - [Технологии](#технологии)
 
+## Зачем
+
+Реализация [паттерна интеграции](../../../arch/pattern/integration/pattern.integration.md) [Message Broker](../../../arch/pattern/integration/pattern.messagebroker.md).
+
 ## Плюсы и минусы
 
 Плюсы:

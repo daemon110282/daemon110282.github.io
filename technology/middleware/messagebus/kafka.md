@@ -2,6 +2,8 @@
 
 ## Зачем
 
+Реализация [паттерна интеграции](../../../arch/pattern/integration/pattern.integration.md) [Message Broker](../../../arch/pattern/integration/pattern.messagebroker.md).
+
 - Log processing and analysis
 - Data streaming in recommendations
 - System monitoring and alerting

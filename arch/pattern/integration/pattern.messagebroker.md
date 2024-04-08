@@ -59,7 +59,7 @@
 ## Технологии
 
 - Транспорт  
-	- Kafka
+	- [Kafka](../../../technology/middleware/messagebus/kafka.md)
 	- [RabbitMQ](../../../technology/middleware/messagebus/rmq.md)
 	- Azure service bus
 	- MSMQ

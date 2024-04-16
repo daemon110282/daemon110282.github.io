@@ -21,13 +21,15 @@ PlantUML - это инструмент для создания диаграмм,
 
 PlantUML может быть использован для создания диаграмм, которые помогают бизнес-аналитикам визуализировать и описать бизнес-процессы. 
 
-Альтернативы [D2, MermaidJS](https://icepanel.io/blog/2023-08-15-top-6-tools-for-text-based-uml-sequence-diagrams)
+## Альтернативы 
+
+- [D2, MermaidJS](https://icepanel.io/blog/2023-08-15-top-6-tools-for-text-based-uml-sequence-diagrams)
+- [Google Trends](https://trends.google.ru/trends/explore?date=today%205-y&q=mermaid%20diagramm,plantuml,d2%20diagramm&hl=ru)
 
 ### Диаграмма потока данных (Data Flow Diagram, DFD)
 
 Диаграмма потока данных используется для описания потоков данных между процессами, хранилищами данных и внешними сущностями. Эта диаграмма может быть создана с помощью PlantUML следующим образом:
 
-lessCopy code
 @startuml
 :Внешняя сущность:
 (Процесс 1) --> (Хранилище данных 1)

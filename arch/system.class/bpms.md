@@ -13,6 +13,15 @@
   - В будущем фоновая активность подхватит ее и закончит.
   - Система некоторое время находится в состоянии несогласованности, но нас это, в целом, устраивает.
 
+## Плюсы и минусы
+
+Плюсы:
+- визуализация всего процесса
+- контроль, мониторинг процесса
+
+Минусы:
+- единая точка отказа
+
 ## Паттерны
 
 - Машина состояний [FSM](../pattern/development/pattern.state.machine.md) - это __декларативная модель процесса__. Я не отдаю команды, я объявляю - декларирую - Правила:
@@ -30,4 +39,8 @@
 - [camunda](../../technology/middleware/bpms/camunda.md)
 - [apache activiti](https://habr.com/ru/companies/otus/articles/671360/)
 - Apache Airflow
-- ELZA?
+- [ELZA](../../technology/middleware/bpms/elza.md)
+
+### Примеры
+
+- [camunda](https://github.com/berndruecker/flowing-retail)

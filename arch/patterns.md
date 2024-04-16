@@ -50,6 +50,7 @@
   - Издатель подписчик
   - Оркестрация - есть дирижер
   - Хореография - нет централизованного управления (медиатора)
+    - [пример](https://learn.microsoft.com/ru-ru/azure/architecture/patterns/choreography#example)
 
 ## Управления данными
 

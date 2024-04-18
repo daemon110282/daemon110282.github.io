@@ -52,8 +52,8 @@
   - Wire Tap - наблюдение за сообщениями
 - Event Sourcing
 - Тип способа получения сообщений
-  - Pull
-  - Push
+  - Pull (по запросу)
+  - Push (подписка)
 - Как узнать когда сообщение в очередь добавлено - [Timestamp](https://www.rabbitmq.com/publishers.html#message-properties)
 
 ## Технологии

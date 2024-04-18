@@ -55,7 +55,7 @@
 
 ### Режимы доставки сообщений
 
-- Basic.get (__Poll__) - Доставка единичного сообщения по запросу
+- Basic.get (__Pull__) - Доставка единичного сообщения по запросу
 - Basic.Consume (__Push__) - Подписка на очередь (постоянный мониторинг очереди с доставкой всех сообщений)
 - QoS(prefetchCount) [Get vs consume](https://habr.com/ru/post/153431/)
 - http://onreader.mdl.ru/RabbitMQInDepth/content/Ch05.html

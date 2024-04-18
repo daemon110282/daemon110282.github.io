@@ -17,7 +17,7 @@
 ## Технологии
 
 - not k8s - хранилище требуется
-	- Library [Quartz.Net](https://habr.com/ru/companies/surfstudio/articles/685980/)
+	- Library [Quartz.Net](../../technology/middleware/job/quartz.md)
 - __хранилище НЕ требуется__ сервис stateless		
 	- Using a job pod running inside [k8s](../../technology/ci-cd/k8s.md)
 		- CronJob

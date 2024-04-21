@@ -1,0 +1,6 @@
+@startjson test
+{
+  "phone": "XXXX",
+  "sms_code": "1234"
+}
+@endjson

@@ -1,0 +1,102 @@
+@startuml object
+
+' Ассоциация - это такой тип при котором объекты будут ссылаться друг на друга. При этом они остаются полностью независимыми друг от друга.
+' Агрегация - это тип отношений когда один объект является частью другого. Агрегация образует слабую связь между объектами. Все зависимые классы инициализируются вне основного объекта. Комната-мебель
+' Композиция - это тип отношений при котором один объект может принадлежать только другому объекту и никому другому. При композиции образуется сильная связь между объектами. При таком типе отношений основной объект полностью обеспечивает жизненный цикл объектов от которых он зависит. Комната-стена
+
+car "1" *-- "many" wheel : contains, composition, owns
+garage o-- car : include, aggregation, has
+garage o-- tools: aggregation
+car ..> fuel: uses, dependency
+car --> road: order, direct association
+car <|-- audi: Extension, inheritance
+driver - car : association, drives >
+@enduml
+
+@startuml (id=chatgpt)
+actor Client
+participant "Личный кабинет" as ЛК
+participant "API Gateway" as Gateway
+participant "Бэкэнд" as Backend
+participant "Банковская система" as Bank
+
+Client -> ЛК: Входит в ЛК
+activate ЛК
+Client -> ЛК: Вводит телефон и код из СМС
+activate Client
+ЛК -> Gateway: Отправляет данные
+activate Gateway
+Gateway -> Backend: Запрос на данные клиента и займов
+activate Backend
+Backend -> Bank: Запрос данных о клиенте и займах
+activate Bank
+Bank --> Backend: Ответ с данными
+deactivate Bank
+Backend --> Gateway: Данные о клиенте и займах
+deactivate Backend
+Gateway --> ЛК: Полученные данные
+deactivate Gateway
+ЛК --> Client: Отображает данные
+deactivate ЛК
+@enduml
+
+@startuml (id=request_json)
+
+actor Client
+participant "Личный кабинет" as ЛК
+participant "API Gateway" as Gateway
+participant "Бэкэнд" as Backend
+participant "Банковская система" as Bank
+
+Client -> ЛК: Входит в ЛК
+activate ЛК
+Client -> ЛК: Вводит телефон и код из СМС
+activate Client
+ЛК -> Gateway: Отправляет данные
+activate Gateway
+Gateway -> Backend: Ссылка на JSON с запросом [[json_request.json some link]]
+note right
+!include json_request.json
+end note
+activate Backend
+Backend -> Bank: Запрос данных о клиенте и займах
+note right
+!include json_request.wsd
+end note
+activate Bank
+Bank --> Backend: Ответ с данными
+deactivate Bank
+Backend --> Gateway: Данные о клиенте и займах
+deactivate Backend
+Gateway --> ЛК: Полученные данные
+deactivate Gateway
+ЛК --> Client: Отображает данные
+deactivate ЛК
+@enduml
+
+@startuml  (id=request_json_in)
+actor Client
+participant "Личный кабинет" as ЛК
+participant "API Gateway" as Gateway
+participant "Бэкэнд" as Backend
+participant "Банковская система" as Bank
+
+Client -> ЛК: Входит в ЛК
+activate ЛК
+Client -> ЛК: Вводит телефон и код из СМС
+activate Client
+ЛК -> Gateway: Отправляет данные
+activate Gateway
+Gateway -> Backend: Ссылка на JSON с запросом\n\n```json\n{\n  "phone": "123456789",\n  "sms_code": "1234"\n}\n```
+activate Backend
+Backend -> Bank: Запрос данных о клиенте и займах
+activate Bank
+Bank --> Backend: Ответ с данными
+deactivate Bank
+Backend --> Gateway: Данные о клиенте и займах
+deactivate Backend
+Gateway --> ЛК: Полученные данные
+deactivate Gateway
+ЛК --> Client: Отображает данные
+deactivate ЛК
+@enduml

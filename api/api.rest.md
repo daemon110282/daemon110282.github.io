@@ -49,10 +49,7 @@ REST API — это архитектурный подход, который ус
 - [Версионность](https://learn.microsoft.com/ru-ru/azure/architecture/best-practices/api-design#versioning-a-restful-web-api)
   - Версия вашего приложения
 - [Сортировка](https://gist.github.com/fomvasss/c1221b2464be94870f7f823c74520665)
-- [Пагинация](https://github.com/Microsoft/api-guidelines/blob/master/Guidelines.md#98-pagination)
-  - [Offset Pagination](https://www.moesif.com/blog/technical/api-design/REST-API-Design-Filtering-Sorting-and-Pagination/#offset-pagination)
-  - Seek Pagination
-  - [HATEOS](https://developer.atlassian.com/server/confluence/pagination-in-the-rest-api/)
+- [Пагинация](#Пагинация)  
 - [Фильтрация](https://www.moesif.com/blog/technical/api-design/REST-API-Design-Filtering-Sorting-and-Pagination/)
 - Использование SSL
 - [HTTP методы](https://learn.microsoft.com/ru-ru/azure/architecture/best-practices/api-design#define-api-operations-in-terms-of-http-methods)
@@ -72,6 +69,23 @@ REST API — это архитектурный подход, который ус
 - Исключать создание [методов массовых изменений](https://habr.com/ru/articles/736892/)
 
 ![best](../img/api/best.practice.jpg)
+
+### Пагинация
+
+- Цели [Пагинация](https://github.com/Microsoft/api-guidelines/blob/master/Guidelines.md#98-pagination)
+  - уменьшает объем ненужных данных, передаваемых клиенту
+  - сокращает объем ненужных вычислений на серверах приложений
+- [Offset Pagination](https://www.moesif.com/blog/technical/api-design/REST-API-Design-Filtering-Sorting-and-Pagination/#offset-pagination) (limit, offset)
+- Seek Pagination
+- [HATEOS](https://developer.atlassian.com/server/confluence/pagination-in-the-rest-api/)
+- [Patterns](https://microservice-api-patterns.org/patterns/quality/dataTransferParsimony/Pagination#sec:Pagination:Variants)
+  - Page-Based Pagination (a somewhat tautological name)
+  - Offset-Based Pagination
+  - Cursor-Based Pagination (also known as Token-Based Pagination) 
+  - Time-Based Pagination
+- Размер страницы
+  - Provide a __[default page size](https://codedamn.com/news/backend/rest-api-pagination-handling-large-data-sets)__ and allow clients to specify their desired page size __within reasonable limits__
+  - RESTful API, которые возвращают коллекции, __МОГУТ возвращать [частичные наборы](https://github.com/Microsoft/api-guidelines/blob/master/Guidelines.md#98-pagination)__. Пользователи этих сервисов __ДОЛЖНЫ ожидать частичные результирующие наборы__ и корректно просматривать страницы, чтобы получить весь набор.
 
 ## CheckList
 

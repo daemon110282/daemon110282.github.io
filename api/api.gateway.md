@@ -27,10 +27,7 @@ communication to multiple microservices
 - [Mock](../arch/pattern/mock.md)
 - __Security issues__ Сокрытие внутренних API ИС от внешних ИС потребителей
   - Without a gateway, all the microservices must be exposed to the “external world"
-- __“backend for frontend”__ (BFF) разные типы клиентов (интернет веб приложение, мобильное приложение, интранет веб приложение и тп) могут иметь разные требования по интеграции для
-  - сокращения трафика
-  - снижения числа запросов, т.к. влияет на заряд мобильного приложения
-  - __facade__ especially [made for mobile apps](https://microservices.io/patterns/apigateway)
+- [Паттерн BFF](../arch/pattern/integration/pattern.bff.md)
 
 Функции [Load Balancer](../arch/pattern/deployment/load.balancing.md)
 
@@ -47,6 +44,11 @@ communication to multiple microservices
 - Monetize
 - Трансформация запросов REST2RMQ, REST2gRPC и тп.
   - client apps communicate with services that use __non-Internet-friendly protocols(amqp)__
+
+Поддержка WebSocket:
+
+- [Kong](../technology/middleware/api.gateway/gw.kong.md)
+- [Gravitie](../technology/middleware/api.gateway/gw.gravitee.md)
 
 Тодо
 - https://link.medium.com/Cu6FA4CrHub
@@ -78,10 +80,10 @@ communication to multiple microservices
 - Open Source
   - [Ocelot](https://medium.com/aspnetrun/building-ocelot-api-gateway-microservices-with-asp-net-core-and-docker-container-13f96026e86c)
   - [Gravitie](../technology/middleware/api.gateway/gw.gravitee.md)
-  - [Kong](../technology/middleware/api.gateway/gw.kong.md)
-  - Tyk
+  - [Kong](../technology/middleware/api.gateway/gw.kong.md)  
   - Envoy
 - Commercial
+  - Tyk
   - [traefik](../technology/middleware/api.gateway/gw.traefik.md)  
     - [vs NGINX](https://www.kubecost.com/kubernetes-devops-tools/traefik-vs-nginx/)
   - [Citrix ADC (Netscaler)](../technology/middleware/proxy/proxy.netscaler.md)

@@ -10,6 +10,7 @@
 	- [AsyncApi Kafka2REST Converter](https://landing.gravitee.io/gravitee-bootcamp-eda-architecture?utm_medium=email&_hsmi=220813766&_hsenc=p2ANqtz--aQoEpx3MGQeHmqGtkB0aZcSlSWvGMWioDX4a1TQ8BeTnYylQp6bHhEOssHTkOztkmzCHAqgnTIJb2SUh9e_XaJU-Mrw&utm_content=220813766&utm_source=hs_automation)
 - [Опыт X5Tech](https://habr.com/ru/companies/X5Tech/articles/543324/)
 - API designer [commercial only, too much cost](https://www.gravitee.io/platform/api-designer)
+- [Поддержка WebSocket, SSE](https://documentation.gravitee.io/apim/guides/create-apis#supported-api-styles-event-brokers-and-communication-patterns)
 
 ## Deployment
 

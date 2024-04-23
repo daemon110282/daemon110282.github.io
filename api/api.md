@@ -23,15 +23,15 @@ API - Application Programming Interface, что значит программн�
 
 - [REST API](api.rest.md)
 - [gRPC](grpc.md)
-- GraphQL
+- [GraphQL](../technology/protocols.integration/graphql.md)
 - [Вебхуки Webhook](webhook.md)
 - [SOAP](wsdl.md)
   - ESB
 - EDI
-- SSE
+- Server Side Events [SSE](../technology/protocols.integration/sse.md)
 - AMQP
 - MQTT
-- WebSocket
+- [WebSocket](../technology/protocols.integration/websocket.md)
 
 ![Alt text](../img/api/api.protocols.jpg)
 

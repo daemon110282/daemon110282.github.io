@@ -9,3 +9,4 @@
 - Observability
     - Zipkin and Jaeger
     - Prometheus, Grafana
+- [Поддержка WebSocket](https://socketzone.com/725/kong-websocket) (проксирование)

@@ -8,9 +8,7 @@
 	- [Circuit Breakers](#circuit-breakers)
 	- [Redilivery](#redilivery)
 	- [Rate limit](#rate-limit)
-	- [Transactional outbox](#transactional-outbox)
-	- [Transactional Inbox](#transactional-inbox)
-
+	
 ## Зачем
 
 Реализация [паттернов обработки сбоев](../../../../arch/pattern/fault.tolerance/pattern.failure.md) для обеспечения атрибута качества ИС [Отказоустойчивость Fault tolerance](../../../../arch/ability/faulttolerance.md):
@@ -26,40 +24,34 @@
 	- реализует __то же самое поведение__ что и метод отклика __Basic.Reject__, но при этом он __добавляет несколько отсутствующих аргументов__ к множественному поведению Basic.Ack.
 	- Выступая в качестве частного дополнения RabbitMQ для протокола AMQP, Basic.Nack __не гарантирует его присутствия в прочих брокерах AMQP__, [таких как QPID или ActiveMQ](http://onreader.mdl.ru/RabbitMQInDepth/content/Ch05.html). 
 
-## Dead Letter eXchange (DLX)
+## Patterns
+
+- [Transactional outbox](../../../../arch/pattern/transact.outbox.md)
+- [Transactional Inbox](../../../../arch/pattern/transact.inbox.md)
+
+### Dead Letter eXchange (DLX)
 
 - x-mesage-ttl — превышение времени жизни;
 - x-max-length — превышение длины очереди;
 - reject with __reueue = false__ — явный реджект сообщений со стороны консьюмера.
 
-## Exc=Direct Queue DLX
+### Exc=Direct Queue DLX
 
 - must specify a [dead letter routing key](https://stackoverflow.com/questions/21742232/rabbitmq-dead-letter-exchange-never-getting-messages)
 - https://javascopes.com/spring-amqp-error-handling-8dbc1045/
 
-## Retry Policy
+### Retry Policy
 
 - [MassTransit](https://masstransit.io/documentation/concepts/exceptions)
 
-## Circuit Breakers
+### Circuit Breakers
 
 - [MassTransit](https://masstransit.io/documentation/concepts/exceptions)
 
-## Redilivery
+### Redilivery
 
 - [MassTransit](https://masstransit.io/documentation/concepts/exceptions#redelivery)
 
-## Rate limit
+### Rate limit
 
 - [masstransit](https://www.gokhan-gokalp.com/en/messaging-yapilarinda-masstransit-ile-error-ve-redeliver-handling/)
-
-## Transactional outbox
-
-- [Паттерн Transactional outbox\Application events](https://microservices.io/patterns/data/transactional-outbox.html)
-  - [example](https://itnext.io/the-outbox-pattern-in-event-driven-asp-net-core-microservice-architectures-10b8d9923885)
-  - [masstransit](https://masstransit.io/documentation/concepts/exceptions#outbox)
-
-## Transactional Inbox
-
-- Паттерн [Transactional Inbox](https://softwaremill.com/microservices-101/)
-  - [abp.io](https://docs.abp.io/en/abp/latest/Distributed-Event-Bus)

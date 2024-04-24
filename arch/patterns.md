@@ -32,8 +32,8 @@
   - Decompose by [subdomain](pattern/system.design/ddd.md)
   - Service per Team
 - [Transaction Management Patterns](https://airtable.com/embed/shrjiJuF7kIbcnXRl/tblgszzLV27MUFP4p) (5 Patterns)
-  - [Transactional Outbox](https://microservices.io/patterns/data/transactional-outbox.html)
-  - [Transactional Inbox](https://softwaremill.com/microservices-101/)
+  - [Transactional Outbox](pattern/transact.outbox.md)
+  - [Transactional Inbox](pattern/transact.inbox.md)
   - Saga
   - Polling publisher
   - Transaction log tailing

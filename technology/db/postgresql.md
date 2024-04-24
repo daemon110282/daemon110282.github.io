@@ -97,6 +97,10 @@
   - Stolon 
 - необходимо Distributed Key-Value хранилище (DCS_: etcd, Consul, ZooKeeper и Kubernetes API
 
+### Мониторинг
+
+- [Стандартные возможности](https://postgrespro.ru/docs/postgrespro/9.5/monitoring)
+
 ## Плюсы-минусы
 
 - опытный специалист, обладающий достаточными компетенциями в настройке и оптимизации CentOS, файловой системы и самого PostgreSQL.
@@ -134,11 +138,20 @@
   - [HammerDB TPM](https://www.enterprisedb.com/blog/how-to-benchmark-postgresql-using-hammerdb-open-source-tool)
   - [Pgbench TPS vs Connection](https://www.enterprisedb.com/blog/pgbench-performance-benchmark-postgresql-12-and-edb-advanced-server-12)
 
-### Миграция с MS SQL
+### Блокировки Locks
+
+- [Locky type by DELETE](https://pglocks.org/?pgcommand=DELETE)
+- [Явные блокировки - режимы](https://postgrespro.ru/docs/postgrespro/9.5/explicit-locking) блокировки на уровне 
+  - таблицы
+    - все и режимы блокировки __работают на уровне таблицы__, даже если имя режима содержит слово «__row__»; такие имена сложились исторически.
+  - [строки](https://postgrespro.ru/docs/postgrespro/9.5/explicit-locking#locking-rows)
+- системное представление pg_locks
+
+## Миграция с MS SQL
 
 - Compare [SSIS, SQLPipe, Airbyte, AWS Data pipeline](https://www.sqlpipe.com/blog/ssis-alternatives) в [таблице](https://docs.google.com/spreadsheets/d/16DrvIIczpy4V-4BzNvtI-IyNQfkU21GFX-JcWEjkf4A/edit#gid=0)
 
-#### Миграция с простоем
+### Миграция с простоем
 
 [Миграция](../../arch/pattern/refactoring/migration.md) "большим взрывом" с простоем
 
@@ -160,7 +173,7 @@
       - TODO DMS
     - [SQL скрипты на схему и данные через CSV](https://github.com/yogimehla/SQLtoPostgresMigrationScript)
 
-#### Миграция без простоя Zero Downtime
+### Миграция без простоя Zero Downtime
 
 Постепенная, __итеративная__ миграция - Zero Downtime
 

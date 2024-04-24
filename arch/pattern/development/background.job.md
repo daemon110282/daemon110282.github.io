@@ -46,7 +46,7 @@
 
 ## Паттерны
 
-Реализация pattern [Command](./command.md) и [Command Bus](../command.bus.md)
+Реализация pattern [Command](command.md) и [Command Bus](command.bus.md)
 
 - Feature
   - Retry
@@ -64,6 +64,9 @@
 
 ## Технологии
 
-- [.NET ABP](https://docs.abp.io/en/abp/4.4/Background-Jobs)
-  - Abp.io support RMQ in [job](https://docs.abp.io/en/abp/4.4/Background-Jobs-RabbitMq)
+- .NET
+  - .net core [IHostedService](https://habr.com/ru/articles/658847/)
+  - [hangfire](https://www.hangfire.io/)
+  - [.NET ABP](https://docs.abp.io/en/abp/4.4/Background-Jobs)
+    - Abp.io support RMQ in [job](https://docs.abp.io/en/abp/4.4/Background-Jobs-RabbitMq)
 - [PHP](../../../technology/framework/php.md)

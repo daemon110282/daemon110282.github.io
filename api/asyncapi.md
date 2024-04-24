@@ -15,11 +15,16 @@
   - [RMQ](https://github.com/asyncapi/dotnet-rabbitmq-template)
 - [Генерация моделей по AsyncApi формату](https://github.com/asyncapi/modelina)
   - [My test](https://github.com/daemon110282/api)
-- [Auto AsyncAPI Docs](https://www.asyncapi.com/docs/tools)
-  - [Neuroglia](https://github.com/neuroglia-io/AsyncApi)
-    - не поддерживает вложенные объекты в сообщении
-  - [Saunter](https://github.com/tehmantra/saunter)
 
 - TODO move\merge to\from https://github.com/daemon110282/api
 
 ![model](../img/api/asyncapi.model.jpg)
+
+## Auto Docs 
+
+- [Tools AsyncAPI](https://www.asyncapi.com/docs/tools)
+- NET
+  - [Neuroglia](https://github.com/neuroglia-io/AsyncApi)
+    - не поддерживает вложенные объекты в сообщении
+    - [пример 2023](https://bartwullems.blogspot.com/2023/06/asyncapiaspnet-core-integration.html)
+  - [Saunter](https://github.com/tehmantra/saunter)

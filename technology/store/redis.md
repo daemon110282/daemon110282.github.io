@@ -42,7 +42,7 @@ Redis - Remote Dictionary Service in __memory__.
     	- [lists VS sets](https://hashnode.com/post/differences-between-lists-and-sets-in-redis-ciojr30i401g3lh5364dkoqwv)
 	- [Sorted sets](https://redis.io/docs/data-types/sorted-sets/)
 	- Hashes
-- Redis Sentinel — это сервис, обеспечивающий создание __распределённых систем__.
+- Redis Sentinel — это сервис, обеспечивающий создание __распределённых систем__
 - Redis cluster
 - TTL
 	- type key-value

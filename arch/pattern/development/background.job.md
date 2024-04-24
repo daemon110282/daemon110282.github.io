@@ -46,7 +46,7 @@
 
 ## Паттерны
 
-Реализация pattern [Command](command.md) и [Command Bus](command.bus.md)
+Реализация паттерна [Command](command.md) и [Command Bus](command.bus.md)
 
 - Feature
   - Retry
@@ -62,11 +62,14 @@
   - Disable Job
   - Distributed Lock only [one handle allow in cluster server mode](https://docs.abp.io/en/abp/latest/Background-Jobs#clustered-deployment)
 
+Частный случай паттерна - [Cron Job](cron.job.md).
+
 ## Технологии
 
 - .NET
+  - [Quartz](../../../technology/middleware/job/quartz.md)
   - .net core [IHostedService](https://habr.com/ru/articles/658847/)
-  - [hangfire](https://www.hangfire.io/)
+  - [Hangfire](../../../technology/middleware/job/hangfire.md)
   - [.NET ABP](https://docs.abp.io/en/abp/4.4/Background-Jobs)
     - Abp.io support RMQ in [job](https://docs.abp.io/en/abp/4.4/Background-Jobs-RabbitMq)
 - [PHP](../../../technology/framework/php.md)

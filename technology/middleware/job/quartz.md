@@ -10,13 +10,13 @@
 
 ## Зачем
 
-Реализация паттерна [Job](../../../arch/pattern/cron.job.md).
+Реализация паттерна [Job](../../../arch/pattern/development/cron.job.md), [Background Job](../../../arch/pattern/development/background.job.md).
 
 Основные [понятия](https://habr.com/ru/companies/surfstudio/articles/685980/):
 
 - SchedulerFactory — интерфейс фабрики для создания Scheduler.
 - Scheduler — основной класс библиотеки, через который происходит управление планировщиком задач.
-- Job — интерфейс для создания задач с запланированным выполнением.
+- Job — интерфейс для [создания задач с запланированным выполнением](https://andrewlock.net/using-quartz-net-with-asp-net-core-and-worker-services/)
 - JobDetail — интерфейс для создание инстансов Job.
 - Trigger — интерфейс для определения расписания выполнения задач
 - JobBuilder и TriggerBuilder — вспомогательные классы для создания инстансов JobDetail и Trigger.
@@ -59,6 +59,15 @@
   - В настоящее время пользователям придется вписывать эту логику в свою реализацию задания, чтобы пропустить работу, если имена хостов совпадают с некоторым известным списком (VetoJobExecution).
     - you can use proper group name for triggers & jobs based on machine name in cluster (for identification) and see if the group name of triggers correspond to machine name it is firing on (attach a trigger listener and make corresponding checks in VetoJobExecution and return false if the job should not be run in that machine, else return true).
   - вариант реализации на [группах заданий Java](https://github.com/Evolveum/quartz/tree/quartz-2.3.0.e2)
+
+### Job Store
+
+[Варианты](https://www.quartz-scheduler.net/documentation/quartz-3.x/tutorial/job-stores.html)
+
+- RDBMS БД (MSSQL, PGSQL)
+- NOSQL (через плагины)
+	- MongoDB
+	- [Redis](https://github.com/icyice80/QuartzRedisJobStore) - не поддерживается кластерный режим Redis
 
 ## Версии
 

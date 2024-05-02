@@ -27,3 +27,4 @@
 
 - [example](https://itnext.io/the-outbox-pattern-in-event-driven-asp-net-core-microservice-architectures-10b8d9923885)
 - [masstransit](https://masstransit.io/documentation/concepts/exceptions#outbox)
+- [nservicebus](https://docs.particular.net/nservicebus/outbox/)

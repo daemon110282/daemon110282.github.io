@@ -176,6 +176,8 @@ To-do
     - [lighthouse](https://developer.chrome.com/docs/lighthouse/overview/)
 - Yandex [ИКС](https://kokoc.com/terminy/chto-takoe-iks-sajta-v-yandekse/)
   - Учитывает Web Vitals
+- Navigation timing API 
+  - Метрики: DNS, transfer time, response time, TCP 
 
 ### Service Metrics
 

@@ -99,6 +99,7 @@
 
 ### Мониторинг
 
+- [Метрики производительности](postgresql.performance.metric.md)
 - [Стандартные возможности](https://postgrespro.ru/docs/postgrespro/9.5/monitoring)
 
 ## Плюсы-минусы

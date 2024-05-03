@@ -25,6 +25,17 @@
 	- top 5 больших (кол-во возвращаемых данных) query модуль pg_stat_statements
 	- частые чекпоинты pg_stat_bgwriter (IO влияние)
 
+
+TODO:
+
+1.	Cache read speed (MB/s) Скорость чтения в Мб/c из памяти (кэша) 
+2.	Cache write speed (MB/s)  Скорость записи в Мб/c в память (кеш) 
+3.	Temp read speed (MB/s)  Скорость чтения в Мб/c данных из временных файлов 
+4.	Temp write speed (MB/s)  Скорость записи в Мб/c данных во временные файлы 
+5.	Cache Hit Ratio – вероятность попадания в кеш 
+6.	Memory/Temp ratio  Соотношение записи в память и временные файлы 
+7.	CPU heavy queries (s )  Потреблённые ресурсы CPU (в сек) со стороны тяжелого запроса в момент его окончания, если его длительность больше чем 10 сек.
+
 ## Доступность
 
 - sum(total_time)/sum(calls) [pg_stat_statements](https://habr.com/ru/articles/486710/)

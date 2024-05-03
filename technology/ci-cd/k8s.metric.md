@@ -1,8 +1,22 @@
-#
+# k8s метрики
+
+## Доступность
+
+- Состояние подов — ready (сколько реплик доступно), status, restarts (количество рестартов), age (сколько времени приложение запущено)
+- Статус развертываний (Deployments) — desired (целевое количество реплик), current (текущее количество реплик), up-to-date (сколько реплик обновлено), available (сколько реплик доступно), age (сколько времени приложение запущено)
+- Статус StatefulSets
+- Статистика выполнения CronJobs
+- Использование ресурсов подом (процессор и память)
+- Проверки работоспособности (Health checks)
+- События Kubernetes
+- Запросы к API-серверу
+- Статистика Etcd
+- Статистика смонтированных томов.
 
 ## OOMKilled
 
-https://songrgg.github.io/operation/how-to-alert-for-Pod-Restart-OOMKilled-in-Kubernetes/
+- [Метрики](https://songrgg.github.io/operation/how-to-alert-for-Pod-Restart-OOMKilled-in-Kubernetes/)
+- Пример
 	
 kube_pod_container_resource_limits{resource="memory", pod=""}
 

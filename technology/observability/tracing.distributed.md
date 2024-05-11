@@ -36,7 +36,7 @@
 
 ### Фреймворки
 
-- [Serilog](../serilog.md)
+- [Serilog](./logging/serilog.md)
 
 ### Data OTEL Collector
 

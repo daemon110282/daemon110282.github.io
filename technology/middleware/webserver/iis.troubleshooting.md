@@ -13,17 +13,17 @@
 
 ## Dump
 
-- [Windows Debugging Tools](todo) installed on the server (takes longer)
-- [ProcDump](todo) (faster)
+- [Windows Debugging Tools](../../todo) installed on the server (takes longer)
+- [ProcDump](../../todo) (faster)
 
 ## Трассировка
 
 - [Fiddler on iis app](http://www.markhneedham.com/blog/2009/06/24/using-fiddler-with-iis/)
 - IIS Failed Request Tracing [FREB](https://blogs.msdn.microsoft.com/docast/2016/04/28/troubleshooting-iis-request-performance-slowness-issues-using-freb-tracing/)
 	- For slow __ASP.NET Webforms applications__
-	- for troubleshooting slow ASP.NET MVC web sites using __[PerfView](perfview.md)__
+	- for troubleshooting slow ASP.NET MVC web sites using __[PerfView](../../perfview.md)__
 - [CPU, ERROR, RAM leak](https://www.iis.net/learn/troubleshoot/performance-issues)
-- [WCF](protocols.integration/wcf.troubleshooting.md#трассировка)
+- [WCF](../../protocols.integration/wcf.troubleshooting.md#трассировка)
 
 ## Use case
 
@@ -50,7 +50,7 @@
     - cd %windir%\System32\inetsrv and run __appcmd list wp__
     - This will show the process identifier (PID) of the w3wp.exe process in quotes. You can match that PID with the PID available in Task Manager.
   - To determine what is causing the problem:
-    - A [Performance Monitor](perfmon.md) data collector set
+    - A [Performance Monitor](../../perfmon.md) data collector set
     - A user-mode memory dump of the w3wp.exe process
       - collect user-mode [process dumps](https://learn.microsoft.com/en-us/troubleshoot/developer/webapps/iis/health-diagnostic-performance/troubleshoot-high-cpu-in-iis-app-pool) when a high CPU condition occurs is to use Debug Diagnostics.
 
@@ -79,7 +79,7 @@
   - is blocking __calls that could be asynchronous__
     - Many synchronous blocking calls lead to Thread Pool starvation and __degraded response times__
 - Проверки
-  - profiler, such as [PerfView](perfview.md), can be used to find threads frequently added to the Thread Pool. The "Microsoft-Windows-DotNETRuntime/ThreadPoolWorkerThread/Start" event indicates a thread added to the thread pool.
+  - profiler, such as [PerfView](../../perfview.md), can be used to find threads frequently added to the Thread Pool. The "Microsoft-Windows-DotNETRuntime/ThreadPoolWorkerThread/Start" event indicates a thread added to the thread pool.
 - Решение
   - IIS by default will only allow 1 thread per processor core to actively dequeue requests (that MaxConcurrency setting). 
     - In a CPU-bound workload, having more threads does not result in a higher RPS, but lower RPS instead because more of the processor bandwidth is spent context switching.

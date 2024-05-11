@@ -83,17 +83,17 @@
         - IIS Worker Process X
     - When processing is complete, HTTP.sys sends the __response__ back to the browser.
     - HTTP.sys also has a __cache__ and if it has the requested file in cache it can return it directly to the client browser without having to contact any IIS services for processing.
-  - listener __[WCF Service](protocols.integration/wcf.md)__
+  - listener __[WCF Service](../../protocols.integration/wcf.md)__
 
 [MIRO flow](https://miro.com/app/board/uXjVOMlBLHQ=/?moveToWidget=3458764577785621378&cot=14)
 
 ## Мониторинг
 
 - [Метрики](iis.performance.metric.md)
-	- Производительность измеряют показатели атрибута качества ИС [Быстродействие](../arch/ability/performance.md)
+	- Производительность измеряют показатели атрибута качества ИС [Быстродействие](../../../arch/ability/performance.md)
 	- Надежность
 - Сбор метрик
-  - [Performance Monitor Windows Server](perfmon.md)
+  - [Performance Monitor Windows Server](../../perfmon.md)
   - [Zabbix Agent Metric](https://www.zabbix.com/integrations/iis)
   - [Grafana](https://grafana.com/docs/grafana-cloud/data-configuration/integrations/integration-reference/integration-microsoft-iis/)
 
@@ -106,11 +106,11 @@
 - [example](https://mlichtenberg.wordpress.com/2011/02/03/-log-parser-rocks-more-than-50-examples/)
 - Hourly Bandwidth (__chart__) Requests by URI
 - __Search__ the Event Log for W3SVC (IIS)
-- For example, Bytes Sent and Bytes Received are not selected, but they are very useful when troubleshooting a performance problem.  
+- Bytes Sent and Bytes Received are not selected, but they are very useful when troubleshooting a performance problem.  
 	- в IIS логах есть?? sc-bytes, cs-bytes	НЕТУ
-- https://docs.microsoft.com/en-us/iis/troubleshoot/performance-issues/troubleshooting-iis-performance-issues-or-application-errors-using-logparser
-- !!! https://docs.microsoft.com/en-us/iis/troubleshoot/performance-issues/troubleshooting-high-cpu-in-an-iis-7x-application-pool
-- http://software-testing.ru/library/testing/performance-testing/468-weblog
+- [sample](https://docs.microsoft.com/en-us/iis/troubleshoot/performance-issues/troubleshooting-iis-performance-issues-or-application-errors-using-logparser)
+- [!!!](https://docs.microsoft.com/en-us/iis/troubleshoot/performance-issues/troubleshooting-high-cpu-in-an-iis-7x-application-pool)
+- [weblog](http://software-testing.ru/library/testing/performance-testing/468-weblog)
 
 ## Диагностика Troubleshooting
 

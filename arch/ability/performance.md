@@ -31,7 +31,7 @@
 - НТ метрика от. Netexport записать, эталон. Конфигурация ПК клиента. С кешем из firebug.
 - тайминг логировать
 - Yslow, page speed chrome
-- HTTP Error 503.2 — Service Unavailable в логах [IIS](../../technology/iis.md) есть - __очередь запросов__
+- HTTP Error 503.2 — Service Unavailable в логах [IIS](../../technology/middleware/webserver/iis.md) есть - __очередь запросов__
 - The __Time-Taken__ - field shows the length of time that it takes for a request to be processed and its response to be sent.  
   - This value gets calculated by a timer that gets initialized when the __IIS server receives the first byte of an HTTP request__, and stopped when the __last IIS response send operation completes__.  
   - It is important to note that the Time-Taken field __usually includes the time that the request and response packets are travelling over the network__.
@@ -75,4 +75,4 @@
 ## TODO
 
 - [UMP](https://airtable.com/embed/shrj9QkstRkVlFW0i/tblzJXJYUlj4aCHaJ)
-- http://sixrevisions.com/web-performance/improve-website-speed-02/
+- [speed](http://sixrevisions.com/web-performance/improve-website-speed-02/)

@@ -11,7 +11,7 @@
   - Calls Outstanding
   - Calls Per Second
 - Instances by Service
-  - Instances 
+  - Instances
   - Instances Created Per Second
 - Parallelism by Service
   - [Percent Of Max Concurrent Calls](https://learn.microsoft.com/en-us/dotnet/framework/wcf/diagnostics/performance-counters/percent-of-max-concurrent-calls)

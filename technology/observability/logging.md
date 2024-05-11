@@ -3,7 +3,7 @@
 Фреймворки для логирования:
 
 - [Google Trend NLog log4net serilog (в топе)](https://trends.google.ru/trends/explore?date=2013-01-01%202021-01-04&q=%2Fg%2F12226rbp,log4net,serilog)
-- [serilog](../serilog.md) 
+- [serilog](./logging/serilog.md)
 
 Системы просмотра логов:
 

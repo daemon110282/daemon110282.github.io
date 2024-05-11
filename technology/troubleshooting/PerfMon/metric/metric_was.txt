@@ -1,2 +1,3 @@
-\WAS_W3WP(*)\Total Messages Sent to WAS
 \WAS_W3WP(*)\Total WAS Messages Received
+\WAS_W3WP(*)\Total Messages Sent to WAS
+

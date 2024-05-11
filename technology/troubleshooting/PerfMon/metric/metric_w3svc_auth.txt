@@ -1,0 +1,15 @@
+\Web Service(*)\Current Connections
+
+\Web Service(*)\Bytes Sent/sec
+\Web Service(*)\Bytes Received/sec
+
+\Web Service(*)\Anonymous Users/sec
+\Web Service(*)\NonAnonymous Users/sec
+\Web Service(*)\Connection Attempts/sec
+\Web Service(*)\Logon Attempts/sec
+
+\Web Service(*)\Get Requests/sec
+\Web Service(*)\Post Requests/sec
+\Web Service(*)\Head Requests/sec
+\Web Service(*)\Put Requests/sec
+\Web Service(*)\Delete Requests/sec

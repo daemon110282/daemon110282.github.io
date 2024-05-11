@@ -7,5 +7,6 @@ logman delete was
 logman delete iis
 logman delete httpsys
 logman delete w3wp
+logman delete w3svc
 logman delete aspnet
 logman delete aspnet_latency

@@ -34,6 +34,10 @@ logman create counter w3wp -f bincirc
 logman update counter w3wp -cf metric\metric_w3wp.txt
 logman update counter w3wp -si 15 -v mmddhhmm
 
+logman create counter w3svc -f bincirc
+logman update counter w3svc -cf metric\metric_w3svc.txt
+logman update counter w3svc -si 15 -v mmddhhmm
+
 logman create counter aspnet -f bincirc
 logman update counter aspnet -cf metric\metric_aspnet.txt
 logman update counter aspnet -si 15 -v mmddhhmm

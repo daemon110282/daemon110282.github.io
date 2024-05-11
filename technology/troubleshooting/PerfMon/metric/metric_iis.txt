@@ -1,2 +1,2 @@
-\APP_POOL_WAS(*)\Maximum Worker Processes
-\APP_POOL_WAS(*)\Current Worker Processes
+\APP_POOL_WAS(bpmonline)\Maximum Worker Processes
+\APP_POOL_WAS(bpmonline)\Current Worker Processes

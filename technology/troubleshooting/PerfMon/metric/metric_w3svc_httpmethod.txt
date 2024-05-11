@@ -1,0 +1,5 @@
+\Web Service(*)\Get Requests/sec
+\Web Service(*)\Post Requests/sec
+\Web Service(*)\Head Requests/sec
+\Web Service(*)\Put Requests/sec
+\Web Service(*)\Delete Requests/sec

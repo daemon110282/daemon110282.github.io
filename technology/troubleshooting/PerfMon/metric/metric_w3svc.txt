@@ -1,0 +1,6 @@
+\Web Service(*)\Current Connections
+\Web Service(*)\Connection Attempts/sec
+
+\Web Service(*)\Bytes Sent/sec
+\Web Service(*)\Bytes Received/sec
+

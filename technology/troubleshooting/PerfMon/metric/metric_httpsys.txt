@@ -1,5 +1,4 @@
 \HTTP Service Request Queues(bpmonline)\CacheHitRate
-\HTTP Service Request Queues(bpmonline)\RejectedRequests
 \HTTP Service Request Queues(bpmonline)\RejectionRate
 \HTTP Service Request Queues(bpmonline)\ArrivalRate
 \HTTP Service Request Queues(bpmonline)\MaxQueueItemAge

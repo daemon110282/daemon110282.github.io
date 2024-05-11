@@ -4,5 +4,7 @@
 \System\Threads 
 
 \Process(w3wp)\% Processor Time
+\Process(w3wp)\Private Bytes
+\Process(w3wp)\Virtual Bytes
 
 \Process(svchost)\% Processor Time

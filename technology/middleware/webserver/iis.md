@@ -93,7 +93,7 @@
 	- Производительность измеряют показатели атрибута качества ИС [Быстродействие](../../../arch/ability/performance.md)
 	- Надежность
 - Сбор метрик
-  - [Performance Monitor Windows Server](../../perfmon.md)
+  - [Performance Monitor Windows Server](../../troubleshooting/perfmon.md)
   - [Zabbix Agent Metric](https://www.zabbix.com/integrations/iis)
   - [Grafana](https://grafana.com/docs/grafana-cloud/data-configuration/integrations/integration-reference/integration-microsoft-iis/)
 
@@ -114,6 +114,7 @@
 
 ## Диагностика Troubleshooting
 
+- [Настройки](iis.performance.settings.md)
 - [Use Case](iis.troubleshooting.md#use-case)
 - [Dump](iis.troubleshooting.md#dump)
 - [Трассировка](iis.troubleshooting.md#трассировка)

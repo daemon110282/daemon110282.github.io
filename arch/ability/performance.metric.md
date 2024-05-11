@@ -24,7 +24,8 @@
 Измеряем атрибут качества ИС [производительность](performance.md).
 
 To-do
-- https://www.datadoghq.com/blog/monitoring-101-collecting-data/
+
+- [datadog](https://www.datadoghq.com/blog/monitoring-101-collecting-data/)
 
 ## Методики выбора метрик
 
@@ -38,7 +39,7 @@ To-do
     - is the amount of time between when a user sends a request and when the service responds. Lower latencies are better, since this indicates that users are being served faster.
   - __Traffic__
     - is the amount of demand the service is handling. This is often measured in HTTP requests per second, connections per second, or bandwidth usage. We can also use metrics specific to our service, such as transactions processed per minute.
-  - __Errors__ 
+  - __Errors__
     - is the rate of requests that failed. The criteria for a failure depends on the service, but the most common is when a service responds to a request with an HTTP 5XX error code.
   - __Saturation__
     - is the amount of resources your service is consuming out of all the resources available to it. Remember that your containers may only have a limited amount of resources allocated to them. High saturation indicates that you might need to scale up your service by increasing your container resource limits, adding additional container replicas, or increasing the capacity of your servers.
@@ -47,18 +48,18 @@ To-do
 
 ## Виды метрик
 
-- __[Client Metrics](#client-metrics-приложение-front-end)__ - Данные метрики сконцентрированы на измерении производительности клиентских приложений. 
-  - Например, как долго клиентское приложение выполняет действия локально и обрабатывает ответ от серверной части. 
+- __[Client Metrics](#client-metrics-приложение-front-end)__ - Данные метрики сконцентрированы на измерении производительности клиентских приложений
+  - Например, как долго клиентское приложение выполняет действия локально и обрабатывает ответ от серверной части.
   - Эти метрики покрывают такие данные, как объем используемой памяти и загрузку CPU. На мобильном устройстве высокая загрузка CPU и частое использование сети может привести к уменьшению срока службы батареи, а использование слишком большого объема памяти вообще может помешать приложению запуститься.
 - __[Business Metrics](#business-metrics)__ - Сюда включаются данные, определяющие бизнес-процессы. Они касаются деятельности конечных пользователей. Эти показатели должны включать ключевые бизнес-операции, которые выполняет система
-- __[Application Metrics](#application-metrics)__ - Данные метрики сосредоточены на измерении активности и производительности __прикладного уровня__ (исходный код приложения, фреймворк, среда исполнения, например .NET Framework, ASP.NET, CLR, и т.п.). 
+- __[Application Metrics](#application-metrics)__ - Данные метрики сосредоточены на измерении активности и производительности __прикладного уровня__ (исходный код приложения, фреймворк, среда исполнения, например .NET Framework, ASP.NET, CLR, и т.п.).
   - Цель этих метрик – помочь вам исследователь поток выполнения вашего приложения при большом количестве параллельных запросов, проанализировать потребляемые ресурсы и оценить вероятность проблем с производительностью
 - __[Service Metrics](#service-metrics)__ - Сюда относятся данные, связанные с производительностью внешних сервисов. Эти данные не отражают чистую производительность внешних сервисов, а всего лишь __содержат информацию об исполнении запросов__, которые ваша система им отправляет.
   - таких как Azure Storage
   - инфраструктурой обмена сообщений
   - внешним кэшем
-  - БД 
-  - и другими внешними сервисами, которые ваше приложение может использовать. 
+  - БД
+  - и другими внешними сервисами, которые ваше приложение может использовать.
 - __[System Metrics](#system-metrics)__ - Это данные о производительности низкого уровня (уровень базовой инфраструктуры). Они обычно нацелены на ключевые показатели эффективности, связанные с __памятью, сетевой утилизацией, активностью диска, использованием процессора__
 
 ### Business Metrics
@@ -69,7 +70,6 @@ To-do
 - Как долго система выполняет операцию? (время отклика/задержка)
 - Максимальное время загрузки страницы (300мс отлично)
 - TODO [Business Metrics](https://docs.google.com/spreadsheets/d/1g-WsAqeJqpKDbFLsVx0EOAuaRMUMWPaaG2a7XHWGgWU/edit#gid=1431606873)
-
 
 ### Application Metrics
 
@@ -96,7 +96,7 @@ To-do
 - Duration Latency
   - Как долго система выполняет операцию? (время отклика/задержка)
   - Время загрузки страницы (<=300мс отлично)
-  - Время отклика\задержки Latency, выполнения среднее\макс для 90% (персентиль) запросов - Миллисекунды 
+  - Время отклика\задержки Latency, выполнения среднее\макс для 90% (персентиль) запросов - Миллисекунды
 
 ### System Metrics
 
@@ -106,7 +106,7 @@ To-do
   - Нагрузка на CPU - Процент
   - CPU User time
   - CPU System time (Может  показывать на неэффективный ввод-вывод, т.е. слишком большое количество мелких операций)
-- HDD 
+- HDD
   - Дисковые операции СХД	- Количество, частота следования в секунду
   - HDD Number of reads IOPS
   - HDD Number of writes IOPS
@@ -133,7 +133,7 @@ To-do
 
 #### Кеш
   
-- redis 
+- redis
   - Утилизация памяти
   - операции чтения\записи с диска
 - Hit Rate Количество, частота попаданий в кеш	в секунду
@@ -180,8 +180,8 @@ To-do
     - [lighthouse](https://developer.chrome.com/docs/lighthouse/overview/)
 - Yandex [ИКС](https://kokoc.com/terminy/chto-takoe-iks-sajta-v-yandekse/)
   - Учитывает Web Vitals
-- Navigation timing API 
-  - Метрики: DNS, transfer time, response time, TCP 
+- Navigation timing API
+  - Метрики: DNS, transfer time, response time, TCP
 
 ### Service Metrics
 

@@ -1,0 +1,8 @@
+\System\Context Switches/sec 
+\System\Processor Queue Length 
+\System\Processes 
+\System\Threads 
+
+\Process(w3wp.exe)\% Processor Time
+\Process(w3wp.exe)\Private Bytes
+\Process(w3wp.exe)\Virtual Bytes

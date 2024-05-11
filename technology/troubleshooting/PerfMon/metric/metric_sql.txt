@@ -1,0 +1,19 @@
+\Process(sqlservr)\% Processor Time
+\Process(sqlservr)\Private Bytes
+\Process(sqlservr)\Virtual Bytes
+
+\SQLServer:General Statistics\User Connections
+\SQLServer:General Statistics\Processes blocked
+\SQLServer:Buffer Manager\Buffer cache hit ratio
+\SQLServer:Buffer Manager\Page life expectancy
+\SQLServer:SQL Statistics\Batch Requests/sec
+\SQLServer:SQL Statistics\SQL Compilations/sec
+\SQLServer:SQL Statistics\SQL Re-Compilations/sec
+\SQLServer:Access Methods\Page Splits/sec
+\SQLServer:Access Methods\Forwarded Records/sec
+\SQLServer:Access Methods\Full Scans/sec
+\SQLServer:Memory Manager\Target Server Memory (KB)
+\SQLServer:Memory Manager\Total Server Memory (KB)
+\SQLServer:Memory Manager\Free Memory (KB)
+\SQLServer:Databases(_Total)\Transactions/sec
+\SQLServer:Databases(*)\Transactions/sec

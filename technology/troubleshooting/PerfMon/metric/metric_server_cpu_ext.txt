@@ -1,0 +1,3 @@
+\Processor(_Total)\% Processor Time 
+\Processor(_Total)\% User Time 
+\Processor(_Total)\% Privileged Time 

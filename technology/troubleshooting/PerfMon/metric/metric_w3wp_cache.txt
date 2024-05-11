@@ -1,0 +1,58 @@
+\Process(w3wp.exe)\% Processor Time
+\Process(w3wp.exe)\Private Bytes
+\Process(w3wp.exe)\Virtual Bytes
+
+\WAS_W3WP(*)\Total Messages Sent to WAS
+\WAS_W3WP(*)\Total WAS Messages Received
+\WAS_W3WP(*)\Total Runtime Status Queries
+\WAS_W3WP(*)\Total Health Pings.
+\WAS_W3WP(*)\Total Requests Served
+
+\W3SVC_W3WP(*)\% 500 HTTP Response Sent
+\W3SVC_W3WP(*)\% 404 HTTP Response Sent
+\W3SVC_W3WP(*)\% 403 HTTP Response Sent
+\W3SVC_W3WP(*)\% 401 HTTP Response Sent
+
+\W3SVC_W3WP(*)\Uri Cache Misses / sec
+\W3SVC_W3WP(*)\Output Cache Misses / sec
+\W3SVC_W3WP(*)\Metadata Cache Misses / sec
+\W3SVC_W3WP(*)\File Cache Misses / sec
+\W3SVC_W3WP(*)\Uri Cache Hits / sec
+\W3SVC_W3WP(*)\Output Cache Hits / sec
+\W3SVC_W3WP(*)\Metadata Cache Hits / sec
+\W3SVC_W3WP(*)\File Cache Hits / sec
+\W3SVC_W3WP(*)\Output Cache Total Flushed Items
+\W3SVC_W3WP(*)\Output Cache Current Flushed Items
+\W3SVC_W3WP(*)\Output Cache Total Flushes
+\W3SVC_W3WP(*)\Output Cache Total Misses
+\W3SVC_W3WP(*)\Output Cache Total Hits
+\W3SVC_W3WP(*)\Output Cache Current Items
+\W3SVC_W3WP(*)\Total Flushed Metadata
+\W3SVC_W3WP(*)\Metadata Cache Flushes
+\W3SVC_W3WP(*)\Metadata Cache Misses
+\W3SVC_W3WP(*)\Metadata Cache Hits
+\W3SVC_W3WP(*)\Total Metadata Cached
+\W3SVC_W3WP(*)\Current Metadata Cached
+\W3SVC_W3WP(*)\Total Flushed URIs
+\W3SVC_W3WP(*)\URI Cache Flushes
+\W3SVC_W3WP(*)\URI Cache Misses
+\W3SVC_W3WP(*)\URI Cache Hits
+\W3SVC_W3WP(*)\Total URIs Cached
+\W3SVC_W3WP(*)\Current URIs Cached
+\W3SVC_W3WP(*)\Total Flushed Files
+\W3SVC_W3WP(*)\Active Flushed Entries
+\W3SVC_W3WP(*)\File Cache Flushes
+\W3SVC_W3WP(*)\File Cache Misses
+\W3SVC_W3WP(*)\File Cache Hits
+\W3SVC_W3WP(*)\Total Files Cached
+\W3SVC_W3WP(*)\Current Files Cached
+\W3SVC_W3WP(*)\Output Cache Current Memory Usage
+\W3SVC_W3WP(*)\Maximum File Cache Memory Usage
+\W3SVC_W3WP(*)\Current File Cache Memory Usage
+
+\W3SVC_W3WP(*)\Maximum Threads Count
+\W3SVC_W3WP(*)\Active Threads Count
+\W3SVC_W3WP(*)\Total Threads
+\W3SVC_W3WP(*)\Active Requests
+\W3SVC_W3WP(*)\Requests / Sec
+\W3SVC_W3WP(*)\Total HTTP Requests Served

@@ -1,0 +1,5 @@
+\ASP.NET\Application Restarts
+\ASP.NET\Applications Running
+
+\ASP.NET\Worker Processes Running
+\ASP.NET\Worker Process Restarts

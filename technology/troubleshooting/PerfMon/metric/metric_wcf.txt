@@ -1,0 +1,69 @@
+\ServiceModelEndpoint 4.0.0.0(*)\Transactions Flowed Per Second
+\ServiceModelEndpoint 4.0.0.0(*)\Transactions Flowed
+\ServiceModelEndpoint 4.0.0.0(*)\Reliable Messaging Messages Dropped Per Second
+\ServiceModelEndpoint 4.0.0.0(*)\Reliable Messaging Messages Dropped
+\ServiceModelEndpoint 4.0.0.0(*)\Reliable Messaging Sessions Faulted Per Second
+\ServiceModelEndpoint 4.0.0.0(*)\Reliable Messaging Sessions Faulted
+\ServiceModelEndpoint 4.0.0.0(*)\Security Calls Not Authorized Per Second
+\ServiceModelEndpoint 4.0.0.0(*)\Security Calls Not Authorized
+\ServiceModelEndpoint 4.0.0.0(*)\Security Validation and Authentication Failures Per Second
+\ServiceModelEndpoint 4.0.0.0(*)\Security Validation and Authentication Failures
+\ServiceModelEndpoint 4.0.0.0(*)\Calls Duration
+\ServiceModelEndpoint 4.0.0.0(*)\Calls Faulted Per Second
+\ServiceModelEndpoint 4.0.0.0(*)\Calls Faulted
+\ServiceModelEndpoint 4.0.0.0(*)\Calls Failed Per Second
+\ServiceModelEndpoint 4.0.0.0(*)\Calls Failed
+\ServiceModelEndpoint 4.0.0.0(*)\Calls Outstanding
+\ServiceModelEndpoint 4.0.0.0(*)\Calls Per Second
+\ServiceModelEndpoint 4.0.0.0(*)\Calls
+
+\ServiceModelOperation 4.0.0.0(*)\Transactions Flowed Per Second
+\ServiceModelOperation 4.0.0.0(*)\Transactions Flowed
+\ServiceModelOperation 4.0.0.0(*)\Security Calls Not Authorized Per Second
+\ServiceModelOperation 4.0.0.0(*)\Security Calls Not Authorized
+\ServiceModelOperation 4.0.0.0(*)\Security Validation and Authentication Failures Per Second
+\ServiceModelOperation 4.0.0.0(*)\Security Validation and Authentication Failures
+\ServiceModelOperation 4.0.0.0(*)\Calls Duration
+\ServiceModelOperation 4.0.0.0(*)\Calls Faulted Per Second
+\ServiceModelOperation 4.0.0.0(*)\Calls Faulted
+\ServiceModelOperation 4.0.0.0(*)\Call Failed Per Second
+\ServiceModelOperation 4.0.0.0(*)\Calls Failed
+\ServiceModelOperation 4.0.0.0(*)\Calls Outstanding
+\ServiceModelOperation 4.0.0.0(*)\Calls Per Second
+\ServiceModelOperation 4.0.0.0(*)\Calls
+
+\ServiceModelService 4.0.0.0(*)\Percent Of Max Concurrent Sessions
+\ServiceModelService 4.0.0.0(*)\Percent Of Max Concurrent Instances
+\ServiceModelService 4.0.0.0(*)\Percent Of Max Concurrent Calls
+\ServiceModelService 4.0.0.0(*)\Queued Messages Dropped Per Second
+\ServiceModelService 4.0.0.0(*)\Queued Messages Dropped
+\ServiceModelService 4.0.0.0(*)\Queued Messages Rejected Per Second
+\ServiceModelService 4.0.0.0(*)\Queued Messages Rejected
+\ServiceModelService 4.0.0.0(*)\Queued Poison Messages Per Second
+\ServiceModelService 4.0.0.0(*)\Queued Poison Messages
+\ServiceModelService 4.0.0.0(*)\Transacted Operations In Doubt Per Second
+\ServiceModelService 4.0.0.0(*)\Transacted Operations In Doubt
+\ServiceModelService 4.0.0.0(*)\Transacted Operations Aborted Per Second
+\ServiceModelService 4.0.0.0(*)\Transacted Operations Aborted
+\ServiceModelService 4.0.0.0(*)\Transacted Operations Committed Per Second
+\ServiceModelService 4.0.0.0(*)\Transacted Operations Committed
+\ServiceModelService 4.0.0.0(*)\Transactions Flowed Per Second
+\ServiceModelService 4.0.0.0(*)\Transactions Flowed
+\ServiceModelService 4.0.0.0(*)\Reliable Messaging Messages Dropped Per Second
+\ServiceModelService 4.0.0.0(*)\Reliable Messaging Messages Dropped
+\ServiceModelService 4.0.0.0(*)\Reliable Messaging Sessions Faulted Per Second
+\ServiceModelService 4.0.0.0(*)\Reliable Messaging Sessions Faulted
+\ServiceModelService 4.0.0.0(*)\Instances Created Per Second
+\ServiceModelService 4.0.0.0(*)\Instances
+\ServiceModelService 4.0.0.0(*)\Security Calls Not Authorized Per Second
+\ServiceModelService 4.0.0.0(*)\Security Calls Not Authorized
+\ServiceModelService 4.0.0.0(*)\Security Validation and Authentication Failures Per Second
+\ServiceModelService 4.0.0.0(*)\Security Validation and Authentication Failures
+\ServiceModelService 4.0.0.0(*)\Calls Duration
+\ServiceModelService 4.0.0.0(*)\Calls Faulted Per Second
+\ServiceModelService 4.0.0.0(*)\Calls Faulted
+\ServiceModelService 4.0.0.0(*)\Calls Failed Per Second
+\ServiceModelService 4.0.0.0(*)\Calls Failed
+\ServiceModelService 4.0.0.0(*)\Calls Outstanding
+\ServiceModelService 4.0.0.0(*)\Calls Per Second
+\ServiceModelService 4.0.0.0(*)\Calls

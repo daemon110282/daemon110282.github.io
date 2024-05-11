@@ -1,0 +1,19 @@
+\ASP.NET\Error Events Raised
+\ASP.NET\Request Error Events Raised
+\ASP.NET\Infrastructure Error Events Raised
+\ASP.NET\Requests In Native Queue
+
+\ASP.NET Applications(*)\Errors During Preprocessing
+\ASP.NET Applications(*)\Errors During Compilation
+\ASP.NET Applications(*)\Errors During Execution
+\ASP.NET Applications(*)\Errors Unhandled During Execution
+\ASP.NET Applications(*)\Errors Unhandled During Execution/Sec
+\ASP.NET Applications(*)\Errors Total
+\ASP.NET Applications(*)\Errors Total/Sec
+
+\ASP.NET Applications(*)\Error Events Raised
+\ASP.NET Applications(*)\Error Events Raised/Sec
+\ASP.NET Applications(*)\Request Error Events Raised
+\ASP.NET Applications(*)\Request Error Events Raised/Sec
+\ASP.NET Applications(*)\Infrastructure Error Events Raised
+\ASP.NET Applications(*)\Infrastructure Error Events Raised/Sec

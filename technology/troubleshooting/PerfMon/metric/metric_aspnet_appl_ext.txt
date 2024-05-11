@@ -1,0 +1,34 @@
+\ASP.NET Applications(*)\Pipeline Instance Count
+\ASP.NET Applications(*)\Request Bytes In Total
+\ASP.NET Applications(*)\Request Bytes Out Total
+\ASP.NET Applications(*)\Requests Executing
+\ASP.NET Applications(*)\Requests Failed
+\ASP.NET Applications(*)\Requests Not Found
+\ASP.NET Applications(*)\Requests Not Authorized
+\ASP.NET Applications(*)\Requests In Application Queue
+\ASP.NET Applications(*)\Requests Timed Out
+\ASP.NET Applications(*)\Requests Succeeded
+\ASP.NET Applications(*)\Requests Total
+\ASP.NET Applications(*)\Requests/Sec
+
+\ASP.NET Applications(*)\Request Events Raised
+\ASP.NET Applications(*)\Request Events Raised/Sec
+\ASP.NET Applications(*)\Audit Success Events Raised
+\ASP.NET Applications(*)\Audit Failure Events Raised
+\ASP.NET Applications(*)\Membership Authentication Success
+\ASP.NET Applications(*)\Membership Authentication Failure
+\ASP.NET Applications(*)\Forms Authentication Success
+\ASP.NET Applications(*)\Forms Authentication Failure
+\ASP.NET Applications(*)\Viewstate MAC Validation Failure
+\ASP.NET Applications(*)\Request Execution Time
+\ASP.NET Applications(*)\Requests Disconnected
+\ASP.NET Applications(*)\Requests Rejected
+\ASP.NET Applications(*)\Request Wait Time
+\ASP.NET Applications(*)\Cache % Machine Memory Limit Used
+\ASP.NET Applications(*)\Cache % Process Memory Limit Used
+\ASP.NET Applications(*)\Cache Total Trims
+\ASP.NET Applications(*)\Cache API Trims
+\ASP.NET Applications(*)\Output Cache Trims
+\ASP.NET Applications(*)\% Managed Processor Time (estimated)
+\ASP.NET Applications(*)\Managed Memory Used (estimated)
+

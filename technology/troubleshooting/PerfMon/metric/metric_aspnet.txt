@@ -1,0 +1,4 @@
+\ASP.NET\Requests Current
+\ASP.NET\Requests Queued
+\ASP.NET\Requests Disconnected
+\ASP.NET\Requests Rejected

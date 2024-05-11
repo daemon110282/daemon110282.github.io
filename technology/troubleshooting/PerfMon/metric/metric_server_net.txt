@@ -1,0 +1,2 @@
+\Network interface(_Total)\Bytes Total/sec 
+\Network interface(_Total)\Current Bandwidth 

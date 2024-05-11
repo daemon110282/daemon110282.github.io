@@ -1,0 +1,13 @@
+\APP_POOL_WAS(*)\Total Worker Processes Created
+\APP_POOL_WAS(*)\Time Since Last Worker Process Failure
+\APP_POOL_WAS(*)\Total Worker Process Ping Failures
+\APP_POOL_WAS(*)\Total Worker Process Shutdown Failures
+\APP_POOL_WAS(*)\Total Worker Process Startup Failures
+\APP_POOL_WAS(*)\Current Application Pool State
+\APP_POOL_WAS(*)\Total Worker Process Failures
+\APP_POOL_WAS(*)\Recent Worker Process Failures
+\APP_POOL_WAS(*)\Total Application Pool Uptime
+\APP_POOL_WAS(*)\Current Application Pool Uptime
+\APP_POOL_WAS(*)\Total Application Pool Recycles
+\APP_POOL_WAS(*)\Maximum Worker Processes
+\APP_POOL_WAS(*)\Current Worker Processes

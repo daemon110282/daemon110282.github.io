@@ -1,0 +1,7 @@
+\W3SVC_W3WP(*)\Maximum Threads Count
+\W3SVC_W3WP(*)\Active Threads Count
+\W3SVC_W3WP(*)\Total Threads
+
+\W3SVC_W3WP(*)\Active Requests
+\W3SVC_W3WP(*)\Requests / Sec
+\W3SVC_W3WP(*)\Total HTTP Requests Served

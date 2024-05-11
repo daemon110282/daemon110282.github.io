@@ -1,0 +1,2 @@
+\Memory\Available MBytes 
+\Memory\% Committed Bytes In Use 

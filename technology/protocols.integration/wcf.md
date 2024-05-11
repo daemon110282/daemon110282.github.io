@@ -37,11 +37,11 @@ Windows Communication Foundation (WCF) — это платформа для со
     - и связанных с ними __объектов InstanceContext__.
       - __параллелизм__ означает управление __количеством потоков__, одновременно выполняющихся в некотором контексте InstanceContext.
       - ограничивается
-        - [MaxConcurrentSessions](https://learn.microsoft.com/ru-ru/dotnet/framework/wcf/wcf-troubleshooting-quickstart#my-service-starts-to-reject-new-clients-after-about-10-clients-are-interacting-with-it-what-is-happening) - максимальное __количество сеансов__, которые может принимать объект сервиса ServiceHost одновременно          
+        - [MaxConcurrentSessions](https://learn.microsoft.com/ru-ru/dotnet/framework/wcf/wcf-troubleshooting-quickstart#my-service-starts-to-reject-new-clients-after-about-10-clients-are-interacting-with-it-what-is-happening) - максимальное __количество сеансов__, которые может принимать объект сервиса ServiceHost одновременно
           - default=10 100*Processor Count
           - Сервис отклоняет подключения новых клиентов, пока не будет закрыт один из текущих сеансов.
         - MaxConcurrentCalls - максимальное __количество обрабатываемых запросов__ в одном экземляре сервиса ServiceHost
-          - default=16*число процессоров               
+          - default=16*число процессоров
         - [MaxConcurrentInstances](https://learn.microsoft.com/ru-ru/dotnet/api/system.servicemodel.description.servicethrottlingbehavior.maxconcurrentinstances?view=netframework-4.8.1) - максимальное количество __одновременно выполняющихся объектов InstanceContext__ в службе
           - default=int.MaxValue if not specified, otherwise 116*Processor Count
           - [Sum of maxConcurrentCalls and maxConcurrentSession](https://codewala.net/2014/10/14/simple-steps-scale-up-wcf-drastically/)

@@ -1,0 +1,4 @@
+\Memory\Available MBytes 
+\Memory\Pages/sec 
+\Memory\% Committed Bytes In Use 
+\Paging File(*)\% Usage 

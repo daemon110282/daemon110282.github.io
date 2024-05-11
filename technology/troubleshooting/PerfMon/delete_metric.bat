@@ -1,0 +1,11 @@
+logman delete server_cpu
+logman delete server_ram
+logman delete server_net
+logman delete server_io
+logman delete server_process 
+logman delete was
+logman delete iis
+logman delete httpsys
+logman delete w3wp
+logman delete aspnet
+logman delete aspnet_latency

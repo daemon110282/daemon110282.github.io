@@ -1,0 +1,16 @@
+\WAS_W3WP(*)\Health Ping Reply Latency
+\WAS_W3WP(*)\Active Protocol Handlers
+\WAS_W3WP(*)\Active Listener Channels
+\WAS_W3WP(*)\Total Runtime Status Queries
+\WAS_W3WP(*)\Total Health Pings.
+
+\W3SVC_W3WP(*)\WebSocket Connections Accepted / Sec
+\W3SVC_W3WP(*)\WebSocket Connections Rejected / Sec
+\W3SVC_W3WP(*)\WebSocket Connection Attempts / Sec
+\W3SVC_W3WP(*)\WebSocket Active Requests
+
+\W3SVC_W3WP(*)\% 500 HTTP Response Sent
+\W3SVC_W3WP(*)\% 404 HTTP Response Sent
+\W3SVC_W3WP(*)\% 403 HTTP Response Sent
+\W3SVC_W3WP(*)\% 401 HTTP Response Sent
+

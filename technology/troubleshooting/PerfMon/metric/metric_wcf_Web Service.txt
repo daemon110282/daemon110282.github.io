@@ -1,0 +1,86 @@
+\Web Service(*)\Total Bytes Sent
+\Web Service(*)\Bytes Sent/sec
+\Web Service(*)\Total Bytes Received
+\Web Service(*)\Bytes Received/sec
+\Web Service(*)\Total Bytes Transferred
+\Web Service(*)\Bytes Total/sec
+\Web Service(*)\Total Files Sent
+\Web Service(*)\Files Sent/sec
+\Web Service(*)\Total Files Received
+\Web Service(*)\Files Received/sec
+\Web Service(*)\Total Files Transferred
+\Web Service(*)\Files/sec
+\Web Service(*)\Current Anonymous Users
+\Web Service(*)\Current NonAnonymous Users
+\Web Service(*)\Total Anonymous Users
+\Web Service(*)\Anonymous Users/sec
+\Web Service(*)\Total NonAnonymous Users
+\Web Service(*)\NonAnonymous Users/sec
+\Web Service(*)\Maximum Anonymous Users
+\Web Service(*)\Maximum NonAnonymous Users
+\Web Service(*)\Current Connections
+\Web Service(*)\Maximum Connections
+\Web Service(*)\Total Connection Attempts (all instances)
+\Web Service(*)\Connection Attempts/sec
+\Web Service(*)\Total Logon Attempts
+\Web Service(*)\Logon Attempts/sec
+\Web Service(*)\Total Options Requests
+\Web Service(*)\Options Requests/sec
+\Web Service(*)\Total Get Requests
+\Web Service(*)\Get Requests/sec
+\Web Service(*)\Total Post Requests
+\Web Service(*)\Post Requests/sec
+\Web Service(*)\Total Head Requests
+\Web Service(*)\Head Requests/sec
+\Web Service(*)\Total Put Requests
+\Web Service(*)\Put Requests/sec
+\Web Service(*)\Total Delete Requests
+\Web Service(*)\Delete Requests/sec
+\Web Service(*)\Total Trace Requests
+\Web Service(*)\Trace Requests/sec
+\Web Service(*)\Total Move Requests
+\Web Service(*)\Move Requests/sec
+\Web Service(*)\Total Copy Requests
+\Web Service(*)\Copy Requests/sec
+\Web Service(*)\Total Mkcol Requests
+\Web Service(*)\Mkcol Requests/sec
+\Web Service(*)\Total Propfind Requests
+\Web Service(*)\Propfind Requests/sec
+\Web Service(*)\Total Proppatch Requests
+\Web Service(*)\Proppatch Requests/sec
+\Web Service(*)\Total Search Requests
+\Web Service(*)\Search Requests/sec
+\Web Service(*)\Total Lock Requests
+\Web Service(*)\Lock Requests/sec
+\Web Service(*)\Total Unlock Requests
+\Web Service(*)\Unlock Requests/sec
+\Web Service(*)\Total Other Request Methods
+\Web Service(*)\Other Request Methods/sec
+\Web Service(*)\Total Method Requests
+\Web Service(*)\Total Method Requests/sec
+\Web Service(*)\Total CGI Requests
+\Web Service(*)\CGI Requests/sec
+\Web Service(*)\Total ISAPI Extension Requests
+\Web Service(*)\ISAPI Extension Requests/sec
+\Web Service(*)\Total Not Found Errors
+\Web Service(*)\Not Found Errors/sec
+\Web Service(*)\Total Locked Errors
+\Web Service(*)\Locked Errors/sec
+\Web Service(*)\Current CGI Requests
+\Web Service(*)\Current ISAPI Extension Requests
+\Web Service(*)\Maximum CGI Requests
+\Web Service(*)\Maximum ISAPI Extension Requests
+\Web Service(*)\Current CAL count for authenticated users
+\Web Service(*)\Maximum CAL count for authenticated users
+\Web Service(*)\Total count of failed CAL requests for authenticated users
+\Web Service(*)\Current CAL count for SSL connections
+\Web Service(*)\Maximum CAL count for SSL connections
+\Web Service(*)\Total count of failed CAL requests for SSL connections
+\Web Service(*)\Total Blocked Async I/O Requests
+\Web Service(*)\Total Allowed Async I/O Requests
+\Web Service(*)\Total Rejected Async I/O Requests
+\Web Service(*)\Current Blocked Async I/O Requests
+\Web Service(*)\Measured Async I/O Bandwidth Usage
+\Web Service(*)\Total blocked bandwidth bytes.
+\Web Service(*)\Current blocked bandwidth bytes.
+\Web Service(*)\Service Uptime

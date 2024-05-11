@@ -1,0 +1,40 @@
+\Web Service Cache\Current Files Cached
+\Web Service Cache\Total Files Cached
+\Web Service Cache\File Cache Hits
+\Web Service Cache\File Cache Misses
+\Web Service Cache\File Cache Hits %
+\Web Service Cache\File Cache Flushes
+\Web Service Cache\Current File Cache Memory Usage
+\Web Service Cache\Maximum File Cache Memory Usage
+\Web Service Cache\Active Flushed Entries
+\Web Service Cache\Total Flushed Files
+\Web Service Cache\Current URIs Cached
+\Web Service Cache\Total URIs Cached
+\Web Service Cache\URI Cache Hits
+\Web Service Cache\URI Cache Misses
+\Web Service Cache\URI Cache Hits %
+\Web Service Cache\URI Cache Flushes
+\Web Service Cache\Total Flushed URIs
+\Web Service Cache\Current Metadata Cached
+\Web Service Cache\Total Metadata Cached
+\Web Service Cache\Metadata Cache Hits
+\Web Service Cache\Metadata Cache Misses
+\Web Service Cache\Metadata Cache Hits %
+\Web Service Cache\Metadata Cache Flushes
+\Web Service Cache\Total Flushed Metadata
+\Web Service Cache\Kernel: Current URIs Cached
+\Web Service Cache\Kernel: Total URIs Cached
+\Web Service Cache\Kernel: URI Cache Hits
+\Web Service Cache\Kernel: Uri Cache Hits/sec
+\Web Service Cache\Kernel: URI Cache Misses
+\Web Service Cache\Kernel: URI Cache Hits %
+\Web Service Cache\Kernel: URI Cache Flushes
+\Web Service Cache\Kernel: Total Flushed URIs
+\Web Service Cache\Output Cache Current Memory Usage
+\Web Service Cache\Output Cache Current Items
+\Web Service Cache\Output Cache Total Hits
+\Web Service Cache\Output Cache Total Misses
+\Web Service Cache\Output Cache Total Flushes
+\Web Service Cache\Output Cache Current Flushed Items
+\Web Service Cache\Output Cache Total Flushed Items
+\Web Service Cache\Output Cache Current Hits %

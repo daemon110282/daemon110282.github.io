@@ -1,0 +1,97 @@
+\ASP.NET v2.0.50727\Application Restarts
+\ASP.NET v2.0.50727\Applications Running
+\ASP.NET v2.0.50727\Requests Disconnected
+\ASP.NET v2.0.50727\Request Execution Time
+\ASP.NET v2.0.50727\Requests Rejected
+\ASP.NET v2.0.50727\Requests Queued
+\ASP.NET v2.0.50727\Worker Processes Running
+\ASP.NET v2.0.50727\Worker Process Restarts
+\ASP.NET v2.0.50727\Request Wait Time
+\ASP.NET v2.0.50727\State Server Sessions Active
+\ASP.NET v2.0.50727\State Server Sessions Abandoned
+\ASP.NET v2.0.50727\State Server Sessions Timed Out
+\ASP.NET v2.0.50727\State Server Sessions Total
+\ASP.NET v2.0.50727\Requests Current
+\ASP.NET v2.0.50727\Audit Success Events Raised
+\ASP.NET v2.0.50727\Audit Failure Events Raised
+\ASP.NET v2.0.50727\Error Events Raised
+\ASP.NET v2.0.50727\Request Error Events Raised
+\ASP.NET v2.0.50727\Infrastructure Error Events Raised
+
+\ASP.NET Apps v2.0.50727(*)\Anonymous Requests
+\ASP.NET Apps v2.0.50727(*)\Anonymous Requests/Sec
+\ASP.NET Apps v2.0.50727(*)\Cache Total Entries
+\ASP.NET Apps v2.0.50727(*)\Cache Total Turnover Rate
+\ASP.NET Apps v2.0.50727(*)\Cache Total Hits
+\ASP.NET Apps v2.0.50727(*)\Cache Total Misses
+\ASP.NET Apps v2.0.50727(*)\Cache Total Hit Ratio
+\ASP.NET Apps v2.0.50727(*)\Cache API Entries
+\ASP.NET Apps v2.0.50727(*)\Cache API Turnover Rate
+\ASP.NET Apps v2.0.50727(*)\Cache API Hits
+\ASP.NET Apps v2.0.50727(*)\Cache API Misses
+\ASP.NET Apps v2.0.50727(*)\Cache API Hit Ratio
+\ASP.NET Apps v2.0.50727(*)\Output Cache Entries
+\ASP.NET Apps v2.0.50727(*)\Output Cache Turnover Rate
+\ASP.NET Apps v2.0.50727(*)\Output Cache Hits
+\ASP.NET Apps v2.0.50727(*)\Output Cache Misses
+\ASP.NET Apps v2.0.50727(*)\Output Cache Hit Ratio
+\ASP.NET Apps v2.0.50727(*)\Compilations Total
+\ASP.NET Apps v2.0.50727(*)\Debugging Requests
+\ASP.NET Apps v2.0.50727(*)\Errors During Preprocessing
+\ASP.NET Apps v2.0.50727(*)\Errors During Compilation
+\ASP.NET Apps v2.0.50727(*)\Errors During Execution
+\ASP.NET Apps v2.0.50727(*)\Errors Unhandled During Execution
+\ASP.NET Apps v2.0.50727(*)\Errors Unhandled During Execution/Sec
+\ASP.NET Apps v2.0.50727(*)\Errors Total
+\ASP.NET Apps v2.0.50727(*)\Errors Total/Sec
+\ASP.NET Apps v2.0.50727(*)\Pipeline Instance Count
+\ASP.NET Apps v2.0.50727(*)\Request Bytes In Total
+\ASP.NET Apps v2.0.50727(*)\Request Bytes Out Total
+\ASP.NET Apps v2.0.50727(*)\Requests Executing
+\ASP.NET Apps v2.0.50727(*)\Requests Failed
+\ASP.NET Apps v2.0.50727(*)\Requests Not Found
+\ASP.NET Apps v2.0.50727(*)\Requests Not Authorized
+\ASP.NET Apps v2.0.50727(*)\Requests In Application Queue
+\ASP.NET Apps v2.0.50727(*)\Requests Timed Out
+\ASP.NET Apps v2.0.50727(*)\Requests Succeeded
+\ASP.NET Apps v2.0.50727(*)\Requests Total
+\ASP.NET Apps v2.0.50727(*)\Requests/Sec
+\ASP.NET Apps v2.0.50727(*)\Sessions Active
+\ASP.NET Apps v2.0.50727(*)\Sessions Abandoned
+\ASP.NET Apps v2.0.50727(*)\Sessions Timed Out
+\ASP.NET Apps v2.0.50727(*)\Sessions Total
+\ASP.NET Apps v2.0.50727(*)\Transactions Aborted
+\ASP.NET Apps v2.0.50727(*)\Transactions Committed
+\ASP.NET Apps v2.0.50727(*)\Transactions Pending
+\ASP.NET Apps v2.0.50727(*)\Transactions Total
+\ASP.NET Apps v2.0.50727(*)\Transactions/Sec
+\ASP.NET Apps v2.0.50727(*)\Session State Server connections total
+\ASP.NET Apps v2.0.50727(*)\Session SQL Server connections total
+\ASP.NET Apps v2.0.50727(*)\Events Raised
+\ASP.NET Apps v2.0.50727(*)\Events Raised/Sec
+\ASP.NET Apps v2.0.50727(*)\Application Lifetime Events
+\ASP.NET Apps v2.0.50727(*)\Application Lifetime Events/Sec
+\ASP.NET Apps v2.0.50727(*)\Error Events Raised
+\ASP.NET Apps v2.0.50727(*)\Error Events Raised/Sec
+\ASP.NET Apps v2.0.50727(*)\Request Error Events Raised
+\ASP.NET Apps v2.0.50727(*)\Request Error Events Raised/Sec
+\ASP.NET Apps v2.0.50727(*)\Infrastructure Error Events Raised
+\ASP.NET Apps v2.0.50727(*)\Infrastructure Error Events Raised/Sec
+\ASP.NET Apps v2.0.50727(*)\Request Events Raised
+\ASP.NET Apps v2.0.50727(*)\Request Events Raised/Sec
+\ASP.NET Apps v2.0.50727(*)\Audit Success Events Raised
+\ASP.NET Apps v2.0.50727(*)\Audit Failure Events Raised
+\ASP.NET Apps v2.0.50727(*)\Membership Authentication Success
+\ASP.NET Apps v2.0.50727(*)\Membership Authentication Failure
+\ASP.NET Apps v2.0.50727(*)\Forms Authentication Success
+\ASP.NET Apps v2.0.50727(*)\Forms Authentication Failure
+\ASP.NET Apps v2.0.50727(*)\Viewstate MAC Validation Failure
+\ASP.NET Apps v2.0.50727(*)\Request Execution Time
+\ASP.NET Apps v2.0.50727(*)\Requests Disconnected
+\ASP.NET Apps v2.0.50727(*)\Requests Rejected
+\ASP.NET Apps v2.0.50727(*)\Request Wait Time
+\ASP.NET Apps v2.0.50727(*)\Cache % Machine Memory Limit Used
+\ASP.NET Apps v2.0.50727(*)\Cache % Process Memory Limit Used
+\ASP.NET Apps v2.0.50727(*)\Cache Total Trims
+\ASP.NET Apps v2.0.50727(*)\Cache API Trims
+\ASP.NET Apps v2.0.50727(*)\Output Cache Trims

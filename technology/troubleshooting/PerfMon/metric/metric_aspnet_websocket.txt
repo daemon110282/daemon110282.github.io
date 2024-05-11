@@ -1,0 +1,6 @@
+\ASP.NET Applications(*)\Request Bytes In Total (WebSockets)
+\ASP.NET Applications(*)\Request Bytes Out Total (WebSockets)
+\ASP.NET Applications(*)\Requests Executing (WebSockets)
+\ASP.NET Applications(*)\Requests Failed (WebSockets)
+\ASP.NET Applications(*)\Requests Succeeded (WebSockets)
+\ASP.NET Applications(*)\Requests Total (WebSockets)

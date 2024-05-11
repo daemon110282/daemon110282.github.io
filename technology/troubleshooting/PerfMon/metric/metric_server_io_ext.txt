@@ -1,0 +1,4 @@
+\PhysicalDisk(_Total)\Current Disk Queue Length 
+\PhysicalDisk(*)\Current Disk Queue Length 
+\PhysicalDisk(_Total)\Avg. Disk sec/Read 
+\PhysicalDisk(_Total)\Avg. Disk sec/Write 

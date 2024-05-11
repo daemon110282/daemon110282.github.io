@@ -1,0 +1,45 @@
+# WCF Метрики
+
+- [варианты](https://codecoma.wordpress.com/2013/08/08/wcf-performance-counters-for-servicemodelservice-4-0-0-0/)
+- Calls by Operation\Service\Endpoint
+  - Calls
+  - [Calls Duration](https://learn.microsoft.com/en-us/dotnet/framework/wcf/diagnostics/performance-counters/calls-duration) - единица измерения?
+  - Calls Failed
+  - Calls Failed Per Second
+  - Calls Faulted
+  - Calls Faulted Per Second
+  - Calls Outstanding
+  - Calls Per Second
+- Instances by Service
+  - Instances 
+  - Instances Created Per Second
+- Parallelism by Service
+  - [Percent Of Max Concurrent Calls](https://learn.microsoft.com/en-us/dotnet/framework/wcf/diagnostics/performance-counters/percent-of-max-concurrent-calls)
+  - Percent Of Max Concurrent Instances
+  - Percent Of Max Concurrent Sessions
+- Queue by Service
+  - Queued Messages Dropped
+  - Queued Messages Dropped Per Second
+  - Queued Messages Rejected
+  - Queued Messages Rejected Per Second
+  - Queued Poison Messages - Количество сообщений, помеченных как отравленные поставленным в очередь транспортом в службу.
+  - Queued Poison Messages Per Second
+- Reliable Messaging by Service\Endpoint
+  - Reliable Messaging Messages Dropped
+  - Reliable Messaging Messages Dropped Per Second
+  - Reliable Messaging Sessions Faulted
+  - Reliable Messaging Sessions Faulted Per Second
+- Security
+  - Security Calls Not Authorized
+  - Security Calls Not Authorized Per Second
+  - Security Validation and Authentication Failures
+  - Security Validation and Authentication Failures Per Second
+- Transaction
+  - Transacted Operations Aborted
+  - Transacted Operations Aborted Per Second
+  - Transacted Operations Committed
+  - Transacted Operations Committed Per Second
+  - Transacted Operations In Doubt
+  - Transacted Operations In Doubt Per Second
+  - Transactions Flowed
+  - Transactions Flowed Per Second

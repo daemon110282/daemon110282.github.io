@@ -1,14 +1,16 @@
 # Метрики Производительность Быстродействие
 
 - [Метрики Производительность Быстродействие](#метрики-производительность-быстродействие)
+	- [TODO](#todo)
 	- [HTTP.SYS](#httpsys)
-	- [IIS](#iis)
+	- [WAS\_W3WP](#was_w3wp)
+	- [W3SVC](#w3svc)
 	- [Application Pool](#application-pool)
-	- [Worker process (w3wp.exe)](#worker-process-w3wpexe)
+	- [Worker process (w3wp.exe) W3SVC\_W3WP](#worker-process-w3wpexe-w3svc_w3wp)
 	- [ASP.NET: CLR Thread](#aspnet-clr-thread)
 	- [APP](#app)
 
-TODO
+## TODO
 
 - <https://habr.com/ru/articles/250881/>
 - <https://technet.microsoft.com/en-us/library/cc732518(v=ws.10).aspx>
@@ -21,11 +23,22 @@ TODO
 ## HTTP.SYS
 
 - [Queue](https://blog.leansentry.com/all-about-iis-asp-net-request-queues/)
-  - Http Service Request Queues\CurrentQueueSize
+  - "Http Service Request Queues\CurrentQueueSize"
 
-## IIS
+## WAS_W3WP
 
-- Web Service\ [Current Connections](http://www.microsoft.com/technet/prodtechnol/WindowsServer2003/Library/IIS/af36e903-75c3-4a4c-ae47-8663f8543b0c.mspx?mfr=true) – [общее число активных подключений на сервере IIS](https://winitpro.ru/index.php/2015/02/13/monitoring-kolichestva-polzovatelej-na-sajte-iis/).
+- "Total WAS Messages Received"
+  - Total number of messages received by the worker process from Web Admin Service.
+- "Messages Sent to WAS"
+  - Total count of messages sent to WAS
+- "Total Requests Served"
+  - Total number of requests served by the worker process. This counter is only meaningful when request based recycling is enabled for the application pool.
+- "Total Messages Sent to WAS"
+  - Total number of messages sent to WAS by the worker process
+
+## W3SVC
+
+- "Web Service\ [Current Connections](http://www.microsoft.com/technet/prodtechnol/WindowsServer2003/Library/IIS/af36e903-75c3-4a4c-ae47-8663f8543b0c.mspx?mfr=true)" – [общее число активных подключений на сервере IIS](https://winitpro.ru/index.php/2015/02/13/monitoring-kolichestva-polzovatelej-na-sajte-iis/).
 	- Можно мерить в разрезе конкретного сайта IIS
 	- Любые запросы к сайту, не только к Веб-сервисам.
 	- [Просмотр списка соединений IIS8](https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj635856(v=ws.11))
@@ -43,10 +56,20 @@ TODO
   	- Значение по умолчанию — 5000. UsersCount * 1.5, где usersCount — количество одновременно работающих пользователей
 - QueueLength — максимальное количество запросов, которые драйвер Http.sys размещает в очереди пула приложений
 
-## Worker process (w3wp.exe)
+## Worker process (w3wp.exe) W3SVC_W3WP
 
 [W3SVC_W3WP](https://blogs.iis.net/mailant/new-worker-process-performance-counters-in-iis7) - exposes HTTP request processing related counters for the __worker process__
-
+- "Total HTTP Requests Served"
+  - Total number of HTTP requests served by the worker process.
+Requests / Sec: HTTP requests/sec being processed by the worker process.
+- "Active Requests"
+  - Current number of requests being processed by the worker process.
+- "Total Threads"
+  - Total number of threads available to process requests in the worker process.
+- "Active Threads Count"
+  - Number of threads actively processing requests in the worker process.
+- "Maximum Threads Count"
+  - Maximum number of threads to which the thread pool can grow as needed.
 - Saturation
 	- [Maximum Threads Count](https://www.dotnetfunda.com/articles/show/3485/11-tips-to-improve-wcf-restful-services-performance)
 	- Active Threads Count - Number of threads actively processing requests in the worker process

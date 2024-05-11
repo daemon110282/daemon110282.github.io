@@ -3,7 +3,8 @@
 - [WCF](#wcf)
   - [Зачем](#зачем)
   - [Производительность](#производительность)
-  - [Трассировка](#трассировка)
+  - [Мониторинг](#мониторинг)
+  - [Диагностика Troubleshooting](#диагностика-troubleshooting)
 
 TODO
 
@@ -12,10 +13,17 @@ TODO
 ## Зачем
 
 Windows Communication Foundation (WCF) — это платформа для создания приложений, ориентированных на службы.
+
 Возможности:
 
 - [Transaction](https://www.c-sharpcorner.com/uploadfile/shivprasadk/wcf-faq-part-5-transactions/)
-- [config edit tool](https://learn.microsoft.com/ru-ru/dotnet/framework/wcf/configuration-editor-tool-svcconfigeditor-exe)
+- [Config edit tool](https://learn.microsoft.com/ru-ru/dotnet/framework/wcf/configuration-editor-tool-svcconfigeditor-exe)
+- Several __types of hosting__ are available
+  - [Self Hosting in console application](https://www.c-sharpcorner.com/article/create-simple-wcf-service-and-host-it-on-console-application/)
+  - Windows Form application hosting
+  - Windows Service hosting
+  - WAS hosting
+  - [IIS hosting](https://www.c-sharpcorner.com/article/hosting-wcf-service-on-iis/)
 
 ## Производительность
 
@@ -57,61 +65,11 @@ Windows Communication Foundation (WCF) — это платформа для со
     - объект производительности ServiceModelEndpoint 4.0.0.0
     - объект производительности ServiceModelOperation 4.0.0.0
 
-### Метрики
+## Мониторинг
 
-- [варианты](https://codecoma.wordpress.com/2013/08/08/wcf-performance-counters-for-servicemodelservice-4-0-0-0/)
-- Calls by Operation\Service\Endpoint
-  - Calls
-  - [Calls Duration](https://learn.microsoft.com/en-us/dotnet/framework/wcf/diagnostics/performance-counters/calls-duration) - единица измерения?
-  - Calls Failed
-  - Calls Failed Per Second
-  - Calls Faulted
-  - Calls Faulted Per Second
-  - Calls Outstanding
-  - Calls Per Second
-- Instances by Service
-  - Instances 
-  - Instances Created Per Second
-- Parallelism by Service
-  - [Percent Of Max Concurrent Calls](https://learn.microsoft.com/en-us/dotnet/framework/wcf/diagnostics/performance-counters/percent-of-max-concurrent-calls)
-  - Percent Of Max Concurrent Instances
-  - Percent Of Max Concurrent Sessions
-- Queue by Service
-  - Queued Messages Dropped
-  - Queued Messages Dropped Per Second
-  - Queued Messages Rejected
-  - Queued Messages Rejected Per Second
-  - Queued Poison Messages - Количество сообщений, помеченных как отравленные поставленным в очередь транспортом в службу.
-  - Queued Poison Messages Per Second
-- Reliable Messaging by Service\Endpoint
-  - Reliable Messaging Messages Dropped
-  - Reliable Messaging Messages Dropped Per Second
-  - Reliable Messaging Sessions Faulted
-  - Reliable Messaging Sessions Faulted Per Second
-- Security
-  - Security Calls Not Authorized
-  - Security Calls Not Authorized Per Second
-  - Security Validation and Authentication Failures
-  - Security Validation and Authentication Failures Per Second
-- Transaction
-  - Transacted Operations Aborted
-  - Transacted Operations Aborted Per Second
-  - Transacted Operations Committed
-  - Transacted Operations Committed Per Second
-  - Transacted Operations In Doubt
-  - Transacted Operations In Doubt Per Second
-  - Transactions Flowed
-  - Transactions Flowed Per Second
+- [Метрики](wcf.performance.metric.md)
 
-## Трассировка
+## Диагностика Troubleshooting
 
-- Средствами WCF 
-  - [Настройка сбора данных](https://learn.microsoft.com/ru-ru/dotnet/framework/wcf/diagnostics/tracing/configuring-tracing)
-  - Просмотр [трассировки](https://learn.microsoft.com/ru-ru/dotnet/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe)
-  - [Виды](https://learn.microsoft.com/ru-ru/dotnet/framework/wcf/diagnostics/tracing/significant-traces)
-    - Трассировка журнала сообщений
-      - Существует четыре настраиваемые точки ведения журнала для сообщения: ServiceLevelSendRequest, TransportSend, TransportReceive, ServiceLevelReceiveRequest.
-        - Service Level : At this level the message is logged when it is about to leave or enter the code. Secure messages are logged decrypted at this level.
-        - Transport Level : At this level messages are logged just before getting encoded or after getting decoded for transmission over wire. Even reliable messaging messages are logged.
-        - Malformed Level : All the messages which WCF fails to process due to improper format gets logged.
-- или через [FREB](https://www.thebestcsharpprogrammerintheworld.com/2016/06/07/lab-4-install-and-configure-failed-request-tracing/) on [WCF](https://www.thebestcsharpprogrammerintheworld.com/2017/01/16/can-you-trace-wcf-using-failed-request-tracing/)
+- [Dump](wcf.troubleshooting.md#dump)
+- [Трассировка](wcf.troubleshooting.md#трассировка)

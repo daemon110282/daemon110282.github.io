@@ -9,6 +9,7 @@
 - Add traffic
 - Evaluate results
 - Remediate based on results
+	- Локализация узких мест [Troubleshooting](../../troubleshooting.md)
 - Rinse, repeat until reasonably happy
 
 ## Trafic

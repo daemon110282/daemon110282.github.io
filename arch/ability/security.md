@@ -188,22 +188,24 @@ TODO
     - OWASP TOP 10
     - DDOS
 - [Identity and Access Management (IAM)](../system.class/iam.md)
-  - [JWT](../../technology/jwt.md)
   - [SSO](../sso.md)
     - Oauth 2, OpenID Connect, SAML
     - WS-Federation (token)
     - two-factor authentication (2FA)
-- swt
-- bearer
-- ntlm ldap,
-- http basic
-- digest
-- form
-- ws security
-- ssl client
-- api key
-- [cookie](https://blog.bytebytego.com/i/86976622/token-cookie-session)
-![scheme](https://blog.bytebytego.com/p/ep34-session-cookie-jwt-token-sso)
+- [Схемы аутентификации](https://habr.com/ru/articles/503284/)
+  - swt 
+  - Token-Based Authentication (Bearer Authentication) обычно токен в формате [JWT](../../technology/jwt.md)   
+  - [OIDC](../../technology/protocols.integration/oidc.md)
+    - Авторизация [OAuth](../../technology/protocols.integration/oauth.md)
+  - ntlm ldap
+  - http basic
+  - digest
+  - form
+  - ws security
+  - ssl client
+  - [API key](https://code-maze.com/aspnetcore-api-key-authentication/) - Данная схема обеспечивает защиту от несанкционированного использования API и позволяет осуществлять, например, проверку лимитов использования API.
+  - [cookie](https://blog.bytebytego.com/i/86976622/token-cookie-session)
+
 
 ## Примеры требований
 

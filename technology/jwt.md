@@ -10,6 +10,8 @@
 
 ![flow](../img/technology/jwt.jpg)
 
+![scheme](https://blog.bytebytego.com/p/ep34-session-cookie-jwt-token-sso)
+
 ## Структура
 
 header.payload.signature

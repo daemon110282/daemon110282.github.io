@@ -194,7 +194,7 @@ TODO
     - two-factor authentication (2FA)
 - [Схемы аутентификации](https://habr.com/ru/articles/503284/)
   - swt 
-  - Token-Based Authentication (Bearer Authentication) обычно токен в формате [JWT](../../technology/jwt.md)   
+  - Token-Based Authentication ([Bearer Authentication](https://devblogs.microsoft.com/dotnet/bearer-token-authentication-in-asp-net-core/)) обычно токен в формате [JWT](../../technology/jwt.md)   
   - [OIDC](../../technology/protocols.integration/oidc.md)
     - Авторизация [OAuth](../../technology/protocols.integration/oauth.md)
   - ntlm ldap

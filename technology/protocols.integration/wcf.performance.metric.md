@@ -1,5 +1,13 @@
 # WCF Метрики
 
+- [метрики производительности](https://learn.microsoft.com/ru-ru/dotnet/framework/wcf/diagnostics/performance-counters/)
+  - [пример настройки](https://www.codeproject.com/Articles/431917/WCF-Service-Performance-Monitoring-using-Perfmon)
+    - __нужно включить__ в конфигурации сервиса  
+  - [варианты метрик](https://codecoma.wordpress.com/2013/08/08/wcf-performance-counters-for-servicemodelservice-4-0-0-0/) 
+  - категории  
+    - объект производительности ServiceModelService 4.0.0.0
+    - объект производительности ServiceModelEndpoint 4.0.0.0
+    - объект производительности ServiceModelOperation 4.0.0.0
 - [варианты](https://codecoma.wordpress.com/2013/08/08/wcf-performance-counters-for-servicemodelservice-4-0-0-0/)
 - Calls by Operation\Service\Endpoint
   - Calls

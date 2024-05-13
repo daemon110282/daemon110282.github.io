@@ -45,8 +45,12 @@
 - НТ
   - [ ] Настройки
     - [ ] IIS
+      - [ ] [CPU Throttling](https://learn.microsoft.com/en-us/iis/get-started/whats-new-in-iis-8/iis-80-cpu-throttling-sand-boxing-sites-and-applications?source=recommendations)
     - [ ] ASP.NET
     - [ ] WCF
+      - [ ] Прочитать текущие значения настроек
+      - [ ] [maxConnections, openTimeout, closeTimeout, receiveTimeout, sendTimeout, timeToLive](https://weblogs.asp.net/paolopia/wcf-configuration-default-limits-concurrency-and-scalability)
+      - [ ] [Throttling, processModel](https://www.codeproject.com/Articles/133738/Quick-Ways-to-Boost-Performance-and-Scalability-of)
   - [ ] Tools
     - [x] JMeter
       - [x] [Setup Test Plan](https://www.red-gate.com/simple-talk/devops/testing/load-stress-testing-net-apps-with-apache-jmeter/)

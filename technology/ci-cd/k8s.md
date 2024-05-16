@@ -119,6 +119,7 @@ TODO
 
 ### Scalability Performance масштабирование
 
+- [метрики](k8s.performance.metric.md)
 - Avtoscaling
   - Min max nodes in cluster
 - RAM, CPU

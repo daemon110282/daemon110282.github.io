@@ -122,6 +122,7 @@ TODO
 - [метрики](k8s.performance.metric.md)
 - Avtoscaling
   - Min max nodes in cluster
+  - [Горизонтальный POD Autoscaling](https://docs.netscaler.com/en-us/netscaler-k8s-ingress-controller/how-to/cpx-hpa)
 - RAM, CPU
   - Запросы requests
   - Лимиты [limits](https://habr.com/ru/companies/flant/articles/489668/)

@@ -9,9 +9,12 @@
   - [ASP.NET: CLR Thread](#aspnet-clr-thread)
   - [APP](#app)
 
+TODO
+
 ## HTTP.SYS
 
-TODO
+- idleconnectiontimeout 
+- HeaderWaittimeout
 
 ## Web Admin Service (WAS_W3WP)
 
@@ -41,9 +44,9 @@ TODO
   - [processModel settings change in machine.config file](https://www.dotnetfunda.com/articles/show/3485/11-tips-to-improve-wcf-restful-services-performance)
     - C:\Windows\Microsoft.NET\Framework64\<version>\Config\Machine.config
   - maxWorkerThreads - __maximum__ number of worker __threads available__ in the thread pool (default is 20 per CPU, recommended is 100)
-  - minWorkerThreads - minimum number of worker threads available in the thread pool (default 1 per CPU, recommended is half of maxWorkerThreads value)
+  - minWorkerThreads - Минимальное число рабочих потоков в пуле - minimum number of worker threads available in the thread pool (default 1 per CPU, recommended is half of maxWorkerThreads value)
   - maxIOThreads - maximum number of threads that can be allotted to perform input/output (I/O) operations (default is 20 per CPU, recommended 100).
-  - minIOThreads - minimum number of threads that can be allotted to to perform input/output (I/O) operations (default 1 per CPU, recommended is half of maxIOThreads value)
+  - minIOThreads - Минимальное число асинхронных I\O потоков в пуле - minimum number of threads that can be allotted to to perform input/output (I/O) operations (default 1 per CPU, recommended is half of maxIOThreads value)
 
 ## Worker process (w3wp.exe) (W3SVC_W3WP)
 

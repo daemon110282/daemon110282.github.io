@@ -1,4 +1,4 @@
-# UXrocket
+# UXRocket
 
 ## Зачем
 

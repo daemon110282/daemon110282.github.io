@@ -25,4 +25,4 @@
 ## Технологии
 
 - MixPanel
-- UxRocket
+- [UXRocket](../technology/leads/uxrocket.md)

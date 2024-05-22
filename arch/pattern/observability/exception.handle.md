@@ -11,3 +11,4 @@
 	- [анализа производительности APM](../../arch/system.class/apm.md)
 	- [vs](https://habr.com/ru/companies/constanta/articles/706386/) Sentry
 - [App Metrica](../../../technology/leads/app.metrica.md) для мобильных
+- [LogRocket](../../../technology/observability/logrocket.md)

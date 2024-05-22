@@ -13,8 +13,10 @@ TODO
 
 ## HTTP.SYS
 
-- idleconnectiontimeout 
-- HeaderWaittimeout
+- [ ] [idleconnectiontimeout](https://learn.microsoft.com/ru-ru/troubleshoot/developer/webapps/aspnet/site-behavior-performance/error-logging-http-apis)
+- [ ] [HeaderWaittimeout](https://learn.microsoft.com/ru-ru/windows/win32/http/scenario-1--http-timeout-example-using-etw-tracing-and-netsh-commands)
+- [ ] [ConnectionTimeout](https://topic.alibabacloud.com/a/the-iis-server-error-log-timer_connectionidle-causes-the-server-to-be-inaccessible_1_16_32502215.html)
+- [ ] [MinFileBytesPerSec](https://topic.alibabacloud.com/a/the-iis-server-error-log-timer_connectionidle-causes-the-server-to-be-inaccessible_1_16_32502215.html)
 
 ## Web Admin Service (WAS_W3WP)
 
@@ -24,7 +26,7 @@ TODO
 
 TODO
 
-## Application Pool
+## Application Pool (W3SVC_W3WP?)
 
 Параллельность обработки запросов [concurrent](https://www.dotnetfunda.com/articles/show/3485/11-tips-to-improve-wcf-restful-services-performance)
 
@@ -47,8 +49,14 @@ TODO
   - minWorkerThreads - Минимальное число рабочих потоков в пуле - minimum number of worker threads available in the thread pool (default 1 per CPU, recommended is half of maxWorkerThreads value)
   - maxIOThreads - maximum number of threads that can be allotted to perform input/output (I/O) operations (default is 20 per CPU, recommended 100).
   - minIOThreads - Минимальное число асинхронных I\O потоков в пуле - minimum number of threads that can be allotted to to perform input/output (I/O) operations (default 1 per CPU, recommended is half of maxIOThreads value)
+- [Limits](https://learn.microsoft.com/en-us/iis/configuration/system.applicationhost/sites/site/limits)
+  - [ ] connectionTimeout
+    - равно ли [aspnet httpruntime executionTimeout](https://rajeevdotnet.blogspot.com/2019/09/aspnet-httpruntime.html) ?
+    - [httpruntime executionTimeout](https://stackoverflow.com/questions/2414441/how-to-increase-request-timeout-in-iis)    
+  - [ ] maxConnections
+  - [ ] maxBandwidth
 
-## Worker process (w3wp.exe) (W3SVC_W3WP)
+## Worker process (w3wp.exe) (W3SVC_W3WP?)
 
 - [ ] MaxPoolThreads
 

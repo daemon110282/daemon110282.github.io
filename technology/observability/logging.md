@@ -15,3 +15,9 @@
 	- Rollbar
 	- [Errbit SaaS (Loggly, New Relic)](https://www.sitepoint.com/logging-errors-client-side-apps/)
 
+Php
+
+- Стандартное логирование запросов (nginx, apache, php-fpm)
+- Логирование медленных запросов БД (опция в mysql)
+- Инструменты фиксации узких мест при прохождении запроса. Для php это xhprof, pinba.
+- Встроенные инструменты внутри веб-приложения, например отдельный модуль трассировки.

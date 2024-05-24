@@ -73,8 +73,8 @@
         - __HTTP.sys__ receives from __WWW Service (W3SVC)__ configuration information, such as __IIS Application pool__ and __IIS WebSite__ configuration.
       - WAS starts\creater a __worker process__ for the __application pool__ to which the request was made.
       - IIS __Application pool__ 1 ([метрики](iis.performance.metric.md#application-pool)), isolate site
-        - __IIS Worker Process (w3wp.exe)__ 1 ([метрики](iis.performance.metric.md#worker-process))
-	      - ASP.NET: __CLR__ Thread ([метрики](iis.performance.metric.md#aspnet-clr-thread))
+        - __IIS Worker Process (w3wp.exe)__ 1 ([метрики](iis.performance.metric.md#worker-process-w3wpexe-w3svc_w3wp))
+	      - ASP.NET: __CLR__ Thread ([метрики](iis.performance.metric.md#aspnet))
             - Application 1 ([метрики](iis.performance.metric.md#app))
             - Application X
         - IIS Worker Process X

@@ -14,6 +14,8 @@
 
 ## Паттерны
 
+- [Балансировка](../deployment/load.balancing.md)
+
 ### Приложение back-end
 
 - [кэш](pattern.cache.md) вывода, данных (sqldependency)
@@ -31,7 +33,6 @@
 
 - JavaScript
   - существует инструмент под названием Navigation Timing API, который позволяет собирать на стороне клиента данные по скорости страницы, продолжительности DNS resolve, передачи данных по сети, работы на Backend’е, отрисовки страницы.
-- [Балансировка](../deployment/load.balancing.md)
 
 ### СУБД
 
@@ -40,7 +41,10 @@
 - [Репликация](../sync.data.md)
 - Кластеризация
 - [Уровень изоляции данных](../../store.isolation.level.md)
-- [ms sql](../../../technology/db/mssql.md)
+- Индексы
+  - [ms sql](../../../technology/db/mssql.md)
+- План запросов
+- Объем данных снизить
 
 ### Сеть
 

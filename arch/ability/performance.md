@@ -4,7 +4,8 @@
 
 - [Производительность Performance](#производительность-performance)
   - [Зачем](#зачем)
-  - [TODO web app](#todo-web-app)
+  - [Веб-приложения](#веб-приложения)
+  - [Диагностика Troubleshooting](#диагностика-troubleshooting)
   - [Инструменты](#инструменты)
   - [Метрики](#метрики)
   - [Требования пример](#требования-пример)
@@ -25,36 +26,49 @@
 
 [Паттерны](../pattern/performance/pattern.perf.md).
 
-## TODO web app
+## Веб-приложения
 
-- WIN32_ERROR_DESCRIPTION(sc-win32-status) as Description, TO_LOCALTIME
-- НТ метрика от. Netexport записать, эталон. Конфигурация ПК клиента. С кешем из firebug.
-- тайминг логировать
-- Yslow, page speed chrome
-- HTTP Error 503.2 — Service Unavailable в логах [IIS](../../technology/middleware/webserver/iis.md) есть - __очередь запросов__
-- The __Time-Taken__ - field shows the length of time that it takes for a request to be processed and its response to be sent.  
-  - This value gets calculated by a timer that gets initialized when the __IIS server receives the first byte of an HTTP request__, and stopped when the __last IIS response send operation completes__.  
-  - It is important to note that the Time-Taken field __usually includes the time that the request and response packets are travelling over the network__.
-  - Время когда был рост времени ответа совпадает с current connection пиками?
-- [http-status-code](https://support.microsoft.com/ru-ru/help/943891/the-http-status-code-in-iis-7.0,-iis-7.5,-and-iis-8.0)
-- [network speed??](https://serverfault.com/questions/412419/iis-how-to-tell-if-a-slow-time-taken-is-due-to-a-slow-network-connection)
-- [DOS attack](https://serverfault.com/questions/288262/dos-attack-slow-post-how-to-prevent-in-iis?rq=1) "slow post"
-- выявить источник и тип трафика, а также точки входа на сайт или скрипты, которые вызываются чаще всего. Причины высокой нагрузки в результатах анализа следует посмотреть:  
-  - TOP 20 запросов методом POST
-  - TOP 20 запросов методом GET/HEAD
-  - TOP 20 IP адресов по числу хитов
-  - TOP 20 ссылающихся страниц по числу хитов
-- настройка трейса FREB по длительным [запросам time-taken](https://blogs.msdn.microsoft.com/docast/2016/04/28/troubleshooting-iis-request-performance-slowness-issues-using-freb-tracing/) ЗАМЕДЛЯЕТ САЙТ!  
-- [long time-taken and win32 status code = 64](https://forums.iis.net/t/1169411.aspx)
-  - is connection is already lost? common by proxies, to not have too many socket connections?
+- Latency
+  - тайминг логировать
+    - на клиенте
+      - Yslow, page speed chrome
+    - на веб сервере
+      - The __Time-Taken__ - field shows the length of time that it takes for a request to be processed and its response to be sent.  
+        - This value gets calculated by a timer that gets initialized when the __IIS server receives the first byte of an HTTP request__, and stopped when the __last IIS response send operation completes__.  
+        - It is important to note that the Time-Taken field __usually includes the time that the request and response packets are travelling over the network__.
+  - [network speed??](https://serverfault.com/questions/412419/iis-how-to-tell-if-a-slow-time-taken-is-due-to-a-slow-network-connection)
+- Errors
+  - HTTP Error 503.2 — Service Unavailable в логах [IIS](../../technology/middleware/webserver/iis.md) есть - __очередь запросов__
+  - WIN32_ERROR_DESCRIPTION(sc-win32-status) as Description, TO_LOCALTIME
+  - [http-status-code](https://support.microsoft.com/ru-ru/help/943891/the-http-status-code-in-iis-7.0,-iis-7.5,-and-iis-8.0)
+  - [long time-taken and win32 status code = 64](https://forums.iis.net/t/1169411.aspx)
+    - is connection is already lost? common by proxies, to not have too many socket connections?
+- Traffic
+  - [DOS attack](https://serverfault.com/questions/288262/dos-attack-slow-post-how-to-prevent-in-iis?rq=1) "slow post"
+  - выявить источник и тип трафика, а также точки входа на сайт или скрипты, которые вызываются чаще всего. Причины высокой нагрузки в результатах анализа следует посмотреть:  
+    - TOP 20 запросов методом POST
+    - TOP 20 запросов методом GET/HEAD
+    - TOP 20 IP адресов по числу хитов
+    - TOP 20 ссылающихся страниц по числу хитов
+
+## Диагностика Troubleshooting
+
+- Настройки
+  - [iis](../../technology/middleware/webserver/iis.performance.settings.md)
+- Use Case
+  - [iis](../../technology/middleware/webserver/iis.troubleshooting.md#use-case)
+- Dump
+  - [iis](../../technology/middleware/webserver/iis.troubleshooting.md#dump)
+- Трассировка
+  - [iis](../../technology/middleware/webserver/iis.troubleshooting.md#трассировка)
 
 ## Инструменты
 
-- Php
-- Стандартное логирование запросов (nginx, apache, php-fpm)
-- Логирование медленных запросов БД (опция в mysql)
-- Инструменты фиксации узких мест при прохождении запроса. Для php это xhprof, pinba.
-- Встроенные инструменты внутри веб-приложения, например отдельный модуль трассировки.
+- [Нагрузочное тестирование](../../technology/ability/performance/load.test.md)
+- Observability
+  - [logs](../../technology/observability/logging.md)
+  - [monitoring](../../technology/observability/monitoring.md)
+  - [trace](../../technology/observability/tracing.distributed.md)
 
 ## Метрики
 

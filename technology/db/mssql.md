@@ -6,15 +6,14 @@
   - [Производительность](#производительность)
     - [Способы анализа производительности](#способы-анализа-производительности)
       - [SQL Trace Profiler (Deprecated)](#sql-trace-profiler-deprecated)
-      - [Query plan](#query-plan)
+      - [Benchmark Load Test](#benchmark-load-test)
+      - [Стратегии оптимизации запросов](#стратегии-оптимизации-запросов)
     - [Настройки](#настройки)
       - [Параллелизм MAXDOP](#параллелизм-maxdop)
-    - [Стратегии оптимизации запросов](#стратегии-оптимизации-запросов)
   - [Мониторинг](#мониторинг)
     - [Онлайн](#онлайн)
     - [Исторически](#исторически)
   - [TODO](#todo)
-  - [Benchmark Load Test](#benchmark-load-test)
   - [Version](#version)
 
 ## Масштабируемость
@@ -37,9 +36,9 @@ HA:
 ## Паттерны
 
 - delete rows VS update rows state - удаление __блокирующая и длительная операция__
-	- https://social.msdn.microsoft.com/Forums/sqlserver/en-US/d214f0ef-b995-4a14-bed9-0bf5b27a264c/performance-delete-rows-vs-update-rows-state?forum=transactsql
-	- https://stackoverflow.com/questions/1271641/in-sql-is-update-always-faster-than-deleteinsert
-	- https://dba.stackexchange.com/questions/8028/whats-better-for-large-changes-to-a-table-delete-and-insert-every-time-or-upd
+	- [TODO](https://social.msdn.microsoft.com/Forums/sqlserver/en-US/d214f0ef-b995-4a14-bed9-0bf5b27a264c/performance-delete-rows-vs-update-rows-state?forum=transactsql)
+	- [TODO](https://stackoverflow.com/questions/1271641/in-sql-is-update-always-faster-than-deleteinsert)
+	- [TODO](https://dba.stackexchange.com/questions/8028/whats-better-for-large-changes-to-a-table-delete-and-insert-every-time-or-upd)
 - [Секционирование](https://habr.com/ru/articles/464665/)
 
 ## Производительность
@@ -51,26 +50,27 @@ HA:
 - [Блокировки](mssql.locks.md)
   - Blocking can be reduced with __index design__ and __short transactions__.
 - [Индексирование](mssql.index.md)
-  - Sorts can be limited with index usage. That is, a certain sort order is supported by an index that is sorted the same way, either ascending or descending.
-- [Оптимизация запросов](#стратегии-оптимизации-запросов)
+  - REBUILD индексов (INDEX REORGANIZE не рекомендуется на больших объемах БД) 
+- [Стратегии оптимизации запросов](#стратегии-оптимизации-запросов)
 - Дизайна (архитектуры) приложения
 - Обслуживания БД
   - __SHRINK__ [не всегда хорошо на больших БД](https://habr.com/ru/articles/741212/)
-  - REBUILD индексов (INDEX REORGANIZE не рекомендуется на больших объемах БД)
-  - Rebuild table   
-  - Clear statistics 
+  - Rebuild table
+  - Clear statistics
   - Index by table uses in night
 - __[SQL Plan](mssql.queryplan.md)__  
-  - CPU can be reduced with __plan reuse__ and __join reduction__.
-- __IO__ performance 
+  - CPU can be reduced with __plan reuse__ and __join reduction__
+- __IO__ performance
   - can be reduced with good __indexing__, __join reduction__, and __high page life expectancy__.
-- Memory 
+- Memory
   - is optimal when there are no sudden drops in __Page Life Expectancy__
 
 ### Способы анализа производительности
 
 - [Оценка производительности SQL Server](http://www.interface.ru/home.asp?artId=6968)
+  - TODO [Анализ медленных запросов](https://learn.microsoft.com/ru-ru/troubleshoot/sql/database-engine/performance/troubleshoot-slow-running-queries?source=recommendations)
 - [MS инструменты](https://learn.microsoft.com/en-us/sql/relational-databases/performance/performance-monitoring-and-tuning-tools?view=sql-server-ver15)
+  - Performance Report
   - Data Collection
   - [Extended Events](mssql.extended.events.md)
   - [DMV](mssql.dmv.md)
@@ -78,6 +78,7 @@ HA:
   - [SQL Trace Profiler (deprecated)](#sql-trace-profiler-deprecated)
   - QTA
 - [Мониторинг](#мониторинг)
+- [Benchmark](#benchmark-load-test)
 
 #### SQL Trace Profiler (Deprecated)
 
@@ -87,6 +88,24 @@ HA:
 4. Вычислить времени выполнения на локальном сервере и на сервере разработчика (ручным способом)/ Результаты позволяют уверенно говорить о причинах медленной загрузки страниц (например редактирование анкеты) в браузере.
 
 - Аналитический отчёт по [трейсу Microsoft SQL Server tutorial](http://habrahabr.ru/post/243587/)
+
+#### Benchmark Load Test
+
+- [Benchmark](../benchmark.md)
+  - [Тестирование производительности баз данных при помощи tSQLt и SQLQueryStress](https://habr.com/ru/articles/310328/)
+
+#### Стратегии оптимизации запросов
+
+- можно использовать [индексы](mssql.index.md)
+- другие варианты запроса
+  - To write __sargable queries__:
+    - Avoid using functions or calculations on indexed columns in the WHERE clause
+    - Use direct comparisons when possible, instead of wrapping the column in a function
+    - If we need to use a function on a column, consider creating a computed column or a function-based index, if the database system supports it
+- сохранение промежуточных результатов
+- Для проверки быстродействия запроса:	SET STATISTICS TIME ON
+- Для проверки статистики ввода/вывода:	SET STATISTICS IO ON
+- Для вывода плана запроса:	SET STATISTICS XML ON
 
 ### Настройки
 
@@ -112,19 +131,6 @@ HA:
   - I set the __Maximum Degree of Parallelism__ to 2, which means the query still uses __parallelism but only on 2 CPUs__.
   - However, I keep the __Cost Threshold for Parallelism__ very high. This way, not all the queries will qualify for parallelism but __only the query with higher cost will go for parallelism__. I have found this to work best for a system that has OLTP queries and also where the reporting server is set up.
 
-### Стратегии оптимизации запросов
-
-- можно использовать [индексы](mssql.index.md)
-- другие варианты запроса
-  - To write __sargable queries__:
-    - Avoid using functions or calculations on indexed columns in the WHERE clause
-    - Use direct comparisons when possible, instead of wrapping the column in a function
-    - If we need to use a function on a column, consider creating a computed column or a function-based index, if the database system supports it
-- сохранение промежуточных результатов
-- Для проверки быстродействия запроса:	SET STATISTICS TIME ON
-- Для проверки статистики ввода/вывода:	SET STATISTICS IO ON
-- Для вывода плана запроса:	SET STATISTICS XML ON
-
 ## Мониторинг
 
 - [MS: Мониторинг и настройка производительности](http://www.sql.ru/forum/actualthread.aspx?tid=858780)
@@ -144,8 +150,8 @@ HA:
 
 ### Исторически
 
-- Стандартные отчеты
-  - __Data Collection__  - сбор авто метрик за период времени в отдельной БД с sql plan.
+- Стандартные отчеты [Performance dashboard](https://learn.microsoft.com/en-us/sql/relational-databases/performance/performance-dashboard)
+  - __Data Collection__  - сбор авто метрик за период времени в отдельной БД с sql plan
     - Query Statistics History: by CPU, duration, IO, Physical Reads, Logical Reads
     - Server Activity History: CPU, RAM, IO, Network, Waits
     - Версия MS SQL с 2008: используем 2012, DWH 2016
@@ -169,10 +175,6 @@ HA:
 - http://msmvps.com/blogs/irinanaumova/archive/2011/05/06/1792775.aspx	
 - http://www.mssqltips.com/tip.asp?tip=1039	
 
-## Benchmark Load Test
-
-- [Benchmark](../benchmark.md)
-  - [Тестирование производительности баз данных при помощи tSQLt и SQLQueryStress](https://habr.com/ru/articles/310328/)
 
 ## Version
 

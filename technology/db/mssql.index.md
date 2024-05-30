@@ -33,11 +33,14 @@ MAXDOP=10__
   - Помним про 3-х повышение производительности при использовании в 2012 и в 2014 SORT_IN_TEMPDB=ON SQL Server 2014. [TEMPDB Hidden Performance Gem](https://techcommunity.microsoft.com/t5/sql-server-support-blog/sql-server-2014-tempdb-hidden-performance-gem/ba-p/318255)  
 - [Анализ __плана выполнения__](mssql.md#query-plan) после применения индексов: Scan, Seek, Lookup
 
-### Удаление не используемых индексов
+### Удаление не используемых индексов 
+
+Unused index
 
 - Влияет на объем БД, скорость операций чтения, изменения данных
 - sys.dm_db_index_usage_stats
-  - UserSeek и UserScans почти везде нули, что означает, что индексы не используются СУБД для работы, количество же вставок в них очень велико.
+  - условия отбора по [UserSeek и UserScans и UserLookups](https://learn.microsoft.com/en-us/sql/relational-databases/system-dynamic-management-views/sys-dm-db-index-usage-stats-transact-sql?view=sql-server-ver16) __почти везде нули__, что означает, что индексы не используются СУБД для работы, количество же вставок UserUpdates в них очень __велико__
+  - перезапуск службы SQL Server сбрасывает данные в sys.dm_db_index_usage_stats
 
 ### Missing Index
 
@@ -45,16 +48,17 @@ MAXDOP=10__
 
   - имеет [ограничения](https://learn.microsoft.com/ru-ru/sql/relational-databases/indexes/tune-nonclustered-missing-index-suggestions?view=sql-server-ver16#limitations-of-the-missing-index-feature) и нужно тестировать предложения
     - Предложения отсутствующих индексов __не являются точными инструкциями__ по созданию индексов.
+    - msqsql dmv __сбрасываются при перезапуске SQL Server__
   - параметры
     - длительность выполения запроса - elapsed_time
     - длительность обработки запроса CPU - cpu_time
     - длительность ожидания обработки запроса - wait_time = elapsed_time - cpu_time
-    - user_cost
-    - user_impact
-    - user_seeks
+    - [user_seeks](https://learn.microsoft.com/en-us/sql/relational-databases/system-dynamic-management-views/sys-dm-db-index-usage-stats-transact-sql?view=sql-server-ver16)
     - user_scans
     - логических операций чтения - logical_reads
     - логических операций записи - logical_writes
+    - общая стоимость запроса для пользователя - avg_total_user_cost
+    - эффект на пользователя - avg_user_impact
     - ожидаемый эффект - estimated_improvement = avg_total_user_cost * avg_user_impact * (user_seeks + user_scans)
 
 Предложения отсутствующих индексов в планах выполнения могут храниться для этих событий благодаря [хранилищу запросов](mssql.QS.md) Query Store.

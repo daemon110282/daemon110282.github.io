@@ -8,9 +8,12 @@
 
 ## Атрибуты качества, архитектурные характеристики
 
+- Стандарты  
+  - [ГОСТ Р ИСО/МЭК 9126-93](https://m-i-kuznetsov.livejournal.com/157150.html)
+
 ![nft](../img/arch/nft.png)
 
-Атрибуты качества (на основе ISO 9126)
+Атрибуты качества
 
 - [Надежность Reliability](../devops/sre.md)
   - [Доступность Availability (Эксплуатационные)](ability/availability.md)
@@ -56,7 +59,7 @@
   - abstraction
   - data integrity
   - data consistency
-  - [ГОСТ Р ИСО/МЭК 9126-93](https://m-i-kuznetsov.livejournal.com/157150.html)
+
 
 ## Коммерческие атрибуты
 

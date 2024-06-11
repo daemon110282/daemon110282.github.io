@@ -70,13 +70,13 @@ User Provisioning:
 
 ![scheme](https://habrastorage.org/r/w1560/getpro/habr/post_images/bc9/ad8/618/bc9ad86182b31533cc26413abc67924f.png)
 
-### OAuth
-
-- [OAuth 2.0](../../technology/protocols.integration/oauth.md) [нужен, чтобы получать](https://habr.com/ru/company/dataart/blog/311376/) токены доступа и с ними обращаться к ресурсам. Authorization framework, not an authentication protocol.
-
 ### OpenID Connect (OIDC)
 
-- [OpenID Сonnect](../../technology/protocols.integration/oidc.md) нужен, чтобы получить у пользователя его учетные данные и проверить их. Authentication protocol.
+- [OpenID Сonnect](../../technology/protocols.integration/oidc.md) нужен, чтобы получить у пользователя его учетные данные и проверить их - __Authentication protocol__.
+
+### OAuth
+
+- [OAuth 2.0](../../technology/protocols.integration/oauth.md) [нужен, чтобы получать](https://habr.com/ru/company/dataart/blog/311376/) токены доступа и с ними обращаться к ресурсам - __Authorization framework__, not an authentication protocol.
 
 ## Критерии выбора
 

@@ -34,8 +34,8 @@ Client type — тип клиента, от которого зависит сп
 [Flow](https://habr.com/ru/company/nixys/blog/566910/) also called __Grants__:
 
 - Confidential - [machine to machine communication](https://docs.duendesoftware.com/identityserver/v6/overview/terminology/#machine-to-machine-communication)
-	- Authentication Flow=[Authorization Code Flow](url) - using a browser and server BackEnd
-	- [Client Credentials Flow](https://habr.com/ru/company/dododev/blog/520046/)
+	- Authentication Flow=[Authorization Code Flow](https://habr.com/ru/companies/dododev/articles/520046/) - using a browser and server BackEnd
+	- [Client Credentials Flow](https://habr.com/ru/company/dododev/blog/520046/) - client_secret храниться на клиенте BackEnd
 	<!-- ![scheme](https://habrastorage.org/r/w1560/getpro/habr/post_images/110/fe3/d4a/110fe3d4a29efd1af72da67ab06515ba.png) -->
 - Public - [GUI с участием User](https://docs.duendesoftware.com/identityserver/v6/overview/terminology/#interactive-applications)
 	- [Authorization Code Flow with PKCE](oauth.flow.ACwithPKCE.md)

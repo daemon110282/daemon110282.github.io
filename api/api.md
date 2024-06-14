@@ -55,11 +55,7 @@ SLI, SLA
 
 ### Security
 
-- [apisecurity.io](https://apisecurity.io/)
-- [Угрозы OWASP подробно](https://habr.com/ru/post/503284/)
-- [Control levels of user authorisation](https://www.gov.uk/guidance/gds-api-technical-and-data-standards)
-- [API Security tools and resources](https://github.com/arainho/awesome-api-security)
-- [openapi security](https://openapi.security/)
+- [JWT Bearer, API Key](../arch/ability/security.md#api)
 
 ### Документирование
 

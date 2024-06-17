@@ -41,7 +41,7 @@ API - Application Programming Interface, что значит программн�
 - [API gateway](api.gateway.md)
 - [Стратегии повторов](../arch/pattern/fault.tolerance/pattern.failure.md) при сбоях Rerty Policy
 
-SLI, SLA
+## SLI, SLA
 
 - request latency
 - system throughput
@@ -50,12 +50,13 @@ SLI, SLA
 
 ### Versioning
 
+- SemVer
 - Then you can decide between implementing both versions of the service simultaneously within the same service instance, or deploying different instances that each handle a version of the API.
 - A good approach for this is the __Mediator pattern__ (for example, __MediatR__ library) to decouple the different implementation versions into independent handlers.
 
 ### Security
 
-- [JWT Bearer, API Key](../arch/ability/security.md#api)
+- [JWT Bearer, API Key](../arch/ability/security.api.md)
 
 ### Документирование
 
@@ -83,6 +84,7 @@ SLI, SLA
   - [Postman](../technology/api/postman.md)
   - [Insomnia](https://insomnia.rest/products/insomnia) (SOAP, gRPC, OpenApi, GraphQL)
   - Editor Swagger (OpenApi, AsyncApi)
+
 ### API management
 
 [API management](api-managment.md)

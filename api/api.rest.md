@@ -44,8 +44,7 @@ REST API — это архитектурный подход, который ус
   - [REST Best Practice - TLS, OAuth, OIDC SSO](https://stackoverflow.blog/2021/10/06/best-practices-for-authentication-and-authorization-for-rest-apis/?utm_campaign=APISecurity%20newsletter&utm_medium=email&_hsmi=204867978&_hsenc=p2ANqtz-94r6UDHzZG48tgtd0Sz6OiZicy6tTBQysQKtk0WzhZXlXrXBucIld80QE3Gll1Le1lxnwNhNqu-pySFps1AsqeR8MQrg&utm_content=204868574&utm_source=hs_email)
   - __Ролевой доступ__ (RBAC, ABAC и тп) к методам АПИ
 - АвтоДокументация [OpenApi](openapi.md)
-- [Версионность](https://learn.microsoft.com/ru-ru/azure/architecture/best-practices/api-design#versioning-a-restful-web-api)
-  - Версия вашего приложения
+- [Версионность](api.md#versioning)
 - [Сортировка](https://gist.github.com/fomvasss/c1221b2464be94870f7f823c74520665)
 - [Пагинация](#Пагинация)  
 - [Фильтрация](https://www.moesif.com/blog/technical/api-design/REST-API-Design-Filtering-Sorting-and-Pagination/)

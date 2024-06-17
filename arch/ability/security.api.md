@@ -25,7 +25,7 @@
 - [API key](https://code-maze.com/aspnetcore-api-key-authentication/) - Данная схема обеспечивает защиту от несанкционированного использования API и позволяет осуществлять, например, проверку лимитов использования API.
 	- Лучше перейти на [Bearer Token, JWT Token](https://blog.postman.com/what-is-an-api-key/)
 	- .NET Core example in [header](https://code-maze.com/aspnetcore-api-key-authentication/) 
-		- "X-API-Key"
+		- "X-API-Key" [swagger](https://swagger.io/docs/specification/authentication/api-keys/)
 		- Authorization header 'Authorization': 'Bearer YOUR_API_KEY' [RFC 7235](https://www.rfc-editor.org/rfc/rfc7235#section-4.2)
 	- __key rotation__ and __safe storage__ (Key Value Store - Vault), which leaves their API keys vulnerable to theft
 	- Store API keys as [hashed values](https://blog.postman.com/what-is-an-api-key/)

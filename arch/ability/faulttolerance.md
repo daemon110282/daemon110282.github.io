@@ -54,8 +54,9 @@
 
 ### Методы разработки
 
-[Design for failure](../pattern/fault.tolerance/pattern.failure.md)
+Design for failure
 
+- [Идемпотентность, Retry Policy, Fail Fast, Rate Limit, Circuit Breakers](../pattern/fault.tolerance/pattern.failure.md)
 - распределенная архитектура
   - Микросервисы: слабая связность, изоляция сбоев
   - stateless

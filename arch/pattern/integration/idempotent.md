@@ -1,5 +1,9 @@
 # Идемпотентность
 
+## Зачем
+
+Обеспечить [Fault Tolerance](../../ability/faulttolerance.md) и реализовать [паттерн Failure](../fault.tolerance/pattern.failure.md).
+
 Проблема:
 
 - [Гонки сообщений, запросов изменения, чтения](https://habr.com/ru/post/442762/)
@@ -13,7 +17,7 @@
 
 ## В ИС потребителе
 
-- **ключ идемпотентности** генерится.
+- **ключ идемпотентности** генерится
 - необходимо __отделить создание__ idempotency_key от области __передачи отправки__, [практика](https://codegenius.ru/articles/717073/): Добавить шаг подтверждения перед шагом отправки
 - поле заголовка [HTTP Idempotency-Key](https://datatracker.ietf.org/doc/draft-ietf-httpapi-idempotency-key-header/)
 - Ключ идемпотентности обязательно создавать в формате GUID. Рекомендуется [версия 4](https://www.uuidtools.com/v4).
@@ -37,11 +41,12 @@
   - Выполняется — возвратить успешное выполнение и не выполнять никаких операций.
 
 ## REST HTTP методы 
-  - [идептоментны всегда](https://github.com/Microsoft/api-guidelines/blob/master/Guidelines.md#74-supported-methods): GET, PUT, DELETE
-  - необходимо реализовать идептоментность
-    - POST - клиент должен контролировать повторные запросы, если не получил ответа
-    - PATCH - если клиент не получил ответа на запрос, просто направляет повторно
-  - Прокси-серверы могут не повторять POST и PATCH запросы при ошибках, тогда как GET и PUT могут повторить.
+
+- [идептоментны всегда](https://github.com/Microsoft/api-guidelines/blob/master/Guidelines.md#74-supported-methods): GET, PUT, DELETE
+- необходимо реализовать [идептоментность](https://github.com/ikyriak/IdempotentAPI?tab=readme-ov-file#idempotency-in-http-web)
+  - POST - клиент должен контролировать [повторные запросы](../../../arch/pattern/integration/), если не получил ответа
+  - PATCH - если клиент не получил ответа на запрос, просто направляет повторно
+- Прокси-серверы могут не повторять POST и PATCH запросы при ошибках, тогда как GET и PUT могут повторить.
 
 ## Message Bus
 
@@ -58,3 +63,5 @@
 
 - .NET MediatR (паттерн [медиатор](../development/mediator.md)) и PipelineBehavior (паттерн [chain of responsibility](../development/chainofresp.md) + decorator/proxy)
 (https://temofeev.ru/info/articles/borba-s-dublikatami-delaem-post-idempotentnym/)
+- [IdempotentAPI](https://github.com/ikyriak/IdempotentAPI) with Cache Store and support Cluster Environment
+- [.net sample](https://mahedee.net/How-to-handle-Idempotentcy-in-distributed-system-using-aspnet-core/) with Cache Store Redis

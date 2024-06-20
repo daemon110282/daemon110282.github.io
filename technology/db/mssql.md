@@ -139,6 +139,7 @@ HA:
 
 ### Онлайн
 
+- sp_check_query - mssql default
 - [sp_Blitz](https://github.com/BrentOzarULTD/SQL-Server-First-Responder-Kit/tree/main)
   - To find out why the server is slow right now, run sp_BlitzFirst.
 - Sp_Who2

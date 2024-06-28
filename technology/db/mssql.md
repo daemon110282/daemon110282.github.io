@@ -182,6 +182,30 @@ HA:
 - [2012](https://sqlserverbuilds.blogspot.com/2012/01/sql-server-2012-versions.html) 11.0.x.x
   - use 11.0.6579.0
 - [2014](https://sqlserverbuilds.blogspot.com/2014/01/sql-server-2014-versions.html) 12.0.x.x
+  - Always On Availability Groups
 - 2016
-  - use
-- 2019
+  - use CTI
+  - Query Store
+
+### 2019
+
+Плюсы:
+
+- добавляет много интересных [улучшений в производительности](https://otus.ru/nest/post/1182/), когда вы включаете режим совместимости с 2019
+  - [function](https://www.brentozar.com/archive/2018/11/sql-server-2019-faster-functions/)
+  - [Faster Table Variables](https://www.brentozar.com/archive/2018/09/sql-server-2019-faster-table-variables-and-new-parameter-sniffing-issues/)
+- Query Store
+  - Custom capture policy for Query Store
+- [In-Memory Database](https://learn.microsoft.com/en-us/sql/sql-server/what-s-new-in-sql-server-2019?view=sql-server-ver15&preserve-view=true)
+- Linux better Support
+  - CDC
+- k8s Containers
+
+Минусы:
+
+- больше нет Service Pack, только Cumulative Updates
+
+Upgrade
+
+- [Process Support 2012SP4 to 2019](https://learn.microsoft.com/ru-ru/sql/database-engine/install-windows/supported-version-and-edition-upgrades-2019?view=sql-server-ver16)
+

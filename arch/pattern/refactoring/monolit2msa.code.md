@@ -1,14 +1,32 @@
 # Рефакторинг кода
 
 - [Рефакторинг кода](#рефакторинг-кода)
-  - [Зачем](#зачем)
-    - [Паттерны](#паттерны)
+	- [Зачем](#зачем)
+		- [Паттерны](#паттерны)
 
 Паттерны распила [монолита](../../style/monolit.md) на [MSA](../../style/msa.md)
 
 ## Зачем
 
 Часть [рефакторинга монолита](monolit2msa.md).
+
+- Рефакторинг - это процесс __улучшения структуры кода без изменения его поведения__.
+- Большинство инженерных проблем возникает из-за беспорядка, который мы имеем в коде.
+- Writing code is very simple, but writing simple code is the hardest thing there is.
+- Написание чистого кода и поддержание его чистоты возможно только путем практики непрерывного рефакторинга.
+
+Цель:
+
+- [simplify design](https://craftbettersoftware.com/p/refactor-like-a-pro)
+- improve namings
+- identify and remove code smells
+- use design patterns for common problems
+- improve testability and maintainability
+
+Ошибки:
+
+- Нет тестов: Test-Driven Development (TDD)
+- Изменение поведения при рефакторинге
 
 ### Паттерны
 
@@ -28,4 +46,4 @@
   		- Тестирование, Rollback если __фриз измненений__
   	- Удаление AS-IS иплементации
 - Прокси для трансформации форматов АПИ [Sidecar](https://habr.com/ru/companies/redhatrussia/articles/573720/)
-- Monorepo
+- __Monorepo__

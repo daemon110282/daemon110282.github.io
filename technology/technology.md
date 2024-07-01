@@ -13,7 +13,7 @@
 - [monitoring](observability/monitoring.md)
 - [OS](os/)
 - [Protocol integration](protocols.integration.md)
-- [Benchmark](benchmark.md)
+- [Benchmark](ability/performance/load.test.md)
 - DEV
   - Templating languages and HTML preprocessors: Pug, Nunjucks, Markdown.
   - CSS preprocessors: SCSS, LESS, PostCSS.

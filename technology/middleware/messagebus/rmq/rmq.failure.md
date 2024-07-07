@@ -2,16 +2,17 @@
 
 - [RMQ Failure](#rmq-failure)
 	- [Зачем](#зачем)
-	- [Dead Letter eXchange (DLX)](#dead-letter-exchange-dlx)
-	- [Exc=Direct Queue DLX](#excdirect-queue-dlx)
-	- [Retry Policy](#retry-policy)
-	- [Circuit Breakers](#circuit-breakers)
-	- [Redilivery](#redilivery)
-	- [Rate limit](#rate-limit)
-	
+	- [Patterns](#patterns)
+		- [Dead Letter eXchange (DLX)](#dead-letter-exchange-dlx)
+		- [Exc=Direct Queue DLX](#excdirect-queue-dlx)
+		- [Retry Policy](#retry-policy)
+		- [Circuit Breakers](#circuit-breakers)
+		- [Redilivery](#redilivery)
+		- [Rate limit](#rate-limit)
+
 ## Зачем
 
-Реализация [паттернов обработки сбоев](../../../../arch/pattern/fault.tolerance/pattern.failure.md) для обеспечения атрибута качества ИС [Отказоустойчивость Fault tolerance](../../../../arch/ability/faulttolerance.md):
+Реализация [паттернов обработки сбоев](../../../../arch/pattern/fault.tolerance/pattern.failure.md) для обеспечения атрибута качества ИС [Отказоустойчивость Fault tolerance](../../../../arch/ability/fault.tolerance.md):
 
 - Basic.Reject with __reueue = true__ - отклоненение сообщения и возврат __в начало очереди__
 	- минусы: лишняя нагрузка на внешний сервис, т.к. сообщения без задержки будут возвращаться в очередь. Решение: Basic.Reject with reueue = false + DLX.

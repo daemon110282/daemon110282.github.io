@@ -1,27 +1,28 @@
 # Атрибуты качества (ability) архитектуры
 
 - [Атрибуты качества (ability) архитектуры](#атрибуты-качества-ability-архитектуры)
-  - [Атрибуты качества, архитектурные характеристики](#атрибуты-качества-архитектурные-характеристики)
+  - [Атрибуты качества, архитектурные характеристики ИС](#атрибуты-качества-архитектурные-характеристики-ис)
   - [Коммерческие атрибуты](#коммерческие-атрибуты)
   - [Кросс-системные правила и руководства](#кросс-системные-правила-и-руководства)
   - [Фитнес функции](#фитнес-функции)
+  - [Категории](#категории)
+  - [TODO](#todo)
 
-## Атрибуты качества, архитектурные характеристики
+## Атрибуты качества, архитектурные характеристики ИС
 
 - Стандарты  
   - [ГОСТ Р ИСО/МЭК 9126-93](https://m-i-kuznetsov.livejournal.com/157150.html)
 
-![nft](../img/arch/nft.png)
-
 Атрибуты качества
 
-- [Надежность Reliability](../devops/sre.md)
+- [Надежность Reliability](ability/reliability.md)
   - [Доступность Availability (Эксплуатационные)](ability/availability.md)
-  - [Отказоустойчивость Fault tolerance](ability/faulttolerance.md)
-  - Стабильность (Изоляция сбоев) [Resilience](ability/resilience.md)
+  - [Отказоустойчивость Fault tolerance](ability/fault.tolerance.md)
+  - Стабильность (Maturity) - количество отказов системы за единицу времени. Т.е. частота сбоев при штатной работе системы.
+    - Изоляция сбоев [Resilience](ability/resilience.md)
+  - Восстанавливаемость Recoverability
   - Согласованность Consistency (Эксплуатационные)  
-  - Живучесть Robustness
-  - Recoverability
+  - Живучесть Robustness  
 - [Производительность Performance](ability/performance.md) (Эксплуатационные)  
 - Переносимость Portability
   - Возможность повторного использования Resuability (Единая кодовая база)
@@ -46,20 +47,24 @@
   - Практичность Usability
   - Удобство Accessibility (Пользовательский опыт)
   - Локализация Localization (Пользовательский опыт)
-- Удобство сопровождения
+- Удобство сопровождения Maintainability
+  - Анализируемость (Analyzability)
+  - Изменяемость (Changeability)
+  - Устойчивость (Stability)
   - [Тестопригодность Testability](ability/testability.md)
     - разделением на слои и следованием [Dependency Rule (правилу зависимостей)](https://habr.com/ru/company/mobileup/blog/335382/)
-  - [Автодокументирование API](../api/api.md)
-  - [Наблюдаемость Observability](ability/observability.md)
-- CI-CD куда?
-- TODO:
-  - scalability interoperability
-  - responsiveness
-  - elasticity
-  - abstraction
-  - data integrity
-  - data consistency
+- [Автодокументирование API](../api/api.md)
+- [Наблюдаемость Observability](ability/observability.md)
 
+TODO
+
+- CI-CD куда?
+- scalability interoperability
+- responsiveness
+- elasticity
+- abstraction
+- data integrity
+- data consistency
 
 ## Коммерческие атрибуты
 
@@ -86,13 +91,16 @@
 - Контрактные тесты
 - Процессные метрики
 - Мониторинг
-- Арх-е метрки
+- Арх-е метрики
 - Интеграционные тесты
 
-Категории:
+## Категории
 
 - Ключевые
 - Релевантные
 - Нерелевантные
 
-[TODO Excel list](ability/Quality-Attributes-2013.xlsx)
+## TODO
+
+- [TODO Excel list](ability/Quality-Attributes-2013.xlsx)
+- ![nft](../img/arch/nft.png)

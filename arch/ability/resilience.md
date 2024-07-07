@@ -1,4 +1,4 @@
-# Resilience Стабильность Изоляция сбоев
+# Resilience Изоляция сбоев
 
 ![how](../../img/pattern/resilience.jpg)
 

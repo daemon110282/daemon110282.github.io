@@ -14,8 +14,8 @@
 
 ## RDBMS (Relational)
 
-- [MS SQL](db/mssql.md)
-- [PostgreSQL](db/postgresql.md)
+- [MS SQL](db/mssql/mssql.md)
+- [PostgreSQL](db/postgresql/postgresql.md)
 
 ## Time Series Database
 

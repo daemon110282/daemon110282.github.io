@@ -19,4 +19,4 @@
 ## Технологии
 
 - MSSQL
-- PosgreSQL расширение [CITUS](../../../technology/db/postgresql.citus.md)  
+- PosgreSQL расширение [CITUS](../../../technology/db/postgresql/postgresql.citus.md)

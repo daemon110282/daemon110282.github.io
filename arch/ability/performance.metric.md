@@ -144,7 +144,8 @@ To-do
 
 #### СУБД
 
-- [mssql](../../technology/db/mssql.performance.metric.md)
+- [mssql](../../technology/db/mssql/mssql.performance.metric.md)
+- [postgresql](../../technology/db//postgresql/postgresql.performance.metric.md)
 
 #### Backend
 

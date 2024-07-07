@@ -3,18 +3,24 @@
 - [Postgresql](#postgresql)
   - [Термины](#термины)
   - [Типы данных](#типы-данных)
+    - [JSONB](#jsonb)
   - [Функции](#функции)
     - [Management](#management)
     - [Replication](#replication)
       - [Log Shipping](#log-shipping)
     - [Reporting Tools](#reporting-tools)
+    - [Hith Availability](#hith-availability)
+    - [Мониторинг](#мониторинг)
   - [Плюсы-минусы](#плюсы-минусы)
   - [Паттерны](#паттерны)
     - [ETL PSQL2MSSQL](#etl-psql2mssql)
     - [ETL MSSQL2PSQL](#etl-mssql2psql)
-    - [Миграция с MS SQL](#миграция-с-ms-sql)
-      - [Миграция с простоем](#миграция-с-простоем)
-      - [Миграция без простоя Zero Downtime](#миграция-без-простоя-zero-downtime)
+    - [Benchmark](#benchmark)
+    - [Блокировки Locks](#блокировки-locks)
+  - [Миграция с MS SQL](#миграция-с-ms-sql)
+    - [Миграция с простоем](#миграция-с-простоем)
+    - [Миграция без простоя Zero Downtime](#миграция-без-простоя-zero-downtime)
+  - [Версии](#версии)
 
 ## Термины
 
@@ -29,7 +35,7 @@
 
 - [JSONB](https://medium.com/geekculture/postgres-jsonb-usage-and-performance-analysis-cdbd1242a018)
   - работает очень быстро, особенно в контексте бизнес автоматизации
-  - но требует [индексов](https://habr.com/ru/companies/domclick/articles/701012/) правильных (GIN, Hash, btree)   
+  - но требует [индексов](https://habr.com/ru/companies/domclick/articles/701012/) правильных (GIN, Hash, btree)
   - Его удобно использовать для тех случаев, когда его данные __не используются для работы БД__, его можно легко и просто сразу передать веб-страницам
   - Если же по данным осуществляются операции БД, например, __фильтрация, сортировка, группировка и объединения__, то такие данные лучше хранить вне jsonb, в структуре самой БД
   - Это связано с тем, что Postgres __не умеет собирать статистику по внутренностям jsonb__, он рассматривает его только целиком, что обычно совершенно бессмысленно (можно отключать, так как статистика по __jsonb сильно раздувает таблицу статистики__)
@@ -51,7 +57,7 @@
 Минусы:
 
 - Сохранение медленее (конвертация в бинарный формат)
-- Нет валидации на уровне БД 
+- Нет валидации на уровне БД
 - Продолжается оптимизации производительности на уровне PGSQL
 - Нужно применять правильные индексы на больших объемах данных
 - Нужно тестировать с CITUS поддержку JSONB
@@ -77,8 +83,8 @@
 
 #### Log Shipping
 
-- Master (Primary) -> Slave (standby or secondary) 
-  - accept connections and serves **read-only queries** is called a **Hot Standby Server**
+- Master (Primary) -> Slave (standby or secondary)
+  - accept connections and serves __read-only queries__ is called a __Hot Standby Server__
 - https://www.postgresql.org/docs/current/warm-standby.html
 - [log shipping methodology](https://medium.com/@PinkOwl/postgresql-and-me-log-shipping-replication-6bc945757822)
   - File based log shipping - asynchronous in nature and logs are shipped after they have been written to disk and thus may increase the RTO
@@ -94,7 +100,7 @@
 - кластер PostgreSQL на [WAL репликации](https://habr.com/ru/companies/avito/articles/775922/)
   - на repmgr в [Docker и Testcontainers](https://habr.com/ru/articles/754168/)
   - Patroni
-  - Stolon 
+  - Stolon
 - необходимо Distributed Key-Value хранилище (DCS_: etcd, Consul, ZooKeeper и Kubernetes API
 
 ### Мониторинг
@@ -114,7 +120,7 @@
 - ODBC Driver 17, [18](https://learn.microsoft.com/ru-ru/sql/connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server?view=sql-server-ver16&tabs=alpine18-install%2Calpine17-install%2Cdebian8-install%2Credhat7-13-install%2Crhel7-offline)
 - DBLink
   - массовая загрузка [mssql bcp on linux](https://docs.microsoft.com/ru-ru/sql/linux/sql-server-linux-migrate-bcp?view=sql-server-ver16)
-    - export the source data into __text files__ 
+    - export the source data into __text files__
     - importing them using __BCP or BULK INSERT__
     - [Проблемы драйвера ODBC](https://learn.microsoft.com/ru-ru/sql/connect/odbc/linux-mac/known-issues-in-this-version-of-the-driver?view=sql-server-ver16)
   - [mssql sqlcmd on linux](https://docs.microsoft.com/ru-ru/sql/linux/quickstart-install-connect-ubuntu?view=sql-server-ver16)
@@ -130,7 +136,7 @@
 
 ### ETL MSSQL2PSQL
 
-- [foreign data wrapper](https://guriysamarin.medium.com/how-to-transfer-data-from-ms-sql-to-postgresql-or-good-design-vs-speed-1baad5665309) 
+- [foreign data wrapper](https://guriysamarin.medium.com/how-to-transfer-data-from-ms-sql-to-postgresql-or-good-design-vs-speed-1baad5665309)
   - https://habr.com/ru/company/postgrespro/blog/309490/
   - https://www.mssqltips.com/sqlservertip/3663/sql-server-and-postgresql-foreign-data-wrapper-configuration-part-3/
 
@@ -143,7 +149,7 @@
 ### Блокировки Locks
 
 - [Locky type by DELETE](https://pglocks.org/?pgcommand=DELETE)
-- [Явные блокировки - режимы](https://postgrespro.ru/docs/postgrespro/9.5/explicit-locking) блокировки на уровне 
+- [Явные блокировки - режимы](https://postgrespro.ru/docs/postgrespro/9.5/explicit-locking) блокировки на уровне
   - таблицы
     - все и режимы блокировки __работают на уровне таблицы__, даже если имя режима содержит слово «__row__»; такие имена сложились исторически.
   - [строки](https://postgrespro.ru/docs/postgrespro/9.5/explicit-locking#locking-rows)
@@ -199,7 +205,7 @@
   - [SQL Server to PostgreSQL converter](https://www.convert-in.com/mss2pgs.htm) need __equal structures__ DB
   - [MSSQL-PostgreSQL Sync](https://www.convert-in.com/m2psync.htm) need __equal structures__ DB
 
-  ## Версии
+## Версии
 
-  - 13
-  - 14
+- 13
+- 14

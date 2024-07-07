@@ -63,7 +63,7 @@
 - Кластеризация
 - [Уровень изоляции данных](../../store.isolation.level.md)
 - Индексы
-  - [ms sql](../../../technology/db/mssql.md)
+  - [ms sql](../../../technology/db/mssql/mssql.md)
 - План запросов
 - Объем данных снизить
 

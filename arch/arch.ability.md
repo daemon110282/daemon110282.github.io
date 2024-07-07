@@ -25,7 +25,7 @@
   - Живучесть Robustness  
 - [Производительность Performance](ability/performance.md) (Эксплуатационные)  
 - Переносимость Portability
-  - Возможность повторного использования Resuability (Единая кодовая база)
+  - Возможность повторного использования [Reusability](reusability.md) (Единая кодовая база)
     - Mdm - master data manager
   - Модифицируемость/способности к взаимодействию//изменениям Modifiability (Эволюция)
     - Сложность дальнейших интеграции
@@ -36,7 +36,7 @@
     - [API Gateway](../api/api.gateway.md)
     - Server-side [service discovery](./pattern/deployment/service.discovery.md)
     - [Proxy\Balancing](./pattern/deployment/pattern.proxy.reverse.md)
-  - [Слабая связанность (low coupling)](ability/low.coupling.md)
+  - [Слабая связанность (low coupling)](pattern/low.coupling.md)
 - Durability
 - Функциональность
   - [Security Безопасность](ability/security.md)
@@ -87,12 +87,18 @@ TODO
 
 ## Фитнес функции
 
+Fitness Functions
+
 - Юнит тесты
 - Контрактные тесты
 - Процессные метрики
 - Мониторинг
 - Арх-е метрики
 - Интеграционные тесты
+
+Технологии:
+
+- Danger
 
 ## Категории
 

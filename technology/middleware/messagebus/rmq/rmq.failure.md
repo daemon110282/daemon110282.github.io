@@ -27,8 +27,8 @@
 
 ## Patterns
 
-- [Transactional outbox](../../../../arch/pattern/transact.outbox.md)
-- [Transactional Inbox](../../../../arch/pattern/transact.inbox.md)
+- [Transactional outbox](../../../../arch/pattern/fault.tolerance/transact.outbox.md)
+- [Transactional Inbox](../../../../arch/pattern/fault.tolerance/transact.inbox.md)
 
 ### Dead Letter eXchange (DLX)
 

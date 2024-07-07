@@ -31,6 +31,7 @@
 ## K8s patterns 2 edition
 
 - [Miro](https://miro.com/app/board/uXjVM19PfOI=/?share_link_id=673793612923)
+- [TODO](https://tellmeabout.tech/kubernetes-patterns-bca135e4d8ee)
 
 ## Continuous architecture book
 

@@ -8,7 +8,7 @@
 ## Зачем
 
 - Networking
-- Качество архитектуры [Наблюдаемость Observability](../../../arch/ability/observability.md) 
+- Качество архитектуры [Наблюдаемость Observability](../../../arch/ability/observability.md)
   - __Tracing__
   - Metric
     - Service Performance Monitoring (SPM) - [Experimental](https://www.jaegertracing.io/docs/1.40/spm/)
@@ -32,7 +32,7 @@ Performance / latency optimization
 - Topology Graph
   - System Architecture
   - Deep Dependency Graph
-- All Jaeger backend components expose __Prometheus metrics__ by default (other metrics backends are also supported). 
+- All Jaeger backend components expose __Prometheus metrics__ by default (other metrics backends are also supported).
 - Logs are written to stdout using the structured logging library zap.
 - Service Performance Monitoring (SPM)
 - Visualizes aggregated span data in the form of RED (Requests, Errors, Duration) metrics to highlight services and/or operations with statistically significant request/error rates or latencies, then leveraging Jaeger’s Trace Search capabilities to pinpoint specific traces belonging to these services/operations.

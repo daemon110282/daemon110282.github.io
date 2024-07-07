@@ -78,14 +78,14 @@
 ### Replication
 
 - hot-standby потоковая [репликация](../../arch/pattern/sync.data.md)
-- https://medium.com/@PinkOwl/postgresql-and-me-log-shipping-replication-6bc945757822
+- [log shipping](https://medium.com/@PinkOwl/postgresql-and-me-log-shipping-replication-6bc945757822)
 - [Config](https://www.postgresql.org/docs/current/runtime-config-replication.html)
 
 #### Log Shipping
 
 - Master (Primary) -> Slave (standby or secondary)
   - accept connections and serves __read-only queries__ is called a __Hot Standby Server__
-- https://www.postgresql.org/docs/current/warm-standby.html
+- [warm standby](https://www.postgresql.org/docs/current/warm-standby.html)
 - [log shipping methodology](https://medium.com/@PinkOwl/postgresql-and-me-log-shipping-replication-6bc945757822)
   - File based log shipping - asynchronous in nature and logs are shipped after they have been written to disk and thus may increase the RTO
   - Record base log shipping (Streaming Replication) - data loss can be minimised
@@ -137,8 +137,8 @@
 ### ETL MSSQL2PSQL
 
 - [foreign data wrapper](https://guriysamarin.medium.com/how-to-transfer-data-from-ms-sql-to-postgresql-or-good-design-vs-speed-1baad5665309)
-  - https://habr.com/ru/company/postgrespro/blog/309490/
-  - https://www.mssqltips.com/sqlservertip/3663/sql-server-and-postgresql-foreign-data-wrapper-configuration-part-3/
+  - [samole 1](https://habr.com/ru/company/postgrespro/blog/309490/)
+  - [sample 2](https://www.mssqltips.com/sqlservertip/3663/sql-server-and-postgresql-foreign-data-wrapper-configuration-part-3/)
 
 ### Benchmark
 

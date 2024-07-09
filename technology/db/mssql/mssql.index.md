@@ -28,6 +28,7 @@
   - or reorganize indexes (no partitions / SQL Server 2005)
 - [Избыток индексов может увеличить io wait](http://blogs.msmvps.com/gladchenko/2008/03/30/tips-for-dba-using-sys-dm_db_index_physicalstats-in-a-script-to-rebuild-or-reorganize-indexes-no-partitions-sql-server-2005/)
 - __De-fragmentation of Index__ can help as more data can be obtained per page. (Assuming close to 100 fill-factor)
+  - [ALTER INDEX REBUILD](https://infostart.ru/1c/articles/2017724/) блокирует таблицу на время выполнения
 - Измените подходящие для Вашего сервера __опции ONLINE , SORT_IN_TEMPDB,
 MAXDOP=10__
   - Помним про 3-х повышение производительности при использовании в 2012 и в 2014 SORT_IN_TEMPDB=ON SQL Server 2014. [TEMPDB Hidden Performance Gem](https://techcommunity.microsoft.com/t5/sql-server-support-blog/sql-server-2014-tempdb-hidden-performance-gem/ba-p/318255)  
@@ -38,9 +39,12 @@ MAXDOP=10__
 Unused index
 
 - Влияет на объем БД, скорость операций чтения, изменения данных
+  - для __уменьшения физического объема БД__ необходимо (место после удаления попадает в unalocated область БД и используется уже данными)
+    - ALTER TABLE myHeap REBUILD;
+    - for clustered indexes: ALTER INDEX IX_myIndex ON myTable REBUILD;
 - sys.dm_db_index_usage_stats
   - условия отбора по [UserSeek и UserScans и UserLookups](https://learn.microsoft.com/en-us/sql/relational-databases/system-dynamic-management-views/sys-dm-db-index-usage-stats-transact-sql?view=sql-server-ver16) __почти везде нули__, что означает, что индексы не используются СУБД для работы, количество же вставок UserUpdates в них очень __велико__
-  - перезапуск службы SQL Server сбрасывает данные в sys.dm_db_index_usage_stats
+  - перезапуск службы SQL Server __сбрасывает данные__ в sys.dm_db_index_usage_stats
 
 ### Missing Index
 

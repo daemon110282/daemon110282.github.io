@@ -5,6 +5,7 @@
 - [Архитектура ПО](arch/arch.md)
   - Базируется на
     - [Бизнес и ИТ стратегии](strategy.md)
+    - [Бизнес архитектуре](analytic/arch.ba.md)
     - [Бизнес Аналитике требования](analytic/ba.md)
 - [DevOps](devops.md)
 - [API](api/api.md)

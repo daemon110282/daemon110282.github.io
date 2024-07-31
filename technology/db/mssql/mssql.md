@@ -40,7 +40,15 @@ HA:
 	- [TODO](https://social.msdn.microsoft.com/Forums/sqlserver/en-US/d214f0ef-b995-4a14-bed9-0bf5b27a264c/performance-delete-rows-vs-update-rows-state?forum=transactsql)
 	- [TODO](https://stackoverflow.com/questions/1271641/in-sql-is-update-always-faster-than-deleteinsert)
 	- [TODO](https://dba.stackexchange.com/questions/8028/whats-better-for-large-changes-to-a-table-delete-and-insert-every-time-or-upd)
-- [Секционирование](https://habr.com/ru/articles/464665/)
+
+### Секционирование
+
+[Секционирование](https://habr.com/ru/articles/464665/) (партиционирование горизонтальное)
+
+- отдельные FileGroup под хранение партиции
+- пример [INSERT](https://www.tutorialgateway.org/table-partitioning-in-sql-server/), [SELECT](https://www.sqlservertutorial.net/sql-server-administration/sql-server-table-partitioning/)
+- [Partition details with Row count](https://www.sqlshack.com/how-to-automate-table-partitioning-in-sql-server/), Table Rows with Partition Number
+- [Automate the Partition flow](https://www.sqlshack.com/how-to-automate-table-partitioning-in-sql-server/)
 
 ## Производительность
 

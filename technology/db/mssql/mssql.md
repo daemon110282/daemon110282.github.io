@@ -71,7 +71,7 @@ HA:
   - Clear statistics
   - Index by table uses in night
 - __[SQL Plan](mssql.queryplan.md)__  
-  - CPU can be reduced with __plan reuse__ and __join reduction__
+  - CPU can be reduced with __plan reuse__ and __join reduction__    
 - __IO__ performance
   - can be reduced with good __indexing__, __join reduction__, and __high page life expectancy__.
 - Memory
@@ -82,7 +82,7 @@ HA:
 - [Оценка производительности SQL Server](http://www.interface.ru/home.asp?artId=6968)
   - TODO [Анализ медленных запросов](https://learn.microsoft.com/ru-ru/troubleshoot/sql/database-engine/performance/troubleshoot-slow-running-queries?source=recommendations)
 - [MS инструменты](https://learn.microsoft.com/en-us/sql/relational-databases/performance/performance-monitoring-and-tuning-tools?view=sql-server-ver15)
-  - Performance Report
+  - [Performance Report](#performance-reports)
   - Data Collection
   - [Extended Events](mssql.extended.events.md)
   - [DMV](mssql.dmv.md)
@@ -146,7 +146,7 @@ HA:
 ## Мониторинг
 
 - [MS: Мониторинг и настройка производительности](http://www.sql.ru/forum/actualthread.aspx?tid=858780)
-- [Performance dashboard](https://learn.microsoft.com/en-us/sql/relational-databases/performance/performance-dashboard)
+- [Performance dashboard](#performance-reports)
 - [Метрики](mssql.performance.metric.md)
 
 ### Онлайн
@@ -163,14 +163,7 @@ HA:
 
 ### Исторически
 
-- Стандартные отчеты [Performance dashboard](https://learn.microsoft.com/en-us/sql/relational-databases/performance/performance-dashboard)
-  - __Data Collection__  - сбор авто метрик за период времени в отдельной БД с sql plan
-    - Query Statistics History: by CPU, duration, IO, Physical Reads, Logical Reads
-    - Server Activity History: CPU, RAM, IO, Network, Waits
-    - Версия MS SQL с 2008: используем 2012, DWH 2016
-    - [Блокировки Dead Locks](mssql.locks.md)
-    - [Waits](mssql.waits.md) - ожидания 
-    - [Latches](mssql.latches.md) - внутренние блокировки
+- Стандартные отчеты [Performance dashboard](#performance-reports)  
 - [sp_Blitz](https://github.com/BrentOzarULTD/SQL-Server-First-Responder-Kit/tree/main)
   - overall health check, run sp_Blitz.
   - To learn which queries have been using the most resources, run sp_BlitzCache.
@@ -181,6 +174,24 @@ HA:
   - AvgElapsedSec — время ожидания или ожидания + AvgWorkerSec
   - В результатах представлений важным показателем является следующее __равенство: AvgWorkerSec=AvgElapsedSec__
     - Если это не так, то __проблема не в самом запросе и не в плане запроса__
+
+## Performance Reports
+
+- Стандартные отчеты [Performance dashboard](https://learn.microsoft.com/en-us/sql/relational-databases/performance/performance-dashboard)
+  - Performance 
+    - Top Queries by Average IO
+    - Top Queries by Average CPU Time
+    - Object Execution Statistics
+    - Missing Index
+    - IO Statistics
+    - Expensive Queries – Duration
+- __Data Collection__  - сбор авто метрик за период времени в отдельной БД с sql plan
+  - Query Statistics History: by CPU, duration, IO, Physical Reads, Logical Reads
+  - Server Activity History: CPU, RAM, IO, Network, Waits
+  - Версия MS SQL с 2008: используем 2012, DWH 2016
+  - [Блокировки Dead Locks](mssql.locks.md)
+  - [Waits](mssql.waits.md) - ожидания 
+  - [Latches](mssql.latches.md) - внутренние блокировки
 
 ## TODO
 

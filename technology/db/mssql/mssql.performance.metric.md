@@ -16,15 +16,19 @@
 ## Паттерны
 
 - ТОП 5
-  - долгих запросов
-  - блокировки
-  - часто вызываемых
-  - с ошибками
+  - долгих запросов Long Query [EV](mssql.extended.events.md)
+  - блокировки Locks [EV](mssql.extended.events.md)
+  - часто вызываемых 
+  - с ошибками Error [EV](mssql.extended.events.md)
 - Latency
   - [Waits](mssql.waits.md)
     - [Total average wait time]
   - [Latches](mssql.latches.md)
     - [Total latch wait Time](https://documentation.red-gate.com/sm/metrics-alerts-and-notifications/metrics-and-alerts-reference/list-of-metrics#Listofmetrics-Latchwaittime)  
   - Buffer cache hit ratio
+  - CPU
+    - CPU queue length - При нехватке ядер процессора возникает ожидание в виде очередей. 
+    - CPU Utilization
+    - Context Switches per second
 - Traffic
   - [Active transactions](https://habr.com/ru/articles/338498/)

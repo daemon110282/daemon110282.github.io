@@ -49,6 +49,9 @@ HA:
 - пример [INSERT](https://www.tutorialgateway.org/table-partitioning-in-sql-server/), [SELECT](https://www.sqlservertutorial.net/sql-server-administration/sql-server-table-partitioning/)
 - [Partition details with Row count](https://www.sqlshack.com/how-to-automate-table-partitioning-in-sql-server/), Table Rows with Partition Number
 - [Automate the Partition flow](https://www.sqlshack.com/how-to-automate-table-partitioning-in-sql-server/)
+- Минусы
+  - миграции БД не поддерживаются? Необходимо вручную обновлять партиции
+
 
 ## Производительность
 

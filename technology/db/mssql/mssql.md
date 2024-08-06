@@ -168,7 +168,9 @@ HA:
     - Query Statistics History: by CPU, duration, IO, Physical Reads, Logical Reads
     - Server Activity History: CPU, RAM, IO, Network, Waits
     - Версия MS SQL с 2008: используем 2012, DWH 2016
-    - Блокировки
+    - [Блокировки Dead Locks](mssql.locks.md)
+    - [Waits](mssql.waits.md) - ожидания 
+    - [Latches](mssql.latches.md) - внутренние блокировки
 - [sp_Blitz](https://github.com/BrentOzarULTD/SQL-Server-First-Responder-Kit/tree/main)
   - overall health check, run sp_Blitz.
   - To learn which queries have been using the most resources, run sp_BlitzCache.

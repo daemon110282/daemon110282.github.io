@@ -73,6 +73,9 @@ deactivate Система проверки баланса
 
 ## Паттерны
 
+- несколько файлов в один мержить
+  - [Не поддерживает с id include test.puml!id ](https://github.com/mgrolinger/plantumlInliner)
+
 ## Технологии
 
 - C4 Model

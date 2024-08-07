@@ -19,6 +19,9 @@
       - From Trigger
 - Template (Items, Problems, Triggers) by система для мониторнга 
   - [RMQ](https://www.zabbix.com/integrations/rabbitmq)
+- [Аудит изменений](https://www.youtube.com/watch?v=Uj0c1rN3T5M ) пороговых значений по тригерам
+  - [Code Review](https://www.securitylab.ru/blog/company/pt/345360.php)
+  - [5 Audit log](https://www.zabbix.com/documentation/6.4/en/manual/web_interface/frontend_sections/reports/audit_log?hl=Audit%2Caudit)
 
 ## Item
 

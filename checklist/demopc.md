@@ -1,6 +1,6 @@
 # Демо ПК
 
-План:
+## План
 
 - [ ] Сервер
   - [x] VM VirtualBox 7.0.18
@@ -71,3 +71,28 @@
       - [ ] [Текущие параметры собрать](https://www.dotnetfunda.com/articles/show/3485/11-tips-to-improve-wcf-restful-services-performance)
     - Сервис
     - Клиент
+
+## Docker Example
+
+- install
+	https://docs.docker.com/desktop/install/windows-install/
+	D:\Distr\Docker
+- rmq
+	https://hub.docker.com/_/rabbitmq
+	docker run -d -p 15672:15672 --hostname my-rabbit --name some-rabbit rabbitmq:3-management
+	http://localhost:15672/
+- opentelemetry+jaeger+Grafana
+	https://github.com/open-telemetry/opentelemetry-demo/blob/main/docs/docker_deployment.md
+- spa vuejs
+	php yii2 backend
+		https://www.twilio.com/blog/build-single-page-application-in-php-yii-2-0-vue-js
+		docker https://github.com/yemiwebby/vue-yii-app
+- graviteeio APIM Management
+	https://medium.com/graviteeio/getting-gravitee-io-api-management-platform-up-and-running-on-a-local-machine-9408d07221e6
+	vpn need Russia blocked
+- keycloak 18.0.2 - акт-я 20.
+	docker compose up --no-build
+	docker compose start
+	docker compose pause
+	docker compose stop
+

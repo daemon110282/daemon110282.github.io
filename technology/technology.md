@@ -20,3 +20,4 @@
   - JavaScript frameworks: Angular, React, Vue, Svelte.
   - JavaScript meta frameworks: Next.js, Nuxt, Astro.
   - High-level programming languages: TypeScript, Dart, CoffeeScript.
+- [EA Tools](ea-tools.md)

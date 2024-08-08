@@ -17,6 +17,7 @@
       - Метрики ИС
       - Аудит
       - Health Check API
+  - Оркестрация - есть дирижер [или Хореография](pattern/system.design/orchestration-choreography.md) - нет централизованного управления (медиатора)
 - [Реализации](pattern/development/pattern.dev.md)
 - [Интеграции](pattern/integration/pattern.integration.md)
 - [Производительность](pattern/performance/pattern.perf.md)
@@ -47,10 +48,7 @@
   - Маршрутизатор
   - Транслятор трансформер адаптер
   - Обертка
-  - Издатель подписчик
-  - Оркестрация - есть дирижер
-  - Хореография - нет централизованного управления (медиатора)
-    - [пример](https://learn.microsoft.com/ru-ru/azure/architecture/patterns/choreography#example)
+  - Издатель подписчик  
 
 ## Управления данными
 

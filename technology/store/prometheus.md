@@ -9,10 +9,29 @@
 
 ## Зачем
 
+![arch](https://prometheus.io/assets/architecture.png)
+
+- сбор метрик по __pull модели__
+- [Prometeus Client JS](https://github.com/weaveworks/promjs)
 - это [база данных временных рядов](https://slurm-io.turbopages.org/slurm.io/s/tpost/egiyf928zy-polnoe-rukovodstvo-po-prometheus)
 - хранит метрики, агрегированные за период времени
+- Alerts отправляет в AlertManager
+  - Группировка
+  - Приостановка уведомлений пока исправляется
 - [PromQL](https://prometheus.io/docs/prometheus/latest/querying/examples/)
 ![schema](https://static.tildacdn.com/tild3932-3264-4264-a430-386464666565/_4.png)
+- PushGateway для сбора метрик от периодических процессов (cron jobs например) по __push модели__
+
+## Плюсы-минусы
+
+Плюсы
+
+- Простая установка (один файл)
+
+Минусы
+
+- Не расчитан на длительное хранение, как например [VictoriaMetrics](../observability/monitoring/victoriametrics.md))
+- Высокий порог входа
 
 ## Модель данных
 
@@ -65,5 +84,6 @@
 
 ## Deployment
 
+- масштабируется за счет федерации (кластеризации нет)
 - [HA](https://habr.com/ru/companies/oleg-bunin/articles/728456/) :  Thanos, Cortex или Mimir
 ![варианты](https://habrastorage.org/getpro/habr/upload_files/a04/915/5ef/a049155eff8a2d6921e86100584a7919.png)

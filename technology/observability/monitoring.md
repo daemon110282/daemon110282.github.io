@@ -113,9 +113,7 @@
     	- [ELK](monitoring/elk.md)
     	- Loglevel + [loglevel-plugin-remote](https://www.loggly.com/blog/best-practices-for-client-side-logging-and-error-handling-in-react/)
         - [Zabbix](monitoring/zabbix.md)
-		- Prometeus + Grafana
-		![arch](https://prometheus.io/assets/architecture.png)
-			- [Prometeus Client JS](https://github.com/weaveworks/promjs)
+		- [Prometeus](../store/prometheus.md) + Grafana
 		- [ELK stack](monitoring/elk.md)		
 	- BSL __license__
 		- [Sentry](sentry.md)

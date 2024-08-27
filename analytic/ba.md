@@ -73,10 +73,5 @@ TO-DO
     - visio
     - bizagi
     - stormbpmn
-- BPMS - [автоматизация процессов BPMN](https://www.g2.com/products/camunda-platform/competitors/alternatives)
-  - camunda
-  - todo
-  - [Activiti framework (Java) 6.0.0](https://www.activiti.org/)
-    - [User guide](https://www.activiti.org/userguide/)
-    - [REST API](https://habr.com/ru/post/416491/)
-    - [Designer Eclipse](https://www.activiti.org/userguide/#eclipseDesignerInstallation)
+    - [camunda modeler](../technology/middleware/bpms/camunda.md)
+- [BPMS](../arch/system.class/bpms.md)

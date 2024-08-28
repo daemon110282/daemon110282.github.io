@@ -24,12 +24,11 @@
   - Almost anything could be solved by them.
 - Time-series database
   - Store and manage time-stamped data.
-- NoSQL
+- [NoSQL](store.nosql.md)
   - Key Value
-    - In-memory store - Their speed and limited data size make them ideal for fast operations.
-  - Graph database - It is suitable for complex __relationships between unstructured objects__.
-  - Document store - They are good for __large immutable data__.
-  - Wide column store - They are usually used for __big data, analytics, reporting__, etc., which needs __denormalized data__.
+  - Graph database
+  - Document store
+  - Wide column store
 - Full text search Полнотекстовый поиск
 
 ## Паттерны

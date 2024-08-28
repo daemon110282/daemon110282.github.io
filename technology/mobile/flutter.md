@@ -4,10 +4,6 @@
 
 TODO
 
-- Сдо ве - Composer фасад данных из бэк ИС компании
-- api gateway BFF для ЛК, мп
-- Native
-  - Kotlin native
 - Flutter+dart google+blos/redux 2018 start 12.2018 release
   - Можно писать нативные части, но нужны нативные разработчики
   - Beta web, desktop

@@ -3,6 +3,7 @@
 [trends technology](https://trends.google.ru/trends/explore?q=flutter,xamarin,cordova,kotlin,react%20native)
 
 - Native
+  - Kotlin native
 - [PWA](style/pwa.md)
 	- Ionic
 	- Vue

@@ -4,6 +4,8 @@
   - [Зачем](#зачем)
   - [Термины](#термины)
   - [Patterns](#patterns)
+    - [RESTful](#restful)
+    - [Пагинация](#пагинация)
   - [CheckList](#checklist)
 
 REST API — это архитектурный подход, который устанавливает ограничения для API: как они должны быть устроены и какие функции поддерживать.
@@ -29,6 +31,7 @@ REST API — это архитектурный подход, который ус
 
 ## Термины
 
+- Endpoint
 - Ресурс
 - URL
 - Headers
@@ -46,7 +49,7 @@ REST API — это архитектурный подход, который ус
 - АвтоДокументация [OpenApi](openapi.md)
 - [Версионность](api.md#versioning)
 - [Сортировка](https://gist.github.com/fomvasss/c1221b2464be94870f7f823c74520665)
-- [Пагинация](#Пагинация)  
+- [Пагинация](#пагинация)  
 - [Фильтрация](https://www.moesif.com/blog/technical/api-design/REST-API-Design-Filtering-Sorting-and-Pagination/)
 - Использование SSL
 - [HTTP методы](https://learn.microsoft.com/ru-ru/azure/architecture/best-practices/api-design#define-api-operations-in-terms-of-http-methods)
@@ -70,7 +73,7 @@ REST API — это архитектурный подход, который ус
 - [MS Guide](https://github.com/Microsoft/api-guidelines/blob/master/Guidelines.md)
 - [IBM](https://www.ibm.com/docs/ru/zos-connect/zosconnect/3.0?topic=apis-designing-restful)
 - [CISCO](https://github.com/CiscoDevNet/api-design-guide)
-- Пример 
+- Пример
   - [Яндекс.Касса](https://yookassa.ru/developers/using-api/interaction-format)
   - [sort, filter, paging plainquire](https://github.com/plainquire/plainquire)
 
@@ -83,9 +86,9 @@ REST API — это архитектурный подход, который ус
 - Seek Pagination
 - [HATEOS](https://developer.atlassian.com/server/confluence/pagination-in-the-rest-api/)
 - [Patterns](https://microservice-api-patterns.org/patterns/quality/dataTransferParsimony/Pagination#sec:Pagination:Variants)
-  - Page-Based Pagination (a somewhat tautological name)
+  - Page-Based Pagination
   - Offset-Based Pagination
-  - Cursor-Based Pagination (also known as Token-Based Pagination) 
+  - Cursor-Based Pagination (also known as Token-Based Pagination)
   - Time-Based Pagination
 - Размер страницы
   - Provide a __[default page size](https://codedamn.com/news/backend/rest-api-pagination-handling-large-data-sets)__ and allow clients to specify their desired page size __within reasonable limits__

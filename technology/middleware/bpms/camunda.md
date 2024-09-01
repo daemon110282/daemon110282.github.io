@@ -9,11 +9,11 @@
 	- Integration of GUI enables __real-time monitoring__ capabilities
 	- A capability to write __unit tests__ focused not only on the logic and integration but also on the process itself
 
-## Плюсы и минусы
+## Плюсы-минусы
 
 Минусы:
-	
-- Сложность 
+
+- Сложность
 - Без программистов не работает
 - Маркетинг врет)
 - Механизм компенсации - отмены БП

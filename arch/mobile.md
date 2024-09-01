@@ -4,6 +4,7 @@
 	- [Зачем](#зачем)
 	- [Плюсы-минусы](#плюсы-минусы)
 	- [Паттерны](#паттерны)
+		- [IOS](#ios)
 	- [Технологии](#технологии)
 	- [TODO](#todo)
 
@@ -12,6 +13,10 @@
 ## Плюсы-минусы
 
 ## Паттерны
+
+### IOS
+
+- [MVC, MVP, MVVM, VIPER](https://github.com/puncsky/system-design-and-architecture/blob/master/en/123-ios-architecture-patterns-revisited.md)
 
 ## Технологии
 

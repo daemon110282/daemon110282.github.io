@@ -119,6 +119,8 @@
 ### ADR
 
 - [TODO](https://habr.com/ru/companies/iticapital/articles/302990/)
+- [TODO 2 order matching system](https://github.com/puncsky/system-design-and-architecture/blob/master/en/161-designing-stock-exchange.md)
+- TODO [Designing Smart Notification of Stock Price Changes](https://github.com/puncsky/system-design-and-architecture/blob/master/en/162-designing-smart-notification-of-stock-price-changes.md)
 - [Example](https://ryanccollins.com/stock-exchange-systems-design-case-study)
 - Load Balancer
 - Task Queue
@@ -128,7 +130,7 @@
 
 #### Tradeoffs Анализ вариантов
 
-- Web sockets](https://ryanccollins.com/stock-exchange-systems-design-case-study#1b8c52358bd64fae8e32d1b613b272bb) vs. Server-Sent Events (SSEs) vs. Polling
+- [Web sockets](https://ryanccollins.com/stock-exchange-systems-design-case-study#1b8c52358bd64fae8e32d1b613b272bb) vs. Server-Sent Events (SSEs) vs. Polling
 
 ### Доменная модель
 

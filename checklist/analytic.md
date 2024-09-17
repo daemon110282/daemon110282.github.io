@@ -10,12 +10,13 @@ Checklist:
   - SLA
 - BT Бизнес-требования
   - Проблемная (предметная) область (domain)
-    - [Impact mapping](../analytic/ba.md#карта-влияния-impact-mapping)
+    - [Impact mapping](../analytic/analytica.md#карта-влияния-impact-mapping)
+    - [Customer Journey Map](../analytic/cjm.md) (CJM)
   - Бизнес цели (БЦ)
-  - [Бизнес процессы (БП)](../analytic/ba.md#бизнес-процесс-бп) AS-IS, TO-BE
+  - [Бизнес процессы (БП)](../analytic/analytica.md#бизнес-процесс-бп) AS-IS, TO-BE
   - Бизнес правила
   - Бизнес требования пользователей для достижения БЦ в контексте БП - ЧТО надо бизнесу
-    - UC [use-case](../analytic/ba.md#use-case-uc-сценарии-использования), клик-событие, акторы
+    - UC [use-case](../analytic/analytica.md#use-case-uc-сценарии-использования), клик-событие, акторы
     - [Event Storming](../arch/pattern/system.design/event.storming.md)
 - FT Функциональные требования __по ИС__ - функции ИС - ЧТО ИС должна уметь делатья для выполнения БЦ, БП, БТ
   - Анализ существующих Функциональных возможностей ИС
@@ -51,8 +52,8 @@ Checklist:
       - Входящие\исходящие
     - [API](../api/api.md)
     - Схемы взаимодействия (SQD)
-  - UI
-    - [Спецификация ЭФ](../analytic/ba.md#ui-эф), Макеты\Прототипы
+  - UI UX
+    - [Спецификация ЭФ](../analytic/analytica.md#ui-user-interface-эф), Макеты\Прототипы
   - База данных: ХП, функции, таблицы
   - Локализация
   - Технологический стек

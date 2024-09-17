@@ -9,7 +9,7 @@
 
 ## Бизнес требований
 
-- [Use Case, User Story, BPMN, Impact Mapping](../../analytic/ba.md)
+- [Use Case, User Story, BPMN, Impact Mapping](../../analytic/analytica.md)
 
 ## Документирование архитектуры
 

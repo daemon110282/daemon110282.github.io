@@ -2,7 +2,7 @@
 
 База знаний по аналитике, ИТ архитектуре, API. Документирование. Тесты инструментов.
 
-- Аналитика
+- [Аналитика](analytic/analytica.md)
   - [Бизнес](analytic/ba.md)
   - Системная
     - [API](api/api.md)
@@ -10,7 +10,7 @@
   - Базируется на
     - [Бизнес и ИТ стратегии](strategy.md)
     - [Бизнес архитектуре](analytic/arch.ba.md)
-    - [Бизнес Аналитике требования](analytic/ba.md)
+    - [Бизнес Аналитике требования](analytic/analytica.md)
 - [DevOps](devops.md)
 - [Паттерны Шаблоны](arch/patterns.md)
 - [Миграции ИС](arch/pattern/refactoring/migration.md)

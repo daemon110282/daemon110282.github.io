@@ -12,18 +12,26 @@
 
 ## Паттерны
 
-- [API Security Audit](https://docs.42crunch.com/latest/content/concepts/api_contract_security_audit.htm)
-- [OWASP](https://42crunch.com/owasp-api-security-top-10/)
+- [OWASP](https://42crunch.com/owasp-api-security-top-10/) [TOP 10](https://owasp.org/API-Security/)
+  - [Tоп-10 API Security Risks 2023](https://ib-bank.ru/bisjournal/post/2171)
   - [Угрозы OWASP подробно](https://habr.com/ru/post/503284/)
-- [check api tools](https://platform.42crunch.com/)
-- [tools for check api sec](https://github.com/arainho/awesome-api-security)
-- [apisecurity.io](https://apisecurity.io/)
-- [Control levels of user authorisation](https://www.gov.uk/guidance/gds-api-technical-and-data-standards)
-- [API Security tools and resources](https://github.com/arainho/awesome-api-security)
-- [openapi security](https://openapi.security/)
+  - [CheckList](https://owasp.org/www-project-secure-coding-practices-quick-reference-guide/stable-en/02-checklist/)
+- Проверка API
+  - [API Security Audit](https://docs.42crunch.com/latest/content/concepts/api_contract_security_audit.htm)
+  - [check api tools](https://platform.42crunch.com/)
+  - [tools for check api sec](https://github.com/arainho/awesome-api-security)
+  - [apisecurity.io](https://apisecurity.io/)
+  - [Control levels of user authorisation](https://www.gov.uk/guidance/gds-api-technical-and-data-standards)
+  - [API Security tools and resources](https://github.com/arainho/awesome-api-security)
+  - [openapi security](https://openapi.security/)
 - __Ролевой доступ__ (RBAC, ABAC и тп) к методам АПИ
 - Использование SSL
 - [Валидация входных данных](https://github.com/Sairyss/backend-best-practices)
+- Web Application Firewall (WAF)
+- IP Whitelisting
+- Rate Limiting
+- Error Handling
+- API Versioning
 
 ## Схемы аутентификации
 
@@ -51,6 +59,7 @@
 - swt
 - ws security
 - ssl client
+- HMAC
 
 ## REST
 

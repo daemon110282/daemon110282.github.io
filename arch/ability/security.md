@@ -15,40 +15,70 @@
 
 Информационная безопасность - комплекс мер, которые нужны, чтобы защитить от утечки или взлома программы, компьютерные системы и данные.
 
+[Матрица ИТ безопасности](https://www.ninjaone.com/blog/it-security-checklist-protect-your-business/):
+
+- Device/Endpoint security
+- Network security
+- Application security
+- Data security
+- User security
+
 ## Виды атак
 
-- Внедрение кода
-- [Cookie не корректно настроен CORS](https://habr.com/ru/articles/844224/)
 - [Атаки загрязнения прототипа](https://habr.com/ru/companies/piter/articles/841098/)
 - [Кликджекинг](https://habr.com/ru/companies/piter/articles/841098/)
 - Табнаббинг и обратный табнаббинг
+- API
+  - [Zombie AP](https://ib-bank.ru/bisjournal/post/2096)
+  - Shadow API
+  - Внедрение кода (SQL injection)
+  - [Cookie не корректно настроен CORS](https://habr.com/ru/articles/844224/)
+  - SMS Leak
+  - ATO-атаки
+  - DDOS
 
 ## Паттерны
 
-- [Аутентификация](#аутентификация)
-- [Авторизация](#авторизация)
-- [API Security](security.api.md)
-- [Крипто Защита Информации](security.crypto.md) (Шифрование, ЭЦП)
-туннель
-- Аудит, логирование
-- Регламентирование
-  - 152 ФЗ
-  - API Банк РФ
-  - ФСТЭК РФ
-  - ФСБ РФ
-- Инфраструктура
+- Device/Endpoint
+  - Антивирусы
+- Network Сетевая Инфраструктура
   - [Шифрование канала связи (трафика)](security.vpn.md): TLS, mTLS, VPN
-- Конфигурация
-  - Во вне
+  - DDOS
+  - FireWall
+  - NAT, NAC
+  - Антивирусы
+  - Data loss prevention (DLP)
+  - Network segmentation (КСПД)
+- Application
+  - DevSecOps
+  - [Аутентификация](#аутентификация)
+  - [Авторизация](#авторизация)
+  - [API Security](security.api.md)
+  - [Крипто Защита Информации](security.crypto.md) (Шифрование, ЭЦП)
+  туннель
+  - [Zero Trust](https://t.me/ru_arc/136)
+  - Аудит, логирование
+    - [Platform V Synapse](https://platformv.sbertech.ru/blog/kak-otslezhivat-bezopasnost-prikladnyh-api-s-pomoshhyu-platform-v-synapse)
+    - [SIEM](../system.class/siem.md) (Security information and event management)
+  - Конфигурация "Во вне"
     - Пассивная (При сборке приложения)
     - Активная Key Managment, Key Vault
       - HashiCorp Vault
       - альтернативы [CyberArk, AWS](https://datafloq.com/read/5-compelling-alternatives-hashicorp-vault/)
-- [Zero Trust](https://t.me/ru_arc/136)
+- Data
+  - Access аудит
+- User
+  - HTTPS
+- Регламентирование
+  - [152 ФЗ](https://astral.ru/news/zakonodatelstvo/39596/)
+  - API Банк РФ
+  - ФСТЭК РФ
+  - ФСБ РФ
 - Организационные
   - [Secure by Design](https://habr.com/ru/companies/bastion/articles/842874/)
     - матрица рисков
     - поверхность атаки
+  - [Pen Tests](https://www.aztechit.co.uk/blog/cloud-security-best-practices)
 - Антипаттерны
   - Черные списки
   - Шаблонный код
@@ -89,7 +119,6 @@ __Триггеры для подключения__, анализа ИБ
   - специфические механизмы привязки к мобильным устройствам
   - биометрия
 - Методы защиты
-  - HMAC
   - CORS
   - XSS
   - Recaptcha
@@ -97,6 +126,7 @@ __Триггеры для подключения__, анализа ИБ
   - Аутентификация __HTTPS__
     - [SSL\TLS](../../technology/protocols.integration/tls.md)
     - [MTLS](../../technology/protocols.integration/tls.md)
+  - [Схемы аутентификации](security.api.md#схемы-аутентификации)
 - Фреймворки
   - Spring Security
   - NodeJS Passport

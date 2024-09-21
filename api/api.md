@@ -3,6 +3,7 @@
 - [API](#api)
   - [Виды API](#виды-api)
   - [Patterns](#patterns)
+  - [SLI, SLA](#sli-sla)
     - [Versioning](#versioning)
     - [Security](#security)
     - [Документирование](#документирование)
@@ -27,7 +28,8 @@ API - Application Programming Interface, что значит программн�
 - [Вебхуки Webhook](webhook.md)
 - [SOAP](wsdl.md)
   - ESB
-- EDI
+- [EDA](../arch/style/eda.md)
+- EDI - Electroinic Data Interchange
 - Server Side Events [SSE](../technology/protocols.integration/sse.md)
 - AMQP
 - MQTT

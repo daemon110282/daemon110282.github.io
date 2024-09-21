@@ -5,8 +5,8 @@
 		- [User store](#user-store)
 		- [Access Control](#access-control)
 	- [Протоколы](#протоколы)
-		- [OAuth](#oauth)
 		- [OpenID Connect (OIDC)](#openid-connect-oidc)
+		- [OAuth](#oauth)
 	- [Критерии выбора](#критерии-выбора)
 	- [Технологии](#технологии)
 

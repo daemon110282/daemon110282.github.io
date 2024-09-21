@@ -1,6 +1,16 @@
 # Security API
 
-## Patterns 
+- [Security API](#security-api)
+	- [Зачем](#зачем)
+	- [Паттерны](#паттерны)
+	- [Схемы аутентификации](#схемы-аутентификации)
+	- [REST](#rest)
+
+## Зачем
+
+Обеспечение [информационной безопасности](security.md) API.
+
+## Паттерны
 
 - [API Security Audit](https://docs.42crunch.com/latest/content/concepts/api_contract_security_audit.htm)
 - [OWASP](https://42crunch.com/owasp-api-security-top-10/)
@@ -11,6 +21,9 @@
 - [Control levels of user authorisation](https://www.gov.uk/guidance/gds-api-technical-and-data-standards)
 - [API Security tools and resources](https://github.com/arainho/awesome-api-security)
 - [openapi security](https://openapi.security/)
+- __Ролевой доступ__ (RBAC, ABAC и тп) к методам АПИ
+- Использование SSL
+- [Валидация входных данных](https://github.com/Sairyss/backend-best-practices)
 
 ## Схемы аутентификации
 
@@ -18,7 +31,7 @@
 
 - Token-Based Authentication 
 	- [Bearer Authentication](https://devblogs.microsoft.com/dotnet/bearer-token-authentication-in-asp-net-core/)
-	- [JWT Bearer](https://learning.postman.com/docs/sending-requests/authorization/authorization-types/#jwt-bearer) обычно токен в формате [JWT](../../technology/jwt.md)   
+	- [JWT Bearer](https://learning.postman.com/docs/sending-requests/authorization/authorization-types/#jwt-bearer) обычно токен в формате [JWT](../../technology/jwt.md)
 	- Unlike API key and Basic authentication, token-based authentication offers __higher security__. Tokens can __expire__, reducing the window of vulnerability if compromised, and we can __cryptographically sign__ for added security.
 	- Аутентификация [OIDC](../../technology/protocols.integration/oidc.md)
   		- Авторизация [OAuth](../../technology/protocols.integration/oauth.md)
@@ -35,6 +48,11 @@
 - http basic
 - digest
 - form
-- swt 
+- swt
 - ws security
 - ssl client
+
+## REST
+
+- [REST Best Practice - TLS, OAuth, OIDC SSO](https://stackoverflow.blog/2021/10/06/best-practices-for-authentication-and-authorization-for-rest-apis/)
+- Исключать создание [методов массовых изменений](https://habr.com/ru/articles/736892/)

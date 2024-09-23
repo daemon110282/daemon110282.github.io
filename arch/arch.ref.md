@@ -2,6 +2,7 @@
 
 - [MSA](style/msa.md)
   - TODO Nginx
+  - [Брокерское приложение](ref/ba.ti.md)
 - [EDA](style/eda.md)
   - [BIAN](ref/bian.md)
 - [MTA](pattern/mta/mta.md)

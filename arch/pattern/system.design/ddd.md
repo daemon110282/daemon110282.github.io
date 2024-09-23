@@ -41,7 +41,7 @@
 
 ## Паттерны
 
-- [TODO Паттерны](https://github.com/Sairyss/domain-driven-hexagon)
+- TODO [Паттерны](https://github.com/Sairyss/domain-driven-hexagon)
 - [Event-storming](event.storming.md)
 - [CQRS](../performance/pattern.cqrs.md)
 - [IBM sample DDD](https://ibm-cloud-architecture.github.io/refarch-kc/implementation/domain-driven-design/)
@@ -74,9 +74,9 @@
 
 ### Тактическое проектирование
 
-[Тактическое проектирование](https://habr.com/ru/company/oleg-bunin/blog/551428/)
-
 ![схема](../../../out/arch/pattern/system.design/ddd.tactic/DDD.png)
+
+[Тактическое проектирование](https://habr.com/ru/company/oleg-bunin/blog/551428/) состоит из:
 
 - Доменная модель
   - __Консистентность__ данных обеспечить

@@ -13,6 +13,7 @@
     - [Бизнес Аналитике требования](analytic/analytica.md)
 - [DevOps](devops.md)
 - [Паттерны Шаблоны](arch/patterns.md)
+- [CheckList](checklist/checklist.md)
 - [Миграции ИС](arch/pattern/refactoring/migration.md)
 - Методологии работ
   - [Agile](https://agilemanifesto.org/iso/ru/principles.html) философия

@@ -36,7 +36,7 @@
     - [API Gateway](../api/api.gateway.md)
     - Server-side [service discovery](./pattern/deployment/service.discovery.md)
     - [Proxy\Balancing](./pattern/deployment/pattern.proxy.reverse.md)
-  - [Слабая связанность (low coupling)](pattern/low.coupling.md)
+  - [Слабая связанность (low coupling)](pattern/system.design/low.coupling.md)
 - Durability
 - Функциональность
   - [Security Безопасность](ability/security.md)

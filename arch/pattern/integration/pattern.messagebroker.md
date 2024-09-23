@@ -20,7 +20,7 @@
 
 Плюсы
 
-- Слабая связность ИС [Low Coupling](../low.coupling.md)
+- Слабая связность ИС [Low Coupling](../system.design/low.coupling.md)
   
 Минусы
 

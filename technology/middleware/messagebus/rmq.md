@@ -1,6 +1,7 @@
 # RabbitMQ
 
 - [RabbitMQ](#rabbitmq)
+  - [Зачем](#зачем)
   - [Плюсы и минусы](#плюсы-и-минусы)
   - [Функции](#функции)
     - [Exchange Обменник](#exchange-обменник)
@@ -33,11 +34,20 @@
 
 - [«Продажа» Производительность](https://habr.com/ru/company/oleg-bunin/blog/310418/)
 - RabbitMQ дает гарантии __одноразовой доставки__ и __хотя бы одной доставки__, но не __ровно одной доставки__
+- Message timing control (controlling either message expiry or message delay).
+- Advanced fault handling capabilities, in cases when consumers are more likely to fail to process messages (either temporarily or permanently).
+- Advanced and flexible __routing rules__
+- Simpler consumer implementations
+- перешли на постоянные (persistent) очереди, которые не удаляются в момент разрыва подключения, но повесили на них политику «протухания» (expire), если пользователя нет более 5 минут.
+- Приоритет сообщений
 
 Минусы:
 
 - Агрегация в пачки нет в RabbitMQ (Kafka Есть)
 - [vs Kafka](https://habr.com/ru/company/itsumma/blog/416629/)
+- нет параметра Expire для обменников (только для очередей)
+- __Нет шардирования__, в kafka есть topic-несколько partition, есть несколько инстансов где очереди размещены
+- Производительность ниже [Kafka](kafka.md)
 
 ## Функции
 

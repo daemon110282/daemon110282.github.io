@@ -7,8 +7,6 @@
 	- [Технологии](#технологии)
 		- [Выбор](#выбор)
 			- [RMQ vs Kafka](#rmq-vs-kafka)
-				- [RabbitMQ](#rabbitmq)
-				- [Kafka](#kafka)
 
 ## Зачем
 
@@ -76,35 +74,11 @@
 
 #### RMQ vs Kafka
 
-##### RabbitMQ
-
-Плюсы:
-
-- Message timing control (controlling either message expiry or message delay).
-- Advanced fault handling capabilities, in cases when consumers are more likely to fail to process messages (either temporarily or permanently).
-- Advanced and flexible routing rules.
-- Simpler consumer implementations.
-- перешли на постоянные (persistent) очереди, которые не удаляются в момент разрыва подключения, но повесили на них политику «протухания» (expire), если пользователя нет более 5 минут.
-- Приоритет сообщений
-
-Минусы:
-
-- нет параметра Expire для обменников (только для очередей)
-- Нет шардирования, в kafka есть topic-несколько partition, есть несколько инстансов где очереди размещены
-- Производительность ниже Kafka
-
-##### Kafka
-
-Плюсы:
-
-- распределенный горизонтально масштабируемый отказоустойчивый журнал коммитов
-- Поток событий
-- Шардинг из коробки
-- Strict message ordering.
-- Message retention for extended periods, including the possibility of replaying past messages.
-- The ability to reach a high scale when traditional solutions do not suffice.
-
-Минусы:
-
-- Наиболее полно API Kafka поддерживается только в языках Java и Scala. В других языках поддержка не всегда полная, поэтому фреймворки Kafka Connect и Kafka Streams созданы.
-- [Нет приоритета сообщений](https://blog.bytebytego.com/p/how-to-choose-a-message-queue-kafka)
+- [RMQ](../../../technology/middleware/messagebus/rmq.md#плюсы-и-минусы)
+- [Kafka](../../../technology/middleware/messagebus/kafka.md#плюсы-и-минусы)
+	- [vs RMQ](https://blog.bytebytego.com/p/how-to-choose-a-message-queue-kafka):
+    	- сообщения хранятся (так спроектирована)
+    	- выше производительность
+    	- строгая последовательность сообщений
+    	- меньше гибкости в роутинге сообщений
+    	- нет приоритета сообщений

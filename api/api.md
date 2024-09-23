@@ -23,7 +23,7 @@ API - Application Programming Interface, что значит программн�
 [API protocols](https://blog.postman.com/api-protocols-in-2023/)
 
 - [REST API](api.rest.md)
-- [gRPC](grpc.md)
+- [gRPC](../technology/protocols.integration/grpc.md)
 - [GraphQL](../technology/protocols.integration/graphql.md)
 - [Вебхуки Webhook](webhook.md)
 - [SOAP](wsdl.md)

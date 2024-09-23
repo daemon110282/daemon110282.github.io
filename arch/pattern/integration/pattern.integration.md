@@ -41,7 +41,6 @@
       - log-based message queue
     - [API Gateway](../../../api/api.gateway.md)
     - [SOA](../../style/soa.md)
-    - [ESB Интеграционная шина](../../../technology/middleware/esb.md) ![scheme](../../../img/pattern/integration/esb.jpg)
 
 ## Критерии выбора способа интеграции
 

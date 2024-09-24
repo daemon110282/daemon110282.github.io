@@ -1,12 +1,12 @@
 # NOSQL Store
 
 - [NOSQL Store](#nosql-store)
-	- [Зачем](#зачем)
-	- [Плюсы-минусы](#плюсы-минусы)
-	- [Виды](#виды)
-		- [In-memory store](#in-memory-store)
-		- [Column Based](#column-based)
-		- [Document-Oriented store](#document-oriented-store)
+  - [Зачем](#зачем)
+  - [Плюсы-минусы](#плюсы-минусы)
+  - [Виды](#виды)
+    - [In-memory store](#in-memory-store)
+    - [Column Based](#column-based)
+    - [Document-Oriented store](#document-oriented-store)
 
 ## Зачем
 
@@ -14,7 +14,12 @@
 
 ## Плюсы-минусы
 
-- Быстрые из-за отсутствия схемы, функций реляционности и транзакционности и ссылочной целостности
+Быстрые из-за:
+
+- отсутствия __схемы__
+- функций __реляционности__
+- __транзакционности__
+- ссылочной целостности
 
 ## Виды
 
@@ -22,7 +27,7 @@
 
 - Key Value Ключ-Значение
 	- [Redis](store/redis.md)
-		- это однопоточная система
+		- это __однопоточная__ система
 		- [redis vs PgSQL](https://habr.com/ru/company/cloud_mts/blog/716548/)
 	- Memcached
 		— многопоточная

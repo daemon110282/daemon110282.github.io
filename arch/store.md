@@ -2,34 +2,41 @@
 
 - [Хранилища данных](#хранилища-данных)
   - [Зачем](#зачем)
-  - [Плюсы и минусы](#плюсы-и-минусы)
+  - [Виды](#виды)
   - [Паттерны](#паттерны)
-  - [Принципы проектирования](#принципы-проектирования)
+  - [Критерии выбора](#критерии-выбора)
   - [Технологии](#технологии)
 
 ## Зачем
 
 - [MS Хранилища данных](https://docs.microsoft.com/ru-ru/azure/architecture/guide/technology-choices/data-store-overview)
-- Интегрирует множество источников данных и помогает снизить нагрузку на производственную систему.
-- Оптимизированные данные для доступа к чтению и последовательного сканирования диска.
-- Хранилище данных помогает защитить данные от обновлений исходной системы.
-- Позволяет пользователям выполнять управление основными данными.
-- Улучшение качества данных в исходных системах.
+- Интегрирует множество источников данных и помогает снизить нагрузку на производственную систему
+- Оптимизированные данные для доступа к чтению и последовательного сканирования диска
+- Хранилище данных помогает защитить данные от обновлений исходной системы
+- Позволяет пользователям выполнять управление основными данными
+- Улучшение качества данных в исходных системах
 
-## Плюсы и минусы
+## Виды
 
 [Критерии](arch.criteria.md)
 
-- RDBMS (Relational Database Management System)
-  - Almost anything could be solved by them.
+- Structured
+  - OLTP
+    - RDBMS (Relational Database Management System)
+      - Almost anything could be solved by them
+  - OLAP
+    - Column Family
 - Time-series database
-  - Store and manage time-stamped data.
-- [NoSQL](store.nosql.md)
-  - Key Value
-  - Graph database
-  - Document store
-  - Wide column store
-- Full text search Полнотекстовый поиск
+  - Store and manage time-stamped data
+- Semi UnStructured
+  - [NoSQL](store.nosql.md)
+    - Key Value
+    - Graph database
+    - Document store
+    - Wide column store
+  - Full text search Полнотекстовый поиск
+- UnStructured
+  - BLOB
 
 ## Паттерны
 
@@ -57,14 +64,14 @@
     - Такие таблицы называются регистрами накоплений и регистрами сведений.
 - [Секционирование шардирование](./pattern/performance/shard.db.md)
   
-## Принципы проектирования
+## Критерии выбора
 
 ![Выбор хранилища http://architecturethehardparts.com/](../img/arch/choose_store.jpg)
 
 - [SQL vs NoSQL](https://towardsdatascience.com/datastore-choices-sql-vs-nosql-database-ebec24d56106)
-  - ![choose](https://substackcdn.com/image/fetch/w_1456,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Ff5b7dcbd-a2b0-4677-8ffa-669acf91242b_1143x1600.jpeg)
+  - ![choose](../img/technology/sql.vs.nosql.webp)
 - SQL, NoSQL, TimeSeries
-  - ![плюсы-минусы](https://substackcdn.com/image/fetch/w_1456,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fcb5bb38f-5383-495d-aed8-cf1d0a44e03b_1600x1600.png)
+  - ![плюсы-минусы](../img/technology/db/types.db.jpeg)
 
 ## Технологии
 

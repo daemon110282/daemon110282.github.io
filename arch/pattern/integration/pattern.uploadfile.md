@@ -14,27 +14,27 @@
 
 ## Patterns
 
-- [Image API service dedicated](https://www.apollographql.com/blog/backend/file-uploads/file-upload-best-practices) 
-- **Signed Upload URL** dedicated storage (On premise, Cloud)
+- [Image API service dedicated](https://www.apollographql.com/blog/backend/file-uploads/file-upload-best-practices)
+- __Signed Upload URL__ dedicated storage (On premise, Cloud)
    - It can require a little more work to set up than a dedicated image service but provides for finer control.
 - [Google Resumable upload large files > 5Mb](https://developers.google.com/drive/api/guides/manage-uploads)
-- __Legacy__: Несколько файлов **multipart/form-data**, and return an ID to the client.
+- __Legacy__: Несколько файлов __multipart/form-data__, and return an ID to the client.
    1. [The client then sends (PUT idempotent) the metadata with the ID](https://tyk.io/blog/api-design-guidance-file-upload), and the server re-associates the file and the metadata.
    2. Send the metadata first, and return an ID to the client. The client then sends the file with the ID, and the server re-associates the file and the metadata.
-   3. **CSRF attacks** risk
+   3. __CSRF attacks__ risk
       1. You should not enable multipart requests (ie, graphql-upload) in your GraphQL server unless you understand how CSRF attacks work and are confident that you have prevented them in your app
       2. exposes your server to CSRF mutation attacks unless you’ve specifically prevented them.
-- __Legacy__: include the **Base64** content inside the JSON string
+- __Legacy__: include the __Base64__ content inside the JSON string
    - Не использовать [base64 кодирования](https://tyk.io/blog/api-design-guidance-file-upload/): increasing the data size by around 33%
    - [add processing overhead in both the server and the client](https://stackoverflow.com/questions/33279153/rest-api-file-ie-images-processing-best-practices) for encoding/decoding.
-- Несколько файлов разных типов **multipart/related** request.
+- Несколько файлов разных типов __multipart/related__ request.
    - [The Multipart/Related media](https://stackoverflow.com/questions/4083702/posting-a-file-and-associated-data-to-a-restful-webservice-preferably-as-json) type is intended for compound objects consisting of several inter-related body parts. RFC 2387 specification for more in-depth details.
 - [Option](https://tyk.io/blog/api-design-guidance-file-upload/)
    - Direct file upload
       - Create a new file, POST /downloads (endpoint name an example), __response 202 Accepted, Location: /downloads/123__ (unique ID of the download). If we're sharing the files among users, the same POST might return the same ID (all the users are waiting for the same file to generate)
    - Multipart HTTP request
    - Two-step metadata + upload
-- [HTTP Status](../api-http-status.md)
+- [HTTP Status](../../../api/api-http-status.md)
    - 413 Payload Too Large (if exceeding max)
    - 507 Insufficient Storage (server full).
 - API Uploading example [Cloudinary](https://cloudinary.com/documentation/upload_images)

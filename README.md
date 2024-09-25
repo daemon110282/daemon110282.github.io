@@ -8,7 +8,7 @@
     - [API](api/api.md)
 - [Архитектура ПО](arch/arch.md)
   - Базируется на
-    - [Бизнес и ИТ стратегии](strategy.md)
+    - [Бизнес и ИТ стратегии](analytic/strategy.md)
     - [Бизнес архитектуре](analytic/arch.ba.md)
     - [Бизнес Аналитике требования](analytic/analytica.md)
 - [DevOps](devops.md)

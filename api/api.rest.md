@@ -31,10 +31,11 @@ REST API — это архитектурный подход, который ус
 
 ## Термины
 
-- Endpoint
 - Ресурс
-- URI, URL
+- [URI Ресурса](https://teletype.in/@loginovpavel/rest-api) пример: <https://api.example1.com/users/123> <https://api.example2.com/users/123>
+- [Endpoint API](https://tquality.ru/blog/kak-pisat-endpointy/) пример: /users/123
 - Headers
+- Body
 - [HTTP Status](api-http-status.md)
 - [HATEOS](https://docs.microsoft.com/ru-ru/azure/architecture/best-practices/api-design#use-hateoas-to-enable-navigation-to-related-resources)
 
@@ -51,6 +52,11 @@ REST API — это архитектурный подход, который ус
 - [Фильтрация](https://www.moesif.com/blog/technical/api-design/REST-API-Design-Filtering-Sorting-and-Pagination/)
 - [HTTP методы](https://learn.microsoft.com/ru-ru/azure/architecture/best-practices/api-design#define-api-operations-in-terms-of-http-methods)
   - POST, PUT, GET, DELETE
+  - Передача [массива в GET](https://stackoverflow.com/questions/11944410/passing-array-in-get-for-a-rest-call):
+    - ?users=id1,id2
+    - ?arr[]=1&arr[]=2&arr[]=3&arr[]=4
+    - ?users=[id1,id2]
+    - ?users=id1&users=id2
   - PATCH - не входит в стандарт HTTP (не рекомендуется использовать)
   - [Методы, JSON, URI](https://habr.com/ru/post/447322/)
   - [SRP паттерн](../arch/patterns.md)

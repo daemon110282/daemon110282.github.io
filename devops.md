@@ -19,7 +19,7 @@
 - [Доступность](arch/ability/availability.md), Отказоустойчивость, Надежность
 - [Производительность](arch/ability/performance.md)
   - Auto Scaling
-- [Infrastructure-as-Code (IaC) automation](technology/ioc.md)
+- [Infrastructure-as-Code (IaC) automation](technology/ci-cd/ioc.md)
 - Сквозная функциональность
   - Наблюдаемость [Observability](arch/ability/observability.md)
     - [Log management](technology/observability/logging.md)

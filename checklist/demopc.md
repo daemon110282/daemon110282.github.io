@@ -13,8 +13,8 @@
   - СУБД
   - NoSQL
 - [ ] Middleware
-  - RMQ
-  - Kafka
+  - [ ] RMQ
+  - [ ] Kafka
 - Develop
   - [x] Visual Studio Ultimate 2012 11.0.50727.1
 - [ ] Сервис  

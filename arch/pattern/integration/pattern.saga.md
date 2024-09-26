@@ -11,13 +11,10 @@
 
 Транзакция (договор) - механизм сохранения консистентности данных при нескольких логически связанных последовательных изменениях состояния. Должна быть выполнена только полностью. Транзакции должны быть атомарными, согласованными, изолированными и устойчивыми (ACID).
 
-- Backward recovery
+- [Backward recovery](https://learn.microsoft.com/ru-ru/azure/architecture/reference-architectures/saga/saga)
 - Forward recovery
 - Компенсирующие действия
-- Реализация при помощи [Оркестровки или Хореографии](https://learn.microsoft.com/ru-ru/azure/architecture/reference-architectures/saga/saga)
-  - Оркестратор - ИС которая управляет изменениями в Х ИС
-  - Хореография - Каждая ИС сама подписывается на события в Шине Сообщений и реагирует на изменния
-  - Реализации возможна на BPMN workflow engine (Camunda например)
+- Реализация при помощи [Оркестровки или Хореографии](../system.design/orchestration-choreography.md)
 
 TODO
 

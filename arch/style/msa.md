@@ -153,7 +153,7 @@ __Не подходит__ для:
   - Proxy
   - Chained
   - Branch (Aggregator + Chained в связке)
-- Опишите микросервисы в виде блоков, решающих бизнес-задачу, и сделайте из них конструктор - __оркестрация бизнес-сервисов__ [BPMS](../system.class/bpms.md)
+- Опишите микросервисы в виде блоков, решающих бизнес-задачу, и сделайте из них конструктор - [__оркестрация бизнес-сервисов__](../pattern/system.design/orchestration-choreography.md)
 - TODO
   - [Паттерны управления данными](https://mcs.mail.ru/blog/26-osnovnyh-patternov-mikroservisnoj-razrabotki)
   - [26 основных паттернов микросервисной разработки](https://mcs.mail.ru/blog/26-osnovnyh-patternov-mikroservisnoj-razrabotki)

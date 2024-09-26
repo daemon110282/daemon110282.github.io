@@ -44,11 +44,8 @@
 ## Паттерны
 
 - two main topologies
-  - The __mediator topology__ is commonly used when you need to __orchestrate__ multiple steps within an event through a central mediator
-    - Spring Integration, Apache Camel, Mule ESB
-    - BPEL (business process execution language)
-    - [BPMS](../system.class/bpms.md)
-  - __broker topology__ is used when you want to chain events together without the use of a central mediator (__хореография__).
+  - The __mediator topology__ is commonly used when you need to __orchestrate__ ([оркестрация](../pattern/system.design/orchestration-choreography.md)) multiple steps within an event through a central mediator
+  - __broker topology__ (__хореография__) is used when you want to chain events together without the use of a central mediator
 - __Событие__ Event driven
   - [Publish-subscribe](../../technology/middleware/messagebus/rmq.md)
     - event-base

@@ -1,6 +1,7 @@
 # ABP.IO Platform
 
 - [ABP.IO Platform](#abpio-platform)
+  - [Зачем](#зачем)
   - [Плюсы и минусы](#плюсы-и-минусы)
   - [Deployment](#deployment)
   - [Сквозная функциональность](#сквозная-функциональность)
@@ -8,24 +9,37 @@
     - [Multi Tenant](#multi-tenant)
     - [Audit](#audit)
     - [Logging](#logging)
-  - [Links](#links)
+
+## Зачем
+
+Платформа для разработки веб приложений
+
+- на принципах DDD, EDA, MTA, MSA
+- технологиях интеграций RMQ, Kafka
+- протоколах OAuth, OIDC
+- хранилищах MSSQL, PosgreSQL, MongoDB
+- CI-CD k8s, Docker
+- техстеке .NET Core
+- тестах Unit
+
+[Blog](https://blog.abp.io/abp).
 
 ## Плюсы и минусы
 
-[Критерии](../arch.criteria.md)
+[Критерии](../../arch/arch.criteria.md)
 
 | + | - |
 | - | - |
 | лицензия LGPL + коммерческая при необх-ти | vue не из коробки, т.е. пишем на React |
 | с 2012 года, много релизов | LDAP Auth платный модуль|
 | [feature toggle by tenant](https://docs.abp.io/en/abp/latest/Modules/Tenant-Management#managing-the-tenant-features)
-| [DDD](https://abp.io/books/implementing-domain-driven-design) 
-| RMQ
-| модульный монолит->микросервисы заявлено
-| swagger
-| [workflow](https://community.abp.io/posts/using-elsa-workflow-with-the-abp-framework-773siqi9)
-| [CICD + docker + k8s](https://community.abp.io/posts/.net-core-microservice-application-with-abp-docker-and-cicd-part-10-8snm8lwy)
-| [Identity Server4](http://docs.identityserver.io/), OpenID Connect protocol, Ouath
+| [DDD](https://abp.io/books/implementing-domain-driven-design) ||
+| RMQ ||
+| модульный монолит->микросервисы заявлено ||
+| swagger | |
+| [workflow](https://community.abp.io/posts/using-elsa-workflow-with-the-abp-framework-773siqi9)||
+| [CICD + docker + k8s](https://community.abp.io/posts/.net-core-microservice-application-with-abp-docker-and-cicd-part-10-8snm8lwy)||
+| [Identity Server4](http://docs.identityserver.io/), OpenID Connect protocol, Ouath||
 
 ## Deployment
 
@@ -49,7 +63,7 @@
     - [OpenID Connect module](https://docs.abp.io/en/abp/latest/Modules/OpenIddict) on https://documentation.openiddict.com
 - [Authorization](https://docs.abp.io/en/abp/latest/Authorization)
   - [Disable Concurent Login](https://support.abp.io/QA/Questions/3047/Disable-concurrent-user-login)
-  - Под разные UI FE 
+  - Под разные UI FE
     - [Angular](https://docs.abp.io/en/abp/latest/UI/Angular/Authorization)
     - React
 - [User Account](https://docs.abp.io/en/abp/latest/CurrentUser)
@@ -75,12 +89,7 @@
     - Tables
   - Mongo DB
 
-
 ### Logging
 
 - SerialLog
   - [2graylog](https://medium.com/@paulius.juozelskis/centralized-logging-in-net-core-using-graylog-and-serilog-4de7739051a)
-
-## Links
-
-- [Blog](https://blog.abp.io/abp)

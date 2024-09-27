@@ -74,8 +74,7 @@
 
 ## Docker Example
 
-- [install](https://docs.docker.com/desktop/install/windows-install/)
-	D:\Distr\Docker
+- [Docker Install](../technology/ci-cd/docker.md#deployment)
 - [rmq](https://hub.docker.com/_/rabbitmq)
 	docker run -d -p 15672:15672 --hostname my-rabbit --name some-rabbit rabbitmq:3-management
 	<http://localhost:15672/>
@@ -85,8 +84,6 @@
 - [graviteeio APIM Management](https://medium.com/graviteeio/getting-gravitee-io-api-management-platform-up-and-running-on-a-local-machine-)
 	vpn need Russia blocked
 - keycloak 18.0.2 - акт-я 20.
-	docker compose up --no-build
-	docker compose start
-	docker compose pause
-	docker compose stop
 - [mssql express](https://thriveread.com/sql-server-express-docker/)
+- [elk](https://www.elastic.co/blog/getting-started-with-the-elastic-stack-and-docker-compose)
+  - [docker-elk](https://github.com/deviantony/docker-elk)

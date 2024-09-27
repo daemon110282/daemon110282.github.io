@@ -6,7 +6,7 @@
 - Multiple file upload
 - Validation and security
 - Upload from remote server (FTP, HTTP...)
-- Upload from private [storage bucket (S3 or Google Storage)](../../../technology/filesystem/object.storage.md)
+- Upload from private [storage bucket (S3 or Google Storage)](../../../technology/store/object.storage.md)
 - Individual progress bar for every file
 - Upload notifications
 - Разделение на части файла - [Chunking files](https://uploadcare.com/blog/the-file-uploading-guide) over 20 MB
@@ -52,4 +52,4 @@
    - [Распределенные файловые системы](../../../technology/filesystem/dfs.md)
    - [Распределенные параллельнае файловые системы](../../../technology/filesystem/dpfs.md)
 - FTP SFTP - передача файлов
-- [Object Storage](../../../technology/filesystem/object.storage.md)
+- [Object Storage](../../../technology/store/object.storage.md)

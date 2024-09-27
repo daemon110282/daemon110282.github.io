@@ -18,7 +18,7 @@
   - [Shared Database\Table Шлюзовая БД (ШБД)](pattern.shareddb.md)
   - Файловый обмен
     - [Распределенные файловые системы](../../../technology/filesystem/filesystem.md)
-      - [Object Storage](../../../technology/filesystem/object.storage.md)
+      - [Object Storage](../../../technology/store/object.storage.md)
     - [Upload File](pattern.uploadfile.md)
     - [Download File](../../../api/api.rest.md)
     - [CDN](../../system.class/cdn.md) реализует паттерн [Static content hosting](https://learn.microsoft.com/en-us/azure/architecture/patterns/static-content-hosting)

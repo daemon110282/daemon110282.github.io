@@ -1,8 +1,8 @@
 # ClickHouse
 
-Колоночная аналитическая NOSQL СУБД с __открытым кодом__, позволяющая выполнять [аналитические запросы](https://cloud.yandex.ru/ru/blog/posts/2020/10/managed-clickhouse-overview) (__OLAP__) в режиме __реального времени__ на __структурированных__ [больших данных Big Data](../../arch/style/bigdata.md).
-
 Технология для [хранилищ данных](../../arch/store.md).
+
+Колоночная аналитическая NOSQL СУБД с __открытым кодом__, позволяющая выполнять [аналитические запросы](https://cloud.yandex.ru/ru/blog/posts/2020/10/managed-clickhouse-overview) (__OLAP__) в режиме __реального времени__ на __структурированных__ [больших данных Big Data](../../arch/style/bigdata.md).
 
 ## Зачем
 

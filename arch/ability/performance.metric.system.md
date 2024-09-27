@@ -71,7 +71,7 @@
 
 ## File Storage
 
-- [minio](../../technology/filesystem/minio.md)
+- [minio](../../technology/store/minio.md)
 
 ## MessageBus
 

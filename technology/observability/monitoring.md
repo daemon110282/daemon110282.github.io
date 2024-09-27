@@ -1,11 +1,14 @@
 # Monitoring
 
 - [Monitoring](#monitoring)
-	- [Зачем](#зачем)
-	- [Мониторинг сайтов](#мониторинг-сайтов)
-		- [Compare](#compare)
-	- [Application Perfomance Monitoring (APM)](#application-perfomance-monitoring-apm)
-		- [Compare](#compare-1)
+  - [Зачем](#зачем)
+  - [Плюсы и минусы](#плюсы-и-минусы)
+  - [Методики выбора метрик](#методики-выбора-метрик)
+    - [Агрегации значений метрик](#агрегации-значений-метрик)
+  - [Мониторинг сайтов](#мониторинг-сайтов)
+    - [Compare](#compare)
+  - [Application Perfomance Monitoring (APM)](#application-perfomance-monitoring-apm)
+    - [Compare](#compare-1)
 
 ## Зачем
 
@@ -127,7 +130,7 @@
 Используют разные хранилища метрик (Time Series Database):
 - [Prometheus](../store/prometheus.md)
 - InfluxDB
-- [Victoria metrics](monitoring/victoriametrics.md)
+- [Victoria metrics](../store/victoriametrics.md)
 
 ### Compare
 

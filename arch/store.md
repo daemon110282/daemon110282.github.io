@@ -21,22 +21,22 @@
 [Критерии](arch.criteria.md)
 
 - Structured
-  - OLTP
+  - OLTP (MSSQL..)
     - RDBMS (Relational Database Management System)
       - Almost anything could be solved by them
   - OLAP
-    - Column Family
-- Time-series database
+    - Column Family (ClickHouse..)
+- Time-series database (Prometheus..)
   - Store and manage time-stamped data
-- Semi UnStructured
+- Semi Structured
   - [NoSQL](store.nosql.md)
-    - Key Value
-    - Graph database
-    - Document store
-    - Wide column store
-  - Full text search Полнотекстовый поиск
+    - Key Value (Redis)
+    - Graph database (Neo4J)
+    - Document store (MongoDB)
+    - Wide column store (Cassandra)
+  - Full text search Полнотекстовый поиск (ElasticSearch)
 - UnStructured
-  - BLOB
+  - BLOB (Minio)
 
 ## Паттерны
 

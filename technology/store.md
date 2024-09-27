@@ -34,8 +34,8 @@
 ### Time Series Database
 
 - InfluxDB
-- [Prometeus](store/prometheus.md)
-- [Victoria metrics](observability/monitoring/victoriametrics.md)
+- [Prometheus](store/prometheus.md)
+- [Victoria metrics](store/victoriametrics.md)
 - TimescaleDB PostgreSQL
 
 ### Full text search Полнотекстовый поиск
@@ -46,4 +46,4 @@
 
 ## UnStructured Data
 
-- [Minio](filesystem/minio.md)
+- [Minio](store/minio.md)

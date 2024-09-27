@@ -11,7 +11,7 @@
 
 [ELK](https://gitinsky.com/elkstack) стек:
 
-- Beats — a family of log shippers for different use cases containing
+- Beats — a family of __log shippers__ for different use cases containing
   - Filebeat
   - Metricbeat
   - Packetbeat
@@ -19,9 +19,9 @@
   - Heartbeat
   - Winlogbeat
 - Logstash
-	- конвейер по парсингу данных (логов событий) 
+	- конвейер по парсингу данных (логов событий)
 	- Input-[Filter](https://logz.io/blog/5-logstash-filter-plugins/)-Output трансформация данных
-- [Elasticsearch](../store/elasticsearch.md)
+- [Elasticsearch](../../store/elasticsearch.md) NoSQL Full Text Search Store
 - Kibana
 	- GUI, dashboards, charts
 	- Logs

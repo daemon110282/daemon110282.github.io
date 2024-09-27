@@ -1,8 +1,10 @@
 # Elasticsearch
 
-Full text search Полнотекстовый поиск решение.
-
 ## Зачем
+
+Технология для [хранилищ данных](../../arch/store.md).
+
+Full text search Полнотекстовый поиск решение.
 
 - распределенная [API](https://www.elastic.co/guide/en/elasticsearch/reference/6.1/api-conventions.html) RESTful-система на основе JSON
 - хранилище данных - NoSQL-база данных (сохраняет все собранные данные), масштабируемое нереляционное

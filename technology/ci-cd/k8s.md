@@ -44,7 +44,7 @@
 
 - [NGINX Modern Apps Reference Architecture (MARA)](https://github.com/nginxinc/kic-reference-architectures/)
   - [Distributed storage](../../technology/filesystem/filesystem.md)
-  - [Object Storage](../../technology/filesystem/object.storage.md)
+  - [Object Storage](../store/object.storage.md)
 - [Oracle MuShop](https://oracle-quickstart.github.io/oci-cloudnative/)
 - MSA ![MSA](../../img/technology/ci-cd/k8s.msa.jpg)
 
@@ -72,7 +72,7 @@ TODO
   - [Compare OpenEBS-Rook-GlusterFS](https://kubevious.io/blog/post/comparing-top-storage-solutions-for-kubernetes)
 - [Distributed storage](../../technology/filesystem/filesystem.md) - NFS
   - [Container Attached Storage (CAS) vs. Shared Storage](https://blog.mayadata.io/container-attached-storage-cas-vs.-shared-storage-which-one-to-choose)
-- [Object Storage](../../technology/filesystem/object.storage.md) - Minio
+- [Object Storage](../store/object.storage.md) - Minio
 
 ### Performance
 

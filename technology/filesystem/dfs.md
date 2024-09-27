@@ -18,7 +18,7 @@
 ## Протоколы
 
 - Облако
-  - [Object Storage](object.storage.md) аля Amazon S3
+  - [Object Storage](../store/object.storage.md) аля Amazon S3
 - NFS
 	- ![nfs](../../img/nfs.png)
 	- Под unix\win

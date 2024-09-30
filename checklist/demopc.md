@@ -86,3 +86,4 @@
 - keycloak 18.0.2 - акт-я 20.
 - [mssql express](https://thriveread.com/sql-server-express-docker/)
 - [elk](../technology/observability/monitoring/elk.md#deployment)
+- [kafka](../technology/middleware/messagebus/kafka.md#deployment)

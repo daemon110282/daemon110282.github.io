@@ -6,6 +6,7 @@
   - [Функции](#функции)
   - [Паттерны](#паттерны)
   - [Модель](#модель)
+  - [Deployment](#deployment)
 
 ## Зачем
 
@@ -56,7 +57,7 @@ UC:
 
 - как __сообщения хранятся__ на брокере, но есть ttl ![partition](../../../img/technology/middleware/messagebus/kafka.partition.png)
   - Сообщения в Kafka организованы и хранятся в именованных __топиках (Topics)__, каждый топик состоит из одной и более __партиций (Partition)__, распределённых между брокерами внутри одного кластера.
-- как __потребляются консьюмерами__ (consumer) 
+- как __потребляются консьюмерами__ (consumer)
   - используется __подход pull__ (в RMQ push по умолчанию): __консьюмеры сами отправляют запросы__ в брокер раз в n миллисекунд для получения новой порции сообщений
     - позволяет __группировать сообщения в пакеты (batch)__, достигая лучшей пропускной способности
   - Консьюмеры
@@ -73,7 +74,7 @@ UC:
     - 0 нет
     - 1 only Leader
     - -1 all ISR
-  - delivery semantic
+  - [delivery semantic](https://habr.com/ru/articles/738874/)
     - at most once (не более одного)
     - al least once (хотя бы один)
     - exactly once (idempotent)
@@ -87,7 +88,7 @@ UC:
 
 ## Паттерны
 
-- Один producer создается для отправки сообщений для быстродействия
+- Один producer создается для отправки сообщений для быстродействия (fetch metadata sync тяжелая операция)
 
 ## Модель
 
@@ -99,3 +100,13 @@ UC:
 - и опционального набора метаданных (так называемых хедеров)
 
 [TODO](https://slurm.io/tpost/pnyjznpvr1-apache-kafka-osnovi-tehnologii)
+
+## Deployment
+
+- docker
+  - todo [java](https://habr.com/ru/articles/738874/)
+  - [.net core](https://mandur.hashnode.dev/kafka-for-aspnet-core-6)
+- using Kafka via UI
+  - Conduktor
+  - KafkaTool
+  - Kafdrop

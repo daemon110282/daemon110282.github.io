@@ -2,8 +2,12 @@
 
 class kafka as "Kafka \n Broker"
 class zookeeper as "zookeeper \n Координатор \n Kafka Cluster"
+' отвечает за назначение мастеров партиций и отслеживает состояние брокеров
+class kafka_controller as "Контроллер \n кластера"
 
 kafka_cluster --> kafka: состоит из
+kafka_cluster --> kafka_controller: содержит
+kafka_controller -- kafka: отслеживает состояние \n мастер партиции 
 
 kafka --> topic : содержит
 topic --> partition : состоит из

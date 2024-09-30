@@ -1,0 +1,16 @@
+@startuml (id=Jenkins)
+
+class kafka
+
+kafka --> topic : содержит
+topic --> partition : состоит из
+partition -- kafka: распределены между
+topic - message: содержит
+producer --> topic : push message
+consumer <-- topic : pull message
+consumer --> zookeeper: update offset
+' pipeline "1" --> "*" stage : включает
+' pipeline --> jenkins_file : описывает
+
+
+@enduml

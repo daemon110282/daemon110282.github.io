@@ -73,7 +73,10 @@ Other Skills:
 ![view](../img/arch/arch.view.png)
 ![Схема](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/daemon110282/daemon110282.github.io/master/arch/arch.puml)
 
-- Порядок (пирамида) проработки архитектуры решения
+- __Групповые ревью__ - коллективный архитектор
+
+Порядок (пирамида) проработки архитектуры решения:
+
 - Функциональная(use case, ПЗ, БТ)
 - [Анализ вариантов](alternative.md)
   - Компромис бизнес проблем, целей и тех решения с __учетом дальнейшего развития__

@@ -85,5 +85,4 @@
 	vpn need Russia blocked
 - keycloak 18.0.2 - акт-я 20.
 - [mssql express](https://thriveread.com/sql-server-express-docker/)
-- [elk](https://www.elastic.co/blog/getting-started-with-the-elastic-stack-and-docker-compose)
-  - [docker-elk](https://github.com/deviantony/docker-elk)
+- [elk](../technology/observability/monitoring/elk.md#deployment)

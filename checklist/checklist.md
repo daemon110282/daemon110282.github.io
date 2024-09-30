@@ -9,3 +9,4 @@
 - [Сервис](service.md)
   - [API](api.md)
   - [Поставка](setup.md)
+- [Demo PC](demopc.md)

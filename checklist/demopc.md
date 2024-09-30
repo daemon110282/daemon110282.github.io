@@ -80,7 +80,7 @@
 	<http://localhost:15672/>
 - [opentelemetry+jaeger+Grafana](https://github.com/open-telemetry/opentelemetry-demo/blob/main/docs/docker_deployment.md)
 - [spa vuejs php yii2 backend](https://www.twilio.com/blog/build-single-page-application-in-php-yii-2-0-vue-js)
-		docker https://github.com/yemiwebby/vue-yii-app
+    - [Yii 2 Basic Project Template](https://github.com/yemiwebby/vue-yii-app)
 - [graviteeio APIM Management](https://medium.com/graviteeio/getting-gravitee-io-api-management-platform-up-and-running-on-a-local-machine-)
 	vpn need Russia blocked
 - keycloak 18.0.2 - акт-я 20.

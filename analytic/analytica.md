@@ -3,6 +3,7 @@
 - [Аналитика](#аналитика)
   - [Виды аналитиков](#виды-аналитиков)
   - [Порядок артефактов\\активностей](#порядок-артефактовактивностей)
+  - [Сбор требований](#сбор-требований)
   - [Виды артефактов](#виды-артефактов)
     - [Карта влияния Impact Mapping](#карта-влияния-impact-mapping)
     - [UC vs US](#uc-vs-us)
@@ -27,18 +28,35 @@
 
 [CheckList](../checklist/analytic.md):
 
-1. [Impact Mapping](#карта-влияния-impact-mapping) - какум проблему решаем: чтобы что?
-2. [Customer Journey Map](../analytic/cjm.md) (CJM)
-3. [БП](#бизнес-процесс-бп)
-4. [US](#user-story-us-пользовательские-истории)
-5. [Event Storming](../arch/pattern/system.design/event.storming.md)
-6. [UC](#use-case-uc-сценарии-использования)
-7. [UI UX](ui-ux.md)
-8. [Модель данных](#модель-данных)
-9. Data Driven
-   1. [ab тесты](ab.tests.md)
+1. [Сбор требований](#сбор-требований)
+2. [Impact Mapping](#карта-влияния-impact-mapping) - какум проблему решаем: чтобы что?
+3. [Customer Journey Map](../analytic/cjm.md) (CJM)
+4. [БП](#бизнес-процесс-бп)
+5. [US](#user-story-us-пользовательские-истории)
+6. [Event Storming](../arch/pattern/system.design/event.storming.md)
+7. [UC](#use-case-uc-сценарии-использования)
+8. [UI UX](ui-ux.md)
+9. [Модель данных](#модель-данных)
+10. Data Driven
+    1. [ab тесты](ab.tests.md)
 
 - [todo](http://agilemindset.ru/%d0%b2%d0%b0%d0%b6%d0%bd%d0%be%d1%81%d1%82%d1%8c-%d0%bf%d0%be%d0%bd%d0%b8%d0%bc%d0%b0%d0%bd%d0%b8%d1%8f-%d0%bf%d1%80%d0%b5%d0%b4%d0%bc%d0%b5%d1%82%d0%bd%d0%be%d0%b9-%d0%be%d0%b1%d0%bb%d0%b0%d1%81/)
+
+## Сбор требований
+
+[Методы](https://habr.com/ru/companies/simbirsoft/articles/307844/):
+
+- Опросник
+- Интервью
+- Записи заказчика
+- Изучение существующей документации
+- Повторное использование спецификации (ПЗ)
+- Представитель заказчика в компании разработчика (Agile)
+- Работа "в поле"
+- Обучение
+- Мозговой штурм (Agile)
+- Совещания (Agile)
+- Use Case
 
 ## Виды артефактов
 

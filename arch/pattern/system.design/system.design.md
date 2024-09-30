@@ -28,6 +28,12 @@
     - Аудит
     - Health Check API
 - Оркестрация - есть дирижер [или Хореография](orchestration-choreography.md) - нет централизованного управления (медиатора)
+- Хранилищ данных
+  - [Data Vault](data.vault.md)
+  - [Data Mart](data.mart.md)
+  - [Data Lake](data.lake.md)
+- Big Data
+  - [Map Reduce](map.reduce.md)
 - TODO
   - [Принципы проектирования MS](https://docs.microsoft.com/ru-ru/azure/architecture/guide/design-principles/)
   - [MS](https://docs.microsoft.com/ru-ru/azure/architecture/patterns/category/design-implementation)

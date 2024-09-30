@@ -1,0 +1,66 @@
+@startuml (id=bigdata)
+
+class BD as "BigData"
+
+BD -- ХарактеристикиДанных
+	ХарактеристикиДанных -- ШестьV
+	note right
+	Volume объем >150gb\d
+	Velocity скорость
+	Variety разнообразие
+	Veracity достоверность
+	Variability изменчимовсть
+	Value ценность
+	end note
+
+class Сбор as "1 Сбор"
+BD -- Сбор
+	note left
+	Социальные
+	Статистические
+	Медицинские
+	Машинные
+	Транзакционные
+	end note
+	Сбор --- DataClearning
+	Сбор -- SyncData
+	note right
+	CDC ETL 
+	Replication
+	Streaming (Kafka)
+	end note
+
+class Хранение as "2 Хранение"
+BD -- Хранение
+	Хранение --- DWH
+	note right
+	хронология
+	структурировано
+	ETL
+	end note
+	Хранение --- DataLake
+	note right
+	нет единого 
+	формата данных
+	end note
+	Хранение -- DataVault
+	Хранение -- DataMart
+	Хранение -- СУБД
+
+class Обработка as "3 Обработка"
+BD -- Обработка
+	Обработка -- MapReduce
+	note right
+	Hadoop
+	Apache Spark
+	end note
+
+class Анализ as "4 Анализ"
+BD -- Анализ
+	Анализ -- SQL_BI
+	note right
+	Power BI
+	end note
+	Анализ --- Нейросети
+
+@enduml

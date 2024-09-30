@@ -4,11 +4,13 @@
 - [API](api/)
 - [CI-CD](ci-cd/)
 - [Store](store.md)
-  - [DB](store.md#rdbms-relational)
+  - [DB](store.md#oltp-rdbms-relational)
 - [filesystem](filesystem/filesystem.md)
 - [framework](framework/)
-- [middleware](middleware/)
-  - [RMQ](middleware/messagebus/rmq/)
+- Middleware
+  - MessageBus
+    - [RMQ](middleware/messagebus/rmq.md)
+    - [Kafka](middleware/messagebus/kafka.md)
 - [mobile](mobile/)
 - [monitoring](observability/monitoring.md)
 - [OS](os/)

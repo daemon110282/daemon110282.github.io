@@ -24,7 +24,7 @@
 
 ## Функции
 
-- [Data lakes](https://cloudian.com/guides/hybrid-it/on-premises-object-storage/)
+- [Data lake](../../arch/pattern/system.design/data.lake.md)
 - CDN
 - Загрузка upload объектов
 - Версионирование объектов

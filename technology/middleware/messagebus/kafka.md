@@ -14,7 +14,7 @@
 
 UC:
 
-- это про большие данные [BigData](../../../arch/style/bigdata.md) и потоковую обработку
+- большие данные [BigData](../../../arch/style/bigdata.md) и __потоковую обработку Streaming Data__
 - Log processing and analysis
 - Data streaming in recommendations
 - System monitoring and alerting

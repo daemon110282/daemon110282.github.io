@@ -90,9 +90,9 @@
 - HELM chart
 - [k8s](https://min.io/docs/minio/kubernetes/upstream/index.html)
 - Observability
-	- метрики 
+	- метрики
 		- [Prometheus-compatible](https://min.io/docs/minio/linux/administration/monitoring.html#deployment-metrics)
-		- Grafana
+		- [Grafana](../observability/grafana.md)
 	- [logs](https://min.io/docs/minio/linux/administration/monitoring.html#server-logs)
 		- [console](https://github.com/minio/minio/blob/master/docs/logging/README.md)
 		- http web hook

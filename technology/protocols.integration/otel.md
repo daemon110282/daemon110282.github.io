@@ -29,6 +29,7 @@
 		- or you can use __automatic instrumentation techniques__ that have already been implemented for some languages.	
 		![OTEL Agent](https://habrastorage.org/r/w1560/webt/tu/my/yk/tumyykh5oqpg_-gralg_9h8cy-m.png)
 - Data OTEL Collector
+  - [Grafana Alloy](https://grafana.com/oss/alloy-opentelemetry-collector/?pg=blog&plcmt=body-txt)
 - Exporters - SDK realize  
 	- Metric
 		- Prometheus Metric ![schema](https://habrastorage.org/r/w1560/webt/2l/8k/l1/2l8kl1ck385o93-rqiehzewqudw.png)
@@ -36,6 +37,7 @@
 	- Trace
 		- Jaeger
 		- Zipkin
+		- [Grafana Loki](https://github.com/grafana/loki)
 	- [Logs](https://opentelemetry.io/docs/reference/specification/logs/) correlation with Trace API SDK __beta__
 		- FluentBit, [can collect logs](https://github.com/open-telemetry/opentelemetry-collector-contrib/tree/master/receiver/fluentforwardreceiver), then send to OpenTelemetry Collector
 		- [Vector support logs](https://vector.dev/docs/reference/configuration/sources/opentelemetry/)
@@ -71,7 +73,7 @@ Based on the [Specification, the APIs and SDKs are implemented](https://scalac.i
 	To do that, you have to use an __SDK exporter and configure it to send data to a particular__ destination.
 	- Such a destination can be
 		- a telemetry backend of your choice (such as Prometheus, New Relic or Jaeger)
-		- or an OpenTelemetry collector.
+		- or an OpenTelemetry collector
 	- SDKs consist of all the parts that actually __implement the APIs and provide the working functionality__ for collecting and exporting all the signal data.
 
 ![scheme](https://opentelemetry.io/img/library-design.png)

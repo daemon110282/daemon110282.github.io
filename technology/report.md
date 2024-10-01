@@ -21,6 +21,8 @@
 
 ### On Premise
 
+- [Loginom](https://loginom.ru/platform)
+
 #### Alpha BI
 
 - [Alpha BI](https://bars-alpha.bi/)

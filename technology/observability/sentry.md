@@ -3,23 +3,22 @@
 - [Sentry](#sentry)
 	- [Зачем](#зачем)
 	- [Функции](#функции)
-		- [Event Model](#event-model)
+	- [Модель данных](#модель-данных)
 	- [Плюсы-Минусы](#плюсы-минусы)
 	- [Deployment](#deployment)
 	- [Технологии](#технологии)
+
+## Зачем
 
 Инструмент реализующий:
 
 - паттерн [мониторинга исключений](../../arch/pattern/observability/exception.handle.md) (exception), ошибок
 - распределенной трассировки
-- [анализа производительности](../../arch/system.class/apm.md)
-
-## Зачем
-
 - [Observability](../../arch/ability/observability.md)
   - Traditional logging provides you with a __trail of events__. Some of those events are errors, but many times they’re simply __informational__. Sentry is fundamentally different because we __focus on exceptions__.
   - provides client libraries in every major programming language which instrument your software’s code to capture both error data and tracing telemetry
-- [APM](../../arch/system.class/apm.md)
+  - Uptime Monitoring
+- анализа производительности [APM](../../arch/system.class/apm.md)
 	- [Frontend](https://geekflare.com/frontend-web-monitoring/)
 	- performance [bottlenecks in your code](https://docs.sentry.io/product/performance/performance-video/)
 - [Security and compliance](https://logz.io/learn/complete-guide-elk-stack/?utm_source=pocket_saves#common-pitfalls:~:text=guide%40logz.io-,Use%20Cases,-The%20ELK%20Stack)
@@ -39,10 +38,10 @@
 - Query
 - Issue [Grouping](https://docs.sentry.io/product/data-management-settings/event-grouping/)
     - Группировка ошибок по кастомным правилам
-	- Filters
+    - Filters
 		- Inbound Filters on [Server](https://docs.sentry.io/product/data-management-settings/filtering/) by: environment, browser, IP, error message
 		- Client side: [PHP](https://docs.sentry.io/platforms/php/configuration/filtering/)
-	- [Clean](https://help.sentry.io/product-features/configuration/how-can-i-delete-resolve-all-issues-in-a-project/)
+    - [Clean](https://help.sentry.io/product-features/configuration/how-can-i-delete-resolve-all-issues-in-a-project/)
 		- [Очистка БД](https://dev.to/nixon1333/clean-sentry-database-on-premise-28b) через [Sentry CLI](https://sentry-docs-o2paie5ivq-uc.a.run.app/server/cli/cleanup/)
 - Dashboard
 	- [Grafana](https://sentry.io/integrations/grafana/)
@@ -75,6 +74,7 @@
 	- [SPA Vite](https://docs.sentry.io/platforms/javascript/sourcemaps/uploading/vite/)
 - [APM](../../arch/system.class/apm.md)
 	- [Web Vitals](https://docs.sentry.io/product/performance/web-vitals/)
+	- Web Vitals in breadcrumbs
 - [Distributed Trace](https://docs.sentry.io/product/sentry-basics/tracing/distributed-tracing/)
 	![span](https://docs.sentry.io/static/1ae959bb1d05b01379cf856c5dc36a01/c1b63/diagram-transaction-trace.png)
 	- Trace -> Transaction -> Span
@@ -85,20 +85,20 @@
 	- [Telegram](https://github.com/butorov/sentry-telegram)
 	- Rules [Custom](https://sentry-docs-o2paie5ivq-uc.a.run.app/guides/alert-notifications/creating-custom-rules/)
 - [SSO](https://develop.sentry.dev/self-hosted/sso/)
-	- Auth user access by [KeyCloak SAML](https://yyhh.org/blog/2020/10/how-to-setup-saml2-authentication-on-sentry-with-keycloak/) 
+	- Auth user access by [KeyCloak SAML](https://yyhh.org/blog/2020/10/how-to-setup-saml2-authentication-on-sentry-with-keycloak/)
 	- Google OIDC
 - RBAC
 	- [Роли](https://docs.sentry.io/product/accounts/membership/)
 	- [маппинг групп LDAP на роль Sentry](https://habr.com/ru/post/691140/)
-	- LDAP 
-		- [SAML](https://yyhh.org/blog/2020/10/how-to-setup-saml2-authentication-on-sentry-with-keycloak/) - __нет маппинга групп LDAP на роли Sentry__ 
+	- LDAP
+		- [SAML](https://yyhh.org/blog/2020/10/how-to-setup-saml2-authentication-on-sentry-with-keycloak/) - __нет маппинга групп LDAP на роли Sentry__
 		- [](https://habr.com/ru/articles/691140/)
 - [Jira Task Intregration](https://forum.sentry.io/t/how-to-configure-jira-cloud-in-your-on-premise-sentry/6720)
 - MTA
 - [Relay](https://github.com/getsentry/self-hosted/blob/master/relay/config.example.yml) - Rate Limit, Filter
 	- [on premise](https://www.youtube.com/watch?v=9_IswUwFxlE)
 
-Сущности:
+## Модель данных
 
 - Organization
 	- Member
@@ -109,7 +109,7 @@
 			- Release
 			- Alert
 
-### Event Model
+Event Model
 
 - [Event Model](https://docs.sentry.io/product/sentry-basics/enrich-data/)
 	- [Context](https://docs.sentry.io/platforms/android/enriching-events/context/default-context/)
@@ -157,7 +157,7 @@
 		- [model](https://docs.sentry.io/product/relay/monitoring/collected-metrics/)
 		- rps DB PostgreSQL
 - HA
-	- [СберМегаМаркет опыт](https://www.youtube.com/watch?v=9_IswUwFxlE&list=WL&index=8&t=589s) 
+	- [СберМегаМаркет опыт](https://www.youtube.com/watch?v=9_IswUwFxlE&list=WL&index=8&t=589s)
 		- PostgreSQL узкое место - Master\Replica
 		- Object Storage для "сырых" Event (Minio) вместо PostgreSQL
 
@@ -168,8 +168,8 @@
 - Snuba
 - Clickhouse - управляет Alert
 ![Clickhouse](https://images.ctfassets.net/em6l9zw4tzag/162no5P9QQXMQbvY7Hu8zz/9170098ce2d51a6c165664d659555975/snuba-diagram.png)
-- [Kafka](../middleware/kafka.md)
-- [Redis](../redis.md)
+- [Kafka](../middleware/messagebus/kafka.md)
+- [Redis](../store/redis.md)
 - PostgreSQL
 - Python
 - Memcached

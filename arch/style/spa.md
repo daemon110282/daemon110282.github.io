@@ -1,13 +1,13 @@
 # Single Page Application (SPA) Одностраничное веб приложение
 
 - [Single Page Application (SPA) Одностраничное веб приложение](#single-page-application-spa-одностраничное-веб-приложение)
-	- [Зачем](#зачем)
-	- [Плюсы и минусы](#плюсы-и-минусы)
-	- [Паттерны](#паттерны)
-		- [Локализация](#локализация)
-		- [SSR (Server Side Rendering, серверный рендеринг)](#ssr-server-side-rendering-серверный-рендеринг)
-	- [Технологии](#технологии)
-	- [Reference Architecture](#reference-architecture)
+  - [Зачем](#зачем)
+  - [Плюсы и минусы](#плюсы-и-минусы)
+  - [Паттерны](#паттерны)
+    - [Локализация](#локализация)
+    - [SSR (Server Side Rendering, серверный рендеринг)](#ssr-server-side-rendering-серверный-рендеринг)
+  - [Технологии](#технологии)
+  - [Reference Architecture](#reference-architecture)
 
 ## Зачем
 
@@ -80,11 +80,11 @@
 - Избегайте применения жестко кодированных строк и внешних ресурсов для текстовых данных или данных компоновки (например, для поддержки языков с написанием справа налево), особенно если приложение будет подлежать локализации
 - Локализация - текстов сообщений (resource) с бэка
 	- vue-i18n готовое решение для локализации (понятно у нас пока RU) с шаблонами, placeholder и тд. Его планируется использовать на фронте или иное решение типовое?
-	https://cli.vuejs.org/ru/dev-guide/ui-localization.html
-	https://vue-i18n.intlify.dev/
-	https://github.com/intlify/vue-i18n-next
-	https://phrase.com/blog/posts/ultimate-guide-to-vue-localization-with-vue-i18n/
-	https://vue-i18n.intlify.dev/guide/advanced/lazy.html есть подгрузка динамически для компонентов локализаций
+	<https://cli.vuejs.org/ru/dev-guide/ui-localization.html>
+	<https://vue-i18n.intlify.dev/>
+	<https://github.com/intlify/vue-i18n-next>
+	<https://phrase.com/blog/posts/ultimate-guide-to-vue-localization-with-vue-i18n/>
+	<https://vue-i18n.intlify.dev/guide/advanced/lazy.html> есть подгрузка динамически для компонентов локализаций
 	- есть HTML в шаблоне локализации, но это добавляет [рисков безопасности еще](https://vue-i18n.intlify.dev/guide/essentials/syntax.html#html-message)
 - Останется только:
   - на бэке по БД формировать json в нужном формате, которые примет vue-i18n

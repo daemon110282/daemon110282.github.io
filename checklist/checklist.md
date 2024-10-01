@@ -10,3 +10,4 @@
   - [API](api.md)
   - [Поставка](setup.md)
 - [Demo PC](demopc.md)
+- [Структура шаблона описания ИС](is.md)

@@ -27,7 +27,8 @@ BD -- Сбор
 	note right
 	CDC ETL 
 	Replication
-	Streaming (Kafka)
+	Streaming (Kafka
+	, Amazon Kinezis)
 	end note
 
 class Хранение as "2 Хранение"
@@ -42,13 +43,14 @@ BD -- Хранение
 	DWH -- DataMart
 	DWH -- МодельХранилища
 	МодельХранилища -- DataVault
-	!include bigdata.puml!datavault
+	!include bigdata.puml!data.vault
 
 	Хранение -- DataLake
 	note right
 	нет единого 
 	формата данных
 	end note
+	!include bigdata.puml!data.lake
 
 class Обработка as "3 Обработка"
 BD -- Обработка
@@ -69,11 +71,28 @@ BD -- Анализ
 @enduml
 
 ' https://yandex.cloud/ru/docs/glossary/datavault
-@startuml (id=datavault)
+@startuml (id=data.vault)
 
 DataVault -- Структура
 Структура -- Хаб
 Структура -- Связь
 Структура -- Сателлит
 
+@enduml
+
+@startuml (id=data.lake)
+
+DataLake -- ПроцессОбработки
+	ПроцессОбработки --- Batch
+	note left: ELT
+	Batch -- Apache.Hive
+	Batch -- Apache.Hadoop 
+	ПроцессОбработки -- Stream
+	note right: Realtime
+	Stream -- Kafka
+
+DataLake -- DataUnstructured
+	DataUnstructured -- DFS
+	DataUnstructured -- S3
+	
 @enduml

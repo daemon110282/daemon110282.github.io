@@ -1,5 +1,7 @@
 # MSSQL Performance metric
 
+Метрики производительности [MSSQL](mssql.md#производительность).
+
 [miro](https://miro.com/app/board/uXjVOMlBLHQ=/?moveToWidget=3458764577784794347&cot=14)
 
 ## Виды метрик

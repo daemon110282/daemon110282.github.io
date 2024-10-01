@@ -25,8 +25,8 @@ Redis - Remote Dictionary Service in __memory__.
   - [The 6 Most Impactful Ways Redis is Used in Production Systems](https://blog.bytebytego.com/p/the-6-most-impactful-ways-redis-is)
   - [todo](https://blog.bytebytego.com/p/redis-can-do-more-than-caching)
   
-![redis usecase](../../img/technology/redis.usecase.webp)
-![redis structures](../../img/technology/redis.structures.png)
+![redis usecase](../../img/technology/store/redis.usecase.webp)
+![redis structures](../../img/technology/store/redis.structures.png)
 
 ## Функции
 

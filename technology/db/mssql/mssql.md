@@ -3,6 +3,7 @@
 - [MS SQL Server](#ms-sql-server)
   - [Масштабируемость](#масштабируемость)
   - [Паттерны](#паттерны)
+    - [Секционирование](#секционирование)
   - [Производительность](#производительность)
     - [Способы анализа производительности](#способы-анализа-производительности)
       - [SQL Trace Profiler (Deprecated)](#sql-trace-profiler-deprecated)
@@ -13,6 +14,7 @@
   - [Мониторинг](#мониторинг)
     - [Онлайн](#онлайн)
     - [Исторически](#исторически)
+  - [Performance Reports](#performance-reports)
   - [TODO](#todo)
   - [Version](#version)
     - [2019](#2019)
@@ -52,7 +54,6 @@ HA:
 - Минусы
   - миграции БД не поддерживаются? Необходимо вручную обновлять партиции
 
-
 ## Производительность
 
 Зависит от:
@@ -62,7 +63,7 @@ HA:
 - [Блокировки](mssql.locks.md)
   - Blocking can be reduced with __index design__ and __short transactions__.
 - [Индексирование](mssql.index.md)
-  - REBUILD индексов (INDEX REORGANIZE не рекомендуется на больших объемах БД) 
+  - REBUILD индексов (INDEX REORGANIZE не рекомендуется на больших объемах БД)
 - [Стратегии оптимизации запросов](#стратегии-оптимизации-запросов)
 - Дизайна (архитектуры) приложения
 - Обслуживания БД
@@ -71,7 +72,7 @@ HA:
   - Clear statistics
   - Index by table uses in night
 - __[SQL Plan](mssql.queryplan.md)__  
-  - CPU can be reduced with __plan reuse__ and __join reduction__    
+  - CPU can be reduced with __plan reuse__ and __join reduction__
 - __IO__ performance
   - can be reduced with good __indexing__, __join reduction__, and __high page life expectancy__.
 - Memory
@@ -178,7 +179,7 @@ HA:
 ## Performance Reports
 
 - Стандартные отчеты [Performance dashboard](https://learn.microsoft.com/en-us/sql/relational-databases/performance/performance-dashboard)
-  - Performance 
+  - Performance
     - Top Queries by Average IO
     - Top Queries by Average CPU Time
     - Object Execution Statistics
@@ -190,17 +191,16 @@ HA:
   - Server Activity History: CPU, RAM, IO, Network, Waits
   - Версия MS SQL с 2008: используем 2012, DWH 2016
   - [Блокировки Dead Locks](mssql.locks.md)
-  - [Waits](mssql.waits.md) - ожидания 
+  - [Waits](mssql.waits.md) - ожидания
   - [Latches](mssql.latches.md) - внутренние блокировки
 
 ## TODO
 
-- http://f1incode.blogspot.com/2011/07/i_28.html	
+- http://f1incode.blogspot.com/2011/07/i_28.html
 - http://f1incode.blogspot.com/2011/08/performance-testing-part-2.html
-- http://www.itcommunity.ru/Msgs/default.aspx?MessageID=60	
-- http://msmvps.com/blogs/irinanaumova/archive/2011/05/06/1792775.aspx	
-- http://www.mssqltips.com/tip.asp?tip=1039	
-
+- http://www.itcommunity.ru/Msgs/default.aspx?MessageID=60
+- http://msmvps.com/blogs/irinanaumova/archive/2011/05/06/1792775.aspx
+- http://www.mssqltips.com/tip.asp?tip=1039
 
 ## Version
 
@@ -233,4 +233,3 @@ HA:
 Upgrade
 
 - [Process Support 2012SP4 to 2019](https://learn.microsoft.com/ru-ru/sql/database-engine/install-windows/supported-version-and-edition-upgrades-2019?view=sql-server-ver16)
-

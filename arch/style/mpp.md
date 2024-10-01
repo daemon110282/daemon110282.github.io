@@ -17,6 +17,10 @@
 
 ## Технологии
 
+- Teradata Database 14
+- Google Big Query
+- Amazon Redshift
+- [Apache Hive](../../technology/store/apache.hive.md)
 - EMC Greenplum
 - HP Vertica
 - Sybase IQ

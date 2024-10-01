@@ -21,11 +21,11 @@
 
 - хранилища в третьей нормальной форме (3NF)
 - хранилища с измерениями (типа «Звезда» или «Снежинка»)
-- хранилища с измерениями [Data Vault](pattern/system.design/data.vault.md)
+- хранилища с измерениями [Data Vault](../pattern/system.design/data.vault.md)
 
 ## Виды
 
-[Критерии](arch.criteria.md)
+[Критерии](../arch.criteria.md)
 
 - Structured
   - OLTP (MSSQL..)
@@ -36,7 +36,7 @@
 - Time-series database (Prometheus..)
   - Store and manage time-stamped data
 - Semi Structured
-  - [NoSQL](store.nosql.md)
+  - [NoSQL](../store.nosql.md)
     - Key Value (Redis)
     - Graph database (Neo4J)
     - Document store (MongoDB)
@@ -69,17 +69,17 @@
     - В одном месте записи имеют мало индексов и оптимизированы под OLTP нагрузки
     - в другом месте записи индексируются по всем полям и адаптированы для OLAP нагрузок
     - Такие таблицы называются регистрами накоплений и регистрами сведений.
-- [Секционирование шардирование](./pattern/performance/shard.db.md)
+- [Секционирование шардирование](../pattern/performance/shard.db.md)
   
 ## Критерии выбора
 
-![Выбор хранилища http://architecturethehardparts.com/](../img/arch/choose_store.jpg)
+![Выбор хранилища http://architecturethehardparts.com/](../../img/arch/choose_store.jpg)
 
 - [SQL vs NoSQL](https://towardsdatascience.com/datastore-choices-sql-vs-nosql-database-ebec24d56106)
-  - ![choose](../img/technology/store/sql.vs.nosql.webp)
+  - ![choose](../../img/technology/store/sql.vs.nosql.webp)
 - SQL, NoSQL, TimeSeries
-  - ![плюсы-минусы](../img/technology/db/types.db.jpeg)
+  - ![плюсы-минусы](../../img/technology/db/types.db.jpeg)
 
 ## Технологии
 
-[Технологии](../technology/store.md)
+[Технологии](../../technology/store.md)

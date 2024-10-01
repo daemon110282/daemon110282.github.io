@@ -2,7 +2,7 @@
 
 ## Зачем
 
-РСУБД решение для [хранилищ данных](../../arch/store.md) в архитектурном стиле [BigData](../../arch/style/bigdata.md).
+РСУБД решение для [хранилищ данных](../../arch/system.class/store.md) в архитектурном стиле [BigData](../../arch/style/bigdata.md).
 Используется [MPP архитектура](../../arch/style/mpp.md).
 
 - SQL-подобный интерфейс поверх [Hadoop](apache.hadoop.md) MapReduce

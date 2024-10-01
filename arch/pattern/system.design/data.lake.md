@@ -8,7 +8,7 @@
 
 ## Зачем
 
-[Паттерн проектирования](system.design.md) для [хранилищ данных](../../store.md) в архитектурном стиле [BigData](../../style/bigdata.md).
+[Паттерн проектирования](system.design.md) для [хранилищ данных](../../system.class/store.md) в архитектурном стиле [BigData](../../style/bigdata.md).
 
 Для сбора, хранения и обработки больших потоков информации, которая [поступает непрерывно](https://yandex.cloud/ru/docs/glossary/datalake):
 

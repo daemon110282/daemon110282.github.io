@@ -1,6 +1,6 @@
 # MongoDB
 
-Технология для [хранилищ данных](../../arch/store.md).
+Технология для [хранилищ данных](../../arch/system.class/store.md).
 NoSQL Document [store](../store.nosql.md) решение.
 
 ## Зачем

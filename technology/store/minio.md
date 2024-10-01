@@ -3,7 +3,7 @@
 ## Зачем
 
 Реализация [Object Storage Объектное хранилище](./object.storage.md), протокол Amazon S3 compatible.
-Технология для [хранилищ данных](../../arch/store.md).
+Технология для [хранилищ данных](../../arch/system.class/store.md).
 
 ## Функции
 

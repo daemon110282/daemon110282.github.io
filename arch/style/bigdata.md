@@ -75,6 +75,7 @@ UC:
 
 ![arch](../../img/arch/big.data.arch.svg)
 
+- [Architecture Reference](../ref/bigdata.md)
 - Сбор
   - Streaming Data
     - [Kafka](../../technology/middleware/messagebus/kafka.md)
@@ -84,10 +85,10 @@ UC:
 - Хранение
   - [Distributed Storage Systems](../../technology/filesystem/dfs.md)
   - структурированные данные в [DWH](../system.class/dwh.md)
-      - РСУБД [Хранилища данных](../store.md)
+      - РСУБД [Хранилища данных](../system.class/store.md)
       - [Data Vault](../pattern/system.design/data.vault.md) - одна из моделей хранилища Data Warehouse с __временными отметками__ размещения данных
   - слабо структурированные
-    - [NoSQL](../store.nosql.md): Columnar Store  
+    - [NoSQL](../system.class/store.nosql.md): Columnar Store  
     - [Data Mart](../pattern/system.design/data.mart.md) - витрина __однородных__ данных одной __предметной области__
   - Озеро данных [Data Lake](../pattern/system.design/data.lake.md)
     - хранит любые типы данных
@@ -103,10 +104,6 @@ UC:
     - BI
     - OLAP
   - ML
-
-Reference Architecture:
-
-- [1С-Битрикс BigData](http://habrahabr.ru/post/272041/): Amazon Kinezis, Apache Hadoop, Apache Spark, S3, DynamoDB, Apache Mahout
 
 TODO:
 

@@ -10,7 +10,7 @@
 
 ## Зачем
 
-Технология для [хранилищ данных](../../arch/store.md).
+Технология для [хранилищ данных](../../arch/system.class/store.md).
 
 ![arch](https://prometheus.io/assets/architecture.png)
 

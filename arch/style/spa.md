@@ -66,7 +66,7 @@
 - Сквозная функциональность
   - Безопасность
 	- Критичная логика на сервере, риски взлома на клиенте.
-	- [Auth](https://docs.microsoft.com/en-us/azure/active-directory/develop/scenario-spa-overview) with [Single Sign-on](../sso.md) and [Identity Service (IAM)](../system.class/iam.md)
+	- [Auth](https://docs.microsoft.com/en-us/azure/active-directory/develop/scenario-spa-overview) with [Single Sign-on](../pattern/system.design/sso.md) and [Identity Service (IAM)](../system.class/iam.md)
   - observability
     - [Мониторинг](../../technology/observability/monitoring.md)
     	- [Sentry](../../technology/observability/sentry.md)

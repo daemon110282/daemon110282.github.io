@@ -9,7 +9,7 @@
 
 ## Зачем
 
-Технология для [хранилищ данных](../../arch/store.md).
+Технология для [хранилищ данных](../../arch/system.class/store.md).
 NoSQL In memory [store](../store.nosql.md) решение.
 Redis - Remote Dictionary Service in __memory__.
 

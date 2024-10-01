@@ -57,7 +57,7 @@
 - Authentication Identity
   - https://docs.abp.io/en/abp/latest/Modules/Identity
   - [IAM](../../arch/system.class/iam.md) [IdentityServer4](https://docs.abp.io/en/abp/latest/Modules/IdentityServer)
-  - [SSO](../../arch/sso.md)
+  - [SSO](../../arch/pattern/system.design/sso.md)
     - https://academy.hiretechteam.com/blog/how-to-implement-single-sign-with-abp-commercial-application
     - https://www.google.com/url?sa=t&source=web&rct=j&url=https://www.youtube.com/watch%3Fv%3Dth3IugJGQDA&ved=2ahUKEwiv1Z3VtuH6AhURCBAIHbxoC1I4ChC3AnoECBwQAg&usg=AOvVaw3LGyJwYvrPLvmjBpHgP-Jw
     - [OpenID Connect module](https://docs.abp.io/en/abp/latest/Modules/OpenIddict) on https://documentation.openiddict.com

@@ -12,7 +12,7 @@
 
 ## Зачем
 
-Решения для [хранилищ данных](../arch/store.md)
+Решения для [хранилищ данных](../arch/system.class/store.md)
 
 - [Варианты, TOP](https://db-engines.com/en/ranking)
 

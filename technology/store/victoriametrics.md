@@ -2,7 +2,7 @@
 
 ## Зачем
 
-Технология для [хранилищ данных](../../arch/store.md).
+Технология для [хранилищ данных](../../arch/system.class/store.md).
 
 - It can be used as a drop-in replacement for __Prometheus in Grafana__, [because it supports __Prometheus querying API__](https://docs.victoriametrics.com/Single-server-VictoriaMetrics.html).
 - It can be used as a drop-in replacement for __Graphite in Grafana__, because it supports __Graphite API__.

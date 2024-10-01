@@ -7,8 +7,9 @@
   - [BIAN](ref/bian.md)
 - [MTA](pattern/mta/mta.md)
   - TODO ABP
-- [Хранилище данных](store.md)
-- [Mobile](mobile.md)
+- [Хранилище данных](system.class/store.md)
+- [BigData](ref/bigdata.md)
+- [Mobile](system.class/mobile.md)
   - TODO
 - [A\B testing](/arch/ref/abtesting.md)
 - Scaling Application

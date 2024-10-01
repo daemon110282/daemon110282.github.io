@@ -131,7 +131,7 @@ __Триггеры для подключения__, анализа ИБ
   - Spring Security
   - NodeJS Passport
 - [IAM](../../arch/system.class/iam.md)
-  - [SSO](../../arch/sso.md)
+  - [SSO](../pattern/system.design/sso.md)
   - MFA
 
 ### Авторизация
@@ -172,7 +172,7 @@ __Триггеры для подключения__, анализа ИБ
     - OWASP TOP 10
     - DDOS
 - [Identity and Access Management (IAM)](../system.class/iam.md)
-  - [SSO](../sso.md)
+  - [SSO](../pattern/system.design/sso.md)
     - Oauth 2, OpenID Connect, SAML
     - WS-Federation (token)
     - two-factor authentication (2FA)

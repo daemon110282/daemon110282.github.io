@@ -1,11 +1,11 @@
 # Большие данные Big data
 
 - [Большие данные Big data](#большие-данные-big-data)
-	- [Зачем](#зачем)
-	- [Плюсы-минусы](#плюсы-минусы)
-	- [Функции](#функции)
-	- [Паттерны](#паттерны)
-	- [Технологии](#технологии)
+  - [Зачем](#зачем)
+  - [Плюсы-минусы](#плюсы-минусы)
+  - [Функции](#функции)
+  - [Паттерны](#паттерны)
+  - [Технологии](#технологии)
 
 ## Зачем
 
@@ -35,7 +35,7 @@ UC:
 
 - Множество компонентов
 - Безопасность
-- Высокие затраты
+- [Высокие затраты](https://yandex.cloud/ru/docs/glossary/bigdata)
 - Трудности с масштабированием
 
 ## Функции
@@ -82,17 +82,21 @@ UC:
   - CDC: Debezium
 - Хранение
   - структурированные
-    - Data Vault: 
+    - Data Vault: [Yandex Data Lens](../../technology/store/yandex.data.lens.md)
   - слабо структурированные
     - [Yandex Data Lens](../../technology/store/yandex.data.lens.md)
     - [ClickHouse](../../technology/store/clickhouse.md)
     - [Apache Hadoop](../../technology/store/apache.hadoop.md)
     - Apache Spark
 - Обработка
+  - Apache Hadoop
+  - Apache Spark
 - Анализ
+  - Apache Spark
+  - Apache Hadoop
+  - ClickHouse
 - HDFS, HBase, Hive, Pig, Spark, Storm, Oozie, Sqoop
 - [Big data](http://habrahabr.ru/post/272041/)
-  - MapReduce
   - gfs  
   - splunk, vertica, netapp
 

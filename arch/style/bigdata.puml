@@ -32,23 +32,23 @@ BD -- Сбор
 
 class Хранение as "2 Хранение"
 BD -- Хранение
-	Хранение -- РСУБД
-	Хранение -- DataMart
-	Хранение --- DataLake
-	note left
-	нет единого 
-	формата данных
-	end note
 	Хранение --- DWH
 	note right
 	хронология
 	структурировано
 	ETL
 	end note
+	DWH -- РСУБД
+	DWH -- DataMart
 	DWH -- МодельХранилища
-	
 	МодельХранилища -- DataVault
 	!include bigdata.puml!datavault
+
+	Хранение -- DataLake
+	note right
+	нет единого 
+	формата данных
+	end note
 
 class Обработка as "3 Обработка"
 BD -- Обработка

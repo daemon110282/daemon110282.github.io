@@ -27,3 +27,5 @@
 ## Технологии
 
 - Azure
+- Amazon
+- Yandex Cloud

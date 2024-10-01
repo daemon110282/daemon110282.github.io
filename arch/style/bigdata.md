@@ -6,6 +6,7 @@
   - [Функции](#функции)
   - [Паттерны](#паттерны)
   - [Технологии](#технологии)
+  - [Deployment](#deployment)
 
 ## Зачем
 
@@ -20,6 +21,7 @@ UC:
 - преобразование неструктурированных данных для анализа и создания отчетов
 - архивные данные
 - построение [единой отчетности](../system.class/report.md) (BI)
+- ML
 
 ## Плюсы-минусы
 
@@ -53,20 +55,21 @@ UC:
 
 ## Паттерны
 
+![arch](../../img/arch/big.data.arch.svg)
+
 - Сбор
   - Streaming Data: [Kafka](../../technology/middleware/messagebus/kafka.md)
   - [CDC](../system.class/cdc.md)
   - Репликация, синхронизация данных [Sync Data](../pattern/sync.data.md)
 - Хранение
-  - структурированные данные
-    - РСУБД [Хранилища данных](../store.md)
-    - [DWH](../system.class/dwh.md)
+  - структурированные данные в [DWH](../system.class/dwh.md)
+      - РСУБД [Хранилища данных](../store.md)
       - [Data Vault](../pattern/system.design/data.vault.md) - одна из моделей хранилища Data Warehouse с __временными отметками__ размещения данных
   - слабо структурированные
     - [NoSQL](../store.nosql.md): Columnar Store  
     - [Data Mart](../pattern/system.design/data.mart.md) - витрина __однородных__ данных одной __предметной области__
   - Озеро данных [Data Lake](../pattern/system.design/data.lake.md)
-    - хранит любые данные
+    - хранит любые типы данных
     - данные в хранилище поступают непрерывно в __реальном времени__
 - Обработка
   - [MapReduce](../pattern/system.design/map.reduce.md)
@@ -74,46 +77,62 @@ UC:
 - Анализ
   - [Системы отчетности](../system.class/report.md): BI, OLAP
   - ML
+- [Оркестратор](https://docs.microsoft.com/ru-ru/azure/architecture/guide/architecture-styles/big-data)
 
-- todo
-  - [mind map](https://360digitmg.com/mindmap/big-data)
-  - [mind map 2](https://gogeometry.com/software/big-data-mind-map.html)
-  - <https://coderlessons.com/tutorials/bolshie-dannye-i-analitika/teoriia-khraneniia-dannykh/teoriia-khraneniia-dannykh>
-  - [Data Mining TODO](https://coderlessons.com/tutorials/bolshie-dannye-i-analitika/teoriia-khraneniia-dannykh/21-data-mining-protiv-khranilishcha-dannykh)
+TODO:
+
+- [mind map](https://360digitmg.com/mindmap/big-data)
+- [mind map 2](https://gogeometry.com/software/big-data-mind-map.html)
+- <https://coderlessons.com/tutorials/bolshie-dannye-i-analitika/teoriia-khraneniia-dannykh/teoriia-khraneniia-dannykh>
+- [Data Mining TODO](https://coderlessons.com/tutorials/bolshie-dannye-i-analitika/teoriia-khraneniia-dannykh/21-data-mining-protiv-khranilishcha-dannykh)
 
 ## Технологии
 
 - Сбор
-  - Streaming: [Kafka](../../technology/middleware/messagebus/kafka.md)
+  - Streaming
+    - [Kafka](../../technology/middleware/messagebus/kafka.md)
+    - Центры событий Azure
+    - Центры Интернета вещей Azure
   - CDC: Debezium
 - Хранение
   - структурированные Structured
+    - MSSQL, PGSQL
     - Data Vault: [Yandex Data Lens](../../technology/store/yandex.data.lens.md)
   - слабо структурированные Semi structured
     - [Yandex Data Lens](../../technology/store/yandex.data.lens.md)
     - [ClickHouse](../../technology/store/clickhouse.md)
     - [Apache Hadoop](../../technology/store/apache.hadoop.md)
-    - Apache Spark
-    - [Yandex Data Lens](../../technology/store/yandex.data.lens.md)
-    - [ClickHouse](../../technology/store/clickhouse.md)
-  - Data Lake: [Apache Hive](../../technology/store/apache.hive.md), Apache Hadoop, Kafka
+  - Data Lake
+    - [Apache Hive](../../technology/store/apache.hive.md)
+    - Apache Hadoop
+    - Kafka
+    - Azure Data Lake Store
 - Обработка
-  - Apache Hadoop
-  - Apache Spark
+  - Apache Hadoop: Hive, Pig, Map Reduce
+  - [Apache Spark](../../technology/store/apache.spark.md)
+  - Azure Data Lake Analytics
+  - Azure Stream Analytics
 - Анализ
   - Apache Spark
-  - Apache Hadoop
+  - Apache Hive
+  - HBase
   - ClickHouse
+  - BI
+    - MS Power BI
+  - OLAP
+    - Azure Analysis Services
+- [Оркестратор](https://docs.microsoft.com/ru-ru/azure/architecture/guide/architecture-styles/big-data)
+  - фабрика данных [Azure](../../technology/azure.md)
+  - [Apache Oozie](../../technology/apache.oozie.md) shedule Job Spark
+  - Apache [Sqoop](../../technology/apache.sqoop.md) shedule Job ETL
 
 todo
 
-- HBase, Pig, Storm, Oozie, Sqoop
+- Storm
 - [Big data](http://habrahabr.ru/post/272041/)
 - gfs  
 - splunk, vertica, netapp
-- [Большие данные](https://docs.microsoft.com/ru-ru/azure/architecture/guide/architecture-styles/big-data)
-- [Azure](https://docs.microsoft.com/en-us/azure/architecture/browse/)
-- <https://docs.microsoft.com/ru-ru/azure/architecture/browse/>
-- <https://docs.microsoft.com/ru-ru/azure/architecture/patterns/>
-- <https://ru.wikipedia.org/wiki/%D0%A8%D0%B0%D0%B1%D0%BB%D0%BE%D0%BD_%D0%BF%D1%80%D0%BE%D0%B5%D0%BA%D1%82%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F>
+
+## Deployment
+
 - [Test DataSet](https://habr.com/ru/companies/edison/articles/480408/)

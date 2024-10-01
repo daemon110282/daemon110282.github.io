@@ -27,3 +27,4 @@
 - IBM Netezza
 - IBM InfoSphere Warehouse
 - Microsoft PDW
+- Vertika

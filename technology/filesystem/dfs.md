@@ -1,13 +1,21 @@
 # Распределённая файловая система DFS (Distributed File System)
 
+- [Распределённая файловая система DFS (Distributed File System)](#распределённая-файловая-система-dfs-distributed-file-system)
+	- [Зачем](#зачем)
+	- [Плюсы-минусы](#плюсы-минусы)
+	- [Протоколы](#протоколы)
+	- [Безопасность](#безопасность)
+	- [Технологии](#технологии)
+
 ## Зачем
+
+Решения для [файловых систем](filesystem.md).
 
 - предоставления прозрачного доступа к хранилищам данных (как удаленный жёсткий диск), общие папки (монтирование папок на клиенте), управляемые распределенной файловой системой
 - [партнеров по репликации для отказоустойчивости](https://windata.ru/windows-world/lokalnaya-set/raspredelennaya-fajlovaya-sistema-dfs-osnovy)
 - имеют высокую __устойчивость к сбоям__ и спроектированы для работы на железе с низкой стоимостью
-- Open source реализации, такие как
-  - HDFS (Hadoop Distributed File System)
-  - CFS (Cassandra File System) дают высокую пропускную способность при доступе к данным приложения и подходят для обработки больших наборов данных.
+
+## Плюсы-минусы
 
 Плюсы:
 
@@ -26,10 +34,16 @@
 - Common internet file system (CIFS) на базе SMB
 - SMB
 	- сервер\клиент Samba под unix
-- [Кластерная система (Cluster)](https://itelon.ru/blog/raspredelennye-faylovye-sistemy-tekhnologicheskiy-obzor-produktovyy-obzor/) содержит несколько серверов в общей сети.
+- [Кластерная система (Cluster)](https://itelon.ru/blog/raspredelennye-faylovye-sistemy-tekhnologicheskiy-obzor-produktovyy-obzor/) содержит несколько серверов в общей сети
   - Gfs2
 - [Что выбрать по производительности и надежности?](http://codernet.ru/amp/?page=kakoj_setevoj_protokol_obmena_fajlami_imeet_luchshuyu_proizvoditelnost_i_nadezhnost)
 
 ## Безопасность
 
 - [Ввод в домен AD, доменная авторизация, синхронизация учетных записей из домена на unix](../os/unix.md)
+
+## Технологии
+
+- Open source
+  - HDFS (Hadoop Distributed File System)
+  - CFS (Cassandra File System) дают высокую пропускную способность при доступе к данным приложения и подходят для обработки больших наборов данных

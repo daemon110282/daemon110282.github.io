@@ -14,4 +14,7 @@
 
 ## Технологии
 
+- Teradata Database 14
+- Google Big Query
+- Amazon Redshift
 - EMC Greenplum, HP Vertica, Sybase IQ, IBM Netezza, IBM InfoSphere Warehouse и Microsoft PDW.

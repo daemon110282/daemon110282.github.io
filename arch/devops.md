@@ -10,9 +10,11 @@
 
 ## Зачем
 
+![tech](https://substackcdn.com/image/fetch/w_848,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2F05104299-813f-4df7-91d1-e143fd1ee6a6_1016x571.png)
+
 - CI - обеспечения процесса непрерывной интеграции
   - [Tests](pattern/test.md): unit, codestyle, functional, endtoend, integration
-- CD - процесс доставки, развертывания
+- CD - процесс доставки, развертывания: [Jenkins](../technology/ci-cd/jenkins.md)
 - [Deployment](pattern/deployment/pattern.deploy.md)
   - [A\B test](ref/abtesting.md)
 - [Service Mesh](../technology/middleware/servicemesh.md)
@@ -55,8 +57,8 @@ Each container __should do one thing and do it well__. A few reasons:
 
 - Namespace
   - env
-- [Label](https://www.split.io/blog/kubernetes-labels-best-practices/) - key\value 
-  - key - alphanumeric character ([a-z0-9A-Z]) with dashes (-), underscores (_), dots (.), and alphanumerics between, [max length 253](https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/#syntax-and-character-set)
+- [Label](https://www.split.io/blog/kubernetes-labels-best-practices/) - key\value
+  - key - alphanumeric character \[a-z0-9A-Z\] with dashes (-), underscores (_), dots (.), and alphanumerics between, [max length 253](https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/#syntax-and-character-set)
   - value - max length 63
   - Reserved [prefixes](https://kubernetes.io/docs/reference/labels-annotations-taints/)
     - kubernetes.io
@@ -79,18 +81,26 @@ Each container __should do one thing and do it well__. A few reasons:
 
 ## Технологии
 
-![tech](https://substackcdn.com/image/fetch/w_848,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2F05104299-813f-4df7-91d1-e143fd1ee6a6_1016x571.png)
-
-- Infrastructure-as-Code
-  - [Helm](../technology/ci-cd/helm.md)
-- Контейнеризация
-  - [k8s](../technology/ci-cd/k8s.md)
-  - [docker](../technology/ci-cd/docker.md)
-    - [docker desktop](../technology/ci-cd/docker.md)
-    - [docker-compose.yml when building a multi-container Docker](../technology/ci-cd/docker.md) application
-- [Load balancer](../technology/middleware/loadbalancer.md)
-- Edge
+- Code
+- Build
+- Test
+- Release
+  - Jenkins
 - CD
   - Spinnaker
-- [Distributed Tracing](../technology/observability/tracing.distributed.md)
-- [API Managment](../api/api-managment.md)
+  - [Docker](../technology/ci-cd/docker.md)
+    - [docker desktop](../technology/ci-cd/docker.md)
+    - [docker-compose.yml when building a multi-container Docker](../technology/ci-cd/docker.md) application
+- Operate
+  - Контейнеризация
+    - [k8s](../technology/ci-cd/k8s.md)
+    - OpenShift
+  - Infrastructure-as-Code
+    - Ansible
+    - [Helm](../technology/ci-cd/helm.md)
+  - [Load balancer](../technology/middleware/loadbalancer.md)
+  - [API Managment](../api/api-managment.md)
+- Monitor
+  - [Distributed Tracing](../technology/observability/tracing.distributed.md)
+  - Logs
+  - Metric

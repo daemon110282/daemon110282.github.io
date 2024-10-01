@@ -1,12 +1,5 @@
 @startmindmap (id=IC)
 
-' class jenkins
-
-' jenkins --> pipeline : содержит
-' jenkins --> job : выполняет
-' pipeline "1" --> "*" stage : включает
-' pipeline --> jenkins_file : описывает
-
 * Ingress Controller
 ** Service Discovery
 ** Web Socket

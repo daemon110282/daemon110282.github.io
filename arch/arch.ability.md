@@ -10,8 +10,9 @@
 
 ## Атрибуты качества, архитектурные характеристики ИС
 
-- Стандарты  
-  - [ГОСТ Р ИСО/МЭК 9126-93](https://m-i-kuznetsov.livejournal.com/157150.html)
+Стандарты  
+
+- [ГОСТ Р ИСО/МЭК 9126-93](https://m-i-kuznetsov.livejournal.com/157150.html)
 
 Атрибуты качества
 
@@ -25,7 +26,7 @@
   - Живучесть Robustness  
 - [Производительность Performance](ability/performance.md) (Эксплуатационные)  
 - Переносимость Portability
-  - Возможность повторного использования [Reusability](reusability.md) (Единая кодовая база)
+  - Возможность повторного использования [Reusability](ability/reusability.md) (Единая кодовая база)
     - Mdm - master data manager
   - Модифицируемость/способности к взаимодействию//изменениям Modifiability (Эволюция)
     - Сложность дальнейших интеграции
@@ -47,15 +48,15 @@
   - Практичность Usability
   - Удобство Accessibility (Пользовательский опыт)
   - Локализация Localization (Пользовательский опыт)
-- Удобство сопровождения Maintainability
+- Удобство сопровождения Поддерживаемость Maintainability
+  - [Наблюдаемость Observability](ability/observability.md)
   - Анализируемость (Analyzability)
   - Изменяемость (Changeability)
   - Устойчивость (Stability)
   - [Тестопригодность Testability](ability/testability.md)
     - разделением на слои и следованием [Dependency Rule (правилу зависимостей)](https://habr.com/ru/company/mobileup/blog/335382/)
-- [Автодокументирование API](../api/api.md)
-- [Наблюдаемость Observability](ability/observability.md)
-
+  - [Автодокументирование API](../api/api.md)
+  
 TODO
 
 - CI-CD куда?

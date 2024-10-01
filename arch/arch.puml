@@ -6,19 +6,23 @@
 	* Атрибуты качества
 	* Тех долг Roadmap
 	* Безопасность
-		
+
+!include arch.puml!ability		
 @endmindmap
 
-@startmindmap (id=arch.ability)
+@startmindmap (id=ability)
 
 * Атрибуты качества
-	* Доступность Availability
-		* Наблюдаемость Observability
-		* Изоляция сбоев
-	* Поддерживаемость
 	* Надежность
+		* Доступность Availability
 		* Отказоустойчивость Fault Tolerance
 		* Стабильность Resilience
+		* Изоляция сбоев
 	* Производительность Permormance \n Быстродействие
+	* Безопасность
+	* Гибкость к изменениям будущим
+	* Поддерживаемость
+		* Наблюдаемость Observability
+
 
 @endmindmap

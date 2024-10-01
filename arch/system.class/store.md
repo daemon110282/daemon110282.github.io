@@ -36,12 +36,12 @@
 - Time-series database (Prometheus..)
   - Store and manage time-stamped data
 - Semi Structured
-  - [NoSQL](../store.nosql.md)
+  - [NoSQL](store.nosql.md)
     - Key Value (Redis)
     - Graph database (Neo4J)
     - Document store (MongoDB)
     - Wide column store (Cassandra)
-  - Full text search Полнотекстовый поиск (ElasticSearch)
+  - Full text search Полнотекстовый поиск (ElasticSearch) - [DSE](dse.md) системы
 - UnStructured
   - BLOB (Minio)
 

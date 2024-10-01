@@ -1,20 +1,18 @@
 # Большие данные Big data
 
 - [Большие данные Big data](#большие-данные-big-data)
-	- [Зачем](#зачем)
-	- [Плюсы-минусы](#плюсы-минусы)
-	- [Функции](#функции)
-	- [Паттерны](#паттерны)
-	- [Технологии](#технологии)
+  - [Зачем](#зачем)
+  - [Плюсы-минусы](#плюсы-минусы)
+  - [Функции](#функции)
+  - [Паттерны](#паттерны)
+  - [Технологии](#технологии)
 
 ## Зачем
 
 [Архитектурный стиль](../arch.styles.md).
 
-Big Data
-
 - крупные __массивы информации__, которые помогают принимать обоснованные __решения__ основанные на данных (__data-driven__)
-- стек специальных технологий для работы с ней
+- стек специальных технологий для работы с информацией
 - Важное __отличие__ больших данных __от обычных__ — __распределённая структура__. Это значит, что управлять ими и анализировать их можно с помощью множества микросервисов.
 
 UC:
@@ -50,6 +48,8 @@ UC:
 - Хранение
 - Обработка
 - Анализ
+  - BI
+  - ML
 
 ## Паттерны
 
@@ -58,22 +58,28 @@ UC:
   - [CDC](../system.class/cdc.md)
   - Репликация, синхронизация данных [Sync Data](../pattern/sync.data.md)
 - Хранение
-  - структурированные
+  - структурированные данные
     - РСУБД [Хранилища данных](../store.md)
     - [DWH](../system.class/dwh.md)
       - [Data Vault](../pattern/system.design/data.vault.md) - одна из моделей хранилища Data Warehouse с __временными отметками__ размещения данных
   - слабо структурированные
-    - [NoSQL](../store.nosql.md)
-    - Озеро данных [Data Lake](../pattern/system.design/data.lake.md) - данные в хранилище поступают непрерывно в __реальном времени__
+    - [NoSQL](../store.nosql.md): Columnar Store  
     - [Data Mart](../pattern/system.design/data.mart.md) - витрина __однородных__ данных одной __предметной области__
+  - Озеро данных [Data Lake](../pattern/system.design/data.lake.md)
+    - хранит любые данные
+    - данные в хранилище поступают непрерывно в __реальном времени__
 - Обработка
   - [MapReduce](../pattern/system.design/map.reduce.md)
   - [Massive Parallel Processing](mpp.md) (MPP) архитектура
 - Анализ
   - [Системы отчетности](../system.class/report.md): BI, OLAP
+  - ML
 
-- todo <https://coderlessons.com/tutorials/bolshie-dannye-i-analitika/teoriia-khraneniia-dannykh/teoriia-khraneniia-dannykh>
-- [Data Mining TODO](https://coderlessons.com/tutorials/bolshie-dannye-i-analitika/teoriia-khraneniia-dannykh/21-data-mining-protiv-khranilishcha-dannykh)
+- todo
+  - [mind map](https://360digitmg.com/mindmap/big-data)
+  - [mind map 2](https://gogeometry.com/software/big-data-mind-map.html)
+  - <https://coderlessons.com/tutorials/bolshie-dannye-i-analitika/teoriia-khraneniia-dannykh/teoriia-khraneniia-dannykh>
+  - [Data Mining TODO](https://coderlessons.com/tutorials/bolshie-dannye-i-analitika/teoriia-khraneniia-dannykh/21-data-mining-protiv-khranilishcha-dannykh)
 
 ## Технологии
 
@@ -81,23 +87,24 @@ UC:
   - Streaming: [Kafka](../../technology/middleware/messagebus/kafka.md)
   - CDC: Debezium
 - Хранение
-  - структурированные
-    - Data Vault: 
-  - слабо структурированные
-    - [Yandex Data Lens](../../technology/store/yandex.data.lens.md)
-    - [ClickHouse](../../technology/store/clickhouse.md)
+  - структурированные Structured
+    - Data Vault: TODO
+  - слабо структурированные Semi structured
     - [Apache Hadoop](../../technology/store/apache.hadoop.md)
     - Apache Spark
+    - [Yandex Data Lens](../../technology/store/yandex.data.lens.md)
+    - [ClickHouse](../../technology/store/clickhouse.md)
+    - Data Lake: [Apache Hive](../../technology/store/apache.hive.md), Apache Hadoop, Kafka
 - Обработка
+  - Apache Hadoop
 - Анализ
-- HDFS, HBase, Hive, Pig, Spark, Storm, Oozie, Sqoop
+
+todo
+
+- HBase, Pig, Storm, Oozie, Sqoop
 - [Big data](http://habrahabr.ru/post/272041/)
-  - MapReduce
-  - gfs  
-  - splunk, vertica, netapp
-
-TODO
-
+- gfs  
+- splunk, vertica, netapp
 - [Большие данные](https://docs.microsoft.com/ru-ru/azure/architecture/guide/architecture-styles/big-data)
 - [Azure](https://docs.microsoft.com/en-us/azure/architecture/browse/)
 - <https://docs.microsoft.com/ru-ru/azure/architecture/browse/>

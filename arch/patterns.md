@@ -11,9 +11,9 @@
 - [Реализации](pattern/development/pattern.dev.md)
 - [Интеграции](pattern/integration/pattern.integration.md)
 - [Производительность](pattern/performance/pattern.perf.md)
-  - [DevOps Avto Scale](../devops.md)
+  - [DevOps Avto Scale](./devops.md)
 - [Deployment Patterns](https://airtable.com/embed/shryjXK2rzf52sv9u/tbl2vjDV9Es36E2cW) (13 Patterns)
-  - [DevOps Deployment Rollback](../devops.md)
+  - [DevOps Deployment Rollback](./devops.md)
   - Проверка работоспособности ([Health-check](pattern/observability/pattern.healthcheck.md))
   - [Балансировка нагрузки](pattern/deployment/load.balancing.md)
 

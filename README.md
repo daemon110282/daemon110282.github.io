@@ -11,7 +11,7 @@
     - [Бизнес и ИТ стратегии](analytic/strategy.md)
     - [Бизнес архитектуре](analytic/arch.ba.md)
     - [Бизнес Аналитике требования](analytic/analytica.md)
-- [DevOps](devops.md)
+- [DevOps](arch/devops.md)
 - [Паттерны Шаблоны](arch/patterns.md)
 - [CheckList](checklist/checklist.md)
 - [Миграции ИС](arch/pattern/refactoring/migration.md)
@@ -28,5 +28,5 @@
 ## Tools
 
 - [GitHub Pages](technology/jekyll.md)
-- [MarkDown](markdown.md)
-- [PlantUML](plantuml.md)
+- [MarkDown](technology/markdown.md)
+- [PlantUML](technology/plantuml.md)

@@ -11,29 +11,29 @@
 ## Зачем
 
 - CI - обеспечения процесса непрерывной интеграции
-  - [Tests](arch/pattern/test.md): unit, codestyle, functional, endtoend, integration
+  - [Tests](pattern/test.md): unit, codestyle, functional, endtoend, integration
 - CD - процесс доставки, развертывания
-- [Deployment](arch/pattern/deployment/pattern.deploy.md)
-  - [A\B test](arch/ref/abtesting.md)
-- [Service Mesh](technology/middleware/servicemesh.md)
-- [Доступность](arch/ability/availability.md), Отказоустойчивость, Надежность
-- [Производительность](arch/ability/performance.md)
+- [Deployment](pattern/deployment/pattern.deploy.md)
+  - [A\B test](ref/abtesting.md)
+- [Service Mesh](../technology/middleware/servicemesh.md)
+- [Доступность](ability/availability.md), Отказоустойчивость, Надежность
+- [Производительность](ability/performance.md)
   - Auto Scaling
-- [Infrastructure-as-Code (IaC) automation](technology/ci-cd/ioc.md)
+- [Infrastructure-as-Code (IaC) automation](../technology/ci-cd/ioc.md)
 - Сквозная функциональность
-  - Наблюдаемость [Observability](arch/ability/observability.md)
-    - [Log management](technology/observability/logging.md)
-    - [Performance monitoring (APM класс систем) and dashboards](arch/system.class/apm.md)
-  - [Security](arch/ability/security.md)
-  - [Audit](arch/pattern/observability/pattern.audit.md)
-- [SRE](devops/sre.md)
+  - Наблюдаемость [Observability](ability/observability.md)
+    - [Log management](../technology/observability/logging.md)
+    - [Performance monitoring (APM класс систем) and dashboards](system.class/apm.md)
+  - [Security](ability/security.md)
+  - [Audit](pattern/observability/pattern.audit.md)
+- [SRE](../devops/sre.md)
 
 ## Паттерны
 
 - [Модель DevOps оценки компании](http://agilemindset.ru/%d0%bc%d0%be%d0%b4%d0%b5%d0%bb%d1%8c-%d0%be%d1%86%d0%b5%d0%bd%d0%ba%d0%b8-%d0%ba%d0%be%d0%bc%d0%bf%d0%b5%d1%82%d0%b5%d0%bd%d1%86%d0%b8%d0%b9-devops-%d0%b2-miro/)
 - TODO [Антипаттерны](https://mcs.mail.ru/blog/antipatterny-deploya-v-kubernetes)
 - [MTA nginx](https://www.nginx.com/blog/enabling-multi-tenancy-namespace-isolation-in-kubernetes-with-nginx/)
-- Strategy [Deployment (например blue-green deployment)](arch/pattern/deployment/pattern.deploy.md)
+- Strategy [Deployment (например blue-green deployment)](pattern/deployment/pattern.deploy.md)
 
 ### Сколько сервисов(BC) в одном контейнере
 
@@ -82,15 +82,15 @@ Each container __should do one thing and do it well__. A few reasons:
 ![tech](https://substackcdn.com/image/fetch/w_848,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2F05104299-813f-4df7-91d1-e143fd1ee6a6_1016x571.png)
 
 - Infrastructure-as-Code
-  - [Helm](technology/ci-cd/helm.md)
+  - [Helm](../technology/ci-cd/helm.md)
 - Контейнеризация
-  - [k8s](technology/ci-cd/k8s.md)
-  - [docker](technology/ci-cd/docker.md)
-    - [docker desktop](technology/ci-cd/docker.md)
-    - [docker-compose.yml when building a multi-container Docker](technology/ci-cd/docker.md) application
-- [Load balancer](technology/middleware/loadbalancer.md)
+  - [k8s](../technology/ci-cd/k8s.md)
+  - [docker](../technology/ci-cd/docker.md)
+    - [docker desktop](../technology/ci-cd/docker.md)
+    - [docker-compose.yml when building a multi-container Docker](../technology/ci-cd/docker.md) application
+- [Load balancer](../technology/middleware/loadbalancer.md)
 - Edge
 - CD
   - Spinnaker
-- [Distributed Tracing](technology/observability/tracing.distributed.md)
-- [API Managment](api/api-managment.md)
+- [Distributed Tracing](../technology/observability/tracing.distributed.md)
+- [API Managment](../api/api-managment.md)

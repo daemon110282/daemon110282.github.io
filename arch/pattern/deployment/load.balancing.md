@@ -26,7 +26,7 @@
 
 [Алгоритмы](https://blog.bytebytego.com/i/103707419/what-are-the-common-load-balancing-algorithms)
 
-![алгоритмы](../../../img/technology/lb.algoritm.jpg)
+![алгоритмы](../../../img/technology/middleware/lb.algoritm.jpg)
 
 ## Технологии
 

@@ -76,7 +76,7 @@
 ![Выбор хранилища http://architecturethehardparts.com/](../img/arch/choose_store.jpg)
 
 - [SQL vs NoSQL](https://towardsdatascience.com/datastore-choices-sql-vs-nosql-database-ebec24d56106)
-  - ![choose](../img/technology/sql.vs.nosql.webp)
+  - ![choose](../img/technology/store/sql.vs.nosql.webp)
 - SQL, NoSQL, TimeSeries
   - ![плюсы-минусы](../img/technology/db/types.db.jpeg)
 

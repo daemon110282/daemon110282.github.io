@@ -24,9 +24,9 @@
 - [Receivers](https://github.com/open-telemetry/opentelemetry-collector-contrib/tree/main/receiver) - Input Data Collector ![Data Collector](https://habrastorage.org/r/w1560/webt/te/5k/cn/te5kcnz9h8pkdd0nr_2papfrr98.png)
 	- [Metric](https://opentelemetry.io/docs/reference/specification/metrics/)
 	- Trace
-	- OTEL Instrumentation Library, Agent, 2 modes of operation: 
-		- you can either use the OpenTelemetry API to __manually instrument the telemetry collection__ from your application 
-		- or you can use __automatic instrumentation techniques__ that have already been implemented for some languages.	
+	- OTEL Instrumentation Library, Agent, 2 modes of operation:
+		- you can either use the OpenTelemetry API to __manually instrument the telemetry collection__ from your application
+		- or you can use __automatic instrumentation techniques__ that have already been implemented for some languages.
 		![OTEL Agent](https://habrastorage.org/r/w1560/webt/tu/my/yk/tumyykh5oqpg_-gralg_9h8cy-m.png)
 - Data OTEL Collector
   - [Grafana Alloy](https://grafana.com/oss/alloy-opentelemetry-collector/?pg=blog&plcmt=body-txt)
@@ -67,7 +67,7 @@
 Based on the [Specification, the APIs and SDKs are implemented](https://scalac.io/blog/opentelemetry-from-a-birds-eye-view-a-few-noteworthy-parts-of-the-project/). There’s a noteworthy distinction between the two:
 
 - __APIs consist of all the abstractions used for instrumentation__, clearly decoupled from their actual implementations. The APIs __do not contain the working functionality__ (they are only there to define what is going to be collected).
-- An important part of the __SDK is the exporters__. After collecting the telemetry signals from your application, 
+- An important part of the __SDK is the exporters__. After collecting the telemetry signals from your application,
 	- either directly (using the manual instrumentation approach)
 	- or indirectly (using the auto-instrumentation), you have to actually emit them.
 	To do that, you have to use an __SDK exporter and configure it to send data to a particular__ destination.

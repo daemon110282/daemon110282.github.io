@@ -14,8 +14,8 @@
 - [Security](pattern/security/pattern.security.md)
 - [Deployment Patterns](pattern/deployment/pattern.deployment.md)
 - [Transaction Management Patterns](https://airtable.com/embed/shrjiJuF7kIbcnXRl/tblgszzLV27MUFP4p) (5 Patterns)
-  - [Transactional Outbox](pattern/fault.tolerance/transact.outbox.md)
-  - [Transactional Inbox](pattern/fault.tolerance/transact.inbox.md)
+  - [Transactional Outbox](pattern/system.design/fault.tolerance/transact.outbox.md)
+  - [Transactional Inbox](pattern/system.design/fault.tolerance/transact.inbox.md)
   - Saga
   - Polling publisher
   - Transaction log tailing
@@ -43,5 +43,5 @@
 - TODO [Clean Code](pattern/system.design/cleancode.md)
 - <https://en.wikipedia.org/wiki/Architectural_pattern>
 <https://vocal.media/01/unified-microservices-patterns-ump>
-- https://patterns.arcitura.com/
-- https://towardsdatascience.com/10-common-software-architectural-patterns-in-a-nutshell-a0b47a1e9013
+- <https://patterns.arcitura.com/>
+- <https://towardsdatascience.com/10-common-software-architectural-patterns-in-a-nutshell-a0b47a1e9013>

@@ -2,7 +2,6 @@
 
 ## ООП
 
-
 - Поведения
   - [FSM Конечный автомат](pattern.state.machine.md)
   - [Chain of Responsibility](chainofresp.md)

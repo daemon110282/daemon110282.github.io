@@ -30,6 +30,7 @@
 
 - [Tools](https://openapi.tools/)
 - [проверка качества\безопасности описания АПИ](https://apisecurity.io/tools/audit/)
+- Comparator - сравнение схем OpenApi
 
 ## Паттерны
 

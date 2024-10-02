@@ -13,7 +13,7 @@
 ![tech](https://substackcdn.com/image/fetch/w_848,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2F05104299-813f-4df7-91d1-e143fd1ee6a6_1016x571.png)
 
 - CI - обеспечения процесса непрерывной интеграции
-  - [Tests](pattern/test.md): unit, codestyle, functional, endtoend, integration
+  - Авто тесты [Tests](pattern/test.md)
 - CD - процесс доставки, развертывания: [Jenkins](../technology/ci-cd/jenkins.md)
 - [Deployment](pattern/deployment/pattern.deploy.md)
   - [A\B test](ref/abtesting.md)

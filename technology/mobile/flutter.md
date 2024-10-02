@@ -46,4 +46,4 @@ TODO
   - +Stream
   - Dispatcher один, сложно расширять, несколько команд
 - Stream/ bloc - типа MVC без controller - вариант
-  - Лучший вариант https://youtu.be/rta3850mv4A
+  - [Лучший вариант](https://youtu.be/rta3850mv4A)

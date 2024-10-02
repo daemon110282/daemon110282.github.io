@@ -12,7 +12,7 @@
 
 ## Зачем
 
-Обеспечить [Fault Tolerance](../../ability/fault.tolerance.md) и реализовать [паттерн Failure](../fault.tolerance/pattern.failure.md).
+Обеспечить [Fault Tolerance](../../ability/fault.tolerance.md) и реализовать [паттерн Failure](../system.design/fault.tolerance/pattern.failure.md).
 
 Проблема:
 

@@ -6,7 +6,6 @@
     - [MSA vs Монолит](#msa-vs-монолит)
   - [Паттерны](#паттерны)
     - [Принципы к проектированию сервисов](#принципы-к-проектированию-сервисов)
-  - [Технологии](#технологии)
   - [Reference Architecture](#reference-architecture)
   - [Чек-лист по сервису](#чек-лист-по-сервису)
   - [todo](#todo)
@@ -33,7 +32,7 @@
 
 - Слабая связность Модульность
 - Непрерывная интеграция/развертывание сложных приложений
-- Не велики просты в сопровождении
+- Не велики, просты в сопровождении
 - Разворачиваются независимо друг от друга
 - Масштабируемость независимо друг от друга
 - Независимая эволюция
@@ -44,7 +43,7 @@
 
 Минусы
 
-- Сложно идентифицировать оптимальный набор служб при декомпозиции приложения (подходы [DDD](../pattern/system.design/ddd.md), [Event Storming](../pattern/system.design/event.storming.md))
+- Сложно идентифицировать оптимальный набор сервисов при декомпозиции приложения (подходы [DDD](../pattern/system.design/ddd.md), [Event Storming](../pattern/system.design/event.storming.md))
   - Если границы по-настоящему хорошо не определены, случится так, что — даже в случае теоретической возможности изолированного деплоя сервисов всплывут взаимные __зависимости между сервисами__, из-за которых придётся деплоить наборы сервисов как группу (__архитектурный квант__).
     - независимо масштабируемые сервисы вряд ли помогут, потому что остаётся влияние производительности зависимостей
 - Распределенные системы сложны по своей природе
@@ -145,7 +144,7 @@ __Не подходит__ для:
 - Декомпозиции на сервисы
   - [Decompose by business capability Context](https://microservices.io/patterns/decomposition/decompose-by-business-capability.html)
   - [Decompose by subdomain Context](https://microservices.io/patterns/decomposition/decompose-by-subdomain.html)
-- [Обработка сбоев](../pattern/fault.tolerance/pattern.failure.md)
+- [Обработка сбоев](../pattern/system.design/fault.tolerance/pattern.failure.md)
 - Аутентификация
   - Leave the data where it is, and have services ask for it directly. Use a gateway to attach the data to all requests, so it's available everywhere. Centralize authorization data into one place, and move [all decisionmaking to that place](https://www.osohq.com/post/microservices-authorization-patterns).
 - [Microservice Design Pattern](https://apolomodov.medium.com/%D0%BE%D0%B1%D0%B7%D0%BE%D1%80-%D0%BA%D0%BD%D0%B8%D0%B3%D0%B8-microservice-patterns-and-best-practices-dce7785b9c45)
@@ -157,6 +156,9 @@ __Не подходит__ для:
 - TODO
   - [Паттерны управления данными](https://mcs.mail.ru/blog/26-osnovnyh-patternov-mikroservisnoj-razrabotki)
   - [26 основных паттернов микросервисной разработки](https://mcs.mail.ru/blog/26-osnovnyh-patternov-mikroservisnoj-razrabotki)
+- [Service Mesh](../../technology/middleware/servicemesh.md)
+- [API Gateway](../../api/api.gateway.md)
+- [Service Discovery](../pattern/deployment/service.discovery.md)
 
 ### Принципы к проектированию сервисов
 
@@ -177,12 +179,6 @@ __Не подходит__ для:
   - Делайте методы идемпотентными
   - Регистрируйте уже принятые ID событий
   - Игнорируйте более давние события
-
-## Технологии
-
-- [Service Mesh](../../technology/middleware/servicemesh.md)
-- [API Gateway](../../api/api.gateway.md)
-- [Service Discovery](../pattern/deployment/service.discovery.md)
 
 ## Reference Architecture
 

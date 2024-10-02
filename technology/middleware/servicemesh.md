@@ -17,7 +17,7 @@
 - [Observability](../../arch/ability/observability.md)
   - [Распределенная трассировка](../observability/tracing.distributed.md)
 - [Service Discovery](../../arch/pattern/deployment/service.discovery.md)
-- [Circuit Breaker](../../arch/pattern/fault.tolerance/pattern.failure.md)
+- [Circuit Breaker](../../arch/pattern/system.design/fault.tolerance/pattern.failure.md)
 - Безопасность
   - TLS обеспечение
 - Rate Limit, Quota на запросы

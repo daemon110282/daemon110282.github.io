@@ -1,14 +1,13 @@
 # Health Check
 
-- [Pattern](https://microservices.io/patterns/observability/health-check-api.html) HTTP /health
+- Observability [Pattern](https://microservices.io/patterns/observability/health-check-api.html) HTTP /health
 - Custom HTTP Stats, [Cache Response disable](https://learn.microsoft.com/en-us/aspnet/core/host-and-deploy/health-checks?source=recommendations&view=aspnetcore-6.0)
 - Параметры
 	- статус ИС
-	- статус компонентов от которых зависит ИС 
+	- статус компонентов от которых зависит ИС
 	- RAM, CPU используемые ИС
-	- версия ИС - в формате семантического версионирования https://semver.org/lang/ru/
+	- версия ИС - в формате семантического версионирования <https://semver.org/lang/ru/>
 - HTTP status code: [200 - healthy, 500 - unhealthy](https://learn.microsoft.com/en-us/aspnet/core/host-and-deploy/health-checks?view=aspnetcore-7.0#customize-the-http-status-code)
-
 
 ## Технологии
 

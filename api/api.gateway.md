@@ -20,7 +20,7 @@ communication to multiple microservices
     - [OAuth](../technology/protocols.integration/oauth.md) access token
   - [Service discovery](../arch/pattern/deployment/service.discovery.md) integration
   - Response caching
-  - [Retry policies, circuit breaker, and QoS](../arch/pattern/fault.tolerance/pattern.failure.md)
+  - [Retry policies, circuit breaker, and QoS](../arch/pattern/system.design/fault.tolerance/pattern.failure.md)
   - [Rate limiting](../arch/pattern/performance/rate.limit.md) and throttling
   - [Logging, tracing, correlation](../arch/ability/observability.md)
   - Headers, query strings, and claims transformation

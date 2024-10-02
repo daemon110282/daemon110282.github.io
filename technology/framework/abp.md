@@ -32,7 +32,7 @@
 | - | - |
 | лицензия LGPL + коммерческая при необх-ти | vue не из коробки, т.е. пишем на React |
 | с 2012 года, много релизов | LDAP Auth платный модуль|
-| [feature toggle by tenant](https://docs.abp.io/en/abp/latest/Modules/Tenant-Management#managing-the-tenant-features)
+| [feature toggle by tenant](https://docs.abp.io/en/abp/latest/Modules/Tenant-Management#managing-the-tenant-features) ||
 | [DDD](https://abp.io/books/implementing-domain-driven-design) ||
 | RMQ ||
 | модульный монолит->микросервисы заявлено ||
@@ -55,12 +55,12 @@
 ### Authentication, Authorization
 
 - Authentication Identity
-  - https://docs.abp.io/en/abp/latest/Modules/Identity
+  - <https://docs.abp.io/en/abp/latest/Modules/Identity>
   - [IAM](../../arch/system.class/iam.md) [IdentityServer4](https://docs.abp.io/en/abp/latest/Modules/IdentityServer)
-  - [SSO](../../arch/pattern/system.design/sso.md)
-    - https://academy.hiretechteam.com/blog/how-to-implement-single-sign-with-abp-commercial-application
-    - https://www.google.com/url?sa=t&source=web&rct=j&url=https://www.youtube.com/watch%3Fv%3Dth3IugJGQDA&ved=2ahUKEwiv1Z3VtuH6AhURCBAIHbxoC1I4ChC3AnoECBwQAg&usg=AOvVaw3LGyJwYvrPLvmjBpHgP-Jw
-    - [OpenID Connect module](https://docs.abp.io/en/abp/latest/Modules/OpenIddict) on https://documentation.openiddict.com
+  - [SSO](../../arch/pattern/security/sso.md)
+    - <https://academy.hiretechteam.com/blog/how-to-implement-single-sign-with-abp-commercial-application>
+    - <https://www.google.com/url?sa=t&source=web&rct=j&url=https://www.youtube.com/watch%3Fv%3Dth3IugJGQDA&ved=2ahUKEwiv1Z3VtuH6AhURCBAIHbxoC1I4ChC3AnoECBwQAg&usg=AOvVaw3LGyJwYvrPLvmjBpHgP-Jw>
+    - [OpenID Connect module](https://docs.abp.io/en/abp/latest/Modules/OpenIddict) on <https://documentation.openiddict.com>
 - [Authorization](https://docs.abp.io/en/abp/latest/Authorization)
   - [Disable Concurent Login](https://support.abp.io/QA/Questions/3047/Disable-concurrent-user-login)
   - Под разные UI FE

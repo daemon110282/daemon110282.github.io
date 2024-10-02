@@ -12,7 +12,7 @@
 
 ## Зачем
 
-Реализация [паттернов обработки сбоев](../../../../arch/pattern/fault.tolerance/pattern.failure.md) для обеспечения атрибута качества ИС [Отказоустойчивость Fault tolerance](../../../../arch/ability/fault.tolerance.md):
+Реализация [паттернов обработки сбоев](../../../../arch/pattern/system.design/fault.tolerance/pattern.failure.md) для обеспечения атрибута качества ИС [Отказоустойчивость Fault tolerance](../../../../arch/ability/fault.tolerance.md):
 
 - Basic.Reject with __reueue = true__ - отклоненение сообщения и возврат __в начало очереди__
 	- минусы: лишняя нагрузка на внешний сервис, т.к. сообщения без задержки будут возвращаться в очередь. Решение: Basic.Reject with reueue = false + DLX.
@@ -27,8 +27,8 @@
 
 ## Patterns
 
-- [Transactional outbox](../../../../arch/pattern/fault.tolerance/transact.outbox.md)
-- [Transactional Inbox](../../../../arch/pattern/fault.tolerance/transact.inbox.md)
+- [Transactional outbox](../../../../arch/pattern/system.design/fault.tolerance/transact.outbox.md)
+- [Transactional Inbox](../../../../arch/pattern/system.design/fault.tolerance/transact.inbox.md)
 
 ### Dead Letter eXchange (DLX)
 

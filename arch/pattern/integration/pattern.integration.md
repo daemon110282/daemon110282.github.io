@@ -58,7 +58,7 @@ TODO см. EIP
 
 - [Messaging Patterns](pattern.messagebroker.md)
 - [RPC Команды\Запросы](pattern.rpc.md)
-- [Обработка сбоев: Retry Policy, Rate Limit, Circuit Breaker](../fault.tolerance/pattern.failure.md)
+- [Обработка сбоев: Retry Policy, Rate Limit, Circuit Breaker](../system.design/fault.tolerance/pattern.failure.md)
 - Sidecar
 - Ambassador Посредник
   - nginx

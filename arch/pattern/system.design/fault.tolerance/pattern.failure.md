@@ -30,7 +30,7 @@ Cбои разделяют:
 
 ## Rate limit
 
-- [Rate limit](../performance/rate.limit.md)
+- [Rate limit](../../performance/rate.limit.md)
 
 ## Логика повторения (Retry Logic, Retry Policy)
 
@@ -45,12 +45,12 @@ Cбои разделяют:
 - [В общем случае используйте стратегию](https://docs.microsoft.com/ru-ru/azure/architecture/best-practices/transient-faults)
 	- **экспоненциальной задержки** для фоновых операций
 	- стратегии **немедленного повтора или постоянных интервалов** для интерактивных операций
-- паттерны [RMQ failure](../../../technology/middleware/messagebus/rmq/rmq.failure.md)
+- паттерны [RMQ failure](../../../../technology/middleware/messagebus/rmq/rmq.failure.md)
 
 ## Идемпотентность
 
 - Повтор инициируется ИС\клиент потребитель (браузером, другим микросервисом и так далее), который не знает, была ли операция сбойной до или после обработки запроса
-- ИС источник должна уметь обрабатывать [__идемпотентность__](../integration/idempotent.md). 
+- ИС источник должна уметь обрабатывать [__идемпотентность__](../../integration/idempotent.md). 
   - Например, когда вы повторяете операцию покупки, то вы не должны дублировать взимание средств с покупателя. Вам поможет использования **уникального ключа идемпотентности** для каждой транзакции.
 
 ## Fail fast
@@ -80,11 +80,11 @@ Cбои разделяют:
 - Не все ошибки должны инициировать автомат замыкания. Например, вы наверняка захотите пропустить ошибки на стороне клиента вроде запросов с кодами 4хх, но при этом отреагировать на серверные сбои с кодами 5хх.
 - Использование методов Isolate (размыкает цепь и сохраняет ее в таком состоянии) и Reset (снова замыкает цепь). Таким образом, можно создать служебную конечную точку HTTP, которая напрямую вызывает методы [Isolate и Reset политики](https://learn.microsoft.com/ru-ru/dotnet/architecture/microservices/implement-resilient-applications/implement-circuit-breaker-pattern). Такую конечную точку HTTP с надлежащей защитой можно также использовать в рабочей среде для __временной изоляции подчиненной системы__, например, если ее необходимо обновить. Кроме того, с ее помощью можно __размыкать цепь вручную для защиты подчиненной системы__, если есть подозрения на ее неисправность.
 
-![scheme](../../../img/pattern/circuit.breaker.jpg)
+![scheme](../../../../img/pattern/circuit.breaker.jpg)
 
 ## Технологии
 
-- [RMQ](../../../technology/middleware/messagebus/rmq/rmq.failure.md)
+- [RMQ](../../../../technology/middleware/messagebus/rmq/rmq.failure.md)
 - Retry Policy
   - [Polly](https://medium.com/aspnetrun/microservices-resilience-and-fault-tolerance-with-applying-retry-and-circuit-breaker-patterns-c32e518db990)
 - Circuit Breakers

@@ -16,6 +16,8 @@
 
 - [Балансировка](../deployment/load.balancing.md)
 - [DevOps Avto Scale](../../devops.md#auto-scaling)
+- Отложенные вычисления
+- Предобработка данных
 
 ### Приложение back-end
 

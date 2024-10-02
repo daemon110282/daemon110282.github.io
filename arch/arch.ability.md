@@ -1,64 +1,93 @@
 # Атрибуты качества (ability) архитектуры
 
 - [Атрибуты качества (ability) архитектуры](#атрибуты-качества-ability-архитектуры)
+  - [Стандарты](#стандарты)
   - [Атрибуты качества, архитектурные характеристики ИС](#атрибуты-качества-архитектурные-характеристики-ис)
+    - [Функциональность Functionality](#функциональность-functionality)
+    - [Надежность Reliability](#надежность-reliability)
+    - [Быстродействие Performance](#быстродействие-performance)
+    - [Переносимость Portability](#переносимость-portability)
+    - [Сопровождаемость Maintainability](#сопровождаемость-maintainability)
+    - [Пользовательский опыт Usability](#пользовательский-опыт-usability)
+    - [TODO](#todo)
   - [Коммерческие атрибуты](#коммерческие-атрибуты)
   - [Кросс-системные правила и руководства](#кросс-системные-правила-и-руководства)
   - [Фитнес функции](#фитнес-функции)
   - [Категории](#категории)
-  - [TODO](#todo)
+  - [TODO](#todo-1)
+
+## Стандарты  
+
+- [ГОСТ Р ИСО/МЭК 9126-93](https://m-i-kuznetsov.livejournal.com/157150.html) (Информационная технология. Оценка программной продукции. Характеристики качества и руководства по их применению)
+  - план для оценки качества информационной системы
+  - следует также добавить шкалу веса
+  - набор метрик для каждого показателя
+- [HP FURPS+](https://sysana.wordpress.com/2010/09/16/furps/)
+- ГОСТ 28195-89 (Оценка качества программных средств. Общие положения)
 
 ## Атрибуты качества, архитектурные характеристики ИС
 
-Стандарты  
+### Функциональность Functionality
 
-- [ГОСТ Р ИСО/МЭК 9126-93](https://m-i-kuznetsov.livejournal.com/157150.html)
+- Функциональность Functionality
+  - Пригодность - для решения бизнес задачи
+  - Правильность - точность выполнения бизнес функций
+  - Способность к взаимодействию - интеграциям
+  - Соответствие - стандартам принятым в компании
+  - Защищенность [Security Безопасность](ability/security.md)
 
-Атрибуты качества
+### Надежность Reliability
 
 - [Надежность Reliability](ability/reliability.md)
-  - [Доступность Availability (Эксплуатационные)](ability/availability.md)
-  - [Отказоустойчивость Fault tolerance](ability/fault.tolerance.md)
   - Стабильность (Maturity) - количество отказов системы за единицу времени. Т.е. частота сбоев при штатной работе системы.
     - Изоляция сбоев [Resilience](ability/resilience.md)
-  - Восстанавливаемость Recoverability
-  - Согласованность Consistency (Эксплуатационные)  
-  - Живучесть Robustness  
-- [Производительность Performance](ability/performance.md) (Эксплуатационные)  
-- Переносимость Portability
+  - [Отказоустойчивость Fault tolerance](ability/fault.tolerance.md)
+  - Восстанавливаемость Recoverability - после сбоев
+  - [Доступность Availability (Эксплуатационные)](ability/availability.md)
+  
+### Быстродействие Performance
+
+- Быстродействие [Производительность Performance](ability/performance.md) (Эксплуатационные)  
+
+### Переносимость Portability
+
+- Переносимость (Мобильность) Portability
+  - Адаптируемость Adaptability  
+  - Простота внедрения Installability
+  - Замещаемость [Replaceability](ability/replaceability.md)
   - Возможность повторного использования [Reusability](ability/reusability.md) (Единая кодовая база)
-    - Mdm - master data manager
-  - Модифицируемость/способности к взаимодействию//изменениям Modifiability (Эволюция)
+  - Модифицируемость Modifiability (Эволюция)
+    - способность к взаимодействию, изменениям
     - Сложность дальнейших интеграции
   - Совместимость Interoperability (Эволюция)
   - Расширяемость Extensibility
-  - Adaptability
-  - Замещаемость
-    - [API Gateway](../api/api.gateway.md)
-    - Server-side [service discovery](./pattern/deployment/service.discovery.md)
-    - [Proxy\Balancing](./pattern/deployment/pattern.proxy.reverse.md)
-  - [Слабая связанность (low coupling)](pattern/system.design/low.coupling.md)
-- Durability
-- Функциональность
-  - [Security Безопасность](ability/security.md)
-  - Гибкость Flexibility
-  - Целостность Integrity
+
+### Сопровождаемость Maintainability
+
+- Сопровождаемость Поддерживаемость Maintainability
+  - Анализируемость (Analyzability)
+  - Изменяемость (Changeability)
+  - Устойчивость (Stability)
+  - [Тестируемость Testability](ability/testability.md)
   - Конфигурируемость Configurability
+  - [Наблюдаемость Observability](ability/observability.md)
+
+### Пользовательский опыт Usability
+
 - Удобство использования Usability (Пользовательский опыт)
   - Практичность Usability
   - Удобство Accessibility (Пользовательский опыт)
   - Локализация Localization (Пользовательский опыт)
-- Удобство сопровождения Поддерживаемость Maintainability
-  - [Наблюдаемость Observability](ability/observability.md)
-  - Анализируемость (Analyzability)
-  - Изменяемость (Changeability)
-  - Устойчивость (Stability)
-  - [Тестопригодность Testability](ability/testability.md)
-    - разделением на слои и следованием [Dependency Rule (правилу зависимостей)](https://habr.com/ru/company/mobileup/blog/335382/)
-  - [Автодокументирование API](../api/api.md)
-  
-TODO
 
+### TODO
+
+- Durability
+- Эксплуатационные
+  - Согласованность Consistency (Эксплуатационные)  
+  - Живучесть Robustness  
+- Гибкость Flexibility
+- Целостность Integrity
+- [Автодокументирование API](../api/api.md)
 - CI-CD куда?
 - scalability interoperability
 - responsiveness

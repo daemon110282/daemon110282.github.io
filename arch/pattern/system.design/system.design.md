@@ -1,6 +1,5 @@
 # Паттерны Проектирования
 
-- [System Design шаги](https://www.youtube.com/watch?v=i7twT3x5yv8&ab_channel=ByteByteGo)
 - [Decomposition Patterns](https://airtable.com/embed/shrPwsn3G9IQ7JCm1/tbl7daDI4ZAAmedfD) (6 Patterns)
   - [CQRS](../performance/pattern.cqrs.md)
   - [Strangler Fig](../refactoring/monolit2msa.md)
@@ -18,6 +17,11 @@
   - [Low coupling (LC)](./low.coupling.md)
   - High cohesion (HC)
 - __DRY - Dont Repeat Yourself__: не должны повторяться именно в __поведении__, а не в __данных__ (например [микросервисы](../../style/msa.md))
+- __Разделения ответственности__ слоев:
+  - MVC
+  - MVP
+  - MVVM
+  - MVI
 - Сквозная функциональность
   - [Аудита](../observability/pattern.audit.md)
   - Наблюдаемость [Observability Patterns](../../ability/observability.md)
@@ -30,13 +34,14 @@
 - Оркестрация - есть дирижер [или Хореография](orchestration-choreography.md) - нет централизованного управления (медиатора)
 - Хранилищ данных
   - [Data Vault](data.vault.md)
-  - [Data Mart](data.mart.md)
-  - [Data Lake](data.lake.md)
-- Big Data
-  - [Map Reduce](map.reduce.md)
+  - Big Data
+    - [Data Lake](data.lake.md)
+    - [Data Mart](data.mart.md)
+    - [Map Reduce](map.reduce.md)
 - TODO
   - [Принципы проектирования MS](https://docs.microsoft.com/ru-ru/azure/architecture/guide/design-principles/)
   - [MS](https://docs.microsoft.com/ru-ru/azure/architecture/patterns/category/design-implementation)
+  - [System Design шаги](https://www.youtube.com/watch?v=i7twT3x5yv8&ab_channel=ByteByteGo)
 
 ## Анализ вариантов
 

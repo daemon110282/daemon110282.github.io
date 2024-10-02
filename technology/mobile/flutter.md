@@ -37,13 +37,13 @@ TODO
 
 ## Архитектура
 
-- Mvc - вариант
+- MVC - вариант
   - Stream не использовал?
-- Mvvm не вариант
+- MVVM не вариант
   - Binding view-viewmodel
   - Ui тред ухудшился
 - Flux не вариант
   - +Stream
   - Dispatcher один, сложно расширять, несколько команд
-- Stream/ bloc - типа mvc без controller - вариант
+- Stream/ bloc - типа MVC без controller - вариант
   - Лучший вариант https://youtu.be/rta3850mv4A

@@ -2,7 +2,7 @@
 
 - [Шаблоны документирования](#шаблоны-документирования)
   - [Бизнес требований](#бизнес-требований)
-  - [Документирование архитектуры](#документирование-архитектуры)
+  - [Архитектуры](#архитектуры)
   - [ИТ ландшафт, Корпоративная архитектура](#ит-ландшафт-корпоративная-архитектура)
   - [Интеграций](#интеграций)
 
@@ -10,21 +10,31 @@
 
 - [Use Case, User Story, BPMN, Impact Mapping](../../analytic/analytica.md)
 
-## Документирование архитектуры
+## Архитектуры
 
-- ADR
-  - https://www.cognitect.com/blog/2011/11/15/documenting-architecture-decisions
+- ADR - Architecture Decision Records
+  - документ, в котором фиксируется нечто «архитектурно важное»
   - https://music.yandex.ru/album/14948662/track/87546546
-  - [зачем, шаблон](https://habr.com/ru/company/dododev/blog/578052/)
-- RFC
+  - [шаблон](https://habr.com/ru/company/dododev/blog/578052/)
+    - Заголовок
+    - Статус: proposed (предложен), accepted (принят) и superseded (замещён)
+    - Контекст
+    - Решение
+    - Причины принятия решения
+      - Плюсы-минусы
+      - Анализ вариантов
+    - Последствия (TradeOff)
+    - Комплаенс (проверка соответствия)
+- RFC - Request For Comments
   - [зачем, шаблон](https://brunoscheufler.com/blog/2020-07-04-documenting-design-decisions-using-rfcs-and-adrs)
 - KATA
   - [sysopsquad](https://github.com/team7katas/sysopsquad)
   - [sever_crew](https://github.com/vadagama/sever_crew)
-- язык архитектурного моделирования ArchiMate
-  - coArchi делает возможной многопользовательскую совместную работу над моделями и их версионирование в Git-репозитории
+- язык архитектурного моделирования
   - методологии TOGAF, которая считается наиболее распространенным и сбалансированным подходом для описания архитектуры предприятия
-  - Альтернатива: Business Studio или ARIS
+  - ArchiMate
+    - coArchi делает возможной многопользовательскую совместную работу над моделями и их версионирование в Git-репозитории
+    - Альтернатива: Business Studio или ARIS
 - Architecture as Code
   - C4 model
     - Plant Uml, Markdown
@@ -34,7 +44,7 @@
       - [Пример](https://github.com/team7katas/sysopsquad) The Sysops Squad Architectural Kata
     - [Ice Panel](https://icepanel.io/)
     - [Structurizr](https://structurizr.com/)
-- software catalog
+- Software Catalog
   - [Backstage](../../technology/backstage.md)
 
 ## ИТ ландшафт, Корпоративная архитектура

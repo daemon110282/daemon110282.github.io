@@ -1,9 +1,170 @@
-@startmindmap (id=patterns)
+@startmindmap (id=patterns_mm)
+' hide note
 
 * Паттерны 
+** Dependency injection (DI)
+note left: Благодаря DI, классы могут описывать свои зависимости, не создавая их. Во время выполнения программы за предоставление этих зависимостей отвечает другой класс.
+** Service Locator
+' note left: Шаблон Service Locator предоставляет реестр, из которого классы могут получать зависимости, не создавая их самостоятельно
+** Repository uof
+** Solid kiss dry
+** Clean architecture 
 
 left side
 ' right side
 
 
 @endmindmap
+
+@startuml (id=patterns)
+
+class P as "Паттерны"
+P -- Проектирования
+!include patterns.puml!system.design
+
+P --- Реализации
+!include patterns.puml!dev
+
+P -- Интеграции
+!include patterns.puml!integration
+
+P -- Производительность
+!include patterns.puml!perf
+
+P -- Deployment
+!include patterns.puml!deployment
+
+P -- Security
+!include patterns.puml!security
+
+P -- Рефакторинг
+!include patterns.puml!refactoring
+
+@enduml
+
+@startuml (id=system.design)
+
+Проектирования --- SOLID
+	SOLID -- DI
+	SOLID -- SRP
+	SOLID -- OpenClosed
+	SOLID -- Liskov
+	note right: Наследование \n Полиморфизм
+	SOLID -- Interface
+Проектирования -- DRY
+Проектирования -- KISS
+	note right: Keep.It. \n Simple.Stupid
+Проектирования -- GRASP
+	note right: Low Coupling \n High Cohesion 
+Проектирования -- Clean
+Проектирования --- Data
+	Data -- DWH
+	note right: ETL ELT ИБД
+	Data -- BigData
+	BigData -- DataLake
+	BigData -- DataVault
+	BigData -- DataMart
+
+Проектирования ---- DDD
+	DDD -- EventStorming
+	DDD -- EventSourcing
+	DDD -- CQRS
+
+@enduml
+
+@startuml (id=dev)
+
+Реализации -- Поведения
+	Поведения -- FSM
+	Поведения -- Mediator
+	note right: Оркестрация
+	Поведения -- CommandBus
+	Поведения --BackgroundJob
+
+Реализации -- Порождающие
+	Порождающие -- Singleton
+	Порождающие -- AbstractFactory
+
+Реализации -- Структурные
+	Структурные -- Adapter
+	Структурные -- Facade
+	Структурные -- Proxy
+
+@enduml
+
+@startuml (id=integration)
+
+Интеграции -- Данные 
+	Данные -- ETL
+	Данные -- ELT
+	Данные -- ШБД
+	Данные -- File
+		File -- DFS
+			DFS -- S3
+		File -- CDN
+		File -- WebDav
+
+Интеграции -- Приложения
+	Приложения -- RPC
+		note right
+		API REST, GraphQL
+		SOAP, WCF
+		WebSocket SSE
+		gRPC
+		end note
+	Приложения -- MiddleWare
+		note right		
+		SOA
+		MessageBroker
+		API GW, BFF
+		end note
+
+	Приложения -- EventSourcing
+	Приложения -- SAGA
+
+Интеграции -- Идемпотетность
+
+@enduml
+
+@startuml (id=deployment)
+
+Deployment -- CI-CD
+
+@enduml
+
+@startuml (id=perf)
+
+Производительность -- LB
+Производительность -- Async
+Производительность -- RateLimit
+Производительность -- Cache
+Производительность -- Масштабирование
+	note right: Горизонтальное, Вертикальное
+class FE AS "FrontEnd"
+Производительность -- FE
+	FE -- LazyLoad
+	FE -- Compression
+
+Производительность ---- Store
+	Store -- Шардирование
+	Store -- Денормализация
+	Store -- CQRS
+	Store -- Репликация
+	Store -- Кластеризация
+	class IL AS "Уровень \n Изоляции \n Данных"
+	Store -- IL
+	class Retention AS "Ротация TTL \n Данных"
+	Store -- Retention
+
+Производительность --- Сеть
+	Сеть -- DFS
+	Сеть -- КаналыСвязи
+	Сеть -- Топология
+	
+@enduml
+
+@startuml (id=security)
+@enduml
+
+@startuml (id=refactoring)
+@enduml

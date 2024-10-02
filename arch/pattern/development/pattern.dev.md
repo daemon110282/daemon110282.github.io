@@ -2,12 +2,14 @@
 
 ## ООП
 
+
 - Поведения
   - [FSM Конечный автомат](pattern.state.machine.md)
   - [Chain of Responsibility](chainofresp.md)
   - [Command](command.md)
   - [CommandBus](command.bus.md)
-  - Mediator
+  - [Mediator](mediator.md)
+  - [BackgroundJob](background.job.md)
 - Порождающие
   - Паттерн Abstract Factory
   - Паттерн Builder

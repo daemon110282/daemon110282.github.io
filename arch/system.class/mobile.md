@@ -14,6 +14,19 @@
 
 ## Паттерны
 
+Влияет на архитектуру:
+
+- тип мобильной платформы
+- тип устройства
+- скорость интернет-соединения
+- потенциальные характеристики мобильного гаджета — нагрузка на процессор, размер и разрешение экрана
+
+Основные типы приложений:
+
+- нативные приложения: Swift, Kotlin
+- гибридные приложения: ionic, cordova, flutter
+- мобильные веб-приложения: PWA, SPA/MPA - multi page app
+
 ### IOS
 
 - [MVC, MVP, MVVM, VIPER](https://github.com/puncsky/system-design-and-architecture/blob/master/en/123-ios-architecture-patterns-revisited.md)

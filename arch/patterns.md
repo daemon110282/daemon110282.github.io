@@ -11,12 +11,8 @@
 - [Реализации](pattern/development/pattern.dev.md)
 - [Интеграции](pattern/integration/pattern.integration.md)
 - [Производительность](pattern/performance/pattern.perf.md)
-  - [DevOps Avto Scale](./devops.md)
-- [Deployment Patterns](https://airtable.com/embed/shryjXK2rzf52sv9u/tbl2vjDV9Es36E2cW) (13 Patterns)
-  - [DevOps Deployment Rollback](./devops.md)
-  - Проверка работоспособности ([Health-check](pattern/observability/pattern.healthcheck.md))
-  - [Балансировка нагрузки](pattern/deployment/load.balancing.md)
-
+- [Security](pattern/security/pattern.security.md)
+- [Deployment Patterns](pattern/deployment/pattern.deployment.md)
 - [Transaction Management Patterns](https://airtable.com/embed/shrjiJuF7kIbcnXRl/tblgszzLV27MUFP4p) (5 Patterns)
   - [Transactional Outbox](pattern/fault.tolerance/transact.outbox.md)
   - [Transactional Inbox](pattern/fault.tolerance/transact.inbox.md)
@@ -25,16 +21,11 @@
   - Transaction log tailing
 - [Testing Patterns](https://airtable.com/embed/shr6p9u80mD9CzVU1/tblyGd1oiAcYuTSbr) (3 Patterns)
 - [UI Patterns](https://airtable.com/embed/shrxffclVHmz95ii0/tblXbFfITMXmPjvGl) (3 Patterns)
-- [Security Patterns](https://airtable.com/embed/shrHNtgdwr7wP6TJj/tbl2ssqnen3UkXoaF) (2 Patterns)
-  - Access Token ([JWT](../../technology/jwt.md))
-  - Federated Identity
 - [Документирования](pattern/pattern.docs.md)
 - Utility Patterns (3 Patterns)
 - TODO
-  - Маршрутизатор
-  - Транслятор трансформер адаптер
+  - Маршрутизатор  
   - Обертка
-  - Издатель подписчик  
 
 ## Управления данными
 

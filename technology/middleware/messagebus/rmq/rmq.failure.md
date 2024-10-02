@@ -20,10 +20,10 @@
 	- [Очередь повторных попыток](https://habr.com/ru/companies/slurm/articles/714358/) Dead Letter eXchange с __временной задержкой на повторную отправку сообщения__
 		- обычно у сервиса (consumer) нет БД (stateless)
 		- такой же вариант от ДомКлик [DLX->DLQ->как DLX используется Exchange для сервиса (consumer)](https://habr.com/ru/companies/domclick/articles/500978/)
-	- [Алгоритм](https://blog.rnds.pro/019-poison2) обработки "битого" сообщения [Poison Message](https://blog.rnds.pro/018-posion1) 		
-- Basic.Nack 
+	- [Алгоритм](https://blog.rnds.pro/019-poison2) обработки "битого" сообщения [Poison Message](https://blog.rnds.pro/018-posion1)
+- Basic.Nack
 	- реализует __то же самое поведение__ что и метод отклика __Basic.Reject__, но при этом он __добавляет несколько отсутствующих аргументов__ к множественному поведению Basic.Ack.
-	- Выступая в качестве частного дополнения RabbitMQ для протокола AMQP, Basic.Nack __не гарантирует его присутствия в прочих брокерах AMQP__, [таких как QPID или ActiveMQ](http://onreader.mdl.ru/RabbitMQInDepth/content/Ch05.html). 
+	- Выступая в качестве частного дополнения RabbitMQ для протокола AMQP, Basic.Nack __не гарантирует его присутствия в прочих брокерах AMQP__, [таких как QPID или ActiveMQ](http://onreader.mdl.ru/RabbitMQInDepth/content/Ch05.html).
 
 ## Patterns
 
@@ -39,7 +39,7 @@
 ### Exc=Direct Queue DLX
 
 - must specify a [dead letter routing key](https://stackoverflow.com/questions/21742232/rabbitmq-dead-letter-exchange-never-getting-messages)
-- https://javascopes.com/spring-amqp-error-handling-8dbc1045/
+- <https://javascopes.com/spring-amqp-error-handling-8dbc1045/>
 
 ### Retry Policy
 

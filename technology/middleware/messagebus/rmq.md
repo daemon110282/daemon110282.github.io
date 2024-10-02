@@ -9,7 +9,7 @@
   - [Паттерны](#паттерны)
     - [Queue](#queue)
     - [connection](#connection)
-    - [persistence](#persistence)
+    - [Persistence](#persistence)
     - [Интеграции](#интеграции)
       - [Task (Worker) Queue](#task-worker-queue)
       - [Simple one-way messaging](#simple-one-way-messaging)
@@ -34,17 +34,17 @@
 
 - [«Продажа» Производительность](https://habr.com/ru/company/oleg-bunin/blog/310418/)
 - RabbitMQ дает гарантии __одноразовой доставки__ и __хотя бы одной доставки__, но не __ровно одной доставки__
-- Message timing control (controlling either message expiry or message delay).
+- Message timing control (controlling either message expiry or message delay)
 - Advanced fault handling capabilities, in cases when consumers are more likely to fail to process messages (either temporarily or permanently).
 - Advanced and flexible __routing rules__
 - Simpler consumer implementations
-- перешли на постоянные (persistent) очереди, которые не удаляются в момент разрыва подключения, но повесили на них политику «протухания» (expire), если пользователя нет более 5 минут.
+- перешли на постоянные (persistent) очереди, которые не удаляются в момент разрыва подключения, но повесили на них политику «протухания» (expire), если пользователя нет более 5 минут
 - Приоритет сообщений
 
 Минусы:
 
 - Агрегация в пачки нет в RabbitMQ (Kafka Есть)
-- [vs Kafka](https://habr.com/ru/company/itsumma/blog/416629/)
+- [vs Kafka](../../../arch/pattern/integration/pattern.messagebroker.md#rmq-vs-kafka)
 - нет параметра Expire для обменников (только для очередей)
 - __Нет шардирования__, в kafka есть topic-несколько partition, есть несколько инстансов где очереди размещены
 - Производительность ниже [Kafka](kafka.md)
@@ -55,7 +55,7 @@
 
 - Типы
   - __headers__
-    - Message is sent to the queues which match the headers. 
+    - Message is sent to the queues which match the headers.
     - Routing key should not be set. Но если установлены, то можно биндить очередь и по RK.
     - Match type should indicate if [ALL](https://thewebland.net/development/devops/rabbitmq/exchanges-routing-kyes-and-bindingi/) (логичекое И) or [ANY (логичекое ИЛИ) header must match](https://codedestine.com/rabbitmq-headers-exchange/)
   - [__direct__](https://habr.com/ru/post/489086/) - message is sent to a named exchange, __routing key__ is specified so information only reaches the queues matching the pattern
@@ -68,7 +68,7 @@
 - Basic.get (__Pull__) - Доставка единичного сообщения по запросу
 - Basic.Consume (__Push__) - Подписка на очередь (постоянный мониторинг очереди с доставкой всех сообщений)
 - QoS(prefetchCount) [Get vs consume](https://habr.com/ru/post/153431/)
-- http://onreader.mdl.ru/RabbitMQInDepth/content/Ch05.html
+- <http://onreader.mdl.ru/RabbitMQInDepth/content/Ch05.html>
 
 ## Паттерны
 
@@ -90,9 +90,9 @@
 - На 1 канале channel может быть несколько получателей Consumer из очередей
 - [Отдельные соединения для publisher\consumer](https://www.cloudamqp.com/blog/part1-rabbitmq-best-practice.html#connections-and-channels)
 
-### persistence
+### Persistence
 
-- По умолчанию при остановке или падении сервера RabbitMQ все очереди и сообщения теряются, но это поведение можно изменить. Для того чтобы сообщения оставались в очереди после перезапуска сервера, необходимо: 
+- По умолчанию при остановке или падении сервера RabbitMQ все очереди и сообщения теряются, но это поведение можно изменить. Для того чтобы сообщения оставались в очереди после перезапуска сервера, необходимо:
   - сделать как очереди __durable__
   - так и сообщенния устойчивыми __delivery_mode=2__
 - TTL Очереди
@@ -149,8 +149,7 @@
 
 ### MTA
 
-- логическое разделение (namespace) можно сделать на уровне vhosts
-  - [VHosts](rmq/rmq.vhost.md)
+- [MQ](../../../arch/pattern/system.design/mta/mta.mq.md)
 
 ### Версионирование типов сообщений
 

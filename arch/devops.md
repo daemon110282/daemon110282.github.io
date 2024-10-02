@@ -76,7 +76,7 @@ Each container __should do one thing and do it well__. A few reasons:
   - Technology Stack: PHP, .NET, Python, NodeJS, Java
   - Type Component - Tier: api, db, cache, frontend, backend
     - db: mssql, mysql
-    - api: 
+    - api:
     - cache: redis, memcached
 
 ## Технологии

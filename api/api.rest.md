@@ -74,7 +74,7 @@ REST API — это архитектурный подход, который ус
     - ?users=id1&users=id2
 - DELETE
 - [Методы, JSON, URI](https://habr.com/ru/post/447322/)
-- [SRP паттерн](../arch/patterns.md)
+- [SRP паттерн](../arch/pattern/patterns.md)
 
 ### RESTful принципы
 

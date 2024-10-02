@@ -39,7 +39,6 @@
       - Advanced transient messaging
       - Message-oriented persistent
       - log-based message queue
-      - Издатель подписчик
     - [API Gateway](../../../api/api.gateway.md)
     - [SOA](../../style/soa.md)
 

@@ -70,6 +70,9 @@ P -- Рефакторинг
 	DDD -- EventSourcing
 	DDD -- CQRS
 
+Проектирования -- MTA
+Проектирования -- FaultTolerance
+
 @enduml
 
 @startuml (id=dev)
@@ -164,7 +167,25 @@ class FE AS "FrontEnd"
 @enduml
 
 @startuml (id=security)
+
+Security --- Аутентификация
+	note right: OAuth JWT OIDC Cookie CORS
+	Аутентификация -- SSO
+	Аутентификация -- MFA	
+Security -- Авторизация
+Security -- Криптозащита
+Security -- Аудит
+class ConfOut as "Конфигурация во вне"
+Security -- ConfOut 
+
 @enduml
 
 @startuml (id=refactoring)
+
+Рефакторинг -- DDD
+Рефакторинг -- EventStorming
+Рефакторинг -- CDC
+!include pattern/refactoring/monolit2msa.puml!code
+!include pattern/refactoring/monolit2msa.db.puml
+
 @enduml

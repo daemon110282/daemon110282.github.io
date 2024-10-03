@@ -12,9 +12,8 @@
 
 ## Зачем
 
-Решения для [хранилищ данных](../arch/system.class/store.md)
-
-- [Варианты, TOP](https://db-engines.com/en/ranking)
+Решения для [хранилищ данных](../arch/system.class/store.md).
+[Критерии выбора](../arch/system.class/store.md#критерии-выбора).
 
 ## Structured Data
 
@@ -22,6 +21,12 @@
 
 - [MS SQL](db/mssql/mssql.md)
 - [PostgreSQL](db/postgresql/postgresql.md)
+- [Tarantool](store/tarantool.md)
+- Импортозамещение (реестр отечественного ПО, сертификация СФТЭК)
+  - на базе PostgreSQL (коммерческие)
+    - Astra [Tantor](db/postgresql/tantor.md)
+    - [PostgreSQL PRO](db/postgresql/postgresql.pro.md)
+    - [Jatoba](db/postgresql/jatoba.md)
 
 ### OLAP
 

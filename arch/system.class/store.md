@@ -75,10 +75,22 @@
 
 ![Выбор хранилища http://architecturethehardparts.com/](../../img/arch/choose_store.jpg)
 
+- [Варианты, TOP](https://db-engines.com/en/ranking)
 - [SQL vs NoSQL](https://towardsdatascience.com/datastore-choices-sql-vs-nosql-database-ebec24d56106)
   - ![choose](../../img/technology/store/sql.vs.nosql.webp)
+  - [Clickhouse vs ELK vs Google Big Query и Amazon RedShift vs TimescaleDB](https://habr.com/ru/company/ua-hosting/blog/483112/)
+  - [redis vs PgSQL](https://habr.com/ru/company/cloud_mts/blog/716548/)
+  - Memcached vs Redis
+    - может показывать отличные результаты производительности в ограниченных окружениях кеширования
+    - А при использовании этой системы в [распределённом кластере](https://habr.com/ru/company/wunderfund/blog/685894/) нужны дополнительные настройки. Redis же поддерживает подобные сценарии работы сразу после установки.
 - SQL, NoSQL, TimeSeries
   - ![плюсы-минусы](../../img/technology/db/types.db.jpeg)
+- Производительность (QPS RPS)
+    - более 100k RPS
+      - Tarantool
+    - до 1000 RPS
+      - MSSQL
+      - PostgreSQL
 
 ## Технологии
 

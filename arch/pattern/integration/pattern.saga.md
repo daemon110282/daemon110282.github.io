@@ -18,6 +18,7 @@
 
 TODO
 
+- <https://www.bigdataschool.ru/blog/architecture-patterns-for-distributed-systems.html> 
 - https://t.me/microservices_arch/307
 - https://t.me/ru_arc/112
 

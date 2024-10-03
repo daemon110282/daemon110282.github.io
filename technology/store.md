@@ -31,6 +31,7 @@
 ### OLAP
 
 - [ClickHouse](store/clickhouse.md)
+- BigQuery
 
 ## Semi Structured Data
 

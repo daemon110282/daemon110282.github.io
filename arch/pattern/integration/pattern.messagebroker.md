@@ -5,8 +5,9 @@
 	- [Плюсы-минусы](#плюсы-минусы)
 	- [Patterns](#patterns)
 	- [Технологии](#технологии)
-		- [Выбор](#выбор)
+		- [Критерии выбора](#критерии-выбора)
 			- [RMQ vs Kafka](#rmq-vs-kafka)
+			- [RMQ vs ActiveMQ Artemis](#rmq-vs-activemq-artemis)
 
 ## Зачем
 
@@ -72,7 +73,7 @@
 	- Azure Service Bus
 	- Amazon SQS
 
-### Выбор
+### Критерии выбора
 
 ![Alt text](../../../img/technology/middleware/messagebus/rmq.vs.kafka.vs.ibm.png)
 ![Alt text](../../../img/technology/middleware/messagebus/rmq.vs.kafka.vs.ibm2.png)
@@ -94,3 +95,16 @@
 TODO
 
 - <https://habr.com/ru/company/itsumma/blog/416629/>
+
+#### RMQ vs ActiveMQ Artemis
+
+- [RMQ](../../../technology/middleware/messagebus/rmq.md#плюсы-и-минусы)
+- [Artemis](../../../technology/middleware/messagebus/activemq.md#плюсы-минусы)
+  - vs RMQ
+    - поддерживает более __широкий спектр протоколов__ обмена сообщениями (+ JMS)
+    - [RMQ имеет наилучшую пропускную способность](https://www.okbsapr.ru/library/publications/shkola_kzi_chadov_mikhalchenko_2019/)
+    - Менее гибкая маршрутизация сообщений
+      - Artemis Реализует концепцию "адреса" для маршрутизации сообщений и поддерживает различные типы маршрутизации, [включая anycast и multicast](https://www.mastertheboss.com/rabbitmq/activemq-vs-rabbitmq-a-comparison/)
+        - Паттерны: PUB-SUB
+      - RMQ концепцию "обмена". Exchange в RabbitMQ - это компонент маршрутизации сообщений, который определяет, как сообщения распределяются по очередям	
+        - Паттерны: Message Queue, PUB-SUB and RPC and Routing

@@ -51,6 +51,7 @@
     - RPC + LB (API GW)
   - более Х RPS?
     - MessageBus
+      - RMQ 20k RPS
 - Схема интеграции
   - Точка-точка Point2Point
   - Издатель-Подписчики Pub-Sub

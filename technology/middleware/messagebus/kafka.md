@@ -12,6 +12,8 @@
 
 Реализация [паттерна интеграции](../../../arch/pattern/integration/pattern.integration.md) [Message Broker](../../../arch/pattern/integration/pattern.messagebroker.md).
 
+[Критерии выбора](../../../arch/pattern/integration/pattern.messagebroker.md#критерии-выбора).
+
 UC:
 
 - большие данные [BigData](../../../arch/style/bigdata.md) и __потоковую обработку Streaming Data__

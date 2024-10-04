@@ -28,6 +28,8 @@
 
 Реализация [паттерна интеграции](../../../arch/pattern/integration/pattern.integration.md) [Message Broker](../../../arch/pattern/integration/pattern.messagebroker.md).
 
+[Критерии выбора](../../../arch/pattern/integration/pattern.messagebroker.md#критерии-выбора).
+
 ## Плюсы и минусы
 
 Плюсы:

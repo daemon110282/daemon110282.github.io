@@ -2,7 +2,7 @@
 
 - [Паттерны интеграций](#паттерны-интеграций)
   - [Виды (стили) интеграций](#виды-стили-интеграций)
-  - [Критерии выбора способа интеграции](#критерии-выбора-способа-интеграции)
+  - [Критерии выбора](#критерии-выбора)
   - [Паттерны](#паттерны)
   - [Технологии](#технологии)
 
@@ -42,47 +42,52 @@
     - [API Gateway](../../../api/api.gateway.md)
     - [SOA](../../style/soa.md)
 
-## Критерии выбора способа интеграции
+## Критерии выбора
 
+Способа интеграции:
+
+- Производительность (RPS)?
+  - менее 10? RPS
+    - RPC + LB (API GW)
+  - более Х RPS?
+    - MessageBus
+- Схема интеграции
+  - Точка-точка Point2Point
+  - Издатель-Подписчики Pub-Sub
 - Возможность использовать выбранный способ интеграции для всех приложений, участвующих в интеграции
 - Возможность внесения изменений в приложения
 - Требования к обеспечению надежности
 - Уровень связанности приложений
-- Временные задержки доставки данных
+- Временные задержки доставки данных (Latency)
 - Требования к защите данных
 
 ## Паттерны
 
-TODO см. EIP
-
 - [Messaging Patterns](pattern.messagebroker.md)
 - [RPC Команды\Запросы](pattern.rpc.md)
+  - [Request-Reply](https://www.enterpriseintegrationpatterns.com/patterns/messaging/RequestReply.html)
+  - Async Request-Reply
 - [Обработка сбоев: Retry Policy, Rate Limit, Circuit Breaker](../system.design/fault.tolerance/pattern.failure.md)
-- Sidecar
+- Sidecar - паттерн интеграции между приложением и сервисом, развернутый на стороне приложения
+  - Отвечает за развертывание компонентов приложения в отдельном процессе или контейнере для обеспечения изоляции и инкапсуляции
+  - Сквозная функциональность
 - Ambassador Посредник
   - nginx
 - Anti-Corruption Layer
-- Async Request-Reply
 - [DbC - Design by contract](https://habr.com/ru/company/southbridge/blog/679906/)
+- [Fault Tolerance](../system.design/fault.tolerance/pattern.failure.md): Retry Policy, Circuit Breaker, Rate Limit
 
 TODO
 
-- [TODO](https://habr.com/ru/company/southbridge/blog/679906/)
-- [UMP](https://airtable.com/embed/shr8hjWhgmcRMq8ZT/tblRsPPtXXbYI4IzT)
-- <https://mxsmirnov.com/2010/06/27/%d1%81%d1%86%d0%b5%d0%bd%d0%b0%d1%80%d0%b8%d0%b8-%d0%b8%d0%bd%d1%82%d0%b5%d0%b3%d1%80%d0%b0%d1%86%d0%b8%d0%b8-%d0%bf%d1%80%d0%b8%d0%bb%d0%be%d0%b6%d0%b5%d0%bd%d0%b8%d0%b9/#more-357>
-- <http://citforum.ru/SE/project/pattern/p_4.shtml>
-- <https://www.enterpriseintegrationpatterns.com/patterns/messaging/>
-- <https://mcs.mail.ru/blog/26-osnovnyh-patternov-mikroservisnoj-razrabotki/amp>
-- <https://www.bigdataschool.ru/blog/architecture-patterns-for-distributed-systems.html>
+- см. EIP <https://www.enterpriseintegrationpatterns.com/patterns/messaging/>
+  - <https://ducmanhphan.github.io/2020-08-10-Introduction-to-Enterprise-Integration-Patterns/>
 - <https://medium.com/nuances-of-programming/краткий-обзор-10-популярных-архитектурных-шаблонов-приложений-81647be5c46f>
-- <https://success.outsystems.com/Documentation/Best_Practices/Architecture/Designing_the_Architecture_of_Your_OutSystems_Applications/Integration_Patterns_for_Core_Services_Abstraction>
-- <https://ducmanhphan.github.io/2020-08-10-Introduction-to-Enterprise-Integration-Patterns/>
-- <https://habr.com/ru/company/southbridge/blog/679906/>
 - TODO <https://github.com/Sairyss/distributed-systems-topics>
 
 ## Технологии
 
-- [ESB](../../../technology/middleware/esb.md)
+- SOA
+  - [ESB](../../../technology/middleware/esb.md)
 - [Распределенные файловые системы](../../../technology/filesystem/dfs.md)
 - GraphQL
 - SOAP

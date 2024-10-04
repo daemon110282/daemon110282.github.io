@@ -64,6 +64,7 @@
 - Транспорт  
 	- [Kafka](../../../technology/middleware/messagebus/kafka.md)
 	- [RabbitMQ](../../../technology/middleware/messagebus/rmq.md)
+	- [Apache ActiveMQ Artemis](../../../technology/middleware/messagebus/activemq.md)
 	- Azure service bus
 	- MSMQ
 	- SQL Server

@@ -1,0 +1,20 @@
+@startuml (id=ansible)
+
+class ansible
+class Inventory as "Inventory \n инвентарь"
+
+ansible --> Inventory : описывает хосты \n группы хостов
+
+ansible --> Module : выполняет
+ansible --> Playbook : сценарий автоматизации
+	Playbook -- Play: состоит из нескольких
+	Play -- Hosts
+	Play -- Variables
+	Play -- Handlers: по событиям
+	Play -- Tasks : выполняет набор задач
+	Play --- Includes: ссылки на Playbook
+	Play --- Templates: генерация скриптов
+	note right: обычно Jinja2 \n шаблонизатор для Python
+	Play --- Roles:
+
+@enduml

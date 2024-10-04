@@ -95,8 +95,8 @@ Each container __should do one thing and do it well__. A few reasons:
   - Контейнеризация
     - [k8s](../technology/ci-cd/k8s.md)
     - OpenShift
-  - Infrastructure-as-Code
-    - Ansible
+  - Infrastructure-As-Code IAC
+    - [Ansible](../technology/ci-cd/ansible.md)
     - [Helm](../technology/ci-cd/helm.md)
   - [Load balancer](../technology/middleware/loadbalancer.md)
   - [API Managment](../api/api-managment.md)

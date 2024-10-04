@@ -8,6 +8,8 @@
 		- [Access Control](#access-control)
 	- [Технологии](#технологии)
 	- [Deployment](#deployment)
+	- [Observability](#observability)
+		- [Metric](#metric)
 		- [Version](#version)
 	- [Compare](#compare)
 		- [VS Glue](#vs-glue)
@@ -148,6 +150,16 @@ Example
 	- [health check](https://www.keycloak.org/server/health)
 	- [logs](https://www.keycloak.org/server/logging)
 - Режим разворачивания в ПРОДе в отказоустойчивом (HA) кластере на [СУБД postgresql](https://www.keycloak.org/server/db) с распределенным [кешем Infinispan](https://www.keycloak.org/server/caching), вариант [«Обычный кластер»](https://habr.com/ru/company/southbridge/blog/511380/)
+
+## Observability
+
+### Metric
+
+- keycloak_response_errors
+- keycloak_login_attempts
+- keycloak_failed_login_attempts
+- keycloak_failed_client_login_attempts
+- keycloak_refresh_tokens
 
 ### Version
 

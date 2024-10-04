@@ -32,9 +32,7 @@
   - [sever_crew](https://github.com/vadagama/sever_crew)
 - язык архитектурного моделирования
   - методологии TOGAF, которая считается наиболее распространенным и сбалансированным подходом для описания архитектуры предприятия
-  - ArchiMate
-    - coArchi делает возможной многопользовательскую совместную работу над моделями и их версионирование в Git-репозитории
-    - Альтернатива: Business Studio или ARIS
+  - [ArchiMate](../../technology/archimate.md)
 - Architecture as Code
   - C4 model
     - Plant Uml, Markdown

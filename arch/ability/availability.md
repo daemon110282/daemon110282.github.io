@@ -25,7 +25,7 @@
 
 ## Паттерны
 
-- Ограничение ресурсов ИС [throttling](https://docs.microsoft.com/ru-ru/azure/architecture/patterns/throttling)
+- [Throttling](https://docs.microsoft.com/ru-ru/azure/architecture/patterns/throttling) - Ограничение ресурсов ИС
 - [TODO](https://photos.app.goo.gl/VaUseEzeFcvSJj6U9)
 - отказоустойчивость и масштабирование MariaDB и RabbitMQ в основе лежит разделение баз и брокеров по сервисам.
 - Избегайте состояния (__stateless__) в вашем приложении

@@ -37,7 +37,7 @@
 
 [Схемы аутентификации](https://habr.com/ru/articles/503284/)
 
-- Token-Based Authentication 
+- Token-Based Authentication
 	- [Bearer Authentication](https://devblogs.microsoft.com/dotnet/bearer-token-authentication-in-asp-net-core/)
 	- [JWT Bearer](https://learning.postman.com/docs/sending-requests/authorization/authorization-types/#jwt-bearer) обычно токен в формате [JWT](../../technology/jwt.md)
 	- Unlike API key and Basic authentication, token-based authentication offers __higher security__. Tokens can __expire__, reducing the window of vulnerability if compromised, and we can __cryptographically sign__ for added security.
@@ -45,7 +45,7 @@
   		- Авторизация [OAuth](../../technology/protocols.integration/oauth.md)
 - [API key](https://code-maze.com/aspnetcore-api-key-authentication/) - Данная схема обеспечивает защиту от несанкционированного использования API и позволяет осуществлять, например, проверку лимитов использования API.
 	- Лучше перейти на [Bearer Token, JWT Token](https://blog.postman.com/what-is-an-api-key/)
-	- .NET Core example in [header](https://code-maze.com/aspnetcore-api-key-authentication/) 
+	- .NET Core example in [header](https://code-maze.com/aspnetcore-api-key-authentication/)
 		- "X-API-Key" [swagger](https://swagger.io/docs/specification/authentication/api-keys/)
 		- Authorization header 'Authorization': 'Bearer YOUR_API_KEY' [RFC 7235](https://www.rfc-editor.org/rfc/rfc7235#section-4.2)
 	- __key rotation__ and __safe storage__ (Key Value Store - Vault), which leaves their API keys vulnerable to theft

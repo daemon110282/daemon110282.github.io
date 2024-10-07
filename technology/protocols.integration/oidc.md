@@ -23,7 +23,7 @@
 - Client - ИС
 	- Confidential  
 	- Public  
-- Claims - 
+- Claims
 - Scope - права Client
 - OAuth2
 	- Authorization Server

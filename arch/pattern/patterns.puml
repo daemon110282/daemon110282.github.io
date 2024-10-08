@@ -48,6 +48,7 @@ P -- Рефакторинг
 	SOLID -- DI
 	SOLID -- SRP
 	SOLID -- OpenClosed
+	note right: открыты для расширения \n но закрыты для модификации
 	SOLID -- Liskov
 	note right: Наследование \n Полиморфизм
 	SOLID -- Interface
@@ -122,8 +123,12 @@ P -- Рефакторинг
 		API GW, BFF
 		end note
 
-	Приложения -- EventSourcing
-	Приложения -- SAGA
+	Приложения --- EventSourcing
+	class DT as "Распределенные транзации"
+	Приложения -- DT
+		DT -- SAGA
+		DT -- 2PC
+		DT -- TransactionalOutbox
 
 Интеграции -- Идемпотетность
 

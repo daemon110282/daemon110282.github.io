@@ -36,5 +36,5 @@
 ## Технологии
 
 - [stateless .net core](https://www.hanselman.com/blog/stateless-30-a-state-machine-library-for-net-core)
-- [spring State Machine](https://spring.io/projects/spring-statemachine)
+- [Spring](../../../technology/framework/java.spring.md) [State Machine](https://spring.io/projects/spring-statemachine)
 - [BPMS](../../system.class/bpms.md)

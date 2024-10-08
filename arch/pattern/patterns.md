@@ -15,9 +15,11 @@
 - [Deployment Patterns](deployment/pattern.deployment.md)
 - [Рефакторинга](refactoring/pattern.refactoring.md)
 - [Transaction Management Patterns](https://airtable.com/embed/shrjiJuF7kIbcnXRl/tblgszzLV27MUFP4p) (5 Patterns)
-  - [Transactional Outbox](system.design/fault.tolerance/transact.outbox.md)
-  - [Transactional Inbox](system.design/fault.tolerance/transact.inbox.md)
-  - Saga
+  - Распределенные транзакции
+    - [Transactional Outbox](system.design/fault.tolerance/transact.outbox.md)
+    - [Transactional Inbox](system.design/fault.tolerance/transact.inbox.md)
+    - [SAGA](integration/pattern.saga.md)
+    - Two phase commit [2PC](integration/pattern.2pc.md)
   - Polling publisher
   - Transaction log tailing
 - [Testing Patterns](https://airtable.com/embed/shr6p9u80mD9CzVU1/tblyGd1oiAcYuTSbr) (3 Patterns)

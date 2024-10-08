@@ -19,7 +19,7 @@
     - [builtin validators](https://vuelidate.js.org/#sub-builtin-validators)
     - [async validate](https://vuelidate-next.netlify.app/examples.html#asynchronous-validation) and [custom async](https://vuelidate-next.netlify.app/custom_validators.html#async-validators)
     - [dynamic validate rule](https://vuelidate-next.netlify.app/examples.html#dynamic-validation-schema)
-    
+
 ## Плюсы-минусы
 
 - TypeScript слабая поддержка

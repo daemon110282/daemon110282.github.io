@@ -128,7 +128,7 @@ __Триггеры для подключения__, анализа ИБ
     - [MTLS](../../technology/protocols.integration/tls.md)
   - [Схемы аутентификации](security.api.md#схемы-аутентификации)
 - Фреймворки
-  - Spring Security
+  - [Spring](../../technology/framework/java.spring.md) Security
   - NodeJS Passport
 - [IAM](../../arch/system.class/iam.md)
   - [SSO](../pattern/security/sso.md)

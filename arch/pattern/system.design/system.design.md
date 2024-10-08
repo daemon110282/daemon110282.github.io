@@ -5,14 +5,7 @@
   - [Strangler Fig](../refactoring/monolit2msa.md)
   - Decompose by DDD [subdomain](ddd.md)
   - Service per Team
-- __SOLID__
-  - Single concern principle, __single response principle (SRP)__ принцип единственной ответственности
-    - решать одну проблему хорошо
-    - У класса должна быть только одна причина для изменения
-  - __Open-Closed__ - сущности открыты для расширения, но закрыты для изменения
-  - Liskov
-  - Interface Segregation
-  - Dependeny Injection
+- [__SOLID__](solid.md)  
 - LC/HC - [Принципы GRASP](https://rmcreative.ru/blog/post/printsipy-grasp)
   - [Low coupling (LC)](./low.coupling.md)
   - High cohesion (HC)

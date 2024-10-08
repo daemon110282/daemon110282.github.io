@@ -45,8 +45,8 @@ TODO
 - Хореография [Debezium + Kafka](https://habr.com/ru/companies/redhatrussia/articles/575844/)
 - serverless saga pattern by using AWS Step Functions
 - [MassTransit example](https://habr.com/ru/company/true_engineering/blog/412793/)
-- https://axoniq.io
-- https://eventuate.io/abouteventuatetram.html
-- https://github.com/eclipse/microprofile-lra
-- https://github.com/jbosstm/narayana/tree/master/rts/lra
+- <https://axoniq.io>
+- <https://eventuate.io/abouteventuatetram.html>
+- <https://github.com/eclipse/microprofile-lra>
+- <https://github.com/jbosstm/narayana/tree/master/rts/lra>
 - Оркестрация [camunda](https://camunda.com/blog/2018/08/bpmn-microservices-orchestration-part-2-graphical-models/)

@@ -10,7 +10,7 @@
 
 Плюсы:
 
-- Интегрируется просто с Apache Camel
+- Интегрируется просто с [Apache Camel](../apache.camel.md)
 - Протокол\API [JMS](../../protocols.integration/jms.md)
   - JMS-селекторы, которые позволяют из читаемой вами [очереди отфильтровывать сообщения](https://habr.com/ru/companies/usetech/articles/683022/)
 - AMQP, STOMP, OpenWire и MQTT

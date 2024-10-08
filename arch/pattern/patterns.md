@@ -37,7 +37,7 @@
 
 ## TODO
 
-https://hillside.net/patterns/patterns-catalog
+<https://hillside.net/patterns/patterns-catalog>
 <https://microservices.io/patterns/microservices.html>
 <https://www.enterpriseintegrationpatterns.com/patterns/>
 <http://rubyamqp.info/articles/patterns_and_use_cases.html>

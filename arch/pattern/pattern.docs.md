@@ -12,24 +12,10 @@
 
 ## Архитектуры
 
-- ADR - Architecture Decision Records
-  - документ, в котором фиксируется нечто «архитектурно важное»
-  - https://music.yandex.ru/album/14948662/track/87546546
-  - [шаблон](https://habr.com/ru/company/dododev/blog/578052/)
-    - Заголовок
-    - Статус: proposed (предложен), accepted (принят) и superseded (замещён)
-    - Контекст
-    - Решение
-    - Причины принятия решения
-      - Плюсы-минусы
-      - Анализ вариантов
-    - Последствия (TradeOff)
-    - Комплаенс (проверка соответствия)
+- [ADR - Architecture Decision Records](../ref/adr.md)
 - RFC - Request For Comments
   - [зачем, шаблон](https://brunoscheufler.com/blog/2020-07-04-documenting-design-decisions-using-rfcs-and-adrs)
-- KATA
-  - [sysopsquad](https://github.com/team7katas/sysopsquad)
-  - [sever_crew](https://github.com/vadagama/sever_crew)
+- [KATA](../ref/kata.md)
 - язык архитектурного моделирования
   - методологии TOGAF, которая считается наиболее распространенным и сбалансированным подходом для описания архитектуры предприятия
   - [ArchiMate](../../technology/archimate.md)

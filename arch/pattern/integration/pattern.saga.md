@@ -16,6 +16,7 @@
 
 TODO
 
+- [Хореографии или Оркестрации](https://developers.redhat.com/articles/2021/09/21/distributed-transaction-patterns-microservices-compared)
 - [Backward recovery](https://learn.microsoft.com/ru-ru/azure/architecture/reference-architectures/saga/saga)
 - Forward recovery
 
@@ -49,4 +50,9 @@ TODO
 - <https://eventuate.io/abouteventuatetram.html>
 - <https://github.com/eclipse/microprofile-lra>
 - <https://github.com/jbosstm/narayana/tree/master/rts/lra>
-- Оркестрация [camunda](https://camunda.com/blog/2018/08/bpmn-microservices-orchestration-part-2-graphical-models/)
+- Оркестрация
+  - [camunda](https://camunda.com/blog/2018/08/bpmn-microservices-orchestration-part-2-graphical-models/)
+  - Apache Airflow
+  - Azure Durable Functions
+  - Apache [Camel Saga](https://camel.apache.org/components/4.8.x/eips/saga-eip.html)
+  - NServiceBus [Saga](https://docs.particular.net/nservicebus/sagas/)

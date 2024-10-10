@@ -15,7 +15,7 @@
 - [Deployment Patterns](deployment/pattern.deployment.md)
 - [Рефакторинга](refactoring/pattern.refactoring.md)
 - [Transaction Management Patterns](https://airtable.com/embed/shrjiJuF7kIbcnXRl/tblgszzLV27MUFP4p) (5 Patterns)
-  - Распределенные транзакции
+  - [Распределенные транзакции](https://developers.redhat.com/articles/2021/09/21/distributed-transaction-patterns-microservices-compared)
     - [Transactional Outbox](system.design/fault.tolerance/transact.outbox.md)
     - [Transactional Inbox](system.design/fault.tolerance/transact.inbox.md)
     - [SAGA](integration/pattern.saga.md)

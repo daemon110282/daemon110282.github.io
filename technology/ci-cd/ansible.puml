@@ -15,6 +15,6 @@ ansible --> Playbook : сценарий автоматизации
 	Play --- Includes: ссылки на Playbook
 	Play --- Templates: генерация скриптов
 	note right: обычно Jinja2 \n шаблонизатор для Python
-	Play --- Roles:
+	Play --- Roles
 
 @enduml

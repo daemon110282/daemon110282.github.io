@@ -12,23 +12,50 @@
 
 ![tech](https://substackcdn.com/image/fetch/w_848,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2F05104299-813f-4df7-91d1-e143fd1ee6a6_1016x571.png)
 
-- CI - обеспечения процесса непрерывной интеграции
-  - Авто тесты [Tests](pattern/test.md)
-- CD - процесс доставки, развертывания: [Jenkins](../technology/ci-cd/jenkins.md)
-- [Deployment](pattern/deployment/pattern.deploy.md)
-  - [A\B test](ref/abtesting.md)
+CI - процесс обеспечения процесса непрерывной интеграции
+CD - процесс доставки, развертывания
+
+Этапы (Pipeline) процессов CI-CD:
+
+- Code
+  - Jira
+  - Git Flow
+  - Управление branch
+- Build: Maven, SBT
+- Test
+  - Авто тесты [Tests](pattern/test.md): Unit, E2E
+  - Code Style
+- Release
+  - [Jenkins](../technology/ci-cd/jenkins.md)
+- Deploy
+  - Docker
+  - Контура
+  - Стратегии [Deployment](pattern/deployment/pattern.deploy.md)
+    - [A\B test](ref/abtesting.md)
+- Operate
+  - Контейнеризация
+  - [Infrastructure-as-Code (IaC) automation](../technology/ci-cd/ioc.md)
+- Monitor
+  - Наблюдаемость [Observability](ability/observability.md)
+    - [Log management](../technology/observability/logging.md)
+    - Metric
+      - [Performance monitoring (APM класс систем) and dashboards](system.class/apm.md)
+    - Trace
+  - [SRE](../devops/sre.md)
+  - Crash Analytics
+  - Health Checks
+
+TODO
+
+- [Load balancer](../technology/middleware/loadbalancer.md)
+- [API Managment](../api/api-managment.md)
 - [Service Mesh](../technology/middleware/servicemesh.md)
 - [Доступность](ability/availability.md), Отказоустойчивость, Надежность
 - [Производительность](ability/performance.md)
   - Auto Scaling
-- [Infrastructure-as-Code (IaC) automation](../technology/ci-cd/ioc.md)
 - Сквозная функциональность
-  - Наблюдаемость [Observability](ability/observability.md)
-    - [Log management](../technology/observability/logging.md)
-    - [Performance monitoring (APM класс систем) and dashboards](system.class/apm.md)
   - [Security](ability/security.md)
   - [Audit](pattern/observability/pattern.audit.md)
-- [SRE](../devops/sre.md)
 
 ## Паттерны
 

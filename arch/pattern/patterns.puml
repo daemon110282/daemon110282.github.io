@@ -48,6 +48,7 @@ P -- Рефакторинг
 	SOLID -- DI
 	SOLID -- SRP
 	SOLID -- OpenClosed
+	note right: открыты для расширения \n но закрыты для модификации
 	SOLID -- Liskov
 	note right: Наследование \n Полиморфизм
 	SOLID -- Interface
@@ -122,8 +123,12 @@ P -- Рефакторинг
 		API GW, BFF
 		end note
 
-	Приложения -- EventSourcing
-	Приложения -- SAGA
+	Приложения --- EventSourcing
+	class DT as "Распределенные транзации"
+	Приложения -- DT
+		DT -- SAGA
+		DT -- 2PC
+		DT -- TransactionalOutbox
 
 Интеграции -- Идемпотетность
 
@@ -131,7 +136,23 @@ P -- Рефакторинг
 
 @startuml (id=deployment)
 
-Deployment -- CI-CD
+Deployment -- CI
+Deployment -- CD
+	CD -- jenkins
+	!include technology/ci-cd/jenkins.puml
+
+' !include technology/ci-cd/k8s.puml
+' !include technology/ci-cd/k8s.IC.puml
+
+Deployment -- GracefulShutdown
+Deployment --- Strategy
+	Strategy -- AB
+	Strategy -- BG
+	Strategy -- Canary
+	Strategy -- FeatureToggle
+Deployment -- IaC
+	IaC -- ansible
+	!include technology/ci-cd/ansible.puml
 
 @enduml
 
@@ -172,11 +193,17 @@ Security --- Аутентификация
 	note right: OAuth JWT OIDC Cookie CORS
 	Аутентификация -- SSO
 	Аутентификация -- MFA	
+	Аутентификация -- IAM
 Security -- Авторизация
 Security -- Криптозащита
 Security -- Аудит
 class ConfOut as "Конфигурация во вне"
 Security -- ConfOut 
+Security -- Infra
+	Infra -- Proxy
+	Infra -- WAF
+	Infra -- Firewall
+Security -- SIEM
 
 @enduml
 

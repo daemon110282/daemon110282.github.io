@@ -12,14 +12,14 @@
 - Vue концентрируется на однонаправленном потоке данных между компонентами
 - Динамическая форма
   - [asigloo](https://github.com/asigloo/vue-dynamic-forms) [example](https://www.vuescript.com/dynamically-create-reactive-forms/) [demo](https://vue-dynamic-forms-demos.alvarosaburido.dev/)
-  - https://rangle.io/blog/how-to-create-data-driven-user-interfaces-in-vue
-  - https://medium.com/vue-mastery/building-an-interactive-and-distraction-free-form-with-vue-bfe23907e981
+  - <https://rangle.io/blog/how-to-create-data-driven-user-interfaces-in-vue>
+  - <https://medium.com/vue-mastery/building-an-interactive-and-distraction-free-form-with-vue-bfe23907e981>
 - [Динамическая валидация](https://jasonwatmore.com/post/2020/09/30/vuejs-vuelidate-dynamic-form-example)
   - [vuelidate.js](https://vuelidate-next.netlify.app/)
     - [builtin validators](https://vuelidate.js.org/#sub-builtin-validators)
     - [async validate](https://vuelidate-next.netlify.app/examples.html#asynchronous-validation) and [custom async](https://vuelidate-next.netlify.app/custom_validators.html#async-validators)
     - [dynamic validate rule](https://vuelidate-next.netlify.app/examples.html#dynamic-validation-schema)
-    
+
 ## Плюсы-минусы
 
 - TypeScript слабая поддержка
@@ -37,7 +37,7 @@
 ## Технологии
 
 - [Components, Libraries](https://github.com/vuejs/awesome-vue)
-- Vite 
+- Vite
 - управления состоянием приложения
   - Pinia
   - Vuex

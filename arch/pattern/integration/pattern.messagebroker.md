@@ -106,5 +106,5 @@ TODO
     - Менее гибкая маршрутизация сообщений
       - Artemis Реализует концепцию "адреса" для маршрутизации сообщений и поддерживает различные типы маршрутизации, [включая anycast и multicast](https://www.mastertheboss.com/rabbitmq/activemq-vs-rabbitmq-a-comparison/)
         - Паттерны: PUB-SUB
-      - RMQ концепцию "обмена". Exchange в RabbitMQ - это компонент маршрутизации сообщений, который определяет, как сообщения распределяются по очередям	
-        - Паттерны: Message Queue, PUB-SUB and RPC and Routing
+      - RMQ концепцию "обмена". Exchange в RabbitMQ - это компонент маршрутизации сообщений, который определяет, как сообщения распределяются по очередям
+        - Паттерны: Message Queue, PUB-SUB, RPC, Routing

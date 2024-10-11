@@ -9,10 +9,10 @@
 
 ## Зачем
 
-- __Multiple subsystems__ must process the __same events__.
-- Real-time processing with minimum time lag.
-- Complex event processing, such as pattern matching or aggregation over time windows.
-- High volume and high velocity of data, such as IoT.
+- __Multiple subsystems__ must process the __same events__
+- Real-time processing with minimum time lag
+- Complex event processing, such as pattern matching or aggregation over time windows
+- High volume and high velocity of data, such as IoT
 - __[Background Jobs](../pattern/development/background.job.md)__: Sending background messages, emails, or notifications to loads of users.
 - __Asynchronous Messaging__: Messaging queues are the best way to implement asynchronous programming.
 - High Response Time: When the response time of a request is too much. For example, calculations, searching or pdf creation, etc.
@@ -61,8 +61,8 @@
 - __Запросы__ [CQRS](../pattern/performance/pattern.cqrs.md) - command query request segregation
 - [Event sourcing](../pattern/integration/event.sourcing.md)
 - __Распределенные транзакции__ (лучше не делать)
-  - [SAGA](../pattern/integration/pattern.saga.md) - компенсационные действия для отмены "транзакции"
-  - двухфазный комит - намерение, получено ок от участников, комит  
+  - [SAGA](../pattern/integration/pattern.saga.md)
+  - [2PC](../pattern/integration/pattern.2pc.md) двухфазный комит
 - [Versioning Message](https://www.youtube.com/watch?v=mEzYTuYSork&list=PLx8uyNNs1ri2MBx6BjPum5j9_MMdIfM9C&index=11&ab_channel=ChrisPatterson)
   - [EasyNetQ by message type](https://github.com/EasyNetQ/EasyNetQ/wiki/Versioning-Messages)
 

@@ -15,9 +15,11 @@
 - [Deployment Patterns](deployment/pattern.deployment.md)
 - [Рефакторинга](refactoring/pattern.refactoring.md)
 - [Transaction Management Patterns](https://airtable.com/embed/shrjiJuF7kIbcnXRl/tblgszzLV27MUFP4p) (5 Patterns)
-  - [Transactional Outbox](system.design/fault.tolerance/transact.outbox.md)
-  - [Transactional Inbox](system.design/fault.tolerance/transact.inbox.md)
-  - Saga
+  - [Распределенные транзакции](https://developers.redhat.com/articles/2021/09/21/distributed-transaction-patterns-microservices-compared)
+    - [Transactional Outbox](system.design/fault.tolerance/transact.outbox.md)
+    - [Transactional Inbox](system.design/fault.tolerance/transact.inbox.md)
+    - [SAGA](integration/pattern.saga.md)
+    - Two phase commit [2PC](integration/pattern.2pc.md)
   - Polling publisher
   - Transaction log tailing
 - [Testing Patterns](https://airtable.com/embed/shr6p9u80mD9CzVU1/tblyGd1oiAcYuTSbr) (3 Patterns)
@@ -35,7 +37,7 @@
 
 ## TODO
 
-https://hillside.net/patterns/patterns-catalog
+<https://hillside.net/patterns/patterns-catalog>
 <https://microservices.io/patterns/microservices.html>
 <https://www.enterpriseintegrationpatterns.com/patterns/>
 <http://rubyamqp.info/articles/patterns_and_use_cases.html>

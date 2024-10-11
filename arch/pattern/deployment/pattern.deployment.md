@@ -5,6 +5,12 @@
 - [DevOps](../../devops.md)
 - Проверка работоспособности ([Health-check](../observability/pattern.healthcheck.md))
 - [Балансировка нагрузки](load.balancing.md)
+- Service Registry
+- Service Discovery
+- Service Mesh
+- Auto Scale
+- Graceful Shutdown
+- Strategy: AB BG Canary FeatureToggle
 
 TODO
 

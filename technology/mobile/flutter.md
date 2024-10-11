@@ -11,6 +11,9 @@ TODO
   - Используют: АлиЭкспресс, Яндекс.такси, creatio
 - Проблемы локализации
 
+<https://blog.surf.ru/flutter-iedinstviennaia-pravilnaia-krossplatforma/> Flutter
+<https://blog.surf.ru/razrabotka-mobilnogho-prilozhieniia-na-flutter-tsiena-sroki-primiery/> Flutter vs Native цена, сроки
+
 ## Плюсы-Минусы
 
 Плюсы:
@@ -37,6 +40,13 @@ TODO
 ## Функции
 
 - WebView (интеграция с Yandex Forms, например, для опросов)
+- [Add-To-App](https://habr.com/ru/companies/surfstudio/articles/822693/) - способ интеграции (как экран, фрагмент, модальное окно) __Flutter-модуля__ в уже __существующее нативное__ приложение (симбиоз),например: Yappy
+  - [Pigeon](https://pub.dev/packages/pigeon) - __code generator__ tool to make communication between Flutter and the host platform type-safe, easier, and faster
+  - Постепенная миграция по модулям на Flutter с нативного приложения
+
+## Паттерны
+
+- Кэширование "движка" Engine Flutter
 
 ## Архитектура
 

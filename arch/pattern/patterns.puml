@@ -182,10 +182,10 @@ Security -- ConfOut
 
 @startuml (id=refactoring)
 
-Рефакторинг -- DDD
-Рефакторинг -- EventStorming
-Рефакторинг -- CDC
-!include pattern/refactoring/monolit2msa.puml!code
-!include pattern/refactoring/monolit2msa.db.puml
+' Рефакторинг -- DDD
+' Рефакторинг -- EventStorming
+' Рефакторинг -- CDC
+' !include refactoring/monolit2msa.puml!code
+!include refactoring/monolit2msa.db.puml
 
 @enduml

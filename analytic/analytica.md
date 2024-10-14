@@ -38,18 +38,19 @@
       1. [Customer Journey Map](../analytic/cjm.md) (CJM)
    2. Бизнес [цели](#цели) (БЦ)
       1. [Metrics Driven Development](ba.md#metrics-driven-development-lean-startup), Lean Startup
-   3. [БП](#бизнес-процесс-бп)
-   4. [US](#user-story-us-пользовательские-истории)
+   3. [US](#user-story-us-пользовательские-истории)
       1. [User Stoty Map](#user-stoty-map)
       2. [Event Storming](../arch/pattern/system.design/event.storming.md)
+   4. [БП](#бизнес-процесс-бп)
    5. [UC](#use-case-uc-сценарии-использования)
 3. FT Функциональные требования
    1. [UI UX](ui-ux.md)
    2. [Модель данных](#модель-данных)
 4. Data Driven
-    1. [ab тесты](ab.tests.md)
+    1. [AB тесты](ab.tests.md)
 
 - [todo](http://agilemindset.ru/%d0%b2%d0%b0%d0%b6%d0%bd%d0%be%d1%81%d1%82%d1%8c-%d0%bf%d0%be%d0%bd%d0%b8%d0%bc%d0%b0%d0%bd%d0%b8%d1%8f-%d0%bf%d1%80%d0%b5%d0%b4%d0%bc%d0%b5%d1%82%d0%bd%d0%be%d0%b9-%d0%be%d0%b1%d0%bb%d0%b0%d1%81/)
+- https://habr.com/ru/articles/842280/
 
 ## Сбор требований
 
@@ -117,8 +118,8 @@ TO-DO
 ### UC vs US
 
 - [сценарии использования (Use case), в отличие от пользовательских историй (User Story)](https://babok-school.ru/blogs/user-story-vs-use-case-and-uml/), описывают процесс и его шаги подробно, предоставляя всю необходимую информацию о взаимодействии актора с системой, включая цель, пред- и пост-условия, триггеры, основные и альтернативные потоки, а также бизнес-правила
-- Use Case: Помогает разработчикам понять, __как именно система__ [должна работать](https://podbiratel.com/pm/product-start/user-case).
-- User Story: Помогает команде понять, __что хочет пользователь и зачем__.
+- User Story: Помогает команде понять, __что хочет пользователь и зачем__
+- Use Case: Помогает разработчикам понять, __как именно система__ [должна работать](https://podbiratel.com/pm/product-start/user-case)
 
 ### User Story (US) Пользовательские истории
 
@@ -184,6 +185,7 @@ TO-DO
 - Таблица
   - Поля, Тип данных, Обязательность, Правила валидации, Источник данных, Пример
 - Модель состояний ([FSM](../arch/pattern/development/pattern.state.machine.md))
+- [ERD](https://habr.com/ru/companies/yandex_praktikum/articles/839488/)
 
 ## Книги
 

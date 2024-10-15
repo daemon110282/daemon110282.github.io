@@ -31,3 +31,12 @@
 - uses HTTP/2 as a transport protocol, and [no native browser support exists](https://adjoe.io/company/engineer-blog/working-with-grpc-web/)
   - Для запросов из __браузера__ требуется __библиотека__ и протокол ([grpc-web](https://github.com/grpc/grpc-web)) и __прокси__ (Envoy или [ASP.NET Core gRPC](https://learn.microsoft.com/ru-ru/aspnet/core/grpc/grpcweb))
   - не полная поддержка протокола (Client-side and Bi-directional streaming)
+
+## Паттерны
+
+- [Правила проектирования Google](https://google.aip.dev/general)
+
+## Утилиты
+
+- Linter
+  - [Google API Linter](https://linter.aip.dev/)

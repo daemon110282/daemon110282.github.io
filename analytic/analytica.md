@@ -186,6 +186,9 @@ TO-DO
   - Поля, Тип данных, Обязательность, Правила валидации, Источник данных, Пример
 - Модель состояний ([FSM](../arch/pattern/development/pattern.state.machine.md))
 - [ERD](https://habr.com/ru/companies/yandex_praktikum/articles/839488/)
+  - Draw.io
+    - [Diagramm2Text](https://drawio-app.com/blog/text-plugin/)
+    - [SQL2Diagramm](https://drawio-app.com/blog/entity-relationship-diagrams-with-draw-io/)
 
 ## Книги
 

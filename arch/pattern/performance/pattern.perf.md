@@ -15,7 +15,7 @@
 ## Паттерны
 
 - [Балансировка](../deployment/load.balancing.md)
-- [DevOps Avto Scale](../../devops.md#auto-scaling)
+- [DevOps Avto Scale](../deployment/devops.md#auto-scaling)
 - Отложенные вычисления
 - Предобработка данных
 

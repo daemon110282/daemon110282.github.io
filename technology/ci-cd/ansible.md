@@ -2,7 +2,7 @@
 
 ## Зачем
 
-Решение IAC для [CI-CD](../../arch/devops.md).
+Решение IAC для [CI-CD](../../arch/pattern/deployment/devops.md).
 
 - механизм автоматизации ИТ, который автоматизирует
   - [Управление облачной инфраструктурой](https://practicum.yandex.ru/blog/ansible-sistema-upravleniya-serverami/)

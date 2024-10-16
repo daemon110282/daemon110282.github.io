@@ -11,7 +11,6 @@
     - [Бизнес и ИТ стратегии](analytic/strategy.md)
     - [Бизнес архитектуре](analytic/arch.ba.md)
     - [Бизнес Аналитике требования](analytic/analytica.md)
-- [DevOps](arch/devops.md)
 - [Паттерны Шаблоны](arch/pattern/patterns.md)
 - [CheckList](checklist/checklist.md)
 - [Миграции ИС](arch/pattern/refactoring/migration.md)

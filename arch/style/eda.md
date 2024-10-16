@@ -9,6 +9,8 @@
 
 ## Зачем
 
+[Архитектурный стиль](../arch.styles.md).
+
 - __Multiple subsystems__ must process the __same events__
 - Real-time processing with minimum time lag
 - Complex event processing, such as pattern matching or aggregation over time windows

@@ -184,7 +184,7 @@
   - стоимость сделки
 - Сервисные
 - Системные
-- Аналитика: Firebase Analytics, Crashlytics, AppsFlyer, Amplitude
+- Аналитика: [Firebase](../../technology/ci-cd/firebase.md) Analytics, Crashlytics, AppsFlyer, Amplitude
 
 ## Роли
 

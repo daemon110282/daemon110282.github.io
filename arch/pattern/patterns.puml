@@ -138,6 +138,8 @@ P -- Рефакторинг
 
 Deployment -- CI
 Deployment -- CD
+	CD -- TeamCity
+	CD -- GitLab
 	CD -- jenkins
 	!include technology/ci-cd/jenkins.puml
 

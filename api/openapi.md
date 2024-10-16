@@ -29,7 +29,9 @@
 ## Утилиты
 
 - [Tools](https://openapi.tools/)
-- [проверка качества\безопасности описания АПИ](https://apisecurity.io/tools/audit/)
+- Проверка качества\безопасности описания АПИ
+  - [apisecurity.io](https://apisecurity.io/tools/audit/)
+  - API Scoring System
 - Comparator - сравнение схем OpenApi
 
 ## Паттерны

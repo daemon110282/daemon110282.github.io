@@ -78,7 +78,7 @@
 ## Технологии
 
 - [Vue.JS](../../technology/framework/vuejs.md)
-- React
+- [React](../../technology/framework/react.md)
 	- Next.js
 
 ## Reference Architecture

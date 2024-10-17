@@ -1,5 +1,10 @@
 # JsonSchema
 
+## Зачем
+
+Язык описания структуры и валидации данных в формате JSON.
+
+- 
 https://json-schema.org/implementations.html
 https://habr.com/ru/post/495766/
 
@@ -14,6 +19,5 @@ https://stackoverflow.com/questions/71121399/how-do-i-incorporate-json-schema-in
 
 Dto from scheme
 
-Dynamic form
-https://github.com/hamzahamidi/ajsf#readme
-https://rjsf-team.github.io/react-jsonschema-form/
+Json Schema Dynamic form
+	Angular JSON Schema Form https://github.com/hamzahamidi/ajsf#readme

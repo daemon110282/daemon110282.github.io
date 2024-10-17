@@ -17,9 +17,9 @@
 - [Protocol integration](protocols.integration.md)
 - [Benchmark](ability/performance/load.test.md)
 - DEV
-  - Templating languages and HTML preprocessors: Pug, Nunjucks, Markdown.
-  - CSS preprocessors: SCSS, LESS, PostCSS.
-  - JavaScript frameworks: Angular, React, Vue, Svelte.
-  - JavaScript meta frameworks: Next.js, Nuxt, Astro.
-  - High-level programming languages: TypeScript, Dart, CoffeeScript.
+  - Templating languages and HTML preprocessors: Pug, Nunjucks, Markdown
+  - CSS preprocessors: SCSS, LESS, PostCSS
+  - JavaScript frameworks: Angular, React, Vue, Svelte
+  - JavaScript meta frameworks: Next.js, Nuxt, Astro
+  - High-level programming languages: TypeScript, Dart, CoffeeScript
 - [EA Tools](ea-tools.md)

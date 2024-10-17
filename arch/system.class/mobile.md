@@ -44,7 +44,7 @@
 - Cross Platform
 	- [Flutter](../../technology/mobile/flutter.md)
 	- [Ionic](../../technology/mobile/ionic.md)
-	- [React Native](../../technology/mobile/react.md)
+	- [React Native](../../technology/mobile/react.native.md)
 	- [Kotlin multiplatform](https://kotlinlang.org/docs/multiplatform.html)
 		- <https://habr.com/ru/companies/otus/articles/751192/>
 

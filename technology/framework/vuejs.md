@@ -38,6 +38,7 @@
 - [asigloo](https://github.com/asigloo/vue-dynamic-forms) [example](https://www.vuescript.com/dynamically-create-reactive-forms/) [demo](https://vue-dynamic-forms-demos.alvarosaburido.dev/)
 - <https://rangle.io/blog/how-to-create-data-driven-user-interfaces-in-vue>
 - <https://medium.com/vue-mastery/building-an-interactive-and-distraction-free-form-with-vue-bfe23907e981>
+- from [Json Schema](https://vuejsexamples.com/generate-a-form-using-json-schema-and-vue-js/)
 
 ### Динамическая валидация Dynamic Validation
 

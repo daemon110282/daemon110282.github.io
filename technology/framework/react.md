@@ -35,17 +35,23 @@
 
 ### Динамическая форма Dynamic Forms
 
-- [react-jsonschema-form](https://rjsf-team.github.io/react-jsonschema-form/)
-  - [](https://github.com/rjsf-team/react-jsonschema-form)
-    - [themes](https://rjsf-team.github.io/react-jsonschema-form/docs/usage/themes/)
-  - [docs](https://rjsf-team.github.io/react-jsonschema-form/docs/)
-  - [обучение](https://habr.com/ru/companies/otus/articles/829326/)
-  - version
-    - v5
-      - validation use [AJV v8](https://rjsf-team.github.io/react-jsonschema-form/docs/usage/validation)
-        - Live\Submit
+- from Json Schema
+  - [react-jsonschema-form](https://rjsf-team.github.io/react-jsonschema-form/)
+    - [функции](https://github.com/rjsf-team/react-jsonschema-form)
+      - [themes](https://rjsf-team.github.io/react-jsonschema-form/docs/usage/themes/)
+    - [docs](https://rjsf-team.github.io/react-jsonschema-form/docs/)
+    - [обучение](https://habr.com/ru/companies/otus/articles/829326/)
+    - version
+      - v5
+        - validation use [AJV v8](https://rjsf-team.github.io/react-jsonschema-form/docs/usage/validation)
+          - Live\Submit
+  - [fform](https://habr.com/ru/articles/466179/)
+  - Json Schema [Form Constructor](https://wtnm.github.io/fform-constructor/index.html)
 - [react-hook-form](https://react-hook-form.com/)
 	- [example v7](https://github.com/react-hook-form/react-hook-form/tree/master/examples)
+	- отдельная библиотека from [Json Schema](https://github.com/vtex/react-hook-form-jsonschema)
+  	- много ограничений по [поддержке Json Schema](https://github.com/vtex/react-hook-form-jsonschema?tab=readme-ov-file#supported-json-schema-keywords)
+- [Formik](https://reactjsexample.com/example-for-a-lightweight-react-json-form-builder/)
 - [варианты](https://questu.ru/articles/332266/)
   - jsonforms.io
   - [react-schema-form](https://github.com/networknt/react-schema-form)

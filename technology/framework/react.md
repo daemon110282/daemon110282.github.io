@@ -1,11 +1,11 @@
 # React JS
 
 - [React JS](#react-js)
-	- [Зачем](#зачем)
-	- [Плюсы-минусы](#плюсы-минусы)
-	- [Паттерны](#паттерны)
-		- [Динамическая валидация Dynamic Validation](#динамическая-валидация-dynamic-validation)
-		- [Динамическая форма Dynamic Forms](#динамическая-форма-dynamic-forms)
+  - [Зачем](#зачем)
+  - [Плюсы-минусы](#плюсы-минусы)
+  - [Паттерны](#паттерны)
+    - [Динамическая валидация Dynamic Validation](#динамическая-валидация-dynamic-validation)
+    - [Динамическая форма Dynamic Forms](#динамическая-форма-dynamic-forms)
 
 ## Зачем
 
@@ -28,10 +28,10 @@
     - v8
       - specifically formatted messages
     - v6
-  - [builtin validators]()
-  - [async validate](https://ajv.js.org/guide/async-validation.html) 
-  - and [custom async](t)
+  - [builtin validators](https://ajv.js.org/guide/formats.html)
+  - [async validate](https://ajv.js.org/guide/async-validation.html)
   - [dynamic validate rule](t)
+  - [Errors i18n](https://github.com/ajv-validator/ajv-i18n)
 
 ### Динамическая форма Dynamic Forms
 
@@ -46,8 +46,6 @@
         - Live\Submit
 - [react-hook-form](https://react-hook-form.com/)
 	- [example v7](https://github.com/react-hook-form/react-hook-form/tree/master/examples)
-
-TODO
-  - [asigloo](https://github.com/asigloo/vue-dynamic-forms) [example](https://www.vuescript.com/dynamically-create-reactive-forms/) [demo](https://vue-dynamic-forms-demos.alvarosaburido.dev/)
-  - <https://rangle.io/blog/how-to-create-data-driven-user-interfaces-in-vue>
-  - <https://medium.com/vue-mastery/building-an-interactive-and-distraction-free-form-with-vue-bfe23907e981>
+- [варианты](https://questu.ru/articles/332266/)
+  - jsonforms.io
+  - [react-schema-form](https://github.com/networknt/react-schema-form)

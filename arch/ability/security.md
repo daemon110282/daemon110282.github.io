@@ -42,7 +42,7 @@
 - Device/Endpoint
   - Антивирусы
 - Network Сетевая Инфраструктура
-  - [Шифрование канала связи (трафика)](security.vpn.md): TLS, mTLS, VPN
+  - [Шифрование канала связи (трафика)](security.vpn.md): [TLS, mTLS](../../technology/protocols.integration/tls.md), VPN
   - DDOS
   - FireWall
   - NAT, NAC

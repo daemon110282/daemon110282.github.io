@@ -2,6 +2,7 @@
 
 - [Security API](#security-api)
 	- [Зачем](#зачем)
+	- [Виды атак](#виды-атак)
 	- [Паттерны](#паттерны)
 	- [Схемы аутентификации](#схемы-аутентификации)
 	- [REST](#rest)
@@ -10,6 +11,18 @@
 
 Обеспечение [информационной безопасности](security.md) API.
 
+## Виды атак
+
+- [Zombie AP](https://ib-bank.ru/bisjournal/post/2096)
+- Shadow API
+- Внедрение кода (SQL injection)
+- [Cookie не корректно настроен CORS](https://habr.com/ru/articles/844224/)
+- SMS Leak
+- ATO-атаки
+- DDOS
+- Man In the Middle (MitM)
+  - [API Key](https://approov.io/blog/steal-that-api-key-with-a-man-in-the-middle-attack)
+  
 ## Паттерны
 
 - [OWASP](https://42crunch.com/owasp-api-security-top-10/) [TOP 10](https://owasp.org/API-Security/)

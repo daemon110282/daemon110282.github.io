@@ -4,6 +4,7 @@
   - [Зачем](#зачем)
   - [Параметры Flow](#параметры-flow)
   - [Security](#security)
+  - [Виды атак](#виды-атак)
 
 ## Зачем
 
@@ -11,7 +12,7 @@
 - [Нужен, чтобы получать](https://habr.com/ru/company/dataart/blog/311376/) токены доступа и с ними обращаться к ресурсам.
 - RBAC\ABAC и тп
 - [TODO](https://connect2id.com/learn/oauth-2)
-- [Flow](https://habr.com/ru/company/nixys/blog/566910/) (also called __Grants__):
+- [Flow-Grants](oidc.md#flow-grant):
   - Public Client
     - [Authorization Code Flow with PKCE](oauth/oauth.flow.ACwithPKCE.md)
 
@@ -30,9 +31,24 @@
 
 ## Security
 
-- Время жизни ограничено:
+- Время жизни ограничено Expiration
   - [Access Token](oauth/oauth.access.token.md)
   - [Refresh Token](oauth/oauth.refresh.token.md)
 - Валидация
   - [Token validate](oauth/oauth.validate.token.md)
   - [Token exchange](oauth/oauth.exchange.token.md)
+- Шифрование [JSON Web Encryption](https://www.rfc-editor.org/rfc/rfc7516) (JWE)
+  - [Auth0 sample](https://auth0.com/docs/secure/tokens/access-tokens/json-web-encryption)
+- Подписание JSON Web Signature (JWS)
+
+## Виды атак
+
+[Варианты атак](https://habr.com/ru/company/alexhost/blog/536364/)
+
+- MitM Перехват токена
+  - [Решение HTTPS](https://cyberpolygon.com/ru/materials/security-of-json-web-tokens-jwt/)
+  - [Refresh Token](oauth/oauth.refresh.token.md)
+  - Закрепление сертификата X.509 [Certificate Pinning](https://approov.io/product/dynamic-cert-pinning) from [Android API 24](https://approov.io/blog/securing-https-with-certificate-pinning-on-android)
+  - шифрование токенов JWE assymetric RSA
+  - подписание токенов JWS assymetric RSA
+- Replay attack

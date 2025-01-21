@@ -4,9 +4,11 @@
   - [Зачем](#зачем)
   - [Виды атак](#виды-атак)
   - [Паттерны](#паттерны)
+    - [Триггеры для подключения ОИБ, анализа ИБ](#триггеры-для-подключения-оиб-анализа-иб)
     - [TODO](#todo)
     - [Аутентификация](#аутентификация)
     - [Авторизация](#авторизация)
+  - [Антипаттерны](#антипаттерны)
   - [Сертификаты](#сертификаты)
   - [Технологии](#технологии)
   - [Примеры требований](#примеры-требований)
@@ -28,21 +30,16 @@
 - [Атаки загрязнения прототипа](https://habr.com/ru/companies/piter/articles/841098/)
 - [Кликджекинг](https://habr.com/ru/companies/piter/articles/841098/)
 - Табнаббинг и обратный табнаббинг
-- API
-  - [Zombie AP](https://ib-bank.ru/bisjournal/post/2096)
-  - Shadow API
-  - Внедрение кода (SQL injection)
-  - [Cookie не корректно настроен CORS](https://habr.com/ru/articles/844224/)
-  - SMS Leak
-  - ATO-атаки
-  - DDOS
+- [API](security.api.md#виды-атак)
 
 ## Паттерны
 
 - Device/Endpoint
   - Антивирусы
 - Network Сетевая Инфраструктура
-  - [Шифрование канала связи (трафика)](security.vpn.md): [TLS, mTLS](../../technology/protocols.integration/tls.md), VPN
+  - [Шифрование канала связи (трафика)](security.vpn.md):
+    - [TLS, mTLS](../../technology/protocols.integration/tls.md)
+    - VPN, туннель
   - DDOS
   - FireWall
   - NAT, NAC
@@ -55,7 +52,6 @@
   - [Авторизация](#авторизация)
   - [API Security](security.api.md)
   - [Крипто Защита Информации](security.crypto.md) (Шифрование, ЭЦП)
-  туннель
   - [Zero Trust](https://t.me/ru_arc/136)
   - Аудит, логирование
     - [Platform V Synapse](https://platformv.sbertech.ru/blog/kak-otslezhivat-bezopasnost-prikladnyh-api-s-pomoshhyu-platform-v-synapse)
@@ -79,12 +75,8 @@
     - матрица рисков
     - поверхность атаки
   - [Pen Tests](https://www.aztechit.co.uk/blog/cloud-security-best-practices)
-- Антипаттерны
-  - Черные списки
-  - Шаблонный код
-  - Доверие по умолчанию
 
-__Триггеры для подключения__, анализа ИБ
+### Триггеры для подключения ОИБ, анализа ИБ
 
 - Добавление или, напротив, отказ от внешних точек выхода в интернет
 - Изменение внешних API
@@ -97,7 +89,7 @@ __Триггеры для подключения__, анализа ИБ
 - PCI DSS
 - k8s
   - TLS – cert-manager
-
+  
 ### Аутентификация
 
 - Состоит из:
@@ -139,6 +131,12 @@ __Триггеры для подключения__, анализа ИБ
 - Access Control List (ACL)
   - по URI
 - RBAC\ABAC
+
+## Антипаттерны
+
+- Черные списки
+- Шаблонный код
+- Доверие по умолчанию
 
 ## Сертификаты
 

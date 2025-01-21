@@ -27,8 +27,16 @@
 	- [SPI](https://github.com/dasniko/keycloak-extensions-demo/tree/main/captcha)
 	- [Custom login form by Phone+Captcha+SMS OTP](https://github.com/FX-HAO/keycloak-phone-authenticator)
       - [Custom AuthenticationFactory by Phone](https://developers.redhat.com/blog/2020/10/23/use-mobile-numbers-for-user-authentication-in-keycloak#)
-- Custom Fields Token
-- [ACF](../../protocols.integration/oauth/oauth.flow.ACwithPKCE.md) with [PKCE](https://www.keycloak.org/docs/latest/server_admin/#con-oidc-auth-flows_server_administration_guide)
+- Flow-Grants
+  - [ACF](../../protocols.integration/oauth/oauth.flow.ACwithPKCE.md) with [PKCE](https://www.keycloak.org/docs/latest/server_admin/#con-oidc-auth-flows_server_administration_guide)
+  - Implicit Flow
+- Tokens
+  - Custom Fields Token
+  - Refresh token rotation
+	- [Revoke Refresh Token](https://www.keycloak.org/docs/latest/server_admin/#_timeouts)
+  - [Token Expiration](https://blog.elest.io/keycloak-token-management-expiration-revocation-and-renewal/)
+  - Шифрование [JSON Web Encryption](https://www.rfc-editor.org/rfc/rfc7516) (JWE) RSA
+    - only support [ID Token](https://www.keycloak.org/docs/latest/server_admin/index.html#con-advanced-settings_server_administration_guide)
 - Template Email
 - [REST API](https://www.keycloak.org/docs-api/19.0.3/rest-api/index.html)
 	- Управление пользователями
@@ -60,8 +68,6 @@
 	- Keycloak SPI plugin that [publishes events to a RabbitMq server](https://github.com/aznamier/keycloak-event-listener-rabbitmq)
 	- Keycloak SPI plugin [Kafka](https://github.com/SnuK87/keycloak-kafka)
 - Keycloak v19 sending logs using __GELF__ to centralized logging solutions like __ELK, EFK or Graylog out of the box__.
-- Refresh token rotation
-	- [Revoke Refresh Token](https://www.keycloak.org/docs/latest/server_admin/#_timeouts)
 - Session State
 	- обмен cookie через [iframe механизм](https://github.com/keycloak/keycloak-documentation/blob/main/securing_apps/topics/oidc/javascript-adapter.adoc#session-status-iframe) не все [браузеры будут поддерживать в дальнейшем](https://www.keycloak.org/docs/latest/securing_apps/#_modern_browsers)
 - [JavaScript Adapter for Client App](https://www.keycloak.org/docs/latest/securing_apps/#_javascript_adapter)
@@ -71,7 +77,7 @@
 - Realm - [необходимо ограничение по кол-ву, риски по НТ](https://highload.today/blogs/keycloak-i-oauth-2/)
 	- Users входят в Realm
 	- Clients входят в Realm
-	- [MTA](../../../arch/pattern/mta/mta.md) подход можно реализовать
+	- [MTA](../../../arch/pattern/system.design/mta/mta.md) подход можно реализовать
 - Groups
 - Roles
 - [Cross-Origin Resource Sharing (CORS)](../../protocols.integration/cors.md)
@@ -84,7 +90,7 @@
 User Federation
 
 - REST SPI [Custom User provider](https://www.baeldung.com/java-keycloak-custom-user-providers) реализация интерфейсов org.keycloak.storage.UserStorageProviderFactory - Allows Keycloak to access custom user stores.
-	- [Интерфейсы пользовательских провайдеров](https://www.keycloak.org/docs/11.0/server_development/index.html#provider-capability-interfaces)
+  - [Интерфейсы пользовательских провайдеров](https://www.keycloak.org/docs/11.0/server_development/index.html#provider-capability-interfaces)
 
 ### Access Control
 
@@ -165,9 +171,10 @@ Example
 
 [Releases](https://www.keycloak.org/2022/03/releases.html)
 
-- 18.* замена сервера приложений Java WildFly на Quarkus
-- [19.*](https://www.keycloak.org/archive/documentation-19.0.html)
+- 26.*
 - [20.*](todo)
+- [19.*](https://www.keycloak.org/archive/documentation-19.0.html)
+- 18.* замена сервера приложений Java WildFly на Quarkus
 
 ## Compare
 

@@ -1,6 +1,7 @@
 # ABP.IO Platform
 
 - [ABP.IO Platform](#abpio-platform)
+  - [Зачем](#зачем)
   - [Плюсы и минусы](#плюсы-и-минусы)
   - [Deployment](#deployment)
   - [Сквозная функциональность](#сквозная-функциональность)
@@ -8,24 +9,37 @@
     - [Multi Tenant](#multi-tenant)
     - [Audit](#audit)
     - [Logging](#logging)
-  - [Links](#links)
+
+## Зачем
+
+Платформа для разработки веб приложений
+
+- на принципах DDD, EDA, MTA, MSA
+- технологиях интеграций RMQ, Kafka
+- протоколах OAuth, OIDC
+- хранилищах MSSQL, PosgreSQL, MongoDB
+- CI-CD k8s, Docker
+- техстеке .NET Core
+- тестах Unit
+
+[Blog](https://blog.abp.io/abp).
 
 ## Плюсы и минусы
 
-[Критерии](../arch.criteria.md)
+[Критерии](../../arch/arch.criteria.md)
 
 | + | - |
 | - | - |
 | лицензия LGPL + коммерческая при необх-ти | vue не из коробки, т.е. пишем на React |
 | с 2012 года, много релизов | LDAP Auth платный модуль|
-| [feature toggle by tenant](https://docs.abp.io/en/abp/latest/Modules/Tenant-Management#managing-the-tenant-features)
-| [DDD](https://abp.io/books/implementing-domain-driven-design) 
-| RMQ
-| модульный монолит->микросервисы заявлено
-| swagger
-| [workflow](https://community.abp.io/posts/using-elsa-workflow-with-the-abp-framework-773siqi9)
-| [CICD + docker + k8s](https://community.abp.io/posts/.net-core-microservice-application-with-abp-docker-and-cicd-part-10-8snm8lwy)
-| [Identity Server4](http://docs.identityserver.io/), OpenID Connect protocol, Ouath
+| [feature toggle by tenant](https://docs.abp.io/en/abp/latest/Modules/Tenant-Management#managing-the-tenant-features) ||
+| [DDD](https://abp.io/books/implementing-domain-driven-design) ||
+| RMQ ||
+| модульный монолит->микросервисы заявлено ||
+| swagger | |
+| [workflow](https://community.abp.io/posts/using-elsa-workflow-with-the-abp-framework-773siqi9)||
+| [CICD + docker + k8s](https://community.abp.io/posts/.net-core-microservice-application-with-abp-docker-and-cicd-part-10-8snm8lwy)||
+| [Identity Server4](http://docs.identityserver.io/), OpenID Connect protocol, Ouath||
 
 ## Deployment
 
@@ -41,17 +55,18 @@
 ### Authentication, Authorization
 
 - Authentication Identity
-  - https://docs.abp.io/en/abp/latest/Modules/Identity
+  - <https://docs.abp.io/en/abp/latest/Modules/Identity>
   - [IAM](../../arch/system.class/iam.md) [IdentityServer4](https://docs.abp.io/en/abp/latest/Modules/IdentityServer)
-  - [SSO](../../arch/sso.md)
-    - https://academy.hiretechteam.com/blog/how-to-implement-single-sign-with-abp-commercial-application
-    - https://www.google.com/url?sa=t&source=web&rct=j&url=https://www.youtube.com/watch%3Fv%3Dth3IugJGQDA&ved=2ahUKEwiv1Z3VtuH6AhURCBAIHbxoC1I4ChC3AnoECBwQAg&usg=AOvVaw3LGyJwYvrPLvmjBpHgP-Jw
-    - [OpenID Connect module](https://docs.abp.io/en/abp/latest/Modules/OpenIddict) on https://documentation.openiddict.com
+  - [SSO](../../arch/pattern/security/sso.md)
+    - <https://academy.hiretechteam.com/blog/how-to-implement-single-sign-with-abp-commercial-application>
+    - <https://www.google.com/url?sa=t&source=web&rct=j&url=https://www.youtube.com/watch%3Fv%3Dth3IugJGQDA&ved=2ahUKEwiv1Z3VtuH6AhURCBAIHbxoC1I4ChC3AnoECBwQAg&usg=AOvVaw3LGyJwYvrPLvmjBpHgP-Jw>
+    - [OpenID Connect module](https://docs.abp.io/en/abp/latest/Modules/OpenIddict) on <https://documentation.openiddict.com>
 - [Authorization](https://docs.abp.io/en/abp/latest/Authorization)
   - [Disable Concurent Login](https://support.abp.io/QA/Questions/3047/Disable-concurrent-user-login)
-  - Под разные UI FE 
+  - Под разные UI FE
     - [Angular](https://docs.abp.io/en/abp/latest/UI/Angular/Authorization)
-    - React
+    - [React](react.md)
+    - [Vue JS](vuejs.md)
 - [User Account](https://docs.abp.io/en/abp/latest/CurrentUser)
 - [External Logins](https://docs.abp.io/en/commercial/latest/modules/account#social-external-logins)
 - [Tenant Permision](https://docs.abp.io/en/commercial/latest/modules/account/impersonation#tenant-user-impersonation-permissions)
@@ -75,12 +90,7 @@
     - Tables
   - Mongo DB
 
-
 ### Logging
 
 - SerialLog
   - [2graylog](https://medium.com/@paulius.juozelskis/centralized-logging-in-net-core-using-graylog-and-serilog-4de7739051a)
-
-## Links
-
-- [Blog](https://blog.abp.io/abp)

@@ -119,3 +119,12 @@
 - Проверки
 - Решение
   - If the EnableSessionState value in the @ Page directive is set to __ReadOnly__, a request for the read-only session information does not result in an exclusive lock on the session data. However, read-only requests for session data might still have to wait for a lock set by a read-write request for session data to clear.
+
+### HTTP.SYS Error Log
+
+- Timer_Connection Idle  
+- Connection_Dropped	
+
+TODO
+- https://softwareworker.wordpress.com/2012/02/18/importance-of-iis-http-err-logs-in-performance-engineering/
+- https://learn.microsoft.com/ru-ru/troubleshoot/developer/webapps/aspnet/site-behavior-performance/error-logging-http-apis 

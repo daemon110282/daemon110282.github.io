@@ -27,7 +27,7 @@
     - RPO (Recovery Point Objective) - это показатель точки восстановления, который определяет какой объем данных можно потерять, например, восстанавливаясь из бэкапа
     - RTO (Recovery Time Objective) - определяет сколько потребуется времени на восстановление работоспособности сервисов, что зачастую определяется в большей степени скоростью восстановления данных, что нужны для работы приложений
 - Базовые паттерны надежности
-  - [повторные попытки](../pattern/fault.tolerance/pattern.failure.md#логика-повторения-retry-logic-retry-policy)
+  - [повторные попытки](../pattern/system.design/fault.tolerance/pattern.failure.md#логика-повторения-retry-logic-retry-policy)
   - timeout, deadlines
   - [ограничение нагрузки](../pattern/performance/rate.limit.md) (Rate Limit)
-  - [выключатель запросов](../pattern/fault.tolerance/pattern.failure.md#автоматы-замыкания-circuit-breakers) (Circuit Breaker)
+  - [выключатель запросов](../pattern/system.design/fault.tolerance/pattern.failure.md#автоматы-замыкания-circuit-breakers) (Circuit Breaker)

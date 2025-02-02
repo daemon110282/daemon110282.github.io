@@ -8,6 +8,8 @@
 		- [Access Control](#access-control)
 	- [Технологии](#технологии)
 	- [Deployment](#deployment)
+	- [Observability](#observability)
+		- [Metric](#metric)
 		- [Version](#version)
 	- [Compare](#compare)
 		- [VS Glue](#vs-glue)
@@ -26,7 +28,7 @@
 	- [Custom login form by Phone+Captcha+SMS OTP](https://github.com/FX-HAO/keycloak-phone-authenticator)
       - [Custom AuthenticationFactory by Phone](https://developers.redhat.com/blog/2020/10/23/use-mobile-numbers-for-user-authentication-in-keycloak#)
 - Custom Fields Token
-- [ACF](../../protocols.integration/oauth.flow.ACwithPKCE.md) with [PKCE](https://www.keycloak.org/docs/latest/server_admin/#con-oidc-auth-flows_server_administration_guide)
+- [ACF](../../protocols.integration/oauth/oauth.flow.ACwithPKCE.md) with [PKCE](https://www.keycloak.org/docs/latest/server_admin/#con-oidc-auth-flows_server_administration_guide)
 - Template Email
 - [REST API](https://www.keycloak.org/docs-api/19.0.3/rest-api/index.html)
 	- Управление пользователями
@@ -148,6 +150,16 @@ Example
 	- [health check](https://www.keycloak.org/server/health)
 	- [logs](https://www.keycloak.org/server/logging)
 - Режим разворачивания в ПРОДе в отказоустойчивом (HA) кластере на [СУБД postgresql](https://www.keycloak.org/server/db) с распределенным [кешем Infinispan](https://www.keycloak.org/server/caching), вариант [«Обычный кластер»](https://habr.com/ru/company/southbridge/blog/511380/)
+
+## Observability
+
+### Metric
+
+- keycloak_response_errors
+- keycloak_login_attempts
+- keycloak_failed_login_attempts
+- keycloak_failed_client_login_attempts
+- keycloak_refresh_tokens
 
 ### Version
 

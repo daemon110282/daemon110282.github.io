@@ -63,7 +63,7 @@
 
 Design for failure
 
-- [Идемпотентность, Retry Policy, Fail Fast, Rate Limit, Circuit Breakers](../pattern/fault.tolerance/pattern.failure.md)
+- [Идемпотентность, Retry Policy, Fail Fast, Rate Limit, Circuit Breakers](../pattern/system.design/fault.tolerance/pattern.failure.md)
 - распределенная архитектура
   - [Микросервисы](../style/msa.md): слабая связность, изоляция сбоев
   - stateless

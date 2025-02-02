@@ -4,19 +4,22 @@
 - [API](api/)
 - [CI-CD](ci-cd/)
 - [Store](store.md)
-  - [DB](store.md#rdbms-relational)
+  - [DB](store.md#oltp-rdbms-relational)
 - [filesystem](filesystem/filesystem.md)
 - [framework](framework/)
-- [middleware](middleware/)
-  - [RMQ](middleware/messagebus/rmq/)
+- Middleware
+  - MessageBus
+    - [RMQ](middleware/messagebus/rmq.md)
+    - [Kafka](middleware/messagebus/kafka.md)
 - [mobile](mobile/)
 - [monitoring](observability/monitoring.md)
 - [OS](os/)
 - [Protocol integration](protocols.integration.md)
 - [Benchmark](ability/performance/load.test.md)
 - DEV
-  - Templating languages and HTML preprocessors: Pug, Nunjucks, Markdown.
-  - CSS preprocessors: SCSS, LESS, PostCSS.
-  - JavaScript frameworks: Angular, React, Vue, Svelte.
-  - JavaScript meta frameworks: Next.js, Nuxt, Astro.
-  - High-level programming languages: TypeScript, Dart, CoffeeScript.
+  - Templating languages and HTML preprocessors: Pug, Nunjucks, Markdown
+  - CSS preprocessors: SCSS, LESS, PostCSS
+  - JavaScript frameworks: Angular, React, Vue, Svelte
+  - JavaScript meta frameworks: Next.js, Nuxt, Astro
+  - High-level programming languages: TypeScript, Dart, CoffeeScript
+- [EA Tools](ea-tools.md)

@@ -22,7 +22,7 @@
 
 Плюсы:
 
-- Downtime сокращается
+- [Downtime сокращается](https://codefresh.io/learn/software-deployment/what-is-blue-green-deployment/)
 - Простота внедрения для __stateless ИС__ (микросервисной архитектуры)
 - Необходимо применение автоматизированных подходов CI-CD и контейнеризации ([k8s](../../../technology/ci-cd/k8s.md), ingress controler (Istio))
 

@@ -1,4 +1,4 @@
-# Banking Industry Architecture Network (BIAN) 
+# Banking Industry Architecture Network (BIAN)
 
 ## Зачем
 

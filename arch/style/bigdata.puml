@@ -1,0 +1,100 @@
+@startuml (id=bigdata)
+
+class BD as "BigData"
+
+BD -- ХарактеристикиДанных
+	ХарактеристикиДанных -- ШестьV
+	note right
+	Volume объем >150gb\d
+	Velocity скорость
+	Variety разнообразие
+	Veracity достоверность
+	Variability изменчимовсть
+	Value ценность
+	end note
+
+class Сбор as "1 Сбор"
+BD -- Сбор
+	note left
+	Социальные
+	Статистические
+	Медицинские
+	Машинные
+	Транзакционные
+	end note
+	Сбор --- DataClearning
+	Сбор -- SyncData
+	note right
+	CDC ETL ELT
+	Replication
+	Streaming (Kafka
+	, Amazon Kinezis)
+	end note
+
+class Хранение as "2 Хранение"
+BD -- Хранение
+	Хранение --- DWH
+	note right
+	хронология
+	структурировано
+	ETL
+	end note
+	DWH -- РСУБД
+	DWH -- DataMart
+	DWH -- МодельХранилища
+	МодельХранилища -- DataVault
+	!include bigdata.puml!data.vault
+
+	Хранение -- DataLake
+	note right
+	нет единого 
+	формата данных
+	end note
+	!include bigdata.puml!data.lake
+
+class Обработка as "3 Обработка"
+BD -- Обработка
+	Обработка -- MapReduce
+	note right
+	Hadoop
+	Apache Spark
+	end note
+
+class Анализ as "4 Анализ"
+BD -- Анализ
+	Анализ -- SQL_BI
+	note right
+	Power BI
+	Yandex Data Lens
+	Google Biq Query
+	end note
+	Анализ --- Нейросети
+
+@enduml
+
+' https://yandex.cloud/ru/docs/glossary/datavault
+@startuml (id=data.vault)
+
+DataVault -- Структура
+Структура -- Хаб
+Структура -- Связь
+Структура -- Сателлит
+
+@enduml
+
+@startuml (id=data.lake)
+
+DataLake -- ПроцессОбработки
+	ПроцессОбработки --- Batch
+	note left: ELT
+	Batch -- Apache.Hive
+	Batch -- Apache.Hadoop 
+	ПроцессОбработки -- Stream
+	note right: Realtime
+	Stream -- Kafka
+
+DataLake -- DataUnstructured
+	DataUnstructured -- DFS
+	DataUnstructured -- S3
+	
+@enduml

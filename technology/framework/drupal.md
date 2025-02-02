@@ -6,13 +6,13 @@ Redirect?
 
 ## IAM SSO
 
-[IAM](../../arch/system.class/iam.md) [SSO](../../arch/sso.md):
+[IAM](../../arch/system.class/iam.md) [SSO](../../arch/pattern/security/sso.md):
 
 - [Compare](https://groups.drupal.org/node/182004)
 - Commercial
 	- [miniorange](https://plugins.miniorange.com/drupal-sso-oauth-openid-single-sign-on)
 - Open Source
-	- [OAuth client for remote IDP](https://www.drupal.org/node/2300493)	
+	- [OAuth client for remote IDP](https://www.drupal.org/node/2300493)
 		- [ACF with PCKE](https://www.drupal.org/project/openid_connect/issues/3266205)
 	- [OAuth, OIDC server 7.x](https://www.drupal.org/project/oauth2_server)
 		- [Example](https://www.droptica.com/blog/how-set-drupal-authentication-using-oauth2-and-openid-connect/)
@@ -23,5 +23,5 @@ Redirect?
 		- [OIDC SSO client Keycloak 8.x](https://www.drupal.org/project/keycloak)
 		- [OIDC SSO client example](https://www.drupal.org/node/2274367)
 	- [SSO SAML WSO2 example](https://is.docs.wso2.com/en/latest/guides/login/log-into-drupal-using-is/)
-	- https://simplytest.me/configure?project=drupal
-	- https://www.drupal.org/project/oauth2_jwt_sso
+	- <https://simplytest.me/configure?project=drupal>
+	- <https://www.drupal.org/project/oauth2_jwt_sso>

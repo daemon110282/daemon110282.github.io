@@ -1,0 +1,31 @@
+@startuml (id=Jenkins)
+
+class kafka as "Kafka \n Broker"
+class zookeeper as "zookeeper \n Координатор \n Kafka Cluster"
+' отвечает за назначение мастеров партиций и отслеживает состояние брокеров
+class kafka_controller as "Контроллер \n кластера"
+
+kafka_cluster --> kafka: состоит из
+kafka_cluster --> kafka_controller: содержит
+kafka_controller -- kafka: отслеживает состояние \n мастер партиции 
+
+kafka --> topic : содержит
+topic --> partition : состоит из
+partition --> kafka_cluster: распределены между Broker
+
+topic --> message: содержит
+message --> batch: группируются в
+producer --> topic : push message
+consumer <-- topic : pull message
+consumer --> zookeeper: update offset commit
+consumer --> zookeeper: update offset reset
+
+kafka -- transaction: между topic
+' pipeline "1" --> "*" stage : включает
+' pipeline --> jenkins_file : описывает
+
+topic --> log: хранится в файлах
+log --> segments: делятся на \n (по 1гб)
+note right: ttl - удаление \n по timestamp
+
+@enduml

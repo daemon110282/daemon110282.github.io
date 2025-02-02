@@ -5,8 +5,8 @@
 		- [User store](#user-store)
 		- [Access Control](#access-control)
 	- [Протоколы](#протоколы)
-		- [OAuth](#oauth)
 		- [OpenID Connect (OIDC)](#openid-connect-oidc)
+		- [OAuth](#oauth)
 	- [Критерии выбора](#критерии-выбора)
 	- [Технологии](#технологии)
 
@@ -21,7 +21,7 @@ Identity Provider (IDP) в IAM with industry standard supported protocols:
 
 Функционал [IAM](https://digitalguardian.com/blog/what-identity-and-access-management-iam):
 
-- [Single Sign On](../sso.md)
+- [Single Sign On](../pattern/security/sso.md)
 - Аутентификация
   - Multi-Factor Authentication (MFA)
   - [Passwordless Authentication](https://auth0.com/blog/debunking-common-misconceptions-about-passwordless-authentication/)

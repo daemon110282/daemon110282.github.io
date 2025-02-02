@@ -3,6 +3,7 @@
 - [API](#api)
   - [Виды API](#виды-api)
   - [Patterns](#patterns)
+  - [SLI, SLA](#sli-sla)
     - [Versioning](#versioning)
     - [Security](#security)
     - [Документирование](#документирование)
@@ -22,12 +23,13 @@ API - Application Programming Interface, что значит программн�
 [API protocols](https://blog.postman.com/api-protocols-in-2023/)
 
 - [REST API](api.rest.md)
-- [gRPC](grpc.md)
+- [gRPC](../technology/protocols.integration/grpc.md)
 - [GraphQL](../technology/protocols.integration/graphql.md)
 - [Вебхуки Webhook](webhook.md)
 - [SOAP](wsdl.md)
   - ESB
-- EDI
+- [EDA](../arch/style/eda.md)
+- EDI - Electroinic Data Interchange
 - Server Side Events [SSE](../technology/protocols.integration/sse.md)
 - AMQP
 - MQTT
@@ -39,7 +41,15 @@ API - Application Programming Interface, что значит программн�
 
 - [Подходы к проектированию](api.design.md)
 - [API gateway](api.gateway.md)
-- [Стратегии повторов](../arch/pattern/fault.tolerance/pattern.failure.md) при сбоях Rerty Policy
+- [Стратегии повторов](../arch/pattern/system.design/fault.tolerance/pattern.failure.md) при сбоях Rerty Policy
+
+TODO
+
+https://github.com/Microsoft/api-guidelines/blob/master/Guidelines.md
+https://habr.com/ru/post/503284/
+https://habr.com/ru/post/447322/
+https://www.gov.uk/guidance/gds-api-technical-and-data-standards
+https://www.gov.uk/guidance/setting-api-service-levels
 
 ## SLI, SLA
 
@@ -50,7 +60,7 @@ API - Application Programming Interface, что значит программн�
 
 ### Versioning
 
-- Необходимо для поддержки __Обратной совместимости__ — это свойство всей системы API быть __стабильной во времени__. Это значит следующее: код, написанный разработчиками с использованием вашего API, продолжает работать функционально корректно в [течение длительного времени](https://twirl.github.io/The-API-Book/API.ru.html#back-compat-statement). 
+- Необходимо для поддержки __Обратной совместимости__ — это свойство всей системы API быть __стабильной во времени__. Это значит следующее: код, написанный разработчиками с использованием вашего API, продолжает работать функционально корректно в [течение длительного времени](https://twirl.github.io/The-API-Book/API.ru.html#back-compat-statement).
 - Варианты
   - Header
   - Query

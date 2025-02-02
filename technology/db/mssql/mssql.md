@@ -3,6 +3,7 @@
 - [MS SQL Server](#ms-sql-server)
   - [Масштабируемость](#масштабируемость)
   - [Паттерны](#паттерны)
+    - [Секционирование](#секционирование)
   - [Производительность](#производительность)
     - [Способы анализа производительности](#способы-анализа-производительности)
       - [SQL Trace Profiler (Deprecated)](#sql-trace-profiler-deprecated)
@@ -13,6 +14,7 @@
   - [Мониторинг](#мониторинг)
     - [Онлайн](#онлайн)
     - [Исторически](#исторически)
+  - [Performance Reports](#performance-reports)
   - [TODO](#todo)
   - [Version](#version)
     - [2019](#2019)
@@ -49,6 +51,8 @@ HA:
 - пример [INSERT](https://www.tutorialgateway.org/table-partitioning-in-sql-server/), [SELECT](https://www.sqlservertutorial.net/sql-server-administration/sql-server-table-partitioning/)
 - [Partition details with Row count](https://www.sqlshack.com/how-to-automate-table-partitioning-in-sql-server/), Table Rows with Partition Number
 - [Automate the Partition flow](https://www.sqlshack.com/how-to-automate-table-partitioning-in-sql-server/)
+- Минусы
+  - миграции БД не поддерживаются? Необходимо вручную обновлять партиции
 
 ## Производительность
 
@@ -59,7 +63,7 @@ HA:
 - [Блокировки](mssql.locks.md)
   - Blocking can be reduced with __index design__ and __short transactions__.
 - [Индексирование](mssql.index.md)
-  - REBUILD индексов (INDEX REORGANIZE не рекомендуется на больших объемах БД) 
+  - REBUILD индексов (INDEX REORGANIZE не рекомендуется на больших объемах БД)
 - [Стратегии оптимизации запросов](#стратегии-оптимизации-запросов)
 - Дизайна (архитектуры) приложения
 - Обслуживания БД
@@ -79,7 +83,7 @@ HA:
 - [Оценка производительности SQL Server](http://www.interface.ru/home.asp?artId=6968)
   - TODO [Анализ медленных запросов](https://learn.microsoft.com/ru-ru/troubleshoot/sql/database-engine/performance/troubleshoot-slow-running-queries?source=recommendations)
 - [MS инструменты](https://learn.microsoft.com/en-us/sql/relational-databases/performance/performance-monitoring-and-tuning-tools?view=sql-server-ver15)
-  - Performance Report
+  - [Performance Report](#performance-reports)
   - Data Collection
   - [Extended Events](mssql.extended.events.md)
   - [DMV](mssql.dmv.md)
@@ -143,7 +147,7 @@ HA:
 ## Мониторинг
 
 - [MS: Мониторинг и настройка производительности](http://www.sql.ru/forum/actualthread.aspx?tid=858780)
-- [Performance dashboard](https://learn.microsoft.com/en-us/sql/relational-databases/performance/performance-dashboard)
+- [Performance dashboard](#performance-reports)
 - [Метрики](mssql.performance.metric.md)
 
 ### Онлайн
@@ -160,12 +164,7 @@ HA:
 
 ### Исторически
 
-- Стандартные отчеты [Performance dashboard](https://learn.microsoft.com/en-us/sql/relational-databases/performance/performance-dashboard)
-  - __Data Collection__  - сбор авто метрик за период времени в отдельной БД с sql plan
-    - Query Statistics History: by CPU, duration, IO, Physical Reads, Logical Reads
-    - Server Activity History: CPU, RAM, IO, Network, Waits
-    - Версия MS SQL с 2008: используем 2012, DWH 2016
-    - Блокировки
+- Стандартные отчеты [Performance dashboard](#performance-reports)  
 - [sp_Blitz](https://github.com/BrentOzarULTD/SQL-Server-First-Responder-Kit/tree/main)
   - overall health check, run sp_Blitz.
   - To learn which queries have been using the most resources, run sp_BlitzCache.
@@ -177,14 +176,31 @@ HA:
   - В результатах представлений важным показателем является следующее __равенство: AvgWorkerSec=AvgElapsedSec__
     - Если это не так, то __проблема не в самом запросе и не в плане запроса__
 
+## Performance Reports
+
+- Стандартные отчеты [Performance dashboard](https://learn.microsoft.com/en-us/sql/relational-databases/performance/performance-dashboard)
+  - Performance
+    - Top Queries by Average IO
+    - Top Queries by Average CPU Time
+    - Object Execution Statistics
+    - Missing Index
+    - IO Statistics
+    - Expensive Queries – Duration
+- __Data Collection__  - сбор авто метрик за период времени в отдельной БД с sql plan
+  - Query Statistics History: by CPU, duration, IO, Physical Reads, Logical Reads
+  - Server Activity History: CPU, RAM, IO, Network, Waits
+  - Версия MS SQL с 2008: используем 2012, DWH 2016
+  - [Блокировки Dead Locks](mssql.locks.md)
+  - [Waits](mssql.waits.md) - ожидания
+  - [Latches](mssql.latches.md) - внутренние блокировки
+
 ## TODO
 
-- http://f1incode.blogspot.com/2011/07/i_28.html	
+- http://f1incode.blogspot.com/2011/07/i_28.html
 - http://f1incode.blogspot.com/2011/08/performance-testing-part-2.html
-- http://www.itcommunity.ru/Msgs/default.aspx?MessageID=60	
-- http://msmvps.com/blogs/irinanaumova/archive/2011/05/06/1792775.aspx	
-- http://www.mssqltips.com/tip.asp?tip=1039	
-
+- http://www.itcommunity.ru/Msgs/default.aspx?MessageID=60
+- http://msmvps.com/blogs/irinanaumova/archive/2011/05/06/1792775.aspx
+- http://www.mssqltips.com/tip.asp?tip=1039
 
 ## Version
 
@@ -217,4 +233,3 @@ HA:
 Upgrade
 
 - [Process Support 2012SP4 to 2019](https://learn.microsoft.com/ru-ru/sql/database-engine/install-windows/supported-version-and-edition-upgrades-2019?view=sql-server-ver16)
-

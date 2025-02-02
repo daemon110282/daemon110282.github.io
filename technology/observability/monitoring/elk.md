@@ -11,7 +11,7 @@
 
 [ELK](https://gitinsky.com/elkstack) стек:
 
-- Beats — a family of log shippers for different use cases containing
+- Beats — a family of __log shippers__ for different use cases containing
   - Filebeat
   - Metricbeat
   - Packetbeat
@@ -19,9 +19,9 @@
   - Heartbeat
   - Winlogbeat
 - Logstash
-	- конвейер по парсингу данных (логов событий) 
+	- конвейер по парсингу данных (логов событий)
 	- Input-[Filter](https://logz.io/blog/5-logstash-filter-plugins/)-Output трансформация данных
-- [Elasticsearch](../store/elasticsearch.md)
+- [Elasticsearch](../../store/elasticsearch.md) NoSQL Full Text Search Store
 - Kibana
 	- GUI, dashboards, charts
 	- Logs
@@ -70,8 +70,13 @@ Real User Monitoring (RUM):
 - ![Visualization](https://dytvr9ot2sszz.cloudfront.net/wp-content/uploads/2021/04/image15-edited.png)
 - [Adapter ClickHouse Data Store](https://habr.com/ru/post/581586/)
 	![schema](https://habrastorage.org/r/w1560/webt/dq/p0/mu/dqp0mujy3u-arpwischsswnvbow.jpeg)
+- [Timelion](https://dotsandbrackets.com/visualize-kibana-ru/)
 
 ## Deployment
 
+- setup 8.15
+  - [docker-elk](https://github.com/deviantony/docker-elk) поставил
+    - [how to](https://logz.io/blog/elk-stack-on-docker/)
+  - [docker compose official](https://www.elastic.co/blog/getting-started-with-the-elastic-stack-and-docker-compose) не ставил
+- [add sample data](https://www.elastic.co/guide/en/kibana/8.15/get-started.html)
 - [CPU RAM](https://gitinsky.com/elkstack?utm_source=pocket_saves#:~:text=%D0%9F%D1%80%D0%B5%D0%B4%D0%B2%D0%B0%D1%80%D0%B8%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D1%8B%D0%B5%20%D1%82%D1%80%D0%B5%D0%B1%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F)
-- [docker](https://logz.io/blog/elk-stack-on-docker/)

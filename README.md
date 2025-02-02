@@ -1,15 +1,18 @@
 # About
 
-База знаний по ИТ архитектуре и API. Документирование. Тесты инструментов.
+База знаний по аналитике, ИТ архитектуре, API. Документирование. Тесты инструментов.
 
+- [Аналитика](analytic/analytica.md)
+  - [Бизнес](analytic/ba.md)
+  - Системная
+    - [API](api/api.md)
 - [Архитектура ПО](arch/arch.md)
   - Базируется на
-    - [Бизнес и ИТ стратегии](strategy.md)
+    - [Бизнес и ИТ стратегии](analytic/strategy.md)
     - [Бизнес архитектуре](analytic/arch.ba.md)
-    - [Бизнес Аналитике требования](analytic/ba.md)
-- [DevOps](devops.md)
-- [API](api/api.md)
-- [Паттерны Шаблоны](arch/patterns.md)
+    - [Бизнес Аналитике требования](analytic/analytica.md)
+- [Паттерны Шаблоны](arch/pattern/patterns.md)
+- [CheckList](checklist/checklist.md)
 - [Миграции ИС](arch/pattern/refactoring/migration.md)
 - Методологии работ
   - [Agile](https://agilemanifesto.org/iso/ru/principles.html) философия
@@ -24,5 +27,5 @@
 ## Tools
 
 - [GitHub Pages](technology/jekyll.md)
-- [MarkDown](markdown.md)
-- [PlantUML](plantuml.md)
+- [MarkDown](technology/markdown.md)
+- [PlantUML](technology/plantuml.md)

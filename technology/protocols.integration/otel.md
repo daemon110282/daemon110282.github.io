@@ -24,18 +24,20 @@
 - [Receivers](https://github.com/open-telemetry/opentelemetry-collector-contrib/tree/main/receiver) - Input Data Collector ![Data Collector](https://habrastorage.org/r/w1560/webt/te/5k/cn/te5kcnz9h8pkdd0nr_2papfrr98.png)
 	- [Metric](https://opentelemetry.io/docs/reference/specification/metrics/)
 	- Trace
-	- OTEL Instrumentation Library, Agent, 2 modes of operation: 
-		- you can either use the OpenTelemetry API to __manually instrument the telemetry collection__ from your application 
-		- or you can use __automatic instrumentation techniques__ that have already been implemented for some languages.	
+	- OTEL Instrumentation Library, Agent, 2 modes of operation:
+		- you can either use the OpenTelemetry API to __manually instrument the telemetry collection__ from your application
+		- or you can use __automatic instrumentation techniques__ that have already been implemented for some languages.
 		![OTEL Agent](https://habrastorage.org/r/w1560/webt/tu/my/yk/tumyykh5oqpg_-gralg_9h8cy-m.png)
 - Data OTEL Collector
+  - [Grafana Alloy](https://grafana.com/oss/alloy-opentelemetry-collector/?pg=blog&plcmt=body-txt)
 - Exporters - SDK realize  
 	- Metric
 		- Prometheus Metric ![schema](https://habrastorage.org/r/w1560/webt/2l/8k/l1/2l8kl1ck385o93-rqiehzewqudw.png)
-		- [Victoria Metrics](../observability/monitoring/victoriametrics.md)
+		- [Victoria Metrics](../store/victoriametrics.md)
 	- Trace
 		- Jaeger
 		- Zipkin
+		- [Grafana Loki](https://github.com/grafana/loki)
 	- [Logs](https://opentelemetry.io/docs/reference/specification/logs/) correlation with Trace API SDK __beta__
 		- FluentBit, [can collect logs](https://github.com/open-telemetry/opentelemetry-collector-contrib/tree/master/receiver/fluentforwardreceiver), then send to OpenTelemetry Collector
 		- [Vector support logs](https://vector.dev/docs/reference/configuration/sources/opentelemetry/)
@@ -65,13 +67,13 @@
 Based on the [Specification, the APIs and SDKs are implemented](https://scalac.io/blog/opentelemetry-from-a-birds-eye-view-a-few-noteworthy-parts-of-the-project/). There’s a noteworthy distinction between the two:
 
 - __APIs consist of all the abstractions used for instrumentation__, clearly decoupled from their actual implementations. The APIs __do not contain the working functionality__ (they are only there to define what is going to be collected).
-- An important part of the __SDK is the exporters__. After collecting the telemetry signals from your application, 
+- An important part of the __SDK is the exporters__. After collecting the telemetry signals from your application,
 	- either directly (using the manual instrumentation approach)
 	- or indirectly (using the auto-instrumentation), you have to actually emit them.
 	To do that, you have to use an __SDK exporter and configure it to send data to a particular__ destination.
 	- Such a destination can be
 		- a telemetry backend of your choice (such as Prometheus, New Relic or Jaeger)
-		- or an OpenTelemetry collector.
+		- or an OpenTelemetry collector
 	- SDKs consist of all the parts that actually __implement the APIs and provide the working functionality__ for collecting and exporting all the signal data.
 
 ![scheme](https://opentelemetry.io/img/library-design.png)

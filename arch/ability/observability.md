@@ -104,7 +104,7 @@ TODO:
 
 - InfluxDB
 - [Prometeus](../../technology/store/prometheus.md)
-- [Victoria metrics](../../technology/observability/monitoring/victoriametrics.md)
+- [Victoria metrics](../../technology/store/victoriametrics.md)
 
 ## TODO
 

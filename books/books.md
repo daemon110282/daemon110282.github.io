@@ -47,4 +47,4 @@
 - Вертикальное деление - продукты
 - Горизонтальные деления - платформа, либы универсальные (rmq  и тп)
 - Архитектурный квант
-- Агрегат - [strong cohesion](../arch/pattern/strong.cohesion.md)
+- Агрегат - [strong cohesion](../arch/pattern/system.design/strong.cohesion.md)

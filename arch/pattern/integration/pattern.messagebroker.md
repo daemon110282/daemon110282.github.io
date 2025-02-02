@@ -5,22 +5,26 @@
 	- [Плюсы-минусы](#плюсы-минусы)
 	- [Patterns](#patterns)
 	- [Технологии](#технологии)
-		- [Выбор](#выбор)
+		- [Критерии выбора](#критерии-выбора)
 			- [RMQ vs Kafka](#rmq-vs-kafka)
-				- [RabbitMQ](#rabbitmq)
-				- [Kafka](#kafka)
+			- [RMQ vs ActiveMQ Artemis](#rmq-vs-activemq-artemis)
 
 ## Зачем
 
-- принцип "глупая шина (канал) умные клиенты"
-
-![MQ](../../../img/pattern/integration/mq.jpg)
+- асинхронное взаимодействие
+- 1 Издатель - Х подписчиков
+- Буфер запросов
+- Очередь задач
 
 ## Плюсы-минусы
 
 Плюсы
 
-- Слабая связность ИС [Low Coupling](../low.coupling.md)
+- Масштабируемость
+- Гарантированная доставка
+- Буферизация
+- Слабая связность ИС [Low Coupling](../system.design/low.coupling.md)
+- принцип "глупая шина (канал) умные клиенты"
   
 Минусы
 
@@ -61,6 +65,7 @@
 - Транспорт  
 	- [Kafka](../../../technology/middleware/messagebus/kafka.md)
 	- [RabbitMQ](../../../technology/middleware/messagebus/rmq.md)
+	- [Apache ActiveMQ Artemis](../../../technology/middleware/messagebus/activemq.md)
 	- Azure service bus
 	- MSMQ
 	- SQL Server
@@ -68,7 +73,7 @@
 	- Azure Service Bus
 	- Amazon SQS
 
-### Выбор
+### Критерии выбора
 
 ![Alt text](../../../img/technology/middleware/messagebus/rmq.vs.kafka.vs.ibm.png)
 ![Alt text](../../../img/technology/middleware/messagebus/rmq.vs.kafka.vs.ibm2.png)
@@ -76,35 +81,30 @@
 
 #### RMQ vs Kafka
 
-##### RabbitMQ
+- [RMQ](../../../technology/middleware/messagebus/rmq.md#плюсы-и-минусы)
+- [Kafka](../../../technology/middleware/messagebus/kafka.md#плюсы-и-минусы)
+	- [vs RMQ](https://blog.bytebytego.com/p/how-to-choose-a-message-queue-kafka):
+    	- сообщения __хранятся__ (так спроектирована), одно и то же сообщение может быть обработано сколько угодно раз разными консьюмерами и в разных контекстах
+    	- выше производительность, Kafka легче масштабируется горизонтально
+    	- строгая __последовательность__ сообщений
+    	- меньше гибкости в роутинге сообщений
+    	- нет приоритета сообщений
+    	- __vendor lock__: Kafka использует собственный __двоичный протокол поверх TCP__. Вы не сможете так просто удалить или [__заменить эту платформу__](https://vc.ru/dev/869548-kafka-vs-rabbitmq-chto-nuzhno-znat-analitiku-pro-brokery-soobshenii)
+    	- __транзакции__ между несколькими топиками
 
-Плюсы:
+TODO
 
-- Message timing control (controlling either message expiry or message delay).
-- Advanced fault handling capabilities, in cases when consumers are more likely to fail to process messages (either temporarily or permanently).
-- Advanced and flexible routing rules.
-- Simpler consumer implementations.
-- перешли на постоянные (persistent) очереди, которые не удаляются в момент разрыва подключения, но повесили на них политику «протухания» (expire), если пользователя нет более 5 минут.
-- Приоритет сообщений
+- <https://habr.com/ru/company/itsumma/blog/416629/>
 
-Минусы:
+#### RMQ vs ActiveMQ Artemis
 
-- нет параметра Expire для обменников (только для очередей)
-- Нет шардирования, в kafka есть topic-несколько partition, есть несколько инстансов где очереди размещены
-- Производительность ниже Kafka
-
-##### Kafka
-
-Плюсы:
-
-- распределенный горизонтально масштабируемый отказоустойчивый журнал коммитов
-- Поток событий
-- Шардинг из коробки
-- Strict message ordering.
-- Message retention for extended periods, including the possibility of replaying past messages.
-- The ability to reach a high scale when traditional solutions do not suffice.
-
-Минусы:
-
-- Наиболее полно API Kafka поддерживается только в языках Java и Scala. В других языках поддержка не всегда полная, поэтому фреймворки Kafka Connect и Kafka Streams созданы.
-- [Нет приоритета сообщений](https://blog.bytebytego.com/p/how-to-choose-a-message-queue-kafka)
+- [RMQ](../../../technology/middleware/messagebus/rmq.md#плюсы-и-минусы)
+- [Artemis](../../../technology/middleware/messagebus/activemq.md#плюсы-минусы)
+  - vs RMQ
+    - поддерживает более __широкий спектр протоколов__ обмена сообщениями (+ JMS)
+    - [RMQ имеет наилучшую пропускную способность](https://www.okbsapr.ru/library/publications/shkola_kzi_chadov_mikhalchenko_2019/)
+    - Менее гибкая маршрутизация сообщений
+      - Artemis Реализует концепцию "адреса" для маршрутизации сообщений и поддерживает различные типы маршрутизации, [включая anycast и multicast](https://www.mastertheboss.com/rabbitmq/activemq-vs-rabbitmq-a-comparison/)
+        - Паттерны: PUB-SUB
+      - RMQ концепцию "обмена". Exchange в RabbitMQ - это компонент маршрутизации сообщений, который определяет, как сообщения распределяются по очередям
+        - Паттерны: Message Queue, PUB-SUB, RPC, Routing

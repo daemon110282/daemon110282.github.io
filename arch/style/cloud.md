@@ -1,10 +1,15 @@
 # Cloud
 
 - [Cloud](#cloud)
+  - [Зачем](#зачем)
   - [Функции](#функции)
   - [Паттерны](#паттерны)
   - [Плюсы-минусы](#плюсы-минусы)
   - [Технологии](#технологии)
+
+## Зачем
+
+[Архитектурный стиль](../arch.styles.md).
 
 ## Функции
 
@@ -26,4 +31,7 @@
 
 ## Технологии
 
-- Azure
+- [Azure](../../technology/azure.md)
+- Amazon
+- Yandex Cloud
+- [Google Cloud](../../technology/ci-cd/google.cloud.md)

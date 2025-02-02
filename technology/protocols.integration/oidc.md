@@ -1,6 +1,8 @@
 # OpenID Connect (OIDC)
 
 - [OpenID Connect (OIDC)](#openid-connect-oidc)
+	- [Зачем](#зачем)
+	- [Термины](#термины)
 	- [Flow-Grant](#flow-grant)
 		- [Параметры Flow](#параметры-flow)
 		- [Identity Token](#identity-token)
@@ -8,16 +10,20 @@
 	- [Технологии](#технологии)
 	- [TODO](#todo)
 
+## Зачем
+
+Аутентификация для обеспечения [информационной безопасности](../../arch/ability/security.md).
+
 ![OpenID Сonnect процесс](https://habrastorage.org/r/w1560/getpro/habr/post_images/c13/afc/ee5/c13afcee5226ddb135df9836d3321b17.png)
 
-Термины:
+## Термины
 
 - OpenID Connect Provider (OP) - Identity Provider
 - User
 - Client - ИС
 	- Confidential  
 	- Public  
-- Claims - 
+- Claims
 - Scope - права Client
 - OAuth2
 	- Authorization Server
@@ -38,8 +44,8 @@ Client type — тип клиента, от которого зависит сп
 	- [Client Credentials Flow](https://habr.com/ru/company/dododev/blog/520046/) - client_secret храниться на клиенте BackEnd
 	<!-- ![scheme](https://habrastorage.org/r/w1560/getpro/habr/post_images/110/fe3/d4a/110fe3d4a29efd1af72da67ab06515ba.png) -->
 - Public - [GUI с участием User](https://docs.duendesoftware.com/identityserver/v6/overview/terminology/#interactive-applications)
-	- [Authorization Code Flow with PKCE](oauth.flow.ACwithPKCE.md)
-	- [Implicit Flow](oauth.flow.implicit.md) __legacy__		
+	- [Authorization Code Flow with PKCE](oauth/oauth.flow.ACwithPKCE.md)
+	- [Implicit Flow](oauth/oauth.flow.implicit.md) __legacy__		
 	- Device authorization
 
 ### Параметры Flow

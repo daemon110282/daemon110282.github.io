@@ -1,13 +1,11 @@
 # Single Page Application (SPA) Одностраничное веб приложение
 
 - [Single Page Application (SPA) Одностраничное веб приложение](#single-page-application-spa-одностраничное-веб-приложение)
-	- [Зачем](#зачем)
-	- [Плюсы и минусы](#плюсы-и-минусы)
-	- [Паттерны](#паттерны)
-		- [Локализация](#локализация)
-		- [SSR (Server Side Rendering, серверный рендеринг)](#ssr-server-side-rendering-серверный-рендеринг)
-	- [Технологии](#технологии)
-	- [Reference Architecture](#reference-architecture)
+  - [Зачем](#зачем)
+  - [Плюсы и минусы](#плюсы-и-минусы)
+  - [Паттерны](#паттерны)
+  - [Технологии](#технологии)
+  - [Reference Architecture](#reference-architecture)
 
 ## Зачем
 
@@ -35,7 +33,7 @@
 - Более длительное время начальной загрузки
 - Безопасность данных
 - Плохая SEO-оптимизация
-  - [решение SSR](https://www.purrweb.com/ru/blog/odnostranichnye-prilozheniya-polnyj-gid-po-razrabotke/)
+  - [решение](https://www.purrweb.com/ru/blog/odnostranichnye-prilozheniya-polnyj-gid-po-razrabotke/) - [SSR](../pattern/performance/ssr.md)
 - Кнопка «Назад»
 
 ## Паттерны
@@ -55,18 +53,20 @@
 - [Производительность](../pattern/performance/pattern.perf.md)
   - [Web Vitals Metric](../ability/performance.md)
   - Кеширование, lazy load component UI?
+  - [SSR](../pattern/performance/ssr.md) (Server Side Rendering)
   - Testing tools Selenium, Cypress and Puppeteer can also be used to measure app performance.
   - WebPageTest is an online tool that's easier to use
-  - Application performance on the client side can be monitored via Navigation Timing API and Resource Timing API.
+  - Application performance on the client side can be monitored via __Navigation Timing API__ and __Resource Timing API__
     - But these fail to capture JavaScript execution times. To address this, User Timing API can be used. LinkedIn took this approach.
 - Валидация данных
   - Дублирование клиент+сервер из за уязвимости браузера? Разные языки двойная кодовая база?
   - Бизнес правила
     - с сервера обновления?
 - Сквозная функциональность
-  - Безопасность
-	- Критичная логика на сервере, риски взлома на клиенте.
-	- [Auth](https://docs.microsoft.com/en-us/azure/active-directory/develop/scenario-spa-overview) with [Single Sign-on](../sso.md) and [Identity Service (IAM)](../system.class/iam.md)
+  - [Локализация](../pattern/system.design/i18n.md)
+	- Безопасность
+  	- Критичная логика на сервере, риски взлома на клиенте.
+  	- [Auth](https://docs.microsoft.com/en-us/azure/active-directory/develop/scenario-spa-overview) with [Single Sign-on](../pattern/security/sso.md) and [Identity Service (IAM)](../system.class/iam.md)
   - observability
     - [Мониторинг](../../technology/observability/monitoring.md)
     	- [Sentry](../../technology/observability/sentry.md)
@@ -75,30 +75,10 @@
     	- Мерж логов на сервере+с Х клиентов-браузеров 1 юзера-сеанса
     	- [Errbit SaaS (Loggly, New Relic)](https://www.sitepoint.com/logging-errors-client-side-apps/)
 
-### Локализация
-
-- Избегайте применения жестко кодированных строк и внешних ресурсов для текстовых данных или данных компоновки (например, для поддержки языков с написанием справа налево), особенно если приложение будет подлежать локализации
-- Локализация - текстов сообщений (resource) с бэка
-	- vue-i18n готовое решение для локализации (понятно у нас пока RU) с шаблонами, placeholder и тд. Его планируется использовать на фронте или иное решение типовое?
-	https://cli.vuejs.org/ru/dev-guide/ui-localization.html
-	https://vue-i18n.intlify.dev/
-	https://github.com/intlify/vue-i18n-next
-	https://phrase.com/blog/posts/ultimate-guide-to-vue-localization-with-vue-i18n/
-	https://vue-i18n.intlify.dev/guide/advanced/lazy.html есть подгрузка динамически для компонентов локализаций
-	- есть HTML в шаблоне локализации, но это добавляет [рисков безопасности еще](https://vue-i18n.intlify.dev/guide/essentials/syntax.html#html-message)
-- Останется только:
-  - на бэке по БД формировать json в нужном формате, которые примет vue-i18n
-  - или же вообще [вынести эту функцию из ИС](https://www.codeandweb.com/babeledit)
-
-### SSR (Server Side Rendering, серверный рендеринг)
-
-способ рендеринга одностраничного приложения на стороне сервера, когда в браузер пользователя отправляется уже полностью отрисованная страница.
-![ssr](../../img/technology/ssr.png)
-
 ## Технологии
 
 - [Vue.JS](../../technology/framework/vuejs.md)
-- React
+- [React](../../technology/framework/react.md)
 	- Next.js
 
 ## Reference Architecture

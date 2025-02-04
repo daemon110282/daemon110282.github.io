@@ -37,6 +37,10 @@
   - [Token Expiration](https://blog.elest.io/keycloak-token-management-expiration-revocation-and-renewal/)
   - Шифрование [JSON Web Encryption](https://www.rfc-editor.org/rfc/rfc7516) (JWE) RSA
     - only support [ID Token](https://www.keycloak.org/docs/latest/server_admin/index.html#con-advanced-settings_server_administration_guide)
+    - [JSON Web Key (JWK)](../../protocols.integration/jwk.md) – это структура данных в формате JSON, представляющая криптографический ключ.
+    - [JWT RSA algorithm](https://connect2id.com/products/nimbus-jose-jwt/examples/jwt-with-rsa-encryption)
+      - RSA_OAEP_256 - RSAES using Optimal Asymmetric Encryption Padding (OAEP) (RFC 3447), with the SHA-256 hash function and the MGF1 with SHA-256 mask generation function.
+      - RSA_OAEP - __DEPRECATED__ - RSAES using Optimal Asymmetric Encryption Padding (OAEP) (RFC 3447), with __the default parameters specified by RFC 3447 in section A.2.1__. Use of this encryption algorithm is no longer recommended, use RSA_OAEP_256 instead.
 - Template Email
 - [REST API](https://www.keycloak.org/docs-api/19.0.3/rest-api/index.html)
 	- Управление пользователями
@@ -156,7 +160,8 @@ Example
 	- [health check](https://www.keycloak.org/server/health)
 	- [logs](https://www.keycloak.org/server/logging)
 - Режим разворачивания в ПРОДе в отказоустойчивом (HA) кластере на [СУБД postgresql](https://www.keycloak.org/server/db) с распределенным [кешем Infinispan](https://www.keycloak.org/server/caching), вариант [«Обычный кластер»](https://habr.com/ru/company/southbridge/blog/511380/)
-
+- [docker](../../../docker/keycloak/)
+  
 ## Observability
 
 ### Metric

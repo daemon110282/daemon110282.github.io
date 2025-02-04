@@ -37,9 +37,9 @@
 - Валидация
   - [Token validate](oauth/oauth.validate.token.md)
   - [Token exchange](oauth/oauth.exchange.token.md)
+- Подписание JSON Web Signature (JWS)
 - Шифрование [JSON Web Encryption](https://www.rfc-editor.org/rfc/rfc7516) (JWE)
   - [Auth0 sample](https://auth0.com/docs/secure/tokens/access-tokens/json-web-encryption)
-- Подписание JSON Web Signature (JWS)
 
 ## Виды атак
 

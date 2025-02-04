@@ -89,7 +89,18 @@
 
 Криптоалгоритмы международные:
 
-- RSA\AES
+- [RSA](https://www.devglan.com/online-tools/rsa-encryption-decryption)
+  - Padding: Proper __padding schemes__ (e.g., OAEP, PKCS#1 v1.5) are crucial to prevent certain cryptographic attacks and ensure secure encryption.
+    - Optimal Asymmetric Encryption Padding (OAEP) - шифрование
+      - [algorithm](https://connect2id.com/products/nimbus-jose-jwt/examples/jwt-with-rsa-encryption)
+        - RSA_OAEP_256 - RSAES using Optimal Asymmetric Encryption Padding (OAEP) (RFC 3447), with the SHA-256 hash function and the MGF1 with SHA-256 mask generation function
+        - RSA_OAEP - __DEPRECATED__ - RSAES using Optimal Asymmetric Encryption Padding (OAEP) (RFC 3447), with __the default parameters specified by RFC 3447 in section [A.2.1](https://datatracker.ietf.org/doc/html/rfc3447#appendix-A.2.1)__. Use of this encryption algorithm is no longer recommended, use RSA_OAEP_256 instead.
+          - hash: sha1
+          - maskGenAlgorithm: mgf1SHA1
+          - pSourceAlgorithm: empty
+    - RSASSA-PKCS1-v1_5 - подпись\шифрование
+    - RSA-PSS - подпись
+- AES modes: CTR, CBC, GCM
 - IPSec VPN Site-to-Site - [CISCO](https://wiki.merionet.ru/articles/nastrojka-site-to-site-ipsec-vpn-na-cisco)
 
 ##### Алгоритм Diffie-Hellman
@@ -128,7 +139,7 @@
 - Алгоритм
   - Хэширование сообщения: на входе сообщение __произвольной длины__, на выходе хэш значение __фиксированной длины__
   - Шифрование хэша - не обязательно
-  - При формировании ЭЦП закрытый ключ отправителя используется, проверка - открытым ключом отправителя
+  - При формировании ЭЦП __закрытый ключ отправителя__ используется, проверка - __открытым ключом отправителя__
   - При шифровании сообщения - открытый ключ получателя, расшифрование сообщения - закрытым ключом получателя
 - [Виды электронной подписи](https://astral.ru/articles/elektronnaya-podpis/6106/) по №63-ФЗ «Об электронной подписи»:
   - Простая электронная подпись

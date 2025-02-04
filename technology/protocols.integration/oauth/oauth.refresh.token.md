@@ -8,7 +8,7 @@
 
 - SPA - public client
   - [Refresh Token rotation](https://stateful.com/blog/oauth-refresh-token-best-practices) for protect a Replay attack
-    - Заданный долгий срок жизни Refresh token сокращается с помощью Refresh Token rotation. Обновление действительно только в течение времени жизни Access Token, который будет короткоживущим.
+    - Заданный долгий срок жизни Refresh token сокращается с помощью Refresh Token rotation. Обновление действительно __только в течение времени жизни Access Token__, который [будет короткоживущим](https://auth0.com/blog/refresh-tokens-what-are-they-and-when-to-use-them/).
   - Can Store Refresh Token In __Local Storage or browser memory__
   - иные варианты to keep a session going can be
 	- cookies

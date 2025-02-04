@@ -10,4 +10,5 @@
   - [API](api.md)
   - [Поставка](setup.md)
 - [Demo PC](demopc.md)
+  - [Docker](../docker/docker.md)
 - [Структура шаблона описания ИС](is.md)

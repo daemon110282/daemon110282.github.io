@@ -11,7 +11,11 @@
 
 ## Технологии
 
-- Chrome Netexport записать как эталон
-- С кешем из firebug
-- [PerfView](troubleshooting/perfview.md)
-- [dotmemory](https://www.jetbrains.com/dotmemory/)
+- Web
+  - Chrome Netexport записать как эталон
+  - С кешем из firebug
+- App
+  - [PerfView](troubleshooting/perfview.md)
+  - [dotmemory](https://www.jetbrains.com/dotmemory/)
+- Mobile
+  - [Android](troubleshooting/android.md)

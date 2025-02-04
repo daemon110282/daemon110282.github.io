@@ -10,12 +10,7 @@
 
 Платформа сборки и хостинга приложений, релиза мобильных приложений в Store - PaaS-решение.
 
-- Build
-- Run
-
-TODO
-
-Поставщики PaaS предоставляют вам платформу для развертывания вашего приложения без [хлопот по управлению базовой инфраструктурой](https://stfalcon.com/ru/blog/post/hosting-options-for-your-flutter-web-app).
+Платформа (PasS) для развертывания вашего приложения без [хлопот по управлению базовой инфраструктурой](https://stfalcon.com/ru/blog/post/hosting-options-for-your-flutter-web-app).
 
 Альтернативы:
 

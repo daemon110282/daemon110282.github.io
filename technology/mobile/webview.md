@@ -21,3 +21,9 @@ WebView — технология, позволяющая открывать ве
 - Невозможность комбинирования технологий на одном экране
 - Не работает фоновая активность
 - Проблемы интеграции и версионирования
+
+## Паттерны
+
+- IOS
+  - [WKWebView](https://developer.apple.com/documentation/WebKit/WKWebView)
+  - [WKNavigationDelegate](https://developer.apple.com/documentation/webkit/wknavigationdelegate)

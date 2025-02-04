@@ -110,6 +110,7 @@ DevOps (development и operations):
   - имитировать установку приложения из Store
     - Для Android-сборок мы можем использовать, к примеру, [FireBase](../../../technology/ci-cd/firebase.md). У них есть раздел App Distribute. Для iOS-сборок есть TestFlight.
 - Отправка сборки на проверку в Store
+  - [fastlane нюансы разрешений приложения](https://t.me/flutter_mad_fans/291)
 - Финал разработки
 - Публикация Deploy сборки Release в Store: fastlane IOS
 - Примеры

@@ -42,7 +42,7 @@
 - Device/Endpoint
   - Антивирусы
 - Network Сетевая Инфраструктура
-  - [Шифрование канала связи (трафика)](security.vpn.md): TLS, mTLS, VPN
+  - [Шифрование канала связи (трафика)](security.vpn.md): [TLS, mTLS](../../technology/protocols.integration/tls.md), VPN
   - DDOS
   - FireWall
   - NAT, NAC
@@ -143,8 +143,8 @@ __Триггеры для подключения__, анализа ИБ
 ## Сертификаты
 
 - Виды сертификатов
-  - client certificate для аунтентификации Mutual TLS (mTLS)
-  - self signed certificate
+  - клиентский client certificate для аунтентификации Mutual TLS (mTLS)
+  - самоподписанный self signed certificate
 - Типы форматов сертификатов
   - сертификат удостоверяющего центра CA __.PEM__
   - client certificate
@@ -152,7 +152,7 @@ __Триггеры для подключения__, анализа ИБ
     - __.PFX__ file for your certificate
   - [Пример запроса с сертификатом в Postman](https://learning.postman.com/docs/sending-requests/certificates/)
 - [Проверка алгоритма подписи примененного к сертификату](https://sysos.ru/?p=589)
-  - 1.2.643.7.1.1.3.2, то сертификат сгенерирован по ГОСТ Р 34.10-2012.
+  - 1.2.643.7.1.1.3.2, то сертификат сгенерирован по ГОСТ Р 34.10-2012
   - Если установлен КриптоПро, то в Алгоритме подписи будет отображаться ГОСТ Р 34.11-2012/34.10-2012 256 бит.
 
 ## Технологии

@@ -12,6 +12,7 @@
     - [Deployment](#deployment)
       - [Canary deployment](#canary-deployment)
     - [Scalability Performance масштабирование](#scalability-performance-масштабирование)
+  - [Мониторинг](#мониторинг)
   - [Технологии](#технологии)
 
 ## Зачем
@@ -141,6 +142,11 @@ TODO
   - Burstable
   - BestEffort
 - настраивать проверки работоспособности (health probes)
+
+## Мониторинг
+
+- [node-problem-detector](https://github.com/kubernetes/node-problem-detector/tree/master)
+  - опыт Авито [поиск деградации на нодах в кластерах Kubernetes](https://habr.com/ru/companies/avito/articles/847466/)
 
 ## Технологии
 

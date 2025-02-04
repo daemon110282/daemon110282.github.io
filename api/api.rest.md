@@ -33,8 +33,13 @@ REST API — это архитектурный подход, который ус
 ## Термины
 
 - Ресурс
-- [URI Ресурса](https://teletype.in/@loginovpavel/rest-api) пример: <https://api.example1.com/users/123> <https://api.example2.com/users/123>
-- [Endpoint API](https://tquality.ru/blog/kak-pisat-endpointy/) пример: /users/123
+  - HTTP Method
+  - [URI\URL Ресурса](https://teletype.in/@loginovpavel/rest-api) - Универсальный указатель ресурса, который может указывать на любой объект в сети.
+    - URL — это подмножество URI (Uniform Resource Identifier), которое используется для идентификации ресурсов по их местоположению. 
+    - URI — более общее понятие, которое может включать в себя не только URL, но и [другие типы идентификаторов](https://telegra.ph/CHem-otlichaetsya-URL-ot-Endpoint-URL-vs-Endpoint-V-chem-raznica-07-16)
+    - пример: <https://api.example1.com/users/123> <https://api.example2.com/users/123>
+  - [Endpoint API](https://tquality.ru/blog/kak-pisat-endpointy/) - Конкретный URL, определяющий точку взаимодействия с API и функциональность, которую он предоставляет.
+    - пример: /users/123
 - Headers
 - Body
 - [HTTP Status](api-http-status.md)

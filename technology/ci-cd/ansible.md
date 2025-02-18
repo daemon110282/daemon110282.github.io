@@ -30,6 +30,12 @@
 
 ![Схема](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/daemon110282/daemon110282.github.io/master/technology/ci-cd/ansible.puml)
 
+## Паттерны
+
+### Управление сертификатами TLS
+
+- [Automate TLS/SSL certificate renewal by Tasks](https://www.grootan.com/blogs/automate-tls-ssl-certificate-renewal-seamlessly-with-ansible)
+
 ## Deployment
 
 - [Ansibleworks awx](https://habr.com/ru/companies/pixonic/articles/352184/)

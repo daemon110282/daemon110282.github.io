@@ -37,7 +37,7 @@ communication to multiple microservices
 
   - Dynamic request dispatching, __routing__ [or gateway routing](https://docs.microsoft.com/ru-ru/azure/architecture/patterns/gateway-routing)
   - IP whitelisting
-  - TLS Termination
+  - [TLS Termination](../arch/pattern/deployment/tls.termination.md)
 
 Расширяют функции API Gateway ИС класса [__API managment__](api-managment.md) (APIM)
 

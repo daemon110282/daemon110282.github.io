@@ -87,8 +87,6 @@
 
 - АСП
 - PCI DSS
-- k8s
-  - TLS – cert-manager
   
 ### Аутентификация
 

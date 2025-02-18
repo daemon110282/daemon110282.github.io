@@ -77,6 +77,7 @@ DevOps (development и operations):
 - Контейнеризация
   - [k8s](../../../technology/ci-cd/k8s.md)
   - OpenShift
+  - [Ansible](../../../technology/ci-cd/ansible.md)
 - Infrastructure-As-Code [IAC](../../../technology/ci-cd/iac.md)
   - [Ansible](../../../technology/ci-cd/ansible.md)
   - [Helm](../../../technology/ci-cd/helm.md)

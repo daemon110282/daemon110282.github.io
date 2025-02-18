@@ -1,7 +1,16 @@
 # Transport Layer Security (TLS)
 
+- [Transport Layer Security (TLS)](#transport-layer-security-tls)
+  - [Зачем](#зачем)
+  - [Односторонняя аутентификация (TLS)](#односторонняя-аутентификация-tls)
+  - [Двусторонняя аутентификация Mutual TLS (MTLS)](#двусторонняя-аутентификация-mutual-tls-mtls)
+  - [Технологии](#технологии)
+
+## Зачем
+
 - SSL
-- [Transport Layer Security (TLS)](https://habr.com/ru/post/593507/) - обеспечение защищенной передачи данных между двумя компьютерами в сети Интернет (на базе SSL3.0).
+- [Transport Layer Security (TLS)](https://habr.com/ru/post/593507/) - обеспечение защищенной передачи данных между двумя компьютерами в сети Интернет (на базе SSL3.0)
+- Шифруется вся часть запроса(cookie, headers, body), в том числе параметры URL
 - Асимметричное шифрование
   - private key - алгоритмы (RSA, AES, ГОСТ и тд) , хэш
   - public key
@@ -32,3 +41,10 @@
 - [Создание собственных X.509 сертификатов](https://habr.com/ru/articles/593507/)
 
 ![mtls](../../img/technology/protocols/mtls.jpg)
+
+## Технологии
+
+Управление сертификатами
+
+- [Kubernetes](../ci-cd/k8s.md#управление-сертификатами-tls)
+- [Ansible](../ci-cd/ansible.md#управление-сертификатами-tls)

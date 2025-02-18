@@ -5,6 +5,7 @@
   - [Параметры Flow](#параметры-flow)
   - [Security](#security)
   - [Виды атак](#виды-атак)
+    - [MitM](#mitm)
 
 ## Зачем
 
@@ -43,12 +44,16 @@
 
 ## Виды атак
 
-[Варианты атак](https://habr.com/ru/company/alexhost/blog/536364/)
+[Варианты атак](https://habr.com/ru/company/alexhost/blog/536364/):
 
-- MitM Перехват токена
-  - [Решение HTTPS](https://cyberpolygon.com/ru/materials/security-of-json-web-tokens-jwt/)
-  - [Refresh Token](oauth/oauth.refresh.token.md)
-  - Закрепление сертификата X.509 [Certificate Pinning](https://approov.io/product/dynamic-cert-pinning) from [Android API 24](https://approov.io/blog/securing-https-with-certificate-pinning-on-android)
-  - шифрование токенов JWE assymetric RSA
-  - подписание токенов JWS assymetric RSA
 - Replay attack
+
+### MitM
+
+[MitM](../../arch/ability/mitm.md) Перехват токена
+
+- [Решение HTTPS](https://cyberpolygon.com/ru/materials/security-of-json-web-tokens-jwt/)
+- [Refresh Token](oauth/oauth.refresh.token.md)
+- Закрепление сертификата X.509 [Certificate Pinning](https://approov.io/product/dynamic-cert-pinning) from [Android API 24](https://approov.io/blog/securing-https-with-certificate-pinning-on-android)
+- шифрование токенов JWE assymetric RSA
+- подписание токенов JWS assymetric RSA

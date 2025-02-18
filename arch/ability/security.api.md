@@ -20,8 +20,7 @@
 - SMS Leak
 - ATO-атаки
 - DDOS
-- Man In the Middle (MitM)
-  - [API Key](https://approov.io/blog/steal-that-api-key-with-a-man-in-the-middle-attack)
+- [Man In the Middle (MitM)](mitm.md)  
   
 ## Паттерны
 

@@ -34,7 +34,7 @@
 
 ### Управление сертификатами TLS
 
-- [Automate TLS/SSL certificate renewal by Tasks](https://www.grootan.com/blogs/automate-tls-ssl-certificate-renewal-seamlessly-with-ansible)
+- [Automate TLS/SSL certificate renewal by Playbook Tasks](https://www.grootan.com/blogs/automate-tls-ssl-certificate-renewal-seamlessly-with-ansible)
 
 ## Deployment
 

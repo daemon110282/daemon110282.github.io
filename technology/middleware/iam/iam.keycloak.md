@@ -161,7 +161,8 @@ Example
 	- [logs](https://www.keycloak.org/server/logging)
 - Режим разворачивания в ПРОДе в отказоустойчивом (HA) кластере на [СУБД postgresql](https://www.keycloak.org/server/db) с распределенным [кешем Infinispan](https://www.keycloak.org/server/caching), вариант [«Обычный кластер»](https://habr.com/ru/company/southbridge/blog/511380/)
 - [docker](../../../docker/keycloak/)
-  
+- [https TLS 1.3](https://www.keycloak.org/server/enabletls)
+
 ## Observability
 
 ### Metric

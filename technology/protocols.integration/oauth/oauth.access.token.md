@@ -48,11 +48,15 @@ Optional:
 
 ## Security
 
-Время жизни:
-
 - Секретный ключ длинный и менять периодически
-- На стороне приложения ограничить алгоритм подписи
-- Сам Access токен [храним не в localStorage](https://climbtheladder.com/10-spa-authentication-best-practices/) как это обычно делают, а [в памяти](https://auth0.com/docs/secure/security-guidance/data-security/token-storage) клиентского приложения
-- Store AccessToken JWT [in Session Cookie](https://jcbaey.com/authentication-in-spa-reactjs-and-vuejs-the-right-way/)
-  - When the SPA calls only an API that is served from a __domain that can share cookies__ with the domain of the SPA, __no tokens__ are needed. If you are using cookie-based authentication, they are stored in a cookie and sent to the server in every request.
-  - When the SPA calls multiple APIs that reside in a __different domain__, __access, refresh tokens are needed__. If you are using token-based authentication, they are sent by the client in every request, typically in the HyperText Transfer Protocol (HTTP) header.
+- На стороне приложения __ограничить алгоритм подписи__
+- Хранение
+  - Сам Access токен [храним не в localStorage](https://climbtheladder.com/10-spa-authentication-best-practices/) как это обычно делают, а [в памяти](https://auth0.com/docs/secure/security-guidance/data-security/token-storage) клиентского приложения
+  - Store AccessToken JWT [in Session Cookie](https://jcbaey.com/authentication-in-spa-reactjs-and-vuejs-the-right-way/)
+    - When the SPA calls only an API that is served from a __domain that can share cookies__ with the domain of the SPA, __no tokens__ are needed. If you are using cookie-based authentication, they are stored in a cookie and sent to the server in every request.
+    - When the SPA calls multiple APIs that reside in a __different domain__, __access, refresh tokens are needed__. If you are using token-based authentication, they are sent by the client in every request, typically in the HyperText Transfer Protocol (HTTP) header.
+- Время жизни
+  - Access Token Lifespan Срок действия токена доступа <= session idle timeout - 5 мин
+    - Once expired, they cannot be used for authentication or API calls. A user will need to request a new access token using the __refresh token__ or by __re-authenticating__
+  - session idle timeout Время ожидания сеанса единого входа - 30 мин
+  - SSO Session Max - 1 день

@@ -4,6 +4,7 @@
 	- [Зачем](#зачем)
 	- [Функции](#функции)
 		- [Термины](#термины)
+		- [Обновление Access Token используя Refresh Token](#обновление-access-token-используя-refresh-token)
 		- [User Storage](#user-storage)
 		- [Access Control](#access-control)
 	- [Технологии](#технологии)
@@ -33,7 +34,7 @@
 - Tokens
   - Custom Fields Token
   - Refresh token rotation
-	- [Revoke Refresh Token](https://www.keycloak.org/docs/latest/server_admin/#_timeouts)
+  - [Revoke Refresh Token](https://www.keycloak.org/docs/latest/server_admin/#_timeouts)
   - [Token Expiration](https://blog.elest.io/keycloak-token-management-expiration-revocation-and-renewal/)
   - Шифрование [JSON Web Encryption](https://www.rfc-editor.org/rfc/rfc7516) (JWE) RSA
     - only support [ID Token](https://www.keycloak.org/docs/latest/server_admin/index.html#con-advanced-settings_server_administration_guide)
@@ -88,6 +89,21 @@
   - CORS allow using the Authorization Code flow in JavaScript on browser-side with the PKCE extension instead.
 
 [Обучение СЛЁРМ](https://slurm.io/keycloak)
+
+### Обновление Access Token используя Refresh Token
+
+Параметры KeyCloak
+
+- Максимальное время жизни __Access токена__, сек "accessTokenLifespan" - 10800с=3ч (5мин) | 60
+- Максимальное время жизни access токена для Implicit Flow, сек "accessTokenLifespanForImplicitFlow" -  10800 | 60
+- Если пользователь неактивен дольше указанного времени, то сессия истекает., сек Касается __Refresh токенов__, и браузеров. "ssoSessionIdleTimeout" - 2592000с=30д | 120
+  - __Можно продлить сессию__ через Refresh Token
+- Максимальное время жизни сессии, после чего сессия истекает. Касается Refresh токенов, и браузеров, сек. "ssoSessionMaxLifespan": 15552000=180д | 180
+  - __Нельзя продлить сессию__ используя Refresh Token
+- То же самое, что SSO Session Idle, но для __Refresh токена__. Если на задано, то используется "ssoSessionIdleTimeout" "clientSessionIdleTimeout" - 0
+- То же самое, что SSO Session Max, но для __Refresh токена__. Если на задано, то используется "ssoSessionMaxLifespan" "clientSessionMaxLifespan" - 0
+- То же самое, что SSO Session Idle, но при нажатом "Запомнить меня" "ssoSessionIdleTimeoutRememberMe" - 0
+- То же самое, что SSO Session Max, но при нажатом "Запомнить меня" "ssoSessionMaxLifespanRememberMe" - 0
 
 ### User Storage
 
@@ -152,19 +168,19 @@ Example
 - [HA](https://habr.com/ru/company/southbridge/blog/658187/)
 	- [Deploy HA](https://habr.com/ru/company/southbridge/blog/511380/)
 - [k8s](https://www.keycloak.org/server/containers)
-- Observability
-	- Метрики мониторинга производительности		
-		- [Prometheus Keycloak Metric SPI](https://github.com/aerogear/keycloak-metrics-spi)
-		- [TODO](https://www.youtube.com/watch?v=ppPWqj8kRa0&feature=emb_imp_woyt)
-		- [Prometheus HELM chart keycloak-metrics](https://dev.to/arvindsharma18/monitoring-keycloak-using-prometheus-operator-kubernetes-helm-charts-14f6)
-	- [health check](https://www.keycloak.org/server/health)
-	- [logs](https://www.keycloak.org/server/logging)
 - Режим разворачивания в ПРОДе в отказоустойчивом (HA) кластере на [СУБД postgresql](https://www.keycloak.org/server/db) с распределенным [кешем Infinispan](https://www.keycloak.org/server/caching), вариант [«Обычный кластер»](https://habr.com/ru/company/southbridge/blog/511380/)
-- [docker](../../../docker/keycloak/)
+- [docker](../../../docker/keycloak/docker-compose.yml)
 - [https TLS 1.3](https://www.keycloak.org/server/enabletls)
 
 ## Observability
 
+- Метрики мониторинга производительности		
+	- [Prometheus Keycloak Metric SPI](https://github.com/aerogear/keycloak-metrics-spi)
+	- [TODO](https://www.youtube.com/watch?v=ppPWqj8kRa0&feature=emb_imp_woyt)
+	- [Prometheus HELM chart keycloak-metrics](https://dev.to/arvindsharma18/monitoring-keycloak-using-prometheus-operator-kubernetes-helm-charts-14f6)
+- [health check](https://www.keycloak.org/server/health)
+- [logs](https://www.keycloak.org/server/logging)
+  
 ### Metric
 
 - keycloak_response_errors

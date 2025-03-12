@@ -38,7 +38,7 @@
 - Валидация
   - [Token validate](oauth/oauth.validate.token.md)
   - [Token exchange](oauth/oauth.exchange.token.md)
-- Подписание JSON Web Signature (JWS)
+- Подписание [JSON Web Signature](https://auth0.com/docs/secure/tokens/token-best-practices#jwt-validation) (JWS)
 - Шифрование [JSON Web Encryption](https://www.rfc-editor.org/rfc/rfc7516) (JWE)
   - [Auth0 sample](https://auth0.com/docs/secure/tokens/access-tokens/json-web-encryption)
 
@@ -47,6 +47,7 @@
 [Варианты атак](https://habr.com/ru/company/alexhost/blog/536364/):
 
 - Replay attack
+- подпись у токенов не проверяется должным образом. Это позволяет злоумышленникам подделывать подписанные данные.
 
 ### MitM
 

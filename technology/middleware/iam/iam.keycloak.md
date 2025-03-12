@@ -171,6 +171,7 @@ Example
 - Режим разворачивания в ПРОДе в отказоустойчивом (HA) кластере на [СУБД postgresql](https://www.keycloak.org/server/db) с распределенным [кешем Infinispan](https://www.keycloak.org/server/caching), вариант [«Обычный кластер»](https://habr.com/ru/company/southbridge/blog/511380/)
 - [docker](../../../docker/keycloak/docker-compose.yml)
 - [https TLS 1.3](https://www.keycloak.org/server/enabletls)
+  - [how to](https://www.mastertheboss.com/keycloak/secure-keycloak-with-https/)
 
 ## Observability
 

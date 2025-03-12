@@ -12,11 +12,11 @@
   - __Tracing__
   - Metric
     - Service Performance Monitoring (SPM) - [Experimental](https://www.jaegertracing.io/docs/1.40/spm/)
-Distributed context propagation
-Distributed transaction monitoring
-Root cause analysis
-Service dependency analysis
-Performance / latency optimization
+- Distributed context propagation
+- Distributed transaction monitoring
+- Root cause analysis
+- Service dependency analysis
+- Performance / latency optimization
 
 ## Плюсы-минусы
 

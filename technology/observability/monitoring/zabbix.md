@@ -1,6 +1,7 @@
 # Zabbix
 
 [Network Monitoring](https://www.zabbix.com/ru/network_monitoring)
+
 - Network bandwidth usage
 - Packet loss rate
 - Interface errorrate
@@ -32,6 +33,6 @@
 ## Кейсы
 
 - СУБД
-  - MS SQL 
+  - MS SQL
     - [2019](https://dzen.ru/a/YciJa4I4YzUrCC76)
     - [счетчики производительности](https://habr.com/ru/articles/338498/)

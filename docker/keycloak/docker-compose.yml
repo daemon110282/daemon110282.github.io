@@ -26,8 +26,9 @@ services:
   keycloak:
     image: quay.io/keycloak/keycloak:20.0.2
     container_name: keycloak
+    # --hostname=localhost:8283
     command:
-      - start --auto-build --db postgres --hostname-strict-https true --hostname-strict false --proxy edge --http-enabled false --https-certificate-file=/opt/keycloak/https/tls.crt --https-certificate-key-file=/opt/keycloak/https/tls.pem --hostname=localhost:8283 --import-realm --spi-user-profile-legacy-user-profile-read-only-attributes *_RES_ACCESS_MODE
+      - start --auto-build --db postgres --hostname-strict-https false --hostname-strict false --proxy edge --http-enabled true --https-certificate-file=/opt/keycloak/https/tls.crt --https-certificate-key-file=/opt/keycloak/https/tls.pem --import-realm --spi-user-profile-legacy-user-profile-read-only-attributes *_RES_ACCESS_MODE
     environment:
       KC_DB_URL: jdbc:postgresql://keycloak-postgres:5432/postgres
       KC_DB_USERNAME: postgres
@@ -37,7 +38,7 @@ services:
       KEYCLOAK_ADMIN: admin
       KEYCLOAK_ADMIN_PASSWORD: admin
     ports:
-      # - 8282:8080 #http
+      - 8282:8080 #http
       - 8283:8443 #https http-enabled=false hostname-strict-https=true
     volumes:
       - "./data/certs:/opt/keycloak/https"   # map certificates to container  

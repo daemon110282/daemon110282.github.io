@@ -31,7 +31,7 @@
 - Flow-Grants
   - [ACF](../../protocols.integration/oauth/oauth.flow.ACwithPKCE.md) with [PKCE](https://www.keycloak.org/docs/latest/server_admin/#con-oidc-auth-flows_server_administration_guide)
   - Implicit Flow
-- Tokens
+- [Tokens](https://www.janua.fr/understanding-token-usage-in-keycloak/)
   - Custom Fields Token
   - Refresh token rotation
   - [Revoke Refresh Token](https://www.keycloak.org/docs/latest/server_admin/#_timeouts)
@@ -171,7 +171,9 @@ Example
 - Режим разворачивания в ПРОДе в отказоустойчивом (HA) кластере на [СУБД postgresql](https://www.keycloak.org/server/db) с распределенным [кешем Infinispan](https://www.keycloak.org/server/caching), вариант [«Обычный кластер»](https://habr.com/ru/company/southbridge/blog/511380/)
 - [docker](../../../docker/keycloak/docker-compose.yml)
 - [https TLS 1.3](https://www.keycloak.org/server/enabletls)
+  - [ssl modes](https://www.keycloak.org/docs/latest/server_admin/index.html#_ssl_modes)
   - [how to](https://www.mastertheboss.com/keycloak/secure-keycloak-with-https/)
+  - [with proxy Envoy](https://gruchalski.com/posts/2022-02-20-keycloak-1700-with-tls-behind-envoy/)
 
 ## Observability
 
@@ -195,7 +197,7 @@ Example
 [Releases](https://www.keycloak.org/2022/03/releases.html)
 
 - 26.*
-- [20.*](todo)
+- [20.*](https://www.keycloak.org/archive/documentation-20.0.html)
 - [19.*](https://www.keycloak.org/archive/documentation-19.0.html)
 - 18.* замена сервера приложений Java WildFly на Quarkus
 

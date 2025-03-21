@@ -171,7 +171,7 @@
   - [SSO](../pattern/security/sso.md)
     - Oauth 2, OpenID Connect, SAML
     - WS-Federation (token)
-    - two-factor authentication (2FA)
+    - [two-factor authentication (2FA)](security.2fa.md)
 
 ## Примеры требований
 

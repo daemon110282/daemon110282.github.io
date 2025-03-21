@@ -53,7 +53,7 @@
 	- [Extenstion](https://www.youtube.com/watch?v=Aj0GAg4EkUA&t=4493s&ab_channel=%D0%A1%D0%BB%D1%91%D1%80%D0%BC)
 - 2FA
 	- HMAC based OTP (HOTP)
-	- Time based OTP (TOTP) ![schema](https://substackcdn.com/image/fetch/w_1456,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fb885be28-b049-48fc-ad76-7416314dd4c3_3096x3603.jpeg)
+	- Time based OTP (TOTP)
 	- [ЕСИА](https://platform.digital.gov.ru/docs/security/platform-v-iam/esia-setup)
 	- 2FA SMS
       - [MFA OTP SMS](https://github.com/dasniko/keycloak-2fa-sms-authenticator)

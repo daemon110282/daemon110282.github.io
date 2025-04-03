@@ -19,7 +19,7 @@
 	- [Expire Policy](https://min.io/docs/minio/linux/administration/object-management.html#object-lifecycle-management) - автоочистка старых данных
 		- [on days](https://min.io/docs/minio/linux/administration/object-management/object-lifecycle-management.html#object-expiration)
 	- Legal Hold [Object Retention](https://min.io/docs/minio/linux/administration/object-management.html#object-retention) - блокировка от удаления
-		- enforces Write-Once Read-Many (WORM) immutability to protect versioned objects from deletion.
+		- enforces Write-Once Read-Many (WORM) immutability to protect versioned objects from deletion
 		- MinIO supports both duration
 			- based object retention
 			- indefinite Legal Hold retention.
@@ -41,6 +41,7 @@
 			- [PHP Laravel support](https://laravel.com/docs/9.x/filesystem#amazon-s3-compatible-filesystems)
 		- [.NET](https://min.io/docs/minio/linux/developers/dotnet/minio-dotnet.html)
 	- Bucket [Events](https://min.io/docs/minio/linux/administration/monitoring/bucket-notifications.html#)	to [RMQ, PSQL, Redis, WebHook](https://min.io/docs/minio/linux/administration/monitoring.html#bucket-notifications)
+	- [presigned URLs](https://min.io/docs/minio/linux/integrations/presigned-put-upload-via-browser.html)
 - [Security](https://min.io/docs/minio/linux/administration/identity-access-management.html)
 	- Policy-Based Access Control (PBAC)
 	- [Encryption SSE](https://min.io/product/enterprise-object-storage-encryption)

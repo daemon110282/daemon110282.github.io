@@ -9,7 +9,7 @@
     - Android google-services.json
     - IOS GoogleService-Info.plist
   - Добавьте Firebase SDK в свое приложение
-- При первом запуске вашего приложения пакет SDK FCM создает токен регистрации для экземпляра клиентского приложения
+- При первом запуске вашего приложения пакет [SDK FCM создает токен регистрации](https://firebase.google.com/docs/cloud-messaging/android/client#sample-register) для экземпляра клиентского приложения
 - Сохранить токен и временную метку на бэке МП
 - [Каналы уведомлений](https://firebase.google.com/docs/cloud-messaging/android/client?hl=ru) настроить
 - [Test send from Firebase console](https://github.com/firebase/quickstart-android/tree/master/messaging)

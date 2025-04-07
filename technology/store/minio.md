@@ -44,7 +44,7 @@
 	- [presigned URLs](https://min.io/docs/minio/linux/integrations/presigned-put-upload-via-browser.html)
 - [Security](https://min.io/docs/minio/linux/administration/identity-access-management.html)
 	- Policy-Based Access Control (PBAC)
-	- [Encryption SSE](https://min.io/product/enterprise-object-storage-encryption)
+	- Data [Encryption SSE](https://min.io/product/enterprise-object-storage-encryption)
 	- Manage
 		- Internal IDP
 		- security access by [IAM Keycloak](https://min.io/product/identity-and-access-management) OIDC protocol
@@ -77,6 +77,37 @@
 - HTTPS TLS 1.2+
 
 ## Patterns
+
+### Data Encryption (SSE)
+
+- Data [Encryption Server-Side Encryption (SSE)](https://min.io/product/enterprise-object-storage-encryption)
+- Encryption [algorithms](https://min.io/product/enterprise-object-storage-encryption): AES-256-GCM, ChaCha20-Poly1305, and AES-CBC
+- [Общая архитектура](https://min.io/product/enterprise-object-storage-encryption)
+
+Разные типы:
+
+- SSE-KMS (ключи берутся из KMS)
+  - MinIO supports enabling automatic SSE-KMS encryption of __all objects written to a bucket__ using a specific __External Key (EK)__ stored on the external Key Managment System __(KMS)__.
+  - При загрузке объекта, MinIO:
+    - Генерирует уникальный Data Encryption Key (DEK) для каждого объекта.
+    - DEK шифруется Master Key-ом (из KMS).
+    - Объект шифруется DEK’ом (обычно алгоритм AES-256-GCM).
+    - Зашифрованный DEK сохраняется в метаданных объекта.
+  - MinIO автоматически расшифровывает данные при чтении, если у него есть доступ к нужному ключу
+    - Клиент делает запрос на скачивание объекта. Например: GET /mybucket/myfile.txt
+    - MinIO читает зашифрованный объект из хранилища, а также метаданные, в которых содержится: Зашифрованный DEK (Data Encryption Key), Идентификатор ключа шифрования (Master Key ID)
+    - MinIO обращается к KMS (или использует встроенный ключ, если настроено MINIO_KMS_SECRET_KEY) для расшифровки DEK с помощью Master Key.
+    - Используя расшифрованный DEK, MinIO дешифрует сам объект на лету
+    - Расшифрованные данные отправляются клиенту — клиент ничего не должен знать о ключах или шифровании.
+- SSE-C (ключи указывает Клиент)
+  - Clients specify an EK as part of the write operation for an object. MinIO uses the specified EK to perform SSE-S3.
+
+Support KMS:
+
+- [hashicorp-vault](https://min.io/docs/kes/integrations/hashicorp-vault-keystore/)
+- внутренний сервис Minio Key Encryprion Service [KES](https://min.io/docs/kes/)
+  - поддерживает получение ключей из [Filesystem](https://min.io/docs/kes/tutorials/filesystem-keystore/)
+  - [Guide](https://min.io/docs/minio/linux/administration/server-side-encryption/server-side-encryption-sse-kms.html)
 
 ## Технологии
 

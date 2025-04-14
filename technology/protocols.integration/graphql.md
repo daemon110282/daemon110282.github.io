@@ -1,20 +1,16 @@
 # GraphQL
 
-конкурент rest api
+Конкурент rest api
 
-- Voyager схема
+- Voyager [схема](https://habr.com/ru/articles/852998/)
 - Apollo engine мониторинг, статистика использования API
 - Faker mock
 - Mobile apollo
 - Openapi 3 swagger генерация кода
-- supports
-  - queries
-  - mutations (applying data modifications to resources)
-  - subscriptions (receiving notifications on schema modifications).
 
 ## Плюсы и минусы
 
-Плюсы :
+Плюсы:
 
 - is more efficient in data fetching.
 - returns more accurate results.
@@ -26,3 +22,12 @@
 - Increased complexity
 - Over fetching by design
 - Caching complexity
+
+## Модель
+
+- Query - Запросы (HTTP)
+  - Arguments
+  - Object
+    - Field
+- Mutation - Команды (HTTP)
+- Subscription - Подписки (WebSocket)

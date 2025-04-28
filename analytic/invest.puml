@@ -40,12 +40,12 @@ class "ФИ" AS FinancialInstrument {
 }
 
 enum InstrumentType {
-	акции STOCK
-	облигации BOND
-	паи ETF
-	опционы OPTION
-	фьючерсы FUTURE
-	CRYPTOCURRENCY
+	Акции STOCK
+	Облигации BOND
+	Паи ETF
+	Опционы OPTION
+	Фьючерсы FUTURE
+	Криптовалюта CRYPTOCURRENCY
 	Выпуск акции
 	депозитарные расписки
 	ипотечные сертификаты участия
@@ -119,10 +119,10 @@ class "Места хранения" AS CustodyLocation {
 ' Фьючерсы — на биржевых счетах (EXCHANGE_ACCOUNT).
 ' Криптовалюта — в кошельках (WALLET).
 enum "Тип места хранения" AS CustodyType {
-  DEPOSITORY
+  Депозитарий DEPOSITORY
   BROKER_CUSTODY
-  EXCHANGE_ACCOUNT
-  WALLET
+  Биржевой счёт EXCHANGE_ACCOUNT
+  Кошелек WALLET
 }
 
 ' отображает доступность хранения конкретного финансового инструмента в конкретном месте хранения.

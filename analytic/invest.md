@@ -50,6 +50,7 @@
 
 - Инвестиционные Рекомендации
 - Скринер для автоматического поиска акций
+- [Депозитарный](https://www.tbank.ru/invest/social/profile/T-Investments/eda4f806-18e7-49be-9f8a-1395b93d638a/?author=profile) учет
 
 ## Модель данных
 

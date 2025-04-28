@@ -32,7 +32,7 @@
   - [ACF](../../protocols.integration/oauth/oauth.flow.ACwithPKCE.md) with [PKCE](https://www.keycloak.org/docs/latest/server_admin/#con-oidc-auth-flows_server_administration_guide)
   - Implicit Flow
 - [Tokens](https://www.janua.fr/understanding-token-usage-in-keycloak/)
-  - Custom Fields Token
+  - [Custom Fields](https://datmt.com/backend/how-to-add-custom-claims-from-user-attributes-in-keycloak/) Token
   - Refresh token rotation
   - [Revoke Refresh Token](https://www.keycloak.org/docs/latest/server_admin/#_timeouts)
   - [Token Expiration](https://blog.elest.io/keycloak-token-management-expiration-revocation-and-renewal/)

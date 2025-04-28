@@ -41,7 +41,7 @@
 			- [PHP Laravel support](https://laravel.com/docs/9.x/filesystem#amazon-s3-compatible-filesystems)
 		- [.NET](https://min.io/docs/minio/linux/developers/dotnet/minio-dotnet.html)
 	- Bucket [Events](https://min.io/docs/minio/linux/administration/monitoring/bucket-notifications.html#)	to [RMQ, PSQL, Redis, WebHook](https://min.io/docs/minio/linux/administration/monitoring.html#bucket-notifications)
-	- [presigned URLs](https://min.io/docs/minio/linux/integrations/presigned-put-upload-via-browser.html)
+	- [presigned URLs](https://min.io/docs/minio/linux/integrations/presigned-put-upload-via-browser.html) by [Minio API](https://min.io/docs/minio/linux/developers/javascript/API.html#presigned-operations)
 - [Security](https://min.io/docs/minio/linux/administration/identity-access-management.html)
 	- Policy-Based Access Control (PBAC)
 	- Data [Encryption SSE](https://min.io/product/enterprise-object-storage-encryption)
@@ -86,7 +86,7 @@
 
 Разные типы:
 
-- SSE-KMS (ключи берутся из KMS)
+- __SSE-KMS__ (ключи берутся из KMS)
   - MinIO supports enabling automatic SSE-KMS encryption of __all objects written to a bucket__ using a specific __External Key (EK)__ stored on the external Key Managment System __(KMS)__.
   - При загрузке объекта, MinIO:
     - Генерирует уникальный Data Encryption Key (DEK) для каждого объекта.
@@ -99,7 +99,7 @@
     - MinIO обращается к KMS (или использует встроенный ключ, если настроено MINIO_KMS_SECRET_KEY) для расшифровки DEK с помощью Master Key.
     - Используя расшифрованный DEK, MinIO дешифрует сам объект на лету
     - Расшифрованные данные отправляются клиенту — клиент ничего не должен знать о ключах или шифровании.
-- SSE-C (ключи указывает Клиент)
+- __SSE-C__ (ключи указывает Клиент)
   - Clients specify an EK as part of the write operation for an object. MinIO uses the specified EK to perform SSE-S3.
 
 Support KMS:

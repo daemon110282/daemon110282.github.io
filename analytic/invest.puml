@@ -1,5 +1,6 @@
 @startuml (id=invest)
 skinparam classAttributeIconSize 0
+hide note
 
 ' Основные сущности
 class User {
@@ -18,12 +19,65 @@ class BrokerageAccount {
   +openedDate: Date
 }
 
-class "Актив" AS Asset {
+enum AccountStatus {
+  ACTIVE
+  SUSPENDED
+  CLOSED
+}
+
+' note left
+' Финансовый инструмент — это то, 
+' чем ты торгуешь (акция, облигация, опцион).
+' end note
+class "ФИ" AS FinancialInstrument {
   +id: UUID
   +symbol: String
   +name: String
-  +type: AssetType
-  +currentPrice: Decimal
+  +type: InstrumentType
+  +exchange: String
+  +currency: String
+	state: InstrumentState
+}
+
+enum InstrumentType {
+	акции STOCK
+	облигации BOND
+	паи ETF
+	опционы OPTION
+	фьючерсы FUTURE
+	CRYPTOCURRENCY
+	Выпуск акции
+	депозитарные расписки
+	ипотечные сертификаты участия
+	Ипотечный сертификат
+	клиринговые сертификаты участия
+}
+
+enum "СостояниеФИ" AS InstrumentState <<InstrumentState>> {
+	Аннулирован
+	Аннулирован как недействительный
+	Аннулирован как несостоявшийся
+	Аннулирован при конвертации/редомициляции
+	Аннулирован при объединении
+	В обращении
+	В размещении
+	Готовится
+	Дефолт
+	Погашен
+	Размещается
+	Размещен
+	Списано
+}
+
+' note left
+' После покупки ФИ, у инвестора 
+' появляется актив в портфеле.
+' end note
+class "Актив" AS Asset {
+  +id: UUID
+  +quantity: Decimal
+  +averageAcquisitionPrice: Decimal
+  +currentValue: Decimal
 }
 
 class "Заявка" AS Order {
@@ -52,19 +106,36 @@ class "Позиция" AS Position {
   +lastUpdatedDate: Date
 }
 
-' Перечисления
-enum AccountStatus {
-  ACTIVE
-  SUSPENDED
-  CLOSED
+class "Места хранения" AS CustodyLocation {
+  +id: UUID
+  +name: String
+  +type: CustodyType
+  +country: String
+  +description: String
 }
 
-enum AssetType {
-  STOCK
-  BOND
-  ETF
-  CRYPTOCURRENCY
+' Не все инструменты можно хранить везде. Например:
+' Акции хранятся через депозитарии (DEPOSITORY).
+' Фьючерсы — на биржевых счетах (EXCHANGE_ACCOUNT).
+' Криптовалюта — в кошельках (WALLET).
+enum "Тип места хранения" AS CustodyType {
+  DEPOSITORY
+  BROKER_CUSTODY
+  EXCHANGE_ACCOUNT
+  WALLET
 }
+
+' отображает доступность хранения конкретного финансового инструмента в конкретном месте хранения.
+' Один инструмент может храниться в нескольких местах.
+' Одно место может поддерживать хранение разных инструментов.
+class InstrumentCustodyAvailability {
+  +id: UUID
+  +available: Boolean
+  +notes: String
+}
+
+' Перечисления
+
 
 enum OrderType {
   BUY
@@ -89,9 +160,13 @@ enum TransactionType {
 ' Связи
 User "1" -- "0..*" BrokerageAccount : owns >
 BrokerageAccount "1" -- "0..*" Order : places >
-Order "1" -- "1" Asset : for >
+Order "1" -- "1" FinancialInstrument : for >
 BrokerageAccount "1" -- "0..*" Transaction : records >
 BrokerageAccount "1" -- "0..*" Position : holds >
-Position "1" -- "1" Asset : relates to >
+Position "1" -- "1" FinancialInstrument : relates to >
+Position "1" -- "1" CustodyLocation : stored at >
+Asset "1" -- "1" FinancialInstrument : based on >
+FinancialInstrument "1" -- "0..*" InstrumentCustodyAvailability : can be stored at >
+CustodyLocation "1" -- "0..*" InstrumentCustodyAvailability : supports >
 
 @enduml

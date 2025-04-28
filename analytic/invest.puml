@@ -1,0 +1,97 @@
+@startuml (id=invest)
+skinparam classAttributeIconSize 0
+
+' Основные сущности
+class User {
+  +id: UUID
+  +name: String
+  +email: String
+  +phone: String
+  +registrationDate: Date
+}
+
+class BrokerageAccount {
+  +id: UUID
+  +accountNumber: String
+  +balance: Decimal
+  +status: AccountStatus
+  +openedDate: Date
+}
+
+class "Актив" AS Asset {
+  +id: UUID
+  +symbol: String
+  +name: String
+  +type: AssetType
+  +currentPrice: Decimal
+}
+
+class "Заявка" AS Order {
+  +id: UUID
+  +orderType: OrderType
+  +quantity: Integer
+  +price: Decimal
+  +status: OrderStatus
+  +createdDate: Date
+  +executedDate: Date
+}
+
+class Transaction {
+  +id: UUID
+  +transactionType: TransactionType
+  +amount: Decimal
+  +date: Date
+  +description: String
+}
+
+class "Позиция" AS Position {
+  +id: UUID
+  +quantity: Decimal
+  +averagePrice: Decimal
+  +createdDate: Date
+  +lastUpdatedDate: Date
+}
+
+' Перечисления
+enum AccountStatus {
+  ACTIVE
+  SUSPENDED
+  CLOSED
+}
+
+enum AssetType {
+  STOCK
+  BOND
+  ETF
+  CRYPTOCURRENCY
+}
+
+enum OrderType {
+  BUY
+  SELL
+}
+
+enum OrderStatus {
+  NEW
+  PARTIALLY_FILLED
+  FILLED
+  CANCELLED
+}
+
+enum TransactionType {
+  DEPOSIT
+  WITHDRAWAL
+  BUY
+  SELL
+  DIVIDEND
+}
+
+' Связи
+User "1" -- "0..*" BrokerageAccount : owns >
+BrokerageAccount "1" -- "0..*" Order : places >
+Order "1" -- "1" Asset : for >
+BrokerageAccount "1" -- "0..*" Transaction : records >
+BrokerageAccount "1" -- "0..*" Position : holds >
+Position "1" -- "1" Asset : relates to >
+
+@enduml

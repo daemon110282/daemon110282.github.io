@@ -94,17 +94,22 @@
 
 Параметры KeyCloak
 
-- Максимальное время жизни __Access токена__, сек "accessTokenLifespan" - 10800с=3ч (5мин) | 60
-- Максимальное время жизни access токена для Implicit Flow, сек "accessTokenLifespanForImplicitFlow" -  10800 | 60
-- Если пользователь неактивен дольше указанного времени, то сессия истекает., сек Касается __Refresh токенов__, и браузеров. "ssoSessionIdleTimeout" - 2592000с=30д | 120
-  - __Можно продлить сессию__ через Refresh Token
-- Максимальное время жизни сессии, после чего сессия истекает. Касается Refresh токенов, и браузеров, сек. "ssoSessionMaxLifespan": 15552000=180д | 180
-  - __Нельзя продлить сессию__ используя Refresh Token
-- То же самое, что SSO Session Idle, но для __Refresh токена__. Если на задано, то используется "ssoSessionIdleTimeout" "clientSessionIdleTimeout" - 0
-- То же самое, что SSO Session Max, но для __Refresh токена__. Если на задано, то используется "ssoSessionMaxLifespan" "clientSessionMaxLifespan" - 0
-- То же самое, что SSO Session Idle, но при нажатом "Запомнить меня" "ssoSessionIdleTimeoutRememberMe" - 0
-- То же самое, что SSO Session Max, но при нажатом "Запомнить меня" "ssoSessionMaxLifespanRememberMe" - 0
-
+- Realm settings\Tokens\Access tokens
+  - Access Token Lifespan - Максимальное время жизни __Access токена__, сек "accessTokenLifespan" - 10800с=3ч (5мин) | 60
+  - Access Token Lifespan For Implicit Flow - Максимальное время жизни access токена для Implicit Flow, сек "accessTokenLifespanForImplicitFlow" -  10800 | 60
+  - Client Login Timeout
+- Realm settings\Sessions\SSO Session Settings
+  - SSO Session Idle - Если пользователь неактивен дольше указанного времени, то сессия истекает., сек Касается __Refresh токенов__, и браузеров. "ssoSessionIdleTimeout" - 2592000с=30д | 120
+    - __Можно продлить сессию__ через Refresh Token
+  - SSO Session Max - Максимальное время жизни сессии, после чего сессия истекает. Касается Refresh токенов, и браузеров, сек. "ssoSessionMaxLifespan": 15552000=180д | 180
+    - __Нельзя продлить сессию__ используя Refresh Token
+    - Должно быть больше и включать SSO Session Idle
+  - SSO Session Idle Remember Me - То же самое, что SSO Session Idle, но при нажатом "Запомнить меня" "ssoSessionIdleTimeoutRememberMe" - 0
+  - SSO Session Max Remember Me - То же самое, что SSO Session Max, но при нажатом "Запомнить меня" "ssoSessionMaxLifespanRememberMe" - 0
+- Realm settings\Sessions\Client session settings
+  - Client Session Idle - То же самое, что SSO Session Idle, но для __Refresh токена__. Если на задано, то используется "ssoSessionIdleTimeout" "clientSessionIdleTimeout" - 0
+  - Client Session Max - То же самое, что SSO Session Max, но для __Refresh токена__. Если на задано, то используется "ssoSessionMaxLifespan" "clientSessionMaxLifespan" - 0
+  
 ### User Storage
 
 User Federation

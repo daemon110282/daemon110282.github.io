@@ -12,6 +12,9 @@
 
 ## Зачем
 
+Традиционные решения IAM предназначены для облегчения __доступа сотрудников к внутренним системам__, они не могут предоставлять информацию о личности клиента.
+Персональные данные обрабатываются именно [CIAM](ciam.md).
+
 Identity Provider (IDP) в IAM with industry standard supported protocols:
 
 - SAML 2.0 XML (Security Assertion Markup Language)
@@ -107,14 +110,14 @@ User Provisioning:
 - in house (on premise)
 	- Commercial
 		- [ADFS](../../technology/middleware/iam/iam.adfs.md)
-		- Отечественное [UIDM](../../technology/middleware/iam/iam.uidm.md)
-		- [Identity Blitz](https://identityblitz.ru/products/blitz-identity-provider/documentation/?ref=main)
+		- Отечественное
+    		- [UIDM](../../technology/middleware/iam/iam.uidm.md)
+    		- [Identity Blitz](../../technology/middleware/iam/iam.blitz.md)
 	- Open Source
+		- [Keycloak (Red Hat Java)](../../technology/middleware/iam/iam.keycloak.md)
 		- [WSO2 Identity Server](../../technology/middleware/iam/iam.wso2.md)
 		- [IdentityServer (.NET Core)](../../technology/middleware/iam/iam.is.md) 4я версия бесплатная, с 6й версии нет?
-		- [Keycloak (Red Hat Java)](../../technology/middleware/iam/iam.keycloak.md)
 		- [Ory Hydra](../../technology/middleware/iam/iam.hydra.md)
-		- [Blitz Identity Provider](../../technology/middleware/iam/iam.blitz.md)
 - online
 	- Commercial
       - AWS Cognito

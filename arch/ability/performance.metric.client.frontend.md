@@ -9,7 +9,7 @@
     - [LCP](https://habr.com/ru/companies/vk/articles/577792/) - насколько быстро происходит скорость загрузки страницы - <2.5-4c
     - FID - как быстро происходит взаимодействие с сайтом - <1-3c
     - CLS - корректно ли работают в совокупности все элементы - <0.1-0.25
-  - [Дополнительно](https://web.dev/vitals/?utm_source=pocket_saves#drugie-pokazateli-web-vitals)
+  - [Дополнительно](https://web.dev/vitals/#drugie-pokazateli-web-vitals)
     - Time to First Byte (TTFB) - Время до первого байта
     - First Contentful Paint (FCP) - Первая отрисовка контента
     - Total Blocking Time (TBT) - Общее время блокировки

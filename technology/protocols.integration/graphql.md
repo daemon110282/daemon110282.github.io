@@ -26,7 +26,7 @@
 ## Модель
 
 - Query - Запросы (HTTP)
-  - Arguments
+  - [Arguments](https://habr.com/ru/articles/876782/)
   - Object
     - Field
 - Mutation - Команды (HTTP)

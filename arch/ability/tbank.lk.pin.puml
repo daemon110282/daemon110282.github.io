@@ -1,0 +1,80 @@
+@startuml (id=pin)
+hide unlinked
+
+LK -> BE: \n POST /auth/step?cid=pURJPBoRe3yu
+BE --> LK: Новая сессия?
+note right
+Cookie:
+SSO_SESSION TTL=20224 day
+SSO_SESSION_STATE TTL=20224 day
+end note
+
+LK -> BE: \n GET /api/common/v1/session/check_auth
+note left 
+?code=c.Pcbv0BKI6v
+&state=eyJhbGciOiJ...
+&session_state=KVzA5BXSZMXVrbe...
+&notInFrame=true
+end note
+
+BE --> LK: 
+note right
+Cookie:
+sso_api_session TTL=20 h
+end note
+@enduml
+
+@startuml (id=example_pin)
+hide unlinked
+
+actor Client
+participant LK
+participant BE
+' Local Storage:
+' authType
+
+
+== Set Pin ==
+Client -> LK: Первичная авторизация 2FA SMS 
+LK -> BE: 2FA SMS ok
+return isNeedPin
+LK -> LK: Set Cookie: AT, RT
+LK -> LK: Обновить время таймаута бездействия LocalStorage:session_timer
+LK -> LK: Сохранить ДатаВремя завершения сессии в LocalStorage:refresh_session_time расчет по refresh_expiries_in
+
+alt isNeedPin=true
+	Client -> LK: Set PIN 
+	LK -> LK: Сохранить в LocalStorage:hashPin = hash(PIN+соль) \n соль=session_state+device_id 
+	' копирование хэша бесполезно, тк нужно знать PIN, чтобы расшифровать RT и продолжить работу в ЛК
+	LK -> LK: Ключ генерируется через PBKDF2(PIN+соль) хранится в RAM \n Симметричный алгоритм шифрования AES-GCM (Ключ, RT) \n Сохранить в LocalStorage:(encRT + соль + iv) \n Удаляем Ключ
+	LK -> LK: Set LocalStorage:authType = PIN
+else 
+	LK -> LK: Set LocalStorage:authType = login (как сейчас)
+end
+
+== Logout by Timeout ==
+LK -> LK: Delete Cookie: AT, RT
+
+alt authType = login
+	Client -> LK: Auth 2FA SMS
+else authType = PIN
+	Client -> LK: Auth by PIN
+end
+
+== Auth by PIN==
+alt Если LocalStorage:authType = PIN \n И Есть LocalStorage:hashPin \n И Есть LocalStorage:(encRT + соль + iv) \n И LocalStorage:refresh_session_time НЕ истек
+	Client -> LK: Вводит PIN
+	LK -> LK: Ключ генерируется через PBKDF2(PIN+соль) хранится в RAM \n Дешифруем RT AES-GCM (Ключ, encRT)
+	' Если сессия 180 д истекла, не выдадут новый AT
+	' Проверяем, что RT действующий
+	
+	LK -> BE: Обновить AT, RT расшифрованным RT \n /token grant_type=refresh_token
+	LK -> LK: Set Cookie: новый AT, новый RT
+	LK -> LK: Обновить время таймаута бездействия LocalStorage:session_timer
+	
+	LK -> LK: Симметричный алгоритм шифрования AES-GCM (Ключ, RT) \n Сохранить в LocalStorage:(encRT + соль + iv) \n Удаляем Ключ
+else
+	Client -> LK: Auth 2FA SMS
+end
+
+@enduml

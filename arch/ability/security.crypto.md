@@ -89,7 +89,7 @@
 
 Криптоалгоритмы международные:
 
-- [RSA](https://www.devglan.com/online-tools/rsa-encryption-decryption)
+- Ассимметричный алгоритм [RSA](https://www.devglan.com/online-tools/rsa-encryption-decryption)
   - Padding: Proper __padding schemes__ (e.g., OAEP, PKCS#1 v1.5) are crucial to prevent certain cryptographic attacks and ensure secure encryption.
     - Optimal Asymmetric Encryption Padding (OAEP) - шифрование
       - [algorithm](https://connect2id.com/products/nimbus-jose-jwt/examples/jwt-with-rsa-encryption)
@@ -100,7 +100,7 @@
           - pSourceAlgorithm: empty
     - RSASSA-PKCS1-v1_5 - подпись\шифрование
     - RSA-PSS - подпись
-- AES modes: CTR, CBC, GCM
+- Симметричный алгоритм AES modes: CTR, CBC, GCM
 - IPSec VPN Site-to-Site - [CISCO](https://wiki.merionet.ru/articles/nastrojka-site-to-site-ipsec-vpn-na-cisco)
 
 ##### Алгоритм Diffie-Hellman

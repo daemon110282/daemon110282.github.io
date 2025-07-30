@@ -23,5 +23,5 @@ header.payload.signature
 
 ## Защита jwt
 
-- fingerprint браузера (иной уникальный идентификатор устройства, если это не браузер)
+- [fingerprint](fingerprint.md) браузера (иной уникальный идентификатор устройства, если это не браузер)
 - передача [в GET как параметр](https://stackoverflow.com/questions/32722952/is-it-safe-to-put-a-jwt-into-the-url-as-a-query-parameter-of-a-get-request) допустима

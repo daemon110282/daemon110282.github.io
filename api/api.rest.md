@@ -70,7 +70,9 @@ REST API — это архитектурный подход, который ус
 
 [HTTP методы](https://learn.microsoft.com/ru-ru/azure/architecture/best-practices/api-design#define-api-operations-in-terms-of-http-methods)
 
-- POST - Создает, PUT - Создает или заменяет, PATCH - Частичное изменяет, не входит в стандарт HTTP (не рекомендуется использовать)
+- POST - Создает
+- PUT - Создает или заменяет
+- PATCH - Частичное изменяет, не входит в стандарт HTTP (не рекомендуется использовать)
 - GET
   - Передача [массива в GET](https://stackoverflow.com/questions/11944410/passing-array-in-get-for-a-rest-call):
     - ?users=id1,id2

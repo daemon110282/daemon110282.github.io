@@ -1,0 +1,39 @@
+# https://blog.programster.org/deploy-keycloak-using-docker
+services:
+
+  keycloak:
+    image: quay.io/keycloak/keycloak:26.0
+    restart: always
+    command: start
+    ports:
+      - "80:8080"
+    depends_on:
+      - db
+    environment:
+      - KC_PROXY_ADDRESS_FORWARDING
+      - KC_HOSTNAME_STRICT
+      - KC_HOSTNAME
+      - KC_PROXY
+      - KC_HTTP_ENABLED=true
+      - KC_DB=postgres
+      - KC_DB_USERNAME=${DB_USER}
+      - KC_DB_PASSWORD=${DB_PASSWORD}
+      - KC_DB_URL_HOST=db
+      - KC_DB_URL_PORT=5432
+      - KC_DB_URL_DATABASE=${DB_NAME}
+      - KEYCLOAK_ADMIN
+      - KEYCLOAK_ADMIN_PASSWORD
+
+  db:
+    image: postgres:17.1-bullseye
+    restart: always
+    environment:
+      - POSTGRES_USER=${DB_USER}
+      - POSTGRES_DB=${DB_NAME}
+      - POSTGRES_PASSWORD=${DB_PASSWORD}
+    volumes:
+      - db-data:/var/lib/postgresql/data'
+
+volumes:
+  db-data:
+    driver: local

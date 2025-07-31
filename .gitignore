@@ -1,1 +1,2 @@
 *.pdf
+docker/keycloak26/EFTR-realm-export.json

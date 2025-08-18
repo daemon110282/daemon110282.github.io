@@ -21,6 +21,7 @@
 	- IP:port, TCP, UDP параметры
 	- Cookie
 	- Payload
+- IP whitelisting
 
 ## Плюсы и минусы
 

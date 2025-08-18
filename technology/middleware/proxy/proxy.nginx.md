@@ -1,6 +1,6 @@
 # NGINX
 
-Реализует паттерн [Reverse Proxy](../../arch/pattern/pattern.proxy.reverse.md) и [API Gateway](../../../api/api.gateway.md)
+Реализует паттерн [Reverse Proxy](../../arch/pattern/pattern.proxy.reverse.md) и [API Gateway](../../../arch/pattern/deployment/api.gateway.md)
 
 - Cache
 - SSL encryption

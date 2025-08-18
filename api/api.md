@@ -40,7 +40,7 @@ API - Application Programming Interface, что значит программн�
 ## Patterns
 
 - [Подходы к проектированию](api.design.md)
-- [API gateway](api.gateway.md)
+- [API gateway](../arch/pattern/deployment/api.gateway.md)
 - [Стратегии повторов](../arch/pattern/system.design/fault.tolerance/pattern.failure.md) при сбоях Rerty Policy
 
 TODO
@@ -114,4 +114,4 @@ https://www.gov.uk/guidance/setting-api-service-levels
 
 - [API Platform](https://blog.postman.com/new-postman-api-platform-redefining-api-management-for-api-first-world/)
   - [API management](api-managment.md)
-  - [API Gateway](api.gateway.md)
+  - [API Gateway](../arch/pattern/deployment/api.gateway.md)

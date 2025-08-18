@@ -6,6 +6,6 @@
 
 ## Паттерны
 
-- [API Gateway](../../api/api.gateway.md)
+- [API Gateway](../pattern/deployment/api.gateway.md)
 - Server-side [service discovery](../pattern/deployment/service.discovery.md)
 - [Слабая связанность (low coupling)](../pattern/system.design/low.coupling.md)

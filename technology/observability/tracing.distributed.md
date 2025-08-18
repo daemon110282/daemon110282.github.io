@@ -8,7 +8,7 @@
     - [Фреймворки](#фреймворки)
     - [Data OTEL Collector](#data-otel-collector)
 
-## Паттерны 
+## Паттерны
 
 ### X-Request-ID
 

@@ -140,7 +140,7 @@ __Не подходит__ для:
   - the API REST-based topology
   - application REST-based topology
   - the centralized messaging topology
-- нет [прямого взаимодействия микросервисов](https://habr.com/ru/articles/496934/) [API Gateway](../../api/api.gateway.md) или [Message Bus](eda.md)
+- нет [прямого взаимодействия микросервисов](https://habr.com/ru/articles/496934/) [API Gateway](../pattern/deployment/api.gateway.md) или [Message Bus](eda.md)
 - Декомпозиции на сервисы
   - [Decompose by business capability Context](https://microservices.io/patterns/decomposition/decompose-by-business-capability.html)
   - [Decompose by subdomain Context](https://microservices.io/patterns/decomposition/decompose-by-subdomain.html)
@@ -157,7 +157,7 @@ __Не подходит__ для:
   - [Паттерны управления данными](https://mcs.mail.ru/blog/26-osnovnyh-patternov-mikroservisnoj-razrabotki)
   - [26 основных паттернов микросервисной разработки](https://mcs.mail.ru/blog/26-osnovnyh-patternov-mikroservisnoj-razrabotki)
 - [Service Mesh](../../technology/middleware/servicemesh.md)
-- [API Gateway](../../api/api.gateway.md)
+- [API Gateway](../pattern/deployment/api.gateway.md)
 - [Service Discovery](../pattern/deployment/service.discovery.md)
 
 ### Принципы к проектированию сервисов

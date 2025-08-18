@@ -39,7 +39,7 @@
       - Advanced transient messaging
       - Message-oriented persistent
       - log-based message queue
-    - [API Gateway](../../../api/api.gateway.md)
+    - [API Gateway](../deployment/api.gateway.md)
     - [SOA](../../style/soa.md)
 
 ## Критерии выбора

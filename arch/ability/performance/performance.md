@@ -65,10 +65,7 @@
 ## Инструменты
 
 - [Нагрузочное тестирование](../../../technology/ability/performance/load.test.md)
-- Observability
-  - [logs](../../../technology/observability/logging.md)
-  - [monitoring](../../../technology/observability/monitoring.md)
-  - [trace](../../../technology/observability/tracing.distributed.md)
+- [Observability](../observability.md)
 
 ## Метрики
 

@@ -2,7 +2,7 @@
 
 ## Зачем
 
-Реализует паттерн [Reverse Proxy](../../../arch/pattern/deployment/pattern.proxy.reverse.md) и [API Gateway](../../../api/api.gateway.md).
+Реализует паттерн [Reverse Proxy](../../../arch/pattern/deployment/pattern.proxy.reverse.md) и [API Gateway](../../../arch/pattern/deployment/api.gateway.md).
 
 - [Reverse Proxy](../proxy/router.traefik.md)
 - [api-gateway](https://traefik.io/solutions/api-gateway/)

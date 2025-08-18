@@ -6,7 +6,7 @@
   - [Плюсы-минусы](#плюсы-минусы)
   - [Технологии](#технологии)
 
-Расширяет возможности [API Gateway](api.gateway.md).
+Расширяет возможности [API Gateway](../arch/pattern/deployment/api.gateway.md).
 
 ## Зачем
 

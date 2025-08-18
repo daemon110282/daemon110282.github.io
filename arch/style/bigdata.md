@@ -81,7 +81,7 @@ UC:
     - [Kafka](../../technology/middleware/messagebus/kafka.md)
     - Amazon Kinezis
   - [CDC](../system.class/cdc.md)
-  - Репликация, синхронизация данных [Sync Data](../pattern/sync.data.md)
+  - Репликация, синхронизация данных [Sync Data](../pattern/integration/sync.data.md)
 - Хранение
   - [Distributed Storage Systems](../../technology/filesystem/dfs.md)
   - структурированные данные в [DWH](../system.class/dwh.md)

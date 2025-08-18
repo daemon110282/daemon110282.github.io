@@ -24,7 +24,7 @@ communication to multiple microservices
   - [Rate limiting](../arch/pattern/performance/rate.limit.md) and throttling
   - [Logging, tracing, correlation](../arch/ability/observability.md)
   - Headers, query strings, and claims transformation
-- [Mock](../arch/pattern/mock.md)
+- [Mock](../arch/pattern/development/mock.md)
 - __Security issues__ Сокрытие внутренних API ИС от внешних ИС потребителей
   - Without a gateway, all the microservices must be exposed to the “external world"
 - [Паттерн BFF](../arch/pattern/integration/pattern.bff.md)

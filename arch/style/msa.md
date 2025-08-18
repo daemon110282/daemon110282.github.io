@@ -192,7 +192,7 @@ Microservices on .Net platforms which used Asp.Net Web API, Docker, RabbitMQ, Ma
 
 - Логи пишутся в консоль/stdout в формате json
 - Конфигурация в ЕNV-переменных
-- [Миграции для БД](../pattern/migration.db.md)
+- [Миграции для БД](../pattern/deployment/migration.db.md)
 - Swagger
 - Идемпотетность. Идемпотентным называют такой метод API, повторный вызов которого не меняет состояние. НО: результат идемпотентного вызова может меняться.
 - Кэш

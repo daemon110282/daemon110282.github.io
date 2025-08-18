@@ -57,7 +57,7 @@
 - Что __извлекать первым: код или БД__?
   - если можно изменять монолит, БД
   - иначе - код
-- [Feature Toogle](../feature.toggle.md) typical workflow:
+- [Feature Toogle](../development/feature.toggle.md) typical workflow:
   - Identify a __piece of the monolith__ functionality to migrate to a microservice.
   - __Wrap__ the functionality with a __feature flag__. Re-deploy the monolith.
   - Build and deploy the microservice

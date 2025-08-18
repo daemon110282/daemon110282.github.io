@@ -90,7 +90,7 @@
 ## Мониторинг
 
 - [Метрики](iis.performance.metric.md)
-	- Производительность измеряют показатели атрибута качества ИС [Быстродействие](../../../arch/ability/performance.md)
+	- Производительность измеряют показатели атрибута качества ИС [Быстродействие](../../../arch/ability/performance/performance.md)
 	- Надежность
 - Сбор метрик
   - [Performance Monitor Windows Server](../../troubleshooting/perfmon.md)

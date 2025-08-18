@@ -9,6 +9,7 @@
         - [Алгоритм Diffie-Hellman](#алгоритм-diffie-hellman)
     - [Подписание ЭЦП](#подписание-эцп)
     - [Имитозащита](#имитозащита)
+  - [Технологии](#технологии)
 
 ## Зачем
 
@@ -162,3 +163,15 @@
 - [УНЭП](https://www.signal-com.ru/products/prikladnye-resheniya/imitozaschita-informatsii-s-autentifikatsiey-signal-com-authkey/)
 - [aladdin-rd](https://developer.aladdin-rd.ru/archive/jc_mobile_sdk/2.2.1/api_android/standard/sign.html)
 - [C++ Chutka/28147-89](https://github.com/Chutka/28147-89)
+
+## Технологии
+
+- [КриптоПро](https://www.cryptopro.ru/products/csp/compare#supported_algorithms)
+- КриптоАРМ
+  - Клиент
+    - [Linux](https://cryptoarm.ru/documentation/kak-ustanovit-kriptoarm-gost-na-platformu-Linux)
+  - [КриптоАрм Сервер](https://cryptoarm.ru/news/kriptoarm-server/)
+    - [КриптоАрм Сервер Git](https://github.com/CryptoARM/CryptoARMGOST-Web)
+- Крипто Провайдеры
+  - [КриптоПро CSP](https://www.cryptopro.ru/products/csp/compare)
+  - [OpenSSL ГОСТ](https://redos.red-soft.ru/base/manual/safe-redos/gost-in-openssl/)

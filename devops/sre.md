@@ -39,11 +39,11 @@
 ### Метрики оценки качества ИТ-сервиса
 
 - [доступность](../arch/ability/availability.md) (availability)
-- [производительность](../arch/ability/performance.md) (performance)
+- [производительность](../arch/ability/performance/performance.md) (performance)
 - [надежность](../arch/ability/reliability.md) (reliability)
 - сопровождаемость (maintainability)
 - обслуживаемость (serviceability)
-- [безопасность](../arch/ability/security.md) (security)
+- [безопасность](../arch/ability/security/security.md) (security)
 
 ### Бюджет ошибок
 
@@ -66,7 +66,7 @@
   - Router
   - DNS
   - VPCs
-- Server-side [monitoring](../arch/ability/performance.metric.md)
+- Server-side [monitoring](../arch/ability/performance/performance.metric.md)
   - system
   - application
 

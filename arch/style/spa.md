@@ -51,7 +51,7 @@
     - Domain Service
 - Define a Container / Component Structure
 - [Производительность](../pattern/performance/pattern.perf.md)
-  - [Web Vitals Metric](../ability/performance.md)
+  - [Web Vitals Metric](../ability/performance/performance.md)
   - Кеширование, lazy load component UI?
   - [SSR](../pattern/performance/ssr.md) (Server Side Rendering)
   - Testing tools Selenium, Cypress and Puppeteer can also be used to measure app performance.

@@ -30,7 +30,7 @@ Windows Communication Foundation (WCF) — это платформа для со
 
 ## Производительность
 
-[ability](../../arch/ability/performance.md)
+[ability](../../arch/ability/performance/performance.md)
 
 - [параллелизм](https://learn.microsoft.com/ru-ru/dotnet/framework/wcf/feature-details/sessions-instancing-and-concurrency)
   - Под __сеансом__ понимается скоррелированный набор всех сообщений, переданных между двумя конечными точками.

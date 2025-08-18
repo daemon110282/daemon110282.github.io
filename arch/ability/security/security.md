@@ -153,20 +153,8 @@
 
 ## Технологии
 
-- [КриптоПро](https://www.cryptopro.ru/products/csp/compare#supported_algorithms)
-- КриптоАРМ
-  - Клиент
-    - [Linux](https://cryptoarm.ru/documentation/kak-ustanovit-kriptoarm-gost-na-platformu-Linux)
-  - [КриптоАрм Сервер](https://cryptoarm.ru/news/kriptoarm-server/)
-    - [КриптоАрм Сервер Git](https://github.com/CryptoARM/CryptoARMGOST-Web)
-- Крипто Провайдеры
-  - [КриптоПро CSP](https://www.cryptopro.ru/products/csp/compare)
-  - [OpenSSL ГОСТ](https://redos.red-soft.ru/base/manual/safe-redos/gost-in-openssl/)
-- Web Application firewall (WAF) Межсетевые экраны
-  - [PT Application Firewall](https://www.tadviser.ru/index.php/%D0%9F%D1%80%D0%BE%D0%B4%D1%83%D0%BA%D1%82:PT_Application_Firewall)
-    - Сертификация ФСТЭК
-    - OWASP TOP 10
-    - DDOS
+- [Криптозащиты](security.crypto.md#технологии)
+- [Web Application firewall](../system.class/waf.md) (WAF) Межсетевые экраны  
 - [Identity and Access Management (IAM)](../system.class/iam.md)
   - [SSO](../pattern/security/sso.md)
     - Oauth 2, OpenID Connect, SAML

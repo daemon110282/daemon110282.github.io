@@ -54,25 +54,25 @@
 
 ## Балансирощик
 
-- [балансировщик](../pattern/deployment/load.balancing.md) прокси, nginx, netscaler - как балансировка на ноды работает, время ответ нод балансировщику
+- [балансировщик](../../pattern/deployment/load.balancing.md) прокси, nginx, netscaler - как балансировка на ноды работает, время ответ нод балансировщику
 
 ## СУБД
 
-- [mssql](../../technology/db/mssql/mssql.performance.metric.md)
-- [postgresql](../../technology/db//postgresql/postgresql.performance.metric.md)
+- [mssql](../../../technology/db/mssql/mssql.performance.metric.md)
+- [postgresql](../../../technology/db/postgresql/postgresql.performance.metric.md)
 
 ## Backend
 
-- [IIS](../../technology/middleware/webserver/iis.performance.metric.md)
+- [IIS](../../../technology/middleware/webserver/iis.performance.metric.md)
 
 ## Контейнеризация
 
-- [k8s](../../technology/ci-cd/k8s.md)
+- [k8s](../../../technology/ci-cd/k8s.md)
 
 ## File Storage
 
-- [minio](../../technology/store/minio.md)
+- [minio](../../../technology/store/minio.md)
 
 ## MessageBus
 
-- [rmq](../../technology/middleware/messagebus/rmq.md)
+- [rmq](../../../technology/middleware/messagebus/rmq.md)

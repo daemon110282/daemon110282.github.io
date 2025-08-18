@@ -91,7 +91,7 @@ DevOps (development и operations):
     - [Security](../../ability/security.md)
     - [Audit](../observability/pattern.audit.md)
   - Metric
-    - Обеспечить [Производительность](../../ability/performance.md): Auto Scaling
+    - Обеспечить [Производительность](../../ability/performance/performance.md): Auto Scaling
     - [Performance monitoring (APM класс систем) and dashboards](../../system.class/apm.md)
     - [Health Checks](../observability/pattern.healthcheck.md): k8s liveness и readiness probes
   - Trace

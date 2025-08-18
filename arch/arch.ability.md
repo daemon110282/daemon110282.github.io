@@ -47,7 +47,7 @@
   
 ### Быстродействие Performance
 
-- Быстродействие [Производительность Performance](ability/performance.md) (Эксплуатационные)  
+- Быстродействие [Производительность Performance](ability/performance/performance.md) (Эксплуатационные)  
 
 ### Переносимость Portability
 

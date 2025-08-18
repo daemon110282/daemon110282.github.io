@@ -14,7 +14,7 @@ NoSQL In memory [store](../store.nosql.md) решение.
 Redis - Remote Dictionary Service in __memory__.
 
 - Key Value [хранилище](../store.md)
-- [Кеширование данных](../../arch/ability/performance.md)
+- [Кеширование данных](../../arch/ability/performance/performance.md)
 - Дедубликация
 - Session store
 - Distributed lock

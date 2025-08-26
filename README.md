@@ -21,7 +21,7 @@
   - Планирование задач
     - [Вертикальная декомпозиция](https://habr.com/ru/company/sportmaster_lab/blog/515910/)
     - [Горизонтальная декомпозиция](https://habr.com/ru/company/sportmaster_lab/blog/677970/)
-- AI
+- [AI](arch/pattern/AI.md)
   - [OpenAI](/technology/ai/openai.md)
 
 ## Tools

@@ -54,4 +54,4 @@
 
 ## Модель данных
 
-[invest.puml](invest.puml)
+[invest.puml](../invest.puml)

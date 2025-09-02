@@ -3,12 +3,10 @@
 - [Security Информационная безопасность](#security-информационная-безопасность)
   - [Зачем](#зачем)
   - [Виды атак](#виды-атак)
-  - [Паттерны](#паттерны)
     - [Триггеры для подключения ОИБ, анализа ИБ](#триггеры-для-подключения-оиб-анализа-иб)
     - [TODO](#todo)
     - [Аутентификация](#аутентификация)
     - [Авторизация](#авторизация)
-  - [Антипаттерны](#антипаттерны)
   - [Сертификаты](#сертификаты)
   - [Технологии](#технологии)
   - [Примеры требований](#примеры-требований)
@@ -17,13 +15,7 @@
 
 Информационная безопасность - комплекс мер, которые нужны, чтобы защитить от утечки или взлома программы, компьютерные системы и данные.
 
-[Матрица ИТ безопасности](https://www.ninjaone.com/blog/it-security-checklist-protect-your-business/):
-
-- Device/Endpoint security
-- Network security
-- Application security
-- Data security
-- User security
+[Паттерны](../../pattern/security/pattern.security.md).
 
 ## Виды атак
 
@@ -31,50 +23,6 @@
 - [Кликджекинг](https://habr.com/ru/companies/piter/articles/841098/)
 - Табнаббинг и обратный табнаббинг
 - [API](security.api.md#виды-атак)
-
-## Паттерны
-
-- Device/Endpoint
-  - Антивирусы
-- Network Сетевая Инфраструктура
-  - [Шифрование канала связи (трафика)](security.vpn.md):
-    - [TLS, mTLS](../../technology/protocols.integration/tls.md)
-    - VPN, туннель
-  - DDOS
-  - FireWall
-  - NAT, NAC
-  - Антивирусы
-  - Data loss prevention (DLP)
-  - Network segmentation (КСПД)
-- Application
-  - DevSecOps
-  - [Аутентификация](#аутентификация)
-  - [Авторизация](#авторизация)
-  - [API Security](security.api.md)
-  - [Крипто Защита Информации](security.crypto.md) (Шифрование, ЭЦП)
-  - [Zero Trust](https://t.me/ru_arc/136)
-  - Аудит, логирование
-    - [Platform V Synapse](https://platformv.sbertech.ru/blog/kak-otslezhivat-bezopasnost-prikladnyh-api-s-pomoshhyu-platform-v-synapse)
-    - [SIEM](../system.class/siem.md) (Security information and event management)
-  - Конфигурация "Во вне"
-    - Пассивная (При сборке приложения)
-    - Активная Key Managment, Key Vault
-      - HashiCorp Vault
-      - альтернативы [CyberArk, AWS](https://datafloq.com/read/5-compelling-alternatives-hashicorp-vault/)
-- Data
-  - Access аудит
-- User
-  - HTTPS
-- Регламентирование
-  - [152 ФЗ](https://astral.ru/news/zakonodatelstvo/39596/)
-  - API Банк РФ
-  - ФСТЭК РФ
-  - ФСБ РФ
-- Организационные
-  - [Secure by Design](https://habr.com/ru/companies/bastion/articles/842874/)
-    - матрица рисков
-    - поверхность атаки
-  - [Pen Tests](https://www.aztechit.co.uk/blog/cloud-security-best-practices)
 
 ### Триггеры для подключения ОИБ, анализа ИБ
 
@@ -97,9 +45,9 @@
       - API Key
       - Token
         - JWT
-        - [OAuth](../../technology/protocols.integration/oauth.md)
-        - [Access](../../technology/protocols.integration/oauth/oauth.access.token.md)
-        - [Refresh](../../technology/protocols.integration/oauth/oauth.refresh.token.md)
+        - [OAuth](../../../technology/protocols.integration/oauth.md)
+        - [Access](../../../technology/protocols.integration/oauth/oauth.access.token.md)
+        - [Refresh](../../../technology/protocols.integration/oauth/oauth.refresh.token.md)
   - Контекста
 - __Способы аутентификации__ пользователей и обеспечения безопасности транзакций:
   - одноразовые пароли на основе времени/события
@@ -114,14 +62,14 @@
   - Recaptcha
   - CSRF Token
   - Аутентификация __HTTPS__
-    - [SSL\TLS](../../technology/protocols.integration/tls.md)
-    - [MTLS](../../technology/protocols.integration/tls.md)
+    - [SSL\TLS](../../../technology/protocols.integration/tls.md)
+    - [MTLS](../../../technology/protocols.integration/tls.md)
   - [Схемы аутентификации](security.api.md#схемы-аутентификации)
 - Фреймворки
-  - [Spring](../../technology/framework/java.spring.md) Security
+  - [Spring](../../../technology/framework/java.spring.md) Security
   - NodeJS Passport
-- [IAM](../../arch/system.class/iam.md)
-  - [SSO](../pattern/security/sso.md)
+- [IAM](../../../arch/system.class/iam.md)
+  - [SSO](../../pattern/security/sso.md)
   - MFA
 
 ### Авторизация
@@ -129,12 +77,6 @@
 - Access Control List (ACL)
   - по URI
 - RBAC\ABAC
-
-## Антипаттерны
-
-- Черные списки
-- Шаблонный код
-- Доверие по умолчанию
 
 ## Сертификаты
 
@@ -154,9 +96,9 @@
 ## Технологии
 
 - [Криптозащиты](security.crypto.md#технологии)
-- [Web Application firewall](../system.class/waf.md) (WAF) Межсетевые экраны  
-- [Identity and Access Management (IAM)](../system.class/iam.md)
-  - [SSO](../pattern/security/sso.md)
+- [Web Application firewall](../../system.class/waf.md) (WAF) Межсетевые экраны  
+- [Identity and Access Management (IAM)](../../system.class/iam.md)
+  - [SSO](../../pattern/security/sso.md)
     - Oauth 2, OpenID Connect, SAML
     - WS-Federation (token)
     - [two-factor authentication (2FA)](security.2fa.md)

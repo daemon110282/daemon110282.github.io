@@ -47,8 +47,8 @@
   		- [Rolling Update](https://rtfm.co.ua/kubernetes-tipy-deployment-strategies-i-argo-rollouts/) - запускает __новые поды параллельно с запущенными старыми__, а затем убивает старые, и оставляет только новые
 - Сокращение TTM, проверка гипотез
 	- [Canary Deployment](#canary-deployment)
-	- [Dark (скрытые) или А/В-развертывания](https://temofeev.ru/info/articles/strategii-deploya-v-kubernetes-rolling-recreate-blue-green-canary-dark-a-b-testirovanie/) - вариация Canary стратегии . Разница между скрытым и канареечным развертыванием (Canary Deployment) состоит в том, что скрытые развертывания __имеют дело с фронтендом, а не с бэкендом__, как канареечные.
-  	- Ref Arch [A\B test](../../ref/abtesting.md)
+	- [Dark (скрытые) или А/В-развертывания](https://temofeev.ru/info/articles/strategii-deploya-v-kubernetes-rolling-recreate-blue-green-canary-dark-a-b-testirovanie/) - вариация Canary стратегии . Разница между скрытым и канареечным развертыванием (Canary Deployment) состоит в том, что скрытые развертывания __имеют дело с фронтендом, а не с бэкендом__, как канареечные
+	- Ref Arch [A\B test](../../ref/abtesting.md)
 	- [Feature toggle](../development/feature.toggle.md)
 - [варианты](https://blog.bytebytego.com/i/98040721/what-is-the-process-for-deploying-changes-to-production) ![schema](https://substackcdn.com/image/fetch/w_1456,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F58c6a2b8-33c2-4094-b07c-b644227b1b20_3546x4233.jpeg)
 

@@ -1,6 +1,6 @@
 # Firebase Cloud Messaging (FCM)
 
-Настройка МП:
+Настройка МП Push:
 
 - Добавить [Firebase в МП](https://firebase.google.com/docs/android/setup?hl=ru)
   - Создайте проект Firebase

@@ -75,7 +75,7 @@ https://www.gov.uk/guidance/setting-api-service-levels
 
 ### Security
 
-- [JWT Bearer, API Key](../arch/ability/security.api.md)
+- [JWT Bearer, API Key](../arch/ability/security/security.api.md)
 
 ### Документирование
 

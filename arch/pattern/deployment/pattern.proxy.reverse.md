@@ -21,7 +21,7 @@
 	- IP:port, TCP, UDP параметры
 	- Cookie
 	- Payload
-- IP whitelisting
+- [IP whitelisting](https://www.rapidseedbox.com/blog/ip-whitelisting)
 
 ## Плюсы и минусы
 

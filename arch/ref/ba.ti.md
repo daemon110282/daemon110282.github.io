@@ -43,7 +43,7 @@
 
 ### UC
 
-- [Рынок ценных бумаг](../../analytic/invest.md)
+- [Рынок ценных бумаг](../../analytic/domain/invest.md)
   - Биржевой (СПБ, МСБ)
   - Внебиржевой
 - [Каталог ценных бумаг](https://htc-cs.ru/portfolio/ecommerce/mobilnoe-prilozhenie-tinkoff-investitsii)
@@ -154,8 +154,8 @@
     - Api client generation
     - Version
     - Dedlain time request from client - stop execute
-  	- Grpc web
-  	- Почему не веб сокеты? Grpc позволяет обернуть рест, веб сокеты в одном сервисе..?!
+    - Grpc web
+    	- Почему не веб сокеты? Grpc позволяет обернуть рест, веб сокеты в одном сервисе..?!
 - СУБД
   - Postgrsql
 - Тех стек

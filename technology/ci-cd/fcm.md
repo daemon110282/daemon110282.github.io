@@ -13,3 +13,8 @@
 - Сохранить токен и временную метку на бэке МП
 - [Каналы уведомлений](https://firebase.google.com/docs/cloud-messaging/android/client?hl=ru) настроить
 - [Test send from Firebase console](https://github.com/firebase/quickstart-android/tree/master/messaging)
+
+TODO:
+
+- Статусы доставки
+- TTL

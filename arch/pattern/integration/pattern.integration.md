@@ -47,7 +47,7 @@
 Способа интеграции:
 
 - Производительность (RPS)?
-  - менее 10? RPS
+  - менее 10k? RPS
     - RPC + LB (API GW)
   - более Х RPS?
     - MessageBus
@@ -66,7 +66,7 @@
 
 - [Messaging Patterns](pattern.messagebroker.md)
 - [RPC Команды\Запросы](pattern.rpc.md)
-  - [Request-Reply](https://www.enterpriseintegrationpatterns.com/patterns/messaging/RequestReply.html)
+  - Sync [Request-Reply](https://www.enterpriseintegrationpatterns.com/patterns/messaging/RequestReply.html)
   - Async Request-Reply
 - [Обработка сбоев: Retry Policy, Rate Limit, Circuit Breaker](../system.design/fault.tolerance/pattern.failure.md)
 - Sidecar - паттерн интеграции между приложением и сервисом, развернутый на стороне приложения

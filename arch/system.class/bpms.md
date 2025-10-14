@@ -51,6 +51,7 @@
   - [User guide](https://www.activiti.org/userguide/)
   - [REST API](https://habr.com/ru/post/416491/)
   - [Designer Eclipse](https://www.activiti.org/userguide/#eclipseDesignerInstallation)
+- [n8n](https://n8n.io/features/) Low Code
 
 ### Примеры
 

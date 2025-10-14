@@ -21,4 +21,4 @@
 
 ## Примеры
 
-- [ACL](https://github.com/Byndyusoft/aact/blob/main/ADRs/Anti-corruption%20Layer.md)
+- Anti Corruption Layer [ACL](https://github.com/Byndyusoft/aact/blob/main/ADRs/Anti-corruption%20Layer.md)

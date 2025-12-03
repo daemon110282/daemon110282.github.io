@@ -14,10 +14,7 @@
 
 ## Примеры
 
-docker compose up --no-build
-docker compose start
-docker compose pause
-docker compose stop
+- [Docker Conf](../../docker/docker.md)
 
 ## Deployment
 

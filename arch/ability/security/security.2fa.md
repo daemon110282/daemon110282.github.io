@@ -52,14 +52,14 @@
 
 ### Email
 
-### Биометрия
+### Беспарольные методы
 
 - Passwordless authentication означает, что пользователь может подтвердить доступ к приложению или IT-системе, __не предоставляя пароль и не отвечая на секретные вопросы__
 - К беспарольным методам относится
   - биометрия (вход в систему по отпечатку пальца, сердцебиению, походке, клавиатурному почерку, сетчатке, голосу, лицу и так далее).
-  - по QR-коду (как в Telegram)
+  - по [QR-коду](qr.md) (как в Telegram)
   - с помощью push-сообщения
-- На уровне устройств, браузеров может быть реализована по протоколу [WebAuthn](../../technology/protocols.integration/webauthn.md), FIDO2\CTAP2
+- На уровне устройств, браузеров может быть реализована по протоколу [WebAuthn](../../../technology/protocols.integration/webauthn.md), FIDO2\CTAP2
 
 ### PIN
 
@@ -81,7 +81,7 @@ Use Case:
 
 - PIN-код хранится в
   - __хешированном виде с солью__
-    - соль: ид сессии + [deviceid](../../technology/fingerprint.md)
+    - соль: ид сессии + [deviceid](../../../technology/fingerprint.md)
   - или Web Crypto API для __шифрования__ PIN (например, с ключом, основанным на устройстве)
     - PIN зашифруем с помощью AES-GCM, используя ключ, связанный с устройством (или сессией)
     - Храним:
@@ -118,10 +118,10 @@ Use Case:
 
 #### Системная валидация PIN WebAuthn
 
-На уровне устройств по протоколу [WebAuthn](../../technology/protocols.integration/webauthn.md), FIDO2\CTAP2 (авторизация в системной форме)
+На уровне устройств по протоколу [WebAuthn](../../../technology/protocols.integration/webauthn.md), FIDO2\CTAP2 (авторизация в системной форме)
 
 ## Технологии
 
-- [IAM](../system.class/iam.md#технологии)
-  - [ADFS](../../technology/middleware/iam/iam.adfs.md)
-  - [KeyCloak](../../technology/middleware/iam/iam.keycloak.md)
+- [IAM](../../system.class/iam.md#технологии)
+  - [ADFS](../../../technology/middleware/iam/iam.adfs.md)
+  - [KeyCloak](../../../technology/middleware/iam/iam.keycloak.md)

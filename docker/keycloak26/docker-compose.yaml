@@ -23,6 +23,7 @@ services:
       - KC_DB_URL_DATABASE=${DB_NAME}
       - KEYCLOAK_ADMIN
       - KEYCLOAK_ADMIN_PASSWORD
+      - KC_FEATURES
 
   db:
     image: postgres:17.1-bullseye

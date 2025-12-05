@@ -11,3 +11,4 @@
 - "docker compose start"
 - "docker compose pause"
 - "docker compose stop"
+- "docker compose down"

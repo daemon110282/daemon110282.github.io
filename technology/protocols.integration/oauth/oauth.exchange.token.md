@@ -1,11 +1,17 @@
 # Token exchange
 
+- [Token exchange](#token-exchange)
+	- [Зачем](#зачем)
+	- [KeyCloak](#keycloak)
+		- [V2](#v2)
+		- [V1 Legacy](#v1-legacy)
+			- [Impersonation](#impersonation)
+			- [Direct Naked Impersonation](#direct-naked-impersonation)
+
 ## Зачем
 
-- [На основе Access token выдается 2й AT](https://www.keycloak.org/securing-apps/token-exchange#_standard-token-exchange) для __другого сервиса__ например
-- ID token will not have granted scopes (I know, this is another pain point).
-- JWTs contain claims, which are statements (such as name or email address) about an entity (typically, the user) and additional metadata. The OpenID Connect specification defines a set of standard claims.
-- ![token exchange](https://lh3.googleusercontent.com/pw/AL9nZEWPOntqnB_XS-gCUQ42P-5NCg7Ageg9UtnKGcWYPwh2CAvrafKhHYxZq4xm7CnNCeVPJrThmWHDawnZDc6d15u-XvAfPywOdogmuMKUJ3ZX6PbHprwj0tUSFXnAYVqoQo_YpKbhr9IC38PzsjUPcTG2Pw=w754-h441-no)
+- [На основе Access token выдается 2й AT](https://www.keycloak.org/securing-apps/token-exchange#_standard-token-exchange) для __другого сервиса__ с менишьми правами
+- ID token will not have granted scopes
 
 ## KeyCloak
 
@@ -51,6 +57,9 @@ KeyCloak version 26.0.1:
       1. Указать в "Policies" "client-exchange"
 
 #### Direct Naked Impersonation
+
+В отличии от Impersonation не требуется токен админа, но в Keycloak необходимо явно разрешить кто может выполнять Impersonation для каких пользователей.
+Менее безопасный вариант.
 
 Инструкции:
 

@@ -3,7 +3,7 @@
 ## Зачем
 
 - [Chat архитектура](https://blog.bytebytego.com/i/98040721/how-do-we-design-a-chat-application-like-whatsapp-facebook-messenger-or-discord)
-
+	- [подробный пример](https://habr.com/ru/articles/896836/)
 - [Debug Chrome](https://stackoverflow.com/questions/5751495/debugging-websocket-in-google-chrome)
 - ws - [по http протоколу сервер](https://habr.com/ru/companies/otus/articles/851504/)
 - wss - по [https протоколу сервер](https://thewebdev.info/2022/03/16/how-to-create-a-secure-tls-ssl-websocket-server-with-node-js/)

@@ -1,0 +1,264 @@
+@startuml (id=sqd)
+title Веб-сокет каналы: Sequence Diagram
+participant "Клиент" as Client
+participant "WebSocket\nСервер" as Server
+participant "Менеджер\nКаналов" as ChannelManager
+participant "Хранилище\nКаналов" as ChannelStorage
+participant "Хранилище\nПодписок" as SubscriptionsStorage
+
+' == Инициализация подключения ==
+Client -> Server: ws.connect("ws://localhost:8080")
+Server --> Client: WebSocket соединение установлено
+Server -> Server: Инициализация нового соединения
+Server -> SubscriptionsStorage: clientSubscriptions.set(ws, new Set())
+Server --> Client: {"type":"system","message":"Connected..."}
+
+' == Подписка на канал ==
+Client -> Server: {"action":"subscribe","channel":"news"}
+Server -> ChannelManager: handleMessage(ws, data)
+ChannelManager -> ChannelStorage: channels.has("news")?
+
+alt Канал не существует
+    ChannelStorage --> ChannelManager: false
+    ChannelManager -> ChannelStorage: channels.set("news", new Set())
+else Канал существует
+    ChannelStorage --> ChannelManager: true
+end
+
+ChannelManager -> ChannelStorage: channels.get("news")
+ChannelStorage --> ChannelManager: channel (Set<WebSocket>)
+
+alt Клиент уже подписан
+    ChannelManager --> Client: {"type":"warning","message":"Already subscribed"}
+else Клиент не подписан
+    ChannelManager -> ChannelStorage: channel.add(ws)
+    ChannelManager -> SubscriptionsStorage: clientSubscriptions.get(ws).add("news")
+    ChannelManager --> Client: {"type":"subscription","channel":"news","status":"subscribed"}
+end
+
+' == Публикация сообщения в канал ==
+Client -> Server: {"action":"publish","channel":"news","message":"Hello"}
+Server -> ChannelManager: handleMessage(ws, data)
+ChannelManager -> ChannelStorage: channels.has("news")?
+ChannelStorage --> ChannelManager: true
+
+ChannelManager -> ChannelStorage: channels.get("news")
+ChannelStorage --> ChannelManager: channel (Set<WebSocket>)
+
+ChannelManager -> ChannelManager: channel.has(senderWs)?
+alt Отправитель не подписан
+    ChannelManager --> Client: {"type":"error","message":"Not subscribed"}
+else Отправитель подписан
+    Note over ChannelManager: Подготовка сообщения
+    ChannelManager -> ChannelManager: broadcastMessage = {\n "type":"message",\n "channel":"news",\n "data":"Hello"\n}
+    
+    loop Для каждого клиента в канале
+        ChannelManager -> ChannelManager: Для каждого client в channel
+        alt client != senderWs AND client.readyState == OPEN
+            ChannelManager -> Client: Отправка broadcastMessage
+        end
+    end
+    
+    ChannelManager --> Client: {"type":"ack","message":"Message published"}
+end
+
+newpage == Получение списка каналов ==
+Client -> Server: {"action":"list"}
+Server -> ChannelManager: handleMessage(ws, data)
+ChannelManager -> ChannelStorage: Array.from(channels.entries())
+ChannelStorage --> ChannelManager: [["news", Set], ["chat", Set], ...]
+ChannelManager -> ChannelManager: Формирование списка каналов
+ChannelManager --> Client: {"type":"channels","channels":[...]}
+
+newpage == Отписка от канала ==
+Client -> Server: {"action":"unsubscribe","channel":"news"}
+Server -> ChannelManager: handleMessage(ws, data)
+ChannelManager -> ChannelStorage: channels.has("news")?
+ChannelStorage --> ChannelManager: true
+
+ChannelManager -> ChannelStorage: channels.get("news")
+ChannelStorage --> ChannelManager: channel (Set<WebSocket>)
+
+ChannelManager -> ChannelStorage: channel.delete(ws)
+ChannelManager -> ChannelManager: channel.size == 0?
+alt Канал пуст
+    ChannelManager -> ChannelStorage: channels.delete("news")
+end
+
+ChannelManager -> SubscriptionsStorage: clientSubscriptions.get(ws).delete("news")
+ChannelManager --> Client: {"type":"subscription","channel":"news","status":"unsubscribed"}
+
+newpage == Отключение клиента ==
+Client -> Server: WebSocket.close()
+Server -> ChannelManager: Обработка отключения
+ChannelManager -> SubscriptionsStorage: clientSubscriptions.get(ws)
+SubscriptionsStorage --> ChannelManager: Set of subscribed channels
+
+loop Для каждого канала в подписках
+    ChannelManager -> ChannelStorage: channels.get(channel)
+    ChannelStorage --> ChannelManager: channelSet
+    ChannelManager -> ChannelStorage: channelSet.delete(ws)
+    ChannelManager -> ChannelManager: channelSet.size == 0?
+    alt Канал пуст
+        ChannelManager -> ChannelStorage: channels.delete(channel)
+    end
+end
+
+ChannelManager -> SubscriptionsStorage: clientSubscriptions.delete(ws)
+
+@enduml
+
+@startuml (id=arch)
+title Архитектура системы веб-сокет каналов
+
+package "Клиентская часть" {
+    [Веб-клиент] as Client
+    [Интерфейс управления] as UI
+    [WebSocket\nКлиент] as WSClient
+}
+
+package "Серверная часть" {
+    [WebSocket\nСервер] as WSServer
+    [Обработчик\nсообщений] as Handler
+    [Менеджер\nканалов] as ChannelMgr
+    
+    database "Хранилище каналов" as Channels {
+        ' + Map(channelName, Set(clients))
+    }
+    
+    database "Хранилище подписок" as Subs {
+        ' + Map(client, Set(channels))
+    }
+}
+
+package "Внешние системы" {
+    [Источник событий] as EventSource
+    [База данных] as DB
+}
+
+Client --> UI : Взаимодействие
+UI --> WSClient : Отправка команд
+WSClient --> WSServer : WebSocket соединение
+
+WSServer --> Handler : Перенаправление сообщений
+Handler --> ChannelMgr : Обработка действий
+
+ChannelMgr --> Channels : Управление каналами
+ChannelMgr --> Subs : Управление подписками
+
+ChannelMgr --> WSServer : Рассылка сообщений
+WSServer --> WSClient : Передача данных
+
+EventSource --> ChannelMgr : Внешние события
+ChannelMgr --> DB : Сохранение сообщений (опционально)
+
+note right of Channels
+  Структура данных:
+  "news" -> Set{client1, client2, client3}
+  "chat" -> Set{client1, client4}
+end note
+
+note left of Subs
+  Структура данных:
+  client1 -> Set{"news", "chat"}
+  client2 -> Set{"news"}
+  client3 -> Set{"news"}
+  client4 -> Set{"chat"}
+end note
+
+@enduml
+
+@startuml (id=state)
+title Состояния веб-сокет клиента
+
+[*] --> Disconnected : Начало
+
+state Disconnected {
+    [*] --> Idle
+    Idle --> Connecting : connect()
+    state Connecting {
+        [*] --> Establishing
+        Establishing --> Connected : Успех
+        Establishing --> Failed : Ошибка
+    }
+    Failed --> Idle : Повторная попытка
+}
+
+Disconnected --> Connected : Соединение установлено
+
+state Connected {
+    [*] --> Ready
+    
+    Ready --> Subscribing : subscribe(channel)
+    state Subscribing {
+        [*] --> SendingRequest
+        SendingRequest --> AwaitingResponse : Запрос отправлен
+        AwaitingResponse --> Subscribed : Подтверждение
+        AwaitingResponse --> Failed : Ошибка
+    }
+    
+    Subscribed --> Unsubscribing : unsubscribe(channel)
+    state Unsubscribing {
+        [*] --> SendingRequest
+        SendingRequest --> AwaitingResponse : Запрос отправлен
+        AwaitingResponse --> Ready : Подтверждение
+        AwaitingResponse --> Failed : Ошибка
+    }
+    
+    Subscribed --> Publishing : publish(message)
+    state Publishing {
+        [*] --> SendingMessage
+        SendingMessage --> AwaitingAck : Сообщение отправлено
+        AwaitingAck --> MessageSent : Подтверждение
+        AwaitingAck --> Failed : Ошибка
+    }
+    
+    MessageSent --> Subscribed : Вернуться
+    Failed --> Ready : Обработка ошибки
+}
+
+Connected --> Disconnected : Разрыв соединения
+
+note right of Subscribed
+  Клиент может быть подписан
+  на несколько каналов
+  одновременно
+end note
+
+@enduml
+
+@startuml (id=flow)
+title Поток сообщений между клиентами
+
+participant "Клиент A" as ClientA
+participant "WebSocket\nСервер" as Server
+participant "Клиент B" as ClientB
+participant "Клиент C" as ClientC
+
+' Предварительные условия
+note over ClientA, ClientC
+  Все клиенты подписаны
+  на канал "news"
+end note
+
+ClientA -> Server: {"action":"publish","channel":"news","message":"Привет!"}
+
+Server -> Server: Проверка подписки отправителя
+Server -> Server: Подготовка сообщения
+
+Server -> ClientA: {"type":"ack","message":"Message published"}
+
+Server -> ClientB: {\n "type":"message",\n "channel":"news",\n "data":"Привет!"\n}
+Server -> ClientC: {\n "type":"message",\n "channel":"news",\n "data":"Привет!"\n}
+
+ClientB -> ClientB: Отображение сообщения
+ClientC -> ClientC: Отображение сообщения
+
+' Клиент B отвечает
+ClientB -> Server: {"action":"publish","channel":"news","message":"Ответ"}
+
+Server -> ClientB: {"type":"ack","message":"Message published"}
+Server -> ClientA: {\n "type":"message",\n "channel":"news",\n "data":"Ответ"\n}
+Server -> ClientC: {\n "type":"message",\n "channel":"news",\n "data":"Ответ"\n}
+
+@enduml

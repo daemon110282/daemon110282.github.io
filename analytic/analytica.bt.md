@@ -32,7 +32,7 @@
 
 - [Бизнес процесс](bp.md)
 - [User Story](user.story.md), User Story Map, Event Storming
-- [Use Case](analytica.ft.md#use-case-uc-сценарии-использования)
+- [Use Case](use.case.md)
 
 ### Цели
 

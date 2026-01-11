@@ -26,7 +26,7 @@
       2. [Event Storming](../arch/pattern/system.design/event.storming.md)
    3. [БП](bp.md)
 3. FT [Функциональные требования](analytica.ft.md)
-   1. [UC](analytica.ft.md#use-case-uc-сценарии-использования)
+   1. [UC](use.case.md)
    2. [UI UX](ui-ux.md)
    3. [Модель данных](analytica.ft.md#модель-данных)
 4. Data Driven

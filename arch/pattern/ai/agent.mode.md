@@ -6,3 +6,4 @@
   - [x] Copilot Setup
     - [x] VPN
 - [ ] [MCP](mcp.md)
+- [Cursor](todo)

@@ -1,4 +1,4 @@
-# MCP
+# Model Context Protocol (MCP)
 
 - Docker Desktop MCP Toolkit
   - Playwright MCP server

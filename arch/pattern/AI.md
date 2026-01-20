@@ -26,26 +26,23 @@
 
 - Чат (вопрос-ответ)
   - [ChatGPT](/technology/ai/openai.md)
-- Агент (план-задачи-решение)
-  - [VS Code](todo)
-    - [Docker Desktop MCP Toolkit](<../../ai/learn/agent mode with mcp/readme.md>)
-  - [Cursor](todo)
-
+- [Агент](ai/agent.mode.md) (план-задачи-решение)
+  
 ## TODO
 
 - https://code.visualstudio.com/docs/copilot/customization/custom-instructions
 
 ## LLM
 
-- [x] Copilot
-- [x] [Alibaba Qwen Code LLM](https://qwenlm.github.io/qwen-code-docs/ru/users/overview/)
-- [x] [Gemini CLI](https://www.youtube.com/watch?v=tgjD_Hp6XCU&list=WL&index=6)
+- [x] [Copilot](ai/llm/copilot.md)
+- [x] [Alibaba Qwen Code LLM](ai/llm/qwen.md)
+- [ ] [Gemini CLI](ai/llm/gemini.md)
 
 ## Patterns and Tools
 
 Коллекция шаблонов, инструментов и ресурсов для эффективного использования AI‑агентов в процессе разработки и анализа требований.
 
-- [ ] [copilot](ai/copilot.md)
+- [ ] [copilot](ai/llm/copilot.md)
 - [x] [Notebook LM](ai/notebooklm.md)
 - [x] [Kilo Code](ai/kilocode.md)
 

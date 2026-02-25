@@ -59,7 +59,7 @@
 - Методы защиты
   - CORS
   - XSS
-  - Recaptcha
+  - [captcha](captcha.md)
   - CSRF Token
   - Аутентификация __HTTPS__
     - [SSL\TLS](../../../technology/protocols.integration/tls.md)

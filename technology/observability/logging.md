@@ -10,6 +10,7 @@
 - On premise
 	- [GrayLog](logging/graylog.md)
 	- [ELK stack](monitoring/elk.md)
+	- Grafana
 - Cloud SaaS
 	- [Logrocket](../observability/logrocket.md)
 	- Rollbar

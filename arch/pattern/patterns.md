@@ -11,7 +11,7 @@
 - [Реализации](development/pattern.dev.md)
 - [Интеграции](integration/pattern.integration.md)
 - [Производительность](performance/pattern.perf.md)
-- [Безопасноть Security](security/pattern.security.md)
+- [Безопасность Security](security/pattern.security.md)
 - [Разворачивания Deployment](deployment/pattern.deployment.md)
 - [Рефакторинга](refactoring/pattern.refactoring.md)
 - [Transaction Management Patterns](https://airtable.com/embed/shrjiJuF7kIbcnXRl/tblgszzLV27MUFP4p) (5 Patterns)
@@ -24,6 +24,7 @@
   - Transaction log tailing
 - [Testing Patterns](https://airtable.com/embed/shr6p9u80mD9CzVU1/tblyGd1oiAcYuTSbr) (3 Patterns)
 - [UI Patterns](https://airtable.com/embed/shrxffclVHmz95ii0/tblXbFfITMXmPjvGl) (3 Patterns)
+- [Наблюдаемость Observability](observability/pattern.observability.md)
 - [Документирования](pattern.docs.md)
 - Utility Patterns (3 Patterns)
 - TODO

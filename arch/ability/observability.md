@@ -12,12 +12,12 @@
 
 ## Зачем
 
-- [Метрики Мониторинг](../../technology/observability/monitoring.md), статистика
 - Агрегация логов [Logging](../../technology/observability/logging.md)
-- Распределенная трассировка [Distributed Trace](../../technology/observability/tracing.distributed.md)
-- [Обработка исключений](../pattern/observability/exception.handle.md)
 - [Аудит](../pattern/observability/pattern.audit.md)
+- [Обработка исключений](../pattern/observability/exception.handle.md)
+- Распределенная трассировка [Distributed Trace](../../technology/observability/tracing.distributed.md)
 - [Health Check API](../pattern/observability/pattern.healthcheck.md)
+- [Метрики Мониторинг](../../technology/observability/monitoring.md), статистика
 
 Реализуется в концепции [OpenTelemetry (OTel)](../../technology/protocols.integration/otel.md), которая объединила OpenTracing + OpenCensus.
 
@@ -46,6 +46,7 @@
 
 ## Patterns
 
+- [Наблюдаемость Observability](../pattern/observability/pattern.observability.md)
 - Простота расширения
 - Корреляция данных
 - Универсальные агенты Data Collector по протоколу OpenTelemetry
@@ -70,13 +71,13 @@ Reference Arch:
 - [GrayLog, ELK](../../technology/observability/logging.md)
 - [Jaeger+ELK, Jaeger+ClickHouse, Zipkin](../../technology/observability/tracing.distributed.md)
 - [Sentry](../../technology/observability/sentry.md)
-- Promtail + Loki + Grafana
+- Grafana Alloy + Promtail + Grafana Loki + [Grafana](../../technology/observability/grafana.md)
 - fluentbit + Yandex Data Streams + Yandex Query (и бекап логов через Yandex Transfer в S3)
 
 Compare:
 
 - [ELK - Jaeger - OpenTelemetry](https://www.nginx.com/blog/integrating-opentelemetry-modern-apps-reference-architecture-progress-report?mkt_tok=NjUzLVNNQy03ODMAAAGDoZc8tBnTTPpd0LyW8jL4ptLEDNmRtqT86ruxAIy0w26Q36wbMRlF5KC3BMfg2BcRVqWCoPUW3J4gMfJLANmKejRzOQC80kmD2-ueYoqT-DoXcB1iUA)
-- [GrayLog - ELK - Grfana Loki - Monq](https://habr.com/ru/post/594805/)
+- [GrayLog - ELK - Grafana Loki - Monq](https://habr.com/ru/post/594805/)
 
 ### Data Collector
 

@@ -1,6 +1,20 @@
 # NGINX
 
-Реализует паттерн [Reverse Proxy](../../../arch/pattern/deployment/pattern.proxy.reverse.md) и [API Gateway](../../../arch/pattern/deployment/api.gateway.md)
+- [NGINX](#nginx)
+	- [Зачем](#зачем)
+	- [Version](#version)
+	- [Deployment](#deployment)
+	- [Параметры конфигурации](#параметры-конфигурации)
+		- [Описание параметров](#описание-параметров)
+
+## Зачем
+
+Реализует паттерны:
+
+- [Reverse Proxy](../../../arch/pattern/deployment/pattern.proxy.reverse.md) 
+- [API Gateway](../../../arch/pattern/deployment/api.gateway.md)
+
+Функции:
 
 - Cache
 - SSL encryption
@@ -20,25 +34,26 @@
 - CPU, RAM
 	- [Becnhmark trafic](../../ability/performance/load.test.md#trafic)
 
-## Папаметры конфигурации
+## Параметры конфигурации
 
 Порядок применения правил сверху вниз.
 Пример структуры конфига:
 
-upstream [name]
-	server [IP]\[url]:[PORT]
+upstream {name}
+	server {IP}\{url}:{PORT}
 server
 	server_name
-	proxy_set_header [header] [value]
-	location [маска regexp? URL]
-		rewrite [regex] [replacement] [flag]
+	proxy_set_header {header} {value}
+	location {mask}
+		rewrite {regex} {replacement} {flag}
 		mirror
-		allow [IP]\[подсеть]
-		deny [IP]\[подсеть]
-		proxy_set_header [header] [value]
-		proxy_pass http://[upstream name]
-		proxy_redirect [?]
-	error_page [HTTP Status] /[url]
+		allow {IP}\{подсеть}
+		deny {IP}\{подсеть}
+		proxy_set_header {header} {value}
+		proxy_pass http://{upstream name}
+		proxy_redirect {?}
+		include {/etc/nginx/allowlist.conf};
+	error_page {HTTP Status} {url}
 
 ### Описание параметров
 
@@ -47,7 +62,7 @@ server
 - server - определяет backend-сервер, на который будут проксироваться запросы
   - proxy_set_header
   - location - определяет, как обрабатывать запросы, соответствующие определенному шаблону URI
-    - proxy_set_header - позволяет установить или изменить заголовки HTTP, которые будут отправлены на backend-сервер при проксировании запроса. 
+    - proxy_set_header - позволяет установить или изменить заголовки HTTP, которые будут отправлены на backend-сервер при проксировании запроса
       - Переопределяет глобальный из server.
       - Без proxy_pass не работает.
     - proxy_pass - [проксирование запросов](https://serveradmin.ru/nginx-proxy_pass/)
@@ -57,3 +72,4 @@ server
     - proxy_redirect - [изменение заголовков Location и Refresh в ответах от проксируемого сервера](https://serveradmin.ru/nginx-proxy_redirect/)
     - mirror - [зеркалирование запросов](https://serveradmin.ru/nginx-mirror/)
     - allow/deny - [управление доступом по IP-адресу](https://serveradmin.ru/nginx-allow-deny/)
+    - include - включение дополнительных конфигурационных файлов, например, для управления списком разрешенных IP-адресов (allowlist.conf)

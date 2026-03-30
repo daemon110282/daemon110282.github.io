@@ -77,7 +77,7 @@
 - Удобство использования Usability (Пользовательский опыт)
   - Практичность Usability
   - Удобство Accessibility (Пользовательский опыт)
-  - Локализация Localization (Пользовательский опыт)
+  - [Локализация Localization](pattern/system.design/i18n.md) (Пользовательский опыт)
 
 ### TODO
 

@@ -55,7 +55,7 @@
   - принципы построения систем поддержки принятия решений (Decision Support System - DSS)
   - хранилищ данных (Data Warehouse)
   - систем интеллектуального анализа данных (Data Mining)
-- __Мутабельные__ (изменяемые mutable) или иммутабельные (не изменяемые immutable) данные
+- __Мутабельные__ (изменяемые mutable) или [иммутабельные](../pattern/development/immutability.md) (не изменяемые immutable) данные
 - Принципы __ACID__
   - atomaric
   - consistently

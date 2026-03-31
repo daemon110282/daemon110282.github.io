@@ -6,6 +6,7 @@
 	- [Паттерны](#паттерны)
 		- [IOS](#ios)
 	- [Технологии](#технологии)
+		- [Deeplink](#deeplink)
 	- [TODO](#todo)
 
 ## Зачем
@@ -47,6 +48,21 @@
 	- [React Native](../../technology/mobile/react.native.md)
 	- [Kotlin multiplatform](https://kotlinlang.org/docs/multiplatform.html)
 		- <https://habr.com/ru/companies/otus/articles/751192/>
+
+### Deeplink
+
+Например deeplink =<https://lk/products/forwards/170?qr=true>
+Если добавить ?qr=true диплинки в МП тоже надо "кодить"?
+
+Такой алгоритм как вариант:
+
+1. Пользователь сканирует QR‑код (через камеру или приложение)
+2. Устройство распознаёт URL в коде
+3. Браузер/система открывает ссылку
+4. ЛК-BE определяет ОС по UserAgent и перенаправляет
+   1. на App Store (для iOS)
+   2. на Google Play (для Android)
+5. Пользователь видит страницу приложения в магазине и может нажать «Установить»
 
 ## TODO
 

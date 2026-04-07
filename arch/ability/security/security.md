@@ -69,7 +69,7 @@
   - [Схемы аутентификации](security.api.md#схемы-аутентификации)
 - Фреймворки
   - [Spring](../../../technology/framework/java.spring.md) Security
-  - NodeJS Passport
+  - NodeJS [Passport](https://www.passportjs.org/)
 - [IAM](../../../arch/system.class/iam.md)
   - [SSO](../../pattern/security/sso.md)
   - MFA

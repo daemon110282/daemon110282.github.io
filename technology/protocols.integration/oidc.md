@@ -12,7 +12,7 @@
 
 ## Зачем
 
-Аутентификация для обеспечения [информационной безопасности](../../arch/ability/security.md).
+Аутентификация для обеспечения [информационной безопасности](../../arch/ability/security/security.md).
 
 ![OpenID Сonnect процесс](https://habrastorage.org/r/w1560/getpro/habr/post_images/c13/afc/ee5/c13afcee5226ddb135df9836d3321b17.png)
 
@@ -96,14 +96,14 @@ Client type — тип клиента, от которого зависит сп
 	- Full control over application customization is a key requirement.
 	- There is a slightly increased risk in security due to IAM not being able to guarantee that the Sign-In Widget has been implemented correctly.
 	![flow](https://developer.okta.com/img/auth/CustomerHosted.png)
-	[VueJS SPA Okta Auth0 Auth.js example](https://developer.okta.com/docs/guides/sign-in-to-spa-authjs/vue/main/)
-	[VueJS SPA Okta Widget example](https://developer.okta.com/docs/guides/sign-in-to-spa-embedded-widget/vue/main/)
-		[BackEnd Spring](https://developer.okta.com/blog/2021/10/04/spring-boot-spa)
-	[SPA Azure ADFS example](https://learn.microsoft.com/en-us/azure/active-directory/develop/single-page-app-quickstart)
+	- [VueJS SPA Okta Auth0 Auth.js example](https://developer.okta.com/docs/guides/sign-in-to-spa-authjs/vue/main/)
+	- [VueJS SPA Okta Widget example](https://developer.okta.com/docs/guides/sign-in-to-spa-embedded-widget/vue/main/)
+    	- [BackEnd Spring](https://developer.okta.com/blog/2021/10/04/spring-boot-spa)
+	- [SPA Azure ADFS example](https://learn.microsoft.com/en-us/azure/active-directory/develop/single-page-app-quickstart)
 
 ## Технологии
 
-- [OIDC certified решения](https://openid.net/developers/certified/)
+- [OIDC certified решения](https://openid.net/certification/certified-openid-providers-profiles/)
 - [PHP OIDC Server](https://github.com/bshaffer/oauth2-server-php)
 
 ## TODO

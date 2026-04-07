@@ -9,7 +9,7 @@
 
 ## Зачем
 
-- Authorization framework, not an authentication protocol (например [OIDC](oidc.md)) для обеспечения [информационной безопасности](../../arch/ability/security.md).
+- Authorization framework, not an authentication protocol (например [OIDC](oidc.md)) для обеспечения [информационной безопасности](../../arch/ability/security/security.md).
 - [Нужен, чтобы получать](https://habr.com/ru/company/dataart/blog/311376/) токены доступа и с ними обращаться к ресурсам.
 - RBAC\ABAC и тп
 - [TODO](https://connect2id.com/learn/oauth-2)
@@ -51,7 +51,7 @@
 
 ### MitM
 
-[MitM](../../arch/ability/mitm.md) Перехват токена
+[MitM](../../arch/ability/security/risk/mitm.md) Перехват токена
 
 - [Решение HTTPS](https://cyberpolygon.com/ru/materials/security-of-json-web-tokens-jwt/)
 - [Refresh Token](oauth/oauth.refresh.token.md)

@@ -20,7 +20,7 @@
 - SMS Leak
 - ATO-атаки
 - DDOS
-- [Man In the Middle (MitM)](mitm.md)  
+- [Man In the Middle (MitM)](risk/mitm.md)  
   
 ## Паттерны
 
@@ -39,7 +39,7 @@
 - __Ролевой доступ__ ([RBAC, ABAC](../../technology/middleware/acm.md) и тп) к методам АПИ
 - Использование SSL
 - [Валидация входных данных](https://github.com/Sairyss/backend-best-practices)
-- Web Application Firewall (WAF)
+- [Web Application firewall](../../system.class/waf.md) (WAF)
 - IP Whitelisting
   - [Ingress Kubernetes](https://dev.to/0x2633/how-to-add-the-whitelist-for-your-ingress-nginx-controller-of-k8s-1a02)
 - Rate Limiting

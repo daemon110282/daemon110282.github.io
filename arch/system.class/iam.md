@@ -106,7 +106,7 @@ User Provisioning:
 
 Варианты [решений](https://www.securitylab.ru/analytics/530059.php):
 
-- [OIDC certified решения](https://openid.net/developers/certified/)
+- [OIDC certified решения](https://openid.net/certification/certified-openid-providers-profiles/)
 - in house (on premise)
 	- Commercial
 		- [ADFS](../../technology/middleware/iam/iam.adfs.md)

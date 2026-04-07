@@ -10,3 +10,4 @@
   - Сертификация ФСТЭК
   - OWASP TOP 10
   - DDOS
+- Qrator

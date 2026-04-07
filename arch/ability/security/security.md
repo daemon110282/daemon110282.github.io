@@ -23,6 +23,8 @@
 - [Кликджекинг](https://habr.com/ru/companies/piter/articles/841098/)
 - Табнаббинг и обратный табнаббинг
 - [API](security.api.md#виды-атак)
+- [Man In the Middle (MitM)](risk/mitm.md)
+- Pass The Hash - перехват хэша пароля
 
 ### Триггеры для подключения ОИБ, анализа ИБ
 

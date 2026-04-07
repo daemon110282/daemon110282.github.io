@@ -2,8 +2,8 @@
 
 ## Зачем
 
-TODO
+Для обеспечения [безопасности](../ability/security/security.md).
 
 ## Технологии
 
-- [PT](../../technology/ability/security/waf.md)
+[WAF системы](../../technology/ability/security/waf.md)

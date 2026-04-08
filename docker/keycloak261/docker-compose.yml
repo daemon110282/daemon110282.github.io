@@ -12,9 +12,9 @@ services:
       KC_DB_SCHEMA: public
       KEYCLOAK_ADMIN: admin
       KEYCLOAK_ADMIN_PASSWORD: admin
-      KC_FEATURES: token-exchange,admin-fine-grained-authz:v1
+      # KC_FEATURES: token-exchange,admin-fine-grained-authz:v1
     ports:
-      - "8080:8080"
+      - "8180:8080"
       - "9000:9000"
     depends_on:
       postgres:

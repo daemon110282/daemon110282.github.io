@@ -5,8 +5,6 @@
 	- [Функции](#функции)
 		- [Термины](#термины)
 		- [Обновление Access Token используя Refresh Token](#обновление-access-token-используя-refresh-token)
-		- [User Storage](#user-storage)
-		- [Access Control](#access-control)
 	- [Технологии](#технологии)
 	- [Deployment](#deployment)
 	- [Observability](#observability)
@@ -21,9 +19,7 @@
 
 ## Функции
 
-- [Custom UI forms](https://www.keycloak.org/docs/latest/server_admin/#features) Apache Freemaker + React?
-	- [Themes](https://www.opcito.com/blogs/customizing-login-and-signup-pages-in-keycloak)
-	- [keycloakify React отзывы не очень](https://t.me/keycloak_ru/25264)
+- [Custom UI forms](keycloak/keycloak.theme.md)
 - [ReCaptcha v3 Google](https://habr.com/ru/company/X5Tech/blog/486778/)
 	- [SPI](https://github.com/dasniko/keycloak-extensions-demo/tree/main/captcha)
 	- [Custom login form by Phone+Captcha+SMS OTP](https://github.com/FX-HAO/keycloak-phone-authenticator)
@@ -57,8 +53,8 @@
 	- [ЕСИА](https://platform.digital.gov.ru/docs/security/platform-v-iam/esia-setup)
 	- 2FA SMS
       - [MFA OTP SMS](https://github.com/dasniko/keycloak-2fa-sms-authenticator)
-- User [Store\Provider](#user-storage)		
-- [Access Control mechanisms](#access-control) (ACM)
+- User [Store\Provider](keycloak/keycloak.userstorage.md)		
+- [Access Control mechanisms](keycloak/keycloak.acm.md) (ACM)
 - Message Queue Intgegration
 	- Keycloak SPI plugin that [publishes events to a RabbitMq server](https://github.com/aznamier/keycloak-event-listener-rabbitmq)
 	- Keycloak SPI plugin [Kafka](https://github.com/SnuK87/keycloak-kafka)
@@ -99,14 +95,6 @@
 - Realm settings\Sessions\Client session settings
   - Client Session Idle - То же самое, что SSO Session Idle, но для __Refresh токена__. Если на задано, то используется "ssoSessionIdleTimeout" "clientSessionIdleTimeout" - 0
   - Client Session Max - То же самое, что SSO Session Max, но для __Refresh токена__. Если на задано, то используется "ssoSessionMaxLifespan" "clientSessionMaxLifespan" - 0
-  
-### User Storage
-
-[User Storage](keycloak/keycloak.userstorage.md)
-
-### Access Control
-
-[ACM](keycloak/keycloak.acm.md)
 
 ## Технологии
 

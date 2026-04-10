@@ -7,11 +7,15 @@
   - [Процесс Вариант 1: Hosted Login Page](#процесс-вариант-1-hosted-login-page)
     - [1 Настройка Keycloak](#1-настройка-keycloak)
     - [2 Аутентификация](#2-аутентификация)
-    - [Реализация на фронтенде (React/NextJS)](#реализация-на-фронтенде-reactnextjs)
-      - [2.1. Кастомизировать тему Keycloak](#21-кастомизировать-тему-keycloak)
-      - [2.2. Встроить UI логина в Next.js и Direct Access Grant (ROPC)](#22-встроить-ui-логина-в-nextjs-и-direct-access-grant-ropc)
+      - [2.1.1. Кастомизировать тему Keycloak](#211-кастомизировать-тему-keycloak)
+      - [2.2.1. Встроить UI логина в Next.js и Direct Access Grant (ROPC)](#221-встроить-ui-логина-в-nextjs-и-direct-access-grant-ropc)
+    - [2.2 Backend](#22-backend)
+    - [2.3. Реализация на фронтенде](#23-реализация-на-фронтенде)
+      - [2.3.1. Web (React/NextJS)](#231-web-reactnextjs)
+      - [2.3.2. Mobile (Android/iOS)](#232-mobile-androidios)
+        - [2.3.2.1. Android PKCE Flow with Keycloak](#2321-android-pkce-flow-with-keycloak)
+        - [2.3.2.2. iOS PKCE Flow with Keycloak](#2322-ios-pkce-flow-with-keycloak)
     - [3 Авторизация](#3-авторизация)
-  - [Android PKCE Flow with Keycloak](#android-pkce-flow-with-keycloak)
   - [Необходимость перехода на Authorization Code Flow + PKCE в ЛК\\МП](#необходимость-перехода-на-authorization-code-flow--pkce-в-лкмп)
     - [Плюсы](#плюсы)
     - [Минусы](#минусы)
@@ -44,6 +48,12 @@ React (login form)
   
 ## Процесс Вариант 1: Hosted Login Page
 
+Как это выглядит
+	React → редирект на /authorize
+	Keycloak → показывает кастомизированную тему логина
+	После логина → redirect обратно с code
+	Backend → обменивает code + verifier на токены
+
 Плюсы:
 
 - PKCE работает нативно
@@ -55,54 +65,22 @@ React (login form)
 
 - UX не нативный
 
-Варианты реализации:
-
-- Web
-  - [Using a browser only](https://auth0.com/docs/get-started/authentication-and-authorization-flow/authorization-code-flow-with-proof-key-for-code-exchange-pkce)
-    - [JS library](https://github.com/auth0/auth0-spa-js)
-  - [SPA NextJS](https://auth0.com/blog/ultimate-guide-nextjs-authentication-auth0/)
-  - [NodeJS KeyCloak Adapter](https://www.keycloak.org/securing-apps/nodejs-adapter)
-    - [example](https://github.com/keycloak/keycloak-quickstarts/tree/main/nodejs/resource-server)
-  - [Passport Node.js KeyCloak ACF with PKCE](https://blog.brakmic.com/pkce-with-keycloak-and-passport/) [github](https://github.com/brakmic/passport-keycloak-oauth2-oidc-portable/)
-- Mobile
-  - [Android KeyCloak AppAuth Adapter](https://levelup.gitconnected.com/integrating-keycloak-in-android-with-appauth-what-you-really-need-to-know-59fb56f26432)
-  - [AppAuth Android + Logout](https://habr.com/ru/companies/kts/articles/654029/)
-  - [AppAuth Android + Google API OAuth](https://habr.com/ru/articles/735982/)
-  - [Google Android manual](https://developers.google.com/identity/protocols/oauth2/native-app)
-
 ### 1 Настройка Keycloak
 
 Для поддержки PKCE и работы с фронтендом (публичным клиентом) выполните следующие действия:
-Создайте клиент: В консоли администрирования Keycloak создайте новый клиент для вашего приложения.
-Тип доступа: Установите Client Authentication в положение Off (что сделает клиент публичным) и включите Standard Flow.
-Настройка PKCE: Вкладка Advanced -> Advanced Settings. Установите Proof Key for Code Exchange Code Challenge Method на S256 (рекомендуемый метод хеширования).
-Redirect URIs: Укажите точные URL вашего NextJS приложения (например, http://localhost:3000/*), куда Keycloak будет возвращать пользователя после авторизации.
+
+- Создайте клиент: В консоли администрирования Keycloak создайте новый клиент для вашего приложения.
+- Тип доступа: Установите Client Authentication в положение Off (что сделает клиент публичным) и включите Standard Flow.
+- Настройка PKCE: Вкладка Advanced -> Advanced Settings. Установите Proof Key for Code Exchange Code Challenge Method на S256 (рекомендуемый метод хеширования).
+- Redirect URIs: Укажите точные URL вашего NextJS приложения (например, <http://localhost:3000/*>), куда Keycloak будет возвращать пользователя после авторизации.
 
 ### 2 Аутентификация
 
-Аутентификация всегда происходит на стороне Authorization Server (Keycloak)
-Пароли будут обрабатываться только сервером авторизации (Authorization Server)
-UI логина — часть этого процесса (Hosted Login Page)
+- Аутентификация всегда происходит на стороне Authorization Server (Keycloak)
+- Пароли будут обрабатываться только сервером авторизации (Authorization Server)
+- UI логина — часть этого процесса (Hosted Login Page)
 
-### Реализация на фронтенде (React/NextJS)
-
-Для работы с Keycloak в React-приложении рекомендуется использовать официальный пакет keycloak-js.
-Инициализация с PKCE: При инициализации адаптера необходимо явно указать метод PKCE:
-Процесс ACF с PKCE: Адаптер автоматически создаст code_verifier (секретную строку) и выведет из неё code_challenge (хеш), которые будут отправлены в запросе на авторизацию. После возврата кода авторизации адаптер отправит исходный верификатор на Token Endpoint для получения токена.
-
-#### 2.1. Кастомизировать тему Keycloak
-
-Как это выглядит
-	React → редирект на /authorize
-	Keycloak → показывает кастомизированную тему логина
-	После логина → redirect обратно с code
-	Backend → обменивает code + verifier на токены
-
-Почему это правильно
-	PKCE работает нативно
-	Нет хранения паролей на фронте
-	Полное соответствие OIDC
-	Поддержка SSO, MFA, brute force protection
+#### 2.1.1. Кастомизировать тему Keycloak
 
 Как кастомизировать UI
 	Keycloak Themes (Freemarker + CSS)
@@ -114,34 +92,56 @@ UI логина — часть этого процесса (Hosted Login Page)
 		Поля формы
 		UX полностью
 
-#### 2.2. Встроить UI логина в Next.js и Direct Access Grant (ROPC)
+#### 2.2.1. Встроить UI логина в Next.js и Direct Access Grant (ROPC)
 
 Deprecated, не рекомендуется использовать, так как ROPC не поддерживает PKCE и имеет риски безопасности.
 
-### 3 Авторизация
+### 2.2 Backend
 
-Доступ к методам API будет осуществляться с помощью Access Token, полученного в процессе ACF с PKCE. На стороне сервера (Resource Server) необходимо настроить проверку токенов, чтобы обеспечить безопасность доступа к ресурсам. Keycloak предоставляет адаптеры для различных языков и фреймворков, которые облегчают интеграцию и проверку токенов.
+- DEPRECATED [NodeJS KeyCloak Adapter](https://www.keycloak.org/securing-apps/nodejs-adapter)
+  - [example](https://github.com/keycloak/keycloak-quickstarts/tree/main/nodejs/resource-server)
+- [Passport TypeScript Node.js KeyCloak ACF with PKCE](https://blog.brakmic.com/pkce-with-keycloak-and-passport/) [passport-keycloak-oauth2-oidc-portable](https://github.com/brakmic/passport-keycloak-oauth2-oidc-portable/) на основе [passport-keycloak-oauth2-oidc](https://github.com/louie007/passport-keycloak-oauth2-oidc)
+- express-openid-connect
+- [openid-client](https://github.com/panva/openid-client)
 
-## Android PKCE Flow with Keycloak
+### 2.3. Реализация на фронтенде
+
+#### 2.3.1. Web (React/NextJS)
+
+- [Using a browser only](https://auth0.com/docs/get-started/authentication-and-authorization-flow/authorization-code-flow-with-proof-key-for-code-exchange-pkce)
+  - [JS library](https://github.com/auth0/auth0-spa-js)
+- [SPA NextJS](https://auth0.com/blog/ultimate-guide-nextjs-authentication-auth0/)
+  
+Для работы с Keycloak в React-приложении рекомендуется использовать официальный пакет keycloak-js.
+Инициализация с PKCE: При инициализации адаптера необходимо явно указать метод PKCE:
+Процесс ACF с PKCE: Адаптер автоматически создаст code_verifier (секретную строку) и выведет из неё code_challenge (хеш), которые будут отправлены в запросе на авторизацию. После возврата кода авторизации адаптер отправит исходный верификатор на Token Endpoint для получения токена.
+
+#### 2.3.2. Mobile (Android/iOS)
+
+##### 2.3.2.1. Android PKCE Flow with Keycloak
+
+- [Android KeyCloak AppAuth Adapter](https://levelup.gitconnected.com/integrating-keycloak-in-android-with-appauth-what-you-really-need-to-know-59fb56f26432)
+- [AppAuth Android + Logout](https://habr.com/ru/companies/kts/articles/654029/)
+- [AppAuth Android + Google API OAuth](https://habr.com/ru/articles/735982/)
+- [Google Android manual](https://developers.google.com/identity/protocols/oauth2/native-app)
 
 Реализация Authorization Code Flow (ACF) с PKCE на Android через Keycloak обычно выполняется с использованием библиотеки AppAuth, которая является стандартом для работы с OpenID Connect на мобильных платформах.
 
 Ниже приведен пошаговый процесс реализации согласно источникам:
 
-1. Настройка Keycloak для Android-клиента
+1.Настройка Keycloak для Android-клиента
 
-Для работы с мобильным приложением необходимо правильно сконфигурировать клиент в консоли Keycloak:
-Тип клиента: Создайте «Public» клиент (Client Authentication — Off), так как мобильные приложения не могут безопасно хранить секреты клиента.
-Capability Config: Включите Standard Flow.
-PKCE Method: В расширенных настройках (Advanced Settings) выберите метод S256 (SHA-256).
+В дополнении к основным [KeyCloak](#1-настройка-keycloak)
 Redirect URIs: Укажите схему обратного вызова вашего приложения (например, com.myapp://oauth2callback).
 
-2. Подготовка Android-проекта
+2.Подготовка Android-проекта
+
 Используйте библиотеку AppAuth для автоматизации создания запросов и обработки ответов:
 Зависимости: Добавьте net.openid:appauth в ваш build.gradle.
 Манифест: Настройте intent-filter для обработки редиректа от Keycloak. Это можно сделать через manifestPlaceholders в Gradle, чтобы библиотека AppAuth автоматически добавила нужные параметры в манифест.
 
-3. Процесс авторизации (ACF + PKCE)
+3.Процесс авторизации (ACF + PKCE)
+
 Процесс включает создание секретного верификатора и его хешированного аналога:
 Генерация PKCE-параметров: Приложение создает случайную строку Code Verifier. На её основе вычисляется Code Challenge (хеш SHA-256).
 Формирование запроса: Используйте AuthorizationRequest.Builder из AppAuth. В запрос передаются:
@@ -153,10 +153,20 @@ code_challenge и code_challenge_method=S256.
 Получение кода: После входа Keycloak перенаправляет пользователя обратно в приложение с Authorization Code.
 Обмен кода на токен: Приложение отправляет запрос на Token Endpoint, передавая полученный код и исходный Code Verifier. Keycloak хеширует присланный верификатор и сравнивает его с тем челленджем, который был получен на первом этапе. Если они совпадают, выдается Access Token.
 
-4. Хранение токенов
+4.Хранение токенов
+
 Для управления состоянием авторизации AppAuth предоставляет класс AuthState. Он позволяет хранить токены и информацию о конфигурации, а также легко сериализуется в JSON для сохранения в защищенном хранилище (например, EncryptedSharedPreferences).
 
 Почему это важно для Android? Использование PKCE защищает от атак перехвата кода авторизации (MITM), так как даже если злоумышленник перехватит code в редиректе, он не сможет обменять его на токен без секретного code_verifier, который никогда не передавался через браузер на первом этапе.
+
+##### 2.3.2.2. iOS PKCE Flow with Keycloak
+
+Реализация ACF с PKCE на iOS также может быть выполнена с помощью библиотеки AppAuth для iOS, которая обеспечивает поддержку OpenID Connect и OAuth 2.0.
+Процесс аналогичен Android-реализации.
+
+### 3 Авторизация
+
+Доступ к методам API будет осуществляться с помощью Access Token, полученного в процессе ACF с PKCE. На стороне сервера (Resource Server) необходимо настроить проверку токенов, чтобы обеспечить безопасность доступа к ресурсам. Keycloak предоставляет адаптеры для различных языков и фреймворков, которые облегчают интеграцию и проверку токенов.
 
 ## Необходимость перехода на Authorization Code Flow + PKCE в ЛК\МП
 

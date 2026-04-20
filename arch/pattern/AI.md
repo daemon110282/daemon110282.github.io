@@ -6,8 +6,7 @@
   - [Паттерны](#паттерны)
   - [TODO](#todo)
   - [LLM](#llm)
-  - [Patterns and Tools](#patterns-and-tools)
-  - [Prompts Инжиниринг промтов](#prompts-инжиниринг-промтов)
+  - [Технологии](#технологии)
 
 ## Зачем
 
@@ -20,41 +19,34 @@
 
 ## Термины
 
-- MCP - Model Context Protocol
+- [MCP](ai/mcp.md) - Model Context Protocol
+- LLM - Large Language Model - большая языковая модель
 
 ## Паттерны
 
 - Чат (вопрос-ответ)
-  - [ChatGPT](/technology/ai/openai.md)
+  - [ChatGPT](/technology/ai/llm/openai.md)
 - [Агент](ai/agent.mode.md) (план-задачи-решение)
-  
+- [Prompts](ai/promts.md) Инжиниринг промтов
+
 ## TODO
 
 - https://code.visualstudio.com/docs/copilot/customization/custom-instructions
 
 ## LLM
 
-- [x] [Copilot](ai/llm/copilot.md)
-- [x] [Alibaba Qwen Code LLM](ai/llm/qwen.md)
-- [ ] [Gemini CLI](ai/llm/gemini.md)
+- [x] [GPT OpenAI](../../technology/ai/llm/openai.md)
+- [x] [Copilot](../../technology/ai/llm/copilot.md)
+- [x] [Alibaba Qwen Code LLM](../../technology/ai/llm/qwen.md)
+- [ ] [Gemini CLI](../../technology/ai/llm/gemini.md)
 
-## Patterns and Tools
+## Технологии
 
 Коллекция шаблонов, инструментов и ресурсов для эффективного использования AI‑агентов в процессе разработки и анализа требований.
 
-- [ ] [copilot](ai/llm/copilot.md)
-- [x] [Notebook LM](ai/notebooklm.md)
-- [x] [Kilo Code](ai/kilocode.md)
-
-## Prompts Инжиниринг промтов
-
-Библиотека промтов для различных задач в области анализа требований, проектирования систем и взаимодействия с AI‑агентами.
-
-- [ ] Использовать VS Code Snippets
-  - [x] Добавить в [global.code-snippets](../../.vscode/global.code-snippets)
-- [ ] Библиотека промтов:
-  - Continue.dev — полноценный AI‑агент внутри VS Code.
-  - PromptHub — менеджер промтов с категориями.
-  - ChatGPT – EasyCode — позволяет сохранять и переиспользовать промты.
-  - Pieces for Developers — сохраняет фрагменты текста, кода, промтов.
-- [ ] Использовать GitHub Gist как удалённую библиотеку промтов
+- [x] [Notebook LM](../../technology/ai/notebooklm.md)
+- VS Code
+  - [ ] [copilot](../../technology/ai/llm/copilot.md)
+  - [x] [Kilo Code](<../../technology/ai/vs code extensions/kilocode.md>)
+  - [ ] [RooCode](https://habr.com/ru/articles/1014352/)
+- [Cursor AI](https://t-j.ru/how-to-use-cursor/)

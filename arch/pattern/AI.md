@@ -39,6 +39,8 @@
 - [x] [Copilot](../../technology/ai/llm/copilot.md)
 - [x] [Alibaba Qwen Code LLM](../../technology/ai/llm/qwen.md)
 - [ ] [Gemini CLI](../../technology/ai/llm/gemini.md)
+- [ ] [Claude](../../technology/ai/llm/claude.md)
+- [ ] [Cursor](../../technology/ai/llm/cursor.md)
 
 ## Технологии
 

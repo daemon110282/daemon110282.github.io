@@ -2,8 +2,8 @@
 
 - [IAM KeyCloak](#iam-keycloak)
 	- [Зачем](#зачем)
+	- [Термины](#термины)
 	- [Функции](#функции)
-		- [Термины](#термины)
 		- [Обновление Access Token используя Refresh Token](#обновление-access-token-используя-refresh-token)
 	- [Технологии](#технологии)
 	- [Deployment](#deployment)
@@ -16,6 +16,17 @@
 ## Зачем
 
 Реализация функции [Identity and Access Management (IAM)](../../../arch/system.class/iam.md) решений.
+
+## Термины
+
+- Realm - [необходимо ограничение по кол-ву, риски по НТ](https://highload.today/blogs/keycloak-i-oauth-2/)
+	- Users входят в Realm
+	- Clients входят в Realm
+	- [MTA](../../../arch/pattern/system.design/mta/mta.md) подход можно реализовать
+- Groups
+- Roles
+- [Cross-Origin Resource Sharing (CORS)](../../protocols.integration/cors.md)
+  - CORS allow using the Authorization Code flow in JavaScript on browser-side with the PKCE extension instead.
 
 ## Функции
 
@@ -58,21 +69,10 @@
 - Message Queue Intgegration
 	- Keycloak SPI plugin that [publishes events to a RabbitMq server](https://github.com/aznamier/keycloak-event-listener-rabbitmq)
 	- Keycloak SPI plugin [Kafka](https://github.com/SnuK87/keycloak-kafka)
-- Keycloak v19 sending logs using __GELF__ to centralized logging solutions like __ELK, EFK or Graylog out of the box__.
+- Keycloak v19 sending logs using __GELF__ to centralized logging solutions like __ELK, EFK or Graylog out of the box__
 - Session State
 	- обмен cookie через [iframe механизм](https://github.com/keycloak/keycloak-documentation/blob/main/securing_apps/topics/oidc/javascript-adapter.adoc#session-status-iframe) не все [браузеры будут поддерживать в дальнейшем](https://www.keycloak.org/docs/latest/securing_apps/#_modern_browsers)
 - [JavaScript Adapter for Client App](https://www.keycloak.org/docs/latest/securing_apps/#_javascript_adapter)
-
-### Термины
-
-- Realm - [необходимо ограничение по кол-ву, риски по НТ](https://highload.today/blogs/keycloak-i-oauth-2/)
-	- Users входят в Realm
-	- Clients входят в Realm
-	- [MTA](../../../arch/pattern/system.design/mta/mta.md) подход можно реализовать
-- Groups
-- Roles
-- [Cross-Origin Resource Sharing (CORS)](../../protocols.integration/cors.md)
-  - CORS allow using the Authorization Code flow in JavaScript on browser-side with the PKCE extension instead.
 
 [Обучение СЛЁРМ](https://slurm.io/keycloak)
 

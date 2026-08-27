@@ -1,2 +1,3 @@
 *.pdf
 docker/keycloak26/EFTR-realm-export.json
+docker/libreoffice/lo-converter/docs/*.*

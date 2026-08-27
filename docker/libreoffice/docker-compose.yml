@@ -1,0 +1,25 @@
+# https://oneuptime.com/blog/post/2026-02-08-how-to-run-libreoffice-in-docker-for-document-conversion/view
+# docker-compose.yml - Scaled conversion service
+services:
+  converter:
+    build: .
+    command: gunicorn --bind 0.0.0.0:5000 --workers 4 --timeout 120 server:app
+    deploy:
+      replicas: 3
+    networks:
+      - convnet
+
+  nginx:
+    image: nginx:alpine
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf:ro
+    depends_on:
+      - converter
+    networks:
+      - convnet
+
+networks:
+  convnet:
+    driver: bridge

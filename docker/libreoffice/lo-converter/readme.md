@@ -16,6 +16,9 @@ docker run --rm -v $(pwd)/docs:/docs lo-converter --headless --convert-to pdf --
 ### Excel spreadsheet to PDF
 
 docker run --rm -v "$(pwd)/docs:/docs" lo-converter --headless --convert-to pdf --outdir /docs /docs/q_broker_print_settings.xlsx
+docker run --rm -v "$(pwd)/docs:/docs" lo-converter --headless --convert-to pdf --outdir /docs /docs/q_reestr_print_settings.xls
+docker run --rm -v "$(pwd)/docs:/docs" lo-converter --headless --convert-to pdf --outdir /docs /docs/a_depo_print_settings.xlsx
+docker run --rm -v "$(pwd)/docs:/docs" lo-converter --headless --convert-to pdf --outdir /docs /docs/a_broker_print_settings.xlsx
 
 ### PowerPoint presentation to PDF
 

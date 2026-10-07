@@ -79,7 +79,7 @@
 - Access Control List (ACL)
   - по URI
   - по IP [Nginx](https://nginx.org/ru/docs/http/ngx_http_access_module.html) [white list Apache, Proxy Server, Firewall](https://www.rapidseedbox.com/blog/ip-whitelisting) - only pre-approved IP addresses can interact with your system
-- RBAC\ABAC
+- [RBAC\ABAC](../../../technology/middleware/acm.md)
 
 ## Сертификаты
 

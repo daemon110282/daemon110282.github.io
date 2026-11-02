@@ -23,7 +23,7 @@
       1. [Customer Journey Map](../analytic/cjm.md) (CJM)
    2. [US](user.story.md)
       1. [User Story Map](user.story.md#user-story-map)
-      2. [Event Storming](../arch/pattern/system.design/event.storming.md)
+      2. [Event Storming](./event.storming.md)
    3. [БП](bp.md)
 3. FT [Функциональные требования](analytica.ft.md)
    1. [UC](use.case.md)

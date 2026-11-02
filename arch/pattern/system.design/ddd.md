@@ -42,7 +42,7 @@
 ## Паттерны
 
 - TODO [Паттерны](https://github.com/Sairyss/domain-driven-hexagon)
-- [Event-storming](event.storming.md)
+- [Event-storming](../../../analytic/event.storming.md)
 - [CQRS](../performance/pattern.cqrs.md)
 - [IBM sample DDD](https://ibm-cloud-architecture.github.io/refarch-kc/implementation/domain-driven-design/)
 

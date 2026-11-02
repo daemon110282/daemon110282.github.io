@@ -94,7 +94,7 @@ TODO
   - Resources that belong to a particular user. For example, I can create a namespace called adri, and create a bunch of resources in there as part of my Kubernetes experimentations.
   - Environment-specific resources. For example, rather than having a separate cluster for Dev and QA, you can simply create a dev namespace, and a qa namespace in the same cluster, and deploy resources to the appropriate namespace.
   - Изоляция ресурсов - когда вы удаляете пространство имен, оно удаляет само пространство имен вместе со всеми связанными объектами в этом пространстве имен
-  - RBAC
+  - [RBAC](../../technology/middleware/acm.md)
 - Labels can be useful for:
   - Determining whether a pod is part of a production or a canary deployment
   - Differentiating between stable and alpha releases

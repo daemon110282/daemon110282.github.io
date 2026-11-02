@@ -6,6 +6,7 @@
   - [Бизнес](analytic/ba.md)
   - Системная
     - [API](api/api.md)
+  - [Миграции ИС](arch/pattern/refactoring/migration.md)
 - [Архитектура ПО](arch/arch.md)
   - Базируется на
     - [Бизнес и ИТ стратегии](analytic/strategy.md)
@@ -13,12 +14,11 @@
     - [Бизнес Аналитике требования](analytic/analytica.md)
 - [Паттерны Шаблоны](arch/pattern/patterns.md)
 - [CheckList](checklist/checklist.md)
-- [Миграции ИС](arch/pattern/refactoring/migration.md)
 - Методологии работ
   - [Agile](https://agilemanifesto.org/iso/ru/principles.html) философия
   - [Scrum](https://scrumguides.org/docs/scrumguide/v2020/2020-Scrum-Guide-Russian.pdf) реализация Agile
-  - [SAFe](safe.md) agile+lean  
-  - Планирование задач
+  - [SAFe](managment/safe.md) agile+lean  
+  - [Планирование задач](managment/task_planning.md)
     - [Вертикальная декомпозиция](https://habr.com/ru/company/sportmaster_lab/blog/515910/)
     - [Горизонтальная декомпозиция](https://habr.com/ru/company/sportmaster_lab/blog/677970/)
 - [AI](arch/pattern/AI.md)

@@ -28,6 +28,7 @@
   - [ChatGPT](/technology/ai/llm/openai.md)
 - [Агент](agent.mode.md) (план-задачи-решение)
 - [Prompts](promts.md) Инжиниринг промтов
+- [Skills](skills.md) Навыки
 
 ## TODO
 

@@ -15,10 +15,6 @@
   - Pieces for Developers — сохраняет фрагменты текста, кода, промтов.
 - [ ] Использовать GitHub Gist как удалённую библиотеку промтов
 
-## Примеры
-
-- [Примеры промтов для аналитики](../../../analytic/ai/prompts_my/readme.md)
-
 ### naming things Domain
 
  "Describe the domain, model of which consists of classes:"

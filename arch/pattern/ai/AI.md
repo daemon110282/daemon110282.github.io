@@ -27,6 +27,7 @@
 - Чат (вопрос-ответ)
   - [ChatGPT](/technology/ai/llm/openai.md)
 - [Агент](agent.mode.md) (план-задачи-решение)
+  - [Custom Agent](agent.mode.md#custom-agent)
 - [Prompts](promts.md) Инжиниринг промтов
 - [Skills](skills.md) Навыки
 
@@ -34,6 +35,8 @@
 
 - [Copilot custom-instructions](https://code.visualstudio.com/docs/copilot/customization/custom-instructions)
 - [SDD](../../../analytic/sdd.md) (Spec-Driven Documentation) – фреймворк для разработки технической документации в репозитории
+- [ ] [MCP](mcp.md)
+- [Cursor](../../../technology/ai/llm/cursor.md)
 
 ## LLM
 
@@ -53,4 +56,4 @@
   - [ ] [copilot](../../../technology/ai/llm/copilot.md)
   - [x] [Kilo Code](<../../../technology/ai/vs code extensions/kilocode.md>)
   - [ ] [RooCode](https://habr.com/ru/articles/1014352/)
-- [Cursor AI](https://t-j.ru/how-to-use-cursor/)
+- [Cursor](../../../technology/ai/llm/cursor.md)

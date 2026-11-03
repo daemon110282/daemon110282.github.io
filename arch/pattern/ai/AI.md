@@ -19,36 +19,37 @@
 
 ## Термины
 
-- [MCP](ai/mcp.md) - Model Context Protocol
-- LLM - Large Language Model - большая языковая модель
+- [MCP](mcp.md) - Model Context Protocol
+- [LLM](#llm) - Large Language Model - большая языковая модель
 
 ## Паттерны
 
 - Чат (вопрос-ответ)
   - [ChatGPT](/technology/ai/llm/openai.md)
-- [Агент](ai/agent.mode.md) (план-задачи-решение)
-- [Prompts](ai/promts.md) Инжиниринг промтов
+- [Агент](agent.mode.md) (план-задачи-решение)
+- [Prompts](promts.md) Инжиниринг промтов
 
 ## TODO
 
-- https://code.visualstudio.com/docs/copilot/customization/custom-instructions
+- [Copilot custom-instructions](https://code.visualstudio.com/docs/copilot/customization/custom-instructions)
+- [SDD](../../../analytic/sdd.md) (Spec-Driven Documentation) – фреймворк для разработки технической документации в репозитории
 
 ## LLM
 
-- [x] [GPT OpenAI](../../technology/ai/llm/openai.md)
-- [x] [Copilot](../../technology/ai/llm/copilot.md)
-- [x] [Alibaba Qwen Code LLM](../../technology/ai/llm/qwen.md)
-- [ ] [Gemini CLI](../../technology/ai/llm/gemini.md)
-- [ ] [Claude](../../technology/ai/llm/claude.md)
-- [ ] [Cursor](../../technology/ai/llm/cursor.md)
+- [x] [GPT OpenAI](../../../technology/ai/llm/openai.md)
+- [x] [Copilot](../../../technology/ai/llm/copilot.md)
+- [x] [Alibaba Qwen Code LLM](../../../technology/ai/llm/qwen.md)
+- [ ] [Gemini CLI](../../../technology/ai/llm/gemini.md)
+- [ ] [Claude](../../../technology/ai/llm/claude.md)
+- [ ] [Cursor](../../../technology/ai/llm/cursor.md)
 
 ## Технологии
 
 Коллекция шаблонов, инструментов и ресурсов для эффективного использования AI‑агентов в процессе разработки и анализа требований.
 
-- [x] [Notebook LM](../../technology/ai/notebooklm.md)
+- [x] [Notebook LM](../../../technology/ai/notebooklm.md)
 - VS Code
-  - [ ] [copilot](../../technology/ai/llm/copilot.md)
-  - [x] [Kilo Code](<../../technology/ai/vs code extensions/kilocode.md>)
+  - [ ] [copilot](../../../technology/ai/llm/copilot.md)
+  - [x] [Kilo Code](<../../../technology/ai/vs code extensions/kilocode.md>)
   - [ ] [RooCode](https://habr.com/ru/articles/1014352/)
 - [Cursor AI](https://t-j.ru/how-to-use-cursor/)

@@ -5,7 +5,6 @@
   - [Термины](#термины)
   - [Паттерны](#паттерны)
   - [TODO](#todo)
-  - [LLM](#llm)
   - [Технологии](#технологии)
 
 ## Зачем
@@ -20,7 +19,7 @@
 ## Термины
 
 - [MCP](mcp.md) - Model Context Protocol
-- [LLM](#llm) - Large Language Model - большая языковая модель
+- [LLM](llm.md) - Large Language Model - большая языковая модель
 
 ## Паттерны
 
@@ -30,6 +29,7 @@
   - [Custom Agent](agent.mode.md#custom-agent)
 - [Prompts](promts.md) Инжиниринг промтов
 - [Skills](skills.md) Навыки
+- [LLM local](llm.local.md) Локальная LLM
 
 ## TODO
 
@@ -37,15 +37,6 @@
 - [SDD](../../../analytic/sdd.md) (Spec-Driven Documentation) – фреймворк для разработки технической документации в репозитории
 - [ ] [MCP](mcp.md)
 - [Cursor](../../../technology/ai/llm/cursor.md)
-
-## LLM
-
-- [x] [GPT OpenAI](../../../technology/ai/llm/openai.md)
-- [x] [Copilot](../../../technology/ai/llm/copilot.md)
-- [x] [Alibaba Qwen Code LLM](../../../technology/ai/llm/qwen.md)
-- [ ] [Gemini CLI](../../../technology/ai/llm/gemini.md)
-- [ ] [Claude](../../../technology/ai/llm/claude.md)
-- [ ] [Cursor](../../../technology/ai/llm/cursor.md)
 
 ## Технологии
 

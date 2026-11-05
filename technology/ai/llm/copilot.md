@@ -1,5 +1,11 @@
 # Copilot
 
+## Зачем
+
+- семейство [больших языковых моделей](../../../arch/pattern/ai/llm.md) (LLM) компании Microsoft, интегрированное в IDE (Visual Studio, VS Code, JetBrains)
+
+## TODO
+
 - [ ] Пример проекта с настройками [awesome-copilot](https://github.com/github/awesome-copilot/tree/main)
   - Productivity: Pre-built agents, prompts and instructions save time and provide consistent results.
   - Best Practices: Benefit from community-curated coding standards and patterns.

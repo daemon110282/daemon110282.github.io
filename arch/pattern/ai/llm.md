@@ -3,12 +3,13 @@
 - [LLM (Large Language Models) Большие языковые модели](#llm-large-language-models-большие-языковые-модели)
 	- [Зачем](#зачем)
 	- [Плюсы-минусы](#плюсы-минусы)
+	- [Список LLM](#список-llm)
 	- [Паттерны](#паттерны)
 
 ## Зачем
 
 - Ускорение поиска данных
-- AI
+- [AI](AI.md)
 
 ## Плюсы-минусы
 
@@ -20,9 +21,18 @@
 
 Минусы:
 
+## Список LLM
+
+- [x] [GPT OpenAI Codex](../../../technology/ai/llm/openai.md)
+- [x] [Copilot](../../../technology/ai/llm/copilot.md)
+- [x] [Alibaba Qwen Code LLM](../../../technology/ai/llm/qwen.md)
+- [ ] [Gemini CLI](../../../technology/ai/llm/gemini.md)
+- [ ] [Claude](../../../technology/ai/llm/claude.md)
+- [ ] [Cursor](../../../technology/ai/llm/cursor.md)
+
 ## Паттерны
 
-- Retrieval-Augmented Generation (RAG) -  это подход, который используется в области [искусственного интеллекта](../AI.md) и обработки естественного языка
+- __Retrieval-Augmented Generation (RAG)__ -  это подход, который используется в области [искусственного интеллекта](AI.md) и обработки естественного языка
   - сочетание механизмов поиска информации (retrieval)
   - с генерацией текста (generation)
   - В контексте RAG модель может извлекать релевантную информацию из базы данных или других источников и использовать её для улучшения __качества генерируемого ответа__

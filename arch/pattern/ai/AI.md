@@ -34,7 +34,7 @@
 ## TODO
 
 - [Copilot custom-instructions](https://code.visualstudio.com/docs/copilot/customization/custom-instructions)
-- [SDD](../../../analytic/sdd.md) (Spec-Driven Documentation) – фреймворк для разработки технической документации в репозитории
+- [SDD](../../../analytic/sdd/sdd.md) (Spec-Driven Documentation) – фреймворк для разработки технической документации в репозитории
 - [ ] [MCP](mcp.md)
 - [Cursor](../../../technology/ai/llm/cursor.md)
 

@@ -26,19 +26,37 @@
 
 - https://habr.com/ru/articles/996526/
 - [Внедрение Spec-Driven Development](https://www.youtube.com/watch?v=EZwcBSX_Rbs)
+- Superpowers
+  - https://www.glukhov.org/ru/ai-devtools/superpowers/
+- OpenSpec
+  - https://www.youtube.com/watch?v=nntQKlHS-z4
 
 ## Frameworks
 
 - [Сравнение](https://www.youtube.com/watch?v=UHKRUEoHZow)
-- [Spec-Kit](spec-kit.md)
+- [Github Spec-Kit](spec-kit.md)
   - проходит последовательные стадии от constitution до implement, и ему трудно с меняющимися требованиями и сильной связанностью
   - MIT
-- [Kiro](https://github.com/kiro-dev/kiro)
+  - позволяет организовать подробный жизненный цикл отдельных функциональных возможностей, оставляя команде выбор стратегии хранения актуальных спецификаций
+  - Рекомендуют, если:
+    - Создаётся __новая информационная система или крупная подсистема__.
+    - Требуется формализовать архитектуру до начала реализации.
+    - Необходимо согласование требований и технических решений.
+    - Важна стандартизация работы нескольких команд.
+    - Требуется расширяемый процесс контроля реализации.
+- [AWS Kiro](https://github.com/kiro-dev/kiro)
   - vendor-agnostic (AWS), но требует отдельного сервера и не интегрируется с GitHub Actions
   - Proprietary, но с открытым исходным кодом
-- OpenSpec
+- [OpenSpec](https://github.com/openspec)
   - рассчитан на существующие кодовые базы и ведёт изменение [через explore, propose и apply](https://www.youtube.com/watch?v=_imJ9rHoapY)
   - MIT
   - использует [Gherkin](gherkin.md) вместо [Use cases](../use.case.md)
+  - поддерживает постоянную базовую спецификацию системы и дельты изменений
+  - Рекомендуют, если:
+    - Есть __существующие информационные системы__.
+    - Требуется развивать функциональность небольшими итерациями.
+    - Важно поддерживать актуальность спецификаций.
+    - Используется несколько AI coding assistants.
+    - Не хочется создавать много документации для каждой задачи.
 - [Superpowers](https://superpowers.dev/)
   - Open-source пакет навыков, накладывающий обязательный цикл «мозговой штурм → план → субагенты → TDD → ревью»

@@ -20,15 +20,16 @@
 
 - [MCP](mcp.md) - Model Context Protocol
 - [LLM](llm.md) - Large Language Model - большая языковая модель
+- [Агент](agent.mode.md) (план-задачи-решение)
+- [Custom Agent](agent.mode.md#custom-agent)
+- [Prompts](promts.md) Инжиниринг промтов
+- [Skills](skills.md) Навыки
+- [Agent harness](agent.harness.md)
 
 ## Паттерны
 
 - Чат (вопрос-ответ)
   - [ChatGPT](/technology/ai/llm/openai.md)
-- [Агент](agent.mode.md) (план-задачи-решение)
-  - [Custom Agent](agent.mode.md#custom-agent)
-- [Prompts](promts.md) Инжиниринг промтов
-- [Skills](skills.md) Навыки
 - [LLM local](llm.local.md) Локальная LLM
 
 ## TODO

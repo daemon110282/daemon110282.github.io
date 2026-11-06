@@ -24,16 +24,16 @@
 
 ## TODO
 
-- https://habr.com/ru/articles/996526/
-- [Внедрение Spec-Driven Development](https://www.youtube.com/watch?v=EZwcBSX_Rbs)
-- Superpowers
+- [ ] [Внедрение Spec-Driven Development](https://www.youtube.com/watch?v=EZwcBSX_Rbs)
+- [ ] Superpowers
   - https://www.glukhov.org/ru/ai-devtools/superpowers/
-- OpenSpec
+- [ ] OpenSpec
   - https://www.youtube.com/watch?v=nntQKlHS-z4
 
 ## Frameworks
 
 - [Сравнение](https://www.youtube.com/watch?v=UHKRUEoHZow)
+  - [RuStore](https://www.rustore.ru/developer/blog/spec-kit-i-openspec-v-realnom-android-proekte-testiruem-sdd-na-zadachah-rustore)
 - [Github Spec-Kit](spec-kit.md)
   - проходит последовательные стадии от constitution до implement, и ему трудно с меняющимися требованиями и сильной связанностью
   - MIT

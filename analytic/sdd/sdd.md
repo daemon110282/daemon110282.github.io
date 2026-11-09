@@ -25,8 +25,6 @@
 ## TODO
 
 - [x] [Внедрение Spec-Driven Development](https://www.youtube.com/watch?v=EZwcBSX_Rbs)
-- [ ] [Трассировка спецификаций, тестов и кода в разработке с использованием AI](https://www.glukhov.org/ru/app-architecture/testing-architecture/specs-tests-code-traceability-ai-development/)
-  - [ ] use spec-kit-tracer
 - [ ] Superpowers
   - [manual](https://www.glukhov.org/ru/ai-devtools/superpowers/)
 - [ ] OpenSpec

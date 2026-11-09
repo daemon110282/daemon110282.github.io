@@ -5,6 +5,7 @@
 	- [TODO](#todo)
 	- [Процесс](#процесс)
 		- [0. Init](#0-init)
+		- [0.1 Update](#01-update)
 		- [1. Constitution - Конституция, стандарты, принципы](#1-constitution---конституция-стандарты-принципы)
 		- [2. Specify - Бизнес требования](#2-specify---бизнес-требования)
 		- [3. Clarify - Уточнение бизнес требований](#3-clarify---уточнение-бизнес-требований)
@@ -31,19 +32,27 @@
 
 ## Процесс
 
-[Синтаксис команд](https://github.github.com/spec-kit/reference/agentic-sdd.html)
-
-[Flow](https://www.youtube.com/watch?v=rCdqRETmYFw):
+- [Мануал](https://github.github.com/spec-kit/quickstart.html)
+- [Синтаксис команд](https://github.github.com/spec-kit/reference/agentic-sdd.html)
+- [Flow](https://www.youtube.com/watch?v=rCdqRETmYFw):
 
 ### 0. Init
 
-[Init](https://github.github.com/spec-kit/quickstart.html#install-specify) project
+[Init](https://github.github.com/spec-kit/installation.html) project
 Запускается один раз в проекте
 
-```test
+```text
 specify init taskify --integration copilot
 specify init . --integration copilot
 specify init . --integration copilot
+```
+
+### 0.1 Update
+
+[Guide](https://github.github.com/spec-kit/upgrade.html)
+
+```text
+specify self check
 ```
 
 ### 1. Constitution - Конституция, стандарты, принципы

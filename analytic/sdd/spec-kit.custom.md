@@ -41,6 +41,8 @@ TODO:
 - Дополнительно потребуется поддерживать инфраструктуру для хранения и доставки preset.
 - [Comunity catalog](https://github.com/github/spec-kit/blob/main/presets/catalog.community.json)
 
+[Команды](https://github.github.com/spec-kit/presets/overview.html)
+
 ```text
 specify preset list
 specify preset search {name}

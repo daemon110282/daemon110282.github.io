@@ -38,8 +38,11 @@
 
 ### 0. Init
 
-[Init](https://github.github.com/spec-kit/installation.html) project
-Запускается один раз в проекте
+[Init](https://github.github.com/spec-kit/installation.html) project.
+Запускается один раз в проекте, чтобы создать структуру каталогов под LLM и базовые файлы для SDD:
+
+- Copilot
+- [Codex CLI](https://github.com/github/spec-kit/blob/main/docs/integrations/codex.md)
 
 ```text
 specify init taskify --integration copilot

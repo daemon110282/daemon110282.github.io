@@ -24,16 +24,20 @@
 
 ## TODO
 
-- [ ] [Внедрение Spec-Driven Development](https://www.youtube.com/watch?v=EZwcBSX_Rbs)
+- [x] [Внедрение Spec-Driven Development](https://www.youtube.com/watch?v=EZwcBSX_Rbs)
+- [ ] [Трассировка спецификаций, тестов и кода в разработке с использованием AI](https://www.glukhov.org/ru/app-architecture/testing-architecture/specs-tests-code-traceability-ai-development/)
+  - [ ] use spec-kit-tracer
 - [ ] Superpowers
-  - https://www.glukhov.org/ru/ai-devtools/superpowers/
+  - [manual](https://www.glukhov.org/ru/ai-devtools/superpowers/)
 - [ ] OpenSpec
-  - https://www.youtube.com/watch?v=nntQKlHS-z4
+  - [intro](https://www.youtube.com/watch?v=nntQKlHS-z4)
 
 ## Frameworks
 
 - [Сравнение](https://www.youtube.com/watch?v=UHKRUEoHZow)
   - [RuStore](https://www.rustore.ru/developer/blog/spec-kit-i-openspec-v-realnom-android-proekte-testiruem-sdd-na-zadachah-rustore)
+  - [SDD vs Vibe Coding](https://www.glukhov.org/ru/ai-devtools/vibe-coding/spec-driven-development-vs-vibe-coding/)
+  - [SDD vs BDD vs TDD](https://www.glukhov.org/ru/app-architecture/documentation/what-is-spec-driven-development/)
 - [Github Spec-Kit](spec-kit.md)
   - проходит последовательные стадии от constitution до implement, и ему трудно с меняющимися требованиями и сильной связанностью
   - MIT
@@ -60,3 +64,4 @@
     - Не хочется создавать много документации для каждой задачи.
 - [Superpowers](https://superpowers.dev/)
   - Open-source пакет навыков, накладывающий обязательный цикл «мозговой штурм → план → субагенты → TDD → ревью»
+- [ai-factory](https://github.com/lee-to/ai-factory)

@@ -1,0 +1,1144 @@
+{
+    "common": {
+        "title": "Технический протокол",
+        "fonts": [
+            "Cambria",
+            "TrebuchetMS"
+        ],
+        "defaultFont": "Cambria"
+    },
+    "fields": {
+        "Date": {
+            "type": "text",
+            "fieldName": "Date",
+            "dataKey": "Date",
+            "class": "w10p fs9pt",
+            "param": {
+                "readonly": true
+            },
+            "info": {
+                "Type": "string",
+                "Hint": "Дата",
+                "Required": false,
+                "Format": "string"
+            },
+            "front": {
+                "title": "Дата",
+                "dataHandler": "date"
+            }
+        },
+        "Client": {
+            "type": "text",
+            "fieldName": "Client",
+            "dataKey": "Client",
+            "class": "w20p fs9pt",
+            "param": {
+                "readonly": true
+            },
+            "info": {
+                "Type": "string",
+                "Hint": "Регистрационный код клиента",
+                "Required": false
+            },
+            "front": {
+                "title": "Регистрационный код клиента"
+            }
+        },
+        "Client_FIO": {
+            "type": "text",
+            "fieldName": "Client_FIO",
+            "dataKey": "Client_FIO",
+            "class": "w50p",
+            "info": {
+                "Type": "string",
+                "Hint": "Полное ФИО клиента",
+                "Required": true
+            },
+            "front": {
+                "title": "Полное ФИО клиента",
+                "preparedValue": {
+                    "linked_field": "numbp",
+                    "entity_type": "crm_contact",
+                    "entity_field": "FIO",
+                    "linked_field_name": "Client"
+                },
+                "hide_field": true
+            }
+        },
+        "TS_OT_MS": {
+            "type": "checkbox",
+            "fieldName": "TS_OT_MS",
+            "dataKey": "TS_OT_MS",
+            "value": "X",
+            "info": {
+                "Type": "string",
+                "Hint": "Сектор фондового рынка «Основной рынок» Московской Биржи"
+            },
+            "front": {
+                "title": "Сектор фондового рынка «Основной рынок» Московской Биржи",
+                "default_value": "checked"
+            }
+        },
+        "TS_OT_RF": {
+            "type": "checkbox",
+            "fieldName": "TS_OT_RF",
+            "dataKey": "TS_OT_RF",
+            "value": "X",
+            "info": {
+                "Type": "string",
+                "Hint": "Срочный рынок Московской Биржи"
+            },
+            "front": {
+                "title": "Срочный рынок Московской Биржи",
+                "default_value": "checked"
+            }
+        },
+        "TS_OT_FX": {
+            "type": "checkbox",
+            "fieldName": "TS_OT_FX",
+            "dataKey": "TS_OT_FX",
+            "value": "X",
+            "info": {
+                "Type": "string",
+                "Hint": "Валютные рынки и рынок драгоценных металлов Московской Биржи, без поставки"
+            },
+            "front": {
+                "title": "Валютные рынки и рынок драгоценных металлов Московской Биржи, без поставки",
+                "default_value": "checked"
+            }
+        },
+        "TS_OT_CD": {
+            "type": "checkbox",
+            "fieldName": "TS_OT_CD",
+            "dataKey": "TS_OT_CD",
+            "value": "X",
+            "info": {
+                "Type": "string",
+                "Hint": "Валютный рынок и рынок драгоценных металлов Московской Биржи, с поставкой"
+            },
+            "front": {
+                "title": "Валютный рынок и рынок драгоценных металлов Московской Биржи, с поставкой",
+                "default_value": "checked"
+            }
+        },
+        "TS_OT_SF": {
+            "type": "checkbox",
+            "fieldName": "TS_OT_SF",
+            "dataKey": "TS_OT_SF",
+            "value": "X",
+            "info": {
+                "Type": "string",
+                "Hint": "Подключить срочный рынок"
+            },
+            "front": {
+                "title": "Подключить срочный рынок",
+                "default_value": "true"
+            }
+        },
+        "TS_OT_RS": {
+            "type": "checkbox",
+            "fieldName": "TS_OT_RS",
+            "dataKey": "TS_OT_RS",
+            "value": "X",
+            "info": {
+                "Type": "string",
+                "Hint": "Биржевой рынок (ПАО «Санкт-Петербургская биржа»)"
+            },
+            "front": {
+                "title": "Биржевой рынок (ПАО «Санкт-Петербургская биржа»)",
+                "hide_field": true
+            }
+        },
+        "TS_OT_ZF": {
+            "type": "checkbox",
+            "fieldName": "TS_OT_ZF",
+            "dataKey": "TS_OT_ZF",
+            "value": "X",
+            "info": {
+                "Type": "string",
+                "Hint": "Торговля срочными контрактами на Внешних торговых площадках"
+            },
+            "front": {
+                "title": "Торговля срочными контрактами на Внешних торговых площадках",
+                "default_value": "checked"
+            }
+        },
+        "TS_OT_OT": {
+            "type": "checkbox",
+            "fieldName": "TS_OT_OT",
+            "dataKey": "TS_OT_OT",
+            "value": "X",
+            "info": {
+                "Type": "string",
+                "Hint": "Внебиржевой рынок"
+            },
+            "front": {
+                "title": "Внебиржевой рынок",
+                "default_value": "checked"
+            }
+        },
+        "TS_OT_IIS_MS": {
+            "type": "checkbox",
+            "fieldName": "TS_OT_IIS_MS",
+            "dataKey": "TS_OT_IIS_MS",
+            "value": "X",
+            "info": {
+                "Type": "string",
+                "Hint": "Сектор фондового рынка «Основной рынок» Московской Биржи"
+            },
+            "front": {
+                "title": "Сектор фондового рынка «Основной рынок» Московской Биржи",
+                "preparedValue": {
+                    "linked_field": "numbp",
+                    "entity_type": "crm_contact",
+                    "entity_field": "group_4",
+                    "linked_field_name": "Client"
+                }
+            }
+        },
+        "TS_OT_IIS_RF": {
+            "type": "checkbox",
+            "fieldName": "TS_OT_IIS_RF",
+            "dataKey": "TS_OT_IIS_RF",
+            "value": "X",
+            "info": {
+                "Type": "string",
+                "Hint": "Срочный рынок Московской Биржи"
+            },
+            "front": {
+                "title": "Срочный рынок Московской Биржи",
+                "preparedValue": {
+                    "linked_field": "numbp",
+                    "entity_type": "crm_contact",
+                    "entity_field": "group_4",
+                    "linked_field_name": "Client"
+                }
+            }
+        },
+        "TS_OT_IIS_FX": {
+            "type": "checkbox",
+            "fieldName": "TS_OT_IIS_FX",
+            "dataKey": "TS_OT_IIS_FX",
+            "value": "X",
+            "info": {
+                "Type": "string",
+                "Hint": "Валютные рынки и рынок драгоценных металлов Московской Биржи без поставки"
+            },
+            "front": {
+                "title": "Валютные рынки и рынок драгоценных металлов Московской Биржи без поставки",
+                "preparedValue": {
+                    "linked_field": "numbp",
+                    "entity_type": "crm_contact",
+                    "entity_field": "group_4",
+                    "linked_field_name": "Client"
+                }
+            }
+        },
+        "TS_OT_IIS_RS": {
+            "type": "checkbox",
+            "fieldName": "TS_OT_IIS_RS",
+            "dataKey": "TS_OT_IIS_RS",
+            "value": "X",
+            "info": {
+                "Type": "string",
+                "Hint": "Биржевой рынок (ПАО «Санкт-Петербургская  биржа»)"
+            },
+            "front": {
+                "title": "Биржевой рынок (ПАО «Санкт-Петербургская биржа»)",
+                "hide_field": true
+            }
+        },
+        "TS_OT_IIS_STORE": {
+            "type": "checkbox",
+            "fieldName": "TS_OT_IIS_STORE",
+            "dataKey": "TS_OT_IIS_STORE",
+            "value": "X",
+            "info": {
+                "Type": "string",
+                "Hint": "Хранение средств на отдельном специальном брокерском счёте совместно с денежными средствами других Клиентов, не предоставивших Брокеру право использования своих средств"
+            },
+            "front": {
+                "title": "При реализации Клиентом права выбора хранения средств на отдельном специальном брокерском счёте совместно с денежными средствами других Клиентов, не предоставивших Брокеру право использования своих средств. Оплачивается согласно тарифам Брокера."
+            }
+        },
+        "TS_OT_REJECT": {
+            "type": "checkbox",
+            "fieldName": "TS_OT_REJECT",
+            "dataKey": "TS_OT_REJECT",
+            "value": "X",
+            "info": {
+                "Type": "string",
+                "Hint": "Отказ от подачи Брокеру поручения на совершения сделок займа с ценными бумагами Клиента и отказ от получения дополнительного дохода"
+            },
+            "front": {
+                "title": "Отказ от подачи Брокеру поручения на совершения сделок займа с ценными бумагами Клиента и отказ от получения дополнительного дохода"
+            }
+        },
+        "TS_OT_IIS_MatriX": {
+            "type": "checkbox",
+            "fieldName": "TS_OT_IIS_MatriX",
+            "dataKey": "TS_OT_IIS_MatriX",
+            "value": "X",
+            "info": {
+                "Type": "string",
+                "Hint": "Доступ к Системе MatriX и услуга расчета рисков «Единая Денежная Позиция»",
+                "Required": false
+            },
+            "front": {
+                "title": "Доступ к Системе MatriX и услуга расчета рисков «Единая Денежная Позиция»",
+                "hide_field": true
+            }
+        },
+        "TS_OT_IIS_SLS": {
+            "type": "checkbox",
+            "fieldName": "TS_OT_IIS_SLS",
+            "dataKey": "TS_OT_IIS_SLS",
+            "value": "X",
+            "info": {
+                "Type": "string",
+                "Hint": "Сегрегированный счёт Лицевой счёт №"
+            },
+            "front": {
+                "title": "Сегрегированный счёт Лицевой счёт №"
+            }
+        },
+        "TS_OT_IIS_TKS_Ur": {
+            "type": "checkbox",
+            "fieldName": "TS_OT_IIS_TKS_Ur",
+            "dataKey": "TS_OT_IIS_TKS_Ur",
+            "value": "X",
+            "info": {
+                "Type": "string",
+                "Hint": "ТКС «Урожай»"
+            },
+            "front": {
+                "title": "ТКС «Урожай»"
+            }
+        },
+        "Checkbox_Risk": {
+            "type": "radio",
+            "fieldName": "Checkbox_Risk",
+            "dataKey": "Checkbox_Risk",
+            "buttonStyle": "radio",
+            "items": {
+                "Checkbox_Risk_4": {
+                    "value": "3",
+                    "info": {
+                        "Hint": "Начальный уровень риска"
+                    },
+                    "front": {
+                        "title": "Начальный уровень риска",
+                        "dependency": [
+                            {
+                                "action": {
+                                    "readonly": true
+                                },
+                                "fields": [
+                                    {
+                                        "name": "isQI",
+                                        "value": "true",
+                                        "expression": "="
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                },
+                "Checkbox_Risk_1": {
+                    "value": "0",
+                    "info": {
+                        "Hint": "Стандартный уровень риска"
+                    },
+                    "front": {
+                        "title": "Стандартный уровень риска",
+                        "dependency": [
+                            {
+                                "action": {
+                                    "hidden": true
+                                },
+                                "fields": [
+                                    {
+                                        "name": "isQI",
+                                        "value": "false",
+                                        "expression": "="
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                },
+                "Checkbox_Risk_2": {
+                    "value": "1",
+                    "info": {
+                        "Hint": "Повышенный уровень риска"
+                    },
+                    "front": {
+                        "title": "Повышенный уровень риска",
+                        "dependency": [
+                            {
+                                "action": {
+                                    "hidden": true
+                                },
+                                "fields": [
+                                    {
+                                        "name": "isQI",
+                                        "value": "false",
+                                        "expression": "="
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                },
+                "Checkbox_Risk_3": {
+                    "value": "2",
+                    "info": {
+                        "Hint": "Особый уровень риска"
+                    },
+                    "front": {
+                        "title": "Особый уровень риска",
+                        "dependency": [
+                            {
+                                "action": {
+                                    "hidden": true
+                                },
+                                "fields": [
+                                    {
+                                        "name": "clientType",
+                                        "value": "P",
+                                        "expression": "="
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                }
+            },
+            "info": {
+                "Type": "number",
+                "Hint": "Уровень риска",
+                "Required": true
+            },
+            "front": {
+                "title": ""
+            }
+        },
+        "TpSpots_N_": {
+            "type": "object",
+            "fieldName": "TpSpots_N_",
+            "dataKey": "TpSpots_N_",
+            "dataType": "array",
+            "dataIndex": 0,
+            "class": "w38p",
+            "items": {
+                "TpSpotTitle_N_": {
+                    "type": "text",
+                    "dataIndex": 0,
+                    "fieldName": "TpSpotTitle_N_",
+                    "class": "w35p",
+                    "param": {
+                        "readonly": true
+                    },
+                    "info": {
+                        "Type": "string",
+                        "Hint": "Спот рынки"
+                    },
+                    "front": {
+                        "title": "Спот рынки 1",
+                        "preparedValue": {
+                            "linked_field": "numbp",
+                            "entity_type": "crm_contact",
+                            "entity_field": "group_4",
+                            "linked_field_name": "Client"
+                        },
+                        "hide_field": true
+                    }
+                },
+                "TpSpotPlan_N_": {
+                    "type": "selectText",
+                    "datakey": "TpSpotPlan_N_",
+                    "values": [
+                        {
+                            "key": "228",
+                            "label": "Фондовый",
+                            "isCurrent": true
+                        }
+                    ],
+                    "valuesKey": "label",
+                    "dataIndex": 1,
+                    "fieldName": "TpSpotPlan_N_",
+                    "class": "w35p",
+                    "info": {
+                        "Type": "string",
+                        "Hint": "Тарифный план",
+                        "Required": true
+                    },
+                    "front": {
+                        "title": "MO-01 (RS-01)",
+                        "preparedValue": {
+                            "linked_field": "numbp",
+                            "entity_type": "crm_contact",
+                            "entity_field": "group_4",
+                            "linked_field_name": "Client"
+                        }
+                    }
+                }
+            },
+            "info": {
+                "Type": "array of string",
+                "Hint": "Спот рынки"
+            },
+            "front": {
+                "title": "",
+                "hide_field": true
+            }
+        },
+        "TpQuick_N_": {
+            "type": "object",
+            "fieldName": "TpQuick_N_",
+            "dataKey": "TpQuick_N_",
+            "dataType": "array",
+            "dataIndex": 0,
+            "class": "w38p",
+            "items": {
+                "TpQuickTitle_N_": {
+                    "type": "text",
+                    "dataIndex": 0,
+                    "fieldName": "TpQuickTitle_N_",
+                    "class": "w35p",
+                    "param": {
+                        "readonly": true
+                    },
+                    "info": {
+                        "Type": "string",
+                        "Hint": "Срочные рынки"
+                    },
+                    "front": {
+                        "title": "Срочные рынки _N_",
+                        "preparedValue": {
+                            "linked_field": "numbp",
+                            "entity_type": "crm_contact",
+                            "entity_field": "group_4",
+                            "linked_field_name": "Client"
+                        },
+                        "hide_field": true
+                    }
+                },
+                "TpQuickPlan_N_": {
+                    "type": "selectText",
+                    "datakey": "TpQuickPlan_N_",
+                    "values": [
+                        {
+                            "key": "233",
+                            "label": "Срочный",
+                            "isCurrent": true
+                        }
+                    ],
+                    "valuesKey": "label",
+                    "dataIndex": 1,
+                    "fieldName": "TpQuickPlan_N_",
+                    "class": "w35p",
+                    "info": {
+                        "Type": "string",
+                        "Hint": "Тарифный план",
+                        "Required": true
+                    },
+                    "front": {
+                        "title": "Тарифный план (Срочные рынки) _N_",
+                        "preparedValue": {
+                            "linked_field": "numbp",
+                            "entity_type": "crm_contact",
+                            "entity_field": "group_4",
+                            "linked_field_name": "Client"
+                        }
+                    }
+                }
+            },
+            "info": {
+                "Type": "array of string",
+                "Hint": "Срочные рынки"
+            },
+            "front": {
+                "title": "",
+                "hide_field": true
+            }
+        },
+        "TpCurrency_N_": {
+            "type": "object",
+            "fieldName": "TpCurrency_N_",
+            "dataKey": "TpCurrency_N_",
+            "dataType": "array",
+            "dataIndex": 0,
+            "class": "w38p",
+            "items": {
+                "TpCurrencyTitle_N_": {
+                    "type": "text",
+                    "dataIndex": 0,
+                    "fieldName": "TpCurrencyTitle_N_",
+                    "class": "w35p",
+                    "param": {
+                        "readonly": true
+                    },
+                    "info": {
+                        "Type": "string",
+                        "Hint": "Валютные рынки"
+                    },
+                    "front": {
+                        "title": "Валютные рынки _N_",
+                        "preparedValue": {
+                            "linked_field": "numbp",
+                            "entity_type": "crm_contact",
+                            "entity_field": "group_4",
+                            "linked_field_name": "Client"
+                        },
+                        "hide_field": true
+                    }
+                },
+                "TpCurrencyPlan_N_": {
+                    "type": "selectText",
+                    "datakey": "TpCurrencyPlan_N_",
+                    "values": [
+                        {
+                            "key": "231",
+                            "label": "Валютный",
+                            "isCurrent": true
+                        }
+                    ],
+                    "valuesKey": "label",
+                    "dataIndex": 1,
+                    "fieldName": "TpCurrencyPlan_N_",
+                    "class": "w35p",
+                    "info": {
+                        "Type": "string",
+                        "Hint": "Тарифный план",
+                        "Required": true
+                    },
+                    "front": {
+                        "title": "Тарифный план (Валютные рынки) _N_",
+                        "preparedValue": {
+                            "linked_field": "numbp",
+                            "entity_type": "crm_contact",
+                            "entity_field": "group_4",
+                            "linked_field_name": "Client"
+                        }
+                    }
+                }
+            },
+            "info": {
+                "Type": "array of string",
+                "Hint": "Валютные рынки"
+            },
+            "front": {
+                "title": "",
+                "hide_field": true
+            }
+        },
+        "TpProduct": {
+            "type": "text",
+            "fieldName": "TpProduct",
+            "dataKey": "TpProduct",
+            "dataType": "array",
+            "dataIndex": 0,
+            "class": "w38p",
+            "items": {
+                "TpProductTitle1": {
+                    "dataIndex": 0,
+                    "fieldName": "TpProductTitle1",
+                    "class": "w35p",
+                    "param": {
+                        "readonly": true
+                    },
+                    "info": {
+                        "Type": "string",
+                        "Hint": "Товарные рынки"
+                    },
+                    "front": {
+                        "title": "Товарные рынки 1",
+                        "preparedValue": {
+                            "linked_field": "numbp",
+                            "entity_type": "crm_contact",
+                            "entity_field": "group_4",
+                            "linked_field_name": "Client"
+                        },
+                        "hide_field": true
+                    }
+                },
+                "TpProductPlan1": {
+                    "dataIndex": 1,
+                    "fieldName": "TpProductPlan1",
+                    "class": "w35p",
+                    "info": {
+                        "Type": "string",
+                        "Hint": "Тарифный план",
+                        "Required": true
+                    },
+                    "front": {
+                        "title": "Тарифный план (Товарные рынки) 1",
+                        "preparedValue": {
+                            "linked_field": "numbp",
+                            "entity_type": "crm_contact",
+                            "entity_field": "group_4",
+                            "linked_field_name": "Client"
+                        }
+                    }
+                }
+            },
+            "info": {
+                "Type": "array of string",
+                "Hint": "Товарные рынки"
+            },
+            "front": {
+                "title": "Товарные рынки:",
+                "hide_field": true
+            }
+        },
+        "TpDrag_N_": {
+            "type": "object",
+            "fieldName": "TpDrag_N_",
+            "dataKey": "TpDrag_N_",
+            "dataType": "array",
+            "dataIndex": 0,
+            "class": "w38p",
+            "items": {
+                "TpDragTitle_N_": {
+                    "type": "text",
+                    "dataIndex": 0,
+                    "fieldName": "TpDragTitle_N_",
+                    "class": "w35p",
+                    "param": {
+                        "readonly": true
+                    },
+                    "info": {
+                        "Type": "string",
+                        "Hint": "Рынки Драгметаллов"
+                    },
+                    "front": {
+                        "title": "Рынки Драгметаллов _N_",
+                        "hide_field": true
+                    }
+                },
+                "TpDragPlan_N_": {
+                    "type": "selectText",
+                    "datakey": "TpDragPlan_N_",
+                    "values": [
+                        {
+                            "key": "149",
+                            "label": "Драг. металлы 0,05%",
+                            "isCurrent": true
+                        }
+                    ],
+                    "valuesKey": "label",
+                    "dataIndex": 1,
+                    "fieldName": "TpDragPlan_N_",
+                    "class": "w35p",
+                    "info": {
+                        "Type": "string",
+                        "Hint": "Тарифный план",
+                        "Required": true
+                    },
+                    "front": {
+                        "title": "Тарифный план (Рынки Драгметаллов) _N_"
+                    }
+                }
+            },
+            "info": {
+                "Type": "array of string",
+                "Hint": "Рынки Драгметаллов"
+            },
+            "front": {
+                "title": "",
+                "hide_field": true
+            }
+        },
+        "QUIK": {
+            "type": "checkbox",
+            "fieldName": "QUIK",
+            "dataKey": "QUIK",
+            "value": "X",
+            "info": {
+                "Type": "string",
+                "Hint": "QUIK"
+            },
+            "front": {
+                "title": "QUIK",
+                "hide_field": true
+            }
+        },
+        "Radio_TIS": {
+            "type": "radio",
+            "fieldName": "Radio_TIS",
+            "dataKey": "Radio_TIS",
+            "buttonStyle": "radio",
+            "items": {
+                "rTS_OT_IIS_MatriX": {
+                    "value": "MatriX",
+                    "info": {
+                        "Hint": "MatriX"
+                    },
+                    "front": {
+                        "title": "MatriX"
+                    }
+                },
+                "rQUIK": {
+                    "value": "QUIK",
+                    "info": {
+                        "Hint": "QUIK"
+                    },
+                    "front": {
+                        "title": "QUIK"
+                    }
+                }
+            },
+            "info": {
+                "Type": "string",
+                "Hint": "",
+                "Required": true
+            },
+            "front": {
+                "title": "",
+                "default_value": "MatriX"
+            }
+        },
+        "Ban_money": {
+            "type": "checkbox",
+            "fieldName": "Ban_money",
+            "dataKey": "Ban_money",
+            "value": "X",
+            "info": {
+                "Type": "string",
+                "Hint": "Запрет на использование денежных средств и ценных бумаг"
+            },
+            "front": {
+                "title": "Запрет на использование денежных средств и ценных бумаг",
+                "default_value": "true"
+            }
+        },
+        "Indvidual": {
+            "type": "checkbox",
+            "fieldName": "Indvidual",
+            "dataKey": "Indvidual",
+            "value": "X",
+            "info": {
+                "Type": "string",
+                "Hint": "Индивидуальный учёт"
+            },
+            "front": {
+                "title": "Индивидуальный учёт",
+                "default_value": "true"
+            }
+        },
+        "TS_OT_MM": {
+            "type": "checkbox",
+            "fieldName": "TS_OT_MM",
+            "dataKey": "TS_OT_MM",
+            "value": "X",
+            "info": {
+                "Type": "string",
+                "Hint": "Подключить рынок драгоценных металлов"
+            },
+            "front": {
+                "title": "Подключить рынок драгоценных металлов",
+                "default_value": "true"
+            }
+        },
+        "Refusal": {
+            "type": "checkbox",
+            "fieldName": "Refusal",
+            "dataKey": "Refusal",
+            "value": "X",
+            "info": {
+                "Type": "string",
+                "Hint": "Отказ от подачи Брокеру длящегося поручения на совершения сделок займа с ценными бумагами Клиента и отказ от получения дополнительного дохода"
+            },
+            "front": {
+                "title": "Отказ от подачи Брокеру длящегося поручения на совершения сделок займа с ценными бумагами Клиента и отказ от получения дополнительного дохода",
+                "default_value": "true"
+            }
+        },
+        "Disable_Service": {
+            "type": "checkbox",
+            "fieldName": "Disable_Service",
+            "dataKey": "Disable_Service",
+            "value": "X",
+            "info": {
+                "Type": "string",
+                "Hint": "Отключить услугу совершения Маржинальных и Непокрытых сделок"
+            },
+            "front": {
+                "title": "Отключить услугу совершения Маржинальных и Непокрытых сделок",
+                "default_value": "true"
+            }
+        },
+        "ElectronicSignatureCheckbox": {
+            "type": "checkbox",
+            "fieldName": "ElectronicSignatureCheckbox",
+            "dataKey": "ElectronicSignatureCheckbox",
+            "dataType": "string",
+            "value": "1",
+            "class": "numberToStringCheckbox",
+            "info": {
+                "Type": "string",
+                "Hint": "",
+                "Required": true
+            },
+            "front": {
+                "title": "Электронная подпись?",
+                "default_value": "checked",
+                "empty_value": "0",
+                "label_title": "Да"
+            }
+        },
+        "WarningElectronicSignature": {
+            "type": "plain",
+            "fieldName": "WarningElectronicSignature",
+            "dataKey": "ElectronicSignatureCheckbox",
+            "conditionType": "equal",
+            "conditionCheckValue": "1",
+            "conditionTrueValue": "Электронная подпись Клиента: ",
+            "front": {
+                "title": "Доп строка",
+                "hide_field": true
+            }
+        },
+        "WarningSignature": {
+            "type": "plain",
+            "fieldName": "WarningSignature",
+            "dataKey": "ElectronicSignatureCheckbox",
+            "conditionType": "equal",
+            "conditionCheckValue": "0",
+            "conditionTrueValue": "Подпись: __________________________ /",
+            "front": {
+                "title": "Доп строка",
+                "hide_field": true
+            }
+        },
+        "clientType": {
+            "type": "selectText",
+            "fieldName": "clientType",
+            "dataKey": "value",
+            "values": [
+                {
+                    "key": "P",
+                    "label": "ФЛ"
+                },
+                {
+                    "key": "O",
+                    "label": "ЮЛ"
+                }
+            ],
+            "info": {
+                "Type": "string"
+            },
+            "front": {
+                "title": "clientType",
+                "hide_field": true
+            }
+        },
+        "ElectronicSignatureCheckbox1": {
+            "type": "checkbox",
+            "fieldName": "ElectronicSignatureCheckbox1",
+            "dataKey": "ElectronicSignatureCheckbox1",
+            "dataType": "string",
+            "value": "1",
+            "class": "numberToStringCheckbox",
+            "info": {
+                "Type": "string",
+                "Hint": "",
+                "Required": true
+            },
+            "front": {
+                "title": "Электронная подпись Брокера?",
+                "default_value": "checked",
+                "empty_value": "0",
+                "label_title": "Да"
+            }
+        },
+        "WarningElectronicSignature1": {
+            "type": "plain",
+            "fieldName": "WarningElectronicSignature1",
+            "dataKey": "ElectronicSignatureCheckbox1",
+            "conditionType": "equal",
+            "conditionCheckValue": "1",
+            "conditionTrueValue": "Электронная подпись Брокера: АО \"Инвестиционная компания Д8\"",
+            "front": {
+                "title": "Доп строка",
+                "hide_field": true
+            }
+        },
+        "WarningSignature1": {
+            "type": "plain",
+            "fieldName": "WarningSignature1",
+            "dataKey": "ElectronicSignatureCheckbox1",
+            "conditionType": "equal",
+            "conditionCheckValue": "0",
+            "conditionTrueValue": "Подпись Брокера: __________________________ /",
+            "front": {
+                "title": "Доп строка",
+                "hide_field": true
+            }
+        },
+        "isIIS": {
+            "type": "selectText",
+            "fieldName": "isIIS",
+            "dataKey": "value",
+            "values": [
+                {
+                    "key": "true",
+                    "label": "Yes"
+                },
+                {
+                    "key": "false",
+                    "label": "No"
+                }
+            ],
+            "info": {
+                "Type": "string"
+            },
+            "front": {
+                "title": "isIIS",
+                "hide_field": true
+            }
+        },
+        "isDisableTP": {
+            "type": "selectText",
+            "fieldName": "isDisableTP",
+            "dataKey": "value",
+            "values": [
+                {
+                    "key": "true",
+                    "label": "Yes"
+                },
+                {
+                    "key": "false",
+                    "label": "No"
+                }
+            ],
+            "info": {
+                "Type": "string",
+                "currentValue": "true"
+            },
+            "front": {
+                "title": "isDisableTP",
+                "hide_field": true
+            }
+        },
+        "isQI": {
+            "type": "selectText",
+            "fieldName": "isQI",
+            "dataKey": "value",
+            "values": [
+                {
+                    "key": "true",
+                    "label": "Yes"
+                },
+                {
+                    "key": "false",
+                    "label": "No"
+                }
+            ],
+            "info": {
+                "Type": "string"
+            },
+            "front": {
+                "title": "isQI",
+                "hide_field": true,
+                "action": {
+                    "onChange": {
+                        "fields": [
+                            {
+                                "name": "Checkbox_Risk",
+                                "conditional": [
+                                    {
+                                        "parent": {
+                                            "currentValue": "false"
+                                        },
+                                        "set": {
+                                            "default_value": "3"
+                                        }
+                                    },
+                                    {
+                                        "parent": {
+                                            "currentValue": "true"
+                                        },
+                                        "set": {
+                                            "default_value": "0"
+                                        }
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                }
+            }
+        },
+        "isDisablePay": {
+            "type": "selectText",
+            "fieldName": "isDisablePay",
+            "dataKey": "value",
+            "values": [
+                {
+                    "key": "true",
+                    "label": "Yes"
+                },
+                {
+                    "key": "false",
+                    "label": "No"
+                }
+            ],
+            "info": {
+                "Type": "string",
+                "currentValue": "true"
+            },
+            "front": {
+                "title": "isDisablePay",
+                "hide_field": true
+            }
+        },
+        "isDisableTS_OT_IIS": {
+            "type": "selectText",
+            "fieldName": "isDisableTS_OT_IIS",
+            "dataKey": "value",
+            "values": [
+                {
+                    "key": "true",
+                    "label": "Yes"
+                },
+                {
+                    "key": "false",
+                    "label": "No"
+                }
+            ],
+            "info": {
+                "Type": "string",
+                "currentValue": "true"
+            },
+            "front": {
+                "title": "isDisableTS_OT_IIS",
+                "hide_field": true
+            }
+        },
+        "isDisableTS_OT": {
+            "type": "selectText",
+            "fieldName": "isDisableTS_OT",
+            "dataKey": "value",
+            "values": [
+                {
+                    "key": "true",
+                    "label": "Yes"
+                },
+                {
+                    "key": "false",
+                    "label": "No"
+                }
+            ],
+            "info": {
+                "Type": "string",
+                "currentValue": "true"
+            },
+            "front": {
+                "title": "isDisableTS_OT",
+                "hide_field": true
+            }
+        }
+    }
+}

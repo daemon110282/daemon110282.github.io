@@ -19,7 +19,7 @@
 ### Динамическая валидация Dynamic Validation
 
 - [AJV](https://ajv.js.org/) (Another JSON Schema Validator)
-  - библиотека валидации данных в __формате JSON__ с поддержкой [__JSON Schema__](../../api/jsonschema.md)
+  - библиотека валидации данных в __формате JSON__ с поддержкой [__JSON Schema__](../../api/JsonSchema/jsonschema.md)
   - AJV позволяет проверять данные по подготовленным схемам валидации
   - schema language
     - [JSON Type Definition](https://ajv.js.org/guide/schema-language.html#json-type-definition)

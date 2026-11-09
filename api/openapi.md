@@ -13,7 +13,7 @@
 - Форматы
   - [OpenAPI 3.0 спецификация формата](https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.0.0.md)
   - [MindMap](http://openapi-map.apihandyman.io/?version=3.0)
-- Support [Json Schema](jsonschema.md)
+- Support [Json Schema](JsonSchema/jsonschema.md)
 - TODO <https://github.com/daemon110282/api#openapi>
 
 ## Редакторы

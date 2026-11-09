@@ -1,0 +1,281 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "version": "1.0",
+    "type": "object",
+    "properties": {
+        "header": {
+            "type": "object",
+            "ui:widget": "background",
+            "title": "",
+            "properties": {
+                "Date": {},
+                "Client": {},
+                "Client_FIO": {},
+                "combobox": {},
+                "selectText": {},
+                "isIIS": {},
+                "isQI": {},
+                "clientType": {}
+            }
+        },
+        "FieldNoGroup": {},
+        "TIS": {
+            "type": "object",
+            "ui:widget": "accordion",
+            "title": "Информационно-торговая система",
+            "properties": {
+                "Radio_TIS": {}
+            }
+        },
+        "UseActive": {
+            "type": "object",
+            "ui:widget": "accordion",
+            "title": "Использование активов",
+            "subtitle": "По опциям раздела «Использование активов» просьба обратиться в ",
+            "info": {
+                "subtitle_tooltip": {
+                    "action": "callme",
+                    "style": "action",
+                    "link": "клиентскую поддержку"
+                }            
+            },
+            "properties": {
+                "Ban_money": {},
+                "group1": {
+                    "type": "object",
+                    "title": "",
+                    "properties": {
+                        "Indvidual": {},
+                        "g2": {
+                            "type": "object",
+                            "ui:widget": "background",
+                            "properties": {
+                                "TS_OT_SF": {},
+                                "TS_OT_MM": {}
+                            }
+                        },
+                        "Refusal": {},
+                        "Disable_Service": {}
+                    }
+                }
+            }
+        },
+        "TS_OT": {
+            "type": "object",
+            "ui:widget": "accordion",
+            "title": "Торговые системы",
+            "properties": {
+                "TS_OT_MS": {},
+                "TS_OT_RF": {},
+                "TS_OT_FX": {},
+                "TS_OT_CD": {},
+                "TS_OT_OT": {}
+            },
+            "front": {
+                "dependency": [
+                    {
+                        "action": {
+                            "hidden": true
+                        },
+                        "fields": [
+                            {
+                                "name": "isDisableTS_OT",
+                                "value": "true",
+                                "expression": "="
+                            }
+                        ]
+                    }
+                ]
+            },
+            "anyOf": [
+                {
+                    "required": [
+                        "TS_OT_MS"
+                    ]
+                },
+                {
+                    "required": [
+                        "TS_OT_RF"
+                    ]
+                },
+                {
+                    "required": [
+                        "TS_OT_FX"
+                    ]
+                },
+                {
+                    "required": [
+                        "TS_OT_CD"
+                    ]
+                },
+                {
+                    "required": [
+                        "TS_OT_OT"
+                    ]
+                }
+            ]
+        },
+        "TS_OT_IIS": {
+            "type": "object",
+            "ui:widget": "accordion",
+            "title": "Торговые системы - ИИС",
+            "properties": {
+                "TS_OT_IIS_MS": {},
+                "TS_OT_IIS_RF": {},
+                "TS_OT_IIS_FX": {}
+            },
+            "front": {
+                "dependency": [
+                    {
+                        "action": {
+                            "hidden": true
+                        },
+                        "fields": [
+                            {
+                                "name": "isIIS",
+                                "value": "false",
+                                "expression": "="
+                            },
+                            {
+                                "name": "isDisableTS_OT_IIS",
+                                "value": "true",
+                                "expression": "="
+                            }
+                        ]
+                    }
+                ]
+            },
+            "anyOf": [
+                {
+                    "required": [
+                        "TS_OT_IIS_MS"
+                    ]
+                },
+                {
+                    "required": [
+                        "TS_OT_IIS_RF"
+                    ]
+                },
+                {
+                    "required": [
+                        "TS_OT_IIS_FX"
+                    ]
+                }
+            ]
+        },
+        "pay": {
+            "type": "object",
+            "ui:widget": "accordion",
+            "title": "Иное",
+            "properties": {
+                "TS_OT_IIS_STORE": {},
+                "TS_OT_REJECT": {}
+            },
+            "front": {
+                "dependency": [
+                    {
+                        "action": {
+                            "hidden": true
+                        },
+                        "fields": [
+                            {
+                                "name": "isDisablePay",
+                                "value": "true",
+                                "expression": "="
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        "Risk": {
+            "type": "object",
+            "ui:widget": "accordion",
+            "title": "Уровень риска",
+            "properties": {
+                "Checkbox_Risk": {}
+            }
+        },
+        "TP": {
+            "type": "object",
+            "ui:widget": "accordion",
+            "title": "Тарифные планы",
+            "properties": {
+                "TpSpots": {
+                    "title": "Спотовые рынки",
+                    "type": "array",
+                    "maxItems": 3,
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "TpSpotTitle": {},
+                            "TpSpotPlan": {}
+                        }
+                    },
+                    "front": {
+                        "dependency": [
+                            {
+                                "action": {
+                                    "hidden": true
+                                },
+                                "fields": [
+                                    {
+                                        "name": "TS_OT_MS",
+                                        "value": "X",
+                                        "expression": "!="
+                                    },
+                                    {
+                                        "name": "TS_OT_IIS_MS",
+                                        "value": "X",
+                                        "expression": "!="
+                                    }
+                                ],
+                                "operand": "AND"
+                            }
+                        ]
+                    }
+                },
+                "TpQuick": {
+                    "title": "Срочные рынки",
+                    "type": "array",
+                    "maxItems": 2,
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "TpQuickTitle": {},
+                            "TpQuickPlan": {}
+                        }
+                    }
+                },
+                "TpCurrency": {
+                    "title": "Валютные рынки",
+                    "type": "array",
+                    "maxItems": 3,
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "TpCurrencyTitle": {},
+                            "TpCurrencyPlan": {}
+                        }
+                    }
+                }
+            },
+            "front": {
+                "dependency": [
+                    {
+                        "action": {
+                            "hidden": true
+                        },
+                        "fields": [
+                            {
+                                "name": "isDisableTP",
+                                "value": "true",
+                                "expression": "="
+                            }
+                        ]
+                    }
+                ]
+            }
+        }
+    }
+}

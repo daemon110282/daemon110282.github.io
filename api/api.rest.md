@@ -7,11 +7,10 @@
     - [HTTP методы](#http-методы)
     - [RESTful принципы](#restful-принципы)
     - [Пагинация](#пагинация)
-  - [CheckList](#checklist)
-
-REST API — это архитектурный подход, который устанавливает ограничения для API: как они должны быть устроены и какие функции поддерживать.
 
 ## Зачем
+
+REST API — это архитектурный подход, который устанавливает ограничения для API: как они должны быть устроены и какие функции поддерживать.
 
 - Производительность
 - Масштабируемость
@@ -21,25 +20,25 @@ REST API — это архитектурный подход, который ус
 
 [6 принципов REST](https://habr.com/ru/post/590679/):
 
-- Клиент-серверная архитектура
-- Stateless
-- Кэширование
-- Единообразие интерфейса hateos
-- Layered system
-- Code on demand
+1.Клиент-серверная архитектура
+2.Stateless
+3.Кэширование
+4.Единообразие интерфейса HATEOS
+5.Layered system
+6.Code on demand
 
-![level](../img/api/rest.level.png)
+[CheckList](../checklist/api.md)
 
 ## Термины
 
+- HTTP Method
 - Ресурс
-  - HTTP Method
   - [URI\URL Ресурса](https://teletype.in/@loginovpavel/rest-api) - Универсальный указатель ресурса, который может указывать на любой объект в сети.
     - URL — это подмножество URI (Uniform Resource Identifier), которое используется для идентификации ресурсов по их местоположению
     - URI — более общее понятие, которое может включать в себя не только URL, но и [другие типы идентификаторов](https://telegra.ph/CHem-otlichaetsya-URL-ot-Endpoint-URL-vs-Endpoint-V-chem-raznica-07-16)
     - пример: <https://api.example1.com/users/123> <https://api.example2.com/users/123>
-  - [Endpoint API](https://tquality.ru/blog/kak-pisat-endpointy/) - Конкретный URL, определяющий точку взаимодействия с API и функциональность, которую он предоставляет.
-    - пример: /users/123
+- [Endpoint API](https://tquality.ru/blog/kak-pisat-endpointy/) - Конкретный URL, определяющий точку взаимодействия с API и функциональность, которую он предоставляет.
+  - пример: /users/123
 - Headers
 - Body
 - [HTTP Status](api-http-status.md)
@@ -50,7 +49,7 @@ REST API — это архитектурный подход, который ус
 - [Подходы к проектированию](api.design.md)
 - TODO
   - [Patterns REST API](https://microservice-api-patterns.org/)
-- [Security](../arch/ability/security.api.md#rest)
+- [Security](../arch/ability/security/security.api.md#rest)
 - АвтоДокументация [OpenApi](openapi.md)
 - [Версионность](api.md#versioning)
 - [Сортировка](https://gist.github.com/fomvasss/c1221b2464be94870f7f823c74520665)
@@ -59,7 +58,9 @@ REST API — это архитектурный подход, который ус
 - [HTTP методы](#http-методы)
 - Эффективное использование [кодов ответов HTTP](api-http-status.md)
 - [Идемпотентность](../arch/pattern/integration/idempotent.md)
-- Стандартизировать дополнительные машиночитаемые данные в ответе, предпочтительно в форме заголовков HTTP (потому что чтение заголовков не требует вычитывания и разбора всего тела ответа, так что промежуточные прокси и гейтвеи смогут понять семантику ошибки без дополнительных расходов; а так же их можно логировать.
+- Стандартизировать дополнительные машиночитаемые данные в ответе, __предпочтительно в форме заголовков HTTP__
+  - потому что чтение заголовков не требует вычитывания и разбора всего тела ответа, так что промежуточные прокси и гейтвеи смогут понять семантику ошибки без дополнительных расходов
+  - так же их можно логировать.
 - Файлы
   - [Download](../arch/pattern/integration/pattern.downloadfile.md)
   - [Upload](../arch/pattern/integration/pattern.uploadfile.md)
@@ -108,9 +109,3 @@ REST API — это архитектурный подход, который ус
 - Размер страницы
   - Provide a __[default page size](https://codedamn.com/news/backend/rest-api-pagination-handling-large-data-sets)__ and allow clients to specify their desired page size __within reasonable limits__
   - RESTful API, которые возвращают коллекции, __МОГУТ возвращать [частичные наборы](https://github.com/Microsoft/api-guidelines/blob/master/Guidelines.md#98-pagination)__. Пользователи этих сервисов __ДОЛЖНЫ ожидать частичные результирующие наборы__ и корректно просматривать страницы, чтобы получить весь набор.
-
-## CheckList
-
-- [43 Things To Think About When Designing, Testing, and Releasing your API](https://mathieu.fenniak.net/the-api-checklist/)
-- Примеры
-  - [ТБанк](https://developer.tbank.ru/docs/api/post-api-v-1-credit-products-broker-id-applications-full)

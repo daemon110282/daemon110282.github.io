@@ -1,22 +1,26 @@
 # API
 
 - [API](#api)
+  - [Зачем](#зачем)
   - [Виды API](#виды-api)
   - [Patterns](#patterns)
-  - [SLI, SLA](#sli-sla)
+    - [TODO](#todo)
+    - [SLI, SLA](#sli-sla)
     - [Versioning](#versioning)
     - [Security](#security)
     - [Документирование](#документирование)
     - [API management](#api-management)
   - [Технологии](#технологии)
 
+## Зачем
+
 [Термины](https://starkovden.github.io/Glossary-for-API-documentation.html)
 
-API - Application Programming Interface, что значит программный интерфейс приложения
+API - Application Programming Interface, что значит программный интерфейс приложения:
 
-  - «приложение» относится к любому ПО с определенной функцией
-  - Интерфейс можно рассматривать как сервисный контракт между двумя приложениями. Этот контракт определяет, как они взаимодействуют друг с другом, используя запросы и ответы
-  - Документация API содержит информацию о том, как разработчики должны структурировать эти запросы и ответы.
+- «приложение» относится к любому ПО с определенной функцией
+- Интерфейс можно рассматривать как __сервисный контракт между двумя приложениями__. Этот контракт определяет, как они __взаимодействуют друг с другом, используя запросы и ответы__
+- Документация API содержит информацию о том, как разработчики должны структурировать эти запросы и ответы.
 
 ## Виды API
 
@@ -43,7 +47,7 @@ API - Application Programming Interface, что значит программн�
 - [API gateway](../arch/pattern/deployment/api.gateway.md)
 - [Стратегии повторов](../arch/pattern/system.design/fault.tolerance/pattern.failure.md) при сбоях Rerty Policy
 
-TODO
+### TODO
 
 https://github.com/Microsoft/api-guidelines/blob/master/Guidelines.md
 https://habr.com/ru/post/503284/
@@ -51,7 +55,7 @@ https://habr.com/ru/post/447322/
 https://www.gov.uk/guidance/gds-api-technical-and-data-standards
 https://www.gov.uk/guidance/setting-api-service-levels
 
-## SLI, SLA
+### SLI, SLA
 
 - request latency
 - system throughput
@@ -70,8 +74,10 @@ https://www.gov.uk/guidance/setting-api-service-levels
   - Первая цифра (__мажорная версия__) увеличивается при __обратно несовместимых изменениях__ в API
   - Вторая цифра (__минорная версия__) увеличивается при __добавлении новой функциональности с сохранением обратной совместимости__
   - Третья цифра (__патч__) увеличивается при выпуске новых версий, содержащих только __исправление ошибок__
-- Then you can decide between implementing both versions of the service simultaneously within the same service instance, or deploying different instances that each handle a version of the API.
-- A good approach for this is the __Mediator pattern__ (for example, __MediatR__ library) to decouple the different implementation versions into independent handlers.
+- Необходимо решить, внедрять ли:
+  - __обе версии сервиса одновременно__ в рамках __одного экземпляра сервиса__
+  - или развернуть __разные экземпляры__, каждый из которых будет обрабатывать свою версию API
+  - Паттерн __[Mediator](../arch/pattern/development/mediator.md)__ (например, библиотеки MediatR), позволяющего разделить различные версии реализации на независимые обработчики
 
 ### Security
 

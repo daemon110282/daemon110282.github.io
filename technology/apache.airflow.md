@@ -13,10 +13,10 @@
 
 Плюсы:
 
-- ТОДО
+- [ТОДО](https://practicum.yandex.ru/blog/apache-airflow/)
 
 Минусы:
 
-- ТОДО
+- [ТОДО](https://habr.com/ru/articles/512386/)
 
 ## Deployment

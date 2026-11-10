@@ -24,7 +24,7 @@ API - Application Programming Interface, что значит программн�
 
 ## Виды API
 
-[API protocols](https://blog.postman.com/api-protocols-in-2023/)
+[API protocols](https://blog.postman.com/api-protocols-in-2023/) для [паттернов интеграции](../arch/pattern/integration/pattern.integration.md):
 
 - [REST API](api.rest.md)
 - [gRPC](../technology/protocols.integration/grpc.md)
@@ -38,6 +38,7 @@ API - Application Programming Interface, что значит программн�
 - AMQP
 - MQTT
 - [WebSocket](../technology/protocols.integration/websocket.md)
+- БД ODBC, JDBC: ETL, ELT, ШБД, DWH, CDC
 
 ![Alt text](../img/api/api.protocols.jpg)
 
@@ -46,6 +47,7 @@ API - Application Programming Interface, что значит программн�
 - [Подходы к проектированию](api.design.md)
 - [API gateway](../arch/pattern/deployment/api.gateway.md)
 - [Стратегии повторов](../arch/pattern/system.design/fault.tolerance/pattern.failure.md) при сбоях Rerty Policy
+- [Паттерны интеграции](../arch/pattern/integration/pattern.integration.md)
 
 ### TODO
 

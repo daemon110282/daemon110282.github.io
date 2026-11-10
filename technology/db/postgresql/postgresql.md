@@ -199,7 +199,7 @@
       - генерируется схема БД в PostgreSQL - __минус повторяет схему MSSQL без рефакторинга схем БД__
       - __миграция данных__ через AWS DMS
       - приложение направляет запросы в Babelfish в формате MSSQL T-SQL, BabelFish [конвертирует их в формате PostgreSQL](https://disk.yandex.ru/i/ovwejkZmzQ7_SA)
-  - [CDC](../../../arch/system.class/cdc.md) [Debezium](../../../technology/cdc/debezium.md) используя Снимки (snapshots)
+  - [CDC](../../../arch/pattern/integration/cdc.md) [Debezium](../../../technology/cdc/debezium.md) используя Снимки (snapshots)
   - AWS SCT + Database Migration Service (DMS) - минус: __схемы БД не изменяются__
     - TODO DMS
     - [Пример MSSQL2PGSQL](https://transactts.com/complex-aws-migrations-sct/)

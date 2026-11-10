@@ -103,7 +103,6 @@ Other Skills:
 ## Класс систем
 
 - [APM](system.class/apm.md)
-- [CDC](system.class/cdc.md)
 - [CDN](system.class/cdn.md)
 - [IAM](system.class/iam.md)
 - [DWH](system.class/dwh.md)

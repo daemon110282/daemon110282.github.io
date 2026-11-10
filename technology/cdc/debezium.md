@@ -10,7 +10,7 @@
 
 ## Зачем
 
-- [CDC](../../arch/system.class/cdc.md) решение
+- [CDC](../../arch/pattern/integration/cdc.md) решение
 - [Audit logs](https://debezium.io/blog/2019/10/01/audit-logs-with-change-data-capture-and-stream-processing/)
 - MS SQL
 	- с версии 1.6.0, Debezium включает поддержку CDC [для MS SQL Server](https://debezium.io/documentation/reference/1.6/connectors/sqlserver.html)

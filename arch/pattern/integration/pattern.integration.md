@@ -2,45 +2,56 @@
 
 - [Паттерны интеграций](#паттерны-интеграций)
   - [Виды (стили) интеграций](#виды-стили-интеграций)
+    - [Пользователи](#пользователи)
+    - [Данные](#данные)
+    - [Приложения](#приложения)
   - [Критерии выбора](#критерии-выбора)
   - [Паттерны](#паттерны)
+  - [TODO](#todo)
   - [Технологии](#технологии)
 
 ## Виды (стили) интеграций
 
 [Виды (стили) интеграций](https://www.enterpriseintegrationpatterns.com/patterns/messaging/IntegrationStylesIntro.html)
 
-- Пользователи
-- Данные
-  - [ETL (Extract, Transform, Load)](https://python.ivan-shamaev.ru/etl-best-practices-design-data-patterns/)
-  - [ELT (Extract, Load, Transform)](https://www.striim.com/blog/data-integration/)
-    - [ELT vs ETL](https://coderlessons.com/tutorials/bolshie-dannye-i-analitika/teoriia-khraneniia-dannykh/5-etl-protiv-elt)
-  - [Shared Database\Table Шлюзовая БД (ШБД)](pattern.shareddb.md)
-  - Файловый обмен
-    - [Распределенные файловые системы](../../../technology/filesystem/filesystem.md)
-      - [Object Storage](../../../technology/store/object.storage.md)
-    - [Upload File](pattern.uploadfile.md)
-    - [Download File](../../../api/api.rest.md)
-    - [CDN](../../system.class/cdn.md) реализует паттерн [Static content hosting](https://learn.microsoft.com/en-us/azure/architecture/patterns/static-content-hosting)
-    - Протокол [WebDAV](https://xakep.ru/2014/09/09/webdav/) HTTP API (IIS, Apache support) для подключения сайтов как сетевых дисков
-- Приложения
-  - Direct
-    - [API REST](../../../api/api.md)
-    - SOAP, [WCF](../../../technology/protocols.integration/wcf.md), ODATA
-    - [GraphQL](../../../technology/protocols.integration/graphql.md)
-  - Remote Procedure Invocation (RPC)
-    - __Двунаправленная связь__ для обмена сообщениями между клиентом и сервером
-      - протокол __WebSocket__
-    - __Однонаправленная связь__
-      - HTML спецификация [Server Sent Events](../../../technology/protocols.integration/sse.md)
-      - [gRPC](../../../technology/protocols.integration/grpc.md)
-  - Middleware
-    - [Message-oriented](pattern.messagebroker.md)
-      - Advanced transient messaging
-      - Message-oriented persistent
-      - log-based message queue
-    - [API Gateway](../deployment/api.gateway.md)
-    - [SOA](../../style/soa.md)
+### Пользователи
+
+TODO
+
+### Данные
+
+- [ETL (Extract, Transform, Load)](https://python.ivan-shamaev.ru/etl-best-practices-design-data-patterns/)
+- [ELT (Extract, Load, Transform)](https://www.striim.com/blog/data-integration/)
+  - [ELT vs ETL](https://coderlessons.com/tutorials/bolshie-dannye-i-analitika/teoriia-khraneniia-dannykh/5-etl-protiv-elt)
+- [Shared Database\Table Шлюзовая БД (ШБД)](pattern.shareddb.md)
+- [CDC](cdc.md)
+- Файловый обмен
+  - [Распределенные файловые системы](../../../technology/filesystem/filesystem.md)
+    - [Object Storage](../../../technology/store/object.storage.md)
+  - [Upload File](pattern.uploadfile.md)
+  - [Download File](../../../api/api.rest.md)
+  - [CDN](../../system.class/cdn.md) реализует паттерн [Static content hosting](https://learn.microsoft.com/en-us/azure/architecture/patterns/static-content-hosting)
+  - Протокол [WebDAV](https://xakep.ru/2014/09/09/webdav/) HTTP API (IIS, Apache support) для подключения сайтов как сетевых дисков
+
+### Приложения
+
+- Direct
+  - [API REST](../../../api/api.md)
+  - SOAP, [WCF](../../../technology/protocols.integration/wcf.md), ODATA
+  - [GraphQL](../../../technology/protocols.integration/graphql.md)
+- Remote Procedure Invocation (RPC)
+  - __Двунаправленная связь__ для обмена сообщениями между клиентом и сервером
+    - протокол __WebSocket__
+  - __Однонаправленная связь__
+    - HTML спецификация [Server Sent Events](../../../technology/protocols.integration/sse.md)
+    - [gRPC](../../../technology/protocols.integration/grpc.md)
+- Middleware
+  - [Message-oriented](pattern.messagebroker.md)
+    - Advanced transient messaging
+    - Message-oriented persistent
+    - log-based message queue
+  - [API Gateway](../deployment/api.gateway.md)
+  - [SOA](../../style/soa.md)
 
 ## Критерии выбора
 
@@ -77,8 +88,9 @@
 - Anti-Corruption Layer
 - [DbC - Design by contract](https://habr.com/ru/company/southbridge/blog/679906/)
 - [Fault Tolerance](../system.design/fault.tolerance/pattern.failure.md): Retry Policy, Circuit Breaker, Rate Limit
+- [Sync Data](sync.data.md)
 
-TODO
+## TODO
 
 - см. EIP <https://www.enterpriseintegrationpatterns.com/patterns/messaging/>
   - <https://ducmanhphan.github.io/2020-08-10-Introduction-to-Enterprise-Integration-Patterns/>

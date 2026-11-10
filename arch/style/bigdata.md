@@ -80,7 +80,7 @@ UC:
   - Streaming Data
     - [Kafka](../../technology/middleware/messagebus/kafka.md)
     - Amazon Kinezis
-  - [CDC](../system.class/cdc.md)
+  - [CDC](../pattern/integration/cdc.md)
   - Репликация, синхронизация данных [Sync Data](../pattern/integration/sync.data.md)
 - Хранение
   - [Distributed Storage Systems](../../technology/filesystem/dfs.md)

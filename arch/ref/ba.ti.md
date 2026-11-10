@@ -1,6 +1,6 @@
 # Брокерское приложение
 
-По шаблону [CheckList аналитики](../../checklist/analytic/analytic.md).
+По шаблону [аналитики](../../analytic/template/template.md), [архитектуры](../template/template.md) и [CheckList аналитики](../../checklist/analytic/analytic.md).
 
 - [Брокерское приложение](#брокерское-приложение)
   - [Цель](#цель)

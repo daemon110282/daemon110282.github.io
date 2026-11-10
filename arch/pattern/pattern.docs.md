@@ -12,7 +12,7 @@
 
 ## Архитектуры
 
-- [ADR - Architecture Decision Records](../ref/adr.md)
+- [ADR - Architecture Decision Records](../template/adr.md)
 - RFC - Request For Comments
   - [зачем, шаблон](https://brunoscheufler.com/blog/2020-07-04-documenting-design-decisions-using-rfcs-and-adrs)
 - [KATA](../ref/kata.md)

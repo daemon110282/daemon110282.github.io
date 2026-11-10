@@ -12,7 +12,7 @@
 
 ## Порядок артефактов\активностей
 
-[CheckList](../checklist/analytic/analytic.md):
+[Шаблон](template/template.md) по [CheckList](../checklist/analytic/analytic.md):
 
 1. PP Предпроектная подготовка
    1. Бизнес [цели](analytica.bt.md#цели) (БЦ)

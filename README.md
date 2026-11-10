@@ -1,18 +1,16 @@
 # About
 
-База знаний по аналитике, ИТ архитектуре, API. Документирование. Тесты инструментов.
+База знаний по аналитике, ИТ архитектуре, API. Документирование. Тесты инструментов. AI.
 
-- [Аналитика](analytic/analytica.md)
-  - [Бизнес](analytic/ba.md)
-  - Системная
-    - [API](api/api.md)
+- [Бизнес аналитика](analytic/ba.md)
+- [Архитектура ПО](arch/arch.md) базируется на
+  - [Бизнес и ИТ стратегии](analytic/strategy.md)
+  - [Бизнес архитектуре](analytic/arch.ba.md)
+  - [Бизнес Аналитике требования](analytic/analytica.md)
+  - [Паттерны Шаблоны](arch/pattern/patterns.md)
+- [Системная аналитика](analytic/analytica.md)
+  - [API](api/api.md)
   - [Миграции ИС](arch/pattern/refactoring/migration.md)
-- [Архитектура ПО](arch/arch.md)
-  - Базируется на
-    - [Бизнес и ИТ стратегии](analytic/strategy.md)
-    - [Бизнес архитектуре](analytic/arch.ba.md)
-    - [Бизнес Аналитике требования](analytic/analytica.md)
-- [Паттерны Шаблоны](arch/pattern/patterns.md)
 - [CheckList](checklist/checklist.md)
 - Методологии работ
   - [Agile](https://agilemanifesto.org/iso/ru/principles.html) философия

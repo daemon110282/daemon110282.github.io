@@ -32,7 +32,7 @@ UC:
 	- Veracity достоверность
 	- Variability изменчимовсть
 	- Value ценность для бизнеса
-- [Data Lake](../pattern/system.design/data.lake.md#vs-хранилища-данных)
+- [Data Lake](../pattern/system.design/data/data.lake.md#vs-хранилища-данных)
 - Алгоритмы параллельной распределенной обработки данных
   - Distributed Processing Frameworks
   - MPP архитектура обработки данных
@@ -86,16 +86,16 @@ UC:
   - [Distributed Storage Systems](../../technology/filesystem/dfs.md)
   - структурированные данные в [DWH](../system.class/dwh.md)
       - РСУБД [Хранилища данных](../system.class/store.md)
-      - [Data Vault](../pattern/system.design/data.vault.md) - одна из моделей хранилища Data Warehouse с __временными отметками__ размещения данных
+      - [Data Vault](../pattern/system.design/data/data.vault.md) - одна из моделей хранилища Data Warehouse с __временными отметками__ размещения данных
   - слабо структурированные
     - [NoSQL](../system.class/store.nosql.md): Columnar Store  
-    - [Data Mart](../pattern/system.design/data.mart.md) - витрина __однородных__ данных одной __предметной области__
-  - Озеро данных [Data Lake](../pattern/system.design/data.lake.md)
+    - [Data Mart](../pattern/system.design/data/data.mart.md) - витрина __однородных__ данных одной __предметной области__
+  - Озеро данных [Data Lake](../pattern/system.design/data/data.lake.md)
     - хранит любые типы данных
     - данные в хранилище поступают непрерывно в __реальном времени__
 - Обработка
   - [Distributed Processing Frameworks](https://gogeometry.com/software/big-data-mind-map.html)
-    - [MapReduce](../pattern/system.design/map.reduce.md)
+    - [MapReduce](../pattern/system.design/data/map.reduce.md)
     - Spark
   - [Massive Parallel Processing](mpp.md) (MPP) архитектура
 - [Оркестратор](https://docs.microsoft.com/ru-ru/azure/architecture/guide/architecture-styles/big-data) Big Data Orchestration Tools
@@ -141,7 +141,7 @@ TODO:
   - фабрика данных [Azure](../../technology/azure.md)
   - [Apache Oozie](../../technology/apache.oozie.md) shedule Job Spark
   - Apache [Sqoop](../../technology/apache.sqoop.md) shedule Job ETL
-  - Apache [Airflow](../../technology/apache.airflow.md) создания, выполнения, мониторинга и [оркестровки потоков операций](../pattern/system.design/orchestration-choreography.md) по обработке данных
+  - Apache [Airflow](../../technology/apache.airflow.md) создания, выполнения, мониторинга и [оркестровки потоков операций](../pattern/integration/orchestration-choreography.md) по обработке данных
 - Анализ
   - Apache Spark
   - Apache Hive

@@ -1,55 +1,68 @@
 # Паттерны Проектирования
 
+- [Паттерны Проектирования](#паттерны-проектирования)
+  - [Иные](#иные)
+  - [Decomposition Patterns](#decomposition-patterns)
+  - [Разделения ответственности слоев](#разделения-ответственности-слоев)
+  - [Сквозная функциональность](#сквозная-функциональность)
+  - [Хранилищ данных](#хранилищ-данных)
+  - [TODO](#todo)
+  - [Анализ вариантов](#анализ-вариантов)
+
+## Иные
+
+- [MTA](mta/mta.md)
+- [Fault Tolerance](fault.tolerance/pattern.failure.md)
+- Оркестрация - есть дирижер
+- [Хореография](../integration/orchestration-choreography.md) - нет централизованного управления (оркестратора - медиатора - дирижера)
+
+## Decomposition Patterns
+
 - [Decomposition Patterns](https://airtable.com/embed/shrPwsn3G9IQ7JCm1/tbl7daDI4ZAAmedfD) (6 Patterns)
   - [CQRS](../performance/pattern.cqrs.md)
   - [Strangler Fig](../refactoring/monolit2msa.md)
   - Decompose by DDD [subdomain](ddd.md)
   - Service per Team
-- [__SOLID__](solid.md)  
+- [__SOLID__](solid.md): SRP, OCP, LSP, ISP, DPI
 - LC/HC - [Принципы GRASP](https://rmcreative.ru/blog/post/printsipy-grasp)
   - [Low coupling (LC)](./low.coupling.md)
   - High cohesion (HC)
 - __DRY - Dont Repeat Yourself__: не должны повторяться именно в __поведении__, а не в __данных__ (например [микросервисы](../../style/msa.md))
-- __Разделения ответственности__ слоев:
-  - MVC
-  - MVP
-  - MVVM
-  - MVI
-- Сквозная функциональность
-  - [Аудита](../observability/pattern.audit.md)
-  - Наблюдаемость [Observability Patterns](../../ability/observability.md)
-    - Агрегация логов
-    - Обработка исключения
-    - Распределенная трассировка
-    - Метрики ИС
-    - Аудит
-    - Health Check API
-- Оркестрация - есть дирижер [или Хореография](orchestration-choreography.md) - нет централизованного управления (медиатора)
-- Хранилищ данных
-  - [Data Vault](data.vault.md)
-  - Big Data
-    - [Data Lake](data.lake.md)
-    - [Data Mart](data.mart.md)
-    - [Map Reduce](map.reduce.md)
-- TODO
-  - [Принципы проектирования MS](https://docs.microsoft.com/ru-ru/azure/architecture/guide/design-principles/)
-  - [MS](https://docs.microsoft.com/ru-ru/azure/architecture/patterns/category/design-implementation)
-  - [System Design шаги](https://www.youtube.com/watch?v=i7twT3x5yv8&ab_channel=ByteByteGo)
+
+## Разделения ответственности слоев
+
+- MVC
+- MVP
+- MVVM
+- MVI
+
+## Сквозная функциональность
+
+- [Аудита](../observability/pattern.audit.md)
+- Наблюдаемость [Observability Patterns](../../ability/observability.md)
+  - Агрегация логов
+  - Обработка исключения
+  - Распределенная трассировка
+  - Метрики ИС
+  - Аудит
+  - Health Check API
+
+## Хранилищ данных
+
+- [Data store](data/data.md)
+- DWH
+- [Data Vault](data/data.vault.md)
+- Big Data
+  - [Data Lake](data/data.lake.md)
+  - [Data Mart](data/data.mart.md)
+  - [Map Reduce](data/map.reduce.md)
+
+## TODO
+
+- [Принципы проектирования MS](https://docs.microsoft.com/ru-ru/azure/architecture/guide/design-principles/)
+- [MS](https://docs.microsoft.com/ru-ru/azure/architecture/patterns/category/design-implementation)
+- [System Design шаги](https://www.youtube.com/watch?v=i7twT3x5yv8&ab_channel=ByteByteGo)
 
 ## Анализ вариантов
 
 - Придумайте [второй вариант дизайна архитектуры](../../alternative.md), который тоже может сработать в вашей ситуации. Противопоставьте оба дизайна и объясните, почему один лучше другого.
-
-## CheckList
-
-- закладывайте в архитектуру возможности для __автоматического устранения неполадок__. В распределенных системах происходят сбои.
-  - Приложение необходимо проектировать так, чтобы оно могло автоматически восстанавливать свою работу при возникновении сбоев.
-- Обеспечивайте __резервирование__ всех компонентов. Резервирование позволяет избежать появления в приложении единственной точки отказа.
-- Сводите к минимуму потребности в __координации__. Сведение к минимуму координации между службами приложения помогает обеспечить масштабируемость
-- Учитывайте __возможность расширения__. Проектируйте приложение так, чтобы оно могло горизонтально масштабироваться, т.е. при необходимости можно было добавлять новые экземпляры
-- Используйте __секционирование__ для обхода ограничений. Секционирование позволяет обходить ограничения, связанные с базами данных, сетевыми и вычислительными ресурсами.
-- Проектируйте с учетом последующей __эксплуатации__. Приложение должно проектироваться так, чтобы его было удобно эксплуатировать и у группы эксплуатации были необходимые инструменты
-- Используйте управляемые службы. По возможности используйте подход __РAAS__ (платформа как услуга), а не laas (инфраструктура как услуга)
-- Используйте наиболее подходящие __технологии хранения данных__. Выбирайте технологии хранения в соответствии с типом данных и особенностями их использования
-- Проектируйте с учетом __дальнейшего развития__. Все успешные приложения со временем развиваются. Чтобы приложение могло развиваться, необходимо закладывать возможности развития на этапе проектирования
-- Разрабатывайте приложения с учетом потребностей бизнеса. Каждое принятое на этапе проектирования решение должно быть обусловлено __конкретным бизнес-требованием__

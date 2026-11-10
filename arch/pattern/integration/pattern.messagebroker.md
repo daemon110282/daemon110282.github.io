@@ -30,7 +30,7 @@
 
 - Дополнительный архитектурный слой
 - Затраты на мониторинг, настройку, управление
-- влияет на общую надежность и безопасность системы
+- Влияет на общую надежность и безопасность системы
 
 ## Patterns
 
@@ -40,7 +40,7 @@
 	- Транспорт
 		- [RMQ](../../../technology/middleware/messagebus/rmq.md)  
 		- ActiveMQ
-- Log-based message queue
+- __Log-based message queue__
 	- [Kafka](../../../technology/middleware/messagebus/kafka.md)
 - [Messaging Patterns](https://www.enterpriseintegrationpatterns.com/patterns/messaging/)
   - [MS](https://docs.microsoft.com/ru-ru/azure/architecture/patterns/category/messaging)
@@ -54,7 +54,7 @@
   - Dead Leater Channel
   - Message Translator
   - Wire Tap - наблюдение за сообщениями
-- Event Sourcing
+- [Event Sourcing](event.sourcing.md)
 - Тип способа получения сообщений
   - Pull (по запросу)
   - Push (подписка)
@@ -72,6 +72,15 @@
 	- Azure Queue Storage
 	- Azure Service Bus
 	- Amazon SQS
+- Реализации шин сообщений (фреймворк)
+  - .NET
+    - NServiceBus
+    - MassTransit или Brighter
+    - EasyNetQ
+    - [abp.io](https://docs.abp.io/en/abp/4.4/Distributed-Event-Bus)
+  - Python
+    - Celery
+  - [PHP](../../../technology/framework/php.md)
 
 ### Критерии выбора
 

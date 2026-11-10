@@ -8,7 +8,7 @@
 
 ## Зачем
 
-[Паттерн проектирования](system.design.md) для [хранилищ данных](../../system.class/store.md) в архитектурном стиле [BigData](../../style/bigdata.md).
+[Паттерн проектирования](../system.design.md) для [хранилищ данных](../../../system.class/store.md) в архитектурном стиле [BigData](../../../style/bigdata.md).
 
 Для сбора, хранения и обработки больших потоков информации, которая [поступает непрерывно](https://yandex.cloud/ru/docs/glossary/datalake):
 
@@ -54,9 +54,9 @@ UC:
 
 ## Технологии
 
-- [Object Storage](../../../technology/store/object.storage.md)
+- [Object Storage](../../../../technology/store/object.storage.md)
   - S3 Minio
-- Distributed File System [DFS](../../../technology/filesystem/dfs.md)
+- Distributed File System [DFS](../../../../technology/filesystem/dfs.md)
   - HDFS
   - CFS
 - [Data Vault](data.vault.md)

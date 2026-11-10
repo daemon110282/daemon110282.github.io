@@ -11,32 +11,38 @@
 
 [Архитектурный стиль](../arch.styles.md):
 
-- __Multiple subsystems__ must process the __same events__
-- Real-time processing with minimum time lag
-- Complex event processing, such as pattern matching or aggregation over time windows
-- High volume and high velocity of data, such as IoT
+- __Несколько подсистем__ должны обрабатывать __одни и те же события__
+- Обработка в режиме __реального времени с минимальной задержкой__
+- Обработка сложных событий, например, поиск закономерностей или агрегирование данных по временным интервалам
+- __Большие объемы__ и __высокая скорость поступления данных__ (характерно, например, для интернета вещей — IoT)
 - __[Background Jobs](../pattern/development/background.job.md)__: Sending background messages, emails, or notifications to loads of users.
-- __Asynchronous Messaging__: Messaging queues are the best way to implement asynchronous programming.
-- High Response Time: When the response time of a request is too much. For example, calculations, searching or pdf creation, etc.
+- __Асинхронный обмен сообщениями__: [Очереди сообщений](../pattern/integration/pattern.messagebroker.md) — лучший способ реализации асинхронного программирования.
+- __Большое время отклика__: Ситуации, когда время выполнения запроса оказывается слишком долгим (например, при выполнении вычислений, поиске, создании PDF-файлов и т. д.).
 
 ## Плюсы и минусы
 
 [Критерии](../arch.criteria.md)
 
-Плюсы
+Плюсы:
 
-- Слабая связность. Подсистемы получают независимые представления потока событий.
-- Масштабируемость. [Производительность](https://habr.com/ru/company/oleg-bunin/blog/310418/)
-- Отправители и получатели независимы друг от друга
-- Нет интеграции "точка — точка". Очень легко добавлять в систему новые объекты-получатели.
-- Объекты-получатели могут реагировать на события сразу при их поступлении.
-- Гибкость
+- __Слабая связанность__ ([Low Coupling](https://habr.com/ru/post/706630/))
+  - Это позволяет производителям событий создавать события, не зная о том, кто будет потреблять эти события
+  - Потребители событий не должны знать об источниках событий
+  - Модули, потребляющие события, и модули, создающие события, могут быть реализованы на разных языках или использовать разные технологии, подходящие для конкретных задач
+  - Подсистемы получают независимые представления потока событий
+  - Отправители и получатели независимы друг от друга
+  - Нет интеграции "точка — точка". Очень легко добавлять в систему новые объекты-получатели
+  - Гибкость
+- __Масштабируемость__. [Производительность](https://habr.com/ru/company/oleg-bunin/blog/310418/)
+- Объекты-получатели могут реагировать на события сразу при их поступлении
 
-Минусы
+Минусы:
 
 - [Обеспечить последовательность событий](https://docs.microsoft.com/ru-ru/azure/architecture/guide/architecture-styles/event-driven)
-  - RMQ не гарантирует порядок сообщений, как вариант, для этого таймметка и ключ идемпотентности и порядок обработки на стороне ИС потребителя реализовать
-- Асинхронный обмен сообщениями и итоговая согласованность
+  - RMQ __не гарантирует порядок сообщений__, как вариант
+    - для этого таймметка и ключ идемпотентности и порядок обработки на стороне ИС потребителя реализовать
+    - или Kafka
+- Асинхронный обмен сообщениями и __итоговая согласованность__
 - Управляемость
 - Взаимодействие между службами
 - Гарантированная доставка
@@ -46,22 +52,20 @@
 ## Паттерны
 
 - two main topologies
-  - The __mediator topology__ is commonly used when you need to __orchestrate__ ([оркестрация](../pattern/system.design/orchestration-choreography.md)) multiple steps within an event through a central mediator
+  - The __mediator topology__ is commonly used when you need to __orchestrate__ ([оркестрация](../pattern/integration/orchestration-choreography.md)) multiple steps within an event through a central mediator
   - __broker topology__ (__хореография__) is used when you want to chain events together without the use of a central mediator
 - __Событие__ Event driven
   - [Publish-subscribe](../../technology/middleware/messagebus/rmq.md)
     - event-base
     - [shared-data space](https://apolomodov.medium.com/coa-distributed-systems-4th-ed-2-architecture-af563b2332bd)
-  <!-- ![](../../img/arch/eda/eda.driven.jpg) -->
   - Подходы к передаче событий
-    - событие ![event](../../img/arch/eda/eda.event.jpg)
-    - состояние ![state](../../img/arch/eda/eda.state.jpg)
-  - __Слабая связанность__ ([Low Coupling](https://habr.com/ru/post/706630/)) — одно из основных преимуществ обработки, управляемой событиями. Это позволяет производителям событий создавать события, не зная о том, кто будет потреблять эти события. Точно так же потребители событий не должны знать об источниках событий. Из-за слабой связанности модули, потребляющие события, и модули, создающие события, могут быть реализованы на разных языках или использовать разные технологии, подходящие для конкретных задач.
+    - только факт события ![event](../../img/arch/eda/eda.event.jpg)
+    - полное состояние объект ![state](../../img/arch/eda/eda.state.jpg)
 - __Команда__ Command driven
   - [Task (Worker) Queue](../../technology/middleware/messagebus/rmq.md)
   - [RPC (команды)](../../technology/middleware/messagebus/rmq.md)
-- __Запросы__ [CQRS](../pattern/performance/pattern.cqrs.md) - command query request segregation
-- [Event sourcing](../pattern/integration/event.sourcing.md)
+- __Запросы и команды отдельно__ [CQRS](../pattern/performance/pattern.cqrs.md) - command query request segregation
+- Состояние объекта - __последовательность событий изменений объекта__ [Event sourcing](../pattern/integration/event.sourcing.md)
 - __Распределенные транзакции__ (лучше не делать)
   - [SAGA](../pattern/integration/pattern.saga.md)
   - [2PC](../pattern/integration/pattern.2pc.md) двухфазный комит
@@ -70,16 +74,7 @@
 
 ## Технологии
 
-- Шины сообщений\событий Event\Message Bus (брокер обмена сообщениями [Message Broker](../pattern/integration/pattern.messagebroker.md)) можно выбрать одну из нескольких технологий (траспорт) обмена сообщениями
-- Реализации шин сообщений (фреймворк)
-  - .NET
-    - NServiceBus
-    - MassTransit или Brighter
-    - EasyNetQ
-    - [abp.io](https://docs.abp.io/en/abp/4.4/Distributed-Event-Bus)
-  - Python
-    - Celery
-  - [PHP](../../technology/framework/php.md)
+- Шины сообщений Message Bus\Шины событий Event Bus (брокер обмена сообщениями [Message Broker](../pattern/integration/pattern.messagebroker.md))
 - [MS Обмен сообщениями](https://docs.microsoft.com/ru-ru/azure/architecture/guide/technology-choices/messaging)
 
 ## TODO

@@ -1,0 +1,25 @@
+# Хранилище данных
+
+- Модель данных [звезда — оптимальная структура данных при переходе на российский BI](https://habr.com/ru/company/visiology/blog/678346/)
+- Агрегированные витрины
+  - Materialized View
+- [Data Mining против хранилища данных](https://coderlessons.com/tutorials/bolshie-dannye-i-analitika/teoriia-khraneniia-dannykh/21-data-mining-protiv-khranilishcha-dannykh)
+- On-Line Analitical Processing (__OLAP__) - оперативная аналитическая обработка данных
+  - принципы построения систем поддержки принятия решений (Decision Support System - DSS)
+  - хранилищ данных (Data Warehouse)
+  - систем интеллектуального анализа данных (Data Mining)
+- __Мутабельные__ (изменяемые mutable) или [иммутабельные](../../development/immutability.md) (не изменяемые immutable) данные
+- Принципы __ACID__
+  - atomaric
+  - consistently
+  - isolation
+  - durability
+- __OLTP__ (Online Transaction Processing)
+  - CRUD обработка транзакций
+- Нормальная форма отношений в РСУБД 1, 2, 3 для __OLTP__
+  - __Денормализация__ отношений для OLAP
+  - В решениях 1С компромисс реализован следующим образом: События при записи в базу пишутся сразу в несколько мест
+    - В одном месте записи имеют мало индексов и оптимизированы под OLTP нагрузки
+    - в другом месте записи индексируются по всем полям и адаптированы для OLAP нагрузок
+    - Такие таблицы называются регистрами накоплений и регистрами сведений.
+- [Секционирование шардирование](../../performance/shard.db.md)

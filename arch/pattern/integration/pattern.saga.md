@@ -38,10 +38,10 @@ TODO
 
 - машины состояний [state machine](../development/pattern.state.machine.md)
 - наблюдателя (Observer) для логирования
-- Реализация при помощи [Хореографии](../system.design/orchestration-choreography.md) или __Оркестрации__
+- Реализация при помощи [Хореографии](orchestration-choreography.md) или __Оркестрации__
 - Для повышения надежности при асинхронном обмене событиями через Message Broker используется __Transactional Outbox__
 
 ## Технологии
 
-- [Хореография](../system.design/orchestration-choreography.md#технологии)
-- [Оркестрация](../system.design/orchestration-choreography.md#технологии)
+- [Хореография](orchestration-choreography.md#технологии)
+- [Оркестрация](orchestration-choreography.md#технологии)

@@ -26,7 +26,7 @@ UC:
 - IoT
 - Logs
 - CDN
-- BigData [Data lake](../../arch/pattern/system.design/data.lake.md)
+- BigData [Data lake](../../arch/pattern/system.design/data/data.lake.md)
 
 ## Термины
 

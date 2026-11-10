@@ -1,16 +1,17 @@
 # Оркестрация Orchestration и Хореография Choreography
 
 - [Оркестрация Orchestration и Хореография Choreography](#оркестрация-orchestration-и-хореография-choreography)
-	- [Зачем](#зачем)
-	- [TODO](#todo)
-	- [Оркестрация](#оркестрация)
-	- [Хореография](#хореография)
-	- [Технологии](#технологии)
+  - [Зачем](#зачем)
+  - [TODO](#todo)
+  - [Оркестрация](#оркестрация)
+  - [Хореография](#хореография)
+  - [Технологии](#технологии)
 
 ## Зачем
 
 - Оркестратор - ИС которая управляет изменениями в Х ИС
-- Хореография - Каждая ИС сама подписывается на события в Шине Сообщений и реагирует на изменния
+- Хореография - Каждая ИС сама подписывается на события в Шине Сообщений и реагирует на изменения
+  - Паттерн Распределенных транзаций [SAGA](../integration/pattern.saga.md)
 
 ## TODO
 
@@ -35,6 +36,21 @@
 
 ## Технологии
 
-- Spring Integration, Apache Camel, Mule ESB
+- Хореография
+  - [Debezium + Kafka](https://habr.com/ru/companies/redhatrussia/articles/575844/)
+  - serverless saga pattern by using AWS Step Functions
+  - [MassTransit example](https://habr.com/ru/company/true_engineering/blog/412793/)
+  - <https://axoniq.io>
+  - <https://eventuate.io/abouteventuatetram.html>
+  - <https://github.com/eclipse/microprofile-lra>
+  - <https://github.com/jbosstm/narayana/tree/master/rts/lra>
+  - Apache [Camel Saga](https://camel.apache.org/components/4.8.x/eips/saga-eip.html)
+  - NServiceBus [Saga](https://docs.particular.net/nservicebus/sagas/)
+- Spring Integration
+- Mule ESB
 - BPEL (business process execution language)
-- [BPMS](../../system.class/bpms.md)
+- Оркестрация
+  - [BPMS](../../system.class/bpms.md)
+    - [camunda](https://camunda.com/blog/2018/08/bpmn-microservices-orchestration-part-2-graphical-models/)
+  - Apache [Airflow](/technology/apache.airflow.md)
+  - Azure Durable Functions

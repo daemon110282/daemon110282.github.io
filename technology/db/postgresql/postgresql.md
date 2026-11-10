@@ -72,7 +72,7 @@
 - Timeseries Data (pg_partman extension)
 - [schema and data comparison tool for PostgreSQL](https://www.postgrescompare.com/)
 - Партиционирование (Сеционирование) вертикальное - built in PGSQL
-- Партиционирование горизонтальное - [Шардирование](../../arch/pattern/performance/shard.db.md) CITUS
+- Партиционирование горизонтальное - [Шардирование](../../../arch/pattern/performance/shard.db.md) CITUS
   - [When to use Citus to shard Postgres?](https://www.citusdata.com/blog/2023/08/04/understanding-partitioning-and-sharding-in-postgres-and-citus/)
 
 ### Management
@@ -82,7 +82,7 @@
 
 ### Replication
 
-- hot-standby потоковая [репликация](../../arch/pattern/sync.data.md)
+- hot-standby потоковая [репликация](../../../arch/pattern/integration/sync.data.md)
 - [log shipping](https://medium.com/@PinkOwl/postgresql-and-me-log-shipping-replication-6bc945757822)
 - [Config](https://www.postgresql.org/docs/current/runtime-config-replication.html)
 
@@ -166,7 +166,7 @@
 
 ### Миграция с простоем
 
-[Миграция](../../arch/pattern/refactoring/migration.md) "большим взрывом" с простоем
+[Миграция](../../../arch/pattern/refactoring/migration.md) "большим взрывом" с простоем
 
 - Free
     - Через CSV
@@ -199,7 +199,7 @@
       - генерируется схема БД в PostgreSQL - __минус повторяет схему MSSQL без рефакторинга схем БД__
       - __миграция данных__ через AWS DMS
       - приложение направляет запросы в Babelfish в формате MSSQL T-SQL, BabelFish [конвертирует их в формате PostgreSQL](https://disk.yandex.ru/i/ovwejkZmzQ7_SA)
-  - [CDC](../../arch/system.class/cdc.md) [Debezium](../../technology/cdc/debezium.md) используя Снимки (snapshots)
+  - [CDC](../../../arch/system.class/cdc.md) [Debezium](../../../technology/cdc/debezium.md) используя Снимки (snapshots)
   - AWS SCT + Database Migration Service (DMS) - минус: __схемы БД не изменяются__
     - TODO DMS
     - [Пример MSSQL2PGSQL](https://transactts.com/complex-aws-migrations-sct/)

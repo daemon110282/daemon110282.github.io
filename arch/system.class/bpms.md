@@ -45,7 +45,7 @@
 - [zeebe-io?](https://blog.bernd-ruecker.com/how-we-built-a-highly-scalable-distributed-state-machine-f2595e3c0422)
 - [camunda](../../technology/middleware/bpms/camunda.md)
 - [apache activiti](https://habr.com/ru/companies/otus/articles/671360/)
-- Apache Airflow
+- Apache [Airflow](../../technology/apache.airflow.md)
 - [ELZA](../../technology/middleware/bpms/elza.md)
 - [Activiti framework (Java) 6.0.0](https://www.activiti.org/)
   - [User guide](https://www.activiti.org/userguide/)

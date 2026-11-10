@@ -141,7 +141,7 @@ TODO:
   - фабрика данных [Azure](../../technology/azure.md)
   - [Apache Oozie](../../technology/apache.oozie.md) shedule Job Spark
   - Apache [Sqoop](../../technology/apache.sqoop.md) shedule Job ETL
-  - Apache [Airflow](../../technology/apache.airflow.md) создания, выполнения, мониторинга и оркестровки потоков операций по обработке данных
+  - Apache [Airflow](../../technology/apache.airflow.md) создания, выполнения, мониторинга и [оркестровки потоков операций](../pattern/system.design/orchestration-choreography.md) по обработке данных
 - Анализ
   - Apache Spark
   - Apache Hive

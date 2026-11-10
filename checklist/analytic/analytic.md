@@ -15,7 +15,7 @@
 ## PP Предпроектная подготовка
 
 - Бизнес цели (БЦ)
-  - [Impact mapping](../../analytic/analytica.bt.md#карта-влияния-impact-mapping)
+  - [Impact mapping](../../analytic/ba/analytica.bt.md#карта-влияния-impact-mapping)
 - [Стейкхолдеры](https://systems.education/requirements-never-changes) (кто принимает решение)
 - Эксперты
 - Команда, роли
@@ -33,14 +33,14 @@
 ## BT Бизнес-требования (БТ)
 
 - Проблемная (предметная) область (domain)
-  - [Customer Journey Map](../../analytic/cjm.md) (CJM)
-- [Бизнес процессы (БП)](../../analytic/analytica.bt.md#бизнес-процесс-бп) AS-IS, TO-BE
+  - [Customer Journey Map](../../analytic/ba/cjm.md) (CJM)
+- [Бизнес процессы (БП)](../../analytic/ba/analytica.bt.md#бизнес-процесс-бп) AS-IS, TO-BE
 - Бизнес правила
 - Бизнес требования пользователей для достижения БЦ в контексте БП - __ЧТО надо бизнесу__
-  - User Story [US](../../analytic/analytica.bt.md#user-story-us-пользовательские-истории)
-  - [User Stoty Map](../../analytic/analytica.bt.md#user-stoty-map)
-  - UC [use-case](../../analytic/analytica.ft.md#use-case-uc-сценарии-использования), клик-событие, акторы
-  - [Event Storming](../../analytic/event.storming.md)
+  - User Story [US](../../analytic/ba/analytica.bt.md#user-story-us-пользовательские-истории)
+  - [User Stoty Map](../../analytic/ba/analytica.bt.md#user-stoty-map)
+  - UC [use-case](../../analytic/sa/analytica.ft.md#use-case-uc-сценарии-использования), клик-событие, акторы
+  - [Event Storming](../../analytic/sa/event.storming.md)
 - Ограничения, Допущения
   - Границы проекта (scope)\системы\решения (что включаем в автоматизацию на текущем этапе)
   - Бэклог
@@ -84,7 +84,7 @@ __по ИС__ - функции ИС - __ЧТО ИС должна__ уметь д
 
 ## TD Технический дизайн (ТД)
 
-[__КАК надо сделать ФТ__](../../analytic/sa.md#постановка-задачи-пз---технический-дизайн-тд) (ТД)
+[__КАК надо сделать ФТ__](../../analytic/sa/sa.md#постановка-задачи-пз---технический-дизайн-тд) (ТД)
 
 - Операции обработки данных, функции
 - [Архитектура](../../arch/arch.md)

@@ -2,9 +2,9 @@
 
 База знаний по аналитике, ИТ архитектуре, API. Документирование. Тесты инструментов. AI.
 
-- [Бизнес аналитика](analytic/ba.md)
+- [Бизнес аналитика](analytic/ba/ba.md)
 - [Архитектура ПО](arch/arch.md) базируется на
-  - [Бизнес и ИТ стратегии](analytic/strategy.md)
+  - [Бизнес и ИТ стратегии](analytic/ba/strategy.md)
   - [Бизнес архитектуре](analytic/arch.ba.md)
   - [Бизнес Аналитике требования](analytic/analytica.md)
   - [Паттерны Шаблоны](arch/pattern/patterns.md)

@@ -24,5 +24,5 @@
 
 ## Технологии
 
-- [MixPanel](../technology/leads/mixpanel.md)
-- [UXRocket](../technology/leads/uxrocket.md)
+- [MixPanel](../../technology/leads/mixpanel.md)
+- [UXRocket](../../technology/leads/uxrocket.md)

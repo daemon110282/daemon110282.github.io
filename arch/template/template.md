@@ -1,4 +1,4 @@
-# Шаблон
+# Шаблоны архитектора
 
 [CheckList](../../checklist/arch/arch.md)
 [Паттерны документирования](../pattern/pattern.docs.md)

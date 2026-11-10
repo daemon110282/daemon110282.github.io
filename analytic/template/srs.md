@@ -50,6 +50,7 @@
 ### Goals Цель
 
 <!-- Цель Проблемы  -->
+[Impact Mapping](../ba/analytica.bt.md#карта-влияния-impact-mapping)
 
 ### Non-goals
 
@@ -71,11 +72,11 @@
 
 ### US User story
 
-<Роль> [должен иметь возможность](analytic/user.story.md) <возможность> в <показатель производительности> с <момент отсчета> в <условия эксплуатации>, чтобы <ценность>
+<Роль> [должен иметь возможность](../ba/user.story.md) <возможность> в <показатель производительности> с <момент отсчета> в <условия эксплуатации>, чтобы <ценность>
 
 ### AC Acceptance Criteria Критерии приемки
 
-[Критерии приемки](../user.story.md#acceptance-criteria)
+[Критерии приемки](../ba/user.story.md#acceptance-criteria)
 
 ### BP БП
 
@@ -86,6 +87,7 @@ TO-BE
 ### Продуктовые метрики
 
 <!-- стоимость сделки -->
+[Metrics Driven Development](../ba/ba.md#metrics-driven-development-lean-startup)
 
 ### Design Дизайн экранных форм
 
@@ -117,7 +119,7 @@ TO-BE
 
 #### LM Логическая доменная модель
 
-[Модель данных](../analytica.ft.md#модель-данных)
+[Модель данных](../sa/analytica.ft.md#модель-данных)
 
 #### DB Доменная модель
 

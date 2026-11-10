@@ -39,4 +39,4 @@ Use Case (UC) - Сценарии использования - Варианты �
 ## Примеры
 
 - Регистрация пассажира на рейс. Актор - пассажир. Цель - зарегистрироваться на рейс.
-- [AI](../arch/pattern/ai/AI.md) [генераторы use case](https://podbiratel.com/pm/product-start/user-case)
+- [AI](../../arch/pattern/ai/AI.md) [генераторы use case](https://podbiratel.com/pm/product-start/user-case)

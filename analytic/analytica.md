@@ -7,28 +7,28 @@
 
 ## Виды аналитиков
 
-- [Бизнес аналитик](ba.md)
-- [Системный аналитик](sa.md)
+- [Бизнес аналитик](ba/ba.md)
+- [Системный аналитик](sa/sa.md)
 
 ## Порядок артефактов\активностей
 
 [Шаблон](template/template.md) по [CheckList](../checklist/analytic/analytic.md):
 
 1. PP Предпроектная подготовка
-   1. Бизнес [цели](analytica.bt.md#цели) (БЦ)
-      1. [Impact Mapping](analytica.bt.md#карта-влияния-impact-mapping) - какум проблему решаем: чтобы что?
-      2. [Metrics Driven Development](ba.md#metrics-driven-development-lean-startup), Lean Startup
-2. BT [Бизнес-требования](analytica.bt.md)
-   1. [Сбор требований](analytica.bt.md#сбор-требований)
-      1. [Customer Journey Map](../analytic/cjm.md) (CJM)
-   2. [US](user.story.md)
-      1. [User Story Map](user.story.md#user-story-map)
-      2. [Event Storming](./event.storming.md)
+   1. Бизнес [цели](ba/analytica.bt.md#цели) (БЦ)
+      1. [Impact Mapping](ba/analytica.bt.md#карта-влияния-impact-mapping) - какум проблему решаем: чтобы что?
+      2. [Metrics Driven Development](ba/ba.md#metrics-driven-development-lean-startup), Lean Startup
+2. BT [Бизнес-требования](ba/analytica.bt.md)
+   1. [Сбор требований](ba/analytica.bt.md#сбор-требований)
+      1. [Customer Journey Map](./ba/cjm.md) (CJM)
+   2. [US](ba/user.story.md)
+      1. [User Story Map](ba/user.story.md#user-story-map)
+      2. [Event Storming](./sa/event.storming.md)
    3. [БП](bp.md)
-3. FT [Функциональные требования](analytica.ft.md)
-   1. [UC](use.case.md)
+3. FT [Функциональные требования](sa/analytica.ft.md)
+   1. [UC](sa/use.case.md)
    2. [UI UX](ui-ux.md)
-   3. [Модель данных](analytica.ft.md#модель-данных)
+   3. [Модель данных](sa/analytica.ft.md#модель-данных)
 4. Data Driven
     1. [AB тесты](ab.tests.md)
 

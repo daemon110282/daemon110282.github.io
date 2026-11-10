@@ -30,9 +30,9 @@
 
 ## Виды артефактов
 
-- [Бизнес процесс](bp.md)
-- [User Story](user.story.md), User Story Map, Event Storming
-- [Use Case](use.case.md)
+- [Бизнес процесс](../bp.md)
+- [User Story](user.story.md), User Story Map, [Event Storming](../sa/event.storming.md)
+- [Use Case](../sa/use.case.md)
 
 ### Цели
 

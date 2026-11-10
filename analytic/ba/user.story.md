@@ -47,4 +47,4 @@ __Acceptance Criteria__ - критерии приемки с точки зрен
 - Третий ряд — требования или сценарии: __user stories__
   - Карточки расставляются по приоритету: чем выше приоритет, тем выше карточка.
 
-Альтернатива [Event Storming](./event.storming.md).
+Альтернатива [Event Storming](../event.storming.md).

@@ -137,7 +137,7 @@ Fitness Functions
 - Релевантные
 - Нерелевантные
 
-## TODO
+## TODO charactestics
 
 - [TODO Excel list](ability/Quality-Attributes-2013.xlsx)
 - ![nft](../img/arch/nft.png)

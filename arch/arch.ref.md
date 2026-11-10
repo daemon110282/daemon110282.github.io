@@ -15,7 +15,7 @@
 - Scaling Application
   - [Cache, Sharding](https://blog.bytebytego.com/p/from-0-to-millions-a-guide-to-scaling-7b4?utm_source=substack&utm_medium=email)
 
-TODO
+## TODO
 
 - <https://landscape.cncf.io/?license=open-source>
 - [MS Azure](https://docs.microsoft.com/ru-RU/azure/architecture/architectures/?filter=reference-architecture)

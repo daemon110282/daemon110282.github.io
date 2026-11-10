@@ -4,25 +4,17 @@
 	* Функционал Бизнес цели
 	* Масштабирование
 	* Атрибуты качества
+		* Надежность
+			* Доступность Availability
+			* Отказоустойчивость Fault Tolerance
+			* Стабильность Resilience
+			* Изоляция сбоев
+		* Производительность Permormance \n Быстродействие
+		* Безопасность
+		* Гибкость к будущим изменениям
+		* Поддерживаемость
+			* Наблюдаемость Observability
 	* Тех долг Roadmap
-	* Безопасность
-
-!include arch.puml!ability		
-@endmindmap
-
-@startmindmap (id=ability)
-
-* Атрибуты качества
-	* Надежность
-		* Доступность Availability
-		* Отказоустойчивость Fault Tolerance
-		* Стабильность Resilience
-		* Изоляция сбоев
-	* Производительность Permormance \n Быстродействие
-	* Безопасность
-	* Гибкость к изменениям будущим
-	* Поддерживаемость
-		* Наблюдаемость Observability
-
+' !include arch.puml!ability		
 
 @endmindmap

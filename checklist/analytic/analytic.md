@@ -9,12 +9,12 @@
   - [DEV Разработка](#dev-разработка)
   - [ОПЭ](#опэ)
 
-![ФТ-НФТ](../img/ba/ft-nft.jpg)
+![ФТ-НФТ](../../img/ba/ft-nft.jpg)
 
 ## PP Предпроектная подготовка
 
 - Бизнес цели (БЦ)
-  - [Impact mapping](../analytic/analytica.bt.md#карта-влияния-impact-mapping)
+  - [Impact mapping](../../analytic/analytica.bt.md#карта-влияния-impact-mapping)
 - [Стейкхолдеры](https://systems.education/requirements-never-changes) (кто принимает решение)
 - Эксперты
 - Команда, роли
@@ -32,14 +32,14 @@
 ## BT Бизнес-требования (БТ)
 
 - Проблемная (предметная) область (domain)
-  - [Customer Journey Map](../analytic/cjm.md) (CJM)
-- [Бизнес процессы (БП)](../analytic/analytica.bt.md#бизнес-процесс-бп) AS-IS, TO-BE
+  - [Customer Journey Map](../../analytic/cjm.md) (CJM)
+- [Бизнес процессы (БП)](../../analytic/analytica.bt.md#бизнес-процесс-бп) AS-IS, TO-BE
 - Бизнес правила
 - Бизнес требования пользователей для достижения БЦ в контексте БП - __ЧТО надо бизнесу__
-  - User Story [US](../analytic/analytica.bt.md#user-story-us-пользовательские-истории)
-  - [User Stoty Map](../analytic/analytica.bt.md#user-stoty-map)
-  - UC [use-case](../analytic/analytica.ft.md#use-case-uc-сценарии-использования), клик-событие, акторы
-  - [Event Storming](../analytic/event.storming.md)
+  - User Story [US](../../analytic/analytica.bt.md#user-story-us-пользовательские-истории)
+  - [User Stoty Map](../../analytic/analytica.bt.md#user-stoty-map)
+  - UC [use-case](../../analytic/analytica.ft.md#use-case-uc-сценарии-использования), клик-событие, акторы
+  - [Event Storming](../../analytic/event.storming.md)
 - Ограничения, Допущения
   - Границы проекта (scope)\системы\решения (что включаем в автоматизацию на текущем этапе)
   - Бэклог
@@ -60,7 +60,7 @@ __по ИС__ - функции ИС - __ЧТО ИС должна__ уметь д
   - Доменные объекты (Бизнес Сущности): Аттрибуты, Правила валидации, Связи
   - Статусная модель
   - Доменные события
-  - [Инварианты агрегата](../arch/pattern/system.design/ddd.md#агрегат-aggregate-root)
+  - [Инварианты агрегата](../../arch/pattern/system.design/ddd.md#агрегат-aggregate-root)
   - Проверка на полноту: [CRUD LSHAX](https://systems.education/requirements-never-changes)
 - Алгоритмы Процессы
 - Отчетность
@@ -75,10 +75,10 @@ __по ИС__ - функции ИС - __ЧТО ИС должна__ уметь д
 
 ## TD Технический дизайн (ТД)
 
-[__КАК надо сделать ФТ__](../analytic/sa.md#постановка-задачи-пз---технический-дизайн-тд) (ТД)
+[__КАК надо сделать ФТ__](../../analytic/sa.md#постановка-задачи-пз---технический-дизайн-тд) (ТД)
 
 - Операции обработки данных, функции
-- [Архитектура](../arch/arch.md)
+- [Архитектура](../../arch/arch.md)
   - Стиль
   - Компоненты ИС (web, back, process, и тп)
   - Атрибуты качества
@@ -86,10 +86,10 @@ __по ИС__ - функции ИС - __ЧТО ИС должна__ уметь д
 - Интеграции
   - События, Команды, Запросы
     - Входящие\исходящие
-  - [API](../api/api.md)
+  - [API](../../api/api.md)
   - Схемы взаимодействия (SQD)
 - UI UX
-  - [Спецификация ЭФ](../analytic/ui-ux.md), Макеты\Прототипы
+  - [Спецификация ЭФ](../../analytic/ui-ux.md), Макеты\Прототипы
   - ЭФ, Карта экранов
 - База данных: ХП, функции, таблицы
 - Локализация
@@ -109,7 +109,7 @@ __по ИС__ - функции ИС - __ЧТО ИС должна__ уметь д
   - заказчику
 - Консультации на этапе ОПЭ
 - Документация для передачи в эксплуатацию: 
-  - [РП](manual.md)
+  - [РП](../manual.md)
   - мониторинг, метрики, логи
-  - [описание ИС](is.md)
+  - [описание ИС](../is.md)
 - Актуализация документации: ПЗ, ТД, API, РИПВ

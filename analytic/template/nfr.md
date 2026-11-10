@@ -2,6 +2,16 @@
 
 Входит в [шаблон](template.md) ПЗ
 
+- [Нефункциональные требования (НФТ) (NFR)](#нефункциональные-требования-нфт-nfr)
+  - [Security Безопасность](#security-безопасность)
+  - [Производительность](#производительность)
+  - [Надежность](#надежность)
+  - [Migrations Миграции](#migrations-миграции)
+  - [Observability Наблюдаемость](#observability-наблюдаемость)
+    - [Технические метрики](#технические-метрики)
+  - [Test strategy](#test-strategy)
+  - [TODO](#todo)
+
 ## Security Безопасность
 
 - [Auth As Service on MVP](https://ryanccollins.com/stock-exchange-systems-design-case-study)

@@ -1,5 +1,7 @@
 # Software Requirements Specification (SRS) Постановка задачи (ПЗ)
 
+По [CheckList аналитики](../../checklist/analytic/analytic.md) и [процессу](../analytica.md).
+
 - [Software Requirements Specification (SRS) Постановка задачи (ПЗ)](#software-requirements-specification-srs-постановка-задачи-пз)
 	- [Шапка](#шапка)
 	- [Ответственные лица](#ответственные-лица)
@@ -28,8 +30,6 @@
 			- [UI Маппинг ЭФ](#ui-маппинг-эф)
 			- [API](#api)
 	- [Timeline and Milestones Сроки и вехи](#timeline-and-milestones-сроки-и-вехи)
-
-По [CheckList аналитики](../../checklist/analytic/analytic.md) и [процессу](../analytica.md).
 
 ## Шапка
 

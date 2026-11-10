@@ -34,12 +34,12 @@
 
 - Проблемная (предметная) область (domain)
   - [Customer Journey Map](../../analytic/ba/cjm.md) (CJM)
-- [Бизнес процессы (БП)](../../analytic/ba/analytica.bt.md#бизнес-процесс-бп) AS-IS, TO-BE
+- [Бизнес процессы (БП)](../../analytic/ba/bp.md) AS-IS, TO-BE
 - Бизнес правила
 - Бизнес требования пользователей для достижения БЦ в контексте БП - __ЧТО надо бизнесу__
-  - User Story [US](../../analytic/ba/analytica.bt.md#user-story-us-пользовательские-истории)
-  - [User Stoty Map](../../analytic/ba/analytica.bt.md#user-stoty-map)
-  - UC [use-case](../../analytic/sa/analytica.ft.md#use-case-uc-сценарии-использования), клик-событие, акторы
+  - User Story [US](../../analytic/ba/user.story.md)
+  - [User Stoty Map](../../analytic/ba/user.story.md#user-story-map)
+  - UC [use-case](../../analytic/sa/use.case.md), клик-событие, акторы
   - [Event Storming](../../analytic/sa/event.storming.md)
 - Ограничения, Допущения
   - Границы проекта (scope)\системы\решения (что включаем в автоматизацию на текущем этапе)

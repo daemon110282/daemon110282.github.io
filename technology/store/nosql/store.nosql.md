@@ -9,15 +9,18 @@
     - [Document-Oriented](#document-oriented)
     - [Wide-Column](#wide-column)
     - [Graph database](#graph-database)
+      - [Графовые алгоритмы для аналитики](#графовые-алгоритмы-для-аналитики)
+      - [UC](#uc)
+      - [Плюсы и минусы](#плюсы-и-минусы)
 
 ## Зачем
 
-Решения для [NOSQL Store](../arch/system.class/store.nosql.md) для [хранилищ данных](../arch/system.class/store.md).
-[Критерии выбора](../arch/system.class/store.md#критерии-выбора).
+Решения для [NOSQL Store](../../../arch/system.class/store.nosql.md) для [хранилищ данных](../../../arch/system.class/store.md).
+[Критерии выбора](../../../arch/system.class/store.md#критерии-выбора).
 
 ## Плюсы-минусы
 
-[NOSQL Store](../arch/system.class/store.nosql.md#плюсы-минусы).
+[NOSQL Store](../../../arch/system.class/store.nosql.md#плюсы-минусы).
 
 ## Виды
 
@@ -25,11 +28,11 @@
 
 Key Value Ключ-Значение
 
-- [Redis](store/redis.md)
+- [Redis](redis.md)
   - это __однопоточная__ система
 - Memcached
   — многопоточная
-- [Tarantool](store/tarantool.md)
+- [Tarantool](../tarantool.md)
 
 ### Column Based
 
@@ -45,7 +48,7 @@ Key Value Ключ-Значение
 
 Технологии
 
-- [ClickHouse](store/clickhouse.md)
+- [ClickHouse](../clickhouse.md)
 - Cassandra
 - HBase
 
@@ -64,7 +67,7 @@ Key Value Ключ-Значение
 
 Технологии
 
-- [MongoDB](store/mongodb.md) — документоориентированная система управления базами данных, не требующая описания схемы таблиц. Считается одним из классических примеров NoSQL-систем, использует JSON-подобные документы и схему базы данных.
+- [MongoDB](../mongodb.md) — документоориентированная система управления базами данных, не требующая описания схемы таблиц. Считается одним из классических примеров NoSQL-систем, использует JSON-подобные документы и схему базы данных.
 - CouchDB
 
 ### Wide-Column
@@ -79,7 +82,10 @@ Key Value Ключ-Значение
 
 Графовые базы очень эффективны как раз потому, что не надо собирать большой промежуточный результат, пока мы навигируем по графу.
 
-Графовые алгоритмы для аналитики:
+- [Neo4J](neo4j.md)
+- [Tarantool](../tarantool.md)
+
+#### Графовые алгоритмы для аналитики
 
 - Open source-библиотеки из 50 алгоритмов на графах
 - Кратчайшие пути
@@ -91,7 +97,7 @@ Key Value Ключ-Значение
 
 Бесплатная облачная версия с [заготовленными базами данных](https://t.ly/a1z9)
 
-UC:
+#### UC
 
 - Связи между пользователями Соцсетей
 - Рекомендательные системы
@@ -102,12 +108,7 @@ UC:
 - Energy Management
 - Network Resource Optimization
 
-Плюсы и минусы
+#### Плюсы и минусы
 
 - Демонстрируют __лучшую производительность__, когда нужно __найти кратчайший путь__ или __связанные узлы__, проанализировать связи или [выделить общие признаки](https://www.tarantool.io/blog/ru/graph-db/)
 - Адаптивность структуры данных
-
-Технологии
-
-- Neo4J
-- [Tarantool](store/tarantool.md)

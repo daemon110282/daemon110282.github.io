@@ -2,7 +2,7 @@
 
 ## Зачем
 
-Технология для [хранилищ данных](../../arch/system.class/store.md).
+Технология для [хранилищ данных](../../../arch/system.class/store.md#nosql).
 Sphinx (SQL Phrase Index) — это система [полнотекстового поиска](../store.md).
 
 <https://habr.com/ru/articles/132118/>

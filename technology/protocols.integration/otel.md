@@ -33,7 +33,7 @@
 - Exporters - SDK realize  
 	- Metric
 		- Prometheus Metric ![schema](https://habrastorage.org/r/w1560/webt/2l/8k/l1/2l8kl1ck385o93-rqiehzewqudw.png)
-		- [Victoria Metrics](../store/victoriametrics.md)
+		- [Victoria Metrics](../store/timeseries/victoriametrics.md)
 	- Trace
 		- Jaeger
 		- Zipkin

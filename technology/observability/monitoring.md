@@ -124,10 +124,9 @@ Compare:
 - On premise
 	- Open Source
     	- [ELK](monitoring/elk.md)
-    	- Loglevel + [loglevel-plugin-remote](https://www.loggly.com/blog/best-practices-for-client-side-logging-and-error-handling-in-react/)
-        - [Zabbix](monitoring/zabbix.md)
-		- [Prometeus](../store/prometheus.md) + Grafana
-		- [ELK stack](monitoring/elk.md)		
+    	- Loglevel + [loglevel-plugin-remote](https://www.loggly.com/blog/best-practices-for-client-side-logging-and-error-handling-in-react/) [Zabbix](monitoring/zabbix.md)
+    	- [Prometeus](../store/timeseries/prometheus.md) + Grafana
+    	- [ELK stack](monitoring/elk.md)		
 	- BSL __license__
 		- [Sentry](sentry.md)
 		- [Альтернативы DataDog Crashlytics Rollbar](https://stackshare.io/sentry#alternatives)
@@ -139,9 +138,9 @@ Compare:
 
 Используют разные хранилища метрик (Time Series Database):
 
-- [Prometheus](../store/prometheus.md)
+- [Prometheus](../store/timeseries/prometheus.md)
 - InfluxDB
-- [Victoria metrics](../store/victoriametrics.md)
+- [Victoria metrics](../store/timeseries/victoriametrics.md)
 
 Compare:
 

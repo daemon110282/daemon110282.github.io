@@ -3,8 +3,9 @@
 - [Radar](https://www.thoughtworks.com/radar)
 - [API](api/)
 - [CI-CD](ci-cd/)
-- [Store](store.md)
-  - [DB](store.md#oltp-rdbms-relational)
+- [Store](store/store.md)
+  - [DB](store/store.md#oltp-rdbms-relational)
+  - [NoSQL](store/nosql/store.nosql.md)
 - [filesystem](filesystem/filesystem.md)
 - [framework](framework/)
 - Middleware

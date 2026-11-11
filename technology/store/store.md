@@ -12,44 +12,44 @@
 
 ## Зачем
 
-Решения для [хранилищ данных](../arch/system.class/store.md).
-[Критерии выбора](../arch/system.class/store.md#критерии-выбора).
+Решения для [хранилищ данных](../../arch/system.class/store.md).
+[Критерии выбора](../../arch/system.class/store.md#критерии-выбора).
 
 ## Structured Data
 
 ### OLTP RDBMS (Relational)
 
-- [MS SQL](db/mssql/mssql.md)
-- [PostgreSQL](db/postgresql/postgresql.md)
-- [Tarantool](store/tarantool.md)
+- [MS SQL](../db/mssql/mssql.md)
+- [PostgreSQL](../db/postgresql/postgresql.md)
+- [Tarantool](tarantool.md)
 - Импортозамещение (реестр отечественного ПО, сертификация СФТЭК)
   - на базе PostgreSQL (коммерческие)
-    - Astra [Tantor](db/postgresql/tantor.md)
-    - [PostgreSQL PRO](db/postgresql/postgresql.pro.md)
-    - [Jatoba](db/postgresql/jatoba.md)
+    - Astra [Tantor](../db/postgresql/tantor.md)
+    - [PostgreSQL PRO](../db/postgresql/postgresql.pro.md)
+    - [Jatoba](../db/postgresql/jatoba.md)
 
 ### OLAP
 
-- [ClickHouse](store/clickhouse.md)
+- [ClickHouse](clickhouse.md)
 - BigQuery
 
 ## Semi Structured Data
 
-- [NoSQL](store.nosql.md)
+- [NoSQL](./nosql/store.nosql.md)
 
 ### Time Series Database
 
 - InfluxDB
-- [Prometheus](store/prometheus.md)
-- [Victoria metrics](store/victoriametrics.md)
+- [Prometheus](timeseries/prometheus.md)
+- [Victoria metrics](timeseries/victoriametrics.md)
 - TimescaleDB PostgreSQL
 
 ### Full text search Полнотекстовый поиск
 
-- [Sphinx](store/sphinx.md)
-- [Elasticsearch](store/elasticsearch.md)
+- [Sphinx](nosql/sphinx.md)
+- [Elasticsearch](elasticsearch.md)
 - [manticore](https://github.com/manticoresoftware/manticoresearch) fork Sphinx
 
 ## UnStructured Data
 
-- [Minio](store/minio.md)
+- [Minio](minio.md)

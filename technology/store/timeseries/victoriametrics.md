@@ -2,7 +2,7 @@
 
 ## Зачем
 
-Технология для [хранилищ данных](../../arch/system.class/store.md).
+Технология для [хранилищ данных](../../../arch/system.class/store.md).
 
 - It can be used as a drop-in replacement for __Prometheus in Grafana__, [because it supports __Prometheus querying API__](https://docs.victoriametrics.com/Single-server-VictoriaMetrics.html).
 - It can be used as a drop-in replacement for __Graphite in Grafana__, because it supports __Graphite API__.
@@ -11,7 +11,7 @@
 	- Prometheus remote write API.
 	- Prometheus exposition format.
 	- [From StatsD](https://docs.victoriametrics.com/Single-server-VictoriaMetrics.html#how-to-send-data-from-graphite-compatible-agents-such-as-statsd)
-- Параметры метрики - формат [Prometheus](../observability/store/prometheus.md).
+- Параметры метрики - формат [Prometheus](../../observability/store/prometheus.md).
 - Просмотр метрик
 	- GUI MetricsQL [VMUI](https://docs.victoriametrics.com/Single-server-VictoriaMetrics.html#vmui)
 	- API
@@ -19,5 +19,5 @@
 
 ## MetricsQL
 
-- [PromQL](../observability/store/prometheus.md)-like query language with a powerful set of functions and features for working specifically with time series data.
+- [PromQL](../../observability/store/prometheus.md)-like query language with a powerful set of functions and features for working specifically with time series data.
 - [Примеры запросов](https://docs.victoriametrics.com/keyConcepts.html#metricsql)

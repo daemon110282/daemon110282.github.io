@@ -4,17 +4,20 @@
 	- [Зачем](#зачем)
 	- [Плюсы и минусы](#плюсы-и-минусы)
 	- [Паттерны](#паттерны)
-		- [CPU](#cpu)
 		- [Long Query поиск тяжелых запросов](#long-query-поиск-тяжелых-запросов)
+			- [CPU](#cpu)
+			- [RAM](#ram)
 		- [Locks](#locks)
 			- [Lock Escalation](#lock-escalation)
 		- [Errors](#errors)
 		- [TempDB](#tempdb)
-		- [Разбор логов](#разбор-логов)
+	- [Causality tracking Отслеживание причинно-следственной связи](#causality-tracking-отслеживание-причинно-следственной-связи)
+	- [Разбор логов](#разбор-логов)
 
 ## Зачем
 
 Содержат информацию о запросах с параметрами за определенный период с затратами на запрос по:
+
 - CPU
 - IOPS
 - длительности Latency
@@ -62,12 +65,12 @@ Microsoft SQL Server:
 - собирать информацию об __ожиданиях на блокировках__ с помощью механизма __отчетов по заблокированным процессам__. Он включается в свойствах сервера и выполняет сбор статистики с заданной периодичностью (обычно 5 секунд достаточно)
 - [Deadlock](https://www.sqlshack.com/monitoring-sql-server-deadlocks-easy-way/)
 	- [в разрезе БД, таблиц, запросов](https://www.sqlshack.com/use-sql-server-extended-events-parse-deadlock-xml-generate-statistical-reports/)
-- Blocked Process Report 
-- Deadlock XML Report 
+- Blocked Process Report
+- Deadlock XML Report
 
 #### Lock Escalation
 
-CREATE EVENT SESSION [TMP_LockEscalation] ON SERVER 
+CREATE EVENT SESSION [TMP_LockEscalation] ON SERVER
 ADD EVENT sqlserver.lock_escalation(
 	ACTION(sqlserver.context_info, sqlserver.database_name, sqlserver.is_system, sqlserver.query_hash, sqlserver.session_id, sqlserver.sql_text, sqlserver.username)
 )

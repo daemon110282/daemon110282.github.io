@@ -17,11 +17,15 @@
 
 ## Виды
 
-- [Key Value](../../technology/store.nosql.md#key-value-in-memory)
+- [Key Value](../../technology/store/nosql/store.nosql.md#key-value-in-memory)
   - In-memory store - Their speed and limited data size make them ideal for fast operations.
-- [Column Based](../../technology/store.nosql.md#column-based)
-- [Wide column store](../../technology/store.nosql.md#wide-column) - They are usually used for __big data, analytics, reporting__, etc., which needs __denormalized data__
-- [Graph database](../../technology/store.nosql.md#graph-database)
+- [Column Based](../../technology/store/nosql/store.nosql.md#column-based)
+- [Wide column store](../../technology/store/nosql/store.nosql.md#wide-column) - They are usually used for __big data, analytics, reporting__, etc., which needs __denormalized data__
+- [Graph database](../../technology/store/nosql/store.nosql.md#graph-database)
   - It is suitable for complex __relationships between unstructured objects__
   - Графовые базы данных — нереляционный тип БД. Их особенность — применение структуры графа для хранения данных и запросов.
-- [Document store](../../technology/store.nosql.md#document-oriented) - They are good for __large immutable data__
+- [Document store](../../technology/store/nosql/store.nosql.md#document-oriented) - They are good for __large immutable data__
+
+## Технологии
+
+[Redis Memcached MongoDB..](../../technology/store/nosql/store.nosql.md)

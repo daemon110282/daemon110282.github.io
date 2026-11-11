@@ -48,7 +48,7 @@
   - [kubernetes](../../technology/ci-cd/k8s.md)
   - [jenkins](../../technology/ci-cd/jenkins.md)
   - авто распределенный конфиг etcd
-  - кеш [redis](../../technology/store/redis.md)
+  - кеш [redis](../../technology/store/nosql/redis.md)
 - системы мониторинга
   - аптайм доступность сервиса, выраженная в процентах
 - ИБП, генератор электричества, охлаждение серверов

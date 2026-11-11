@@ -5,16 +5,17 @@
 	- [Функции](#функции)
 	- [Паттерны](#паттерны)
 	- [Deployment](#deployment)
+		- [High Availability](#high-availability)
 	- [Obervability](#obervability)
 
 ## Зачем
 
-Технология для [хранилищ данных](../../arch/system.class/store.md).
-NoSQL In memory [store](../store.nosql.md) решение.
+Технология для [хранилищ данных](../../../arch/system.class/store.md).
+NoSQL In memory [store](./store.nosql.md) решение.
 Redis - Remote Dictionary Service in __memory__.
 
 - Key Value [хранилище](../store.md)
-- [Кеширование данных](../../arch/ability/performance/performance.md)
+- [Кеширование данных](../../../arch/ability/performance/performance.md)
 - Дедубликация
 - Session store
 - Distributed lock
@@ -25,8 +26,8 @@ Redis - Remote Dictionary Service in __memory__.
   - [The 6 Most Impactful Ways Redis is Used in Production Systems](https://blog.bytebytego.com/p/the-6-most-impactful-ways-redis-is)
   - [todo](https://blog.bytebytego.com/p/redis-can-do-more-than-caching)
   
-![redis usecase](../../img/technology/store/redis.usecase.webp)
-![redis structures](../../img/technology/store/redis.structures.png)
+![redis usecase](../../../img/technology/store/redis.usecase.webp)
+![redis structures](../../../img/technology/store/redis.structures.png)
 
 ## Функции
 
@@ -68,6 +69,8 @@ Redis - Remote Dictionary Service in __memory__.
 	- медленно при перезапуске, лучше использовать репликации на резервный сервер
 - [HA cluster](https://redis.io/docs/management/scaling/)
 	- Оценка [системных требований](https://redis.com/modules/redis-search/redisearch-sizing-calculator/)
+
+### High Availability
 
 [HA нюансы](http://eax.me/redis/):
 

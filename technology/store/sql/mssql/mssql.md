@@ -104,7 +104,7 @@ HA:
 
 #### Benchmark Load Test
 
-- [Benchmark](../../benchmark.md)
+- [Benchmark](../../../ability/performance/load.test.md#becnhmark-tools)
   - [Тестирование производительности баз данных при помощи tSQLt и SQLQueryStress](https://habr.com/ru/articles/310328/)
 
 #### Стратегии оптимизации запросов

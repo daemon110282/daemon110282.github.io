@@ -8,7 +8,7 @@
 - [CDN](../../system.class/cdn.md) статичный контент
 - данных в СУБД (sqldependency)
 - данных приложения
-	- Disrtibuted Cache - [Redis](../../../technology/store/redis.md), Memcached
+	- Disrtibuted Cache - [Redis](../../../technology/store/nosql/redis.md), Memcached
 
 Параметры кеширования:
 
@@ -28,5 +28,5 @@
 
 ## Технологии
 
-- [Redis](../../../technology/store/redis.md)
+- [Redis](../../../technology/store/nosql/redis.md)
 - Memcached

@@ -18,4 +18,4 @@
 ## Технологии
 
 - [SSE](../../technology/protocols.integration/sse.md)
-- [Redis](../../technology/store/redis.md) Stream
+- [Redis](../../technology/store/nosql/redis.md) Stream

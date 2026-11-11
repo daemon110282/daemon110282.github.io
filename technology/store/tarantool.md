@@ -6,7 +6,7 @@
 
 - [хранилищ данных](../../arch/system.class/store.md) в __высоконагруженных__ проектах
   - [SQL OLTP ACID](https://www.tarantool.io/ru/)
-  - NoSQL __Graph__ [store](../store.nosql.md#graph-database) решение
+  - NoSQL __Graph__ [store](./nosql/store.nosql.md#graph-database) решение
 - [Консистентный персистентный](https://www.tarantool.io/ru/patterns/) [кэш](../../arch/pattern/performance/pattern.cache.md) БД
 - [Брокера очередей](../../arch/pattern/integration/pattern.messagebroker.md)
 - Репликация данных из Oracle или MySQL

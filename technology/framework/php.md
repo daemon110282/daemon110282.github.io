@@ -115,7 +115,7 @@
 
 ### Observability
 
-[Prometheus](../store/prometheus.md) format metric:
+[Prometheus](../store/timeseries/prometheus.md) format metric:
 
 - registry metric and type: counter, gauge set
 - [collector registry](https://github.com/promphp/prometheus_client_php)

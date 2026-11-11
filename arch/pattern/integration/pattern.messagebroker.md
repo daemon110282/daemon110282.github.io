@@ -18,15 +18,15 @@
 
 ## Плюсы-минусы
 
-Плюсы
+Плюсы:
 
 - Масштабируемость
 - Гарантированная доставка
 - Буферизация
 - Слабая связность ИС [Low Coupling](../system.design/low.coupling.md)
 - принцип "глупая шина (канал) умные клиенты"
-  
-Минусы
+
+Минусы:
 
 - Дополнительный архитектурный слой
 - Затраты на мониторинг, настройку, управление
@@ -55,7 +55,7 @@
   - Message Translator
   - Wire Tap - наблюдение за сообщениями
 - [Event Sourcing](event.sourcing.md)
-- Тип способа получения сообщений
+- __Тип способа__ получения сообщений
   - Pull (по запросу)
   - Push (подписка)
 - Как узнать когда сообщение в очередь добавлено - [Timestamp](https://www.rabbitmq.com/publishers.html#message-properties)
@@ -84,8 +84,8 @@
 
 ### Критерии выбора
 
-![Alt text](../../../img/technology/middleware/messagebus/rmq.vs.kafka.vs.ibm.png)
-![Alt text](../../../img/technology/middleware/messagebus/rmq.vs.kafka.vs.ibm2.png)
+![RMQ vs Kafka vs IBMMq](../../../img/technology/middleware/messagebus/rmq.vs.kafka.vs.ibm.png)
+![RMQ vs Kafka vs IBMMq](../../../img/technology/middleware/messagebus/rmq.vs.kafka.vs.ibm2.png)
 ![MB VS](../../../img/pattern/integration/mq.compare.jpg)
 
 #### RMQ vs Kafka
@@ -93,13 +93,15 @@
 - [RMQ](../../../technology/middleware/messagebus/rmq.md#плюсы-и-минусы)
 - [Kafka](../../../technology/middleware/messagebus/kafka.md#плюсы-и-минусы)
 	- [vs RMQ](https://blog.bytebytego.com/p/how-to-choose-a-message-queue-kafka):
-    	- сообщения __хранятся__ (так спроектирована), одно и то же сообщение может быть обработано сколько угодно раз разными консьюмерами и в разных контекстах
-    	- выше производительность, Kafka легче масштабируется горизонтально
-    	- строгая __последовательность__ сообщений
-    	- меньше гибкости в роутинге сообщений
+    	- __сообщения хранятся__
+    	- __повторная обработка__ одно и то же сообщение может быть обработано сколько угодно раз разными консьюмерами и в разных контекстах
+    	- __выше производительность__, Kafka легче масштабируется горизонтально
+    	- строгая __последовательность__ сообщений (FIFO)
+    	- __транзакции__ между несколькими топиками
+    	- __Consumer модель Pull (запрос)__, а не Push (подписка)
+    	- Меньше гибкости в роутинге сообщений
     	- нет приоритета сообщений
     	- __vendor lock__: Kafka использует собственный __двоичный протокол поверх TCP__. Вы не сможете так просто удалить или [__заменить эту платформу__](https://vc.ru/dev/869548-kafka-vs-rabbitmq-chto-nuzhno-znat-analitiku-pro-brokery-soobshenii)
-    	- __транзакции__ между несколькими топиками
 
 TODO
 
@@ -112,7 +114,7 @@ TODO
   - vs RMQ
     - поддерживает более __широкий спектр протоколов__ обмена сообщениями (+ JMS)
     - [RMQ имеет наилучшую пропускную способность](https://www.okbsapr.ru/library/publications/shkola_kzi_chadov_mikhalchenko_2019/)
-    - Менее гибкая маршрутизация сообщений
+    - __Менее гибкая маршрутизация__ сообщений
       - Artemis Реализует концепцию "адреса" для маршрутизации сообщений и поддерживает различные типы маршрутизации, [включая anycast и multicast](https://www.mastertheboss.com/rabbitmq/activemq-vs-rabbitmq-a-comparison/)
         - Паттерны: PUB-SUB
       - RMQ концепцию "обмена". Exchange в RabbitMQ - это компонент маршрутизации сообщений, который определяет, как сообщения распределяются по очередям

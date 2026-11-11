@@ -13,8 +13,8 @@
   - [Миграции ИС](arch/pattern/refactoring/migration.md)
 - [CheckList](checklist/checklist.md)
 - Методологии работ
-  - [Agile](https://agilemanifesto.org/iso/ru/principles.html) философия
-  - [Scrum](https://scrumguides.org/docs/scrumguide/v2020/2020-Scrum-Guide-Russian.pdf) реализация Agile
+  - [Agile](managment/agile.md) философия
+  - [Scrum](managment/scrum.md) реализация Agile
   - [SAFe](managment/safe.md) agile+lean  
   - [Планирование задач](managment/task_planning.md)
     - [Вертикальная декомпозиция](https://habr.com/ru/company/sportmaster_lab/blog/515910/)

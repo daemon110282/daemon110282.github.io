@@ -24,7 +24,7 @@
    2. [US](ba/user.story.md)
       1. [User Story Map](ba/user.story.md#user-story-map)
       2. [Event Storming](./sa/event.storming.md)
-   3. [БП](bp.md)
+   3. [БП](ba/bp.md)
 3. FT [Функциональные требования](sa/analytica.ft.md)
    1. [UC](sa/use.case.md)
    2. [UI UX](ui-ux.md)

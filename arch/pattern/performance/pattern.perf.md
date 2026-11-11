@@ -57,7 +57,7 @@
 - Секционирование [Шардирование](./shard.db.md)
 - [Репликация](../integration/sync.data.md)
 - Кластеризация
-- [Уровень изоляции данных](../../store.isolation.level.md)
+- [Уровень изоляции данных](../development/store.isolation.level.md)
 - Индексы
   - [ms sql](../../../technology/db/mssql/mssql.md)
 - План запросов

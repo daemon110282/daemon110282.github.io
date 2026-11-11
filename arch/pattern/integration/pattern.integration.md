@@ -41,18 +41,13 @@
   - [API REST](../../../api/api.md)
   - SOAP, [WCF](../../../technology/protocols.integration/wcf.md), ODATA
   - [GraphQL](../../../technology/protocols.integration/graphql.md)
-- Remote Procedure Invocation (RPC)
-  - __Двунаправленная связь__ для обмена сообщениями между клиентом и сервером
-    - протокол __[WebSocket](../../../technology/protocols.integration/websocket.md)__
-  - __Однонаправленная связь__
-    - HTML спецификация [Server Sent Events](../../../technology/protocols.integration/sse.md)
-    - [gRPC](../../../technology/protocols.integration/grpc.md)
+- [Remote Procedure Invocation](pattern.rpc.md) (RPC): WebSocket, SSE, gRPC
 - Middleware
   - [Message-oriented](pattern.messagebroker.md)
-    - Advanced transient messaging
-    - Message-oriented persistent
-    - log-based message queue
-  - [API Gateway](../deployment/api.gateway.md)
+    - Advanced transient messaging: ZeroMQ
+    - Message-oriented persistent: RMQ
+    - log-based message queue: Kafka
+  - [API Gateway](../deployment/api.gateway.md): NGINX, Kong, Envoy, Gravity
   - [SOA](../../style/soa.md)
 
 ## Критерии выбора
@@ -70,7 +65,7 @@
   - Издатель-Подписчики Pub-Sub
   - Шина ESB
 - Возможность использовать выбранный способ интеграции для всех приложений, участвующих в интеграции
-- Возможность внесения изменений в приложения
+- __Возможность внесения изменений в приложения__
 - Требования к обеспечению __надежности__
 - Уровень __связанности приложений__
 - Временные задержки доставки данных (__Latency__)
@@ -80,8 +75,6 @@
 
 - [Messaging Patterns](pattern.messagebroker.md)
 - [RPC Команды\Запросы](pattern.rpc.md)
-  - Sync [Request-Reply](https://www.enterpriseintegrationpatterns.com/patterns/messaging/RequestReply.html)
-  - Async Request-Reply
 - Sidecar - паттерн интеграции между приложением и сервисом, развернутый на стороне приложения
   - Отвечает за развертывание компонентов приложения в отдельном процессе или контейнере для обеспечения изоляции и инкапсуляции
   - Сквозная функциональность

@@ -3,19 +3,17 @@
 - [Security Информационная безопасность](#security-информационная-безопасность)
   - [Зачем](#зачем)
   - [Виды атак](#виды-атак)
-    - [Триггеры для подключения ОИБ, анализа ИБ](#триггеры-для-подключения-оиб-анализа-иб)
-    - [TODO](#todo)
+  - [TODO](#todo)
+  - [Меры защиты](#меры-защиты)
     - [Аутентификация](#аутентификация)
     - [Авторизация](#авторизация)
-  - [Сертификаты](#сертификаты)
-  - [Технологии](#технологии)
   - [Примеры требований](#примеры-требований)
+  - [Триггеры для подключения ОИБ, анализа ИБ](#триггеры-для-подключения-оиб-анализа-иб)
+  - [Технологии](#технологии)
 
 ## Зачем
 
 Информационная безопасность - комплекс мер, которые нужны, чтобы защитить от утечки или взлома программы, компьютерные системы и данные.
-
-[Паттерны](../../pattern/security/pattern.security.md).
 
 ## Виды атак
 
@@ -26,86 +24,66 @@
 - [Man In the Middle (MitM)](risk/mitm.md)
 - Pass The Hash - перехват хэша пароля
 
-### Триггеры для подключения ОИБ, анализа ИБ
-
-- Добавление или, напротив, отказ от внешних точек выхода в интернет
-- Изменение внешних API
-- Архитектурно-значимые изменения
-- Рефакторинг
-
-### TODO
+## TODO
 
 - АСП
 - PCI DSS
-  
+
+## Меры защиты
+
+- [Паттерны](../../pattern/security/pattern.security.md).
+- [Криптозащита](security.crypto.md#технологии)
+- [Web Application firewall](../../system.class/waf.md) (WAF) Межсетевые экраны  
+- [Аутентификация](#авторизация) и [Авторизация](#авторизация)
+  - [Identity and Access Management (IAM)](../../system.class/iam.md)
+    - [SSO](../../pattern/security/sso.md)
+      - Oauth 2, OpenID Connect, SAML
+      - WS-Federation (token)
+      - MFA или в частности [Two-factor authentication (2FA)](security.2fa.md)
+  - [Access Control Mechanism (ACM)](../../../technology/middleware/acm.md)
+
 ### Аутентификация
 
-- Состоит из:
-  - __Сеанса__ Session (ИД, Роль)
-    - Который хранится на стороне сервера
-    - ИЛИ передается и проверяется на уровне API GW\ИС
-      - API Key
-      - Token
-        - JWT
-        - [OAuth](../../../technology/protocols.integration/oauth.md)
-        - [Access](../../../technology/protocols.integration/oauth/oauth.access.token.md)
-        - [Refresh](../../../technology/protocols.integration/oauth/oauth.refresh.token.md)
-  - Контекста
-- __Способы аутентификации__ пользователей и обеспечения безопасности транзакций:
-  - одноразовые пароли на основе времени/события
-  - одноразовые пароли на основе механизма «запрос – ответ»
-  - различные механизмы подписи транзакции на базе симметричных криптографических механизмов (например, технологии EMV-CAP, OATH, проприетарных  механизмов)
-  - механизмы на основе несимметричных алгоритмов (PKI)
-  - специфические механизмы привязки к мобильным устройствам
-  - биометрия
-- Методы защиты
-  - CORS
-  - XSS
-  - [captcha](captcha.md)
-  - CSRF Token
-  - Аутентификация __HTTPS__
-    - [SSL\TLS](../../../technology/protocols.integration/tls.md)
-    - [MTLS](../../../technology/protocols.integration/tls.md)
-  - [Схемы аутентификации](security.api.md#схемы-аутентификации)
-- Фреймворки
-  - [Spring](../../../technology/framework/java.spring.md) Security
-  - NodeJS [Passport](https://www.passportjs.org/)
-- [IAM](../../../arch/system.class/iam.md)
-  - [SSO](../../pattern/security/sso.md)
-  - MFA
+Состоит из:
+
+- __Сессии__ Session (ИД, Роль)
+  - Который хранится на стороне сервера
+  - ИЛИ передается и проверяется на уровне API GW\ИС
+    - API Key
+    - Token
+      - JWT
+      - [OAuth](../../../technology/protocols.integration/oauth.md)
+      - [Access](../../../technology/protocols.integration/oauth/oauth.access.token.md)
+      - [Refresh](../../../technology/protocols.integration/oauth/oauth.refresh.token.md)
+- Контекста
+
+__Способы аутентификации__ пользователей и обеспечения безопасности транзакций:
+
+- одноразовые пароли на основе [времени/события TOTP](security.2fa.md#паттерны)
+- одноразовые пароли на основе механизма «запрос – ответ»
+- различные механизмы подписи транзакции на базе симметричных криптографических механизмов (например, технологии EMV-CAP, OATH, проприетарных  механизмов)
+- механизмы на основе несимметричных алгоритмов (PKI)
+- специфические механизмы привязки к мобильным устройствам
+- [passwordless](security.2fa.md#passwordless-беспарольные-методы): биометрия
+
+Методы защиты:
+
+- CORS
+- XSS
+- [captcha](captcha.md)
+- CSRF Token
+- Аутентификация __HTTPS__
+  - [SSL\TLS](../../../technology/protocols.integration/tls.md)
+  - [MTLS](../../../technology/protocols.integration/tls.md)
+  - [Сертификаты безопасности](security.certificate.md) (Security Certificates) нужны для подтверждения подлинности участников информационного взаимодействия, обеспечения защищённого обмена данными (ЭЦП, шифрование, целостность), установления доверия между системами.
+- [Схемы аутентификации API](security.api.md#схемы-аутентификации)
 
 ### Авторизация
 
-- Access Control List (ACL)
+- __Access Control List__ (ACL)
   - по URI
   - по IP [Nginx](https://nginx.org/ru/docs/http/ngx_http_access_module.html) [white list Apache, Proxy Server, Firewall](https://www.rapidseedbox.com/blog/ip-whitelisting) - only pre-approved IP addresses can interact with your system
 - [RBAC\ABAC](../../../technology/middleware/acm.md)
-
-## Сертификаты
-
-- Виды сертификатов
-  - клиентский client certificate для аунтентификации Mutual TLS (mTLS)
-  - самоподписанный self signed certificate
-- Типы форматов сертификатов
-  - сертификат удостоверяющего центра CA __.PEM__
-  - client certificate
-    - __.CRT__ file and the __.KEY__ file  
-    - __.PFX__ file for your certificate
-  - [Пример запроса с сертификатом в Postman](https://learning.postman.com/docs/sending-requests/certificates/)
-- [Проверка алгоритма подписи примененного к сертификату](https://sysos.ru/?p=589)
-  - 1.2.643.7.1.1.3.2, то сертификат сгенерирован по ГОСТ Р 34.10-2012
-  - Если установлен КриптоПро, то в Алгоритме подписи будет отображаться ГОСТ Р 34.11-2012/34.10-2012 256 бит.
-
-## Технологии
-
-- [Криптозащиты](security.crypto.md#технологии)
-- [Web Application firewall](../../system.class/waf.md) (WAF) Межсетевые экраны  
-- [Identity and Access Management (IAM)](../../system.class/iam.md)
-  - [SSO](../../pattern/security/sso.md)
-    - Oauth 2, OpenID Connect, SAML
-    - WS-Federation (token)
-    - [two-factor authentication (2FA)](security.2fa.md)
-- [Access Control Mechanism (ACM)](../../../technology/middleware/acm.md)
 
 ## Примеры требований
 
@@ -115,3 +93,17 @@
 - SSL-сертификаты должны быть выпущены доверенными удостоверяющими центрами
 - В случае, если взаимодействие осуществляется по внешним сетям передачи данных (далее – внешние сети), и участвующая во взаимодействии ИС Компании не является публичной , сетевой доступ к ИС Компании из внешних сетей, открываемый для обеспечения взаимодействия, должен быть ограничен конкретными адресами внешней ИС или сетью ее владельца  и конкретными сетевыми протоколами, используемыми ИС Компании.
 - Токен (id сессии), при его использовании, должен быть динамическим (актуальным только для одной сессии одного клиента) и не должен передаваться в URL.
+
+## Триггеры для подключения ОИБ, анализа ИБ
+
+- Добавление или, напротив, отказ от внешних точек выхода в интернет
+- Изменение внешних API
+- Архитектурно-значимые изменения
+- Рефакторинг
+
+## Технологии
+
+Фреймворки:
+
+- [Spring](../../../technology/framework/java.spring.md) Security
+- NodeJS [Passport](https://www.passportjs.org/)

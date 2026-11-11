@@ -1,15 +1,15 @@
 # Эталонные архитектуры (Reference Architecture)
 
-- [MSA](style/msa.md)
+- [MSA](../style/msa.md)
   - TODO Nginx
-  - [Брокерское приложение](ref/ba.ti.md)
-- [EDA](style/eda.md)
-  - [BIAN](ref/bian.md)
-- [MTA](pattern/mta/mta.md)
+  - [Брокерское приложение](ba.ti.md)
+- [EDA](../style/eda.md)
+  - [BIAN](bian.md)
+- [MTA](../pattern/system.design/mta/mta.md)
   - TODO ABP
-- [Хранилище данных](system.class/store.md)
-- [BigData](ref/bigdata.md)
-- [Mobile](system.class/mobile.md)
+- [Хранилище данных](../system.class/store.md)
+- [BigData](bigdata.md)
+- [Mobile](../system.class/mobile.md)
   - TODO
 - [A\B testing](/arch/ref/abtesting.md)
 - Scaling Application

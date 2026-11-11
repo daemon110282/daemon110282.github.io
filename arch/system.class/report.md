@@ -19,7 +19,7 @@
   - Queries run against the reporting database **don't add to the load on the operational database**
   - Отчеты долго формируются (тяжелые)
   - Рост числа пользователей, данных
-  - Повышение [качеств архитектуры](../arch.ability.md) ИС: доступность, масштабируемость
+  - Повышение [качеств архитектуры](../ability/arch.ability.md) ИС: доступность, масштабируемость
 - can store derived data in the database, making it easier to write reports that use the derived data without having to introduce a separate set of derivation logic
 - may have multiple reporting databases for different reporting needs
 

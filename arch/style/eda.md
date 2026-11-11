@@ -9,7 +9,7 @@
 
 ## Зачем
 
-[Архитектурный стиль](../arch.styles.md):
+[Архитектурный стиль](arch.styles.md):
 
 - __Несколько подсистем__ должны обрабатывать __одни и те же события__
 - Обработка в режиме __реального времени с минимальной задержкой__
@@ -51,16 +51,16 @@
 
 ## Паттерны
 
-- two main topologies
-  - The __mediator topology__ is commonly used when you need to __orchestrate__ ([оркестрация](../pattern/integration/orchestration-choreography.md)) multiple steps within an event through a central mediator
+- две топологии
+  - Топология «посредник» (__mediator topology__) часто применяется в тех случаях, когда необходимо обеспечить __[оркестрацию](../pattern/integration/orchestration-choreography.md)__ нескольких этапов обработки события посредством центрального посредника.
   - __broker topology__ (__хореография__) is used when you want to chain events together without the use of a central mediator
 - __Событие__ Event driven
   - [Publish-subscribe](../../technology/middleware/messagebus/rmq.md)
     - event-base
     - [shared-data space](https://apolomodov.medium.com/coa-distributed-systems-4th-ed-2-architecture-af563b2332bd)
   - Подходы к передаче событий
-    - только факт события ![event](../../img/arch/eda/eda.event.jpg)
-    - полное состояние объект ![state](../../img/arch/eda/eda.state.jpg)
+    - только __факт события__ ![event](../../img/arch/eda/eda.event.jpg)
+    - __полное состояние объекта__ ![state](../../img/arch/eda/eda.state.jpg)
 - __Команда__ Command driven
   - [Task (Worker) Queue](../../technology/middleware/messagebus/rmq.md)
   - [RPC (команды)](../../technology/middleware/messagebus/rmq.md)

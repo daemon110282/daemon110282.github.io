@@ -5,5 +5,5 @@
 ## Документация
 
 [Элемент wsdl:documentation](https://ws.devinotele.com/SmsService.asmx?WSDL)
-[OpenAPI for WSDL](https://api.integrum.ru/companies/#/)	
+[OpenAPI for WSDL](https://api.integrum.ru/companies/#/)
 	как сделали Вручную?

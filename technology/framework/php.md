@@ -65,16 +65,16 @@
       - обрабатывает события [yii2-queue](https://github.com/yiisoft/yii2-queue/blob/master/docs/guide/usage.md#handling-events): startExec, afterExec, afterError
         - в БД хранит статистику
         - repeat, create, delete, find, worker status, duration task
-    - [статус задач и workers](https://github.com/zhuravljov/yii2-queue-monitor), длительность ожидания в очереди, выполнения задач, кол-во попыток выполнения
+      - [статус задач и workers](https://github.com/zhuravljov/yii2-queue-monitor), длительность ожидания в очереди, выполнения задач, кол-во попыток выполнения
       - __worker не поддерживаются AMQP driver__ (Redis поддерживает __при запуске в режиме run через cron__ и периодическом получении задач)
       - обрабатывает события [yii2-queue](https://github.com/yiisoft/yii2-queue/blob/master/docs/guide/usage.md#handling-events): afterPush, beforeExec, afterExec, afterError, workerStart, workerStop, workerLoop
     	- в БД хранит статистику отдельные таблицы: push, exec, worker
     	- очистка таблиц статистики
-    - failed task handle
+  	- failed task handle
       - to [DB, file log](https://github.com/shmilyzxt/yii2-queue) for driver Redis, DB, Beanstalkd
       - to [DB](https://github.com/silverslice/yii2-queue-failed)
       	- for Any driver?
-        - no GUI
+      	- no GUI
         - CLI list, run all\byID, delete
 
 процессов обработчиков очереди задач на уровне [supervisord](../os/supervisord.md)

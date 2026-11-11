@@ -4,6 +4,8 @@
 	- [Зачем](#зачем)
 	- [Плюсы-минусы](#плюсы-минусы)
 	- [Patterns](#patterns)
+		- [Middleware](#middleware)
+		- [Messaging Patterns](#messaging-patterns)
 	- [Технологии](#технологии)
 		- [Критерии выбора](#критерии-выбора)
 			- [RMQ vs Kafka](#rmq-vs-kafka)
@@ -34,30 +36,35 @@
 
 ## Patterns
 
+### Middleware
+
 - [Advanced transient messaging](https://apolomodov.medium.com/coa-distributed-systems-4th-ed-4-communication-c5ce331015e9)
-	- ZeroMQ
-- Message-oriented persistent - Message Bus
-	- Транспорт
-		- [RMQ](../../../technology/middleware/messagebus/rmq.md)  
-		- ActiveMQ
+  - ZeroMQ
+- Message-oriented persistent - Message Bus - Транспорт
+  - [RMQ](../../../technology/middleware/messagebus/rmq.md)  
+  - ActiveMQ
 - __Log-based message queue__
-	- [Kafka](../../../technology/middleware/messagebus/kafka.md)
-- [Messaging Patterns](https://www.enterpriseintegrationpatterns.com/patterns/messaging/)
-  - [MS](https://docs.microsoft.com/ru-ru/azure/architecture/patterns/category/messaging)
-  - Pub\Sub События
-  - Task (Worker) Queue
-  - [Очереди с приоритетом](https://habr.com/ru/companies/arcadia/articles/571442/)
-  - Content-Based Routing
-  - Filter message
-  - Dynamic Router
-  - Splitter
-  - Dead Leater Channel
-  - Message Translator
-  - Wire Tap - наблюдение за сообщениями
-- [Event Sourcing](event.sourcing.md)
+  - [Kafka](../../../technology/middleware/messagebus/kafka.md)
 - __Тип способа__ получения сообщений
   - Pull (по запросу)
   - Push (подписка)
+
+### Messaging Patterns
+
+[Messaging Patterns](https://www.enterpriseintegrationpatterns.com/patterns/messaging/)
+[MS](https://docs.microsoft.com/ru-ru/azure/architecture/patterns/category/messaging)
+
+- Pub\Sub События
+- Task (Worker) Queue
+- [Очереди с приоритетом](https://habr.com/ru/companies/arcadia/articles/571442/)
+- Content-Based Routing
+- Filter message
+- Dynamic Router
+- Splitter
+- Dead Leater Channel
+- Message Translator
+- Wire Tap - наблюдение за сообщениями
+- [Event Sourcing](event.sourcing.md)
 - Как узнать когда сообщение в очередь добавлено - [Timestamp](https://www.rabbitmq.com/publishers.html#message-properties)
 
 ## Технологии

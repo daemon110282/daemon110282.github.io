@@ -16,7 +16,9 @@
 
 ### Пользователи
 
-TODO
+- Сквозной переход (Deep Linking / SSO)
+- Фреймы и встраивание (Iframes / Widgets)
+- Событийная или клиентская интеграция через расширения (Browser Extensions / Desktop Agents)
 
 ### Данные
 
@@ -41,7 +43,7 @@ TODO
   - [GraphQL](../../../technology/protocols.integration/graphql.md)
 - Remote Procedure Invocation (RPC)
   - __Двунаправленная связь__ для обмена сообщениями между клиентом и сервером
-    - протокол __WebSocket__
+    - протокол __[WebSocket](../../../technology/protocols.integration/websocket.md)__
   - __Однонаправленная связь__
     - HTML спецификация [Server Sent Events](../../../technology/protocols.integration/sse.md)
     - [gRPC](../../../technology/protocols.integration/grpc.md)
@@ -57,21 +59,22 @@ TODO
 
 Способа интеграции:
 
-- Производительность (RPS)?
+- __Производительность__
   - менее 10k? RPS
     - RPC + LB (API GW)
   - более Х RPS?
     - MessageBus
       - RMQ 20k RPS
-- Схема интеграции
+- __Схема интеграции__
   - Точка-точка Point2Point
   - Издатель-Подписчики Pub-Sub
+  - Шина ESB
 - Возможность использовать выбранный способ интеграции для всех приложений, участвующих в интеграции
 - Возможность внесения изменений в приложения
-- Требования к обеспечению надежности
-- Уровень связанности приложений
-- Временные задержки доставки данных (Latency)
-- Требования к защите данных
+- Требования к обеспечению __надежности__
+- Уровень __связанности приложений__
+- Временные задержки доставки данных (__Latency__)
+- Требования к __защите данных__
 
 ## Паттерны
 
@@ -79,15 +82,14 @@ TODO
 - [RPC Команды\Запросы](pattern.rpc.md)
   - Sync [Request-Reply](https://www.enterpriseintegrationpatterns.com/patterns/messaging/RequestReply.html)
   - Async Request-Reply
-- [Обработка сбоев: Retry Policy, Rate Limit, Circuit Breaker](../system.design/fault.tolerance/pattern.failure.md)
 - Sidecar - паттерн интеграции между приложением и сервисом, развернутый на стороне приложения
   - Отвечает за развертывание компонентов приложения в отдельном процессе или контейнере для обеспечения изоляции и инкапсуляции
   - Сквозная функциональность
 - Ambassador Посредник
   - nginx
-- Anti-Corruption Layer
+- [Anti-Corruption Layer](../system.design/pattern.acl.md)
 - [DbC - Design by contract](https://habr.com/ru/company/southbridge/blog/679906/)
-- [Fault Tolerance](../system.design/fault.tolerance/pattern.failure.md): Retry Policy, Circuit Breaker, Rate Limit
+- [Обработка сбоев Fault Tolerance](../system.design/fault.tolerance/pattern.failure.md): Retry Policy, Circuit Breaker, Rate Limit
 - [Sync Data](sync.data.md)
 
 ## TODO
@@ -102,9 +104,10 @@ TODO
 - SOA
   - [ESB](../../../technology/middleware/esb.md)
 - [Распределенные файловые системы](../../../technology/filesystem/dfs.md)
-- GraphQL
-- SOAP
+- Direct
+  - GraphQL
+  - [SOAP](../../../api/wsdl.md)
 - RPC
   - [WebSocket](../../../technology/protocols.integration/websocket.md)
   - [Server Sent Events](../../../technology/protocols.integration/sse.md)
-  - gRPC
+  - [gRPC](../../../technology/protocols.integration/grpc.md)

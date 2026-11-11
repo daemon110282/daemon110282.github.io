@@ -14,7 +14,7 @@
   - [Кросс-системные правила и руководства](#кросс-системные-правила-и-руководства)
   - [Фитнес функции](#фитнес-функции)
   - [Категории](#категории)
-  - [TODO](#todo-1)
+  - [TODO charactestics](#todo-charactestics)
 
 ## Стандарты  
 
@@ -34,28 +34,28 @@
   - Правильность - точность выполнения бизнес функций
   - Способность к взаимодействию - интеграциям
   - Соответствие - стандартам принятым в компании
-  - Защищенность [Security Безопасность](ability/security.md)
+  - Защищенность [Security Безопасность](security/security.md)
 
 ### Надежность Reliability
 
-- [Надежность Reliability](ability/reliability.md)
+- [Надежность Reliability](reliability.md)
   - Стабильность (Maturity) - количество отказов системы за единицу времени. Т.е. частота сбоев при штатной работе системы.
-    - Изоляция сбоев [Resilience](ability/resilience.md)
-  - [Отказоустойчивость Fault tolerance](ability/fault.tolerance.md)
+    - Изоляция сбоев [Resilience](resilience.md)
+  - [Отказоустойчивость Fault tolerance](fault.tolerance.md)
   - Восстанавливаемость Recoverability - после сбоев
-  - [Доступность Availability (Эксплуатационные)](ability/availability.md)
+  - [Доступность Availability (Эксплуатационные)](availability.md)
   
 ### Быстродействие Performance
 
-- Быстродействие [Производительность Performance](ability/performance/performance.md) (Эксплуатационные)  
+- Быстродействие [Производительность Performance](performance/performance.md) (Эксплуатационные)  
 
 ### Переносимость Portability
 
 - Переносимость (Мобильность) Portability
   - Адаптируемость Adaptability  
   - Простота внедрения Installability
-  - Замещаемость [Replaceability](ability/replaceability.md)
-  - Возможность повторного использования [Reusability](ability/reusability.md) (Единая кодовая база)
+  - Замещаемость [Replaceability](replaceability.md)
+  - Возможность повторного использования [Reusability](reusability.md) (Единая кодовая база)
   - Модифицируемость Modifiability (Эволюция)
     - Способность к взаимодействию, изменениям
     - Сложность дальнейших интеграции
@@ -68,16 +68,16 @@
   - Анализируемость (Analyzability)
   - Изменяемость (Changeability)
   - Устойчивость (Stability)
-  - [Тестируемость Testability](ability/testability.md)
+  - [Тестируемость Testability](testability.md)
   - Конфигурируемость Configurability
-  - [Наблюдаемость Observability](ability/observability.md)
+  - [Наблюдаемость Observability](observability.md)
 
 ### Пользовательский опыт Usability
 
 - Удобство использования Usability (Пользовательский опыт)
   - Практичность Usability
   - Удобство Accessibility (Пользовательский опыт)
-  - [Локализация Localization](pattern/system.design/i18n.md) (Пользовательский опыт)
+  - [Локализация Localization](../pattern/system.design/i18n.md) (Пользовательский опыт)
 
 ### TODO
 
@@ -87,7 +87,7 @@
   - Живучесть Robustness  
 - Гибкость Flexibility
 - Целостность Integrity
-- [Автодокументирование API](../api/api.md)
+- [Автодокументирование API](../../api/api.md)
 - CI-CD куда?
 - scalability interoperability
 - responsiveness
@@ -113,7 +113,7 @@
 - Data formats Форматы данных
 - Redundant data Избыточность данных
 - BI interfaces Интерфейсы с BI
-- [Logging, Monitoring Логирование и мониторинг](ability/observability.md)
+- [Logging, Monitoring Логирование и мониторинг](observability.md)
 
 ## Фитнес функции
 
@@ -139,5 +139,5 @@ Fitness Functions
 
 ## TODO charactestics
 
-- [TODO Excel list](ability/Quality-Attributes-2013.xlsx)
-- ![nft](../img/arch/nft.png)
+- [TODO Excel list](Quality-Attributes-2013.xlsx)
+- ![nft](../../img/arch/nft.png)

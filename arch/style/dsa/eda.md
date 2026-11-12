@@ -55,15 +55,15 @@
   - Топология «посредник» (__mediator topology__) часто применяется в тех случаях, когда необходимо обеспечить __[оркестрацию](../../pattern/integration/orchestration-choreography.md)__ нескольких этапов обработки события посредством центрального посредника.
   - __broker topology__ (__хореография__) is used when you want to chain events together without the use of a central mediator
 - __Событие__ Event driven
-  - [Publish-subscribe](../../../technology/middleware/messagebus/rmq.md)
+  - [Publish-subscribe](../../../technology/middleware/messagebus/rmq/rmq.md)
     - event-base
     - [shared-data space](https://apolomodov.medium.com/coa-distributed-systems-4th-ed-2-architecture-af563b2332bd)
   - Подходы к передаче событий
     - только __факт события__ ![event](../../../img/arch/eda/eda.event.jpg)
     - __полное состояние объекта__ ![state](../../../img/arch/eda/eda.state.jpg)
 - __Команда__ Command driven
-  - [Task (Worker) Queue](../../../technology/middleware/messagebus/rmq.md)
-  - [RPC (команды)](../../../technology/middleware/messagebus/rmq.md)
+  - [Task (Worker) Queue](../../../technology/middleware/messagebus/rmq/rmq.md)
+  - [RPC (команды)](../../../technology/middleware/messagebus/rmq/rmq.md)
 - __Запросы и команды отдельно__ [CQRS](../../pattern/performance/pattern.cqrs.md) - command query request segregation
 - Состояние объекта - __последовательность событий изменений объекта__ [Event sourcing](../../pattern/integration/app/event.sourcing.md)
 - __[Распределенные транзакции](../../pattern/transaction/transaction.md)__ (лучше не делать)

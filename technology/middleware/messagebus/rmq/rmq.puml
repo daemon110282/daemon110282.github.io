@@ -1,0 +1,38 @@
+@startuml (id=rmq)
+
+class rmq as "RMQ \n Broker"
+rmq --> vhosts : включает
+vhosts --> exchange : содержит
+
+class exchange_type as "Типы"
+exchange ---> exchange_type : делится на
+class exchange_type_Header as "Header"
+class exchange_type_Topic as "Topic"
+class exchange_type_Fanout as "Fanout"
+class exchange_type_Direct as "Direct"
+exchange_type --> exchange_type_Header: по Header
+exchange_type --> exchange_type_Topic: по строке "ro.alexandrugris.*"
+exchange_type --> exchange_type_Fanout: без условий
+exchange_type --> exchange_type_Direct: по routing key
+
+class dlx as "Dead Letter \n eXchange (DLX)"
+exchange ---> dlx
+note right: x-mesage-ttl — превышение времени жизни \n x-max-length — превышение длины очереди
+
+producer --> message : отправляет message
+note left: delivery_mode=2 - persistance \n message_type
+
+message --> exchange: отправляется
+exchange --> queue: маршрутизирует message
+note left: ttl - удаление \n по timestamp \n maxLength \n durable - persistance
+
+message --> queue: отправляется
+
+' message --> message_Header: включает
+' message --> message_Body: включает
+
+consumer <-- queue : pull (подписка) message
+
+
+
+@enduml

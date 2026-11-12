@@ -168,7 +168,7 @@ Event Model
 - Snuba
 - Clickhouse - управляет Alert
 ![Clickhouse](https://images.ctfassets.net/em6l9zw4tzag/162no5P9QQXMQbvY7Hu8zz/9170098ce2d51a6c165664d659555975/snuba-diagram.png)
-- [Kafka](../middleware/messagebus/kafka.md)
+- [Kafka](../middleware/messagebus/kafka/kafka.md)
 - [Redis](../store/nosql/redis.md)
 - PostgreSQL
 - Python

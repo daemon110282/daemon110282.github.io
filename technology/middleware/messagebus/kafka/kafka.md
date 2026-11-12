@@ -17,13 +17,13 @@
 
 ## Зачем
 
-Реализация [паттерна интеграции](../../../arch/pattern/integration/pattern.integration.md) [Message Broker](../../../arch/pattern/integration/app/pattern.messagebroker.md).
+Реализация [паттерна интеграции](../../../../arch/pattern/integration/pattern.integration.md) [Message Broker](../../../../arch/pattern/integration/app/pattern.messagebroker.md).
 
-[Критерии выбора](../../../arch/pattern/integration/app/pattern.messagebroker.md#критерии-выбора).
+[Критерии выбора](../../../../arch/pattern/integration/app/pattern.messagebroker.md#критерии-выбора).
 
 UC:
 
-- большие данные [BigData](../../../arch/style/dsa/bigdata.md) и __потоковую обработку Streaming Data__
+- большие данные [BigData](../../../../arch/style/dsa/bigdata.md) и __потоковую обработку Streaming Data__
 - Log processing and analysis
 - Data streaming in recommendations
 - System monitoring and alerting
@@ -40,7 +40,7 @@ UC:
   - __Шардинг__ из коробки
 - Поток событий
 - __согласованность__ данных
-  - __репликация__ топиков (replication-factor) ![replica](../../../img/technology/middleware/messagebus/kafka.replica.png)
+  - __репликация__ топиков (replication-factor) ![replica](../../../../img/technology/middleware/messagebus/kafka.replica.png)
     - master-slave (Leader-Follower)
     - возможна задержка в данных. Запись сообщений всегда в Leader. Follower получает pull от Leader сообщения периодически
     - in-sync replicas (ISR) - синхронная запись в Follower partition, замедляют запись сообщений
@@ -66,12 +66,12 @@ UC:
 
 Фундаментальное [отличие Kafka от брокеров очередей](https://slurm.io/tpost/pnyjznpvr1-apache-kafka-osnovi-tehnologii) состоит в том:
 
-- __Сообщения хранятся__ на брокере, но есть ttl ![partition](../../../img/technology/middleware/messagebus/kafka.partition.png)
+- __Сообщения хранятся__ на брокере, но есть ttl ![partition](../../../../img/technology/middleware/messagebus/kafka.partition.png)
   - Сообщения в Kafka организованы и хранятся в именованных __топиках (Topics)__, каждый топик состоит из одной и более __партиций (Partition)__, распределённых __между брокерами внутри одного кластера__
 - __Консьюмер потребляет сообщения через запрос (pull)__ (consumer)
   - __консьюмеры сами отправляют запросы__ в брокер (в RMQ push по умолчанию) раз в n миллисекунд для получения новой порции сообщений
     - позволяет __группировать сообщения в пакеты (batch)__, достигая лучшей пропускной способности
-  - отмечают (__commit__) обработанные сообщения с помощью оффсетов. __Оффсет__ (Offset) – это номер сообщения в партиции ![consumer](../../../img/technology/middleware/messagebus/kafka.consumer.offset.png)
+  - отмечают (__commit__) обработанные сообщения с помощью оффсетов. __Оффсет__ (Offset) – это номер сообщения в партиции ![consumer](../../../../img/technology/middleware/messagebus/kafka.consumer.offset.png)
     - либо об успешной обработке (offset-commit)
     - либо об ошибке (offset-reset)
     - type of commit
@@ -100,7 +100,7 @@ UC:
    - acks=0 — без ожидания подтверждения (возможна потеря данных, высокая скорость).
    - acks=1 — подтверждение только от __лидера партиции__ (среднее).
    - acks=all — подтверждение от __всех реплик__ (максимальная надёжность).
-- Процесс __produce__ [публикации сообщений](https://www.youtube.com/watch?v=-AZOi3kP9Js) ![producer](../../../img/technology/middleware/messagebus/kafka.producer.png)
+- Процесс __produce__ [публикации сообщений](https://www.youtube.com/watch?v=-AZOi3kP9Js) ![producer](../../../../img/technology/middleware/messagebus/kafka.producer.png)
   - Модели доставки сообщений [delivery semantic](https://habr.com/ru/articles/738874/)
     - at most once (не более одного)
     - al least once (хотя бы один, возможны дубликаты)

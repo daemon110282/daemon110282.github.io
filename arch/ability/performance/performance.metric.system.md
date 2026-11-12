@@ -75,4 +75,4 @@
 
 ## MessageBus
 
-- [rmq](../../../technology/middleware/messagebus/rmq.md)
+- [rmq](../../../technology/middleware/messagebus/rmq/rmq.md)

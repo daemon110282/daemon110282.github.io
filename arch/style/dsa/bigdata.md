@@ -78,7 +78,7 @@ UC:
 - [Architecture Reference](../../ref/bigdata.md)
 - Сбор
   - Streaming Data
-    - [Kafka](../../../technology/middleware/messagebus/kafka.md)
+    - [Kafka](../../../technology/middleware/messagebus/kafka/kafka.md)
     - Amazon Kinezis
   - [CDC](../../pattern/integration/data/cdc.md)
   - Репликация, синхронизация данных [Sync Data](../../pattern/integration/data/sync.data.md)
@@ -114,7 +114,7 @@ TODO:
 
 - Сбор
   - Streaming
-    - [Kafka](../../../technology/middleware/messagebus/kafka.md)
+    - [Kafka](../../../technology/middleware/messagebus/kafka/kafka.md)
     - Центры событий Azure
     - Центры Интернета вещей Azure
   - CDC: Debezium

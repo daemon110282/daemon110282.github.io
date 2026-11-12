@@ -1,4 +1,4 @@
-# RPC
+# Remote Procedure Invocation (RPC)
 
 ## Зачем
 

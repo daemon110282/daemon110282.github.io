@@ -8,7 +8,7 @@
     - [Режимы доставки сообщений](#режимы-доставки-сообщений)
   - [Паттерны](#паттерны)
     - [Queue](#queue)
-    - [connection](#connection)
+    - [Connection](#connection)
     - [Persistence](#persistence)
     - [Интеграции](#интеграции)
       - [Task (Worker) Queue](#task-worker-queue)
@@ -26,43 +26,41 @@
 
 ## Зачем
 
-Реализация [паттерна интеграции](../../../arch/pattern/integration/pattern.integration.md) [Message Broker](../../../arch/pattern/integration/app/pattern.messagebroker.md).
+Реализация [паттерна интеграции](../../../../arch/pattern/integration/pattern.integration.md) [Message Broker](../../../../arch/pattern/integration/app/pattern.messagebroker.md) в [Event Driven Architecture (EDA)](../../../../arch/style/dsa/eda.md).
 
-[Критерии выбора](../../../arch/pattern/integration/app/pattern.messagebroker.md#критерии-выбора).
+[Критерии выбора Kafka vs RMQ](../../../../arch/pattern/integration/app/pattern.messagebroker.md#критерии-выбора).
 
 ## Плюсы и минусы
 
 Плюсы:
 
-- [«Продажа» Производительность](https://habr.com/ru/company/oleg-bunin/blog/310418/)
+- «Продажа» [Производительность](https://habr.com/ru/company/oleg-bunin/blog/310418/)
 - RabbitMQ дает гарантии __одноразовой доставки__ и __хотя бы одной доставки__, но не __ровно одной доставки__
-- Message timing control (controlling either message expiry or message delay)
-- Advanced fault handling capabilities, in cases when consumers are more likely to fail to process messages (either temporarily or permanently).
-- Advanced and flexible __routing rules__
-- Simpler consumer implementations
-- перешли на постоянные (persistent) очереди, которые не удаляются в момент разрыва подключения, но повесили на них политику «протухания» (expire), если пользователя нет более 5 минут
-- Приоритет сообщений
+- Управление временем обработки сообщений (контроль истечения срока действия сообщения TTL или задержки сообщения)
+- Расширенные возможности __обработки ошибок__ в случаях, когда потребители с большей вероятностью не смогут обработать сообщения (временно или навсегда).
+- Расширенные и __гибкие правила маршрутизации__
+- Упрощенная реализация потребителей Consumer
+- __Приоритет__ сообщений
 
 Минусы:
 
-- Агрегация в пачки нет в RabbitMQ (Kafka Есть)
-- [vs Kafka](../../../arch/pattern/integration/app/pattern.messagebroker.md#rmq-vs-kafka)
-- нет параметра Expire для обменников (только для очередей)
-- __Нет шардирования__, в kafka есть topic-несколько partition, есть несколько инстансов где очереди размещены
-- Производительность ниже [Kafka](kafka.md)
+- Агрегации сообщений в __пачки batch нет__ в RabbitMQ ([vs Kafka](../../../../arch/pattern/integration/app/pattern.messagebroker.md#rmq-vs-kafka))
+- Нет параметра Expire для обменников (только для очередей)
+- Производительность ниже чем [Kafka](../kafka/kafka.md)
+- Отказоустойчивость ниже, __нет шардирования__ чем в kafka (есть topic-несколько partition, есть несколько инстансов где очереди размещены)
 
 ## Функции
 
 ### Exchange Обменник
 
 - Типы
-  - __headers__
+  - __Headers__
     - Message is sent to the queues which match the headers.
     - Routing key should not be set. Но если установлены, то можно биндить очередь и по RK.
     - Match type should indicate if [ALL](https://thewebland.net/development/devops/rabbitmq/exchanges-routing-kyes-and-bindingi/) (логичекое И) or [ANY (логичекое ИЛИ) header must match](https://codedestine.com/rabbitmq-headers-exchange/)
-  - [__direct__](https://habr.com/ru/post/489086/) - message is sent to a named exchange, __routing key__ is specified so information only reaches the queues matching the pattern
-  - __topic__ - Routing key is a string separated by dots and wildcards. E.g.: "ro.alexandrugris.*"
-  - [__fanout__](https://thewebland.net/development/devops/rabbitmq/exchanges-routing-kyes-and-bindingi/)
+  - [__Direct__](https://habr.com/ru/post/489086/) - message is sent to a named exchange, __routing key__ is specified so information only reaches the queues matching the pattern
+  - __Topic__ - Routing key is a string separated by dots and wildcards. E.g.: "ro.alexandrugris.*"
+  - [__Fanout__](https://thewebland.net/development/devops/rabbitmq/exchanges-routing-kyes-and-bindingi/)
 - [__Exchange-to-Exchange (E2E)__](https://habr.com/ru/articles/489086/)
 
 ### Режимы доставки сообщений
@@ -74,8 +72,8 @@
 
 ## Паттерны
 
-- [VHosts](rmq/rmq.vhost.md)
-- [Failure](rmq/rmq.failure.md)
+- [VHosts](rmq.vhost.md)
+- [Failure](rmq.failure.md)
 - [Очереди с приоритетом](https://habr.com/ru/companies/arcadia/articles/571442/)
 - [RabbitMQ Delayed Message Plugin](https://www.gokhan-gokalp.com/en/messaging-yapilarinda-masstransit-ile-error-ve-redeliver-handling/)
 - Scheduling messages using Quartz.Net
@@ -85,7 +83,7 @@
 - [Keep your queue short (if possible)](https://www.cloudamqp.com/blog/part1-rabbitmq-best-practice.html)
 - Limit queue size with TTL or max-length
 
-### connection
+### Connection
 
 - 1 Соединение connection на процесс-поток
 - Х каналов channel на каждый поток (не шарить каналы между потоками)
@@ -137,7 +135,7 @@
 
 #### RPC (команды)
 
-- [паттерн EIP](../../../arch/pattern/integration/app/pattern.rpc.md)
+- [паттерн EIP](../../../../arch/pattern/integration/app/pattern.rpc.md)
 - EasyNetQ [RPC](https://github.com/EasyNetQ/EasyNetQ/wiki/Request-Response)
 - [Exchange type: direct](https://www.rabbitmq.com/tutorials/tutorial-six-dotnet.html), message can be sent to default exchange with a specified routing key and response is received on a specified unique response queue, owned by the client
 - [correlation_id, reply_to](https://habr.com/ru/post/236221/)
@@ -151,7 +149,7 @@
 
 ### MTA
 
-- [MQ](../../../arch/pattern/system.design/mta/mta.mq.md)
+- [MQ](../../../../arch/pattern/system.design/mta/mta.mq.md)
 
 ### Версионирование типов сообщений
 

@@ -15,7 +15,7 @@
 - JSON RPC
 - [GraphQL](protocols.integration/graphql.md)
 - SOAP
-- [AMQP](middleware/messagebus/rmq.md)
+- [AMQP](middleware/messagebus/rmq/rmq.md)
 - MQTT
 - DB Link
 - [OAuth](protocols.integration/oauth/oauth.md)

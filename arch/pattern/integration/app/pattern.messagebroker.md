@@ -38,16 +38,18 @@
 
 ### Middleware
 
-- [Advanced transient messaging](https://apolomodov.medium.com/coa-distributed-systems-4th-ed-4-communication-c5ce331015e9)
-  - ZeroMQ
 - Message-oriented persistent - Message Bus - Транспорт
-  - [RMQ](../../../../technology/middleware/messagebus/rmq.md)  
+  - [RMQ](../../../../technology/middleware/messagebus/rmq/rmq.md)  
   - ActiveMQ
 - __Log-based message queue__
-  - [Kafka](../../../../technology/middleware/messagebus/kafka.md)
-- __Тип способа__ получения сообщений
-  - Pull (по запросу)
-  - Push (подписка)
+  - [Kafka](../../../../technology/middleware/messagebus/kafka/kafka.md)
+- [Advanced transient messaging](https://apolomodov.medium.com/coa-distributed-systems-4th-ed-4-communication-c5ce331015e9)
+  - ZeroMQ
+
+__Тип способа__ получения сообщений Consumer:
+
+- Pull (по запросу) - RMQ (option), Kafka (only)
+- Push (подписка) - RMQ (default)
 
 ### Messaging Patterns
 
@@ -70,8 +72,8 @@
 ## Технологии
 
 - Транспорт  
-	- [Kafka](../../../../technology/middleware/messagebus/kafka.md)
-	- [RabbitMQ](../../../../technology/middleware/messagebus/rmq.md)
+	- [Kafka](../../../../technology/middleware/messagebus/kafka/kafka.md)
+	- [RabbitMQ](../../../../technology/middleware/messagebus/rmq/rmq.md)
 	- [Apache ActiveMQ Artemis](../../../../technology/middleware/messagebus/activemq.md)
 	- Azure service bus
 	- MSMQ
@@ -97,8 +99,8 @@
 
 #### RMQ vs Kafka
 
-- [RMQ](../../../../technology/middleware/messagebus/rmq.md#плюсы-и-минусы)
-- [Kafka](../../../../technology/middleware/messagebus/kafka.md#плюсы-и-минусы)
+- [RMQ](../../../../technology/middleware/messagebus/rmq/rmq.md#плюсы-и-минусы)
+- [Kafka](../../../../technology/middleware/messagebus/kafka/kafka.md#плюсы-и-минусы)
 	- [vs RMQ](https://blog.bytebytego.com/p/how-to-choose-a-message-queue-kafka):
     	- __сообщения хранятся__
     	- __повторная обработка__ одно и то же сообщение может быть обработано сколько угодно раз разными консьюмерами и в разных контекстах
@@ -116,7 +118,7 @@ TODO
 
 #### RMQ vs ActiveMQ Artemis
 
-- [RMQ](../../../../technology/middleware/messagebus/rmq.md#плюсы-и-минусы)
+- [RMQ](../../../../technology/middleware/messagebus/rmq/rmq.md#плюсы-и-минусы)
 - [Artemis](../../../../technology/middleware/messagebus/activemq.md#плюсы-минусы)
   - vs RMQ
     - поддерживает более __широкий спектр протоколов__ обмена сообщениями (+ JMS)

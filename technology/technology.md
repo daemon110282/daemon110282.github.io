@@ -10,8 +10,8 @@
 - [framework](framework/)
 - Middleware
   - MessageBus
-    - [RMQ](middleware/messagebus/rmq.md)
-    - [Kafka](middleware/messagebus/kafka.md)
+    - [RMQ](middleware/messagebus/rmq/rmq.md)
+    - [Kafka](middleware/messagebus/kafka/kafka.md)
 - [mobile](mobile/)
 - [monitoring](observability/monitoring.md)
 - [OS](os/)

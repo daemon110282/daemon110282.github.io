@@ -4,7 +4,7 @@
 	- [Зачем](#зачем)
 	- [Patterns](#patterns)
 		- [Dead Letter eXchange (DLX)](#dead-letter-exchange-dlx)
-		- [Exc=Direct Queue DLX](#excdirect-queue-dlx)
+		- [Excange=Direct Queue DLX](#excangedirect-queue-dlx)
 		- [Retry Policy](#retry-policy)
 		- [Circuit Breakers](#circuit-breakers)
 		- [Redilivery](#redilivery)
@@ -14,9 +14,9 @@
 
 Реализация [паттернов обработки сбоев](../../../../arch/pattern/system.design/fault.tolerance/pattern.failure.md) для обеспечения атрибута качества ИС [Отказоустойчивость Fault tolerance](../../../../arch/ability/fault.tolerance.md):
 
-- Basic.Reject with __reueue = true__ - отклоненение сообщения и возврат __в начало очереди__
-	- минусы: лишняя нагрузка на внешний сервис, т.к. сообщения без задержки будут возвращаться в очередь. Решение: Basic.Reject with reueue = false + DLX.
-- Basic.Reject with __reueue = false__ - отклоненение сообщения и [возврат в __DLX, затем в DLQ__->как DLX используется Exchange для сервиса (consumer)](https://habr.com/ru/companies/slurm/articles/714358/)
+- Basic.Reject with __requeue = true__ - отклоненение сообщения и возврат __в начало очереди__
+	- минусы: лишняя нагрузка на внешний сервис, т.к. сообщения без задержки будут возвращаться в очередь. Решение: Basic.Reject with requeue = false + DLX.
+- Basic.Reject with __requeue = false__ - отклоненение сообщения и [возврат в __DLX, затем в DLQ__->как DLX используется Exchange для сервиса (consumer)](https://habr.com/ru/companies/slurm/articles/714358/)
 	- [Очередь повторных попыток](https://habr.com/ru/companies/slurm/articles/714358/) Dead Letter eXchange с __временной задержкой на повторную отправку сообщения__
 		- обычно у сервиса (consumer) нет БД (stateless)
 		- такой же вариант от ДомКлик [DLX->DLQ->как DLX используется Exchange для сервиса (consumer)](https://habr.com/ru/companies/domclick/articles/500978/)
@@ -32,11 +32,11 @@
 
 ### Dead Letter eXchange (DLX)
 
-- x-mesage-ttl — превышение времени жизни;
-- x-max-length — превышение длины очереди;
-- reject with __reueue = false__ — явный реджект сообщений со стороны консьюмера.
+- x-mesage-ttl — превышение времени жизни
+- x-max-length — превышение длины очереди
+- reject with __requeue = false__ — явный реджект сообщений со стороны консьюмера.
 
-### Exc=Direct Queue DLX
+### Excange=Direct Queue DLX
 
 - must specify a [dead letter routing key](https://stackoverflow.com/questions/21742232/rabbitmq-dead-letter-exchange-never-getting-messages)
 - <https://javascopes.com/spring-amqp-error-handling-8dbc1045/>

@@ -10,14 +10,6 @@
     - [Queue](#queue)
     - [Connection](#connection)
     - [Persistence](#persistence)
-    - [Интеграции](#интеграции)
-      - [Task (Worker) Queue](#task-worker-queue)
-      - [Simple one-way messaging](#simple-one-way-messaging)
-      - [Publish-subscribe Издатель-Подписчик](#publish-subscribe-издатель-подписчик)
-        - [headers vs topic для событий](#headers-vs-topic-для-событий)
-      - [RPC (команды)](#rpc-команды)
-      - [Direct Reply-TO](#direct-reply-to)
-    - [MTA](#mta)
     - [Версионирование типов сообщений](#версионирование-типов-сообщений)
   - [Security](#security)
   - [Observability](#observability)
@@ -77,6 +69,8 @@
 - [Очереди с приоритетом](https://habr.com/ru/companies/arcadia/articles/571442/)
 - [RabbitMQ Delayed Message Plugin](https://www.gokhan-gokalp.com/en/messaging-yapilarinda-masstransit-ile-error-ve-redeliver-handling/)
 - Scheduling messages using Quartz.Net
+- [Паттерны интеграции](rmq.patterns.integration.md)
+- MTA [MQ](../../../../arch/pattern/system.design/mta/mta.mq.md)
 
 ### Queue
 
@@ -96,60 +90,6 @@
   - сделать как очереди __durable__
   - так и сообщенния устойчивыми __delivery_mode=2__
 - TTL Очереди
-
-### Интеграции
-
-#### Task (Worker) Queue
-
-  - Round-robin dispatching (циклическое распределение задач по консьюмерам)
-    - сервисы между собой делят Очередь задач
-    - паттерн EIP [Competing Consumers](https://www.enterpriseintegrationpatterns.com/patterns/messaging/CompetingConsumers.html)
-    - Exchange type: direct, several consumer listening to the same queue, reading the messages in a round-robin fashion if all are waiting
-  - Task Queue (распределение задач по загрузке) [Fair dispatching](https://habr.com/ru/post/150134/)
-    - QoS = 1, ack=1, autoack=0 если не подтверждено 1-е сообщение, 2-е пойдёт другому подписчику
-
-#### Simple one-way messaging
-
-- Exchange type: direct
-- message sent to unnamed (default queue)
-
-#### Publish-subscribe Издатель-Подписчик
-
-- fanout - без фильтрации - события
-  - Очередь ответов - даёт широковешательную рассылку ответов по всем ИС потребителям
-- headers - с фильтрацией - события
-  - даёт возможность делать фильтрацию трафика на уровне RMQ.
-  - подписчик создаёт и связывает очередь к обменнику, указывает фильтрация на основе заголовков - это решает задачу __фильтрации__ лишнего трафика, но __не решает задачу изоляции__. Подписчик может не указать фильтры и получит весь трафик: и свой и чужой.
-- минусы
-  - единый контракт для подписчиков
-  - Не безопасно, кто угодно подписывается
-  - с ростом числа подписчиков, Брокер масштабировать необходимо
-
-##### headers vs topic для событий
-
-- более гибко т.к. key-value инвариантов может быть больше?
-  - топик - фильтрация на основе строковой маски - поиска подстроки
-  - headers - на основе полного равенства значения ключа (логическое И) или один из ключей (логическое ИЛИ)
--минусы
-- функционально разницы нет, по производительности topic в 3 раза медленнее headers
-
-#### RPC (команды)
-
-- [паттерн EIP](../../../../arch/pattern/integration/app/pattern.rpc.md)
-- EasyNetQ [RPC](https://github.com/EasyNetQ/EasyNetQ/wiki/Request-Response)
-- [Exchange type: direct](https://www.rabbitmq.com/tutorials/tutorial-six-dotnet.html), message can be sent to default exchange with a specified routing key and response is received on a specified unique response queue, owned by the client
-- [correlation_id, reply_to](https://habr.com/ru/post/236221/)
-
-#### Direct Reply-TO
-
-- мы подписываемся на специальную псевдоочередь amqp.rabbitmq.reply-to
-- отправляем сообщение с указанием этой очереди в качестве reply-to заголовка
-- RMQ генерирует для нас уникальный routing_key, по которому будет должно быть опубликовано ответное сообщение в default exchange
-- сервер получает наше сообщение и [отправляет ответ по этому routing_key](https://habr.com/ru/articles/747644/)
-
-### MTA
-
-- [MQ](../../../../arch/pattern/system.design/mta/mta.mq.md)
 
 ### Версионирование типов сообщений
 

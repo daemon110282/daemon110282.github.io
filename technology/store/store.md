@@ -19,14 +19,14 @@
 
 ### OLTP RDBMS (Relational)
 
-- [MS SQL](../db/mssql/mssql.md)
-- [PostgreSQL](../db/postgresql/postgresql.md)
+- [MS SQL](sql/mssql/mssql.md)
+- [PostgreSQL](sql/postgresql/postgresql.md)
 - [Tarantool](tarantool.md)
 - Импортозамещение (реестр отечественного ПО, сертификация СФТЭК)
   - на базе PostgreSQL (коммерческие)
-    - Astra [Tantor](../db/postgresql/tantor.md)
-    - [PostgreSQL PRO](../db/postgresql/postgresql.pro.md)
-    - [Jatoba](../db/postgresql/jatoba.md)
+    - Astra [Tantor](sql/postgresql/tantor.md)
+    - [PostgreSQL PRO](sql/postgresql/postgresql.pro.md)
+    - [Jatoba](sql/postgresql/jatoba.md)
 
 ### OLAP
 

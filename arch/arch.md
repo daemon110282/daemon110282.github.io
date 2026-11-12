@@ -5,7 +5,7 @@
   - [Задачи IT-архитектора](#задачи-it-архитектора)
   - [Процесс](#процесс)
   - [Законы архитектуры](#законы-архитектуры)
-  - [Класс систем](#класс-систем)
+  - [Классы систем](#классы-систем)
   - [Элементы архитектуры](#элементы-архитектуры)
 
 ## Зачем
@@ -100,20 +100,9 @@ Other Skills:
   - Библиотеки и фреймворки - детали реализации, которые должны быть скрыты.
 - __Закон Конвея__ — «Организации проектируют системы, которые копируют структуру коммуникаций в этой организации»
 
-## Класс систем
+## Классы систем
 
-- [APM](system.class/apm.md)
-- [CDN](system.class/cdn.md)
-- [IAM](system.class/iam.md)
-- [DWH](system.class/dwh.md)
-- [Report](system.class/report.md)
-- [Mobile](system.class/mobile.md)
-- [SIEM](system.class/siem.md)
-- [DSE](system.class/dse.md)
-- [WAF](system.class/waf.md)
-- [BPMS](system.class/bpms.md)
-- [Store](system.class/store.md)
-- [CIAM](system.class/ciam.md)
+[Классы систем](system.class/system.class.md): APM, CDN, WAF, IAM, CIAM, SIEM, DWH, Report, Store, Mobile, BPMS
 
 ## Элементы архитектуры
 

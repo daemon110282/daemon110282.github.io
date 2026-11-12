@@ -17,9 +17,9 @@
 
 ## Зачем
 
-Реализация [паттерна интеграции](../../../arch/pattern/integration/pattern.integration.md) [Message Broker](../../../arch/pattern/integration/pattern.messagebroker.md).
+Реализация [паттерна интеграции](../../../arch/pattern/integration/pattern.integration.md) [Message Broker](../../../arch/pattern/integration/app/pattern.messagebroker.md).
 
-[Критерии выбора](../../../arch/pattern/integration/pattern.messagebroker.md#критерии-выбора).
+[Критерии выбора](../../../arch/pattern/integration/app/pattern.messagebroker.md#критерии-выбора).
 
 UC:
 

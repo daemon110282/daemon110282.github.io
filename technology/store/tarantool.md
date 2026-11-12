@@ -8,7 +8,7 @@
   - [SQL OLTP ACID](https://www.tarantool.io/ru/)
   - NoSQL __Graph__ [store](./nosql/store.nosql.md#graph-database) решение
 - [Консистентный персистентный](https://www.tarantool.io/ru/patterns/) [кэш](../../arch/pattern/performance/pattern.cache.md) БД
-- [Брокера очередей](../../arch/pattern/integration/pattern.messagebroker.md)
+- [Брокера очередей](../../arch/pattern/integration/app/pattern.messagebroker.md)
 - Репликация данных из Oracle или MySQL
 
 [Критерии выбора](../../arch/system.class/store.md#критерии-выбора).

@@ -25,7 +25,7 @@
 - Масштабируемость
 - Гарантированная доставка
 - Буферизация
-- Слабая связность ИС [Low Coupling](../system.design/low.coupling.md)
+- Слабая связность ИС [Low Coupling](../../system.design/low.coupling.md)
 - принцип "глупая шина (канал) умные клиенты"
 
 Минусы:
@@ -41,10 +41,10 @@
 - [Advanced transient messaging](https://apolomodov.medium.com/coa-distributed-systems-4th-ed-4-communication-c5ce331015e9)
   - ZeroMQ
 - Message-oriented persistent - Message Bus - Транспорт
-  - [RMQ](../../../technology/middleware/messagebus/rmq.md)  
+  - [RMQ](../../../../technology/middleware/messagebus/rmq.md)  
   - ActiveMQ
 - __Log-based message queue__
-  - [Kafka](../../../technology/middleware/messagebus/kafka.md)
+  - [Kafka](../../../../technology/middleware/messagebus/kafka.md)
 - __Тип способа__ получения сообщений
   - Pull (по запросу)
   - Push (подписка)
@@ -64,15 +64,15 @@
 - Dead Leater Channel
 - Message Translator
 - Wire Tap - наблюдение за сообщениями
-- [Event Sourcing](event.sourcing.md)
+- [Event Sourcing](./event.sourcing.md)
 - Как узнать когда сообщение в очередь добавлено - [Timestamp](https://www.rabbitmq.com/publishers.html#message-properties)
 
 ## Технологии
 
 - Транспорт  
-	- [Kafka](../../../technology/middleware/messagebus/kafka.md)
-	- [RabbitMQ](../../../technology/middleware/messagebus/rmq.md)
-	- [Apache ActiveMQ Artemis](../../../technology/middleware/messagebus/activemq.md)
+	- [Kafka](../../../../technology/middleware/messagebus/kafka.md)
+	- [RabbitMQ](../../../../technology/middleware/messagebus/rmq.md)
+	- [Apache ActiveMQ Artemis](../../../../technology/middleware/messagebus/activemq.md)
 	- Azure service bus
 	- MSMQ
 	- SQL Server
@@ -87,18 +87,18 @@
     - [abp.io](https://docs.abp.io/en/abp/4.4/Distributed-Event-Bus)
   - Python
     - Celery
-  - [PHP](../../../technology/framework/php.md)
+  - [PHP](../../../../technology/framework/php.md)
 
 ### Критерии выбора
 
-![RMQ vs Kafka vs IBMMq](../../../img/technology/middleware/messagebus/rmq.vs.kafka.vs.ibm.png)
-![RMQ vs Kafka vs IBMMq](../../../img/technology/middleware/messagebus/rmq.vs.kafka.vs.ibm2.png)
-![MB VS](../../../img/pattern/integration/mq.compare.jpg)
+![RMQ vs Kafka vs IBMMq](../../../../img/technology/middleware/messagebus/rmq.vs.kafka.vs.ibm.png)
+![RMQ vs Kafka vs IBMMq](../../../../img/technology/middleware/messagebus/rmq.vs.kafka.vs.ibm2.png)
+![MB VS](../../../../img/pattern/integration/mq.compare.jpg)
 
 #### RMQ vs Kafka
 
-- [RMQ](../../../technology/middleware/messagebus/rmq.md#плюсы-и-минусы)
-- [Kafka](../../../technology/middleware/messagebus/kafka.md#плюсы-и-минусы)
+- [RMQ](../../../../technology/middleware/messagebus/rmq.md#плюсы-и-минусы)
+- [Kafka](../../../../technology/middleware/messagebus/kafka.md#плюсы-и-минусы)
 	- [vs RMQ](https://blog.bytebytego.com/p/how-to-choose-a-message-queue-kafka):
     	- __сообщения хранятся__
     	- __повторная обработка__ одно и то же сообщение может быть обработано сколько угодно раз разными консьюмерами и в разных контекстах
@@ -116,8 +116,8 @@ TODO
 
 #### RMQ vs ActiveMQ Artemis
 
-- [RMQ](../../../technology/middleware/messagebus/rmq.md#плюсы-и-минусы)
-- [Artemis](../../../technology/middleware/messagebus/activemq.md#плюсы-минусы)
+- [RMQ](../../../../technology/middleware/messagebus/rmq.md#плюсы-и-минусы)
+- [Artemis](../../../../technology/middleware/messagebus/activemq.md#плюсы-минусы)
   - vs RMQ
     - поддерживает более __широкий спектр протоколов__ обмена сообщениями (+ JMS)
     - [RMQ имеет наилучшую пропускную способность](https://www.okbsapr.ru/library/publications/shkola_kzi_chadov_mikhalchenko_2019/)

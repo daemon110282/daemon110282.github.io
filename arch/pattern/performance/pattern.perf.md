@@ -55,7 +55,7 @@
 
 - [CQRS](./pattern.cqrs.md) - чтение и запись из разных бд
 - Секционирование [Шардирование](./shard.db.md)
-- [Репликация](../integration/sync.data.md)
+- [Репликация](../integration/data/sync.data.md)
 - Кластеризация
 - [Уровень изоляции данных](../development/store.isolation.level.md)
 - Индексы

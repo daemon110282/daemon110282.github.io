@@ -26,9 +26,9 @@
 
 ## Зачем
 
-Реализация [паттерна интеграции](../../../arch/pattern/integration/pattern.integration.md) [Message Broker](../../../arch/pattern/integration/pattern.messagebroker.md).
+Реализация [паттерна интеграции](../../../arch/pattern/integration/pattern.integration.md) [Message Broker](../../../arch/pattern/integration/app/pattern.messagebroker.md).
 
-[Критерии выбора](../../../arch/pattern/integration/pattern.messagebroker.md#критерии-выбора).
+[Критерии выбора](../../../arch/pattern/integration/app/pattern.messagebroker.md#критерии-выбора).
 
 ## Плюсы и минусы
 
@@ -46,7 +46,7 @@
 Минусы:
 
 - Агрегация в пачки нет в RabbitMQ (Kafka Есть)
-- [vs Kafka](../../../arch/pattern/integration/pattern.messagebroker.md#rmq-vs-kafka)
+- [vs Kafka](../../../arch/pattern/integration/app/pattern.messagebroker.md#rmq-vs-kafka)
 - нет параметра Expire для обменников (только для очередей)
 - __Нет шардирования__, в kafka есть topic-несколько partition, есть несколько инстансов где очереди размещены
 - Производительность ниже [Kafka](kafka.md)
@@ -137,7 +137,7 @@
 
 #### RPC (команды)
 
-- [паттерн EIP](../../../arch/pattern/integration/pattern.rpc.md)
+- [паттерн EIP](../../../arch/pattern/integration/app/pattern.rpc.md)
 - EasyNetQ [RPC](https://github.com/EasyNetQ/EasyNetQ/wiki/Request-Response)
 - [Exchange type: direct](https://www.rabbitmq.com/tutorials/tutorial-six-dotnet.html), message can be sent to default exchange with a specified routing key and response is received on a specified unique response queue, owned by the client
 - [correlation_id, reply_to](https://habr.com/ru/post/236221/)

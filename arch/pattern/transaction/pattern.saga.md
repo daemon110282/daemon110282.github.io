@@ -1,8 +1,14 @@
 # SAGA
 
+- [SAGA](#saga)
+  - [Зачем](#зачем)
+  - [Плюсы-минусы](#плюсы-минусы)
+  - [Паттерны](#паттерны)
+  - [Технологии](#технологии)
+
 ## Зачем
 
-Паттерн для Распределенных транзаций
+Паттерн для [Распределенных транзаций](transaction.md)
 
 - __последовательность транзакций__, которые обновляют каждую службу
 - и __публикуют сообщение или событие__ для __активации следующего шага транзакции__
@@ -25,7 +31,7 @@ TODO
 Плюсы:
 
 - __децентрализованный подход__, не использует центральный контроллер
-  - Чтобы отказаться от [Two phase commit](pattern.2pc.md) в распределенной среде - плохо масштабируемый алгоритм
+  - Чтобы отказаться от [Two phase commit](./pattern.2pc.md) в распределенной среде - плохо масштабируемый алгоритм
 
 Минусы:
 
@@ -38,10 +44,10 @@ TODO
 
 - машины состояний [state machine](../development/pattern.state.machine.md)
 - наблюдателя (Observer) для логирования
-- Реализация при помощи [Хореографии](orchestration-choreography.md) или __Оркестрации__
-- Для повышения надежности при асинхронном обмене событиями через Message Broker используется __Transactional Outbox__
+- Реализация при помощи [Хореографии](../integration/orchestration-choreography.md) или __Оркестрации__
+- Для повышения надежности при асинхронном обмене событиями через [Message Broker](../integration/app/pattern.messagebroker.md) используется __[Transactional Outbox](../system.design/fault.tolerance/transact.outbox.md)__
 
 ## Технологии
 
-- [Хореография](orchestration-choreography.md#технологии)
-- [Оркестрация](orchestration-choreography.md#технологии)
+- [Хореография](../integration/orchestration-choreography.md#технологии)
+- [Оркестрация](../integration/orchestration-choreography.md#технологии)

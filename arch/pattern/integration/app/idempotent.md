@@ -12,7 +12,7 @@
 
 ## Зачем
 
-Обеспечить [Fault Tolerance](../../ability/fault.tolerance.md) и реализовать [паттерн Failure](../system.design/fault.tolerance/pattern.failure.md).
+Обеспечить [Fault Tolerance](../../../ability/fault.tolerance.md) и реализовать [паттерн Failure](../../system.design/fault.tolerance/pattern.failure.md).
 
 Проблема:
 
@@ -43,8 +43,8 @@
   - Чтобы детерминировано определить ключ идемпотентности как для изначального сообщения, так и для повторно обработанного, можно использовать хеш его содержимого или __хеш__ уникальных для сообщения полей.
   - __уникальность ключа__ должна проверяться не глобально, а только применительно к __конкретному пользователю и конкретной операции__
 - необходимо хранить ключ идемпотентности
-  - инсертится в базу в поле, на котором есть __ограничение базы данных по уникальности__. Если это ограничение не дало сделать инсерт, то отдавать ошибку ([HTTP status](../../../api/api-http-status.md) 409).
-  - или [NOSQL](../../system.class/store.nosql.md) (Redis)
+  - инсертится в базу в поле, на котором есть __ограничение базы данных по уникальности__. Если это ограничение не дало сделать инсерт, то отдавать ошибку ([HTTP status](../../../../api/api-http-status.md) 409).
+  - или [NOSQL](../../../system.class/store.nosql.md) (Redis)
 - необходимо определить __время жизни (TTL)__ ключа идемпотентности исходя из [бизнес логики бизнес операции](https://ieftimov.com/posts/understand-how-why-add-idempotent-requests-api/#expiring-the-keys)
 - если ключ найден сервер\прокси\middleware может отдать __предыдущий ответ (response, header) из кэша__ с учетом TTL, [без выполнения запроса](https://ieftimov.com/posts/understand-how-why-add-idempotent-requests-api/#introducing-the-key)
 - Когда приходит дублирующий запрос, в то время как исходный все еще обрабатывается (__параллельные запросы__). Ответы на идемпотентные операции различаются в зависимости [от состояния исходного запроса](https://digitrain.ru/articles/620208/):
@@ -56,7 +56,7 @@
 
 - [идептоментны всегда](https://github.com/Microsoft/api-guidelines/blob/master/Guidelines.md#74-supported-methods): GET, PUT, DELETE
 - необходимо реализовать [идептоментность](https://github.com/ikyriak/IdempotentAPI?tab=readme-ov-file#idempotency-in-http-web)
-  - POST - клиент должен контролировать [повторные запросы](../../../arch/pattern/integration/), если не получил ответа
+  - POST - клиент должен контролировать [повторные запросы](./..), если не получил ответа
   - PATCH - если клиент не получил ответа на запрос, просто направляет повторно
 - Прокси-серверы могут не повторять POST и PATCH запросы при ошибках, тогда как GET и PUT могут повторить.
 
@@ -73,7 +73,7 @@
 
 ## Технологии
 
-- .NET MediatR (паттерн [медиатор](../development/GOF/mediator.md)) и PipelineBehavior (паттерн [chain of responsibility](../development/GOF/chainofresp.md) + decorator/proxy)
+- .NET MediatR (паттерн [медиатор](../../development/GOF/mediator.md)) и PipelineBehavior (паттерн [chain of responsibility](../../development/GOF/chainofresp.md) + decorator/proxy)
 (<https://temofeev.ru/info/articles/borba-s-dublikatami-delaem-post-idempotentnym/>)
 - [IdempotentAPI](https://github.com/ikyriak/IdempotentAPI) with Cache Store and support Cluster Environment
 - [.net sample](https://mahedee.net/How-to-handle-Idempotentcy-in-distributed-system-using-aspnet-core/) with Cache Store Redis

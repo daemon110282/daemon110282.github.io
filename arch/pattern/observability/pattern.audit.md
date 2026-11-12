@@ -1,7 +1,7 @@
 # Аудит
 
 - [DB](https://medium.com/techtofreedom/4-common-designs-of-audit-trail-tracking-data-changes-in-databases-c894b7bb6d18)
-  - [CDC](../integration/cdc.md)
+  - [CDC](../integration/data/cdc.md)
 - Audit logging
   - Системы логирования
   - [SIEM](../../system.class/security/siem.md) - выявление подозрительных активностей

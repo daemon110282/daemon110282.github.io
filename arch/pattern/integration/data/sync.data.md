@@ -64,4 +64,4 @@ CDC и ETL являются двумя разными подходами к об
 - Commercial
   - Консольная [gsqlcmd](https://www.savetodb.ru/gsqlcmd/synchronizing-data.htm)
 - Free
-  - [Debezium](../../../technology/cdc/debezium.md)
+  - [Debezium](../../../../technology/cdc/debezium.md)

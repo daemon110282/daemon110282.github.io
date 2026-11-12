@@ -27,7 +27,7 @@ communication to multiple microservices
 - [Mock](../development/mock.md)
 - __Security issues__ Сокрытие внутренних API ИС от внешних ИС потребителей
   - Without a gateway, all the microservices must be exposed to the “external world"
-- [Паттерн BFF](../integration/pattern.bff.md)
+- [Паттерн BFF](../integration/app/pattern.bff.md)
 
 Функции [Load Balancer](./load.balancing.md)
 

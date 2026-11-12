@@ -57,13 +57,13 @@ REST API — это архитектурный подход, который ус
 - [Фильтрация](https://www.moesif.com/blog/technical/api-design/REST-API-Design-Filtering-Sorting-and-Pagination/)
 - [HTTP методы](#http-методы)
 - Эффективное использование [кодов ответов HTTP](api-http-status.md)
-- [Идемпотентность](../arch/pattern/integration/idempotent.md)
+- [Идемпотентность](../arch/pattern/integration/app/idempotent.md)
 - Стандартизировать дополнительные машиночитаемые данные в ответе, __предпочтительно в форме заголовков HTTP__
   - потому что чтение заголовков не требует вычитывания и разбора всего тела ответа, так что промежуточные прокси и гейтвеи смогут понять семантику ошибки без дополнительных расходов
   - так же их можно логировать.
 - Файлы
-  - [Download](../arch/pattern/integration/pattern.downloadfile.md)
-  - [Upload](../arch/pattern/integration/pattern.uploadfile.md)
+  - [Download](../arch/pattern/integration/app/pattern.downloadfile.md)
+  - [Upload](../arch/pattern/integration/app/pattern.uploadfile.md)
 
 ![best](../img/api/best.practice.jpg)
 

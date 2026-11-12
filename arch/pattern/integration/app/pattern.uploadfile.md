@@ -6,7 +6,7 @@
 - Multiple file upload
 - Validation and security
 - Upload from remote server (FTP, HTTP...)
-- Upload from private [storage bucket (S3 or Google Storage)](../../../technology/store/object.storage.md)
+- Upload from private [storage bucket (S3 or Google Storage)](../../../../technology/store/object.storage.md)
 - Individual progress bar for every file
 - Upload notifications
 - Разделение на части файла - [Chunking files](https://uploadcare.com/blog/the-file-uploading-guide) over 20 MB
@@ -16,7 +16,7 @@
 
 - [Image API service dedicated](https://www.apollographql.com/blog/backend/file-uploads/file-upload-best-practices)
 - __Signed Upload URL__ dedicated storage
-  - On premise\Cloud [Object Storage](../../../technology/store/object.storage.md) S3 [Minio](../../../technology/store/minio.md), Cloudinary
+  - On premise\Cloud [Object Storage](../../../../technology/store/object.storage.md) S3 [Minio](../../../../technology/store/minio.md), Cloudinary
   - It can require a little more work to set up than a dedicated image service but provides for finer control.
 - [Google Resumable upload large files > 5Mb](https://developers.google.com/drive/api/guides/manage-uploads)
 - Несколько файлов разных типов __multipart/related__ request.
@@ -27,7 +27,7 @@
       - __response 202 Accepted, Location: /downloads/123__ (unique ID of the download). If we're sharing the files among users, the same POST might return the same ID (all the users are waiting for the same file to generate)
    - Multipart HTTP request
    - Two-step: metadata + upload
-- [HTTP Status](../../../api/api-http-status.md#files)
+- [HTTP Status](../../../../api/api-http-status.md#files)
 - API Uploading example [Cloudinary](https://cloudinary.com/documentation/upload_images)
 
 ### Сравнение подходов: base64 на клиенте vs. на сервере
@@ -65,8 +65,8 @@
 
 ## Технологии
 
-- [Файловые системы](../../../technology/filesystem/filesystem.md)
-   - [Распределенные файловые системы](../../../technology/filesystem/dfs.md)
-   - [Распределенные параллельные файловые системы](../../../technology/filesystem/dpfs.md)
+- [Файловые системы](../../../../technology/filesystem/filesystem.md)
+   - [Распределенные файловые системы](../../../../technology/filesystem/dfs.md)
+   - [Распределенные параллельные файловые системы](../../../../technology/filesystem/dpfs.md)
 - FTP SFTP - передача файлов
-- [Object Storage](../../../technology/store/object.storage.md)
+- [Object Storage](../../../../technology/store/object.storage.md)

@@ -16,7 +16,7 @@
 - Обработка сложных событий, например, поиск закономерностей или агрегирование данных по временным интервалам
 - __Большие объемы__ и __высокая скорость поступления данных__ (характерно, например, для интернета вещей — IoT)
 - __[Background Jobs](../../pattern/development/background.job.md)__: Sending background messages, emails, or notifications to loads of users.
-- __Асинхронный обмен сообщениями__: [Очереди сообщений](../../pattern/integration/pattern.messagebroker.md) — лучший способ реализации асинхронного программирования.
+- __Асинхронный обмен сообщениями__: [Очереди сообщений](../../pattern/integration/app/pattern.messagebroker.md) — лучший способ реализации асинхронного программирования.
 - __Большое время отклика__: Ситуации, когда время выполнения запроса оказывается слишком долгим (например, при выполнении вычислений, поиске, создании PDF-файлов и т. д.).
 
 ## Плюсы и минусы
@@ -65,16 +65,16 @@
   - [Task (Worker) Queue](../../../technology/middleware/messagebus/rmq.md)
   - [RPC (команды)](../../../technology/middleware/messagebus/rmq.md)
 - __Запросы и команды отдельно__ [CQRS](../../pattern/performance/pattern.cqrs.md) - command query request segregation
-- Состояние объекта - __последовательность событий изменений объекта__ [Event sourcing](../../pattern/integration/event.sourcing.md)
-- __Распределенные транзакции__ (лучше не делать)
-  - [SAGA](../../pattern/integration/pattern.saga.md)
-  - [2PC](../../pattern/integration/pattern.2pc.md) двухфазный комит
+- Состояние объекта - __последовательность событий изменений объекта__ [Event sourcing](../../pattern/integration/app/event.sourcing.md)
+- __[Распределенные транзакции](../../pattern/transaction/transaction.md)__ (лучше не делать)
+  - [SAGA](../../pattern/transaction/pattern.saga.md)
+  - [2PC](../../pattern/transaction/pattern.2pc.md) двухфазный комит
 - [Versioning Message](https://www.youtube.com/watch?v=mEzYTuYSork&list=PLx8uyNNs1ri2MBx6BjPum5j9_MMdIfM9C&index=11&ab_channel=ChrisPatterson)
   - [EasyNetQ by message type](https://github.com/EasyNetQ/EasyNetQ/wiki/Versioning-Messages)
 
 ## Технологии
 
-- Шины сообщений Message Bus\Шины событий Event Bus (брокер обмена сообщениями [Message Broker](../../pattern/integration/pattern.messagebroker.md))
+- Шины сообщений Message Bus\Шины событий Event Bus (брокер обмена сообщениями [Message Broker](../../pattern/integration/app/pattern.messagebroker.md))
 - [MS Обмен сообщениями](https://docs.microsoft.com/ru-ru/azure/architecture/guide/technology-choices/messaging)
 
 ## TODO

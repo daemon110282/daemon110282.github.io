@@ -25,12 +25,12 @@
 - [ETL (Extract, Transform, Load)](https://python.ivan-shamaev.ru/etl-best-practices-design-data-patterns/)
 - [ELT (Extract, Load, Transform)](https://www.striim.com/blog/data-integration/)
   - [ELT vs ETL](https://coderlessons.com/tutorials/bolshie-dannye-i-analitika/teoriia-khraneniia-dannykh/5-etl-protiv-elt)
-- [Shared Database\Table Шлюзовая БД (ШБД)](pattern.shareddb.md)
-- [CDC](cdc.md)
+- [Shared Database\Table Шлюзовая БД (ШБД)](data/pattern.shareddb.md)
+- [CDC](data/cdc.md)
 - Файловый обмен
   - [Распределенные файловые системы](../../../technology/filesystem/filesystem.md)
     - [Object Storage](../../../technology/store/object.storage.md)
-  - [Upload File](pattern.uploadfile.md)
+  - [Upload File](app/pattern.uploadfile.md)
   - [Download File](../../../api/api.rest.md)
   - [CDN](../../system.class/perfofmance/cdn.md) реализует паттерн [Static content hosting](https://learn.microsoft.com/en-us/azure/architecture/patterns/static-content-hosting)
   - Протокол [WebDAV](https://xakep.ru/2014/09/09/webdav/) HTTP API (IIS, Apache support) для подключения сайтов как сетевых дисков
@@ -41,9 +41,9 @@
   - [API REST](../../../api/api.md)
   - SOAP, [WCF](../../../technology/protocols.integration/wcf/wcf.md), ODATA
   - [GraphQL](../../../technology/protocols.integration/graphql.md)
-- [Remote Procedure Invocation](pattern.rpc.md) (RPC): WebSocket, SSE, gRPC
+- [Remote Procedure Invocation](app/pattern.rpc.md) (RPC): WebSocket, SSE, gRPC
 - Middleware
-  - [Message-oriented](pattern.messagebroker.md)
+  - [Message-oriented](app/pattern.messagebroker.md)
     - Advanced transient messaging: ZeroMQ
     - Message-oriented persistent: RMQ
     - log-based message queue: Kafka
@@ -73,8 +73,8 @@
 
 ## Паттерны
 
-- [Messaging Patterns](pattern.messagebroker.md)
-- [RPC Команды\Запросы](pattern.rpc.md)
+- [Messaging Patterns](app/pattern.messagebroker.md)
+- [RPC Команды\Запросы](app/pattern.rpc.md)
 - Sidecar - паттерн интеграции между приложением и сервисом, развернутый на стороне приложения
   - Отвечает за развертывание компонентов приложения в отдельном процессе или контейнере для обеспечения изоляции и инкапсуляции
   - Сквозная функциональность
@@ -83,7 +83,7 @@
 - [Anti-Corruption Layer](../system.design/pattern.acl.md)
 - [DbC - Design by contract](https://habr.com/ru/company/southbridge/blog/679906/)
 - [Обработка сбоев Fault Tolerance](../system.design/fault.tolerance/pattern.failure.md): Retry Policy, Circuit Breaker, Rate Limit
-- [Sync Data](sync.data.md)
+- [Sync Data](data/sync.data.md)
 
 ## TODO
 

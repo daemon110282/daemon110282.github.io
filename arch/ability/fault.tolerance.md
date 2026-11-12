@@ -53,7 +53,7 @@
   - аптайм доступность сервиса, выраженная в процентах
 - ИБП, генератор электричества, охлаждение серверов
 - DB:
-  - [репликации](../pattern/integration/sync.data.md)
+  - [репликации](../pattern/integration/data/sync.data.md)
   - кластер
   - Горизонтальное [шардирование данных](../pattern/performance/shard.db.md)
 - [Распределенные файловые системы](../../technology/filesystem/dfs.md)
@@ -71,7 +71,7 @@ Design for failure
 - [Health check](../pattern/observability/pattern.healthcheck.md)
 - [CQRS](../pattern/performance/pattern.cqrs.md)
 - Асинхронная обработка
-  - [Брокер очереди](../pattern/integration/pattern.messagebroker.md) Message Bus
+  - [Брокер очереди](../pattern/integration/app/pattern.messagebroker.md) Message Bus
     - [RMQ](../../technology/middleware/messagebus/rmq/rmq.failure.md)
   - воркеры
   - буферы входного потока данных

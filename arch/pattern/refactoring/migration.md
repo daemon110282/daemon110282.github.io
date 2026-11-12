@@ -45,7 +45,7 @@
 
 - Источники данных (ИС)
 - Проектирование ШБД
-- [ETL](../integration/ETL.md) \ [ELT](../integration/ELT.md)
+- [ETL](../integration/data/ETL.md) \ [ELT](../integration/data/ELT.md)
   - Extract из источников как есть
   - Трансформация под целевую ИС
     - маппинг данных по целевым шаблонам данных

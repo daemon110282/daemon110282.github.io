@@ -14,7 +14,7 @@
 - это __разделение ответственности за команды и запросы__, шаблон, который разделяет операции чтения и обновления для хранилища данных
 - Внедрив в приложение CQRS, можно __максимально увеличить его производительность, масштабируемость и защиту__
 - __Гибкость__, достигнутая при переходе на CQRS, позволяет системе лучше развиваться с течением времени и не мешает командам обновления вызывать конфликты слияния [на уровне домена](https://learn.microsoft.com/ru-ru/azure/architecture/patterns/cqrs)
-- В основном используется с [Event Sourcing](../integration/event.sourcing.md)
+- В основном используется с [Event Sourcing](../integration/app/event.sourcing.md)
 
 ## Плюсы и минусы
 
@@ -39,7 +39,7 @@
 
 - это запрос к системе на выполнение действия, [которое изменяет состояние системы](https://docs.microsoft.com/ru-ru/dotnet/architecture/microservices/microservice-ddd-cqrs-patterns/microservice-application-layer-implementation-web-api#implement-the-command-and-command-handler-patterns)
 - Команды являются __императивными__ и должны обрабатываться только один раз
-- Команды имеет смысл делать [идемпотентными](../integration/idempotent.md), если этого требуют бизнес-правила и инварианты предметной области
+- Команды имеет смысл делать [идемпотентными](../integration/app/idempotent.md), если этого требуют бизнес-правила и инварианты предметной области
 - Команда — это объект передачи данных (DTO) особого типа, предназначенный специально для запроса изменений или транзакций.
 
 ### Обработчик комманд
@@ -49,7 +49,7 @@
 - [FAQ](https://cqrs.nu/Faq/command-handlers)
 - Конвейер обработки команд может активировать обработчик команд способами:
   - в памяти паттерн [Медиатор](../development/GOF/mediator.md)
-  - вне процесса через [Command Bus](../development/GOF/command.bus.md) on [Message Broker](../integration/pattern.messagebroker.md) transport ![cqrs mq](../../../img/arch/eda/cqrs.mq.jpg)
+  - вне процесса через [Command Bus](../development/GOF/command.bus.md) on [Message Broker](../integration/app/pattern.messagebroker.md) transport ![cqrs mq](../../../img/arch/eda/cqrs.mq.jpg)
     - Реализация паттерна [Command](../development/GOF/command.md) и [Command Bus](../development/GOF/command.bus.md).
 
 ## Запрос
@@ -65,7 +65,7 @@
 - [Command](../development/GOF/command.md)
 - [Command Bus](../development/GOF/command.bus.md)
 - [Materialized view](https://learn.microsoft.com/ru-ru/azure/architecture/patterns/materialized-view)
-- [Event Sourcing](../integration/event.sourcing.md)
+- [Event Sourcing](../integration/app/event.sourcing.md)
   - Если хранилище чтения и записи единое Event sourcing не требуется.
 - Event Store
 

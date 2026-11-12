@@ -73,7 +73,7 @@
 
 ## Технологии
 
-- .NET MediatR (паттерн [медиатор](../development/mediator.md)) и PipelineBehavior (паттерн [chain of responsibility](../development/chainofresp.md) + decorator/proxy)
+- .NET MediatR (паттерн [медиатор](../development/GOF/mediator.md)) и PipelineBehavior (паттерн [chain of responsibility](../development/GOF/chainofresp.md) + decorator/proxy)
 (<https://temofeev.ru/info/articles/borba-s-dublikatami-delaem-post-idempotentnym/>)
 - [IdempotentAPI](https://github.com/ikyriak/IdempotentAPI) with Cache Store and support Cluster Environment
 - [.net sample](https://mahedee.net/How-to-handle-Idempotentcy-in-distributed-system-using-aspnet-core/) with Cache Store Redis

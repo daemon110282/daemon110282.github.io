@@ -127,7 +127,7 @@
 - Служба __Aplication Services__
   - Реализация Use Case UI
   - Используют Domain Services
-  - [CQRS](../performance/pattern.cqrs.md) - command, query and handler, [command bus](../development/command.bus.md)
+  - [CQRS](../performance/pattern.cqrs.md) - command, query and handler, [command bus](../development/GOF/command.bus.md)
 - Служба __Domain Services__ Interfaces
   - Сервисы предоставляют [приложению интерфейсы для работы с доменом](https://slides.silverfire.me/2017/yiiconf-ddd/#/83)
   - Содержат методы, описывающие операции Домена

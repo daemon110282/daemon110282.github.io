@@ -6,7 +6,7 @@
 	- [Separates Intent from Interpretation](https://www.sitepoint.com/command-buses-demystified-a-look-at-the-tactician-package/)
 	- Framework and Client Decoupling
 	- Architectural Boundary
-	- Используется в паттерне [CQRS](../performance/pattern.cqrs.md)
+	- Используется в паттерне [CQRS](../../performance/pattern.cqrs.md)
 - Testable
 - Extendable
 - Сущности
@@ -23,5 +23,5 @@
 		- Single responsibility principle (SRP)
 		- Open/closed principle (OCP)
 - Связь __Command__ и __Comman Handler__ реализуется
-  - паттерном [Command Bus](../command.bus.md)
-  - [медиатор](../mediator.md)
+  - паттерном [Command Bus](command.bus.md)
+  - [медиатор](mediator.md)

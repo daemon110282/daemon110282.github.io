@@ -46,7 +46,7 @@
 
 ## Паттерны
 
-Реализация паттерна [Command](command.md) и [Command Bus](command.bus.md)
+Реализация паттерна [Command](GOF/command.md) и [Command Bus](GOF/command.bus.md)
 
 - Feature
   - Retry

@@ -26,7 +26,6 @@
 - Обертка
 - [MS Конструктивные шаблоны облачных решений](https://docs.microsoft.com/ru-ru/azure/architecture/patterns/category/data-management)
 - [RedHat Architect Portfolio](https://www.redhat.com/architect/portfolio/?intcmp=7013a0000025wJwAAI)
-- TODO [Clean Code](system.design/cleancode.md)
 - <https://en.wikipedia.org/wiki/Architectural_pattern>
 <https://vocal.media/01/unified-microservices-patterns-ump>
 - <https://patterns.arcitura.com/>

@@ -48,9 +48,9 @@
 
 - [FAQ](https://cqrs.nu/Faq/command-handlers)
 - Конвейер обработки команд может активировать обработчик команд способами:
-  - в памяти паттерн [Медиатор](../development/mediator.md)
-  - вне процесса через [Command Bus](../development/command.bus.md) on [Message Broker](../integration/pattern.messagebroker.md) transport ![cqrs mq](../../../img/arch/eda/cqrs.mq.jpg)
-    - Реализация паттерна [Command](../development/command.md) и [Command Bus](../development/command.bus.md).
+  - в памяти паттерн [Медиатор](../development/GOF/mediator.md)
+  - вне процесса через [Command Bus](../development/GOF/command.bus.md) on [Message Broker](../integration/pattern.messagebroker.md) transport ![cqrs mq](../../../img/arch/eda/cqrs.mq.jpg)
+    - Реализация паттерна [Command](../development/GOF/command.md) и [Command Bus](../development/GOF/command.bus.md).
 
 ## Запрос
 
@@ -62,8 +62,8 @@
 
 ## Паттерны
 
-- [Command](../development/command.md)
-- [Command Bus](../development/command.bus.md)
+- [Command](../development/GOF/command.md)
+- [Command Bus](../development/GOF/command.bus.md)
 - [Materialized view](https://learn.microsoft.com/ru-ru/azure/architecture/patterns/materialized-view)
 - [Event Sourcing](../integration/event.sourcing.md)
   - Если хранилище чтения и записи единое Event sourcing не требуется.

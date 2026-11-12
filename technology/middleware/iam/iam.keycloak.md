@@ -37,7 +37,7 @@
       - [Custom AuthenticationFactory by Phone](https://developers.redhat.com/blog/2020/10/23/use-mobile-numbers-for-user-authentication-in-keycloak#)
 - Flow-Grants
   - [ACF](../../protocols.integration/oauth/oauth.flow.ACwithPKCE.md) with [PKCE](https://www.keycloak.org/docs/latest/server_admin/#con-oidc-auth-flows_server_administration_guide)
-  - Implicit Flow
+  - LEGACY [Implicit Flow](../../../technology/protocols.integration/oauth/oauth.flow.implicit.md)
 - [Tokens](https://www.janua.fr/understanding-token-usage-in-keycloak/)
   - [Custom Fields](https://datmt.com/backend/how-to-add-custom-claims-from-user-attributes-in-keycloak/) Token
   - Refresh token rotation

@@ -50,6 +50,10 @@
 ## Хранилищ данных
 
 - [Data store](data/data.md)
+  - Materialized View
+  - Database per service
+  - [Shared Database\Table Шлюзовая БД (ШБД)](../performance/shard.db.md)
+  - [Sharding](../performance/shard.db.md)
 - DWH
 - [Data Vault](data/data.vault.md)
 - Big Data

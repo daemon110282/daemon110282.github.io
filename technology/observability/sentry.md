@@ -18,7 +18,7 @@
   - Traditional logging provides you with a __trail of events__. Some of those events are errors, but many times they’re simply __informational__. Sentry is fundamentally different because we __focus on exceptions__.
   - provides client libraries in every major programming language which instrument your software’s code to capture both error data and tracing telemetry
   - Uptime Monitoring
-- анализа производительности [APM](../../arch/system.class/apm.md)
+- анализа производительности [APM](../../arch/system.class/perfofmance/apm.md)
 	- [Frontend](https://geekflare.com/frontend-web-monitoring/)
 	- performance [bottlenecks in your code](https://docs.sentry.io/product/performance/performance-video/)
 - [Security and compliance](https://logz.io/learn/complete-guide-elk-stack/?utm_source=pocket_saves#common-pitfalls:~:text=guide%40logz.io-,Use%20Cases,-The%20ELK%20Stack)
@@ -72,7 +72,7 @@
 	- [Drupal module Raven](https://www.drupal.org/project/raven)
 	- source maps
 	- [SPA Vite](https://docs.sentry.io/platforms/javascript/sourcemaps/uploading/vite/)
-- [APM](../../arch/system.class/apm.md)
+- [APM](../../arch/system.class/perfofmance/apm.md)
 	- [Web Vitals](https://docs.sentry.io/product/performance/web-vitals/)
 	- Web Vitals in breadcrumbs
 - [Distributed Trace](https://docs.sentry.io/product/sentry-basics/tracing/distributed-tracing/)

@@ -1,6 +1,6 @@
 # Ory Hydra
 
-Реализация функции [Identity and Access Management (IAM)](../../../arch/system.class/iam.md) решений.
+Реализация функции [Identity and Access Management (IAM)](../../../arch/system.class/security/iam.md) решений.
 
 Компоненты:
 

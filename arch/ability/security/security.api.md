@@ -33,7 +33,7 @@
 - __Ограничение доступа__ ([RBAC, ABAC](../../../technology/middleware/acm.md) и тп) к методам АПИ
 - Использование TLS
 - [Валидация входных данных](https://github.com/Sairyss/backend-best-practices)
-- [Web Application firewall](../../system.class/waf.md) (WAF)
+- [Web Application firewall](../../system.class/security/waf.md) (WAF)
 - IP Whitelisting
   - [Ingress Kubernetes](https://dev.to/0x2633/how-to-add-the-whitelist-for-your-ingress-nginx-controller-of-k8s-1a02)
 - Rate Limiting

@@ -6,7 +6,7 @@
 
 ## Зачем
 
-Возможность [Identity and Access Management (IAM)](../../system.class/iam.md) решений.
+Возможность [Identity and Access Management (IAM)](../../system.class/security/iam.md) решений.
 
 1. [Идентификация](https://habr.com/ru/company/nixys/blog/563244/) - логин пароль
 2. Аутентификация - разрешен доступ checklogin

@@ -5,7 +5,7 @@
 	- [HTTP Headers](https://learn.microsoft.com/ru-ru/azure/cdn/cdn-how-caching-works#cache-directive-headers)
 - на клиенте в браузере (HTTP-кэш)
 - на [прокси сервере\балансировщике](../deployment/pattern.proxy.reverse.md)
-- [CDN](../../system.class/cdn.md) статичный контент
+- [CDN](../../system.class/perfofmance/cdn.md) статичный контент
 - данных в СУБД (sqldependency)
 - данных приложения
 	- Disrtibuted Cache - [Redis](../../../technology/store/nosql/redis.md), Memcached

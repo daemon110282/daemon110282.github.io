@@ -55,7 +55,7 @@
 - [Аудит](../observability/pattern.audit.md)
 - Логирование
 - [Platform V Synapse](https://platformv.sbertech.ru/blog/kak-otslezhivat-bezopasnost-prikladnyh-api-s-pomoshhyu-platform-v-synapse)
-- [SIEM](../../system.class/siem.md) (Security information and event management)
+- [SIEM](../../system.class/security/siem.md) (Security information and event management)
 - Конфигурация "Во вне"
 - Пассивная (При сборке приложения)
 - Активная Key Managment, Key Vault

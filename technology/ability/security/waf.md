@@ -2,7 +2,7 @@
 
 ## Зачем
 
-Класс ИС [WAF](../../../arch/system.class/waf.md) для обеспечения [безопасности](../../../arch/ability/security/security.md).
+Класс ИС [WAF](../../../arch/system.class/security/waf.md) для обеспечения [безопасности](../../../arch/ability/security/security.md).
 
 ## Варианты
 

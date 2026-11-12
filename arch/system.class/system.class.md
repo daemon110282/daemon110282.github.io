@@ -1,13 +1,13 @@
 # Классы информационных систем
 
 - Security
-  - [IAM](iam.md): KeyCloak
-    - [CIAM](ciam.md): OKTA
-  - [WAF](waf.md): Qrator
-  - [SIEM](siem.md)
+  - [IAM](security/iam.md): KeyCloak
+    - [CIAM](security/ciam.md): OKTA
+  - [WAF](security/waf.md): Qrator
+  - [SIEM](security/siem.md)
 - Performance
-  - [APM](apm.md): Sentry, OpenTelemetry
-  - [CDN](cdn.md)
+  - [APM](perfofmance/apm.md): Sentry, OpenTelemetry
+  - [CDN](perfofmance/cdn.md)
 - [DWH](dwh.md)
 - [Report](report.md)
 - [Mobile](mobile.md): IOS, Android

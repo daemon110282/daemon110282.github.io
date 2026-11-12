@@ -9,7 +9,7 @@
 
 ## Зачем
 
-Функции [Monitoring](../../technology/observability/monitoring.md):
+Функции [Monitoring](../../../technology/observability/monitoring.md):
 
 - Агенты сбора метрик
 - Distributed Tracing
@@ -17,7 +17,7 @@
 - Алерты
 - Real User Monitoring (RUM)
 
-[SPA](../style/spa.md):
+[SPA](../../style/spa.md):
 
 - JavaScript errors
 - Framework-specific issues
@@ -37,8 +37,8 @@
 
 [Варианты решений](https://openapm.io/landscape):
 
-- [Sentry](../../technology/observability/sentry.md)
-- [ELK](../../technology/observability/monitoring/elk.md)
+- [Sentry](../../../technology/observability/sentry.md)
+- [ELK](../../../technology/observability/monitoring/elk.md)
 - open source
   - [opentelemetry signoz](https://signoz.io/)
   - [Uptrace](https://github.com/uptrace/uptrace)

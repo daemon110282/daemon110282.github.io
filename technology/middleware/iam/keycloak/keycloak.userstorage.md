@@ -2,7 +2,7 @@
 
 ## Зачем
 
-Реализация [User Storage](../../../../arch/system.class/iam.md#user-store) для Keycloak.
+Реализация [User Storage](../../../../arch/system.class/security/iam.md#user-store) для Keycloak.
 
 ## Функции
 

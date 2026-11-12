@@ -2,7 +2,7 @@
 
 ## Patterns
 
-- Use [Content Delivery Network (CDN)](../../../arch/system.class/cdn.md)
+- Use [Content Delivery Network (CDN)](../../system.class/perfofmance/cdn.md)
 - Массив байтов, не в JSON. Файл нужно передавать [под его "родным"](https://code-maze.com/aspnetcore-web-api-return-file/) __Content-Type__
 - [Byte Array and Stream](https://code-maze.com/aspnetcore-web-api-return-file/)
 - Async file complete

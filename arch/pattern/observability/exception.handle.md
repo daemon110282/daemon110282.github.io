@@ -8,7 +8,7 @@
 - Honeybadger
 - [glitchtip](https://glitchtip.com/) Инструмент реализующий
 	- паттерн [мониторинга исключений](../../../arch/pattern/observability/exception.handle.md) (exception), ошибок, логов
-	- [анализа производительности APM](../../../arch/system.class/apm.md)
+	- [анализа производительности APM](../../system.class/perfofmance/apm.md)
 	- [vs](https://habr.com/ru/companies/constanta/articles/706386/) Sentry
 - [App Metrica](../../../technology/leads/app.metrica.md) для мобильных
 - [LogRocket](../../../technology/observability/logrocket.md)

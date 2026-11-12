@@ -14,25 +14,25 @@
 ## Зачем
 
 Традиционные решения IAM предназначены для облегчения __доступа сотрудников к внутренним системам__, они не могут предоставлять информацию о личности клиента.
-Персональные данные обрабатываются именно [CIAM](ciam.md).
+Персональные данные обрабатываются именно [CIAM](../ciam.md).
 
 Identity Provider (IDP) в IAM with industry standard supported protocols:
 
 - SAML 2.0 XML (Security Assertion Markup Language)
-- [OAuth](../../technology/protocols.integration/oauth/oauth.md)
-- [OpenID Connect (OIDC)](../../technology/protocols.integration/oidc.md)
+- [OAuth](../../../technology/protocols.integration/oauth/oauth.md)
+- [OpenID Connect (OIDC)](../../../technology/protocols.integration/oidc.md)
 - Social Authentication (FB, Google и тп)
 
 ## Функции
 
 Функционал [IAM](https://digitalguardian.com/blog/what-identity-and-access-management-iam):
 
-- [Single Sign On](../pattern/security/sso.md)
+- [Single Sign On](../../pattern/security/sso.md)
 - Аутентификация
   - Multi-Factor Authentication (MFA)
   - [Passwordless Authentication](https://auth0.com/blog/debunking-common-misconceptions-about-passwordless-authentication/)
 - Адаптивная аутентификация (применение более строгих форм проверки подлинности в зависимости от контекста пользователя — геолокации, устройства, с которого осуществляется вход, и т. д.)
-- [Access Control mechanisms](../../technology/middleware/acm.md) (ACMs)
+- [Access Control mechanisms](../../../technology/middleware/acm.md) (ACMs)
 	- Role Based Access (RBAC)
 	- Attribute-based access Control (ABAC)
 	- User-based access control (UBAC)
@@ -61,11 +61,11 @@ User Provisioning:
   - встроенный LDAP
   - внешний LDAP
   - Microsoft Active Directory
-  - [SCIM](../../technology/protocols.integration/scim.md)
+  - [SCIM](../../../technology/protocols.integration/scim.md)
 - Apache Cassandra
 - Identity Brokering подключение к External IDP
   - SAML
-  - [OIDC](../../technology/protocols.integration/oidc.md)
+  - [OIDC](../../../technology/protocols.integration/oidc.md)
   - Social (FB, Google..)
 
 ### Access Control
@@ -78,11 +78,11 @@ User Provisioning:
 
 ### OpenID Connect (OIDC)
 
-- [OpenID Сonnect](../../technology/protocols.integration/oidc.md) нужен, чтобы получить у пользователя его учетные данные и проверить их - __Authentication protocol__.
+- [OpenID Сonnect](../../../technology/protocols.integration/oidc.md) нужен, чтобы получить у пользователя его учетные данные и проверить их - __Authentication protocol__.
 
 ### OAuth
 
-- [OAuth 2.0](../../technology/protocols.integration/oauth/oauth.md) [нужен, чтобы получать](https://habr.com/ru/company/dataart/blog/311376/) токены доступа и с ними обращаться к ресурсам - __Authorization framework__, not an authentication protocol.
+- [OAuth 2.0](../../../technology/protocols.integration/oauth/oauth.md) [нужен, чтобы получать](https://habr.com/ru/company/dataart/blog/311376/) токены доступа и с ними обращаться к ресурсам - __Authorization framework__, not an authentication protocol.
 
 ## Критерии выбора
 
@@ -97,8 +97,8 @@ User Provisioning:
 
 Сравнения
 
-- [WSO2-Keycloack-Glue](../../technology/middleware/iam/iam.wso2.md)
-- [Keycloack-Glue](../../technology/middleware/iam/iam.keycloak.md)
+- [WSO2-Keycloack-Glue](../../../technology/middleware/iam/iam.wso2.md)
+- [Keycloack-Glue](../../../technology/middleware/iam/iam.keycloak.md)
 - Top [Okta-MS-Keycloak](https://www.saasworthy.com/list/identity-and-access-management-iam-software)
 - Top [Okta-MS-WSO2](https://www.g2.com/categories/single-sign-on-sso)
 - [keycloak-ory hydra](https://stackshare.io/stackups/keycloak-vs-ory-hydra)
@@ -112,15 +112,15 @@ User Provisioning:
 - [OIDC certified решения](https://openid.net/certification/certified-openid-providers-profiles/)
 - in house (on premise)
 	- Commercial
-		- [ADFS](../../technology/middleware/iam/iam.adfs.md)
+		- [ADFS](../../../technology/middleware/iam/iam.adfs.md)
 		- Отечественное
-    		- [UIDM](../../technology/middleware/iam/iam.uidm.md)
-    		- [Identity Blitz](../../technology/middleware/iam/iam.blitz.md)
+    		- [UIDM](../../../technology/middleware/iam/iam.uidm.md)
+    		- [Identity Blitz](../../../technology/middleware/iam/iam.blitz.md)
 	- Open Source
-		- [Keycloak (Red Hat Java)](../../technology/middleware/iam/iam.keycloak.md)
-		- [WSO2 Identity Server](../../technology/middleware/iam/iam.wso2.md)
-		- [IdentityServer (.NET Core)](../../technology/middleware/iam/iam.is.md) 4я версия бесплатная, с 6й версии нет?
-		- [Ory Hydra](../../technology/middleware/iam/iam.hydra.md)
+		- [Keycloak (Red Hat Java)](../../../technology/middleware/iam/iam.keycloak.md)
+		- [WSO2 Identity Server](../../../technology/middleware/iam/iam.wso2.md)
+		- [IdentityServer (.NET Core)](../../../technology/middleware/iam/iam.is.md) 4я версия бесплатная, с 6й версии нет?
+		- [Ory Hydra](../../../technology/middleware/iam/iam.hydra.md)
 - online
 	- Commercial
       - AWS Cognito

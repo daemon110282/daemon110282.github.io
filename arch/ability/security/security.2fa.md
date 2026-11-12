@@ -76,6 +76,6 @@
 
 ## Технологии
 
-- [IAM](../../system.class/iam.md#технологии)
+- [IAM](../../system.class/security/iam.md#технологии)
   - [ADFS](../../../technology/middleware/iam/iam.adfs.md)
   - [KeyCloak](../../../technology/middleware/iam/iam.keycloak.md)

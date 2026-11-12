@@ -32,7 +32,7 @@
     - [Object Storage](../../../technology/store/object.storage.md)
   - [Upload File](pattern.uploadfile.md)
   - [Download File](../../../api/api.rest.md)
-  - [CDN](../../system.class/cdn.md) реализует паттерн [Static content hosting](https://learn.microsoft.com/en-us/azure/architecture/patterns/static-content-hosting)
+  - [CDN](../../system.class/perfofmance/cdn.md) реализует паттерн [Static content hosting](https://learn.microsoft.com/en-us/azure/architecture/patterns/static-content-hosting)
   - Протокол [WebDAV](https://xakep.ru/2014/09/09/webdav/) HTTP API (IIS, Apache support) для подключения сайтов как сетевых дисков
 
 ### Приложения

@@ -4,7 +4,7 @@
   - [CDC](../integration/cdc.md)
 - Audit logging
   - Системы логирования
-  - [SIEM](../../system.class/siem.md) - выявление подозрительных активностей
+  - [SIEM](../../system.class/security/siem.md) - выявление подозрительных активностей
   - [API Gateway](../deployment/api.gateway.md)
   - [Reverse Proxy](../deployment/pattern.proxy.reverse.md)
   - [Единый сервис](https://vertabelo.com/blog/database-design-for-audit-logging/)

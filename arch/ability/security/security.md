@@ -33,9 +33,9 @@
 
 - [Паттерны](../../pattern/security/pattern.security.md).
 - [Криптозащита](security.crypto.md#технологии)
-- [Web Application firewall](../../system.class/waf.md) (WAF) Межсетевые экраны  
+- [Web Application firewall](../../system.class/security/waf.md) (WAF) Межсетевые экраны  
 - [Аутентификация](#авторизация) и [Авторизация](#авторизация)
-  - [Identity and Access Management (IAM)](../../system.class/iam.md)
+  - [Identity and Access Management (IAM)](../../system.class/security/iam.md)
     - [SSO](../../pattern/security/sso.md)
       - Oauth 2, OpenID Connect, SAML
       - WS-Federation (token)

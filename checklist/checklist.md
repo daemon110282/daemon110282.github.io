@@ -15,8 +15,6 @@
   - [API](api.md)
 - Deploy
   - [Поставка](setup.md)
-- [Demo PC](demopc.md)
-  - [Docker](../docker/docker.md)
 - Support
   - [Структура шаблона описания ИС](is.md)
   - [РП](manual.md)

@@ -1,5 +1,13 @@
 # User Story (US) Пользовательские истории
 
+- [User Story (US) Пользовательские истории](#user-story-us-пользовательские-истории)
+  - [Зачем](#зачем)
+  - [Шаблон](#шаблон)
+  - [Acceptance Criteria](#acceptance-criteria)
+  - [Definition of Done](#definition-of-done)
+  - [UC vs US](#uc-vs-us)
+  - [User Story Map](#user-story-map)
+
 ## Зачем
 
 - [Зачем](https://scrumtrek.ru/blog/product-management/3364/user-story-instruktsiya-po-primeneniyu/)

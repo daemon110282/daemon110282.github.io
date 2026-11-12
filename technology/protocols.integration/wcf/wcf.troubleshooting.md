@@ -11,8 +11,8 @@
 
 ## Dump
 
-- [Windows Debugging Tools](todo) installed on the server (takes longer)
-- [ProcDump](todo) (faster)
+- [Windows Debugging Tools](../todo) installed on the server (takes longer)
+- [ProcDump](../todo) (faster)
 
 ## Трассировка
 

@@ -12,6 +12,7 @@
     - [Thread pool starvation](#thread-pool-starvation)
     - [High GС .NET LOH](#high-gс-net-loh)
     - [Session lock Concurrent Requests](#session-lock-concurrent-requests)
+    - [HTTP.SYS Error Log](#httpsys-error-log)
 
 ## Tools
 
@@ -32,7 +33,7 @@
 	- For slow __ASP.NET Webforms applications__
 	- for troubleshooting slow ASP.NET MVC web sites using __[PerfView](../../troubleshooting/perfview.md)__
 - [CPU, ERROR, RAM leak](https://www.iis.net/learn/troubleshoot/performance-issues)
-- [WCF](../../protocols.integration/wcf.troubleshooting.md#трассировка)
+- [WCF](../../protocols.integration/wcf/wcf.troubleshooting.md#трассировка)
 
 ## Use case
 

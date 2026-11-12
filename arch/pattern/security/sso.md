@@ -12,7 +12,7 @@
 2. Аутентификация - разрешен доступ checklogin
 	- [OIDC](../../../technology/protocols.integration/oidc.md)
 3. Авторизация - роли, доступ checkaccess
-	- [OAuth 2.0](../../../technology/protocols.integration/oauth.md)
+	- [OAuth 2.0](../../../technology/protocols.integration/oauth/oauth.md)
 
 Типы [SSO](https://habr.com/ru/company/nixys/blog/563244/)
 ![scheme](https://habrastorage.org/r/w1560/webt/yg/wc/c0/ygwcc0udngt3kwnzjzlp6h4q_is.png)

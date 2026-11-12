@@ -18,5 +18,5 @@
 - [AMQP](middleware/messagebus/rmq.md)
 - MQTT
 - DB Link
-- [OAuth](protocols.integration/oauth.md)
+- [OAuth](protocols.integration/oauth/oauth.md)
 - [OpenID Conect](protocols.integration/oidc.md)

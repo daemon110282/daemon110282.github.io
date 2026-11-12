@@ -39,7 +39,7 @@
 
 - Direct
   - [API REST](../../../api/api.md)
-  - SOAP, [WCF](../../../technology/protocols.integration/wcf.md), ODATA
+  - SOAP, [WCF](../../../technology/protocols.integration/wcf/wcf.md), ODATA
   - [GraphQL](../../../technology/protocols.integration/graphql.md)
 - [Remote Procedure Invocation](pattern.rpc.md) (RPC): WebSocket, SSE, gRPC
 - Middleware

@@ -2,6 +2,7 @@
 
 - [Identity and Access Management (IAM)](#identity-and-access-management-iam)
 	- [Зачем](#зачем)
+	- [Функции](#функции)
 		- [User store](#user-store)
 		- [Access Control](#access-control)
 	- [Протоколы](#протоколы)
@@ -18,9 +19,11 @@
 Identity Provider (IDP) в IAM with industry standard supported protocols:
 
 - SAML 2.0 XML (Security Assertion Markup Language)
-- [OAuth](../../technology/protocols.integration/oauth.md)
+- [OAuth](../../technology/protocols.integration/oauth/oauth.md)
 - [OpenID Connect (OIDC)](../../technology/protocols.integration/oidc.md)
 - Social Authentication (FB, Google и тп)
+
+## Функции
 
 Функционал [IAM](https://digitalguardian.com/blog/what-identity-and-access-management-iam):
 
@@ -79,7 +82,7 @@ User Provisioning:
 
 ### OAuth
 
-- [OAuth 2.0](../../technology/protocols.integration/oauth.md) [нужен, чтобы получать](https://habr.com/ru/company/dataart/blog/311376/) токены доступа и с ними обращаться к ресурсам - __Authorization framework__, not an authentication protocol.
+- [OAuth 2.0](../../technology/protocols.integration/oauth/oauth.md) [нужен, чтобы получать](https://habr.com/ru/company/dataart/blog/311376/) токены доступа и с ними обращаться к ресурсам - __Authorization framework__, not an authentication protocol.
 
 ## Критерии выбора
 

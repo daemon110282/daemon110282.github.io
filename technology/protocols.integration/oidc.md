@@ -45,9 +45,9 @@ Client type — тип клиента, от которого зависит сп
 	<!-- ![scheme](https://habrastorage.org/r/w1560/getpro/habr/post_images/110/fe3/d4a/110fe3d4a29efd1af72da67ab06515ba.png) -->
 - Public - [GUI с участием User](https://docs.duendesoftware.com/identityserver/v6/overview/terminology/#interactive-applications)
 	- [Authorization Code Flow with PKCE](oauth/oauth.flow.ACwithPKCE.md)
+	- [Device Code authorization](https://www.digitalocean.com/community/tutorials/an-introduction-to-oauth-2#grant-type-device-code)
 	- [Implicit Flow](oauth/oauth.flow.implicit.md) __legacy__
 	- [Resource Owner Password Credentials Grant](https://developer.okta.com/blog/2018/06/29/what-is-the-oauth2-password-grant) __legacy__
-	- [Device Code authorization](https://www.digitalocean.com/community/tutorials/an-introduction-to-oauth-2#grant-type-device-code)
 
 ### Параметры Flow
 
@@ -58,8 +58,8 @@ Client type — тип клиента, от которого зависит сп
 	- TokenEndpoint - получаем IdentityToken
 	- ClientId
 	- ClientSecret
-		- Хранится на BackEnd и передается в Authentication Flow
-		- в Implicit Flow не хранится в SPA, JS и не передается
+		- Confidential Client: Хранится на BackEnd и передается в Authentication Flow
+		- Public Client: в Implicit Flow не хранится в SPA, JS и не передается
 
 [Песочница](https://openidconnect.net/)
 

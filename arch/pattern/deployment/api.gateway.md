@@ -17,7 +17,7 @@
 communication to multiple microservices
 - [Сквозная функциональность](https://docs.microsoft.com/ru-ru/azure/architecture/patterns/gateway-offloading) __cross-cutting concerns__ or gateway offloading  
   - [Authentication](https://konghq.com/learning-center/api-gateway/api-gateway-authentication) and authorization
-    - [OAuth](../../../technology/protocols.integration/oauth.md) access token
+    - [OAuth](../../../technology/protocols.integration/oauth/oauth.md) access token
   - [Service discovery](./service.discovery.md) integration
   - Response caching
   - [Retry policies, circuit breaker, and QoS](../system.design/fault.tolerance/pattern.failure.md)

@@ -52,7 +52,7 @@
     - API Key
     - Token
       - JWT
-      - [OAuth](../../../technology/protocols.integration/oauth.md)
+      - [OAuth](../../../technology/protocols.integration/oauth/oauth.md)
       - [Access](../../../technology/protocols.integration/oauth/oauth.access.token.md)
       - [Refresh](../../../technology/protocols.integration/oauth/oauth.refresh.token.md)
 - Контекста

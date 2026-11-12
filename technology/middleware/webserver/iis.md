@@ -83,7 +83,7 @@
         - IIS Worker Process X
     - When processing is complete, HTTP.sys sends the __response__ back to the browser.
     - HTTP.sys also has a __cache__ and if it has the requested file in cache it can return it directly to the client browser without having to contact any IIS services for processing.
-  - listener __[WCF Service](../../protocols.integration/wcf.md)__
+  - listener __[WCF Service](../../protocols.integration/wcf/wcf.md)__
 
 [MIRO flow](https://miro.com/app/board/uXjVOMlBLHQ=/?moveToWidget=3458764577785621378&cot=14)
 

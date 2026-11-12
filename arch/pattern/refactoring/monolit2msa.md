@@ -8,7 +8,7 @@
     - [Паттерны](#паттерны)
     - [Рефакторинг](#рефакторинг)
 
-Паттерны распила, [рефакторинг](pattern.refactoring.md) [монолита](../../style/monolit.md) на [MSA](../../style/msa.md).
+Паттерны распила, [рефакторинг](pattern.refactoring.md) [монолита](../../style/monolit.md) на [MSA](../../style/dsa/msa.md).
 
 ## Зачем
 

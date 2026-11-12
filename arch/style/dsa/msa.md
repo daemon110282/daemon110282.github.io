@@ -12,7 +12,7 @@
 
 ## Зачем
 
-[Архитектурный стиль](arch.styles.md).
+[Архитектурный стиль](../arch.styles.md).
 
 - Сокращение time2market
 - Независимость
@@ -26,7 +26,7 @@
 
 ## Плюсы и минусы
 
-[Критерии](../arch.criteria.md)
+[Критерии](../../arch.criteria.md)
 
 Плюсы
 
@@ -43,12 +43,12 @@
 
 Минусы
 
-- Сложно идентифицировать оптимальный набор сервисов при декомпозиции приложения (подходы [DDD](../pattern/system.design/ddd.md), [Event Storming](../../analytic/sa/event.storming.md))
+- Сложно идентифицировать оптимальный набор сервисов при декомпозиции приложения (подходы [DDD](../../pattern/system.design/ddd.md), [Event Storming](../../../analytic/sa/event.storming.md))
   - Если границы по-настоящему хорошо не определены, случится так, что — даже в случае теоретической возможности изолированного деплоя сервисов всплывут взаимные __зависимости между сервисами__, из-за которых придётся деплоить наборы сервисов как группу (__архитектурный квант__).
     - независимо масштабируемые сервисы вряд ли помогут, потому что остаётся влияние производительности зависимостей
 - Распределенные системы сложны по своей природе
-  - Сложность распределенных транзакций ([Сага](../pattern/integration/pattern.saga.md))
-- Сложная инфраструктура ([DevOps](../pattern/deployment/devops.md))
+  - Сложность распределенных транзакций ([Сага](../../pattern/integration/pattern.saga.md))
+- Сложная инфраструктура ([DevOps](../../pattern/deployment/devops.md))
   - Разработка, тестирование и развертывание в распределенных сред требуют специальных навыков и инструментов
   - Инфраструктурный код
 - Развертывание изменений, которые затрагивают несколько служб, требует тщательной координации
@@ -60,7 +60,7 @@ __Не подходит__ для:
 
 ### MSA vs Монолит
 
-В сравнении с [монолитом](../style/monolit.md) плюсы:
+В сравнении с [монолитом](../monolit.md) плюсы:
 
 - Независимое развертывание и обновление
 - При необходимости отдельные микросервисы могут быть развернуты или масштабированы независимо
@@ -140,11 +140,11 @@ __Не подходит__ для:
   - the API REST-based topology
   - application REST-based topology
   - the centralized messaging topology
-- нет [прямого взаимодействия микросервисов](https://habr.com/ru/articles/496934/) [API Gateway](../pattern/deployment/api.gateway.md) или [Message Bus](eda.md)
+- нет [прямого взаимодействия микросервисов](https://habr.com/ru/articles/496934/) [API Gateway](../../pattern/deployment/api.gateway.md) или [Message Bus](eda.md)
 - Декомпозиции на сервисы
   - [Decompose by business capability Context](https://microservices.io/patterns/decomposition/decompose-by-business-capability.html)
   - [Decompose by subdomain Context](https://microservices.io/patterns/decomposition/decompose-by-subdomain.html)
-- [Обработка сбоев](../pattern/system.design/fault.tolerance/pattern.failure.md)
+- [Обработка сбоев](../../pattern/system.design/fault.tolerance/pattern.failure.md)
 - Аутентификация
   - Leave the data where it is, and have services ask for it directly. Use a gateway to attach the data to all requests, so it's available everywhere. Centralize authorization data into one place, and move [all decisionmaking to that place](https://www.osohq.com/post/microservices-authorization-patterns).
 - [Microservice Design Pattern](https://apolomodov.medium.com/%D0%BE%D0%B1%D0%B7%D0%BE%D1%80-%D0%BA%D0%BD%D0%B8%D0%B3%D0%B8-microservice-patterns-and-best-practices-dce7785b9c45)
@@ -152,13 +152,13 @@ __Не подходит__ для:
   - Proxy
   - Chained
   - Branch (Aggregator + Chained в связке)
-- Опишите микросервисы в виде блоков, решающих бизнес-задачу, и сделайте из них конструктор - [__оркестрация бизнес-сервисов__](../pattern/integration/orchestration-choreography.md)
+- Опишите микросервисы в виде блоков, решающих бизнес-задачу, и сделайте из них конструктор - [__оркестрация бизнес-сервисов__](../../pattern/integration/orchestration-choreography.md)
 - TODO
   - [Паттерны управления данными](https://mcs.mail.ru/blog/26-osnovnyh-patternov-mikroservisnoj-razrabotki)
   - [26 основных паттернов микросервисной разработки](https://mcs.mail.ru/blog/26-osnovnyh-patternov-mikroservisnoj-razrabotki)
-- [Service Mesh](../../technology/middleware/servicemesh.md)
-- [API Gateway](../pattern/deployment/api.gateway.md)
-- [Service Discovery](../pattern/deployment/service.discovery.md)
+- [Service Mesh](../../../technology/middleware/servicemesh.md)
+- [API Gateway](../../pattern/deployment/api.gateway.md)
+- [Service Discovery](../../pattern/deployment/service.discovery.md)
 
 ### Принципы к проектированию сервисов
 
@@ -192,7 +192,7 @@ Microservices on .Net platforms which used Asp.Net Web API, Docker, RabbitMQ, Ma
 
 - Логи пишутся в консоль/stdout в формате json
 - Конфигурация в ЕNV-переменных
-- [Миграции для БД](../pattern/deployment/migration.db.md)
+- [Миграции для БД](../../pattern/deployment/migration.db.md)
 - Swagger
 - Идемпотетность. Идемпотентным называют такой метод API, повторный вызов которого не меняет состояние. НО: результат идемпотентного вызова может меняться.
 - Кэш

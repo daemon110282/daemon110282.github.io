@@ -30,7 +30,7 @@
 - отказоустойчивость и масштабирование MariaDB и RabbitMQ в основе лежит разделение баз и брокеров по сервисам.
 - Избегайте состояния (__stateless__) в вашем приложении
 - [Балансировка](../pattern/deployment/load.balancing.md)
-- [Big data](../style/bigdata.md)
+- [Big data](../style/dsa/bigdata.md)
 
 ## Метрики
 

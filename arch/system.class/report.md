@@ -26,7 +26,7 @@
 UC:
 
 - Отчетность
-- [Big Data](../style/bigdata.md)
+- [Big Data](../style/dsa/bigdata.md)
 
 ## Плюсы и минусы
 

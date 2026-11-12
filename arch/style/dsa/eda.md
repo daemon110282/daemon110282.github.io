@@ -9,19 +9,19 @@
 
 ## Зачем
 
-[Архитектурный стиль](arch.styles.md):
+[Архитектурный стиль](../arch.styles.md):
 
 - __Несколько подсистем__ должны обрабатывать __одни и те же события__
 - Обработка в режиме __реального времени с минимальной задержкой__
 - Обработка сложных событий, например, поиск закономерностей или агрегирование данных по временным интервалам
 - __Большие объемы__ и __высокая скорость поступления данных__ (характерно, например, для интернета вещей — IoT)
-- __[Background Jobs](../pattern/development/background.job.md)__: Sending background messages, emails, or notifications to loads of users.
-- __Асинхронный обмен сообщениями__: [Очереди сообщений](../pattern/integration/pattern.messagebroker.md) — лучший способ реализации асинхронного программирования.
+- __[Background Jobs](../../pattern/development/background.job.md)__: Sending background messages, emails, or notifications to loads of users.
+- __Асинхронный обмен сообщениями__: [Очереди сообщений](../../pattern/integration/pattern.messagebroker.md) — лучший способ реализации асинхронного программирования.
 - __Большое время отклика__: Ситуации, когда время выполнения запроса оказывается слишком долгим (например, при выполнении вычислений, поиске, создании PDF-файлов и т. д.).
 
 ## Плюсы и минусы
 
-[Критерии](../arch.criteria.md)
+[Критерии](../../arch.criteria.md)
 
 Плюсы:
 
@@ -52,29 +52,29 @@
 ## Паттерны
 
 - две топологии
-  - Топология «посредник» (__mediator topology__) часто применяется в тех случаях, когда необходимо обеспечить __[оркестрацию](../pattern/integration/orchestration-choreography.md)__ нескольких этапов обработки события посредством центрального посредника.
+  - Топология «посредник» (__mediator topology__) часто применяется в тех случаях, когда необходимо обеспечить __[оркестрацию](../../pattern/integration/orchestration-choreography.md)__ нескольких этапов обработки события посредством центрального посредника.
   - __broker topology__ (__хореография__) is used when you want to chain events together without the use of a central mediator
 - __Событие__ Event driven
-  - [Publish-subscribe](../../technology/middleware/messagebus/rmq.md)
+  - [Publish-subscribe](../../../technology/middleware/messagebus/rmq.md)
     - event-base
     - [shared-data space](https://apolomodov.medium.com/coa-distributed-systems-4th-ed-2-architecture-af563b2332bd)
   - Подходы к передаче событий
-    - только __факт события__ ![event](../../img/arch/eda/eda.event.jpg)
-    - __полное состояние объекта__ ![state](../../img/arch/eda/eda.state.jpg)
+    - только __факт события__ ![event](../../../img/arch/eda/eda.event.jpg)
+    - __полное состояние объекта__ ![state](../../../img/arch/eda/eda.state.jpg)
 - __Команда__ Command driven
-  - [Task (Worker) Queue](../../technology/middleware/messagebus/rmq.md)
-  - [RPC (команды)](../../technology/middleware/messagebus/rmq.md)
-- __Запросы и команды отдельно__ [CQRS](../pattern/performance/pattern.cqrs.md) - command query request segregation
-- Состояние объекта - __последовательность событий изменений объекта__ [Event sourcing](../pattern/integration/event.sourcing.md)
+  - [Task (Worker) Queue](../../../technology/middleware/messagebus/rmq.md)
+  - [RPC (команды)](../../../technology/middleware/messagebus/rmq.md)
+- __Запросы и команды отдельно__ [CQRS](../../pattern/performance/pattern.cqrs.md) - command query request segregation
+- Состояние объекта - __последовательность событий изменений объекта__ [Event sourcing](../../pattern/integration/event.sourcing.md)
 - __Распределенные транзакции__ (лучше не делать)
-  - [SAGA](../pattern/integration/pattern.saga.md)
-  - [2PC](../pattern/integration/pattern.2pc.md) двухфазный комит
+  - [SAGA](../../pattern/integration/pattern.saga.md)
+  - [2PC](../../pattern/integration/pattern.2pc.md) двухфазный комит
 - [Versioning Message](https://www.youtube.com/watch?v=mEzYTuYSork&list=PLx8uyNNs1ri2MBx6BjPum5j9_MMdIfM9C&index=11&ab_channel=ChrisPatterson)
   - [EasyNetQ by message type](https://github.com/EasyNetQ/EasyNetQ/wiki/Versioning-Messages)
 
 ## Технологии
 
-- Шины сообщений Message Bus\Шины событий Event Bus (брокер обмена сообщениями [Message Broker](../pattern/integration/pattern.messagebroker.md))
+- Шины сообщений Message Bus\Шины событий Event Bus (брокер обмена сообщениями [Message Broker](../../pattern/integration/pattern.messagebroker.md))
 - [MS Обмен сообщениями](https://docs.microsoft.com/ru-ru/azure/architecture/guide/technology-choices/messaging)
 
 ## TODO

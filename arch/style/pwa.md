@@ -2,7 +2,7 @@
 
 ## Зачем
 
-- PWA(https://webcase.com.ua/blog/razrabotka-odnostranichnyh-prilozhenij-spa-webcase/#f5)
+- [PWA](https://webcase.com.ua/blog/razrabotka-odnostranichnyh-prilozhenij-spa-webcase/#f5)
 - Под разные платформы мобил, ПК из браузера
 - Примеры: pinterest
 

@@ -4,7 +4,7 @@
 
 Workflow scheduler (оркестратор) system to manage Apache Hadoop jobs.
 
-Решение используется в архитектурном стиле [BigData](../arch/style/bigdata.md).
+Решение используется в архитектурном стиле [BigData](../arch/style/dsa/bigdata.md).
 
 ## Функции
 

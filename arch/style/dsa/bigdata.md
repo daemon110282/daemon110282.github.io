@@ -11,7 +11,7 @@
 
 ## Зачем
 
-[Архитектурный стиль](../arch.styles.md).
+[Архитектурный стиль](../../arch.styles.md).
 
 - крупные __массивы информации__, которые помогают принимать обоснованные __решения__ основанные на данных (__data-driven__)
 - стек специальных __распределенных__ технологий для работы с информацией
@@ -20,7 +20,7 @@ UC:
 
 - преобразование неструктурированных данных для анализа и создания отчетов
 - архивные данные
-- построение [единой отчетности](../system.class/report.md) (BI)
+- построение [единой отчетности](../../system.class/report.md) (BI)
 - ML
 
 ### vs хранилища данных
@@ -32,7 +32,7 @@ UC:
 	- Veracity достоверность
 	- Variability изменчимовсть
 	- Value ценность для бизнеса
-- [Data Lake](../pattern/system.design/data/data.lake.md#vs-хранилища-данных)
+- [Data Lake](../../pattern/system.design/data/data.lake.md#vs-хранилища-данных)
 - Алгоритмы параллельной распределенной обработки данных
   - Distributed Processing Frameworks
   - MPP архитектура обработки данных
@@ -41,7 +41,7 @@ UC:
 
 ## Плюсы-минусы
 
-[Критерии](../arch.criteria.md)
+[Критерии](../../arch.criteria.md)
 
 Плюсы
 
@@ -73,34 +73,34 @@ UC:
 
 ## Паттерны
 
-![arch](../../img/arch/big.data.arch.svg)
+![arch](../../../img/arch/big.data.arch.svg)
 
-- [Architecture Reference](../ref/bigdata.md)
+- [Architecture Reference](../../ref/bigdata.md)
 - Сбор
   - Streaming Data
-    - [Kafka](../../technology/middleware/messagebus/kafka.md)
+    - [Kafka](../../../technology/middleware/messagebus/kafka.md)
     - Amazon Kinezis
-  - [CDC](../pattern/integration/cdc.md)
-  - Репликация, синхронизация данных [Sync Data](../pattern/integration/sync.data.md)
+  - [CDC](../../pattern/integration/cdc.md)
+  - Репликация, синхронизация данных [Sync Data](../../pattern/integration/sync.data.md)
 - Хранение
-  - [Distributed Storage Systems](../../technology/filesystem/dfs.md)
-  - структурированные данные в [DWH](../system.class/dwh.md)
-      - РСУБД [Хранилища данных](../system.class/store.md)
-      - [Data Vault](../pattern/system.design/data/data.vault.md) - одна из моделей хранилища Data Warehouse с __временными отметками__ размещения данных
+  - [Distributed Storage Systems](../../../technology/filesystem/dfs.md)
+  - структурированные данные в [DWH](../../system.class/dwh.md)
+      - РСУБД [Хранилища данных](../../system.class/store.md)
+      - [Data Vault](../../pattern/system.design/data/data.vault.md) - одна из моделей хранилища Data Warehouse с __временными отметками__ размещения данных
   - слабо структурированные
-    - [NoSQL](../system.class/store.nosql.md): Columnar Store  
-    - [Data Mart](../pattern/system.design/data/data.mart.md) - витрина __однородных__ данных одной __предметной области__
-  - Озеро данных [Data Lake](../pattern/system.design/data/data.lake.md)
+    - [NoSQL](../../system.class/store.nosql.md): Columnar Store  
+    - [Data Mart](../../pattern/system.design/data/data.mart.md) - витрина __однородных__ данных одной __предметной области__
+  - Озеро данных [Data Lake](../../pattern/system.design/data/data.lake.md)
     - хранит любые типы данных
     - данные в хранилище поступают непрерывно в __реальном времени__
 - Обработка
   - [Distributed Processing Frameworks](https://gogeometry.com/software/big-data-mind-map.html)
-    - [MapReduce](../pattern/system.design/data/map.reduce.md)
+    - [MapReduce](../../pattern/system.design/data/map.reduce.md)
     - Spark
-  - [Massive Parallel Processing](mpp.md) (MPP) архитектура
+  - [Massive Parallel Processing](../mpp.md) (MPP) архитектура
 - [Оркестратор](https://docs.microsoft.com/ru-ru/azure/architecture/guide/architecture-styles/big-data) Big Data Orchestration Tools
 - Анализ
-  - [Системы отчетности](../system.class/report.md)
+  - [Системы отчетности](../../system.class/report.md)
     - BI
     - OLAP
   - ML
@@ -114,7 +114,7 @@ TODO:
 
 - Сбор
   - Streaming
-    - [Kafka](../../technology/middleware/messagebus/kafka.md)
+    - [Kafka](../../../technology/middleware/messagebus/kafka.md)
     - Центры событий Azure
     - Центры Интернета вещей Azure
   - CDC: Debezium
@@ -122,26 +122,26 @@ TODO:
   - Distributed Storage Systems: HDFS, GFS, CFS
   - структурированные Structured
     - MSSQL, PGSQL
-    - Data Vault: [Yandex Data Lens](../../technology/store/yandex.data.lens.md)
+    - Data Vault: [Yandex Data Lens](../../../technology/store/yandex.data.lens.md)
   - слабо структурированные Semi structured
-    - [Yandex Data Lens](../../technology/store/yandex.data.lens.md)
-    - [ClickHouse](../../technology/store/clickhouse.md)
-    - [Apache Hadoop](../../technology/store/apache.hadoop.md)
+    - [Yandex Data Lens](../../../technology/store/yandex.data.lens.md)
+    - [ClickHouse](../../../technology/store/clickhouse.md)
+    - [Apache Hadoop](../../../technology/store/apache.hadoop.md)
   - Data Lake
-    - [Apache Hive](../../technology/store/apache.hive.md)
+    - [Apache Hive](../../../technology/store/apache.hive.md)
     - Apache Hadoop
     - Kafka
     - Azure Data Lake Store
 - Обработка
   - Apache Hadoop: Hive, Pig, Map Reduce
-  - [Apache Spark](../../technology/store/apache.spark.md)
+  - [Apache Spark](../../../technology/store/apache.spark.md)
   - Azure Data Lake Analytics
   - Azure Stream Analytics
 - [Оркестратор](https://docs.microsoft.com/ru-ru/azure/architecture/guide/architecture-styles/big-data)
-  - фабрика данных [Azure](../../technology/azure.md)
-  - [Apache Oozie](../../technology/apache.oozie.md) shedule Job Spark
-  - Apache [Sqoop](../../technology/apache.sqoop.md) shedule Job ETL
-  - Apache [Airflow](../../technology/apache.airflow.md) создания, выполнения, мониторинга и [оркестровки потоков операций](../pattern/integration/orchestration-choreography.md) по обработке данных
+  - фабрика данных [Azure](../../../technology/azure.md)
+  - [Apache Oozie](../../../technology/apache.oozie.md) shedule Job Spark
+  - Apache [Sqoop](../../../technology/apache.sqoop.md) shedule Job ETL
+  - Apache [Airflow](../../../technology/apache.airflow.md) создания, выполнения, мониторинга и [оркестровки потоков операций](../../pattern/integration/orchestration-choreography.md) по обработке данных
 - Анализ
   - Apache Spark
   - Apache Hive

@@ -32,7 +32,7 @@ API - Application Programming Interface, что значит программн�
 - [Вебхуки Webhook](webhook.md)
 - [SOAP](wsdl.md)
   - ESB
-- [EDA](../arch/style/eda.md)
+- [EDA](../arch/style/dsa/eda.md)
 - EDI - Electroinic Data Interchange
 - Server Side Events [SSE](../technology/protocols.integration/sse.md)
 - AMQP

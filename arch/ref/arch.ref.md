@@ -1,9 +1,9 @@
 # Эталонные архитектуры (Reference Architecture)
 
-- [MSA](../style/msa.md)
+- [MSA](../style/dsa/msa.md)
   - TODO Nginx
   - [Брокерское приложение](ba.ti.md)
-- [EDA](../style/eda.md)
+- [EDA](../style/dsa/eda.md)
   - [BIAN](bian.md)
 - [MTA](../pattern/system.design/mta/mta.md)
   - TODO ABP

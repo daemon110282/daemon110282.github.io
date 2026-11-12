@@ -27,7 +27,7 @@
 - LC/HC - [Принципы GRASP](https://rmcreative.ru/blog/post/printsipy-grasp)
   - [Low coupling (LC)](./low.coupling.md)
   - High cohesion (HC)
-- __DRY - Dont Repeat Yourself__: не должны повторяться именно в __поведении__, а не в __данных__ (например [микросервисы](../../style/msa.md))
+- __DRY - Dont Repeat Yourself__: не должны повторяться именно в __поведении__, а не в __данных__ (например [микросервисы](../../style/dsa/msa.md))
 
 ## Разделения ответственности слоев
 

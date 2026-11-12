@@ -102,7 +102,7 @@
 
 ### Message Bus
 
-Паттерн арх-го стиля [EDA](../../arch/style/eda.md)
+Паттерн арх-го стиля [EDA](../../arch/style/dsa/eda.md)
 
 - RMQ [AMQP 0.9.1](https://github.com/php-amqplib/php-amqplib)
 - [prooph](https://github.com/prooph/service-bus)

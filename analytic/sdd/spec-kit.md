@@ -1,21 +1,22 @@
 # Spec-Kit
 
 - [Spec-Kit](#spec-kit)
-	- [Зачем](#зачем)
-	- [TODO](#todo)
-	- [Процесс](#процесс)
-		- [0. Init](#0-init)
-		- [0.1 Update](#01-update)
-		- [1. Constitution - Конституция, стандарты, принципы](#1-constitution---конституция-стандарты-принципы)
-		- [2. Specify - Бизнес требования](#2-specify---бизнес-требования)
-		- [3. Clarify - Уточнение бизнес требований](#3-clarify---уточнение-бизнес-требований)
-		- [4. Checklist - Чек-листы качества](#4-checklist---чек-листы-качества)
-		- [5. Plan - Технический план](#5-plan---технический-план)
-		- [6. Tasks - Задачи на разработку](#6-tasks---задачи-на-разработку)
-		- [7. Analyze - Проверка согласованности](#7-analyze---проверка-согласованности)
-		- [?. Trace - Трассировка спецификаций, тестов и кода](#-trace---трассировка-спецификаций-тестов-и-кода)
-		- [8. Implement - Разработка](#8-implement---разработка)
-		- [9. Converge - Проверить полноту реализации](#9-converge---проверить-полноту-реализации)
+  - [Зачем](#зачем)
+  - [TODO](#todo)
+  - [Процесс](#процесс)
+    - [0. Init](#0-init)
+    - [0.1 Add customization](#01-add-customization)
+    - [0.2 Update](#02-update)
+    - [1. Constitution - Конституция, стандарты, принципы](#1-constitution---конституция-стандарты-принципы)
+    - [2. Specify - Бизнес требования](#2-specify---бизнес-требования)
+    - [3. Clarify - Уточнение бизнес требований](#3-clarify---уточнение-бизнес-требований)
+    - [4. Checklist - Чек-листы качества](#4-checklist---чек-листы-качества)
+    - [5. Plan - Технический план](#5-plan---технический-план)
+    - [6. Tasks - Задачи на разработку](#6-tasks---задачи-на-разработку)
+    - [7. Analyze - Проверка согласованности](#7-analyze---проверка-согласованности)
+    - [?. Trace - Трассировка спецификаций, тестов и кода](#-trace---трассировка-спецификаций-тестов-и-кода)
+    - [8. Implement - Разработка](#8-implement---разработка)
+    - [9. Converge - Проверить полноту реализации](#9-converge---проверить-полноту-реализации)
 
 ## Зачем
 
@@ -45,12 +46,16 @@
 - [Codex CLI](https://github.com/github/spec-kit/blob/main/docs/integrations/codex.md)
 
 ```text
+specify init .
 specify init taskify --integration copilot
-specify init . --integration copilot
 specify init . --integration copilot
 ```
 
-### 0.1 Update
+### 0.1 Add customization
+
+[Кастомизация Spec-Kit](spec-kit.custom.md)
+
+### 0.2 Update
 
 [Guide](https://github.github.com/spec-kit/upgrade.html)
 
@@ -120,6 +125,15 @@ Best practices:
 - User Story Mapping
 - Используйте ChatGPT для первого драфта
 
+Preset:
+
+- [test-first-governance](spec-kit.custom.md#test-first-governance---bdd-atdd-tdd-traceability-us-fr-tc-quality-gate) BDD, ATDD добавляет:
+  - BDD требуется для поведения, видимого пользователю, и бизнес-правил.
+  - ATDD требуется для критериев приемки заинтересованными сторонами и границ релиза.
+  - Работа, связанная только с __техническими аспектами__, может быть отмечена как __N/A__ с обоснованием и альтернативными доказательствами
+    - Укажите, какие истории, требования или критерии успеха являются __Required или N/A__, и объясните каждый N/A.
+    - пример промта "Mark BDD N/A for this internal refactor because there is no user-visible behavior; use TDD and coverage evidence instead."
+
 ### 3. Clarify - Уточнение бизнес требований
 
 - Интервью с умным коллегой
@@ -179,6 +193,14 @@ Best practices:
 4. Что можно упростить для MVP?
 ```
 
+Preset:
+
+- [test-first-governance](spec-kit.custom.md#test-first-governance---bdd-atdd-tdd-traceability-us-fr-tc-quality-gate) добавляет:
+  - TDD
+  - Инструменты для тестирования и контроля качества
+  - Политика покрытия и пороговых значений
+  - Сохранение доказательств и отчетов: test-traceability.md, defect-log.md, test-summary.md
+
 ### 6. Tasks - Задачи на разработку
 
 Best practices:
@@ -236,6 +258,24 @@ Best practices:
   - Закрываете сессию (/clear)
   - Новая сессия → /speckit.implement Phase 2
   
+Preset:
+
+- [test-first-governance](spec-kit.custom.md#test-first-governance---bdd-atdd-tdd-traceability-us-fr-tc-quality-gate) добавляет:
+  - TDD
+  - Инструменты для тестирования и контроля качества
+  - Политика покрытия и пороговых значений
+  - Сохранение доказательств и отчетов: test-traceability.md, defect-log.md, test-summary.md
+
 ### 9. Converge - Проверить полноту реализации
 
 /speckit-converge
+
+Preset:
+
+- [test-first-governance](spec-kit.custom.md#test-first-governance---bdd-atdd-tdd-traceability-us-fr-tc-quality-gate) добавляет:
+  - Cводка по тестированию
+    - Если идентификатор релиза не указан, по умолчанию используется __rolling и записывается reports/test-summary.md__
+    - В режиме релиза записывается __reports/releases/<release-id>/test-summary.md__
+      - пример промта: "Overall Test Summary Destination: release. Release ID: v1.3.0. Output path: reports/releases/v1.3.0/test-summary.md."
+  - Дополнительные общие отчеты
+    - пример промта: "Customer contract requires an overall defect report; generate it from feature defect logs and link it from the overall test summary."

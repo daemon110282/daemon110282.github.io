@@ -51,12 +51,22 @@ specify preset add {name}
 
 TODO:
 
-- [ ] [Трассировка спецификаций, тестов и кода в разработке с использованием AI](https://www.glukhov.org/ru/app-architecture/testing-architecture/specs-tests-code-traceability-ai-development/)
-  - [x] [spec-kit-preset-test-first-governance](https://github.com/ka-zo/spec-kit-preset-test-first-governance)
 - [ ] Table of Contents Navigation (toc-navigation) v1.0.0
 - [ ] iSAQB Architecture Governance (isaqb-architecture-governance) v0.2.5
 - [ ] Jira Issue Tracking (jira) v1.0.0
 - [ ] Security Governance (security-governance) v0.7.4
+
+### test-first-governance - BDD, ATDD, TDD, Traceability US-FR-TC, Quality Gate
+
+- [ ] [Трассировка спецификаций, тестов и кода в разработке с использованием AI](https://www.glukhov.org/ru/app-architecture/testing-architecture/specs-tests-code-traceability-ai-development/)
+
+[test-first-governance](https://github.com/ka-zo/spec-kit-preset-test-first-governance)
+
+- __Behavior-Driven Development__ (BDD) expresses applicable __user-visible behavior and business rules as executable Gherkin examples__.
+- __Acceptance Test-Driven Development__ (ATDD) defines __executable stakeholder-facing acceptance evidence__ before implementation.
+- __Test-Driven Development__ (TDD) applies incremental __Red-Green-Refactor__ cycles to production logic.
+- __Traceability__ connects stories, requirements, edge cases, scenarios, tests, and current execution evidence.
+- __Risk-based quality gates__ apply coverage, linting, formatting, static analysis, security, and runtime checks according to the project's stack and risk surface.
 
 ## Workflow
 

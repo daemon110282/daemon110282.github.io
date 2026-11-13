@@ -42,6 +42,7 @@
   - [User Stoty Map](../../analytic/ba/user.story.md#user-story-map)
   - UC [use-case](../../analytic/sa/use.case.md), клик-событие, акторы
   - [Event Storming](../../analytic/sa/event.storming.md)
+  - Дизайн
 - Ограничения, Допущения
   - Границы проекта (scope)\системы\решения (что включаем в автоматизацию на текущем этапе)
   - Бэклог

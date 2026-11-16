@@ -10,8 +10,8 @@
     - [1. Constitution - Конституция, стандарты, принципы](#1-constitution---конституция-стандарты-принципы)
     - [2. Specify - Бизнес требования](#2-specify---бизнес-требования)
     - [3. Clarify - Уточнение бизнес требований](#3-clarify---уточнение-бизнес-требований)
-    - [4. Checklist - Чек-листы качества](#4-checklist---чек-листы-качества)
-    - [5. Plan - Технический план](#5-plan---технический-план)
+    - [4. Plan - Технический план](#4-plan---технический-план)
+    - [5. Checklist - Чек-листы качества](#5-checklist---чек-листы-качества)
     - [6. Tasks - Задачи на разработку](#6-tasks---задачи-на-разработку)
     - [7. Analyze - Проверка согласованности](#7-analyze---проверка-согласованности)
     - [?. Trace - Трассировка спецификаций, тестов и кода](#-trace---трассировка-спецификаций-тестов-и-кода)
@@ -20,7 +20,7 @@
 
 ## Зачем
 
-[Spec-Kit](https://github.github.com/spec-kit/) реализация фреймворка [SDD](sdd.md) (Spec-Driven Documentation) для разработки технической документации в репозитории, подход __docs-as-code__ без изменения технологического стека разработки.
+[Spec-Kit](https://github.github.com/spec-kit/) реализация фреймворка [SDD](../sdd.md) (Spec-Driven Documentation) для разработки технической документации в репозитории, подход __docs-as-code__ без изменения технологического стека разработки.
 
 [Кастомизация Spec-Kit](spec-kit.custom.md).
 
@@ -47,6 +47,7 @@
 
 ```text
 specify init .
+specify init . --integration codex
 specify init taskify --integration copilot
 specify init . --integration copilot
 ```
@@ -54,6 +55,8 @@ specify init . --integration copilot
 ### 0.1 Add customization
 
 [Кастомизация Spec-Kit](spec-kit.custom.md)
+
+- test-first-governance
 
 ### 0.2 Update
 
@@ -72,50 +75,44 @@ specify self check
 Проанализируй текущий код и создай constitution на его основе.
 ```
 
+Пример:
+
+```text
+/speckit-constitution Taskify is a "Security-First" application. All user inputs must be validated. We use a microservices architecture. Code must be fully documented.
+```
+
+```text
+/speckit-constitution {Название проекта}
+Создай конституцию проекта на основе следующих принципов:
+- Specification-First Development
+- API-First
+- Security by Design
+- Architecture Consistency
+- Requirements Traceability
+- Testability
+- Simplicity
+
+Используй нормативные формулировки MUST, SHOULD, MAY.
+Конституция должна применяться ко всем спецификациям проекта.
+```
+
 Best practices:
 
 - Используйте ChatGPT для генерации первого драфта constitution
 - В репозитории SpecKit есть примеры — берите за основу и адаптируйте под свой проект
 - Если в компании есть coding standards — превратите их в constitution один раз, используйте во всех проектах
-
-[Что включать](https://habr.com/ru/articles/964368/):
-
-1. Архитектурные принципы
-Стиль архитектуры (Feature-Sliced Design, Clean Architecture, Microservices)
-Паттерны проектирования, которые вы используете
-2. Технические ограничения
-Языки и их версии (TypeScript, PHP 8.2+, строгая типизация)
-Обязательные инструменты (ESLint, Prettier, PHPStan)
-Запрещённые библиотеки или подходы
-Требования к совместимости
-3. Стандарты качества кода
-SOLID принципы, DRY, KISS
-Стандарты именования (camelCase, snake_case)
-Максимальная длина функций/классов
-Требования к комментариям и документации
-4. Тестирование
-Какие тесты обязательны (unit, integration, e2e)
-Coverage требования (если есть)
-Test-Driven Development подход (если используете)
-Стратегия тестирования (AAA pattern, Given-When-Then)
-5. Git и коммиты
-Стратегия коммитов (один коммит на таску, conventional commits)
-Формат commit message
-Стратегия бранчей
-Требования к PR
-6. UX/Accessibility
-Стандарты доступности (WCAG AA/AAA)
-Поддержка устройств (mobile-first, responsive)
-Производительность (Core Web Vitals)
-7. Security и Privacy
-Требования безопасности
-Обработка персональных данных
-Compliance (GDPR, и т.д.)
+- [Что включать в Constitution](spec-kit.constitution.md)
 
 ### 2. Specify - Бизнес требования
 
 ```text
 specs/001-feature-name/spec.md
+```
+
+Пример:
+
+```text
+/speckit-specify Develop Taskify, a team productivity platform where predefined users create projects, assign tasks, comment, and move tasks across Kanban columns (To Do, In Progress, In Review, Done). Five users (one product manager, four engineers), three sample projects, no login for this first phase.
 ```
 
 Best practices:
@@ -139,28 +136,11 @@ Preset:
 - Интервью с умным коллегой
 - Запускайте clarify после больших изменений spec.md, чтобы убедиться, что требования согласованы и не противоречат друг другу.
 
-### 4. Checklist - Чек-листы качества
-
-- Аудит по стандартам качества
-
 ```text
-/speckit.checklist [тема]
+/speckit.clarify
 ```
 
-Доступные темы:
-
-/speckit.checklist UX
-/speckit.checklist Security
-/speckit.checklist Performance
-/speckit.checklist Accessibility
-/speckit.checklist SEO
-/speckit.checklist Testing
-Любая кастомная тема
-/speckit.checklist Mobile-First Design
-/speckit.checklist Data Privacy GDPR
-/speckit.checklist API Design Best Practices
-
-### 5. Plan - Технический план
+### 4. Plan - Технический план
 
 Пример:
 
@@ -200,6 +180,29 @@ Preset:
   - Инструменты для тестирования и контроля качества
   - Политика покрытия и пороговых значений
   - Сохранение доказательств и отчетов: test-traceability.md, defect-log.md, test-summary.md
+
+### 5. Checklist - Чек-листы качества
+
+- Аудит по стандартам качества
+
+```text
+/speckit.checklist [тема]
+```
+
+Доступные темы:
+
+/speckit.checklist UX
+/speckit.checklist Security
+/speckit.checklist Performance
+/speckit.checklist Accessibility
+/speckit.checklist SEO
+/speckit.checklist Testing
+
+Любая кастомная тема:
+
+/speckit.checklist Mobile-First Design
+/speckit.checklist Data Privacy GDPR
+/speckit.checklist API Design Best Practices
 
 ### 6. Tasks - Задачи на разработку
 

@@ -15,6 +15,8 @@
 
 TODO
 
+[через Google, Apple и Яндекс ID](https://habr.com/ru/companies/veriqa/articles/1106300/)
+
 ## Технологии
 
 ### KeyCloak

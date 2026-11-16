@@ -24,6 +24,7 @@
 
 ## TODO
 
+- [ ] [Сбер AI-Disrupt PDLC на базе SDD](https://aipdlc.ru/ru)
 - [x] [Внедрение Spec-Driven Development](https://www.youtube.com/watch?v=EZwcBSX_Rbs)
 - [ ] Superpowers
   - [manual](https://www.glukhov.org/ru/ai-devtools/superpowers/)
@@ -37,7 +38,7 @@
   - [RuStore](https://www.rustore.ru/developer/blog/spec-kit-i-openspec-v-realnom-android-proekte-testiruem-sdd-na-zadachah-rustore)
   - [SDD vs Vibe Coding](https://www.glukhov.org/ru/ai-devtools/vibe-coding/spec-driven-development-vs-vibe-coding/)
   - [SDD vs BDD vs TDD](https://www.glukhov.org/ru/app-architecture/documentation/what-is-spec-driven-development/)
-- [Github Spec-Kit](spec-kit.md)
+- [Github Spec-Kit](spec-kit/spec-kit.md)
   - проходит последовательные стадии от constitution до implement, и ему трудно с меняющимися требованиями и сильной связанностью
   - MIT
   - позволяет организовать подробный жизненный цикл отдельных функциональных возможностей, оставляя команде выбор стратегии хранения актуальных спецификаций

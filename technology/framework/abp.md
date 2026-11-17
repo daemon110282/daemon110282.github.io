@@ -31,15 +31,15 @@
 | + | - |
 | - | - |
 | лицензия LGPL + коммерческая при необх-ти | vue не из коробки, т.е. пишем на React |
-| с 2012 года, много релизов | LDAP Auth платный модуль|
-| [feature toggle by tenant](https://docs.abp.io/en/abp/latest/Modules/Tenant-Management#managing-the-tenant-features) ||
-| [DDD](https://abp.io/books/implementing-domain-driven-design) ||
-| RMQ ||
-| модульный монолит->микросервисы заявлено ||
+| с 2012 года, много релизов | LDAP Auth платный модуль |
+| [feature toggle by tenant](https://docs.abp.io/en/abp/latest/Modules/Tenant-Management#managing-the-tenant-features) | |
+| [DDD](https://abp.io/books/implementing-domain-driven-design) | |
+| RMQ | |
+| модульный монолит->микросервисы заявлено | |
 | swagger | |
-| [workflow](https://community.abp.io/posts/using-elsa-workflow-with-the-abp-framework-773siqi9)||
-| [CICD + docker + k8s](https://community.abp.io/posts/.net-core-microservice-application-with-abp-docker-and-cicd-part-10-8snm8lwy)||
-| [Identity Server4](http://docs.identityserver.io/), OpenID Connect protocol, Ouath||
+| [workflow](https://community.abp.io/posts/using-elsa-workflow-with-the-abp-framework-773siqi9) | |
+| [CICD + docker + k8s](https://community.abp.io/posts/.net-core-microservice-application-with-abp-docker-and-cicd-part-10-8snm8lwy) | |
+| [Identity Server4](http://docs.identityserver.io/), OpenID Connect protocol, Ouath | |
 
 ## Deployment
 
@@ -63,10 +63,10 @@
     - [OpenID Connect module](https://docs.abp.io/en/abp/latest/Modules/OpenIddict) on <https://documentation.openiddict.com>
 - [Authorization](https://docs.abp.io/en/abp/latest/Authorization)
   - [Disable Concurent Login](https://support.abp.io/QA/Questions/3047/Disable-concurrent-user-login)
-  - Под разные UI FE
+  - Под разные UI [web FE](web/web.md)
     - [Angular](https://docs.abp.io/en/abp/latest/UI/Angular/Authorization)
-    - [React](react.md)
-    - [Vue JS](vuejs.md)
+    - [React](web/react.md)
+    - [Vue JS](web/vuejs.md)
 - [User Account](https://docs.abp.io/en/abp/latest/CurrentUser)
 - [External Logins](https://docs.abp.io/en/commercial/latest/modules/account#social-external-logins)
 - [Tenant Permision](https://docs.abp.io/en/commercial/latest/modules/account/impersonation#tenant-user-impersonation-permissions)

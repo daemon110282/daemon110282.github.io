@@ -1,10 +1,10 @@
 # YII
 
-[PHP](php.md) framework.
+[PHP](../php.md) framework.
 
 ## Зачем
 
-- [ORM](../middleware/orm.md)
+- [ORM](../../middleware/orm.md)
   - [Active Record](https://www.yiiframework.com/doc/guide/2.0/en/db-active-record)
 - [Cache](https://www.yiiframework.com/doc/guide/2.0/en/caching-overview)
   - Data (Redis, Memcached)
@@ -14,7 +14,7 @@
 - [Events](https://www.yiiframework.com/doc/guide/2.0/en/concept-events)
   - Local
   - Global
-- [Test](../../arch/pattern/test.md)
+- [Test](../../../arch/pattern/test.md)
   - [Unit](https://www.yiiframework.com/doc/guide/2.0/en/test-unit)
   - Functional
   - Acceptance

@@ -41,13 +41,12 @@
   - Android (Kotlin, Java)
 - [PWA](../style/pwa.md)
 	- [Ionic](../../technology/mobile/ionic.md)
-	- Vue JS
+	- [Vue JS](../../technology/framework/web/vuejs.md)
 - Cross Platform
 	- [Flutter](../../technology/mobile/flutter.md)
 	- [Ionic](../../technology/mobile/ionic.md)
 	- [React Native](../../technology/mobile/react.native.md)
-	- [Kotlin multiplatform](https://kotlinlang.org/docs/multiplatform.html)
-		- <https://habr.com/ru/companies/otus/articles/751192/>
+	- [Kotlin multiplatform](../../technology/mobile/kotlin.md)
 
 ### Deeplink
 

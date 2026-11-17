@@ -10,7 +10,7 @@
 ## Зачем
 
 - frontend веб-фреймворк
-- [vs React Native](../mobile/react.native.md#vs-react)
+- [vs React Native](../../mobile/react.native.md#vs-react)
 
 ## Плюсы-минусы
 
@@ -19,7 +19,7 @@
 ### Динамическая валидация Dynamic Validation
 
 - [AJV](https://ajv.js.org/) (Another JSON Schema Validator)
-  - библиотека валидации данных в __формате JSON__ с поддержкой [__JSON Schema__](../../api/JsonSchema/jsonschema.md)
+  - библиотека валидации данных в __формате JSON__ с поддержкой [__JSON Schema__](../../../api/JsonSchema/jsonschema.md)
   - AJV позволяет проверять данные по подготовленным схемам валидации
   - schema language
     - [JSON Type Definition](https://ajv.js.org/guide/schema-language.html#json-type-definition)
@@ -30,7 +30,7 @@
     - v6
   - [builtin validators](https://ajv.js.org/guide/formats.html)
   - [async validate](https://ajv.js.org/guide/async-validation.html)
-  - [dynamic validate rule](t)
+  - [dynamic validate rule](../t)
   - [Errors i18n](https://github.com/ajv-validator/ajv-i18n)
 
 ### Динамическая форма Dynamic Forms

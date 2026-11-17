@@ -89,7 +89,7 @@ __Тип способа__ получения сообщений Consumer:
     - [abp.io](https://docs.abp.io/en/abp/4.4/Distributed-Event-Bus)
   - Python
     - Celery
-  - [PHP](../../../../technology/framework/php.md)
+  - [PHP](../../../../technology/framework/backend/php.md)
 
 ### Критерии выбора
 

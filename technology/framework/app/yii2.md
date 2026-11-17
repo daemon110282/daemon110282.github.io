@@ -1,8 +1,8 @@
 # YII
 
-[PHP](../php.md) framework.
-
 ## Зачем
+
+Платформа для разработки [веб приложений](../../../arch/system.class/app.framework.md) на [PHP](../backend/php.md).
 
 - [ORM](../../middleware/orm.md)
   - [Active Record](https://www.yiiframework.com/doc/guide/2.0/en/db-active-record)

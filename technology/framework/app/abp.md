@@ -12,21 +12,20 @@
 
 ## Зачем
 
-Платформа для разработки [веб приложений](../../arch/system.class/app.framework.md)
+Платформа для разработки [веб приложений](../../../arch/system.class/app.framework.md) на .NET Core:
 
 - на принципах DDD, EDA, MTA, MSA
 - технологиях интеграций RMQ, Kafka
 - протоколах OAuth, OIDC
 - хранилищах MSSQL, PosgreSQL, MongoDB
 - CI-CD k8s, Docker
-- техстеке .NET Core
 - тестах Unit
 
 [Blog](https://blog.abp.io/abp).
 
 ## Плюсы и минусы
 
-[Критерии](../../arch/arch.criteria.md)
+[Критерии](../../../arch/arch.criteria.md)
 
 | + | - |
 | - | - |
@@ -56,17 +55,17 @@
 
 - Authentication Identity
   - <https://docs.abp.io/en/abp/latest/Modules/Identity>
-  - [IAM](../../arch/system.class/security/iam.md) [IdentityServer4](https://docs.abp.io/en/abp/latest/Modules/IdentityServer)
-  - [SSO](../../arch/pattern/security/sso.md)
+  - [IAM](../../../arch/system.class/security/iam.md) [IdentityServer4](https://docs.abp.io/en/abp/latest/Modules/IdentityServer)
+  - [SSO](../../../arch/pattern/security/sso.md)
     - <https://academy.hiretechteam.com/blog/how-to-implement-single-sign-with-abp-commercial-application>
     - <https://www.google.com/url?sa=t&source=web&rct=j&url=https://www.youtube.com/watch%3Fv%3Dth3IugJGQDA&ved=2ahUKEwiv1Z3VtuH6AhURCBAIHbxoC1I4ChC3AnoECBwQAg&usg=AOvVaw3LGyJwYvrPLvmjBpHgP-Jw>
     - [OpenID Connect module](https://docs.abp.io/en/abp/latest/Modules/OpenIddict) on <https://documentation.openiddict.com>
 - [Authorization](https://docs.abp.io/en/abp/latest/Authorization)
   - [Disable Concurent Login](https://support.abp.io/QA/Questions/3047/Disable-concurrent-user-login)
-  - Под разные UI [web FE](web/web.md)
+  - Под разные UI [web FE](../web/web.md)
     - [Angular](https://docs.abp.io/en/abp/latest/UI/Angular/Authorization)
-    - [React](web/react.md)
-    - [Vue JS](web/vuejs.md)
+    - [React](../web/react.md)
+    - [Vue JS](../web/vuejs.md)
 - [User Account](https://docs.abp.io/en/abp/latest/CurrentUser)
 - [External Logins](https://docs.abp.io/en/commercial/latest/modules/account#social-external-logins)
 - [Tenant Permision](https://docs.abp.io/en/commercial/latest/modules/account/impersonation#tenant-user-impersonation-permissions)

@@ -14,7 +14,7 @@
 
 ## Frameworks
 
-- [YII2](yii2.md)
+- [YII2](../app/yii2.md)
 - Laravel
 
 ## Patterns

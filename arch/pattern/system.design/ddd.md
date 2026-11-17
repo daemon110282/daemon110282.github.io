@@ -144,7 +144,7 @@
 ## Технологии
 
 - Framework, Platform
-  - [ABP.IO](../../../technology/framework/abp.md)
+  - [ABP.IO](../../../technology/framework/app/abp.md)
   - [PHP](../../ref/ddd/php.md)
 - Plantuml + vs code
 - Context Mapping DSL (CML) - [A Modeling Framework](https://contextmapper.org/) for Strategic Domain-driven Design

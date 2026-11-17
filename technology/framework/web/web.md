@@ -1,13 +1,13 @@
-# Ui web framework фреймворк для создания пользовательских интерфейсов
+# UI Web Frameworks фреймворки для создания пользовательских интерфейсов
 
 ![top2019](../../../img/technology/framework/top.2019.be.framework.jpg)
 
-https://codersrank.io/
+[rank](https://codersrank.io/)
 
 - Extjs
 	RIA enterprise gui
 - Google Angular2
-	AngularJS использует двунаправленное связывание данных между областями видимости
+  - AngularJS использует двунаправленное связывание данных между областями видимости
   - support TypeScript
 - [React](./react.md) 15 Facebook
 	предоставляют реактивность

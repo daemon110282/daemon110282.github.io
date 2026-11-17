@@ -105,5 +105,5 @@ __Способы аутентификации__ пользователей и о
 
 Фреймворки:
 
-- [Spring](../../../technology/framework/java.spring.md) Security
+- [Spring](../../../technology/framework/app/java.spring.md) Security
 - NodeJS [Passport](https://www.passportjs.org/)

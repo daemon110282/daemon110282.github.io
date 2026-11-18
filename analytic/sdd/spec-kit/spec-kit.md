@@ -157,6 +157,19 @@ Telegram: python-telegram-bot
 Деплой: Docker
 ```
 
+```test
+/speckit.plan
+Arhitecture: DDD, feature toggle
+Security: OAuth, Bearer Token
+Observability: OpenTelemetry, GrayLog, Grafana
+Backend: ABP.IO, .NET, DI
+Frontend: React
+UI: Tailwind CSS + shadcn/ui
+База данных: PostgreSQL
+Кэш: Redis
+Деплой: Docker
+```
+
 Best practices:
 
 - Каждое изменение стека/архитектуры → обновление plan.md

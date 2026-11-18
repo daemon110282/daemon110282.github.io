@@ -11,12 +11,12 @@
   - команды CRUD отразились на команды HTTP (Post — Get — Put — Delete).
 - XML-RPC — интегрируемся с Python-кодом, то есть в Python есть встроенный XML-RPC-сервер
   - хорошо поддерживал обратную совместимость: это очень важно с параллельными независимыми релизами.
-- [GRPC](protocols.integration/grpc.md) высокопроизводительный фреймворк разработанный компанией Google для вызова удаленных процедур (RPC), работает поверх HTTP/2
+- [GRPC](grpc.md) высокопроизводительный фреймворк разработанный компанией Google для вызова удаленных процедур (RPC), работает поверх HTTP/2
 - JSON RPC
-- [GraphQL](protocols.integration/graphql.md)
+- [GraphQL](graphql.md)
 - SOAP
-- [AMQP](middleware/messagebus/rmq/rmq.md)
+- [AMQP](../middleware/messagebus/rmq/rmq.md)
 - MQTT
 - DB Link
-- [OAuth](protocols.integration/oauth/oauth.md)
-- [OpenID Conect](protocols.integration/oidc.md)
+- [OAuth](oauth/oauth.md)
+- [OpenID Conect](oidc.md)

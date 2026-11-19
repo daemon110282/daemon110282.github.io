@@ -4,7 +4,7 @@
 
 [Функции](https://www.1c-bitrix.ru/products/bitrix24/)
 
-- CRM: Лиды Сделки Клиенты
+- [CRM](../../arch/system.class/crm.md): Лиды Сделки Клиенты
 - Чат
 
 ## Функции

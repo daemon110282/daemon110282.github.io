@@ -60,7 +60,7 @@ TODO:
 
 ### test-first-governance - BDD, ATDD, TDD, Traceability US-FR-TC, Quality Gate
 
-- [ ] [Трассировка спецификаций, тестов и кода в разработке с использованием AI](https://www.glukhov.org/ru/app-architecture/testing-architecture/specs-tests-code-traceability-ai-development/)
+- [x] [Трассировка спецификаций, тестов и кода в разработке с использованием AI](https://www.glukhov.org/ru/app-architecture/testing-architecture/specs-tests-code-traceability-ai-development/)
 
 [test-first-governance](https://github.com/ka-zo/spec-kit-preset-test-first-governance)
 

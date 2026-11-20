@@ -14,7 +14,6 @@
     - [5. Checklist - Чек-листы качества](#5-checklist---чек-листы-качества)
     - [6. Tasks - Задачи на разработку](#6-tasks---задачи-на-разработку)
     - [7. Analyze - Проверка согласованности](#7-analyze---проверка-согласованности)
-    - [?. Trace - Трассировка спецификаций, тестов и кода](#-trace---трассировка-спецификаций-тестов-и-кода)
     - [8. Implement - Разработка](#8-implement---разработка)
     - [9. Converge - Проверить полноту реализации](#9-converge---проверить-полноту-реализации)
 
@@ -45,7 +44,7 @@
 - Copilot
 - [Codex CLI](https://github.com/github/spec-kit/blob/main/docs/integrations/codex.md)
 
-```text
+```powershell
 specify init .
 specify init . --integration codex
 specify init taskify --integration copilot
@@ -62,7 +61,7 @@ specify init . --integration copilot
 
 [Guide](https://github.github.com/spec-kit/upgrade.html)
 
-```text
+```powershell
 specify self check
 ```
 
@@ -70,18 +69,18 @@ specify self check
 
 Для __существующих проектов__ — дайте команду проанализировать существующую кодовую базу:
 
-```text
+```powershell
 /speckit.constitution
 Проанализируй текущий код и создай constitution на его основе.
 ```
 
 Пример:
 
-```text
+```powershell
 /speckit-constitution Taskify is a "Security-First" application. All user inputs must be validated. We use a microservices architecture. Code must be fully documented.
 ```
 
-```text
+```powershell
 /speckit-constitution {Название проекта}
 Создай конституцию проекта на основе следующих принципов:
 - Specification-First Development
@@ -111,7 +110,7 @@ specs/001-feature-name/spec.md
 
 Пример:
 
-```text
+```powershell
 /speckit-specify Develop Taskify, a team productivity platform where predefined users create projects, assign tasks, comment, and move tasks across Kanban columns (To Do, In Progress, In Review, Done). Five users (one product manager, four engineers), three sample projects, no login for this first phase.
 ```
 
@@ -136,7 +135,7 @@ Preset:
 - Интервью с умным коллегой
 - Запускайте clarify после больших изменений spec.md, чтобы убедиться, что требования согласованы и не противоречат друг другу.
 
-```text
+```powershell
 /speckit.clarify
 ```
 
@@ -144,7 +143,7 @@ Preset:
 
 Пример:
 
-```test
+```powershell
 /speckit.plan
 
 Backend: Python FastAPI + TypeScript
@@ -157,7 +156,7 @@ Telegram: python-telegram-bot
 Деплой: Docker
 ```
 
-```test
+```powershell
 /speckit.plan
 Arhitecture: DDD, feature toggle
 Security: OAuth, Bearer Token
@@ -192,13 +191,14 @@ Preset:
   - TDD
   - Инструменты для тестирования и контроля качества
   - Политика покрытия и пороговых значений
-  - Сохранение доказательств и отчетов: test-traceability.md, defect-log.md, test-summary.md
+  - Трассировка спецификаций, тестов и кода: test-traceability.md
+  - Сохранение доказательств и отчетов: defect-log.md, test-summary.md
 
 ### 5. Checklist - Чек-листы качества
 
 - Аудит по стандартам качества
 
-```text
+```powershell
 /speckit.checklist [тема]
 ```
 
@@ -241,22 +241,6 @@ Best practices:
 
 - Запускайте analyze минимум 2 раза
 - Ошибка: Исправлять проблемы "на глаз", не обновляя документы: spec/plan/tasks
-
-### ?. Trace - Трассировка спецификаций, тестов и кода
-
-[ ] TODO [trace](https://www.glukhov.org/ru/app-architecture/testing-architecture/specs-tests-code-traceability-ai-development/)
-	[extension](https://github.com/haveard/spec-kit-tracer?ysclid=mw4pjwkemy523441946)
-	/speckit.tracer.trace
-	/speckit.tracer.verify
-	/speckit.tracer.expand
-
-requirements.md     # REQ-IDs с критериями приемки в стиле EARS
-design.md           # ADR-IDs, затронутые файлы, архитектурные решения
-tasks.md            # TASK-IDs, маппинг на одно или несколько REQ-IDs
-tests.md            # какие файлы/функции тестов ссылаются на какие REQ-IDs
-traceability.md     # сгенерированная таблица: REQ -> ADR -> TASK -> файлы -> тесты -> PR
-
-tests.md и traceability.md должны быть сгенерированы, а не поддерживаться вручную
 
 ### 8. Implement - Разработка
 

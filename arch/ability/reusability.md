@@ -10,4 +10,4 @@
 
 ## Паттерны
 
-- Mdm - master data manager
+- [MDM](../system.class/mdm.md) - master data manager

@@ -1,4 +1,4 @@
-# OpenAI GPT
+# OpenAI GPT - Codex
 
 ## Зачем
 

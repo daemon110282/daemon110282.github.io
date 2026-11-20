@@ -17,4 +17,6 @@
 	- [NoSQL](store.nosql.md): Redis, MongoDB
 - [CMS](cms.md): Drupal
 - [CRM](crm.md): Bitrix24, FIS Platform, Dynamika CRM (oCRM), FORA CRM Platform, НОТА МОДУС, ELMA356
+  - [PRM](prm.md): Salesforce Partner Cloud
 - [CDP](cdp.md): Mindbox
+- [MDM](mdm.md): Informatica MDM

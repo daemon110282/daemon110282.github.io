@@ -1,0 +1,33 @@
+# https://habr.com/ru/articles/1040296/
+
+# модель по умолчанию
+model = "gpt-6.1-sol"                   # chatgpt plus подписка
+# выбрать отдельную модель для задач ревью кода. Удобно, если хотите использовать более дешевую модель для проверки, оставляя дорогую для генерации.
+review_model = "gpt-6.1-terra"          # chatgpt plus подписка
+# model = "gpt-5.6-terra"				# chatgpt free подписка
+# review_model = "gpt-5.6-terra" 		# chatgpt free подписка
+approval_policy = "on-request"
+sandbox_mode = "workspace-write"
+# глубина мысли модели: low, medium, high
+model_reasoning_effort = "medium"
+# формирует тон ответов: concise - кратко
+# model_personality = "concise"
+web_search = "live"
+file_opener = "vscode"  
+
+[features]
+shell_snapshot = true
+unified_exec = true
+request_rule = true
+undo = true
+goals = true       # автономный /goal режим (Experimental, v0.134.0+)
+memories = true    # память между сессиями (Experimental)
+
+[shell_environment_policy]
+# Варианты: "inherit" (по умолчанию), "include_only", "exclude"
+# policy = "exclude"
+exclude = ["AWS_SECRET_ACCESS_KEY", "AWS_SESSION_TOKEN", "GITHUB_TOKEN", "NPM_TOKEN"]
+
+[tui]
+multiline_enter = true   # Enter делает перенос строки, а не отправку
+# Отправка теперь по Cmd + Enter (macOS) или Ctrl + Enter (Win/Linux)

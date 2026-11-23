@@ -1,13 +1,13 @@
 # Функции по модулям
 
 - [Функции по модулям](#функции-по-модулям)
-	- [Клиентские данные](#клиентские-данные)
-	- [Продажи](#продажи)
-	- [Обслуживание](#обслуживание)
-	- [Маркетинг и удержание](#маркетинг-и-удержание)
-	- [Платформа и управление](#платформа-и-управление)
+  - [Клиентские данные](#клиентские-данные)
+  - [Продажи](#продажи)
+  - [Обслуживание](#обслуживание)
+  - [Маркетинг и удержание](#маркетинг-и-удержание)
+  - [Платформа и управление](#платформа-и-управление)
 
-![Схема](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/daemon110282/daemon110282.github.io/master/arch/system.class/crm.bank.puml)
+![Схема](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/daemon110282/daemon110282.github.io/master/arch/system.class/crm/crm.bank.puml)
 
 ## Клиентские данные
 

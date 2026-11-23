@@ -1,0 +1,183 @@
+
+@startuml v1_PRM_System_Context
+!include <C4/C4_Context>
+
+title PRM — System Context Diagram (C4 L1). PRM создает заявки сам.
+
+LAYOUT_LEFT_RIGHT()
+SHOW_LEGEND()
+
+Person(partner, "Партнер / Агент", "Привлекает клиентов, регистрирует лиды и заявки, отслеживает продажи и вознаграждения")
+Person(bank_manager, "Менеджер партнерской сети", "Подключает партнеров, управляет программами, контролирует продажи и KPI")
+Person(finance, "Финансовый специалист", "Контролирует начисления, согласует вознаграждения и взаиморасчеты")
+Person(admin, "Администратор", "Управляет настройками, пользователями и доступом")
+
+System_Boundary(prm_boundary, "Банк — управление партнерскими продажами") {
+    System(prm, "PRM", "Partner Relationship Management", "Партнеры, программы, лиды, заявки, атрибуция, комиссии, аналитика и партнерский портал")
+}
+
+System_Ext(crm, "CRM банка", "Клиенты, лиды, сделки, взаимодействия")
+System_Ext(mdm, "MDM", "Мастер-данные клиентов и контрагентов")
+System_Ext(product, "Продуктовые системы", "Кредитный конвейер, РКО и другие банковские продукты")
+System_Ext(abs, "АБС", "Договоры, счета, операции и события активации продуктов")
+System_Ext(erp, "ERP / Бухгалтерия", "Финансовые документы, учет и выплаты партнерам")
+System_Ext(edo, "ЭДО / СЭД", "Договоры с партнерами и электронный документооборот")
+System_Ext(kyc, "KYC / KYB / AML", "Проверка партнеров и клиентов")
+System_Ext(iam, "IAM / SSO", "Аутентификация и управление идентификацией")
+System_Ext(dwh, "DWH / BI", "Корпоративная аналитика и отчетность")
+System_Ext(notify, "Сервис уведомлений", "Email, SMS, Push")
+
+Rel(partner, prm, "Регистрирует лиды и заявки, просматривает статусы и комиссии", "Web / API")
+Rel(bank_manager, prm, "Управляет партнерами, программами и продажами", "Web")
+Rel(finance, prm, "Проверяет начисления и согласует расчеты", "Web")
+Rel(admin, prm, "Администрирует и контролирует доступ", "Web")
+
+BiRel(prm, crm, "Обмен лидами, сделками и статусами", "REST API / Events")
+BiRel(prm, mdm, "Получение и сверка мастер-данных", "API")
+BiRel(prm, product, "Подача заявок и получение результатов", "REST API / Events")
+Rel(abs, prm, "Передает события открытия и активации продуктов", "Events / API")
+Rel(prm, erp, "Передает реестры начислений и документы", "API / Files")
+Rel(erp, prm, "Передает статусы взаиморасчетов", "API / Events")
+BiRel(prm, edo, "Обмен договорами и статусами подписания", "API")
+BiRel(prm, kyc, "Запрос проверок и получение результатов", "API")
+Rel(prm, iam, "Аутентифицирует пользователей и получает атрибуты доступа", "OIDC / OAuth 2.0")
+Rel(prm, dwh, "Передает события продаж и начислений", "Events / ETL")
+Rel(prm, notify, "Отправляет уведомления партнерам и сотрудникам", "API / Events")
+
+@enduml
+
+
+@startuml v2_Partner_Origination_Context
+!include <C4/C4_Context>
+
+title C4 L1 — Partner Origination: System Context. PRM НЕ создает заявки сам.
+
+LAYOUT_LEFT_RIGHT()
+SHOW_LEGEND()
+
+Person(customer, "Клиент", "Выбирает финансовый продукт и подтверждает оформление")
+Person(partner_user, "Сотрудник партнера", "Помогает клиенту оформить заявку через POS")
+
+System_Ext(partner, "Платформа партнера", "POS, интернет-магазин, маркетплейс или внешнее приложение")
+
+System_Boundary(bank, "Банк") {
+
+    System(origination, "Partner Origination Platform",  "Прием, валидация, маршрутизация партнерских заявок и публикация событий")
+
+    System_Ext(los, "Product Origination / LOS",        "Обработка заявок, скоринг, решения и оформление продуктов")
+
+    System_Ext(prm, "PRM",        "Партнеры, программы, атрибуция продаж и комиссии")
+
+    System_Ext(crm, "CRM",        "Клиенты, лиды, история продаж и взаимодействий")
+
+    System_Ext(abs, "АБС",        "Договоры, счета, выдачи и операции")
+
+    System_Ext(iam, "IAM / Authorization",        "Идентификация партнеров и авторизация API-клиентов")
+
+    System_Ext(kyc, "KYC / AML",        "Регуляторные проверки клиентов")
+}
+
+Rel(customer, partner, "Выбирает продукт, предоставляет данные и подтверждает оформление", "Web / Mobile")
+Rel(partner_user, partner, "Создает заявку от имени клиента", "POS")
+
+Rel(partner, origination,    "Создает заявки, получает статусы и решения", "REST API / Webhooks")
+
+Rel(origination, iam,    "Проверяет токены и права партнерских API-клиентов", "OAuth 2.0 / OIDC")
+
+Rel(origination, prm,    "Проверяет статус партнера и условия программы", "REST API")
+
+Rel(origination, los,    "Передает заявки и получает результаты обработки", "REST API / Events")
+
+Rel(los, kyc,    "Запрашивает проверки клиентов", "API")
+
+Rel(los, abs,    "Оформляет продукты и регистрирует договоры", "API / Events")
+
+Rel(origination, prm,    "Публикует события партнерских заявок и продаж", "Events")
+
+Rel(origination, crm,    "Публикует события заявок для клиентской истории", "Events")
+
+Rel(abs, prm,    "Передает подтвержденные продуктовые события для комиссий", "Events")
+
+@enduml
+
+
+
+@startuml v2_Partner_Origination_Containers
+!include <C4/C4_Container>
+
+title C4 L2 — Partner Origination: Container Diagram
+
+LAYOUT_LEFT_RIGHT()
+SHOW_LEGEND()
+
+Person(partner_user, "Пользователь партнера", "Работает в POS или партнерском приложении")
+
+System_Ext(partner, "Partner Platform", "POS / Marketplace / Embedded Finance")
+System_Ext(iam, "IAM", "OAuth 2.0 Authorization Server")
+System_Ext(prm, "PRM", "Партнеры, программы, атрибуция, комиссии")
+System_Ext(crm, "CRM", "История клиента и продаж")
+System_Ext(los, "Product Origination / LOS", "Продуктовые заявки и решения")
+System_Ext(abs, "АБС", "Договоры, выдачи и операции")
+
+System_Boundary(origination, "Partner Origination Platform") {
+
+    Container(gateway, "Partner API Gateway",        "API Gateway",        "TLS, OAuth, rate limiting, маршрутизация API")
+
+    Container(api, "Application API",        "Backend Service",        "Прием и валидация заявок, идемпотентность")
+
+    Container(partner_adapter, "Partner Context Adapter",        "Backend Service",        "Проверка партнера, программ и полномочий")
+
+    Container(orchestrator, "Origination Orchestrator",        "Backend Service",        "Маршрутизация заявок, взаимодействие с LOS")
+
+    Container(status, "Status & Webhook Service",        "Backend Service",        "Обработка статусов и доставка уведомлений партнерам")
+
+    Container(event_publisher, "Event Publisher",        "Backend Service",        "Надежная публикация событий")
+
+    ContainerDb(db, "Application DB",        "PostgreSQL",        "Связи ID, состояния обработки, webhook delivery, outbox")
+
+    ContainerQueue(bus, "Event Bus",        "Kafka / RabbitMQ",        "События заявок, статусов и продаж")
+}
+
+Rel(partner_user, partner, "Оформляет заявку", "Web / POS")
+
+Rel(partner, gateway,    "Создает заявку, запрашивает статус", "HTTPS / REST")
+
+Rel(gateway, iam,    "Проверяет токен и права", "OAuth 2.0")
+
+Rel(gateway, api,    "Маршрутизирует запросы", "HTTPS")
+
+Rel(api, partner_adapter,    "Проверяет доступность программы", "Internal API")
+
+Rel(partner_adapter, prm,    "Получает статус партнера и параметры программы", "REST API")
+
+Rel(api, db,    "Сохраняет регистрацию и idempotency key", "SQL")
+
+Rel(api, orchestrator,    "Инициирует обработку заявки", "Internal API")
+
+Rel(orchestrator, los,    "Передает заявку в продуктовый конвейер", "REST API")
+
+Rel(los, bus,    "Публикует статусы и результаты обработки", "Events")
+
+Rel(orchestrator, db,    "Обновляет связи и состояния обработки", "SQL")
+
+Rel(bus, status,    "Доставляет статусы заявок", "Events")
+
+Rel(status, db,    "Читает связи и сохраняет доставки", "SQL")
+
+Rel(status, partner,    "Передает разрешенные статусы", "HTTPS / Webhooks")
+
+Rel(api, event_publisher,    "Инициирует публикацию событий", "Internal API")
+
+Rel(event_publisher, db,    "Читает outbox", "SQL")
+
+Rel(event_publisher, bus,    "Публикует события", "Events")
+
+Rel(bus, prm,    "События заявок и продаж для атрибуции", "Events")
+
+Rel(bus, crm,    "События заявок для клиентской истории", "Events")
+
+Rel(los, abs,    "Оформляет продукт", "API")
+
+Rel(abs, bus,    "Подтверждает выдачу или активацию", "Events")
+
+@enduml

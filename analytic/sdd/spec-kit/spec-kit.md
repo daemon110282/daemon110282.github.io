@@ -17,6 +17,7 @@
     - [6. Tasks - Задачи на разработку](#6-tasks---задачи-на-разработку)
     - [7. Analyze - Проверка согласованности](#7-analyze---проверка-согласованности)
     - [8. Implement - Разработка](#8-implement---разработка)
+    - [8.1. ChangeLog](#81-changelog)
     - [9. Converge - Проверить полноту реализации](#9-converge---проверить-полноту-реализации)
 
 ## Зачем
@@ -270,13 +271,24 @@ Best practices:
   - Закрываете сессию (/clear)
   - Новая сессия → /speckit.implement Phase 2
   
-Preset:
+Custom Preset:
 
 - [test-first-governance](spec-kit.custom.md#test-first-governance---bdd-atdd-tdd-traceability-us-fr-tc-quality-gate) добавляет:
   - TDD
   - Инструменты для тестирования и контроля качества
   - Политика покрытия и пороговых значений
   - Сохранение доказательств и отчетов: test-traceability.md, defect-log.md, test-summary.md
+
+### 8.1. ChangeLog
+
+Custom Extension [spec-kit-changelog](https://github.com/Quratulain-bilal/spec-kit-changelog)
+
+```powershell
+/speckit.changelog.generate             ← "What changed overall?"
+/speckit.changelog.release              ← "What's in this release?"
+/speckit.changelog.diff                 ← "What's different from v1?"
+/speckit.changelog.notify               ← "Tell the team"
+```
 
 ### 9. Converge - Проверить полноту реализации
 

@@ -5,4 +5,4 @@
 
 TODO
 
-- https://habr.com/ru/companies/raiffeisenbank/articles/458404/
+- <https://habr.com/ru/companies/raiffeisenbank/articles/458404/>

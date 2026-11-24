@@ -1,6 +1,7 @@
 # soft delete
 
 Зачем
+
 - audit
 
 [soft VS hard delete](https://www.becomebetterprogrammer.com/soft-delete-vs-hard-delete)

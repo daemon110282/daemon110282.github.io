@@ -70,5 +70,5 @@ Immutable (основные бизнес-артефакты)
 
 ## ТОДО
 
-https://habr.com/ru/articles/571668/
-https://system-design.space/chapter/consistency-idempotency-patterns/
+<https://habr.com/ru/articles/571668/>
+<https://system-design.space/chapter/consistency-idempotency-patterns/>

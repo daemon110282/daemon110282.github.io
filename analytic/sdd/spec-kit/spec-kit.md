@@ -2,13 +2,14 @@
 
 - [Spec-Kit](#spec-kit)
   - [Зачем](#зачем)
-  - [TODO](#todo)
   - [Процесс](#процесс)
     - [0. Init](#0-init)
-    - [0.1 Add customization](#01-add-customization)
-    - [0.2 Update](#02-update)
+      - [0.1. Add customization](#01-add-customization)
+      - [0.2. Update](#02-update)
     - [1. Constitution - Конституция, стандарты, принципы](#1-constitution---конституция-стандарты-принципы)
-    - [2. Specify - Бизнес требования](#2-specify---бизнес-требования)
+    - [2. Бизнес требования](#2-бизнес-требования)
+      - [2.1. Grilling Сбор бизнес требований](#21-grilling-сбор-бизнес-требований)
+      - [2.2. Specify](#22-specify)
     - [3 Уточнение бизнес требований](#3-уточнение-бизнес-требований)
       - [3.1 Clarify](#31-clarify)
       - [3.2 Альтернатива Clarify - grill.with-docs](#32-альтернатива-clarify---grillwith-docs)
@@ -17,7 +18,7 @@
     - [6. Tasks - Задачи на разработку](#6-tasks---задачи-на-разработку)
     - [7. Analyze - Проверка согласованности](#7-analyze---проверка-согласованности)
     - [8. Implement - Разработка](#8-implement---разработка)
-    - [8.1. ChangeLog](#81-changelog)
+      - [8.1. ChangeLog](#81-changelog)
     - [9. Converge - Проверить полноту реализации](#9-converge---проверить-полноту-реализации)
 
 ## Зачем
@@ -25,13 +26,6 @@
 [Spec-Kit](https://github.github.com/spec-kit/) реализация фреймворка [SDD](../sdd.md) (Spec-Driven Documentation) для разработки технической документации в репозитории, подход __docs-as-code__ без изменения технологического стека разработки.
 
 [Кастомизация Spec-Kit](spec-kit.custom.md).
-
-## TODO
-
-- [ ] Тест
-  - [x] [проект](https://github.github.com/spec-kit/quickstart.html)
-  - [x] [мануал](https://habr.com/ru/articles/964368/)
-- [ ] Кастом
 
 ## Процесс
 
@@ -54,13 +48,11 @@ specify init taskify --integration copilot
 specify init . --integration copilot
 ```
 
-### 0.1 Add customization
+#### 0.1. Add customization
 
-[Кастомизация Spec-Kit](spec-kit.custom.md)
+Добавить набор Preset, Extension по [кастомизация Spec-Kit](spec-kit.custom.md)
 
-- test-first-governance
-
-### 0.2 Update
+#### 0.2. Update
 
 [Guide](https://github.github.com/spec-kit/upgrade.html)
 
@@ -105,11 +97,17 @@ Best practices:
 - Если в компании есть coding standards — превратите их в constitution один раз, используйте во всех проектах
 - [Что включать в Constitution](spec-kit.constitution.md)
 
-### 2. Specify - Бизнес требования
+### 2. Бизнес требования
 
-```text
-specs/001-feature-name/spec.md
-```
+#### 2.1. Grilling Сбор бизнес требований
+
+[Matt Pocock Skills](https://www.aihero.dev/skills)
+
+- mattpocock/skills@grill-with-docs см. "AI learn"
+
+#### 2.2. Specify
+
+Результат: specs/001-feature-name/spec.md
 
 Пример:
 
@@ -149,8 +147,10 @@ Custom Preset:
 Установить Custom Extension [SpecKit Grill Me](spec-kit.custom.md#speckit-grill-me---grilling-в-формате-spec-kit)
 
 ```powershell
-speckit.grill.me OR speckit.grill.with-docs
+$speckit.grill.me OR $speckit.grill.with-docs
 ```
+
+[ ] Синхронизировать tfs.md с учетом grill
 
 ### 4. Plan - Технический план
 
@@ -279,7 +279,7 @@ Custom Preset:
   - Политика покрытия и пороговых значений
   - Сохранение доказательств и отчетов: test-traceability.md, defect-log.md, test-summary.md
 
-### 8.1. ChangeLog
+#### 8.1. ChangeLog
 
 Custom Extension [spec-kit-changelog](https://github.com/Quratulain-bilal/spec-kit-changelog)
 

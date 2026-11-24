@@ -10,7 +10,7 @@
 - Чтобы у вас всегда хватало ресурсов для обслуживания критически важных транзакций, используйте __fleet usage load shedder__
   - Он удерживает часть ресурсов для высокоприоритетных запросов и не позволяет низкоприоритетным транзакциям их использовать
   - Load shedder принимает свои решения на основе общего состояния системы, а не размера одиночного пользовательского запроса
-- [different types of rate limiting responses](https://blog.bytebytego.com/p/rate-limiting-fundamentals) three categories: 
+- [different types of rate limiting responses](https://blog.bytebytego.com/p/rate-limiting-fundamentals) three categories:
   - blocking
     - [HTTP Status 409 Too Many Request](https://github.com/microsoft/api-guidelines/blob/vNext/Guidelines.md#142-return-codes-429-vs-503)
   - throttling - снижение качества видео, например

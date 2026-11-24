@@ -20,6 +20,7 @@
     - [8. Implement - Разработка](#8-implement---разработка)
       - [8.1. ChangeLog](#81-changelog)
     - [9. Converge - Проверить полноту реализации](#9-converge---проверить-полноту-реализации)
+    - [10. Release](#10-release)
 
 ## Зачем
 
@@ -303,3 +304,24 @@ Preset:
       - пример промта: "Overall Test Summary Destination: release. Release ID: v1.3.0. Output path: reports/releases/v1.3.0/test-summary.md."
   - Дополнительные общие отчеты
     - пример промта: "Customer contract requires an overall defect report; generate it from feature defect logs and link it from the overall test summary."
+
+### 10. Release
+
+1.Назначить версию и дату: например, 0.1.0 и фактическую дату выпуска.
+
+Установить skill "spec-kit-changelog"
+
+```text
+$spec-kit-changelog Обнови CHANGELOG.md выпуска версии 1.0.0 с датой 2026-11-24 от пустого дерева до HEAD
+```
+
+2.Оформить CHANGELOG.md: перенести подтверждённые изменения из Unreleased в секцию версии.
+3.Зафиксировать релизный commit и тег: тег должен указывать на проверенный снимок вместе с документацией выпуска.
+
+```powershell
+git add CHANGELOG.md
+git commit -m "docs: prepare release 1.0.0"
+git tag -a v1.0.0 -m "Release 1.0.0"
+```
+
+4.Собрать и опубликовать артефакты: для калькулятора — выбранный вариант .NET-поставки; при использовании GitHub Releases приложить сборку и release notes.

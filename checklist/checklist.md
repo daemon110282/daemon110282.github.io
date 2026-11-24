@@ -16,5 +16,5 @@
 - Deploy
   - [Поставка](setup.md)
 - Support
-  - [Структура шаблона описания ИС](is.md)
-  - [РП](manual.md)
+  - [Структура шаблона описания ИС](../analytic/template/is.md)
+  - [РП](../analytic/template/manual.md)

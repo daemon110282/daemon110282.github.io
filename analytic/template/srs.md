@@ -94,7 +94,7 @@ TO-BE
 
 ### Design Дизайн экранных форм
 
-- [UI UX](../ui-ux.md)
+- [UI UX](../design.ui/ui-ux.md)
 - Дизайн Figma
 
 ### Ролевая модель

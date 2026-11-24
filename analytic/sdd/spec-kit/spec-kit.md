@@ -9,7 +9,9 @@
     - [0.2 Update](#02-update)
     - [1. Constitution - Конституция, стандарты, принципы](#1-constitution---конституция-стандарты-принципы)
     - [2. Specify - Бизнес требования](#2-specify---бизнес-требования)
-    - [3. Clarify - Уточнение бизнес требований](#3-clarify---уточнение-бизнес-требований)
+    - [3 Уточнение бизнес требований](#3-уточнение-бизнес-требований)
+      - [3.1 Clarify](#31-clarify)
+      - [3.2 Альтернатива Clarify - grill.with-docs](#32-альтернатива-clarify---grillwith-docs)
     - [4. Plan - Технический план](#4-plan---технический-план)
     - [5. Checklist - Чек-листы качества](#5-checklist---чек-листы-качества)
     - [6. Tasks - Задачи на разработку](#6-tasks---задачи-на-разработку)
@@ -121,7 +123,7 @@ Best practices:
 - User Story Mapping
 - Используйте ChatGPT для первого драфта
 
-Preset:
+Custom Preset:
 
 - [test-first-governance](spec-kit.custom.md#test-first-governance---bdd-atdd-tdd-traceability-us-fr-tc-quality-gate) BDD, ATDD добавляет:
   - BDD требуется для поведения, видимого пользователю, и бизнес-правил.
@@ -130,13 +132,23 @@ Preset:
     - Укажите, какие истории, требования или критерии успеха являются __Required или N/A__, и объясните каждый N/A.
     - пример промта "Mark BDD N/A for this internal refactor because there is no user-visible behavior; use TDD and coverage evidence instead."
 
-### 3. Clarify - Уточнение бизнес требований
+### 3 Уточнение бизнес требований
+
+#### 3.1 Clarify
 
 - Интервью с умным коллегой
 - Запускайте clarify после больших изменений spec.md, чтобы убедиться, что требования согласованы и не противоречат друг другу.
 
 ```powershell
 /speckit.clarify
+```
+
+#### 3.2 Альтернатива Clarify - grill.with-docs
+
+Установить Custom Extension [SpecKit Grill Me](spec-kit.custom.md#speckit-grill-me---grilling-в-формате-spec-kit)
+
+```powershell
+speckit.grill.me OR speckit.grill.with-docs
 ```
 
 ### 4. Plan - Технический план

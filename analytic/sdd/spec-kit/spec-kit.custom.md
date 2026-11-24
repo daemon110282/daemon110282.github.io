@@ -1,5 +1,16 @@
 # Spec-Kit Кастомизация
 
+- [Spec-Kit Кастомизация](#spec-kit-кастомизация)
+	- [How to](#how-to)
+	- [Project-local overrides and resolution](#project-local-overrides-and-resolution)
+	- [Extension](#extension)
+		- [speckit-grill-me - grilling в формате Spec Kit](#speckit-grill-me---grilling-в-формате-spec-kit)
+	- [Preset](#preset)
+		- [test-first-governance - BDD, ATDD, TDD, Traceability US-FR-TC, Quality Gate](#test-first-governance---bdd-atdd-tdd-traceability-us-fr-tc-quality-gate)
+	- [Workflow](#workflow)
+
+## How to
+
 [Мануал](https://github.github.com/spec-kit/how-to/customization.html)
 
 ## Project-local overrides and resolution
@@ -10,7 +21,7 @@
 
 Проверить, как работает кастомизация:
 
-```text
+```powershell
 specify artifact info template:spec-template --json
 specify preset resolve spec-template  
 ```
@@ -19,7 +30,7 @@ specify preset resolve spec-template
 
 - Добавление новых возможностей в Spec-Kit через расширения (extensions) позволяет кастомизировать процесс разработки и документации, добавляя специфические для проекта функции и автоматизации.
 
-```text
+```powershell
 specify extension search tracer
 specify extension list
 specify extension add {name}
@@ -33,6 +44,10 @@ TODO:
 - [ ] [spec-kit-markitdown](https://github.com/BenBtg/spec-kit-markitdown)
 - [ ] [spec-kit-analytics](https://github.com/Fyloss/spec-kit-analytics)
 
+### speckit-grill-me - grilling в формате Spec Kit
+
+[speckit-grill-me](https://github.com/yoshi1220/speckit-grill-me/blob/main/spec-kit-extension/README.md)
+
 ## Preset
 
 - Изменение существующих команд Spec-Kit через preset позволяет адаптировать стандартные команды под специфические требования проекта, изменяя их поведение и вывод.
@@ -43,7 +58,7 @@ TODO:
 
 [Команды](https://github.github.com/spec-kit/presets/overview.html)
 
-```text
+```powershell
 specify preset list
 specify preset search {name}
 specify preset add {name}
@@ -72,7 +87,7 @@ TODO:
 
 Install
 
-```text
+```powershell
 specify preset add --from "https://github.com/ka-zo/spec-kit-preset-test-first-governance/archive/refs/tags/1.3.0.zip" --priority 5
 ```
 

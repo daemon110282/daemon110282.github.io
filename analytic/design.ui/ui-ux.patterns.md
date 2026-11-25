@@ -1,11 +1,11 @@
-# UX User Experience
+# UI UX Patterns
 
-- [UX User Experience](#ux-user-experience)
+- [UI UX Patterns](#ui-ux-patterns)
   - [Зачем](#зачем)
-  - [TODO](#todo)
-  - [Паттерны](#паттерны)
+  - [Guidelines](#guidelines)
     - [Human Interface Guidelines](#human-interface-guidelines)
     - [Material Design Guidelines](#material-design-guidelines)
+  - [Паттерны](#паттерны)
     - [Закон Якоба Нильсена](#закон-якоба-нильсена)
     - [10 эвристик Якоба Нильсена](#10-эвристик-якоба-нильсена)
     - [Валидация](#валидация)
@@ -20,41 +20,15 @@
       - [Диалоговое окно (оповещение, список действий, всплывающее окно)](#диалоговое-окно-оповещение-список-действий-всплывающее-окно)
       - [Выдвижная панель bottom sheet](#выдвижная-панель-bottom-sheet)
       - [Чипсы Chips Фильтры](#чипсы-chips-фильтры)
-  - [Checklist](#checklist)
 
 ## Зачем
 
-- [UX-дизайн](https://practicum.yandex.ru/blog/chto-takoe-ux-ui-dizayn/) (User Experience — «пользовательский опыт») отвечает за то, __как интерфейс продукта работает__
-  - Usability - цедь создать продукт, которым легко пользоваться
-- UI-дизайн (User Interface — «пользовательский интерфейс») отвечает за то, __как интерфейс выглядит__
+Для разработки [UI UX](ui-ux.md)
 
-## TODO
-
-- [Guidelines](https://skillbox.ru/media/design/guidelines/)
-- [видеоуроки](https://live.skillbox.ru/playlists/design/ux-ui/?utm_source=advcake&utm_medium=cpa&utm_campaign=affiliate&utm_content=affiliate&utm_term=29ae6fcf6bed631bbe4d24d2923c6472&advcake_params=29ae6fcf6bed631bbe4d24d2923c6472&sub1=dzen&sub2=dzen_ux_ui_design_free&sub3=skillbox&erid=2VfnxxcSezk&advcake_method=1&m=1)
-- [uprock Figma](https://www.youtube.com/playlist?list=PLgP78sMGTxfDPkmubjSFA3Nkl_lHCemGz)
-- [stepik](https://stepik.org/course/170069/promo)
-- Mobile
-  - [ux](https://itsets.ru/ui-dizayn/ui-ux-dizayn-mobilnogo-prilozheniya-polnyy-gayd-s-nulya-do-revyu-interfeysa)
-
-## Паттерны
+## Guidelines
 
 - Human Interface [Guidelines](#human-interface-guidelines)
 - Material Design [Guidelines](#material-design-guidelines)
-- Закон [Якоба Нильсена](#закон-якоба-нильсена)
-- [10 эвристик](#10-эвристик-якоба-нильсена) Якоба Нильсена
-- Закон [Фитса](https://www.uprock.ru/articles/zakon-fittsa-i-ego-primenenie-v-ux)
-  - Время движения к цели зависит от размера цели и расстояния до нее.
-  - Помогает определить оптимальные размеры и положение элементов в интерфейсе, чтобы пользователям было проще и удобнее взаимодействовать с ними.
-- Закон [Хика](https://handh.ru/post/hicks_law)
-  - Время принятия решения, зависит от количества доступных опций. Чем шире выбор, тем больше времени требуется.
-- Закон [Постеля](https://www.youtube.com/watch?v=q1-02DgCUkQ&t=974s)
-- __Дизайн система__ - это набор готовых элементов, стандартов, инструментов и процессов, которые:
-  - ускоряют проектирование продуктов и упрощают разработку;
-  - создают консистентный пользовательский опыт цифровых продуктов;
-  - задают высокую планку дизайна и разработки интерфейсов.
-  - [РосТелеком](https://design.rt.ru/preview)
-  - [Контур](https://guides.kontur.ru/)
 
 ### Human Interface Guidelines
 
@@ -63,6 +37,17 @@
 ### Material Design Guidelines
 
 ТОДО
+
+## Паттерны
+
+- Закон [Якоба Нильсена](#закон-якоба-нильсена)
+- [10 эвристик](#10-эвристик-якоба-нильсена) Якоба Нильсена
+- Закон [Фитса](https://www.uprock.ru/articles/zakon-fittsa-i-ego-primenenie-v-ux)
+  - Время движения к цели зависит от размера цели и расстояния до нее.
+  - Помогает определить оптимальные размеры и положение элементов в интерфейсе, чтобы пользователям было проще и удобнее взаимодействовать с ними.
+- Закон [Хика](https://handh.ru/post/hicks_law)
+  - Время принятия решения, зависит от количества доступных опций. Чем шире выбор, тем больше времени требуется.
+- Закон [Постеля](https://www.youtube.com/watch?v=q1-02DgCUkQ&t=974s)
 
 ### Закон Якоба Нильсена
 
@@ -161,23 +146,3 @@ TODO
 #### Чипсы Chips Фильтры
 
 Элементы фильтрации по заранее заданным категориям или [ключевым словам](https://design.rt.ru/gen2/components/chips/guide).
-
-## Checklist
-
-- Обшие требования
-  - UI Kit
-  - Загрузка файлов
-  - Скачать
-  - Груповой выбор
-- Прототип mocks, [wireframe](https://practicum.yandex.ru/blog/chto-takoe-vajrfrejmy/) — упрощенный [прототип](https://plantuml.com/ru/salt) интерфейса
-  - Reference Примеры конкурентов (dribbble.com)
-  - Карта экранов (ЭФ) - переходов
-  - Реестры, Справочники, Отчеты
-  - Фильтрация
-  - Интерактивный прототип (эмуляция UX)
-    - Figma Prototype
-  - Инструменты
-    - Figma
-    - Camunda Modeler Form
-    - [PlantUML Salt](https://plantuml.com/ru/salt)
-- Шаблон описания: Элементы (кнопка, checkbox и тп), Действия, Видимость, Доступность, Обязательность, Правило валидации, Возможные значения, Значение по умолчанию, Источник данных

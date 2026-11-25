@@ -13,7 +13,7 @@
 ## Виды артефактов
 
 - [Use Case](use.case.md)
-- [UI UX](../ui-ux.md)
+- [UI UX](../design.ui/ui-ux.md)
 - [API](../../api/api.md)
 
 ### Модель данных

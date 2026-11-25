@@ -27,7 +27,7 @@
    3. [БП](ba/bp.md)
 3. FT [Функциональные требования](sa/analytica.ft.md)
    1. [UC](sa/use.case.md)
-   2. [UI UX](ui-ux.md)
+   2. [UI UX](design.ui/ui-ux.md)
    3. [Модель данных](sa/analytica.ft.md#модель-данных)
 4. Data Driven
     1. [AB тесты](ab.tests.md)
